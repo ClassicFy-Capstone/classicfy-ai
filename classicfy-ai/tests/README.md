@@ -74,3 +74,9 @@ HTTP Range 재생·구간 이동 및 pack 밖 파일 차단을 다룬다. 합성
 `test_temporal_shape_analysis.py`는 원래 beat 위치 복원, test 값의 임계값 fit 제외,
 중복/잘못된 index 거부와 기존 source 변경 시 cache 재사용 거부를 검증한다.
 두 파일의 신규 테스트 13개가 통과했다. [변화 형태 보고서](../analysis/temporal_shape/README.md).
+
+`unit/features/test_temporal_duration.py`는 관측된 run의 길이 단위·경계 censoring,
+결측/상수·빈 입력, tolerance, 선형 지속과 주기/교대 신호, gap 내부를 가로지르는 lag 쌍 제외,
+독립 Pearson 및 양의 affine 변환 불변성을 검증한다. `test_temporal_duration_analysis.py`는
+실제 runner의 원래 index 보존·support·출력 필드 및 설정을 검증한다.
+신규14개와 변화 형태13개를 합쳐27개 통과했다. [지속·반복 보고서](../analysis/temporal_duration/README.md).

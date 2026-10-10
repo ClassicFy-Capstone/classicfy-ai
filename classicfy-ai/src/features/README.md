@@ -533,3 +533,27 @@ metrics = summarize_temporal_shape(sequence, large_threshold=threshold.value)
 현재 분석 입력은 작품 공통 패턴을 제거한 정규화 잔차다. Dynamics 상승을 원래
 velocity 상승과 동일하게 해석하지 않는다. 정의·실제 데이터 결과·한계·재현 명령은
 [변화 형태 baseline](../../analysis/temporal_shape/README.md)에 있다.
+
+## 12. 관측된 지속 길이·반복 지표
+
+```python
+from features.temporal_duration import summarize_temporal_duration, lagged_correlation
+from features.temporal_shape import adjacent_changes
+
+lengths = summarize_temporal_duration(sequence)
+value_correlation = lagged_correlation(sequence, lag=8, min_pairs=32)
+delta_correlation = lagged_correlation(adjacent_changes(sequence), lag=8, min_pairs=32)
+```
+
+지속 길이는 방향별 연속 delta step 수와 양/0/음의 잔차별 연속 beat 값 수를
+각각 요약한다. count·평균·중앙값·p95·최대와 경계별 censored count를 반환한다.
+`observed_runs`로 원래 start/stop(exclusive), state, 좌·우 경계 정보를 얻을 수 있다.
+방향/수준 tolerance 기본값은 `1e-6`이다. gap·NaN·inf는 run을 끊고, 경계에 닿는
+run은 더 길 수 있다. 해당 상태가 없으면 count 0 / 길이 통계 NaN이다.
+
+`lagged_correlation`은 각 lag에서 유효한 paired 값의 Pearson r을 계산한다.
+양 끝과 그 사이 모든 entry가 유효해야 하며, 서로 다른 유효 구간을 잇지 않는다.
+최소 32쌍, 양쪽 SD > 정규화 단위 `1e-12`가 기본이다. 부족/상수이면 NaN과
+`insufficient_pairs` / `constant_pairs`를 반환하고, 유효하면 `ok`다.
+높은 r은 지속·드리프트로도 생기므로 음악적 반복이나 추천 성공을 뜻하지 않는다.
+전체 정의·그림·실제 결과는 [지속·반복 baseline](../../analysis/temporal_duration/README.md)에 있다.

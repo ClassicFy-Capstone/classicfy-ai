@@ -1,0 +1,18 @@
+{
+  "duration_rows": 3990,
+  "correlation_rows": 3990,
+  "lag_measurements": 47880,
+  "numeric_checks": 391020,
+  "max_absolute_error": 5.551115123125783e-16,
+  "groups_with_gaps": 38,
+  "status_counts": {
+    "ok": 47400,
+    "constant_pairs": 396,
+    "insufficient_pairs": 84
+  },
+  "method": "Independent contiguous blocks split by original indices, itertools.groupby runs with block-edge censoring, paired arrays and numpy.corrcoef/std (no new duration module imported)",
+  "csv_sha256": {
+    "performance_durations.csv": "dbc707285199d73e9166f80c8f33e544f8582b3eee2f3f92ac139c598deb5aa2",
+    "lag_correlations.csv": "853866a75f6cbf65c0330d78f08db7c9d1523e452d968dcb6c73f7b00c2fa2cc"
+  }
+}
