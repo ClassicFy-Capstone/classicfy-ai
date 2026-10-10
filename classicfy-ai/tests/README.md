@@ -68,3 +68,9 @@ HTTP Range 재생·구간 이동 및 pack 밖 파일 차단을 다룬다. 합성
 결측 beat를 잇지 않는 변화량 계산, Pedaling의 동일 feature 비중,
 최근접 후보를 제외한 대조·동점 처리, 결과와 무관한 대표 사례 선정을 검증한다.
 [검색 관찰 보고서](../analysis/temporal_neighbors/README.md)는 feature 기반 대조이며 사람의 청취 정답 평가가 아니다.
+
+`unit/features/test_temporal_shape.py`는 수작업 변화량·분포·방향 전이, 결측 인접성,
+빈/상수 시퀀스, strict 임계값, 기준 고정, offset 불변과 입력 보존을 검증한다.
+`test_temporal_shape_analysis.py`는 원래 beat 위치 복원, test 값의 임계값 fit 제외,
+중복/잘못된 index 거부와 기존 source 변경 시 cache 재사용 거부를 검증한다.
+두 파일의 신규 테스트 13개가 통과했다. [변화 형태 보고서](../analysis/temporal_shape/README.md).

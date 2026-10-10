@@ -508,3 +508,28 @@ fixture로 세 feature 분리, 정렬 품질 선택 및 정렬 누락을 검증�
 방지를 검증한다. 실제 ASAP/nASAP을 포함한 전체 테스트는 123개 모두 통과했다.
 `scripts/validate_feature_normalization.py`는 공식 dataset의 raw 추출부터 정책 비교,
 표준화, pair 차이 보존 검사, 극단 beat 원본 재추출까지 실행하고 CSV·JSON·PNG를 저장한다.
+
+## 11. 인접 beat 변화 형태
+
+`features.temporal_shape`는 추출·정규화 이후의 `BeatSequence`를 요약한다.
+
+```python
+from features.temporal_shape import fit_change_threshold, summarize_temporal_shape
+
+# reference_sequences는 같은 단위로 정규화한 train 작품의 해당 채널만 사용한다.
+threshold = fit_change_threshold(reference_sequences, quantile=0.95)
+metrics = summarize_temporal_shape(sequence, large_threshold=threshold.value)
+```
+
+`adjacent_changes`는 원래 index에서 유효하고 finite인 두 beat의 차이만 계산하며
+결측을 건너서 잇지 않는다. signed/absolute delta의 다섯 분위수, mean absolute·RMS,
+고정 임계값 초과 비율, 상승·유지·하강 비율, 9가지 연속 방향 전이와 반전 비율을
+반환한다. 방향 tolerance 기본값은 정규화 단위 `1e-6`이며 음악적 감지 한계는 아니다.
+큰 변화는 strict `abs(delta) > threshold`이고, 방향 전이와 반전의 분모는 각각
+유효한 연속 3 beat / 두 변화가 모두 non-flat인 연속 3 beat다. support count를 함께
+반환하고, 분모가 없으면 NaN이다. `fit_change_threshold`는 유효 reference beat 쌍을
+모아 분위수를 구하므로 긴 연주에 더 큰 가중이 들어간다.
+
+현재 분석 입력은 작품 공통 패턴을 제거한 정규화 잔차다. Dynamics 상승을 원래
+velocity 상승과 동일하게 해석하지 않는다. 정의·실제 데이터 결과·한계·재현 명령은
+[변화 형태 baseline](../../analysis/temporal_shape/README.md)에 있다.

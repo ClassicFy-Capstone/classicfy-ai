@@ -92,8 +92,8 @@ def retained_indices(count, fraction, pattern, rng):
     return np.setdiff1d(np.arange(count), removed)
 
 
-def collect_groups(args):
-    provenance = source_signature(args.asap_root, args.nasap_root)
+def collect_groups(args, *, provenance_source_files=None):
+    provenance = source_signature(args.asap_root, args.nasap_root, source_files=provenance_source_files)
     records = read_cache(args.cache, provenance)
     loader = ASAPLoader(args.asap_root, args.nasap_root)
     raw_groups = defaultdict(list)
