@@ -80,3 +80,7 @@ HTTP Range 재생·구간 이동 및 pack 밖 파일 차단을 다룬다. 합성
 독립 Pearson 및 양의 affine 변환 불변성을 검증한다. `test_temporal_duration_analysis.py`는
 실제 runner의 원래 index 보존·support·출력 필드 및 설정을 검증한다.
 신규14개와 변화 형태13개를 합쳐27개 통과했다. [지속·반복 보고서](../analysis/temporal_duration/README.md).
+
+`unit/features/test_temporal_pair_explanations.py`는 평균·폭 두 조건과 퇴화 입력,
+전곡과 두 반쪽의 차이 방향 일치, 결측 support 거부 및 전곡 평균이 상쇄한 반쪽 차이를
+검증한다. 새4개 테스트가 통과했다. [실제 쌍의 추가 설명](../analysis/temporal_pair_explanations/README.md).

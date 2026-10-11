@@ -1,0 +1,42 @@
+{
+  "divergent": {
+    "a": 206,
+    "b": 282,
+    "key_a": "Chopin/Etudes_op_10/8/ChenJie03.mid",
+    "key_b": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/BuiJL03M.mid",
+    "piece_a": "Chopin/Etudes_op_10/8/midi_score.mid",
+    "piece_b": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/midi_score.mid",
+    "baseline_distance": 0.28072458930620403,
+    "baseline_percentile": 0.06415303414691045,
+    "length_ratio": 1.332155477031802,
+    "dynamics_mean_gap": 0.0719839650946863,
+    "dynamics_width_relative_gap": 0.03503179893813862,
+    "dynamics_lag1_gap": 0.219840556315687,
+    "dynamics_first_half_lag1_signed_gap": 0.26531300067905006,
+    "dynamics_second_half_lag1_signed_gap": 0.18257218449802826,
+    "strict_dynamics_summary": true,
+    "robust_temporal_gap": true,
+    "matched_lag1": false,
+    "different_composer": true
+  },
+  "consistent": {
+    "a": 100,
+    "b": 132,
+    "key_a": "Beethoven/Piano_Sonatas/7-1/KOLESO01.mid",
+    "key_b": "Chopin/Ballades/4/Mizumoto02M.mid",
+    "piece_a": "Beethoven/Piano_Sonatas/7-1/midi_score.mid",
+    "piece_b": "Chopin/Ballades/4/midi_score.mid",
+    "baseline_distance": 0.2542263193758155,
+    "baseline_percentile": 0.03207651707345523,
+    "length_ratio": 1.4211618257261411,
+    "dynamics_mean_gap": 0.10603277429596802,
+    "dynamics_width_relative_gap": 0.04570720231366487,
+    "dynamics_lag1_gap": 0.024067941671034654,
+    "dynamics_first_half_lag1_signed_gap": 0.020903744772785338,
+    "dynamics_second_half_lag1_signed_gap": 0.024978518246151493,
+    "strict_dynamics_summary": true,
+    "robust_temporal_gap": false,
+    "matched_lag1": true,
+    "different_composer": true
+  }
+}
