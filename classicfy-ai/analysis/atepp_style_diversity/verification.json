@@ -1,0 +1,11 @@
+{
+  "unit_tests_passed": 3,
+  "shared_grid_summaries_checked": 2489,
+  "independent_query_distance_checks": 50,
+  "independent_same_work_feature_rms_checks": 5,
+  "markdown_links_checked": 16,
+  "png_count": 6,
+  "pdf_count": 6,
+  "visual_review": "Six charts checked for readable Korean labels and layout",
+  "all_input_sha256_valid": true
+}

@@ -241,7 +241,7 @@ def draw_examples(vectors,rows,metrics,comp,full,baseline,anchor_key,out):
                  [BLUE,GREEN,GRAY],out/"03_typical_profile.png","중간 수준 사례의 연주 성향을 비교한다",
                  f"A: {piece_label(pieces[t])} | B·C: {piece_label(pieces[tb])}")
     target=np.flatnonzero(cohorts==cohorts[tb]);order=sorted(target,key=lambda i:(full[t,i],keys[i]))
-    fig,ax=chart("같은 후보 작품에서도 연주별 검색 거리가 다르다",f"기준 A: {Path(typical_key).stem} | 후보 작품: {piece_label(pieces[tb])}")
+    fig,ax=chart("같은 후보 작품에서도 연주별 검색 거리가 다르다",f"기준 A: {Path(typical_key).stem} | 후보 작품: {piece_label(pieces[tb])}",height=max(5.8,2.5+.3*len(order)))
     vals=full[t,order]
     ax.barh(np.arange(len(order)),vals,color=[GREEN if i==tb else ORANGE if i==tc else GRAY for i in order])
     for j,i in enumerate(order):ax.text(full[t,i]+.015,j,f"{full[t,i]:.3f}",va="center",fontsize=10)

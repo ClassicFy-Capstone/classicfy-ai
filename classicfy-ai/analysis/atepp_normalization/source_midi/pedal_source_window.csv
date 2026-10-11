@@ -1,0 +1,2 @@
+﻿key,start_score_position,stop_score_position,start_seconds,stop_seconds,on_off_transitions,selection
+05360,509.0,541.0,215.265625,247.97493489583331,112,maximum real on/off transitions over every 32-beat window of the three example MIDI traces; ties by key/window

@@ -1,0 +1,42 @@
+{
+  "groups": 233,
+  "performances": 2692,
+  "max_pair_residual_error": 1.7763568394002505e-15,
+  "max_pair_scale_error": 2.2737367544323206e-13,
+  "collapsed_pairs": 0,
+  "normalized_cache": "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\ATEPP_dataset\\features\\dual_dtw\\atepp_standardized.npz",
+  "normalized_cache_sha256": "852b975d991529576b6bd4778febda07179c7714990d5c4b225097c56310d5b6",
+  "clipping": null,
+  "recentering": false,
+  "policy": "Per-work MAD Tempo/Rubato/Dynamics/Articulation; independent SD for three pedal channels",
+  "channels": {
+    "tempo": {
+      "valid_beats": 1625845,
+      "max_abs_standardized": 1922.59900159019
+    },
+    "rubato": {
+      "valid_beats": 1625845,
+      "max_abs_standardized": 1636.7378727632934
+    },
+    "dynamics": {
+      "valid_beats": 1524006,
+      "max_abs_standardized": 51.99199604298765
+    },
+    "articulation": {
+      "valid_beats": 1519875,
+      "max_abs_standardized": 286.47879015182997
+    },
+    "pedal_depth": {
+      "valid_beats": 1627483,
+      "max_abs_standardized": 9.954478378979
+    },
+    "pedal_down_ratio": {
+      "valid_beats": 1627483,
+      "max_abs_standardized": 9.254884897337597
+    },
+    "pedal_changes": {
+      "valid_beats": 1627483,
+      "max_abs_standardized": 53.424444608693754
+    }
+  }
+}

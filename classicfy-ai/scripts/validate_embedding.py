@@ -227,7 +227,7 @@ def plot_results(table, summary, examples, contributions, out):
     distances = example["distances"][qi]
     order = np.argsort(distances, kind="stable")
     piece_label=key[0].removesuffix("/midi_score.mid").replace("/", " · ")
-    fig, ax = chart("beat가 일부 없어도 원래 연주를 찾아낼까?", f"{piece_label} | beat 10% 누락 | 입력의 원래 연주: {Path(example['keys'][target]).stem}")
+    fig, ax = chart("beat가 일부 없어도 원래 연주를 찾아낼까?", f"{piece_label} | beat 10% 누락 | 입력의 원래 연주: {Path(example['keys'][target]).stem}", height=max(5.8, 2.5+.3*len(order)))
     colors = [BLUE if i == target else GRAY for i in order]
     ax.barh(np.arange(len(order)), distances[order], color=colors)
     ax.set(yticks=np.arange(len(order)), yticklabels=[Path(example["keys"][i]).stem + (" ← 원래 연주" if i == target else "") for i in order], xlabel="다섯 feature 임베딩 거리 (작을수록 가까움)")
@@ -287,7 +287,7 @@ def plot_results(table, summary, examples, contributions, out):
     for i,v in enumerate(frame):ax.text(i,100*v+1,f"{100*v:.1f}%",ha="center")
     ax.set(xticks=np.arange(5),xticklabels=list(BLOCKS),ylabel="전체 제곱 거리에서 차지하는 비율 (%)",ylim=(0,max(frame)*100+12))
     save(fig,out/"07_feature_distance_contribution.png","각 묶음의 가중치는 같지만 실제 거리 기여도는 다를 수 있다. 가중치를 데이터에 맞춰 학습하거나 조정하지 않았다.")
-    bars(["all","mean_only","without_DA_range"],"변화 폭을 넣으면 검색 오류가 줄어들까?","beat 10% 무작위 누락 | 오류가 적으므로 1,000회당 횟수로 비교","08_summary_choice.png","Rubato 첫 좌표는 기존 편차 크기다. 평균만 조합이 이 조건에서 더 안정적이며, 음악적 유사성은 별도 검증이 필요하다.",failure=True)
+    bars(["all","mean_only","without_DA_range"],"변화 폭을 넣으면 검색 오류가 줄어들까?","beat 10% 무작위 누락 | 1,000회당 실패 횟수로 비교","08_summary_choice.png","Rubato 첫 좌표는 기존 편차 크기다. 성향만 조합과 변화 폭 포함 조합의 안정성을 비교하며, 음악적 유사성은 별도 검증이 필요하다.",failure=True)
     f=summary[(summary.config=="all") & (summary.drop_fraction==.20)].set_index("pattern")
     fig,ax=chart("누락이 한 구간에 몰려도 안정적일까?","다섯 feature 전체 | beat 20% 누락 | 무작위와 연속 누락 비교")
     rates=100*f.loc[["random","contiguous"],"macro_top1"].to_numpy()
