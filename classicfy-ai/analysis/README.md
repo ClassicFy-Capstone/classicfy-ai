@@ -16,6 +16,10 @@
 | `pedaling/` | 실제 CC64와 깊이·on 시간·전환 횟수의 공통 제거 및 SD 표준화 | [Pedaling 그림 안내](pedaling/README.md) |
 | `_articulation/` | 실제 음 길이·beat 중앙값·공통 제거·MAD 표준화, 파일당 그래프 하나 | [Articulation 그림 안내](_articulation/README.md) |
 | `_embedding_validation/` | 다섯 feature 결합의 동일 작품 검색·결측 안정성·feature 제외 비교 | [임베딩 검증 그림 안내](_embedding_validation/README.md) |
+| `temporal_coupling/` | 둘 이상 feature의 동시 변화·시차·공동 방향과 개별 시간 통계 대비 추가 설명 | [공동 시간 변화 분석](temporal_coupling/README.md) |
+| `temporal_pair_explanations/` | 평균·폭이 가까운 다른 작품의 실제 쌍에서 시간 특징의 추가 설명·작품 효과 점검 | [시간 특징의 추가 설명](temporal_pair_explanations/README.md) |
+| `temporal_duration/` | 변화 방향·상대 수준의 지속 길이와 값/변화량의 beat 간격별 자기상관 | [지속·반복 baseline](temporal_duration/README.md) |
+| `temporal_shape/` | 인접 beat 변화량 분포·고정 기준 큰 변화 비율·상승/하강 전이 | [변화 형태 baseline](temporal_shape/README.md) |
 | `temporal_embedding/` | 1D CNN 20epoch의 검증 오차·구간 내 변화 모양·관측 순서 영향 | [시계열 복원 학습 결과](temporal_embedding/README.md) |
 | `temporal_neighbors/` | 현재 1D CNN의 다른 작품 검색과 대표 성향·변화 폭·beat별 변화 크기 대조 | [CNN 성향 검색 관찰](temporal_neighbors/README.md) |
 | `composer_style_example/` | 베토벤·바흐 4연주를 feature로 선정해 CNN 배치와 작곡가/스타일 쌍 거리 비교 | [작곡가와 연주 스타일 figure](composer_style_example/README.md) |
@@ -41,6 +45,10 @@ classicfy-ai/analysis/
 ├── articulation/
 ├── _articulation/
 ├── _embedding_validation/
+├── temporal_coupling/
+├── temporal_pair_explanations/
+├── temporal_duration/
+├── temporal_shape/
 ├── temporal_embedding/
 ├── temporal_neighbors/
 ├── composer_style_example/

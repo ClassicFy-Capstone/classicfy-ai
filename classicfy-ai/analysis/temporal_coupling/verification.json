@@ -1,0 +1,35 @@
+{
+  "support_checks": 19152,
+  "pearson_checks": 18936,
+  "max_absolute_error": 8.881784197001252e-16,
+  "csv_sha256": {
+    "cohort_audit.csv": "d716163600169bcb92a891a13818f5e9960fea2b20e4ac8325a107bf358fc81d",
+    "relation_summary.csv": "db35ba3bea192559150ada23ad7ba6ee5b17754e6267e40114bac084b0793be9",
+    "profiles.csv": "80e662f56d3e0cdbbece4e5485aafc4e194c0afb201b00e7f5d89e43271bd0a2",
+    "case_metrics.csv": "ba805821e0ecb51805b2a7e7ee6d5f19d64b877351022c94d9c2ba7874aa48a4",
+    "case_values.csv": "1f400af84f7ee049acd0aa3970bf307aa584e06bb34b338f0de8b412128a425f",
+    "case_sensitivity.csv": "236739c6a4ba3553336d0498bbf096b9586e9a831d2ab71cbedde110833ddf23",
+    "additional_information.csv": "1ad9a4e1baddb3ea9ad75a552092367fbc1a2cb024ac040125a8d32ef18e0173",
+    "pair_metrics.csv": "3454eb086483f70e1901a69e9a3f5118815ba5c9e47b4ea6bf4fe192b57872a1",
+    "triple_directions.csv": "d72772c0ee56fffeb26c5319237fc145c9378a51b59a2a0669e3e65fc27e5c2a",
+    "single_temporal_metrics.csv": "3dcfd43013ae8184520bf5e9ab0ee74f357037096c073ac7ea66c77680a77eff",
+    "close_pairs.csv": "05ba68da19fb38930cdf7ec5295deeb9d405baf5f01d5868d5ee706b1a9845fe",
+    "descriptor_scales.csv": "5440a0a4f6db2319b2d17b188154eca9bab1a88948da2bfd71898f140af5114c"
+  },
+  "reproducible_csvs": [
+    "additional_information.csv",
+    "case_metrics.csv",
+    "case_values.csv",
+    "close_pairs.csv",
+    "cohort_audit.csv",
+    "descriptor_scales.csv",
+    "pair_metrics.csv",
+    "profiles.csv",
+    "single_temporal_metrics.csv",
+    "triple_directions.csv"
+  ],
+  "case_phase_control_checks": 12,
+  "case_phase_max_absolute_error": 5.551115123125783e-17,
+  "case_joint_direction_count_checks": 36,
+  "case_rank_checks": 4
+}

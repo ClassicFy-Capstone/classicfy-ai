@@ -1,0 +1,40 @@
+{
+  "divergent": {
+    "key_a": "Chopin/Etudes_op_10/2/Shi02.mid",
+    "key_b": "Chopin/Etudes_op_10/4/Yi03M.mid",
+    "piece_a": "Chopin/Etudes_op_10/2/midi_score.mid",
+    "piece_b": "Chopin/Etudes_op_10/4/midi_score.mid",
+    "channel_a": "rubato",
+    "channel_b": "pedal_depth",
+    "baseline_distance": 0.2527315293419044,
+    "single_temporal_distance": 0.8441623505332619,
+    "single_supported_coordinates": 67,
+    "single_temporal_close": true,
+    "correlation_a": 0.27142996305851924,
+    "correlation_b": -0.051424044852928265,
+    "signed_gap": 0.3228540079114475,
+    "first_half_signed_gap": 0.3316524528564324,
+    "second_half_signed_gap": 0.31707443585416845,
+    "stable_gap": true,
+    "phase_supported": true
+  },
+  "consistent": {
+    "key_a": "Balakirev/Islamey/Na08M.mid",
+    "key_b": "Beethoven/Piano_Sonatas/7-1/Hebert01M.mid",
+    "piece_a": "Balakirev/Islamey/midi_score.mid",
+    "piece_b": "Beethoven/Piano_Sonatas/7-1/midi_score.mid",
+    "channel_a": "rubato",
+    "channel_b": "dynamics",
+    "baseline_distance": 0.20520187684763613,
+    "single_temporal_distance": 0.8354949611867543,
+    "single_supported_coordinates": 70,
+    "single_temporal_close": true,
+    "correlation_a": -0.016796253246509105,
+    "correlation_b": -0.03233978610303907,
+    "signed_gap": 0.015543532856529967,
+    "first_half_signed_gap": -0.04831693612084781,
+    "second_half_signed_gap": 0.060485616203161306,
+    "stable_gap": false,
+    "phase_supported": false
+  }
+}

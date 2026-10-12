@@ -1,0 +1,14 @@
+{
+  "channel_rows": 3990,
+  "numeric_checks": 183540,
+  "max_absolute_error": 4.440892098500626e-16,
+  "groups_with_gaps": 38,
+  "thresholds_checked": 7,
+  "reference_pairs_per_channel": 179326,
+  "method": "Independent compact source differences gated by original index adjacency; dictionary-based direction transitions; manual counts/RMS and NumPy quantiles",
+  "csv_sha256": {
+    "performance_channels.csv": "780e7c700e4e0ba3f707e1df9c0c709d830f3a81c16af96463572c234e529eb8",
+    "thresholds.csv": "03caacc740070244ca2f57b8af91fc9b1960901faacc5ec104210b03d8bd16c5",
+    "cohort_audit.csv": "1fcf6681685fbb3ed90ae0ecde622f9e383efe0b4d5210f874bedd9d2c4468db"
+  }
+}

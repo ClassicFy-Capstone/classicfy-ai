@@ -508,3 +508,52 @@ fixture로 세 feature 분리, 정렬 품질 선택 및 정렬 누락을 검증�
 방지를 검증한다. 실제 ASAP/nASAP을 포함한 전체 테스트는 123개 모두 통과했다.
 `scripts/validate_feature_normalization.py`는 공식 dataset의 raw 추출부터 정책 비교,
 표준화, pair 차이 보존 검사, 극단 beat 원본 재추출까지 실행하고 CSV·JSON·PNG를 저장한다.
+
+## 11. 인접 beat 변화 형태
+
+`features.temporal_shape`는 추출·정규화 이후의 `BeatSequence`를 요약한다.
+
+```python
+from features.temporal_shape import fit_change_threshold, summarize_temporal_shape
+
+# reference_sequences는 같은 단위로 정규화한 train 작품의 해당 채널만 사용한다.
+threshold = fit_change_threshold(reference_sequences, quantile=0.95)
+metrics = summarize_temporal_shape(sequence, large_threshold=threshold.value)
+```
+
+`adjacent_changes`는 원래 index에서 유효하고 finite인 두 beat의 차이만 계산하며
+결측을 건너서 잇지 않는다. signed/absolute delta의 다섯 분위수, mean absolute·RMS,
+고정 임계값 초과 비율, 상승·유지·하강 비율, 9가지 연속 방향 전이와 반전 비율을
+반환한다. 방향 tolerance 기본값은 정규화 단위 `1e-6`이며 음악적 감지 한계는 아니다.
+큰 변화는 strict `abs(delta) > threshold`이고, 방향 전이와 반전의 분모는 각각
+유효한 연속 3 beat / 두 변화가 모두 non-flat인 연속 3 beat다. support count를 함께
+반환하고, 분모가 없으면 NaN이다. `fit_change_threshold`는 유효 reference beat 쌍을
+모아 분위수를 구하므로 긴 연주에 더 큰 가중이 들어간다.
+
+현재 분석 입력은 작품 공통 패턴을 제거한 정규화 잔차다. Dynamics 상승을 원래
+velocity 상승과 동일하게 해석하지 않는다. 정의·실제 데이터 결과·한계·재현 명령은
+[변화 형태 baseline](../../analysis/temporal_shape/README.md)에 있다.
+
+## 12. 관측된 지속 길이·반복 지표
+
+```python
+from features.temporal_duration import summarize_temporal_duration, lagged_correlation
+from features.temporal_shape import adjacent_changes
+
+lengths = summarize_temporal_duration(sequence)
+value_correlation = lagged_correlation(sequence, lag=8, min_pairs=32)
+delta_correlation = lagged_correlation(adjacent_changes(sequence), lag=8, min_pairs=32)
+```
+
+지속 길이는 방향별 연속 delta step 수와 양/0/음의 잔차별 연속 beat 값 수를
+각각 요약한다. count·평균·중앙값·p95·최대와 경계별 censored count를 반환한다.
+`observed_runs`로 원래 start/stop(exclusive), state, 좌·우 경계 정보를 얻을 수 있다.
+방향/수준 tolerance 기본값은 `1e-6`이다. gap·NaN·inf는 run을 끊고, 경계에 닿는
+run은 더 길 수 있다. 해당 상태가 없으면 count 0 / 길이 통계 NaN이다.
+
+`lagged_correlation`은 각 lag에서 유효한 paired 값의 Pearson r을 계산한다.
+양 끝과 그 사이 모든 entry가 유효해야 하며, 서로 다른 유효 구간을 잇지 않는다.
+최소 32쌍, 양쪽 SD > 정규화 단위 `1e-12`가 기본이다. 부족/상수이면 NaN과
+`insufficient_pairs` / `constant_pairs`를 반환하고, 유효하면 `ok`다.
+높은 r은 지속·드리프트로도 생기므로 음악적 반복이나 추천 성공을 뜻하지 않는다.
+전체 정의·그림·실제 결과는 [지속·반복 baseline](../../analysis/temporal_duration/README.md)에 있다.
