@@ -14,6 +14,12 @@
 연주 feature의 그림·CSV·보고서는 [분석 목록](classicfy-ai/analysis/README.md)에서
 Tempo, Rubato, Dynamics·Pedaling, Articulation, 정규화 등의 주제별로 확인할 수 있다.
 
+[ATEPP 정규화 및 피처 분석](classicfy-ai/analysis/atepp_normalization/README.md)은
+ATEPP DualDTW 데이터의 공통 패턴 제거·표준화·다섯 feature 시각화·14차원 결측 안정성과 다른 작품 검색을 분석한다.
+
+[ATEPP 연주 다양성과 작곡가 간 비교](classicfy-ai/analysis/atepp_style_diversity/README.md)는
+정규화 후 동일 작품 내 다섯 feature의 연주 차이와 다른 작곡가의 연주 피처 유사성을 그림으로 분석한다.
+
 임베딩의 연주 차이를 세 팀원이 실제 녹음으로 확인하는 [청취 평가 도구](classicfy-ai/tools/listening_evaluation/README.md)는
 같은 작품 비교·다른 작품 후보 비교와 응답 저장·그림 분석을 제공한다.
 

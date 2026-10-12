@@ -152,7 +152,7 @@ def draw_cross_work(selected, vectors, rows, distances, out):
         save(fig,out/filename,"7개 좌표는 Tempo·Rubato·Dynamics·Articulation과 페달 3개 지표다. 모든 특징이 일치해야 가까운 후보가 되는 것은 아니다.",bottom=.19)
     target = [i for i,r in enumerate(rows) if r["piece"]==rows[selected[1]]["piece"]]
     target.sort(key=lambda i:(distances[i],rows[i]["key"]))
-    fig,ax=chart("다른 작품의 같은 후보군에서 B를 먼저 찾았다",f"기준 A: {Path(rows[selected[0]]['key']).stem} | 후보 작품: {piece_label(rows[selected[1]]['piece'])}")
+    fig,ax=chart("다른 작품의 같은 후보군에서 B를 먼저 찾았다",f"기준 A: {Path(rows[selected[0]]['key']).stem} | 후보 작품: {piece_label(rows[selected[1]]['piece'])}",height=max(5.8,2.5+.3*len(target)))
     values=[distances[i] for i in target]
     ax.barh(np.arange(len(target)),values,color=[GREEN if i==selected[1] else GRAY for i in target])
     for j,i in enumerate(target):ax.text(distances[i]+.02,j,f"{distances[i]:.3f}",va="center")

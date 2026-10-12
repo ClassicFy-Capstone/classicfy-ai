@@ -1,0 +1,35 @@
+{
+  "tests": {
+    "total": 209,
+    "passed": 206,
+    "errors": 3,
+    "failures": 0,
+    "skipped": 0,
+    "environment_errors": "Existing ListeningHTTPTest: Windows WinError 1314 creating symlinks",
+    "new_unit_tests_passed": 5,
+    "new_real_atepp_integration_tests_passed": 1,
+    "feature_suite_passed": 118
+  },
+  "pipeline_completed": true,
+  "source_reextraction_checks": 49,
+  "max_raw_reextraction_error": 0.0,
+  "figures": 100,
+  "normalization_performances": 2692,
+  "embedding_performances": 2489,
+  "analysis_code_sha256": {
+    "validate_atepp_normalization.py": "0df7bc22853beee6e9e20d3f65cbf381ac4cf62213bef20e7f40f8c65cb2dfc0",
+    "atepp_feature_analysis.py": "01cc1f4e88db0a464a2cdae63422410fb0570a956754687e2dfd3d863f601c2c",
+    "validate_embedding.py": "2ff5c8f07c1de08d4a2797831c42ef1922d8c3aced03df10c8c2e016bd0fe540",
+    "validate_feature_search_roles.py": "572400b75eb0c671676e87d546f4fd870fb1857f54132fd89c6ed5ec8395e883",
+    "validate_interpretation_examples.py": "b6cb2019223e2a6b3d226299c97b3efb13f6244b66f039d8d92c17332b8e57f0",
+    "validate_feature_normalization.py": "ad5c924f5311cb1d6f0cfc51a70ce88796bcaff92cb626e683465b8fdff4e0c3",
+    "validate_tempo.py": "646ccf92b06218eb0d7de6cef8ca88a41b4f8b163daef9dca3d528008263069d"
+  },
+  "artifact_qa": {
+    "all_172_artifact_hashes_valid": true,
+    "all_markdown_links_resolve": true,
+    "normalized_cache_sha256_valid": true,
+    "sampled_stage_mask_support_records": 140,
+    "visual_review": "Tempo/raw, label variance, dropout, search changes, articulation note aggregation and active pedal extraction checked"
+  }
+}

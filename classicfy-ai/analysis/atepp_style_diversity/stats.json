@@ -1,0 +1,98 @@
+{
+  "dataset": "ATEPP-1.2",
+  "seed": 20261011,
+  "population": {
+    "performances": 2489,
+    "works": 161,
+    "composers": 10,
+    "query_cross_nearest_fraction": 0.5315387705905986,
+    "work_macro_cross_nearest_fraction": 0.6629821844771147,
+    "work_macro_cross_nearest_ci95": [
+      0.6137341292328319,
+      0.713909517636141
+    ],
+    "work_macro_random_candidate_cross_fraction": 0.6965104503513754,
+    "work_macro_strict_cross_closer_fraction": 0.6629821844771147,
+    "bootstrap_samples": 2000,
+    "eligible_directed_pairs": 5751186
+  },
+  "same_work_example": {
+    "piece": "ATEPP/1217/8c47e4d0afad",
+    "keys": [
+      "07162",
+      "07164",
+      "07171"
+    ],
+    "median_14d_pair_distance": 0.8403982488712116
+  },
+  "composer_example": {
+    "composers": [
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart"
+    ],
+    "selection_pair_ranks": [
+      1,
+      2
+    ],
+    "selected_keys": [
+      "07492",
+      "05435",
+      "08900",
+      "05234"
+    ],
+    "nearest_style_partner_count_in_four": 4,
+    "style_partner_ranks_in_entire_gallery": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "pca_variance_ratio": [
+      0.9422308958366801,
+      0.037316019673999154
+    ],
+    "distance": "14D five-block equally weighted RMS",
+    "selection": "Two composers with the most eligible works; greedy minimum feature distance, four distinct works and artists; no outcome constraint."
+  },
+  "feature_diversity_work_medians": {
+    "Tempo": {
+      "beat_pair_rms_median": 1.8480596839310512,
+      "summary_pair_distance_median": 0.8185269800476862,
+      "tendency_pair_distance_median": 0.7969081884424556,
+      "width_pair_distance_median": 0.5638984159355189
+    },
+    "Rubato": {
+      "beat_pair_rms_median": 2.4573826219466115,
+      "summary_pair_distance_median": 0.6181460043536835,
+      "tendency_pair_distance_median": 0.16880203158473073,
+      "width_pair_distance_median": 0.8463400892206452
+    },
+    "Dynamics": {
+      "beat_pair_rms_median": 1.5553906248506153,
+      "summary_pair_distance_median": 0.7164378131926721,
+      "tendency_pair_distance_median": 0.6565617070804552,
+      "width_pair_distance_median": 0.4863637861248855
+    },
+    "Articulation": {
+      "beat_pair_rms_median": 2.29972464471906,
+      "summary_pair_distance_median": 0.6365723083428552,
+      "tendency_pair_distance_median": 0.4015002041985829,
+      "width_pair_distance_median": 0.6858082296879209
+    },
+    "Pedaling": {
+      "beat_pair_rms_median": 1.3684479639848777,
+      "summary_pair_distance_median": 0.6436503545815577,
+      "tendency_pair_distance_median": 0.3265888027320593,
+      "width_pair_distance_median": 0.7964568343744256
+    }
+  },
+  "cnn_used": false,
+  "shared_grid_summaries_verified": 2489,
+  "input_sha256": {
+    "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\capstone-2026-2-classicfy\\classicfy-ai\\analysis\\atepp_normalization\\_embedding_validation\\embeddings.csv": "5e2dbfe8c838727dc4b5ca0ce21feda23fa5acc516db8ee2354e183c73654954",
+    "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\capstone-2026-2-classicfy\\classicfy-ai\\analysis\\atepp_normalization\\performance_catalog.csv": "331f312524553ecec5594ffdd7c886b789a1c5771f86717359ab4a45390e35aa",
+    "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\capstone-2026-2-classicfy\\classicfy-ai\\analysis\\atepp_normalization\\stats.json": "14bded9689fec09f9dfc41b3678d22bea36f51d85247e15563847647e72faec8",
+    "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\capstone-2026-2-classicfy\\classicfy-ai\\scripts\\analyze_atepp_style_diversity.py": "b899342eba33e689c00017b0c299068f5e4612e6fd94d391cff1c1b9013afd1f"
+  },
+  "normalized_cache_sha256": "852b975d991529576b6bd4778febda07179c7714990d5c4b225097c56310d5b6"
+}

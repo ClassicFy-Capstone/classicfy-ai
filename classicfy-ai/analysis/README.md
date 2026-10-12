@@ -5,6 +5,8 @@
 
 | 폴더 | 분석 주제 | 시작 문서 |
 |---|---|---|
+| `atepp_style_diversity/` | 정규화 후 동일 작품 내 다섯 feature 다양성·다른 작곡가의 연주 피처 유사성 | [ATEPP 연주 다양성과 작곡가 간 비교](atepp_style_diversity/README.md) |
+| `atepp_normalization/` | ATEPP 공통 패턴 제거·표준화·다섯 feature figure·14차원 결측/검색 분석 | [ATEPP 정규화 및 피처 분석](atepp_normalization/README.md) |
 | `alignment_comparison/` | ASAP의 DualDTW·TheGlueNote beat/note 정렬 비교 및 정렬기 선택 | [정렬 비교 보고서](alignment_comparison/README.md) |
 | `atepp_research/` | 선택한 연구 기반 정렬기로 ATEPP 피처 재추출·정규화·동일 추천 검증 | [재추출 검증 보고서](atepp_research/README.md) |
 | `atepp/` | ATEPP 다운로드·자동 정렬·기존 피처 확장, 무결성·시대/작곡가 정보·추천 순위 안정성 검증 | [ATEPP 확장 및 추천 검증](atepp/README.md) |
