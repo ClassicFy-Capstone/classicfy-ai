@@ -142,3 +142,5 @@ weighted ridge의 독립 최소제곱 일치, 절편 비규제, 학습-only 메�
 `test_structure_response.py`의 6개 테스트는 구간 중점·경계 이동·반복/결측 차분 차단·분리 view와 알려진 선형 반응을 검증한다. 프레이즈 후보·마디 연결·실제 후보 pipeline을 포함한 이번 관련 32개 테스트와 독립 783,603개 산술 검산을 통과했다.
 
 `test_tonal_tension.py`의 7개 테스트는 enharmonic spelling·scale·positive overlap·쉼과 점프 reset·조성 미확정/충돌·tertile 동점을 검증한다. 독립 raw XML/scalar tension 및 두 view 반응 검산도 제공한다.
+
+`test_structure_retrieval.py`의 7개 테스트는 search/heldout view 분리, block 차분, 조건 차원과 shift 재현, 알려진 선형 긴장 반응, constant 좌표 제외 및 작품군 cap을 검증한다. 이번 관련 54개 tests는 skip 없이 통과했다. 비교의 독립 12,467,842개 수치 검산과 9 CSV/JSON·291 배열 재현은 결과 보고서를 참조한다. 전체 suite 결과와 구분한다.

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "numeric_checks": 12467842,
+  "maximum_absolute_error": 1.9984014443252818e-15,
+  "common_performances": 335,
+  "gallery": 247,
+  "queries": 88,
+  "matrix_blocks": 14,
+  "scope": "Original-index B/T/F and held-out judges; prior verified P/H CSV inputs; two deterministic phase shifts; independent train scales/main and all shifted distances/percentiles; all main and control ranks/scores/macro aggregation; no production retrieval functions",
+  "limitation": "Other shifted-response arithmetic and auxiliary score-only S/Q descriptors rely on unit tests and saved inputs; all their distances and ranks are checked",
+  "code_sha256": "d63b1e2a0ea1ad570d02d7f3e4f18bb751977bf0d1c21cdbe0073e9a8c4359ef"
+}

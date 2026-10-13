@@ -159,3 +159,7 @@ PYTHONPATH=src ../.venv/bin/python -m unittest discover -s tests/unit/embedding 
 
 구간의 결측·padding·tail, 작품 split, hidden 정답 누출 방지, 5feature 오차 비중,
 가중치 학습, checkpoint 재로드 및 다른 작품 후보 제외를 검증한다.
+
+## 구조 조건의 해석 가능한 비교
+
+`structure_retrieval.py`는 기존 정규화 잔차의 프레이즈 가설/긴장 수준 반응과 겹치지 않는 원래 beat 구간의 평가를 제공한다. 신경망 학습 없이 train-only 거리 scale과 동일 가중 block 조합으로 비교한다. [결과와 재현](../../analysis/structure_response_comparison/README.md)에 공통 cohort·전체 축·대조 및 지원/해석 한계를 기록했다. 현재 고정 구간보다 구조 조건의 추가 이득은 확인하지 못했다.
