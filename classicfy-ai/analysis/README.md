@@ -27,6 +27,7 @@
 | `metadata_information_results/` | 고정한 전곡 정보 예측 실험·20회 섞기/잡음 대조·작품 내 차이·독립 수치 검증 | [추가 정보 실험 결과](metadata_information_results/README.md) |
 | `metadata_retrieval_design/` | 다른 작품 Top K 검색의 메타데이터 대비 차별성·별도 구간 스타일 일치·지식 보강 실험 설계 | [검색 축 실험 설계](metadata_retrieval_design/README.md) |
 | `metadata_retrieval_results/` | 메타데이터별 Top K 겹침·분리 구간 스타일 검색·같은 작품/조건부 섞기·후보 수 균형 대조 | [검색 축 실험 결과](metadata_retrieval_results/README.md) |
+| `score_structure_inputs/` | MusicXML·nASAP 음표 ID·마디 대응표 점검과 기존 beat 정렬 코드 재사용 범위 | [악보 구조 입력 점검](score_structure_inputs/README.md) |
 | `_interpretation_embedding/` | 같은 작품 3연주의 차이·MIDI 원자료와 다른 작품 A·B·C 유사 특징 검색 | [연주 차이와 검색 사례](_interpretation_embedding/README.md) |
 | `_feature_search_roles/` | 다른 작품 검색에서 feature별 후보/순위 변화와 검색에 안 쓴 feature의 일치 검사 | [feature별 검색 역할](_feature_search_roles/README.md) |
 | `_listening_evaluation/` | 3인 청취 평가의 연주 선정·발췌·비공개 거리와 준비 기록 | [진행자 자료](_listening_evaluation/README.md) · [참가자 도구](../tools/listening_evaluation/README.md) |
@@ -60,6 +61,7 @@ classicfy-ai/analysis/
 ├── metadata_information_results/
 ├── metadata_retrieval_design/
 ├── metadata_retrieval_results/
+├── score_structure_inputs/
 ├── _interpretation_embedding/
 │   ├── same_work/
 │   ├── cross_work/

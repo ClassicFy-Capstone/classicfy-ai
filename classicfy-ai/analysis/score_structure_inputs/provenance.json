@@ -1,0 +1,18 @@
+{
+  "cohort": "dd67c50875fd5839eeb4982fab779e1245c7546923820ee6e979d63880de7a61",
+  "metadata": "b327d92e498e281b381161ee387dacfd4b1c360c9c240d9107171f78e571b2a5",
+  "annotations": "02e4b80f0a78150d1bd0fc21c9cee72ed65a61710c1b1f84368c52216b3e0ff7",
+  "nasap_metadata": "5c6622cae9ae34643fc5b35150de5e2891fd8ffbddd1fd579fa6b984014e6924",
+  "code": {
+    "classicfy-ai/scripts/audit_score_structure_inputs.py": "165b8ea77cb7fff6e915e35a144636f2263f230b356a3743bf35458374485566",
+    "classicfy-ai/src/preprocessing/asap_loader.py": "027f2b57b37dc5b9fd1da1d5a086471b84641cafa9a8e0dc00bd37eb3c6453c9",
+    "classicfy-ai/src/preprocessing/note_alignment.py": "32904687ab8b35242c8865e6ec4432d3b51e978d3ab8cae9d79928b68522e8c9",
+    "classicfy-ai/src/features/beat_grid.py": "04197afaba32e3a4425ab6bcae8d745e64e6c0a618e7db31a1719acb18a8359e"
+  },
+  "csv_sha256": {
+    "performances.csv": "a9426c5f7c95281e45c2ff53af55e832d62fa149b5964a2a79962402b5c9f727",
+    "review.csv": "f49b351936268959088278553319889c1cfc92543231076c598de7885b4a0f10",
+    "nasap_works.csv": "61c8d53275d44b0e51143b4570dead3e1a0bb1be0a06fe291c5adfdc07fa8530",
+    "works.csv": "7bb4e7b5faa27d033e6f0aa8559f46fd774fcda2ee4c0e5fe999605142d70811"
+  }
+}
