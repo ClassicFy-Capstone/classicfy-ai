@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "performances": 570,
+  "numeric_checks": 783603,
+  "maximum_absolute_error": 4.547473508864641e-13,
+  "original_feature_digests_equal": true,
+  "prior_combined_counts_equal": true,
+  "observed_visit_durations_differing_from_xml_extent": 39,
+  "independent_scope": "Raw XML written measure origins, saved observed visit projection, scalar phase membership and original-index response arithmetic; bridge route correctness relies on prior independently verified bridge; observed downbeat duration is not assumed equal to XML encoded extent",
+  "code_sha256": "f4e85cd909a2c8aeb032bd645061122eb9600d16fed69b3f90d4519cd577d6b4",
+  "input_artifact_sha256": "59c66f35d75bd883357b48bd66f74a450f685283e20b98e70874a76461d850cc"
+}

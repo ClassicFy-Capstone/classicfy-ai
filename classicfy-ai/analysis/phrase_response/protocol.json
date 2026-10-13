@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "date": "2026-10-14",
+  "cohort": "Frozen 55 score grids / 570 recordings",
+  "phrase_policy": "P1 score-only provisional scaffold: global notated silence, fermata, same-scope slur >=4 quarters; min gap 4, max gap 32 quarters; cap explicitly marked fixed_length_cap; final short tail retained",
+  "phrase_truth": "No expert phrase ground truth; existing pending candidates remain unchanged",
+  "feature_policy": "Byte-identical raw cache and frozen collector/scales; existing 7-channel normalized residuals; no new common-pattern fit",
+  "mapping": "Original B-1 intervals; first printed part supplies context, all parts required for bridge validity; midpoint phase assignment without snapping; repeat visits retained",
+  "response": "Three bins, each 7 means + 7 mean deltas + 7 delta RMS + mean(deltaTempo*deltaDynamics); 66D; joint moment is not correlation",
+  "support": {
+    "minimum_beats_per_bin": 8,
+    "minimum_pairs_per_bin": 4
+  },
+  "boundary_sensitivity": {
+    "shifts_quarters": [
+      -0.5,
+      0.5
+    ],
+    "exclude_crossing_intervals": true
+  },
+  "evaluation": {
+    "views": "Alternating full 64-original-beat blocks; no pair across blocks; both A->B and B->A",
+    "split": "Existing evaluation_role with family overlap exclusions unchanged",
+    "K": 5,
+    "methods": [
+      "B",
+      "B+T",
+      "B+F",
+      "B+P",
+      "B+H",
+      "B+P+H",
+      "structure_only",
+      "shifted_structure"
+    ],
+    "primary": "E-T delta-RMS distribution on held-out blocks, macro by work then family",
+    "secondary": [
+      "E-L median/IQR",
+      "E-R Tempo-Dynamics delta correlation distribution",
+      "E-S context conditional delta distributions"
+    ],
+    "controls": [
+      "M-CT 100 tie seeds",
+      "same-work random recording 100 seeds",
+      "structure circular-shift 20 seeds",
+      "equal gallery recordings per work (3)",
+      "length/coverage Q"
+    ],
+    "weights": "Equal squared normalized block distances; training family-balanced coordinate SD and other-family median distance",
+    "tension": "Spiral array, exact written duration overlap per original score interval, 3 metrics; key-mode provenance and uncertainty retained; no performance input",
+    "evidence": "Exploratory proxy consistency; do not claim listening/preferences; report all axes, per-family results and support; no rule tuning after outcomes"
+  }
+}

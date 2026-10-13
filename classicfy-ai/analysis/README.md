@@ -33,6 +33,7 @@
 | `score_occurrence_bridge/` | Beethoven 31-2 6연주의 반복 회차·첫/둘째 ending·쉼표 마디와 원래 beat 연결 | [반복 구조와 원래 beat 연결](score_occurrence_bridge/README.md) |
 | `score_structure_full/` | 전체 55 grid·570연주의 반복·결합 마디·복수 part 연결과 기존 7채널 값·mask 보존 | [전체 악보 구조 연결](score_structure_full/README.md) |
 | `phrase_candidates/` | 55악보의 slur·쉼·종결형 화음 경계 후보와 3작품의 첫 악보 검수·원래 beat 방문별 연결 | [후보 추출과 검수](phrase_candidates/README.md), [다른 기기에서 이어가기](phrase_candidates/HANDOFF.md) |
+| `phrase_response/` | 55악보의 구간 가설·570연주 반응과 경계 민감도·독립 계산 | [프레이즈 반응 계산](phrase_response/README.md) |
 | `structure_conditioned_style_plan/` | 16번 작업 완료 근거·이슈별 상태와 원래 beat 연결부터 구조 기반 검색까지의 구현 계획 | [16번 진행 추적 및 다음 계획](structure_conditioned_style_plan/README.md) |
 | `_interpretation_embedding/` | 같은 작품 3연주의 차이·MIDI 원자료와 다른 작품 A·B·C 유사 특징 검색 | [연주 차이와 검색 사례](_interpretation_embedding/README.md) |
 | `_feature_search_roles/` | 다른 작품 검색에서 feature별 후보/순위 변화와 검색에 안 쓴 feature의 일치 검사 | [feature별 검색 역할](_feature_search_roles/README.md) |

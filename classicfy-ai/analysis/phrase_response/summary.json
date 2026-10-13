@@ -1,0 +1,18 @@
+{
+  "works": 55,
+  "performances": 570,
+  "phrase_hypotheses": 1814,
+  "expert_confirmed_phrases": 0,
+  "original_intervals": 287885,
+  "combined_intervals": 268606,
+  "phrase_labeled_intervals": 268606,
+  "full_response_performances": 570,
+  "boundary_evidence": {
+    "fixed_length_cap": 477,
+    "score_end": 55,
+    "global_notated_silence": 461,
+    "notation_fermata": 59,
+    "long_same_scope_slur_arrival": 766
+  },
+  "artifact": "/Users/ihun-ui/Desktop/Classicfy/datasets/phrase_response_run02/sequences.npz"
+}

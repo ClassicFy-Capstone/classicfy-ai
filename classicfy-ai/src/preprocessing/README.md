@@ -138,3 +138,6 @@ PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 로더의 단위 테스트는 `tests/unit/preprocessing`, 로더에서 feature extraction까지의
 연결 검증은 `tests/integration`에 둔다. 자세한 테스트 구조는 `tests/README.md`를
 참고한다.
+
+프레이즈 가설에서의 잔차 반응 계산은 [features.structure_response](../features/structure_response.py)와
+[계산 보고서](../../analysis/phrase_response/README.md)에 있다. 전문가 프레이즈 정답을 뜻하지 않는다.
