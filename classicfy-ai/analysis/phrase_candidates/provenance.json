@@ -1,0 +1,52 @@
+{
+  "code": {
+    "classicfy-ai/scripts/extract_phrase_candidates.py": "01537aead099bf0538cc0f83ecce2fa20659490834287d59205d9637e9327bdb",
+    "classicfy-ai/src/preprocessing/phrase_candidates.py": "5f2b1acee254eb105eec776cc41ba56e9bf67042c209f5061f0a21aae24be212",
+    "classicfy-ai/scripts/render_phrase_review.py": "ea7ba8bb28310b1d76aced6218ada13b3f6c82005e42af00f7a01a04303efba1",
+    "classicfy-ai/scripts/verify_phrase_candidates.py": "ed290c3e5064a7b63feef6b39800e720ac424ca3ed6481fbffbe5f0cfd17481f",
+    "classicfy-ai/src/preprocessing/musicxml_loader.py": "8d19ca7611c4a627adca6cd6119453ee1faef1de89ed5212891f0548e9776b82",
+    "classicfy-ai/src/preprocessing/score_measure_bridge.py": "839186c635e88a483538ff2aa2055986c4a926b7fd634759da2092700e9a7d45",
+    "classicfy-ai/src/preprocessing/score_beat_bridge.py": "9bf652b1dd8b050ab299755051c250c189c6a98e0e9dae110d25f231e8c6a7e8",
+    "classicfy-ai/src/preprocessing/score_occurrence_bridge.py": "e8cbb67d4d8a496a1165ae4747dbbd2cd324e8afcacc4919cd41ec8c4c331695"
+  },
+  "artifacts": {
+    "all_scores.jsonl.gz": "9a55599bd214af9a2c0348ac0943124214879eaada2858d9b5a35453718049b9"
+  },
+  "results": {
+    "bwv_848_Bach_candidates.json": "5471f2c98d1dc86d27751068dddd7476325b2a9574815dd1cf26f52183d87208",
+    "summary.json": "e05e8d8f75b3823aec96fb80d63dc60f966aa30e4954ffbd7e67858a25cfc303",
+    "boundary_occurrences.csv": "f97236bfa46d6a597ec3954aa51b95898b96d60170b2bd868663d880725716e2",
+    "slur_groups.csv": "21adc4e09f5d89f0955811d7a09164908cb61afaef57158ecc98b13e14df93b1",
+    "31-2_Beethoven_candidates.json": "51197c87b05af0ecfdd93b609b4454fa833e0cd5e331547cca382afabd901a92",
+    "8-1_Mozart_candidates.json": "36173ec20a6bdfed3519f0243160f345b3adeefc7cca6ed8573952dd6b223300",
+    "renderer.json": "929dc2f8b341d3d1a2f2b0bd4af0467c8f208384f4ba2eb9a016e0cfcce58fc1",
+    "score_review.html": "b472224adecdca0f826d97c3ef6550d93114c040d149047de12344378051eb2d",
+    "rendered_cases.csv": "2b32f8d7c2991db9c9acf2b7ba1e0e060f7e49e5862607d926b08f4c8acb9ee7",
+    "pilot_measure_visits.csv": "d063055b5a5003cf27577b7aeec04de3ae07d1a61f067aa091532ceb9fb5b687",
+    "review_cases.csv": "631eeb8274fba24ef0a09c760ebdc0d626081f1bab62ae89e6b51ac8cfca791c",
+    "works.csv": "de1d053904ec1a616f5806e743aa450d8d7e179b29a937bb995288bf175cb68b",
+    "protocol.json": "a24b2c4514625daadc399e0c8dc9a041eddf83b10c594c28c31c64e8bb4dc625",
+    "all_scores/all_scores.jsonl.gz": "9a55599bd214af9a2c0348ac0943124214879eaada2858d9b5a35453718049b9",
+    "scores/Mozart_Piano_Sonatas_8-1_page_09.png": "1fa201f5900dde85975cff7711cc171f68b6588502f79d5c93798010481c7fec",
+    "scores/Beethoven_Piano_Sonatas_31-2_page_02.png": "0d4123f1831fe88133d71e27a2117a3fb22a93c4e2e353bf6f413614b6c22a52",
+    "scores/Beethoven_Piano_Sonatas_31-2_page_01.png": "b086f68af13491b6a4dd615b4833400ad1d89e5cfb023c855e35691d31d0afe3",
+    "scores/Bach_Fugue_bwv_848_page_02.svg": "29da9ae955099a3854a830c8730c024ed67a202523ebaab01bc8bf4c4ee09897",
+    "scores/Bach_Fugue_bwv_848_page_02.png": "09914d0696f112de139f1532e8777398ff22547d126c9a10eb9301174b485d9e",
+    "scores/Beethoven_Piano_Sonatas_31-2_page_01.svg": "2f5265b5535a4e7de89b04b82c8d402e551ea1a6165de0b123e055e26c2790d7",
+    "scores/Beethoven_Piano_Sonatas_31-2_page_02.svg": "6c26c1f473a3dfad1886a1b95087d87ee9b7e0776cf8f113fb1200e50002314d",
+    "scores/Mozart_Piano_Sonatas_8-1_page_09.svg": "87a114598e1279e196df8ed311593a3d2802dd6d6aabe0c3f6cf157f55284d57",
+    "scores/Mozart_Piano_Sonatas_8-1_page_02.svg": "01d77aaa869dfac53a4c1f883cbe90243db590b9d98594e6568c30fcadb9d944",
+    "scores/Mozart_Piano_Sonatas_8-1_page_01.svg": "d71ff7a87735638d33492377997829c945133833d9f5ad70a0127c8a3de1938c",
+    "scores/Bach_Fugue_bwv_848_page_08.png": "aa7d9ef812b03357e280f1771019645aaa247ed52b5e6bfba6531e55d7bbcc75",
+    "scores/Bach_Fugue_bwv_848_page_08.svg": "864cc70b125d8bcb431c0ab74ad29a584a49d9a4d52eb89c848ba46c6c2888d3",
+    "scores/Mozart_Piano_Sonatas_8-1_page_01.png": "017a61169a62099eaff155dcee022496fbaa09e52bdbcc5cbfdfdfb02a97d83a",
+    "scores/Mozart_Piano_Sonatas_8-1_page_02.png": "90ed5b4c8f21d80fcf9428c71ab12f32e12e9bc7bef9899264f5ead8976ba862"
+  },
+  "post_review": {
+    "README.md": "776be4d3ea332ff7128361d95b75382a8f3f0ffe8bdff20596d369f504b0f299",
+    "HANDOFF.md": "900c4ca47e6bd385d74de943afe8b9fc85292b22b2b7030b467d67d200015f68",
+    "review_decisions.csv": "b3de26bcae05046ac073fd86f226ef50a9a29e4efb173d93012fa9b7214725c0",
+    "review_summary.json": "1bd733f18c87d3fbd634f26afe47536e45f05ca874021d3b0be3554cb2f4217b",
+    "verification.json": "e9cb118e102d26cbd3decd6c19422942e4eb821a9fc8b449c03a8569a40f94a1"
+  }
+}

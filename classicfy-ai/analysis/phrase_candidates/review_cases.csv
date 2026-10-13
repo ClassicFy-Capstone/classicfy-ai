@@ -1,0 +1,15 @@
+piece,case_id,candidate_id,selection_reason,position_quarters,scope,cue_kinds,source_note_ids,source_xml_ids,measures,status
+Bach/Fugue/bwv_848/midi_score.mid,case_01,boundary_675fdd2dc491,first_internal_voice_rest,25,P1:staff=1:voice=2,voice_rest,"[""P1:m6:n7""]","[""n128""]",[6],pending_visual_review
+Bach/Fugue/bwv_848/midi_score.mid,case_02,boundary_a9751ea00052,first_harmonic_closure,220,P1:part,harmonic_closure_hint,"[""P1:m54:n6"", ""P1:m54:n12"", ""P1:m54:n13"", ""P1:m54:n14"", ""P1:m54:n20""]","[""n1531"", ""n1537"", ""n1538"", ""n1539"", ""n1545""]",[54],pending_visual_review
+Bach/Fugue/bwv_848/midi_score.mid,case_03,boundary_5a33d27ee1ef,first_combined_evidence,220,P1:staff=1:voice=1,notation_fermata,"[""P1:m54:n6""]","[""n1531""]",[54],pending_visual_review
+Bach/Fugue/bwv_848/midi_score.mid,case_04,,first_unusable_slur,48,P1:part,slur_diagnostic:nonpositive_onset_span,"[""P1:m12:n0"", ""P1:m12:n2""]","[""n295"", ""n297""]",[12],pending_visual_review
+Beethoven/Piano_Sonatas/31-2/midi_score.mid,case_05,boundary_d728b6e1e13c,first_internal_voice_rest,32,P1:staff=2:voice=5,voice_rest,"[""P1:m16:n2""]","[""n132""]",[16],pending_visual_review
+Beethoven/Piano_Sonatas/31-2/midi_score.mid,case_06,boundary_430ac1511555,first_paired_slur_end,4,P1:staff=1:voice=1,slur_end,"[""P1:m0:n0"", ""P1:m1:n2""]","[""n1"", ""n11""]","[0, 1]",pending_visual_review
+Beethoven/Piano_Sonatas/31-2/midi_score.mid,case_07,boundary_50cb240720b2,first_global_silence,72,piece,global_notated_silence,"[""P1:m36:n0""]","[""n266""]",[36],pending_visual_review
+Beethoven/Piano_Sonatas/31-2/midi_score.mid,case_08,boundary_4a6cd07fb29e,first_harmonic_closure,28,P1:part,harmonic_closure_hint,"[""P1:m13:n1"", ""P1:m13:n4"", ""P1:m13:n7"", ""P1:m13:n8""]","[""n108"", ""n111"", ""n114"", ""n115""]",[13],pending_visual_review
+Beethoven/Piano_Sonatas/31-2/midi_score.mid,case_09,boundary_913991484fa3,first_combined_evidence,28,P1:staff=1:voice=1,slur_end,"[""P1:m13:n0"", ""P1:m13:n1""]","[""n107"", ""n108""]",[13],pending_visual_review
+Mozart/Piano_Sonatas/8-1/midi_score.mid,case_10,boundary_b8caa35e216f,first_internal_voice_rest,18,P1:staff=1:voice=1,voice_rest,"[""P1:m4:n6""]","[""n148""]",[4],pending_visual_review
+Mozart/Piano_Sonatas/8-1/midi_score.mid,case_11,boundary_03b43f1d82a8,first_paired_slur_end,8,P1:staff=1:voice=1,slur_end,"[""P1:m1:n3"", ""P1:m1:n4""]","[""n35"", ""n36""]",[1],pending_visual_review
+Mozart/Piano_Sonatas/8-1/midi_score.mid,case_12,boundary_82060c3a92d1,first_global_silence,195,piece,global_notated_silence,"[""P1:m48:n10"", ""P1:m48:n16""]","[""n1309"", ""n1315""]",[48],pending_visual_review
+Mozart/Piano_Sonatas/8-1/midi_score.mid,case_13,boundary_0d8418310650,first_harmonic_closure,65/2,P1:part,harmonic_closure_hint,"[""P1:m8:n1"", ""P1:m8:n11"", ""P1:m8:n12"", ""P1:m8:n13""]","[""n234"", ""n244"", ""n245"", ""n246""]",[8],pending_visual_review
+Mozart/Piano_Sonatas/8-1/midi_score.mid,case_14,boundary_1087010ddc60,first_combined_evidence,43/2,P1:staff=1:voice=1,"slur_end,voice_rest","[""P1:m5:n0"", ""P1:m5:n2"", ""P1:m5:n4""]","[""n165"", ""n167"", ""n169""]",[5],pending_visual_review

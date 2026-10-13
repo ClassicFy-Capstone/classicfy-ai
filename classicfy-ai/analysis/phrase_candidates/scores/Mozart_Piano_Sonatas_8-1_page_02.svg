@@ -1,0 +1,2266 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" viewBox="0 0 720 540" version="1.1" overflow="visible" id="g1vk2vlm">
+   <ns0:style>#n165, #n165 * {fill:#2563eb!important;stroke:#2563eb!important;}
+#n167, #n167 * {fill:#dc2626!important;stroke:#dc2626!important;}
+#n169, #n169 * {fill:#dc2626!important;stroke:#dc2626!important;}
+#n234, #n234 * {fill:#2563eb!important;stroke:#2563eb!important;}
+#n244, #n244 * {fill:#dc2626!important;stroke:#dc2626!important;}
+#n245, #n245 * {fill:#dc2626!important;stroke:#dc2626!important;}
+#n246, #n246 * {fill:#dc2626!important;stroke:#dc2626!important;}</ns0:style><ns0:desc>Engraved by Verovio 6.3.0-425dd7b</ns0:desc>
+   <ns0:defs>
+      <ns0:g id="E050-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M441 -245c-23 -4 -48 -6 -76 -6c-59 0 -102 7 -130 20c-88 42 -150 93 -187 154c-26 44 -43 103 -48 176c0 6 -1 13 -1 19c0 54 15 111 45 170c29 57 65 106 110 148s96 85 153 127c-3 16 -8 46 -13 92c-4 43 -5 73 -5 89c0 117 16 172 69 257c34 54 64 82 89 82 c21 0 43 -30 69 -92s39 -115 41 -159v-15c0 -109 -21 -162 -67 -241c-13 -20 -63 -90 -98 -118c-13 -9 -25 -19 -37 -29l31 -181c8 1 18 2 28 2c58 0 102 -12 133 -35c59 -43 92 -104 98 -184c1 -7 1 -15 1 -22c0 -123 -87 -209 -181 -248c8 -57 17 -110 25 -162 c5 -31 6 -58 6 -80c0 -30 -5 -53 -14 -70c-35 -64 -88 -99 -158 -103c-5 0 -11 -1 -16 -1c-37 0 -72 10 -108 27c-50 24 -77 59 -80 105v11c0 29 7 55 20 76c18 28 45 42 79 44h6c49 0 93 -42 97 -87v-9c0 -51 -34 -86 -105 -106c17 -24 51 -36 102 -36c62 0 116 43 140 85 c9 16 13 41 13 74c0 20 -1 42 -5 67c-8 53 -18 106 -26 159zM461 939c-95 0 -135 -175 -135 -286c0 -24 2 -48 5 -71c50 39 92 82 127 128c40 53 60 100 60 140v8c-4 53 -22 81 -55 81h-2zM406 119l54 -326c73 25 110 78 110 161c0 7 0 15 -1 23c-7 95 -57 142 -151 142h-12 zM382 117c-72 -2 -128 -47 -128 -120v-7c2 -46 43 -99 75 -115c-3 -2 -7 -5 -10 -10c-70 33 -116 88 -123 172v11c0 68 44 126 88 159c23 17 49 29 78 36l-29 170c-21 -13 -52 -37 -92 -73c-50 -44 -86 -84 -109 -119c-45 -69 -67 -130 -67 -182v-13c5 -68 35 -127 93 -176 s125 -73 203 -73c25 0 50 3 75 9c-19 111 -36 221 -54 331z" />
+      </ns0:g>
+      <ns0:g id="E0A4-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M0 -39c0 68 73 172 200 172c66 0 114 -37 114 -95c0 -84 -106 -171 -218 -171c-64 0 -96 30 -96 94z" />
+      </ns0:g>
+      <ns0:g id="E262-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M136 186v169h17v-164l44 14v-91l-44 -14v-165l44 12v-91l-44 -13v-155h-17v150l-76 -22v-155h-17v149l-43 -13v90l43 14v167l-43 -14v92l43 13v169h17v-163zM60 73v-167l76 22v168z" />
+      </ns0:g>
+      <ns0:g id="E241-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M179 646c-4 8 -17 30 -18 33l-4 10c0 3 2 5 5 5s7 -2 13 -7c23 -33 46 -81 66 -132c22 -57 35 -125 35 -163c0 -104 -60 -183 -122 -241c-63 -59 -57 -53 -61 -56c-38 -34 -63 -95 -71 -95h-22v190c40 7 69 11 87 16c88 27 168 95 168 200c0 30 -12 89 -30 138 c-17 47 -31 73 -46 102z" />
+      </ns0:g>
+      <ns0:g id="E4E6-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M0 123c7 34 33 56 69 60c29 -3 43 -9 53 -29c4 -8 7 -15 10 -22c0 -21 -1 -25 -11 -35c-5 -8 -18 -14 -40 -20l12 -3l15 -1c44 0 97 26 122 56c10 11 18 26 24 42c7 1 15 2 22 3l-140 -424h-36l111 330c-10 -6 -27 -12 -53 -16l-52 -8h-10l-20 1c-1 0 -8 3 -21 6 c-37 9 -55 28 -55 60z" />
+      </ns0:g>
+      <ns0:g id="E4A2-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M0 48c0 26 22 48 48 48s48 -22 48 -48s-22 -48 -48 -48s-48 22 -48 48z" />
+      </ns0:g>
+      <ns0:g id="E261-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M0 -188v539h18v-191l139 22v-533h-17v186zM18 -100l122 17v176l-122 -19v-174z" />
+      </ns0:g>
+      <ns0:g id="E062-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M582 -120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM582 120c0 32 26 58 58 58s58 -26 58 -58s-26 -58 -58 -58s-58 26 -58 58zM158 96c51 0 73 -14 88 -49l16 -39c0 -17 -2 -30 -7 -40c-3 -11 -10 -21 -19 -31c-17 -18 -49 -43 -84 -43 c-55 0 -77 13 -112 44c-24 21 -35 55 -35 100c0 46 14 81 32 112c30 52 71 79 137 93l36 6l26 2c154 0 235 -68 274 -182c11 -32 18 -68 18 -107c0 -103 -26 -182 -68 -250c-89 -145 -234 -230 -412 -288l-30 -5c-9 0 -14 3 -14 8c3 10 5 11 10 16c35 15 70 30 96 44l78 43 c96 57 162 136 197 258c9 33 17 60 22 100c3 22 5 35 6 39c-7 69 -16 115 -23 140s-4 22 -16 40c-8 12 -19 23 -31 34c-24 21 -62 44 -118 44c-48 0 -84 -8 -113 -28c-28 -19 -42 -44 -42 -73v-16c2 -5 3 -9 4 -11c24 22 52 39 84 39z" />
+      </ns0:g>
+      <ns0:g id="E4E5-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M107 292c-13 24 -30 49 -52 71c-1 1 0 2 0 3l-2 2c3 3 4 4 6 4c12 0 26 -7 40 -20s44 -40 89 -81c26 -24 28 -29 46 -47c4 -4 8 -9 10 -14c6 -8 8 -16 8 -27c0 -19 -12 -40 -36 -61c-28 -23 -49 -38 -61 -73c-4 -11 -7 -27 -10 -50c13 -43 34 -83 59 -121 c31 -47 59 -79 101 -129c-8 0 -26 7 -54 20l-62 29l-21 6l-23 1c-25 0 -45 -10 -60 -30l-4 -14l-1 -12c0 -33 20 -56 39 -78c8 -9 17 -18 26 -26c17 -15 27 -24 28 -30l-3 -3c-11 5 -19 10 -25 15c-9 3 -37 21 -45 26c-24 14 -45 32 -63 51c-19 21 -37 44 -37 71 c0 63 27 95 80 95c41 0 86 -18 136 -52c-19 26 -37 48 -55 66c-23 23 -48 44 -73 65c-28 23 -47 40 -58 53s-17 26 -18 39c75 64 113 125 113 183c0 27 -7 48 -18 68z" />
+      </ns0:g>
+      <ns0:g id="E240-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M179 -646c15 29 29 55 46 102c18 49 30 108 30 138c0 105 -80 173 -168 200c-18 5 -47 9 -87 16v190h22c8 0 33 -61 71 -95c4 -3 -2 3 61 -56c62 -58 122 -137 122 -241c0 -38 -13 -106 -35 -163c-20 -51 -43 -99 -66 -132c-6 -5 -10 -7 -13 -7s-5 2 -5 5l4 10 c1 3 14 25 18 33z" />
+      </ns0:g>
+      <ns0:g id="E4A3-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M0 -48c0 26 22 48 48 48s48 -22 48 -48s-22 -48 -48 -48s-48 22 -48 48z" />
+      </ns0:g>
+      <ns0:g id="E26A-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M163 -235v-11c0 -3 -1 -4 -1 -4h-2c-108 62 -160 150 -160 250s52 188 160 250h2s1 -1 1 -4v-11s0 -9 -3 -10c-78 -45 -110 -110 -110 -225s32 -180 110 -225c3 -1 3 -7 3 -10z" />
+      </ns0:g>
+      <ns0:g id="E26B-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M0 -235c0 3 0 9 3 10c78 45 110 110 110 225s-32 180 -110 225c-3 1 -3 10 -3 10v11c0 3 1 4 1 4h2c108 -62 160 -150 160 -250s-52 -188 -160 -250h-2s-1 1 -1 4v11z" />
+      </ns0:g>
+      <ns0:g id="E242-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M206 -748c32 48 49 100 49 149c0 89 -55 168 -168 203c-18 5 -47 9 -87 16v190v190h22c8 0 33 -61 71 -95c4 -3 -2 3 61 -56c62 -58 122 -137 122 -241c0 -32 -7 -65 -17 -96c11 -29 17 -60 17 -94c0 -71 -32 -148 -67 -190c-6 -5 -10 -7 -13 -7s-5 2 -5 5l4 10 c1 3 6 8 11 16zM248 -463c4 18 7 38 7 57c0 105 -80 173 -168 200c-11 3 -27 6 -47 9c9 -17 23 -61 53 -88c4 -3 -2 3 61 -56c36 -33 71 -74 94 -122z" />
+      </ns0:g>
+      <ns0:g id="E522-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M-91 -179c-2 -3 -3 -5 -2 -7s4 -3 11 -4c19 0 34 14 47 41c7 14 13 30 20 48s12 35 15 52l14 61l44 208h-58v38h70c7 21 13 36 18 47c7 18 15 33 22 44c21 30 42 53 65 69s48 24 75 24c9 0 17 -1 23 -3s12 -7 19 -16c5 -7 8 -13 9 -19l4 -16c0 -15 -1 -25 -2 -32 s-5 -16 -11 -28c-3 -6 -9 -13 -18 -21c-4 -3 -8 -5 -13 -6s-10 -1 -17 0c-6 1 -10 5 -13 11s-5 13 -6 20c0 12 2 23 7 32s12 17 22 24l14 10c0 9 -6 14 -18 16h-6c-11 0 -20 -2 -28 -8c-9 -7 -19 -21 -29 -43c-5 -12 -10 -30 -17 -53s-11 -40 -14 -50h77v-40h-85 c-12 -69 -29 -137 -51 -206c-18 -55 -35 -99 -52 -131c-13 -26 -27 -47 -41 -63c-25 -29 -50 -43 -76 -43c-25 0 -43 10 -56 29c-10 15 -15 33 -15 54c0 17 4 33 12 48c5 7 10 13 17 17s13 6 20 6c9 0 16 -4 21 -12s9 -15 11 -22s3 -12 3 -17c0 -9 -2 -17 -7 -24 s-9 -14 -14 -21s-8 -12 -11 -14z" />
+      </ns0:g>
+      <ns0:g id="E260-g1vk2vlm">
+         <ns0:path transform="scale(1,-1)" d="M20 110c32 16 54 27 93 27c26 0 35 -3 54 -13c13 -7 24 -20 27 -38l4 -25c0 -28 -16 -57 -45 -89c-23 -25 -39 -44 -65 -68l-88 -79v644h20v-359zM90 106c-32 0 -48 -10 -70 -29v-194c31 31 54 59 71 84c21 32 32 59 32 84c0 9 1 16 1 20c0 14 -3 21 -11 30l-8 3z" />
+      </ns0:g>
+   </ns0:defs>
+   <ns0:style type="text/css">#g1vk2vlm g.ending, #g1vk2vlm g.fing, #g1vk2vlm g.reh, #g1vk2vlm g.tempo {font-weight:bold;}#g1vk2vlm g.dir, #g1vk2vlm g.dynam, #g1vk2vlm g.mNum {font-style:italic;}#g1vk2vlm g.label {font-weight:normal;}#g1vk2vlm ellipse, #g1vk2vlm path, #g1vk2vlm polygon, #g1vk2vlm polyline, #g1vk2vlm rect {stroke:currentColor}#g1vk2vlm g.cursor {fill:dodgerblue; color:dodgerblue;}#g1vk2vlm g.cursor.chord {fill:limegreen; color:limegreen;}</ns0:style>
+   <ns0:svg class="definition-scale" color="black" font-family="Times, serif" viewBox="0 0 18000 13500">
+      <ns0:g class="page-margin" transform="translate(500, 500)">
+         <ns0:g id="z1v6k7nt" class="system">
+            <ns0:path d="M13 582 L13 3102" stroke-width="27" />
+            <ns0:g id="i16amivs" class="grpSym">
+               <ns0:path d="M-72,3084 C-432,2544 18,2022 -252,1842 C81,2022 -369,2544 -72,3084" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+               <ns0:path d="M-72,600 C-369,1140 81,1662 -252,1842 C18,1662 -432,1140 -72,600" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+            </ns0:g>
+            <ns0:g id="tjy2gp4" class="measure">
+               <ns0:g id="d16zyujj" class="mNum autogenerated">
+                  <ns0:text y="339" text-anchor="middle" font-size="0px">
+                     <ns0:tspan id="e1rxx3bf" class="text">
+                        <ns0:tspan font-size="324px">6</ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="c39hom2" class="staff">
+                  <ns0:path d="M0 582 L4467 582" stroke-width="13" />
+                  <ns0:path d="M0 762 L4467 762" stroke-width="13" />
+                  <ns0:path d="M0 942 L4467 942" stroke-width="13" />
+                  <ns0:path d="M0 1122 L4467 1122" stroke-width="13" />
+                  <ns0:path d="M0 1302 L4467 1302" stroke-width="13" />
+                  <ns0:g id="eiwzcip" class="clef">
+                     <ns0:use ns1:href="#E050-g1vk2vlm" transform="translate(117, 1122) scale(0.72, 0.72)" />
+                  </ns0:g>
+                  <ns0:g id="fkuljsj" class="keySig" />
+                  <ns0:g id="h1oteh4j" class="layer">
+                     <ns0:g id="kq6joba" class="chord">
+                        <ns0:g id="o1haeyn" class="stem">
+                           <ns0:path d="M1083 700 L1083 1482" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="n165" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1074, 852) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="jjjge9d" class="accid">
+                              <ns0:use ns1:href="#E262-g1vk2vlm" transform="translate(888, 852) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n166" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1074, 672) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="o3zpip7" class="chord">
+                        <ns0:g id="pxoy5y7" class="stem">
+                           <ns0:path d="M1752 610 L1752 1392" stroke-width="18" />
+                           <ns0:g id="q8xvn7" class="flag">
+                              <ns0:use ns1:href="#E241-g1vk2vlm" transform="translate(1743, 1392) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n167" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1743, 762) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n168" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1743, 582) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n169" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(2179, 942) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n170" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(2614, 942) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="v1qff7u3" class="beam">
+                        <ns0:polygon points="3109,1662 4036,1482 4036,1392 3109,1572" />
+                        <ns0:g id="xq8ah9f" class="chord">
+                           <ns0:g id="r1uccymt" class="stem">
+                              <ns0:path d="M3118 970 L3118 1644" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="y1mwzpe6" class="artic">
+                              <ns0:use ns1:href="#E4A2-g1vk2vlm" transform="translate(3188, 706) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="n171" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3109, 1122) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n172" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3109, 942) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="b718zei" class="chord">
+                           <ns0:g id="suij4rv" class="stem">
+                              <ns0:path d="M3591 880 L3591 1551" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="cuu4uro" class="artic">
+                              <ns0:use ns1:href="#E4A2-g1vk2vlm" transform="translate(3661, 706) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="n173" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3582, 1032) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n174" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3582, 852) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="e1j6i0hl" class="accid">
+                                 <ns0:use ns1:href="#E261-g1vk2vlm" transform="translate(3424, 852) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="g1ebijru" class="chord">
+                           <ns0:g id="t14225g4" class="stem">
+                              <ns0:path d="M4027 790 L4027 1464" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="ho8xhmu" class="artic">
+                              <ns0:use ns1:href="#E4A2-g1vk2vlm" transform="translate(4097, 526) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="n175" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4018, 942) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n176" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4018, 762) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="d1buysdi" class="staff">
+                  <ns0:path d="M0 2382 L4467 2382" stroke-width="13" />
+                  <ns0:path d="M0 2562 L4467 2562" stroke-width="13" />
+                  <ns0:path d="M0 2742 L4467 2742" stroke-width="13" />
+                  <ns0:path d="M0 2922 L4467 2922" stroke-width="13" />
+                  <ns0:path d="M0 3102 L4467 3102" stroke-width="13" />
+                  <ns0:g id="gbw2q8r" class="clef">
+                     <ns0:use ns1:href="#E062-g1vk2vlm" transform="translate(117, 2562) scale(0.72, 0.72)" />
+                  </ns0:g>
+                  <ns0:g id="hkckvjj" class="keySig" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M1695 2202 L2225 2202" stroke-width="22" />
+                     <ns0:path d="M2566 2202 L2888 2202" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="j9j1fog" class="layer">
+                     <ns0:g id="n177" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(1074, 2202) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="mnldkzf" class="chord">
+                        <ns0:g id="u113dd6l" class="stem">
+                           <ns0:path d="M1960 2354 L1960 1662" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="n178" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1743, 2382) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n179" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1743, 2202) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n180" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1951, 2112) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="q2qnw9j" class="chord">
+                        <ns0:g id="vstonfh" class="stem">
+                           <ns0:path d="M2831 2264 L2831 1602" stroke-width="18" />
+                           <ns0:g id="wbg07uk" class="flag">
+                              <ns0:use ns1:href="#E240-g1vk2vlm" transform="translate(2822, 1602) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n181" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2614, 2292) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n182" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2614, 2112) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n183" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(3109, 2202) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n184" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(3582, 2202) scale(0.72, 0.72)" />
+                     </ns0:g>
+                  </ns0:g>
+                  <ns0:g id="u1gn2ith" class="layer">
+                     <ns0:g id="n185" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(1074, 3102) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n186" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1743, 2562) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="x1flmcp8" class="stem">
+                           <ns0:path d="M1752 2590 L1752 3192" stroke-width="18" />
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n187" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2614, 2472) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="y1jhx9yf" class="stem">
+                           <ns0:path d="M2623 2500 L2623 3102" stroke-width="18" />
+                           <ns0:g id="zczrco" class="flag">
+                              <ns0:use ns1:href="#E241-g1vk2vlm" transform="translate(2614, 3102) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n188" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(3109, 2922) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n189" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(3582, 3102) scale(0.72, 0.72)" />
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="e1ch8pjo" class="dir">
+                  <ns0:text x="1074" y="274" font-size="0px">
+                     <ns0:tspan id="fn1fx4y" class="rend">
+                        <ns0:tspan id="gmtwhev" class="text">
+                           <ns0:tspan font-size="405px">4</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="l1nonp7t" class="slur">
+                  <ns0:path d="M1187,486 C1281,306 1713,248 1854,396 C1696,310 1314,362 1187,486" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="s1t0b1mk" class="dir">
+                  <ns0:text x="3109" y="274" font-size="0px">
+                     <ns0:tspan id="thmp2dv" class="rend">
+                        <ns0:tspan id="utcjbj7" class="text">
+                           <ns0:tspan font-size="405px">3</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="xih9h6e" class="slur">
+                  <ns0:path d="M1856,2944 C2016,3033 2410,2981 2545,2854 C2443,3037 1999,3095 1856,2944" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="bgfa7pr" class="barLine">
+                  <ns0:path d="M4454 582 L4454 1302" stroke-width="27" />
+                  <ns0:path d="M4454 2382 L4454 3102" stroke-width="27" />
+                  <ns0:path d="M4454 1302 L4454 2382" stroke-width="27" />
+               </ns0:g>
+            </ns0:g>
+            <ns0:g id="b1y722nw" class="measure">
+               <ns0:g id="k14lf6j1" class="staff">
+                  <ns0:path d="M4467 582 L8254 582" stroke-width="13" />
+                  <ns0:path d="M4467 762 L8254 762" stroke-width="13" />
+                  <ns0:path d="M4467 942 L8254 942" stroke-width="13" />
+                  <ns0:path d="M4467 1122 L8254 1122" stroke-width="13" />
+                  <ns0:path d="M4467 1302 L8254 1302" stroke-width="13" />
+                  <ns0:g id="pqm2jjo" class="layer">
+                     <ns0:g id="r5xmje8" class="chord">
+                        <ns0:g id="a53700" class="stem">
+                           <ns0:path d="M4842 790 L4842 1542" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="n190" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4833, 942) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n191" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4833, 762) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="u3yyqcj" class="accid">
+                              <ns0:use ns1:href="#E262-g1vk2vlm" transform="translate(4647, 762) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="w1y9pwhv" class="chord">
+                        <ns0:g id="b13mhw2m" class="stem">
+                           <ns0:path d="M5511 700 L5511 1482" stroke-width="18" />
+                           <ns0:g id="ccb61wr" class="flag">
+                              <ns0:use ns1:href="#E241-g1vk2vlm" transform="translate(5502, 1482) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n192" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5502, 852) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n193" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5502, 672) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n194" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(5938, 942) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n195" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(6373, 942) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="a146wfqz" class="beam">
+                        <ns0:polygon points="7076,492 8031,312 8031,402 7076,582" />
+                        <ns0:g id="c1hlm6a9" class="chord">
+                           <ns0:g id="doeycpc" class="stem">
+                              <ns0:path d="M7085 1184 L7085 510" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="d110qaov" class="artic">
+                              <ns0:use ns1:href="#E4A3-g1vk2vlm" transform="translate(6947, 1358) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="n196" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6868, 1212) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n197" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6868, 1032) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="h1sjrmou" class="chord">
+                           <ns0:g id="e1d3679i" class="stem">
+                              <ns0:path d="M7586 1094 L7586 414" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="ijbs9si" class="artic">
+                              <ns0:use ns1:href="#E4A3-g1vk2vlm" transform="translate(7448, 1358) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="n198" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7369, 1122) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="g92w6fb" class="accid">
+                                 <ns0:use ns1:href="#E262-g1vk2vlm" transform="translate(7183, 1122) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n199" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7369, 942) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="l1a43xx0" class="chord">
+                           <ns0:g id="f9k6a7r" class="stem">
+                              <ns0:path d="M8022 1004 L8022 330" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="ms57n8f" class="artic">
+                              <ns0:use ns1:href="#E4A3-g1vk2vlm" transform="translate(7884, 1178) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="n200" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7805, 1032) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n201" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7805, 852) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="l153cjvr" class="staff">
+                  <ns0:path d="M4467 2382 L8254 2382" stroke-width="13" />
+                  <ns0:path d="M4467 2562 L8254 2562" stroke-width="13" />
+                  <ns0:path d="M4467 2742 L8254 2742" stroke-width="13" />
+                  <ns0:path d="M4467 2922 L8254 2922" stroke-width="13" />
+                  <ns0:path d="M4467 3102 L8254 3102" stroke-width="13" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M5662 2202 L5984 2202" stroke-width="22" />
+                     <ns0:path d="M6325 2202 L6647 2202" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="oklkceq" class="layer">
+                     <ns0:g id="n202" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(4833, 2382) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="r9x5f4w" class="chord">
+                        <ns0:g id="g1x2bvul" class="stem">
+                           <ns0:path d="M5719 2444 L5719 1752" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="n203" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5502, 2472) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n204" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5502, 2292) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n205" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5710, 2202) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="v11uux3e" class="chord">
+                        <ns0:g id="h1uk75pr" class="stem">
+                           <ns0:path d="M6590 2354 L6590 1692" stroke-width="18" />
+                           <ns0:g id="is8vxcu" class="flag">
+                              <ns0:use ns1:href="#E240-g1vk2vlm" transform="translate(6581, 1692) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n206" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6373, 2382) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n207" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6373, 2202) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n208" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(6868, 2202) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n209" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(7369, 2202) scale(0.72, 0.72)" />
+                     </ns0:g>
+                  </ns0:g>
+                  <ns0:g id="z1i0wkz1" class="layer">
+                     <ns0:g id="n210" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(4833, 3102) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n211" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5502, 2652) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="j1msvrbl" class="stem">
+                           <ns0:path d="M5511 2680 L5511 3282" stroke-width="18" />
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n212" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6373, 2562) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="k1vyp1rl" class="stem">
+                           <ns0:path d="M6382 2590 L6382 3192" stroke-width="18" />
+                           <ns0:g id="ljvh31p" class="flag">
+                              <ns0:use ns1:href="#E241-g1vk2vlm" transform="translate(6373, 3192) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n213" class="rest">
+                        <ns0:use ns1:href="#E4E6-g1vk2vlm" transform="translate(6868, 2922) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="n214" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(7369, 3102) scale(0.72, 0.72)" />
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="m1ftbz7o" class="dir">
+                  <ns0:text x="4833" y="274" font-size="0px">
+                     <ns0:tspan id="n13zwlfq" class="rend">
+                        <ns0:tspan id="o5cw215" class="text">
+                           <ns0:tspan font-size="405px">3</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="sqi9jus" class="slur">
+                  <ns0:path d="M4946,576 C5040,396 5472,338 5613,486 C5455,400 5073,452 4946,576" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="j1mbk1kt" class="barLine">
+                  <ns0:path d="M8241 582 L8241 1302" stroke-width="27" />
+                  <ns0:path d="M8241 2382 L8241 3102" stroke-width="27" />
+                  <ns0:path d="M8241 1302 L8241 2382" stroke-width="27" />
+               </ns0:g>
+            </ns0:g>
+            <ns0:g id="q1p5z7q3" class="sb" />
+            <ns0:g id="f1tkfnwt" class="measure">
+               <ns0:g id="o1o08hay" class="staff">
+                  <ns0:path d="M8254 582 L11972 582" stroke-width="13" />
+                  <ns0:path d="M8254 762 L11972 762" stroke-width="13" />
+                  <ns0:path d="M8254 942 L11972 942" stroke-width="13" />
+                  <ns0:path d="M8254 1122 L11972 1122" stroke-width="13" />
+                  <ns0:path d="M8254 1302 L11972 1302" stroke-width="13" />
+                  <ns0:g id="ripk9ec" class="layer">
+                     <ns0:g id="s3ocfw3" class="beam">
+                        <ns0:polygon points="8434,1482 9015,1572 9015,1482 8434,1392" />
+                        <ns0:polygon points="8789,1404 9015,1437 9015,1347 8789,1314" />
+                        <ns0:g id="n215" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(8434, 852) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="niug93x" class="dots">
+                              <ns0:ellipse cx="8750" cy="852" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="m80d0jv" class="stem">
+                              <ns0:path d="M8443 880 L8443 1464" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n216" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(8997, 942) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="o1502zbr" class="stem">
+                              <ns0:path d="M9006 970 L9006 1554" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="wrsw308" class="beam">
+                        <ns0:polygon points="9312,1167 9892,1347 9892,1257 9312,1077" />
+                        <ns0:polygon points="9666,1146 9892,1212 9892,1122 9666,1056" />
+                        <ns0:g id="n217" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9312, 582) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="qv31yi4" class="dots">
+                              <ns0:ellipse cx="9628" cy="492" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="p1528ntq" class="stem">
+                              <ns0:path d="M9321 610 L9321 1149" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="yun95lt" class="accid">
+                              <ns0:use ns1:href="#E26A-g1vk2vlm" transform="translate(8920, 582) scale(0.72, 0.72)" />
+                              <ns0:use ns1:href="#E261-g1vk2vlm" transform="translate(9037, 582) scale(0.72, 0.72)" />
+                              <ns0:use ns1:href="#E26B-g1vk2vlm" transform="translate(9150, 582) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n218" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9874, 762) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="r1gdrdne" class="stem">
+                              <ns0:path d="M9883 790 L9883 1329" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="bzg5pyh" class="beam">
+                        <ns0:polygon points="10189,1482 10770,1302 10770,1212 10189,1392" />
+                        <ns0:polygon points="10544,1234 10770,1167 10770,1077 10544,1144" />
+                        <ns0:g id="n219" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10189, 852) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="txtd4a3" class="dots">
+                              <ns0:ellipse cx="10505" cy="852" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="srlhind" class="stem">
+                              <ns0:path d="M10198 880 L10198 1464" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n220" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10752, 672) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="u1mzx2z3" class="stem">
+                              <ns0:path d="M10761 700 L10761 1284" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="f1yh934f" class="beam">
+                        <ns0:polygon points="11067,1392 11648,1572 11648,1482 11067,1302" />
+                        <ns0:polygon points="11422,1371 11648,1437 11648,1347 11422,1281" />
+                        <ns0:g id="n221" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(11067, 762) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="wsjk4j1" class="dots">
+                              <ns0:ellipse cx="11383" cy="672" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="v10m2ndt" class="stem">
+                              <ns0:path d="M11076 790 L11076 1374" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n222" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(11630, 942) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="x5wo2v4" class="stem">
+                              <ns0:path d="M11639 970 L11639 1554" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="p1xki2kd" class="staff">
+                  <ns0:path d="M8254 2382 L11972 2382" stroke-width="13" />
+                  <ns0:path d="M8254 2562 L11972 2562" stroke-width="13" />
+                  <ns0:path d="M8254 2742 L11972 2742" stroke-width="13" />
+                  <ns0:path d="M8254 2922 L11972 2922" stroke-width="13" />
+                  <ns0:path d="M8254 3102 L11972 3102" stroke-width="13" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M10141 2202 L10463 2202" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="jmxte3y" class="layer">
+                     <ns0:g id="n223" class="rest">
+                        <ns0:use ns1:href="#E4E5-g1vk2vlm" transform="translate(8434, 2742) scale(0.72, 0.72)" />
+                     </ns0:g>
+                     <ns0:g id="mjbrixa" class="chord">
+                        <ns0:g id="y16rf9hs" class="stem">
+                           <ns0:path d="M9321 2320 L9321 3342" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="n224" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9312, 2742) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n225" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9312, 2562) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n226" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9312, 2292) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="r1ky7a4p" class="chord">
+                        <ns0:g id="z1g0qlre" class="stem">
+                           <ns0:path d="M10198 2230 L10198 3282" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="n227" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10189, 2652) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n228" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10189, 2382) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n229" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10189, 2202) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="vlibv27" class="chord">
+                        <ns0:g id="a9avr2e" class="stem">
+                           <ns0:path d="M11076 2320 L11076 3282" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="n230" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(11067, 2652) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n231" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(11067, 2472) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="x1lo4s8" class="accid">
+                              <ns0:use ns1:href="#E262-g1vk2vlm" transform="translate(10881, 2472) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n232" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(11067, 2292) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="ukzqb1v" class="slur">
+                  <ns0:path d="M8547,649 C8638,298 9030,53 9108,239 C9013,123 8696,343 8547,649" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="zmcpuux" class="slur">
+                  <ns0:path d="M9425,379 C9559,239 9939,370 9985,557 C9892,420 9570,307 9425,379" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="d1nbit3k" class="slur">
+                  <ns0:path d="M10302,649 C10348,479 10725,359 10863,469 C10718,423 10391,527 10302,649" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="hl2xkyu" class="slur">
+                  <ns0:path d="M11180,559 C11314,419 11695,550 11741,737 C11648,600 11325,487 11180,559" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="n17t8iwd" class="slur">
+                  <ns0:path d="M9425,2106 C9873,1807 10700,1797 11179,2106 C10685,1856 9890,1866 9425,2106" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="n1dbx72b" class="barLine">
+                  <ns0:path d="M11959 582 L11959 1302" stroke-width="27" />
+                  <ns0:path d="M11959 2382 L11959 3102" stroke-width="27" />
+                  <ns0:path d="M11959 1302 L11959 2382" stroke-width="27" />
+               </ns0:g>
+            </ns0:g>
+            <ns0:g id="z3fhc7" class="measure">
+               <ns0:g id="i1r5bbda" class="staff">
+                  <ns0:path d="M11972 582 L17003 582" stroke-width="13" />
+                  <ns0:path d="M11972 762 L17003 762" stroke-width="13" />
+                  <ns0:path d="M11972 942 L17003 942" stroke-width="13" />
+                  <ns0:path d="M11972 1122 L17003 1122" stroke-width="13" />
+                  <ns0:path d="M11972 1302 L17003 1302" stroke-width="13" />
+                  <ns0:g id="m1mc9hsp" class="layer">
+                     <ns0:g id="n233" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12212, 762) scale(0.54, 0.54)" />
+                        </ns0:g>
+                        <ns0:g id="b1hx7luc" class="stem">
+                           <ns0:path d="M12372 741 L12372 357" stroke-width="18" />
+                           <ns0:g id="c89wbud" class="flag">
+                              <ns0:use ns1:href="#E242-g1vk2vlm" transform="translate(12363, 357) scale(0.54, 0.54)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="o9eibxt" class="accid">
+                           <ns0:use ns1:href="#E262-g1vk2vlm" transform="translate(12061, 762) scale(0.54, 0.54)" />
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n234" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12579, 672) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="d1quw7xv" class="stem">
+                           <ns0:path d="M12588 700 L12588 1302" stroke-width="18" />
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="t1epitm9" class="beam">
+                        <ns0:polygon points="13451,1302 14195,1302 14195,1212 13451,1212" />
+                        <ns0:polygon points="13969,1167 14195,1167 14195,1077 13969,1077" />
+                        <ns0:g id="n235" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13451, 672) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="fo6e9de" class="dots">
+                              <ns0:ellipse cx="13767" cy="672" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="eukkhox" class="stem">
+                              <ns0:path d="M13460 700 L13460 1284" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n236" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14177, 672) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="gqolcno" class="stem">
+                              <ns0:path d="M14186 700 L14186 1284" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="wz4b8zh" class="beam">
+                        <ns0:polygon points="14492,1302 15261,1302 15261,1212 14492,1212" />
+                        <ns0:polygon points="14937,1167 15261,1167 15261,1077 14937,1077" />
+                        <ns0:g id="n237" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14492, 672) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="h1j39rsw" class="stem">
+                              <ns0:path d="M14501 700 L14501 1284" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n238" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14928, 582) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="iv4tco0" class="stem">
+                              <ns0:path d="M14937 610 L14937 1284" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n239" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15243, 672) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="j1mlmp0h" class="stem">
+                              <ns0:path d="M15252 700 L15252 1284" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="a1xcjw6i" class="beam">
+                        <ns0:polygon points="15716,1482 16679,1662 16679,1572 15716,1392" />
+                        <ns0:polygon points="15716,1347 16040,1407 16040,1317 15716,1257" />
+                        <ns0:polygon points="16040,1407 16355,1467 16355,1377 16040,1317" />
+                        <ns0:polygon points="16355,1467 16679,1527 16679,1437 16355,1377" />
+                        <ns0:g id="n240" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15716, 762) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="k1th1r1k" class="stem">
+                              <ns0:path d="M15725 790 L15725 1464" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="cp0l395" class="accid">
+                              <ns0:use ns1:href="#E261-g1vk2vlm" transform="translate(15558, 762) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n241" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16031, 852) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="l1l6itpu" class="stem">
+                              <ns0:path d="M16040 880 L16040 1524" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n242" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16346, 942) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="m1e58e8q" class="stem">
+                              <ns0:path d="M16355 970 L16355 1584" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n243" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16661, 1032) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="n13k4jbe" class="stem">
+                              <ns0:path d="M16670 1060 L16670 1644" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="j3j7ocr" class="staff">
+                  <ns0:path d="M11972 2382 L17003 2382" stroke-width="13" />
+                  <ns0:path d="M11972 2562 L17003 2562" stroke-width="13" />
+                  <ns0:path d="M11972 2742 L17003 2742" stroke-width="13" />
+                  <ns0:path d="M11972 2922 L17003 2922" stroke-width="13" />
+                  <ns0:path d="M11972 3102 L17003 3102" stroke-width="13" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M12531 2202 L12853 2202" stroke-width="22" />
+                     <ns0:path d="M12967 2202 L13289 2202" stroke-width="22" />
+                     <ns0:path d="M13403 2202 L13725 2202" stroke-width="22" />
+                     <ns0:path d="M13838 2202 L14160 2202" stroke-width="22" />
+                     <ns0:path d="M14444 2202 L14766 2202" stroke-width="22" />
+                     <ns0:path d="M14880 2202 L15202 2202" stroke-width="22" />
+                     <ns0:path d="M15668 2202 L15990 2202" stroke-width="22" />
+                     <ns0:path d="M16298 2202 L16620 2202" stroke-width="22" />
+                     <ns0:path d="M12531 2022 L12853 2022" stroke-width="22" />
+                     <ns0:path d="M12967 2022 L13289 2022" stroke-width="22" />
+                     <ns0:path d="M13403 2022 L13725 2022" stroke-width="22" />
+                     <ns0:path d="M13838 2022 L14160 2022" stroke-width="22" />
+                     <ns0:path d="M14444 2022 L14766 2022" stroke-width="22" />
+                     <ns0:path d="M14880 2022 L15202 2022" stroke-width="22" />
+                     <ns0:path d="M15668 2022 L15990 2022" stroke-width="22" />
+                     <ns0:path d="M16298 2022 L16620 2022" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="jqmdmdf" class="layer">
+                     <ns0:g id="k17wa4gt" class="beam">
+                        <ns0:polygon points="12579,2967 13904,2967 13904,2877 12579,2877" />
+                        <ns0:g id="mkxtcvu" class="chord">
+                           <ns0:g id="o1q6mhiq" class="stem">
+                              <ns0:path d="M12588 2050 L12588 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n244" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12579, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n245" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12579, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n246" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12579, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="q1iob1x2" class="chord">
+                           <ns0:g id="p2ibp36" class="stem">
+                              <ns0:path d="M13024 2050 L13024 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n247" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13015, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n248" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13015, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n249" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13015, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="u133gjxl" class="chord">
+                           <ns0:g id="qhknuig" class="stem">
+                              <ns0:path d="M13460 2050 L13460 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n250" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13451, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n251" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13451, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n252" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13451, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="y1t5o2k0" class="chord">
+                           <ns0:g id="r1m3njrr" class="stem">
+                              <ns0:path d="M13895 2050 L13895 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n253" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13886, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n254" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13886, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n255" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13886, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="b1ak28o7" class="beam">
+                        <ns0:polygon points="14492,2967 16364,2967 16364,2877 14492,2877" />
+                        <ns0:g id="dy2uv1a" class="chord">
+                           <ns0:g id="s10dqeti" class="stem">
+                              <ns0:path d="M14501 2050 L14501 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n256" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14492, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n257" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14492, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n258" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14492, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="h19vkdr5" class="chord">
+                           <ns0:g id="twosakl" class="stem">
+                              <ns0:path d="M14937 2050 L14937 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n259" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14928, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n260" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14928, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n261" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14928, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="ltgz7cj" class="chord">
+                           <ns0:g id="u1khpnf8" class="stem">
+                              <ns0:path d="M15725 2050 L15725 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n262" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15716, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n263" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15716, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n264" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15716, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="pci0ja0" class="chord">
+                           <ns0:g id="v1nlxu3t" class="stem">
+                              <ns0:path d="M16355 2050 L16355 2949" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n265" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16346, 2382) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n266" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16346, 2202) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n267" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16346, 2022) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="k1cgjwfi" class="dynam">
+                  <ns0:use ns1:href="#E522-g1vk2vlm" transform="translate(12579, 1674) scale(0.72, 0.72)" />
+               </ns0:g>
+               <ns0:g id="qkjto65" class="dir">
+                  <ns0:text x="13451" y="454" font-size="0px">
+                     <ns0:tspan id="r1t2hg5" class="rend">
+                        <ns0:tspan id="s3o6j2i" class="text">
+                           <ns0:tspan font-size="405px">3</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="ebca5j3" class="dir">
+                  <ns0:text x="16346" y="454" font-size="0px">
+                     <ns0:tspan id="f11k5cwm" class="rend">
+                        <ns0:tspan id="gw6l8yq" class="text">
+                           <ns0:tspan font-size="405px">3</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="he6huvw" class="barLine">
+                  <ns0:path d="M16990 582 L16990 1302" stroke-width="27" />
+                  <ns0:path d="M16990 2382 L16990 3102" stroke-width="27" />
+                  <ns0:path d="M16990 1302 L16990 2382" stroke-width="27" />
+               </ns0:g>
+            </ns0:g>
+         </ns0:g>
+         <ns0:g id="c56huxe" class="system">
+            <ns0:path d="M13 4866 L13 7386" stroke-width="27" />
+            <ns0:g id="m8n5stk" class="grpSym">
+               <ns0:path d="M-72,7368 C-432,6828 18,6306 -252,6126 C81,6306 -369,6828 -72,7368" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+               <ns0:path d="M-72,4884 C-369,5424 81,5946 -252,6126 C18,5946 -432,5424 -72,4884" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+            </ns0:g>
+            <ns0:g id="sj1glty" class="measure">
+               <ns0:g id="l1ni6skr" class="mNum autogenerated">
+                  <ns0:text y="4623" text-anchor="middle" font-size="0px">
+                     <ns0:tspan id="mgvkn6q" class="text">
+                        <ns0:tspan font-size="324px">10</ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="byw9lti" class="staff">
+                  <ns0:path d="M0 4866 L5823 4866" stroke-width="13" />
+                  <ns0:path d="M0 5046 L5823 5046" stroke-width="13" />
+                  <ns0:path d="M0 5226 L5823 5226" stroke-width="13" />
+                  <ns0:path d="M0 5406 L5823 5406" stroke-width="13" />
+                  <ns0:path d="M0 5586 L5823 5586" stroke-width="13" />
+                  <ns0:g id="i5wl2cv" class="clef">
+                     <ns0:use ns1:href="#E050-g1vk2vlm" transform="translate(117, 5406) scale(0.72, 0.72)" />
+                  </ns0:g>
+                  <ns0:g id="jm5odw0" class="keySig" />
+                  <ns0:g id="gota0c2" class="layer">
+                     <ns0:g id="hmh374" class="beam">
+                        <ns0:polygon points="1327,4686 1900,4776 1900,4866 1327,4776" />
+                        <ns0:g id="n268" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1119, 5316) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="w36t3im" class="stem">
+                              <ns0:path d="M1336 5288 L1336 4704" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n269" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1674, 5406) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="x1oqh8y2" class="stem">
+                              <ns0:path d="M1891 5378 L1891 4794" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="lz5z9uw" class="accid">
+                              <ns0:use ns1:href="#E262-g1vk2vlm" transform="translate(1488, 5406) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n270" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2229, 5406) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="y1klq75n" class="stem">
+                           <ns0:path d="M2446 5378 L2446 4776" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="qqwbw89" class="accid" />
+                     </ns0:g>
+                     <ns0:g id="s1kt3aje" class="beam">
+                        <ns0:polygon points="3546,4821 4456,4821 4456,4911 3546,4911" />
+                        <ns0:polygon points="4230,4956 4456,4956 4456,5046 4230,5046" />
+                        <ns0:g id="n271" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3338, 5406) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="a1q24kqw" class="dots">
+                              <ns0:ellipse cx="3654" cy="5316" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="zhgrcwa" class="stem">
+                              <ns0:path d="M3555 5378 L3555 4839" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="u1cnbkqa" class="accid" />
+                        </ns0:g>
+                        <ns0:g id="n272" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4230, 5406) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="b1l94hhd" class="stem">
+                              <ns0:path d="M4447 5378 L4447 4839" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="z1frfdh6" class="accid" />
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="b1pffamb" class="beam">
+                        <ns0:polygon points="4568,5676 5478,5856 5478,5766 4568,5586" />
+                        <ns0:polygon points="5252,5680 5478,5721 5478,5631 5252,5590" />
+                        <ns0:g id="n273" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4568, 5046) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="dhgdx32" class="dots">
+                              <ns0:ellipse cx="4884" cy="4956" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="cq8nd64" class="stem">
+                              <ns0:path d="M4577 5074 L4577 5658" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n274" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5460, 5226) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="e1klh0oj" class="stem">
+                              <ns0:path d="M5469 5254 L5469 5838" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="c1m4ftbj" class="staff">
+                  <ns0:path d="M0 6666 L5823 6666" stroke-width="13" />
+                  <ns0:path d="M0 6846 L5823 6846" stroke-width="13" />
+                  <ns0:path d="M0 7026 L5823 7026" stroke-width="13" />
+                  <ns0:path d="M0 7206 L5823 7206" stroke-width="13" />
+                  <ns0:path d="M0 7386 L5823 7386" stroke-width="13" />
+                  <ns0:g id="kd32rnq" class="clef">
+                     <ns0:use ns1:href="#E062-g1vk2vlm" transform="translate(117, 6846) scale(0.72, 0.72)" />
+                  </ns0:g>
+                  <ns0:g id="l1hsn6h7" class="keySig" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M1071 6486 L1393 6486" stroke-width="22" />
+                     <ns0:path d="M1626 6486 L1948 6486" stroke-width="22" />
+                     <ns0:path d="M2181 6486 L2503 6486" stroke-width="22" />
+                     <ns0:path d="M2735 6486 L3057 6486" stroke-width="22" />
+                     <ns0:path d="M3290 6486 L3612 6486" stroke-width="22" />
+                     <ns0:path d="M3845 6486 L4167 6486" stroke-width="22" />
+                     <ns0:path d="M4520 6486 L4842 6486" stroke-width="22" />
+                     <ns0:path d="M5075 6486 L5397 6486" stroke-width="22" />
+                     <ns0:path d="M1071 6306 L1393 6306" stroke-width="22" />
+                     <ns0:path d="M1626 6306 L1948 6306" stroke-width="22" />
+                     <ns0:path d="M2181 6306 L2503 6306" stroke-width="22" />
+                     <ns0:path d="M2735 6306 L3057 6306" stroke-width="22" />
+                     <ns0:path d="M3290 6306 L3612 6306" stroke-width="22" />
+                     <ns0:path d="M3845 6306 L4167 6306" stroke-width="22" />
+                     <ns0:path d="M4520 6306 L4842 6306" stroke-width="22" />
+                     <ns0:path d="M5075 6306 L5397 6306" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="h14vr3bt" class="layer">
+                     <ns0:g id="ihaxo4p" class="beam">
+                        <ns0:polygon points="1119,7251 2801,7251 2801,7161 1119,7161" />
+                        <ns0:g id="k1syut6y" class="chord">
+                           <ns0:g id="f1ptd5y3" class="stem">
+                              <ns0:path d="M1128 6244 L1128 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n275" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(911, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n276" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1119, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n277" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1119, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n278" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1119, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="p1rkfzpr" class="chord">
+                           <ns0:g id="g1872wrh" class="stem">
+                              <ns0:path d="M1683 6244 L1683 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n279" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1466, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n280" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1674, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n281" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1674, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n282" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(1674, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="uo3ma8w" class="chord">
+                           <ns0:g id="hb2usbd" class="stem">
+                              <ns0:path d="M2238 6244 L2238 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n283" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2021, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n284" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2229, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n285" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2229, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n286" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2229, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="zphkomo" class="chord">
+                           <ns0:g id="i1vnnu3g" class="stem">
+                              <ns0:path d="M2792 6244 L2792 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n287" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2575, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n288" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2783, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n289" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2783, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n290" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(2783, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="d103vcmc" class="beam">
+                        <ns0:polygon points="3338,7251 5141,7251 5141,7161 3338,7161" />
+                        <ns0:g id="f1jjc9bf" class="chord">
+                           <ns0:g id="j1rv2d3a" class="stem">
+                              <ns0:path d="M3347 6244 L3347 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n291" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3130, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n292" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3338, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n293" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3338, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n294" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3338, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="k1cqd84s" class="chord">
+                           <ns0:g id="k1uliwda" class="stem">
+                              <ns0:path d="M3902 6244 L3902 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n295" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3685, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n296" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3893, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n297" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3893, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n298" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(3893, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="p4tsf9c" class="chord">
+                           <ns0:g id="l1t7en0s" class="stem">
+                              <ns0:path d="M4577 6244 L4577 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n299" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4360, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n300" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4568, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n301" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4568, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n302" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4568, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="ulhebma" class="chord">
+                           <ns0:g id="mnbt8cp" class="stem">
+                              <ns0:path d="M5132 6244 L5132 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n303" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(4915, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n304" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5123, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n305" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5123, 6396) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n306" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(5123, 6216) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="d1hglo0z" class="dir">
+                  <ns0:text x="1119" y="4558" font-size="0px">
+                     <ns0:tspan id="elvnrbm" class="rend">
+                        <ns0:tspan id="f1i9z10e" class="text">
+                           <ns0:tspan font-size="405px">3</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="jrczpvp" class="slur">
+                  <ns0:path d="M1232,5518 C1334,5641 1654,5696 1785,5606 C1675,5760 1295,5695 1232,5518" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="m1nhdw70" class="dir">
+                  <ns0:text x="2229" y="4558" font-size="0px">
+                     <ns0:tspan id="nyen566" class="rend">
+                        <ns0:tspan id="ob12ntk" class="text">
+                           <ns0:tspan font-size="405px">1</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="rq472yo" class="tie">
+                  <ns0:path d="M2500,5451 C2704,5559 3087,5558 3293,5451 C3101,5605 2690,5605 2500,5451" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="v1bka0et" class="dir">
+                  <ns0:text x="4230" y="4523" font-size="0px">
+                     <ns0:tspan id="wseejdm" class="rend">
+                        <ns0:tspan id="xmkuthe" class="text">
+                           <ns0:tspan font-size="405px">2</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="aq11whz" class="slur">
+                  <ns0:path d="M4523,5023 C4510,4925 4602,4812 4679,4843 C4627,4867 4535,4980 4523,5023" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="d1sxn4wq" class="dir">
+                  <ns0:text x="5460" y="4558" font-size="0px">
+                     <ns0:tspan id="ejlb3fa" class="rend">
+                        <ns0:tspan id="fvtcka3" class="text">
+                           <ns0:tspan font-size="405px">1</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="akv6gqh" class="barLine">
+                  <ns0:path d="M5810 4866 L5810 5586" stroke-width="27" />
+                  <ns0:path d="M5810 6666 L5810 7386" stroke-width="27" />
+                  <ns0:path d="M5810 5586 L5810 6666" stroke-width="27" />
+               </ns0:g>
+            </ns0:g>
+            <ns0:g id="j77igla" class="sb" />
+            <ns0:g id="ylpm2it" class="measure">
+               <ns0:g id="h176nzd1" class="staff">
+                  <ns0:path d="M5823 4866 L11291 4866" stroke-width="13" />
+                  <ns0:path d="M5823 5046 L11291 5046" stroke-width="13" />
+                  <ns0:path d="M5823 5226 L11291 5226" stroke-width="13" />
+                  <ns0:path d="M5823 5406 L11291 5406" stroke-width="13" />
+                  <ns0:path d="M5823 5586 L11291 5586" stroke-width="13" />
+                  <ns0:g id="n1lpst7w" class="layer">
+                     <ns0:g id="n307" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6014, 4956) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="nelsp0q" class="stem">
+                           <ns0:path d="M6023 4984 L6023 5586" stroke-width="18" />
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="p1bxfrz9" class="beam">
+                        <ns0:polygon points="7026,5586 7888,5586 7888,5496 7026,5496" />
+                        <ns0:polygon points="7662,5451 7888,5451 7888,5361 7662,5361" />
+                        <ns0:g id="n308" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7026, 4956) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="p8u0crx" class="dots">
+                              <ns0:ellipse cx="7342" cy="4956" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="ohlxl66" class="stem">
+                              <ns0:path d="M7035 4984 L7035 5568" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n309" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7870, 4956) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="q1rtlq75" class="stem">
+                              <ns0:path d="M7879 4984 L7879 5568" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="vi2e2ou" class="beam">
+                        <ns0:polygon points="8401,5721 9432,5676 9432,5586 8401,5631" />
+                        <ns0:polygon points="8401,5586 8748,5571 8748,5481 8401,5496" />
+                        <ns0:polygon points="8748,5571 9085,5557 9085,5467 8748,5481" />
+                        <ns0:polygon points="9085,5557 9432,5541 9432,5451 9085,5467" />
+                        <ns0:g id="n310" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(8401, 5046) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="rvfv3i" class="stem">
+                              <ns0:path d="M8410 5074 L8410 5703" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="x8zbt95" class="accid">
+                              <ns0:use ns1:href="#E262-g1vk2vlm" transform="translate(8215, 5046) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n311" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(8739, 4956) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="sfblujp" class="stem">
+                              <ns0:path d="M8748 4984 L8748 5688" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n312" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9076, 4866) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="t1h7oqv0" class="stem">
+                              <ns0:path d="M9085 4894 L9085 5674" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n313" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9414, 4956) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="uv7ynta" class="stem">
+                              <ns0:path d="M9423 4984 L9423 5658" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="coxbwvj" class="beam">
+                        <ns0:polygon points="9916,5766 10947,5946 10947,5856 9916,5676" />
+                        <ns0:polygon points="9916,5631 10263,5692 10263,5602 9916,5541" />
+                        <ns0:polygon points="10263,5692 10600,5751 10600,5661 10263,5602" />
+                        <ns0:polygon points="10600,5751 10947,5811 10947,5721 10600,5661" />
+                        <ns0:g id="n314" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9916, 5046) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="v15d0hv9" class="stem">
+                              <ns0:path d="M9925 5074 L9925 5748" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="e1uxicx3" class="accid">
+                              <ns0:use ns1:href="#E261-g1vk2vlm" transform="translate(9758, 5046) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n315" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10254, 5136) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="wyt4tw6" class="stem">
+                              <ns0:path d="M10263 5164 L10263 5809" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n316" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10591, 5226) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="x1pf6mc4" class="stem">
+                              <ns0:path d="M10600 5254 L10600 5868" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n317" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10929, 5316) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="ydilciz" class="stem">
+                              <ns0:path d="M10938 5344 L10938 5928" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="idrarpn" class="staff">
+                  <ns0:path d="M5823 6666 L11291 6666" stroke-width="13" />
+                  <ns0:path d="M5823 6846 L11291 6846" stroke-width="13" />
+                  <ns0:path d="M5823 7026 L11291 7026" stroke-width="13" />
+                  <ns0:path d="M5823 7206 L11291 7206" stroke-width="13" />
+                  <ns0:path d="M5823 7386 L11291 7386" stroke-width="13" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M5966 6486 L6288 6486" stroke-width="22" />
+                     <ns0:path d="M6472 6486 L6794 6486" stroke-width="22" />
+                     <ns0:path d="M6978 6486 L7300 6486" stroke-width="22" />
+                     <ns0:path d="M7484 6486 L7806 6486" stroke-width="22" />
+                     <ns0:path d="M8353 6486 L8675 6486" stroke-width="22" />
+                     <ns0:path d="M9028 6486 L9350 6486" stroke-width="22" />
+                     <ns0:path d="M9868 6486 L10190 6486" stroke-width="22" />
+                     <ns0:path d="M10543 6486 L10865 6486" stroke-width="22" />
+                     <ns0:path d="M5966 6306 L6288 6306" stroke-width="22" />
+                     <ns0:path d="M6472 6306 L6794 6306" stroke-width="22" />
+                     <ns0:path d="M6978 6306 L7300 6306" stroke-width="22" />
+                     <ns0:path d="M7484 6306 L7806 6306" stroke-width="22" />
+                     <ns0:path d="M8353 6306 L8675 6306" stroke-width="22" />
+                     <ns0:path d="M9028 6306 L9350 6306" stroke-width="22" />
+                     <ns0:path d="M9868 6306 L10190 6306" stroke-width="22" />
+                     <ns0:path d="M10543 6306 L10865 6306" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="oignkew" class="layer">
+                     <ns0:g id="pnl0zkm" class="beam">
+                        <ns0:polygon points="6014,7251 7550,7251 7550,7161 6014,7161" />
+                        <ns0:g id="r11u03qp" class="chord">
+                           <ns0:g id="z19qllyu" class="stem">
+                              <ns0:path d="M6023 6334 L6023 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n318" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6014, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n319" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6014, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n320" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6014, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="v1dqsres" class="chord">
+                           <ns0:g id="a1aue3vh" class="stem">
+                              <ns0:path d="M6529 6334 L6529 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n321" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6520, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n322" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6520, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n323" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(6520, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="z1gjbv16" class="chord">
+                           <ns0:g id="bdm0qz9" class="stem">
+                              <ns0:path d="M7035 6334 L7035 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n324" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7026, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n325" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7026, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n326" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7026, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="dfre7t2" class="chord">
+                           <ns0:g id="c1d5jr9n" class="stem">
+                              <ns0:path d="M7541 6334 L7541 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n327" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7532, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n328" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7532, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n329" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(7532, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="gnbkqtm" class="beam">
+                        <ns0:polygon points="8401,7251 10609,7251 10609,7161 8401,7161" />
+                        <ns0:g id="i1hzzsco" class="chord">
+                           <ns0:g id="dymwt9b" class="stem">
+                              <ns0:path d="M8410 6334 L8410 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n330" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(8401, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n331" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(8401, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n332" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(8401, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="m1nb0oza" class="chord">
+                           <ns0:g id="e7youzw" class="stem">
+                              <ns0:path d="M9085 6334 L9085 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n333" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9076, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n334" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9076, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n335" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9076, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="qxsdr8x" class="chord">
+                           <ns0:g id="fj12jm4" class="stem">
+                              <ns0:path d="M9925 6334 L9925 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n336" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9916, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n337" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9916, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n338" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(9916, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="u1anq8rc" class="chord">
+                           <ns0:g id="g182tth6" class="stem">
+                              <ns0:path d="M10600 6334 L10600 7233" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n339" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10591, 6666) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n340" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10591, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n341" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(10591, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="k11ylpnx" class="dir">
+                  <ns0:text x="6014" y="4523" font-size="0px">
+                     <ns0:tspan id="l1e320al" class="rend">
+                        <ns0:tspan id="mzshz4u" class="text">
+                           <ns0:tspan font-size="405px">4</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="rcczuhw" class="dir">
+                  <ns0:text x="7870" y="4523" font-size="0px">
+                     <ns0:tspan id="s1xgj5ij" class="rend">
+                        <ns0:tspan id="tz6kgh6" class="text">
+                           <ns0:tspan font-size="405px">3</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="y1ir2j6c" class="slur">
+                  <ns0:path d="M8514,4830 C9130,4449 10285,4652 11040,5111 C10264,4712 9141,4511 8514,4830" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="ga4nxm" class="dir">
+                  <ns0:text x="10591" y="4523" font-size="0px">
+                     <ns0:tspan id="hakuexm" class="rend">
+                        <ns0:tspan id="i17gxli" class="text">
+                           <ns0:tspan font-size="405px">3</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="k7y27lk" class="dir">
+                  <ns0:text x="10929" y="4523" font-size="0px">
+                     <ns0:tspan id="lnhj6jm" class="rend">
+                        <ns0:tspan id="m8q9xj1" class="text">
+                           <ns0:tspan font-size="405px">2</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="g1ufnf6w" class="barLine">
+                  <ns0:path d="M11278 4866 L11278 5586" stroke-width="27" />
+                  <ns0:path d="M11278 6666 L11278 7386" stroke-width="27" />
+                  <ns0:path d="M11278 5586 L11278 6666" stroke-width="27" />
+               </ns0:g>
+            </ns0:g>
+            <ns0:g id="xp4xd0f" class="measure">
+               <ns0:g id="g1dcj7nv" class="staff">
+                  <ns0:path d="M11291 4866 L17002 4866" stroke-width="13" />
+                  <ns0:path d="M11291 5046 L17002 5046" stroke-width="13" />
+                  <ns0:path d="M11291 5226 L17002 5226" stroke-width="13" />
+                  <ns0:path d="M11291 5406 L17002 5406" stroke-width="13" />
+                  <ns0:path d="M11291 5586 L17002 5586" stroke-width="13" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M16591 4686 L16913 4686" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="ljji26h" class="layer">
+                     <ns0:g id="m1jiy3il" class="beam">
+                        <ns0:polygon points="12298,5721 12871,5811 12871,5721 12298,5631" />
+                        <ns0:g id="n342" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12298, 5136) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="hnfpbxm" class="stem">
+                              <ns0:path d="M12307 5164 L12307 5703" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n343" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12853, 5226) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="i1mykmzp" class="stem">
+                              <ns0:path d="M12862 5254 L12862 5793" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="q1v8nfxc" class="accid">
+                              <ns0:use ns1:href="#E260-g1vk2vlm" transform="translate(12666, 5226) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="n344" class="note">
+                        <ns0:g class="notehead">
+                           <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13408, 5226) scale(0.72, 0.72)" />
+                        </ns0:g>
+                        <ns0:g id="j1ih2c75" class="stem">
+                           <ns0:path d="M13417 5254 L13417 5826" stroke-width="18" />
+                        </ns0:g>
+                        <ns0:g id="s1p0rvgg" class="accid" />
+                     </ns0:g>
+                     <ns0:g id="u1ncruun" class="beam">
+                        <ns0:polygon points="14517,5811 15427,5631 15427,5541 14517,5721" />
+                        <ns0:polygon points="15201,5538 15427,5496 15427,5406 15201,5448" />
+                        <ns0:g id="n345" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14517, 5226) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="lvicbrl" class="dots">
+                              <ns0:ellipse cx="14833" cy="5136" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="k1cyt3y7" class="stem">
+                              <ns0:path d="M14526 5254 L14526 5793" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="w1livbwx" class="accid" />
+                        </ns0:g>
+                        <ns0:g id="n346" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15409, 4956) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="mvcpu2v" class="stem">
+                              <ns0:path d="M15418 4984 L15418 5613" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="f1rcl9zm" class="beam">
+                        <ns0:polygon points="15747,5406 16657,5226 16657,5136 15747,5316" />
+                        <ns0:polygon points="16431,5133 16657,5091 16657,5001 16431,5043" />
+                        <ns0:g id="n347" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15747, 4776) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="ojwtve4" class="dots">
+                              <ns0:ellipse cx="16063" cy="4776" rx="36" ry="36" />
+                           </ns0:g>
+                           <ns0:g id="n175k8p4" class="stem">
+                              <ns0:path d="M15756 4804 L15756 5388" stroke-width="18" />
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="n348" class="note">
+                           <ns0:g class="notehead">
+                              <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16639, 4596) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="p246bm8" class="stem">
+                              <ns0:path d="M16648 4624 L16648 5208" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="ll9cozu" class="accid">
+                              <ns0:use ns1:href="#E260-g1vk2vlm" transform="translate(16426, 4596) scale(0.72, 0.72)" />
+                           </ns0:g>
+                           <ns0:g id="mge2mn4" class="artic">
+                              <ns0:use ns1:href="#E4A2-g1vk2vlm" transform="translate(16718, 4473) scale(0.72, 0.72)" />
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="htz46r6" class="staff">
+                  <ns0:path d="M11291 6666 L17002 6666" stroke-width="13" />
+                  <ns0:path d="M11291 6846 L17002 6846" stroke-width="13" />
+                  <ns0:path d="M11291 7026 L17002 7026" stroke-width="13" />
+                  <ns0:path d="M11291 7206 L17002 7206" stroke-width="13" />
+                  <ns0:path d="M11291 7386 L17002 7386" stroke-width="13" />
+                  <ns0:g class="ledgerLines above">
+                     <ns0:path d="M12250 6486 L12572 6486" stroke-width="22" />
+                     <ns0:path d="M12805 6486 L13127 6486" stroke-width="22" />
+                     <ns0:path d="M13360 6486 L13682 6486" stroke-width="22" />
+                     <ns0:path d="M13914 6486 L14236 6486" stroke-width="22" />
+                     <ns0:path d="M14469 6486 L14791 6486" stroke-width="22" />
+                     <ns0:path d="M15024 6486 L15346 6486" stroke-width="22" />
+                     <ns0:path d="M15699 6486 L16021 6486" stroke-width="22" />
+                     <ns0:path d="M16254 6486 L16576 6486" stroke-width="22" />
+                     <ns0:path d="M12250 6306 L12572 6306" stroke-width="22" />
+                     <ns0:path d="M12805 6306 L13127 6306" stroke-width="22" />
+                     <ns0:path d="M13360 6306 L13682 6306" stroke-width="22" />
+                     <ns0:path d="M13914 6306 L14236 6306" stroke-width="22" />
+                     <ns0:path d="M14469 6306 L14791 6306" stroke-width="22" />
+                     <ns0:path d="M15024 6306 L15346 6306" stroke-width="22" />
+                     <ns0:path d="M15699 6306 L16021 6306" stroke-width="22" />
+                     <ns0:path d="M16254 6306 L16576 6306" stroke-width="22" />
+                  </ns0:g>
+                  <ns0:g id="n1f6y8z5" class="layer">
+                     <ns0:g id="o1ui9vxf" class="beam">
+                        <ns0:polygon points="12298,7386 13980,7386 13980,7296 12298,7296" />
+                        <ns0:g id="rgg4bpg" class="chord">
+                           <ns0:g id="qmzjtim" class="stem">
+                              <ns0:path d="M12307 6334 L12307 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n349" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12298, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="q1i52je4" class="accid">
+                                 <ns0:use ns1:href="#E26A-g1vk2vlm" transform="translate(11527, 6756) scale(0.72, 0.72)" />
+                                 <ns0:use ns1:href="#E261-g1vk2vlm" transform="translate(11644, 6756) scale(0.72, 0.72)" />
+                                 <ns0:use ns1:href="#E26B-g1vk2vlm" transform="translate(11757, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n350" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12090, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="t1udxlm7" class="accid">
+                                 <ns0:use ns1:href="#E260-g1vk2vlm" transform="translate(11903, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n351" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12298, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n352" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12298, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="x9c9lbs" class="chord">
+                           <ns0:g id="rdaf0bw" class="stem">
+                              <ns0:path d="M12862 6334 L12862 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n353" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12853, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n354" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12645, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="z14l3pcg" class="accid" />
+                           </ns0:g>
+                           <ns0:g id="n355" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12853, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n356" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(12853, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="d1ltib4h" class="chord">
+                           <ns0:g id="su5vrqr" class="stem">
+                              <ns0:path d="M13417 6334 L13417 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n357" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13408, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n358" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13200, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="fissw28" class="accid" />
+                           </ns0:g>
+                           <ns0:g id="n359" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13408, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n360" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13408, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="j11y75ho" class="chord">
+                           <ns0:g id="t1d51yn3" class="stem">
+                              <ns0:path d="M13971 6334 L13971 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n361" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13962, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n362" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13754, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="ldlyo3f" class="accid" />
+                           </ns0:g>
+                           <ns0:g id="n363" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13962, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n364" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(13962, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                     <ns0:g id="o11ae677" class="beam">
+                        <ns0:polygon points="14517,7386 16320,7386 16320,7296 14517,7296" />
+                        <ns0:g id="q5lsvsc" class="chord">
+                           <ns0:g id="u18qu28u" class="stem">
+                              <ns0:path d="M14526 6334 L14526 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n365" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14517, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n366" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14309, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="s1tbk24y" class="accid" />
+                           </ns0:g>
+                           <ns0:g id="n367" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14517, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n368" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14517, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="w11tz6rt" class="chord">
+                           <ns0:g id="v7rgxnp" class="stem">
+                              <ns0:path d="M15081 6334 L15081 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n369" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15072, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n370" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(14864, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="y1u7armh" class="accid" />
+                           </ns0:g>
+                           <ns0:g id="n371" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15072, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n372" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15072, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="c16wdxxu" class="chord">
+                           <ns0:g id="w1k9b3ii" class="stem">
+                              <ns0:path d="M15756 6334 L15756 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n373" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15747, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n374" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15539, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="ef8tqi0" class="accid" />
+                           </ns0:g>
+                           <ns0:g id="n375" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15747, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n376" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(15747, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                        <ns0:g id="ix9w39j" class="chord">
+                           <ns0:g id="x1qopmte" class="stem">
+                              <ns0:path d="M16311 6334 L16311 7368" stroke-width="18" />
+                           </ns0:g>
+                           <ns0:g id="n377" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16302, 6756) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n378" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16094, 6576) scale(0.72, 0.72)" />
+                              </ns0:g>
+                              <ns0:g id="kqunxn" class="accid" />
+                           </ns0:g>
+                           <ns0:g id="n379" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16302, 6486) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                           <ns0:g id="n380" class="note">
+                              <ns0:g class="notehead">
+                                 <ns0:use ns1:href="#E0A4-g1vk2vlm" transform="translate(16302, 6306) scale(0.72, 0.72)" />
+                              </ns0:g>
+                           </ns0:g>
+                        </ns0:g>
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+               <ns0:g id="inhjanf" class="dir">
+                  <ns0:text x="12298" y="4523" font-size="0px">
+                     <ns0:tspan id="jfisahq" class="rend">
+                        <ns0:tspan id="kdvshmi" class="text">
+                           <ns0:tspan font-size="405px">4</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="o1mz2eqh" class="slur">
+                  <ns0:path d="M12411,4933 C12521,4807 12898,4867 12964,5021 C12862,4923 12538,4871 12411,4933" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="t1jw274t" class="tie">
+                  <ns0:path d="M13679,5181 C13870,5029 14279,5028 14472,5181 C14265,5075 13884,5075 13679,5181" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="xv5vbpo" class="dir">
+                  <ns0:text x="15409" y="4523" font-size="0px">
+                     <ns0:tspan id="yw9ojwf" class="rend">
+                        <ns0:tspan id="z1f9bjsg" class="text">
+                           <ns0:tspan font-size="405px">1</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="b5m1ymk" class="slur">
+                  <ns0:path d="M15522,4753 C15507,4607 15750,4473 15858,4573 C15749,4543 15566,4647 15522,4753" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+               </ns0:g>
+               <ns0:g id="c1xlp2iz" class="dir">
+                  <ns0:text x="15747" y="4409" font-size="0px">
+                     <ns0:tspan id="dqise85" class="rend">
+                        <ns0:tspan id="egoajfw" class="text">
+                           <ns0:tspan font-size="405px">2</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="hlgnwda" class="dir">
+                  <ns0:text x="16639" y="4276" font-size="0px">
+                     <ns0:tspan id="i1fcgl74" class="rend">
+                        <ns0:tspan id="jyw1e6i" class="text">
+                           <ns0:tspan font-size="405px">4</ns0:tspan>
+                        </ns0:tspan>
+                     </ns0:tspan>
+                  </ns0:text>
+               </ns0:g>
+               <ns0:g id="fe7efjg" class="barLine">
+                  <ns0:path d="M16989 4866 L16989 5586" stroke-width="27" />
+                  <ns0:path d="M16989 6666 L16989 7386" stroke-width="27" />
+                  <ns0:path d="M16989 5586 L16989 6666" stroke-width="27" />
+               </ns0:g>
+            </ns0:g>
+         </ns0:g>
+         <ns0:g id="qbg8y5k" class="pgFoot autogenerated">
+            <ns0:g id="r1vx514l" class="fig">
+               <ns0:g class="svg" transform="translate(6250, 11899) scale(10.000000, 10.000000)">
+                  <ns0:g>
+                     <ns0:path fill="#000000" d="M 17.11278,49.26451 V 10.367554 h 12.696511 c 3.288815,7.336676 6.71267,14.610456 10.127281,21.888976 3.419998,-7.484684 6.255515,-14.204887 9.58887,-21.909915 2.436207,0.103726 4.316952,0.08453 6.484294,-0.05808 V 49.264423 H 50.274275 C 50.145222,38.35639 50.016136,27.448368 49.887066,16.540329 45.003488,27.315459 39.967448,38.433564 35.083854,49.208695 34.678996,49.343717 34.426583,49.135619 34.021726,49.270644 29.46588,39.330716 24.910049,29.390805 20.354201,19.450876 20.224341,29.388756 20.09461,39.326619 19.964815,49.264497 H 17.11278 Z M 36.754144,39.324695 C 32.721221,30.512695 28.6883,21.700679 24.655394,12.888662 22.530527,12.750737 22.656775,12.71031 20.714356,12.813974 v 0.966497 c 4.612938,9.99784 9.609439,20.748709 13.87298,30.081745 0.722248,-1.512523 1.444528,-3.025014 2.166808,-4.537521 z m 25.738417,9.939815 c 0,-12.965651 0,-25.931305 0,-38.896956 10.084388,0 20.168791,0 30.253178,0 0,0.960416 0,1.920849 0,2.881265 -6.482825,0 -12.965652,0 -19.448478,0 0,4.802097 0,9.604178 0,14.406277 5.52241,0 11.044819,0 16.567229,0 0,0.960415 0,1.920832 0,2.881248 -5.52241,0 -11.044819,0 -16.567229,0 0,5.282306 0,10.564611 0,15.846917 6.963035,0 13.926068,0 20.889103,0 0,0.960416 0,1.920832 0,2.881249 -10.564597,0 -21.129207,0 -31.693803,0 z m 4.321874,-2.160937 c 0,-11.765131 0,-23.530263 0,-35.295394 -0.720312,0 -1.440625,0 -2.160937,0 0,11.765131 0,23.530263 0,35.295394 0.720312,0 1.440625,0 2.160937,0 z m 32.41413,2.160937 c 0,-12.965651 0,-25.931305 0,-38.896956 2.401045,0 4.802095,0 7.203135,0 0,12.965651 0,25.931305 0,38.896956 -2.40104,0 -4.80209,0 -7.203135,0 z m 2.881265,-2.160937 c 0,-11.765131 0,-23.530263 0,-35.295394 -0.72031,0 -1.44064,0 -2.160953,0 0,11.765131 0,23.530263 0,35.295394 0.720313,0 1.440643,0 2.160953,0 z" />
+                     <ns0:path fill="#000000" d="m 346.3,6.7 c -3.1,0.5 -4.9,4.4 -2.7,6.8 1.2,1.4 2.7,2.4 4.1,3.5 -2.4,5.3 -7.7,8.3 -11.9,12.1 -3.7,2.8 -7,6.2 -9.7,9.9 -2.2,-0.8 -0.91472,-7.718806 -0.62677,-9.5 0.28796,-1.781194 0.72677,-6.4 2.92677,-8.7 1.3,-1.9 3,-3.5 4.5,-5.2 1.2,-3.4 -3.2,-4.9 -5.8,-4.6 -7.3,-0.5 -14.6,2 -20,6.8 -5,4.6 -10,10.1 -11.5,17 -0.9,3.5 -0.2,7.5 2.8,9.9 2.5,2.8 7.4,2.9 9.8,-0.2 1.7,-2.3 3.2,-4.8 3.8,-7.6 -0.1,-2.6 -4.4,-2.3 -4.3,0.2 1.2,2.4 -0.9,4.7 -2.7,6.2 -1.7,0.9 -4.7,0.7 -4.8,-1.7 -1,-5.8 2.1,-11.3 5.2,-16.1 4,-5.8 9.8,-11.2 17.2,-11.8 1.6,0 8.1,-1.2 6.8,1.4 -2.8,2.8 -5.6,6.1 -6,10.3 -1.6,7.7 0.1,15.7 -2.3,23.2 -1.1,3.9 2,2.6 2.5,0.2 3.3,-7.4 8.9,-13.4 15.1,-18.5 4.2,-3.9 9.5,-7.1 11.9,-12.6 1.3,-3.6 1.2,-9 -2.7,-10.9 -0.50431,-0.1767056 -1.06965,-0.1654404 -1.6,-0.1 z m 66,14.5 c -2,0.8 -1.8,4.9 0.8,4.4 3.4,0.4 2.9,-6.2 -0.8,-4.4 z m 0.6,7.3 c -1.3,0.5 -7.6,0.5 -5.4,2.2 4,-0.3 0.7,4.5 0.6,6.7 -0.4,2.9 -2.4,5.9 -1.2,8.8 2.7,1.7 5.6,-0.8 6.8,-3.2 1.6,-1.4 -0.5,-3 -1.2,-0.9 -0.4,0.8 -2.4,3.5 -2.6,1.8 1.1,-5 2.7,-9.9 3.9,-14.9 l -0.1,-0.5 h -0.9 z m -65.1,0.2 c -6.5,1.6 -10.5,9.5 -8.2,15.7 2.1,3.4 7.4,2.9 10.1,0.4 2,-0.2 3.6,-5.3 1,-3.4 -1.4,2 -4,4.2 -6.5,2.8 -2.2,-1.9 -1.9,-5.7 1.7,-5.3 3.1,-0.9 6.9,-2.1 8.1,-5.5 0.9,-2.7 -1.6,-5.2 -4.3,-4.8 h -1.1 -0.7 z m 13.6,0 c -2.2,0 -8.5,1.8 -2.9,2.3 0.9,1.9 -1,4.9 -1.1,7.2 -0.5,2.9 -1.4,5.7 -1.7,8.7 3.7,0.7 3.8,-2.6 4.4,-5.3 0.9,-3.3 1.6,-7 4.1,-9.5 2.4,1.6 6.8,-0.7 3.7,-3.4 -2.9,-0.5 -4.8,2.4 -6.2,4.3 0,-1.2 2.4,-5 -0.2,-4.3 z m 15.8,0 c -6.4,1.3 -9.6,9.1 -7.7,14.9 1.9,4 7.7,3.9 11,1.7 4.1,-3 6,-8.9 4.4,-13.7 -1.3,-3 -4.8,-3.2 -7.6,-3 z m 17,0 c -2.3,0 -8.8,1.9 -3,2.4 0.4,2.5 -1,5.7 -1.4,8.4 -0.7,2.4 -1.8,7.5 2.1,7.2 3.8,-0.1 6.5,-3.5 8.5,-6.3 2,-3.2 4.5,-7 3.3,-10.9 -3.7,-3 -3.6,2.6 -3.1,5.1 -0.7,3.8 -2.7,7.9 -6.2,9.8 -3.6,0.6 -1,-4.3 -0.8,-6.1 0.6,-3.2 1.6,-6.3 1.9,-9.5 h -1.1 z m 30.6,0 c -6.3,1.2 -9.5,8.9 -7.8,14.7 1.5,4 7.2,4.2 10.5,2.4 4.6,-2.8 6.6,-9.3 4.8,-14.3 -1.4,-2.8 -4.8,-3 -7.5,-2.8 z m -75.4,1.7 c 2.1,1.5 0.2,4.7 -1.6,5.7 -1.1,0.4 -5.5,3.4 -4.6,0.7 0.8,-2.7 2.2,-6.2 5.3,-6.6 l 0.9,0.1 z m 30.8,0 c 2.6,1.5 1.3,5.2 0.8,7.6 -0.8,2.7 -1.9,5.9 -4.7,7.1 -5.1,0.8 -4,-5.8 -2.8,-8.8 1,-2.8 3,-6.8 6.7,-5.8 z m 47.1,-0.1 c 2.9,0.7 2,4.7 1.5,6.8 -0.7,3 -1.8,6.7 -5,8 -4.7,0.8 -4,-5.1 -3,-7.9 0.9,-3 2.7,-7.3 6.5,-6.8 z" />
+                     <ns0:g>
+                        <ns0:path d="m 116.56641,37.118164 q 0,-3.251953 2.92968,-6.298828 2.90039,-3.046875 5.99121,-3.046875 1.14258,0 1.81641,0.527344 0.67383,0.527343 0.67383,1.567382 0,2.109375 -2.47559,3.618165 -2.46093,1.49414 -5.18554,1.831054 l -0.83496,0.102539 q -0.19043,0.600586 -0.26368,0.966797 -0.0732,0.351563 -0.0732,0.893555 0,1.289062 0.83496,2.006836 0.84961,0.717773 2.00684,0.717773 1.09863,0 2.3291,-0.732422 0.70312,-0.424804 2.03613,-1.523437 l 0.38086,0.336914 q -0.65918,0.834961 -1.88965,1.713867 -2.18261,1.567383 -4.37988,1.567383 -1.55273,0 -2.72461,-1.098633 -1.17187,-1.098633 -1.17187,-3.149414 z m 3.12011,-2.358398 q 2.79786,-0.410157 4.55567,-1.962891 Q 126,31.229492 126,29.691406 q 0,-0.55664 -0.26367,-0.878906 -0.26367,-0.336914 -0.77637,-0.336914 -0.95215,0 -1.875,0.820312 -0.9082,0.805664 -1.64062,1.831055 -0.77637,1.201172 -1.23047,2.299805 -0.24903,0.585937 -0.52735,1.333008 z" />
+                        <ns0:path d="m 129.47168,41 2.53418,-9.052734 q 0.32226,-1.142579 0.36621,-1.376954 0.0586,-0.249023 0.0586,-0.527343 0,-0.424805 -0.24902,-0.65918 -0.23437,-0.249023 -0.9375,-0.249023 -0.17578,0 -0.35156,0.0293 -0.16113,0.01465 -0.36621,0.04395 v -0.498047 q 0.95215,-0.146484 1.34765,-0.219727 0.41016,-0.07324 0.87891,-0.175781 l 2.62207,-0.571289 q 0.0879,0.05859 0.11719,0.131836 l -1.94824,6.298828 q 1.7871,-2.739258 2.98828,-4.072266 2.10937,-2.358398 3.77929,-2.358398 0.64453,0 1.11328,0.249023 0.89356,0.483399 0.89356,1.743165 0,0.351562 -0.0732,0.732421 -0.0732,0.38086 -0.19043,0.820313 l -1.91895,7.016601 q -0.0586,0.219727 -0.13183,0.541993 -0.0733,0.307617 -0.0733,0.439453 0,0.219726 0.10254,0.395508 0.10254,0.175781 0.33692,0.175781 0.38086,0 0.8789,-0.439453 0.49805,-0.454102 1.62598,-1.918946 l 0.4248,0.38086 q -1.20117,1.625976 -1.90429,2.285156 -1.20117,1.157227 -2.29981,1.157227 -0.49804,0 -0.96679,-0.322266 -0.45411,-0.336914 -0.45411,-1.201172 0,-0.249023 0.0293,-0.527344 0.0439,-0.27832 0.10254,-0.483398 l 1.8457,-7.119141 q 0.14649,-0.585937 0.19043,-0.952148 0.0586,-0.38086 0.0586,-0.541992 0,-0.351563 -0.17578,-0.600586 -0.16114,-0.263672 -0.58594,-0.263672 -1.09863,0 -2.76856,1.992187 -0.98144,1.186524 -1.99218,2.827149 -0.77637,1.274414 -1.23047,2.490234 Q 132.70898,37.821289 131.74219,41 Z" />
+                        <ns0:path d="m 149.12988,33.5 q 0,0.908203 0.27832,1.450195 0.46875,0.893555 1.68457,0.893555 1.31836,0 2.34375,-1.669922 1.04004,-1.68457 1.04004,-3.706055 0,-0.966796 -0.4248,-1.508789 -0.42481,-0.55664 -1.27442,-0.55664 -1.64062,0 -2.65136,1.743164 -0.9961,1.743164 -0.9961,3.354492 z m 0.5127,13.066406 q 1.74316,0 2.88574,-0.834961 1.15723,-0.834961 1.15723,-1.992187 0,-0.878906 -0.60059,-1.479492 -0.32226,-0.322266 -1.04004,-0.688477 -0.60058,-0.292969 -2.03613,-0.834961 -1.4209,-0.556641 -1.64063,-0.556641 -0.38086,0 -1.47949,1.010743 -1.09863,1.02539 -1.09863,2.314453 0,1.948242 1.68457,2.680664 0.87891,0.380859 2.16797,0.380859 z m -5.47852,-2.680664 q 0,-1.098633 0.83496,-2.094726 0.84961,-0.981446 2.68067,-1.962891 -0.36621,-0.234375 -0.60059,-0.483398 -0.23437,-0.263672 -0.23437,-0.688477 0,-0.600586 0.83496,-1.376953 0.46875,-0.439453 1.52343,-1.157227 -0.9375,-0.351562 -1.61132,-0.996093 -0.82032,-0.864258 -0.82032,-2.241211 0,-2.211914 1.72852,-3.676758 1.72852,-1.464844 4.27734,-1.464844 1.33301,0 2.25586,0.424805 0.92285,0.410156 1.08399,0.688476 h 1.97754 v 1.171875 h -1.49414 q 0.0879,0.322266 0.13183,0.585938 0.0439,0.263672 0.0439,0.74707 0,2.373047 -1.84571,3.735352 -1.83105,1.362304 -3.95507,1.362304 -0.21973,0 -0.41016,-0.01465 -0.19043,-0.0293 -0.46875,-0.08789 -0.21973,0 -0.60059,0.424805 -0.3955,0.424805 -0.3955,0.761719 0,0.498047 3.22265,1.699218 3.20801,1.215821 3.20801,3.559571 0,1.757812 -1.61133,3.076172 -1.61133,1.333007 -4.86328,1.333007 -2.25586,0 -3.57422,-0.966796 -1.31836,-0.966797 -1.31836,-2.358399 z" />
+                        <ns0:path d="m 165.03809,27.669922 q 0.13183,0 0.17578,0.08789 0.0586,0.07324 0.0586,0.175782 -0.0146,0.146484 -0.0293,0.219726 l -1.46484,5.668946 0.32227,-0.629883 q 1.05468,-2.06543 2.46093,-3.764649 1.4209,-1.713867 2.69532,-1.713867 0.68847,0 1.05468,0.454102 0.38086,0.454101 0.38086,1.040039 0,0.659179 -0.38086,1.098633 -0.36621,0.424804 -1.02539,0.424804 -0.4541,0 -0.68847,-0.175781 -0.23438,-0.175781 -0.36621,-0.410156 l -0.17579,-0.322266 q -0.0586,-0.08789 -0.14648,-0.131836 -0.0732,-0.05859 -0.19043,-0.05859 -0.57129,0 -1.65527,1.59668 -1.06934,1.59668 -1.91895,3.457031 -0.51269,1.12793 -1.14258,2.988282 Q 162.60645,38.84668 161.94727,41 h -2.25586 l 2.43164,-8.818359 q 0.20507,-0.761719 0.32226,-1.362305 0.13184,-0.600586 0.13184,-0.981445 0,-0.439454 -0.21973,-0.673829 -0.21972,-0.234375 -0.76172,-0.234375 -0.17578,0 -0.43945,0.0293 -0.26367,0.0293 -0.62988,0.07324 v -0.483399 l 0.58593,-0.117187 q 1.14258,-0.234375 2.49024,-0.498047 1.3623,-0.263672 1.43555,-0.263672 z" />
+                        <ns0:path d="m 181.51758,30.423828 q 0,-1.054687 -0.4834,-1.552734 -0.4834,-0.498047 -1.17188,-0.498047 -2.38769,0 -4.43847,3.662109 -1.80176,3.222656 -1.80176,5.551758 0,1.171875 0.49805,1.713867 0.51269,0.527344 1.25976,0.527344 2.21192,0 4.2627,-3.55957 1.875,-3.237305 1.875,-5.844727 z m -1.83106,-2.709961 q 1.15723,0 1.78711,0.600586 0.33692,0.322266 0.52735,0.849609 l 0.0732,0.205079 0.32226,-1.113282 q 0.0586,-0.190429 0.10254,-0.249023 0.0439,-0.07324 0.20508,-0.08789 l 1.65527,-0.190429 q 0.13184,0 0.14649,0.05859 0.0293,0.04395 0,0.175782 -0.0586,0.190429 -0.0879,0.307617 -0.0293,0.102539 -0.0879,0.307617 l -1.34766,5.244141 q -0.43945,1.713867 -0.74707,2.958984 -0.54199,2.255859 -0.54199,2.578125 0,0.205078 0.10254,0.307617 0.11719,0.08789 0.27832,0.08789 0.13183,0 0.27832,-0.08789 0.16113,-0.08789 0.38086,-0.263672 l 0.24902,-0.205078 q 0.11719,-0.102539 0.26367,-0.234375 0.14649,-0.146484 0.35157,-0.351562 l 0.9082,-0.9375 0.35156,0.307617 q -1.52344,1.948242 -2.44629,2.651367 -0.92285,0.688477 -1.75781,0.688477 -0.54199,0 -0.84961,-0.38086 -0.29297,-0.380859 -0.29297,-0.952148 0,-0.527344 0.19043,-1.508789 0.20508,-0.996094 0.39551,-1.669922 -0.26367,0.439453 -0.89356,1.289062 -0.61523,0.834961 -1.52343,1.625977 -1.06934,0.952148 -2.05078,1.347656 -0.76172,0.263672 -1.46485,0.263672 -1.18652,0 -2.15332,-0.966797 -0.96679,-0.981445 -0.96679,-2.768555 0,-3.076171 2.7539,-6.416015 2.8418,-3.47168 5.88867,-3.47168 z" />
+                        <ns0:path d="m 196.66406,27.772461 q 0.82031,0 1.25977,0.585937 0.43945,0.585938 0.43945,1.333008 0,1.977539 -3.91113,6.928711 -3.70606,4.702149 -4.43848,4.702149 -0.21972,0 -0.29297,-0.600586 -0.0439,-0.336914 -0.0439,-1.142578 0,-0.981446 -0.19043,-3.325196 -0.19043,-2.34375 -0.36621,-3.471679 -0.36621,-2.475586 -0.71778,-3.19336 -0.35156,-0.717773 -1.333,-0.717773 -0.16114,0 -0.38086,0.01465 -0.20508,0.01465 -0.4834,0.04395 v -0.380859 q 0.43945,-0.08789 1.8457,-0.395508 1.40625,-0.307617 1.49414,-0.336914 l 0.4834,-0.146484 q 0.20508,-0.05859 0.32227,0.234375 0.11718,0.27832 0.29296,1.054687 0.55665,2.548828 0.83497,5.024414 0.17578,1.538086 0.35156,4.555664 l 0.4834,-0.512695 q 1.50879,-1.59668 3.01757,-3.793945 1.50879,-2.197266 1.50879,-3.105469 0,-0.454101 -0.65918,-1.083984 -0.65918,-0.644532 -0.65918,-1.171875 0,-0.483399 0.32227,-0.791016 0.33691,-0.307617 0.82031,-0.307617 z" />
+                        <ns0:path d="m 199.82812,37.118164 q 0,-3.251953 2.92969,-6.298828 2.90039,-3.046875 5.99121,-3.046875 1.14258,0 1.81641,0.527344 0.67383,0.527343 0.67383,1.567382 0,2.109375 -2.47559,3.618165 -2.46094,1.49414 -5.18555,1.831054 l -0.83496,0.102539 q -0.19043,0.600586 -0.26367,0.966797 -0.0732,0.351563 -0.0732,0.893555 0,1.289062 0.83496,2.006836 0.84961,0.717773 2.00684,0.717773 1.09863,0 2.3291,-0.732422 0.70312,-0.424804 2.03613,-1.523437 l 0.38086,0.336914 q -0.65918,0.834961 -1.88965,1.713867 -2.18262,1.567383 -4.37988,1.567383 -1.55274,0 -2.72461,-1.098633 -1.17188,-1.098633 -1.17188,-3.149414 z m 3.12012,-2.358398 q 2.79785,-0.410157 4.55567,-1.962891 1.75781,-1.567383 1.75781,-3.105469 0,-0.55664 -0.26367,-0.878906 -0.26368,-0.336914 -0.77637,-0.336914 -0.95215,0 -1.875,0.820312 -0.9082,0.805664 -1.64063,1.831055 -0.77636,1.201172 -1.23046,2.299805 -0.24903,0.585937 -0.52735,1.333008 z" />
+                        <ns0:path d="m 215.23828,37.601562 q 0,0.893555 0.41016,1.567383 0.41015,0.65918 1.3916,0.65918 2.09473,0 4.02832,-3.369141 1.81641,-3.164062 1.81641,-5.991211 0,-0.893554 -0.29297,-1.479492 -0.29297,-0.585937 -1.18653,-0.585937 -2.22656,0 -4.30664,3.603515 -1.86035,3.222657 -1.86035,5.595703 z m 6.00586,-9.887695 q 1.15723,0 1.64063,0.556641 0.27832,0.322265 0.43945,1.098633 l 1.66992,-6.00586 q 0.0732,-0.249023 0.0879,-0.439453 0.0293,-0.205078 0.0293,-0.351562 0,-0.571289 -0.21973,-0.717774 -0.20508,-0.146484 -0.60058,-0.146484 -0.24903,0 -0.46875,0.01465 -0.20508,0.01465 -0.55665,0.04395 v -0.483399 q 1.65528,-0.219726 4.58497,-0.761719 l 0.13183,0.146485 -0.0293,0.161133 -2.8125,10.532226 -1.91894,6.972656 q -0.0586,0.234375 -0.10254,0.439453 -0.0293,0.19043 -0.0293,0.351563 0,0.395508 0.19043,0.512695 0.20508,0.117188 0.35157,0.117188 0.4248,0 1.20117,-0.747071 0.4541,-0.454101 1.24511,-1.40625 l 0.33692,0.322266 -0.20508,0.307617 q -0.54199,0.805664 -1.3916,1.640625 -1.50879,1.479492 -2.70996,1.479492 -0.39551,0 -0.71778,-0.175781 -0.60058,-0.351562 -0.60058,-1.259765 0,-0.307618 0.0879,-0.981446 0.0879,-0.673828 0.26367,-1.464843 -1.11328,1.699218 -2.44629,2.783203 -1.31836,1.083984 -2.88574,1.083984 -1.27441,0 -2.22656,-0.908203 -0.95215,-0.908203 -0.95215,-2.797852 0,-3.193359 2.92969,-6.5625 2.91504,-3.354492 5.68359,-3.354492 z" />
+                        <ns0:path d="m 254.12988,29.530273 q 0,1.230469 -1.18652,3.251954 -0.65918,1.127929 -1.86035,2.739257 -1.23047,1.655274 -2.53418,3.266602 -2.06543,2.548828 -2.43164,2.548828 -0.16114,0 -0.20508,-0.131836 -0.044,-0.131836 -0.11719,-0.893555 l -0.86426,-9.125976 -6.0791,9.960937 q -0.0439,0.08789 -0.11719,0.117188 -0.0586,0.0293 -0.13183,0.0293 l -0.20508,-0.04395 -0.0293,-0.131836 -0.17578,-3.618164 q -0.0586,-1.21582 -0.17578,-2.504882 -0.10254,-1.303711 -0.20508,-2.25586 -0.30761,-2.651367 -0.65918,-3.251953 -0.33691,-0.600586 -1.25976,-0.600586 -0.17578,0 -0.35156,0.01465 -0.17579,0 -0.36622,0.0293 v -0.424804 q 0.60059,-0.102539 1.14258,-0.219727 0.55664,-0.117187 1.21582,-0.263672 l 1.37696,-0.351562 q 0.49804,0 1.01074,4.174805 0.27832,2.285156 0.49805,5.200195 l 5.75683,-9.09668 q 0.0586,-0.117187 0.14649,-0.19043 0.0879,-0.08789 0.20507,-0.08789 0.13184,0 0.17578,0.08789 0.0439,0.08789 0.0586,0.263672 l 0.98144,10.590821 q 0.10254,-0.131836 1.62598,-2.06543 1.52344,-1.948242 1.59668,-2.06543 1.09863,-1.582031 1.46484,-2.446289 0.23438,-0.55664 0.23438,-1.083984 0,-0.205078 -0.0586,-0.38086 -0.0586,-0.190429 -0.27833,-0.395507 L 251.87402,29.75 q -0.19043,-0.19043 -0.33691,-0.410156 -0.13184,-0.234375 -0.13184,-0.541992 0,-0.366211 0.24903,-0.747071 0.26367,-0.380859 0.9375,-0.380859 0.54199,0 1.04004,0.439453 0.49804,0.424805 0.49804,1.420898 z" />
+                        <ns0:path d="m 261.17578,24.520508 q -0.60058,0 -1.02539,-0.46875 -0.4248,-0.46875 -0.4248,-1.12793 0,-0.673828 0.4248,-1.142578 0.42481,-0.46875 1.02539,-0.46875 0.60059,0 1.02539,0.46875 0.43945,0.46875 0.43945,1.142578 0,0.673828 -0.43945,1.142578 -0.4248,0.454102 -1.02539,0.454102 z m 0.35156,3.208008 q 0.0879,0.04395 0.0733,0.117187 l -2.95899,10.458984 q -0.20508,0.834961 -0.20508,0.996094 0,0.219727 0.0879,0.38086 0.0733,0.175781 0.36621,0.175781 0.49805,0 1.31836,-0.864258 0.4834,-0.512695 1.18653,-1.464844 l 0.38086,0.322266 -0.14649,0.205078 q -1.09863,1.538086 -1.8164,2.211914 -1.12793,1.054688 -2.19727,1.054688 -0.62988,0 -1.05469,-0.527344 -0.41015,-0.527344 -0.41015,-1.245117 0,-0.424805 0.0586,-0.732422 0.0586,-0.322266 0.21973,-0.9375 l 2.05078,-7.529297 q 0.0439,-0.175781 0.0732,-0.322266 0.0293,-0.146484 0.0293,-0.292968 0,-0.527344 -0.39551,-0.644532 -0.38086,-0.131836 -1.52344,-0.131836 v -0.483398 q 1.21582,-0.146484 1.74317,-0.219727 0.54199,-0.08789 1.08398,-0.175781 0.70313,-0.117187 1.33301,-0.263672 0.62988,-0.146484 0.70312,-0.08789 z" />
+                        <ns0:path d="m 264.17871,40.033203 q 0,-0.117187 0.0146,-0.263672 0.0147,-0.161133 0.0586,-0.322265 l 2.75391,-10.239258 h -2.22656 q 0,-0.395508 0.0586,-0.498047 0.0586,-0.102539 0.29297,-0.205078 1.47949,-0.629883 2.28516,-1.215821 0.82031,-0.585937 2.22656,-2.255859 l 0.23437,-0.27832 q 0.0439,-0.05859 0.10254,-0.08789 0.0732,-0.04395 0.14649,-0.04395 0.14648,0.0293 0.20507,0.05859 0.0439,0.102539 0.0439,0.190429 0.0147,0.07324 0,0.161133 l -0.83496,3.193359 h 2.38769 l -0.17578,0.981446 h -2.49023 l -2.63672,9.858398 q -0.0732,0.263672 0.0439,0.512696 0.11718,0.234375 0.3955,0.234375 0.38086,0 1.06934,-0.761719 0.39551,-0.410156 1.33301,-1.625977 l 0.38086,0.219727 -0.20508,0.307617 q -1.25977,1.889648 -2.22656,2.636719 -0.95215,0.732422 -1.81641,0.732422 -0.74707,0 -1.08399,-0.395508 -0.33691,-0.395508 -0.33691,-0.893555 z" />
+                        <ns0:path d="m 274.69629,21.356445 q 0.9375,-0.131836 1.50879,-0.205078 0.58594,-0.08789 1.01074,-0.161133 1.72852,-0.336914 1.86035,-0.366211 0.13184,-0.0293 0.20508,-0.0293 0.17578,0.08789 0.17578,0.219726 l -3.44238,13.081055 q 1.8457,-2.72461 3.01758,-3.984375 2.05078,-2.167969 3.76464,-2.167969 0.70313,0 1.34766,0.454102 0.65918,0.439453 0.65918,1.596679 0,0.278321 -0.0732,0.717774 -0.0732,0.439453 -0.17578,0.776367 l -1.97754,7.016601 q -0.0879,0.292969 -0.14649,0.57129 -0.0586,0.263671 -0.0586,0.483398 0,0.249023 0.11719,0.380859 0.11719,0.117188 0.33691,0.117188 0.4541,0 1.06934,-0.629883 0.38086,-0.395508 1.4209,-1.728516 l 0.38086,0.351563 q -1.0254,1.523437 -1.74317,2.226562 -1.27441,1.245118 -2.56348,1.245118 -0.58593,0 -0.98144,-0.366211 -0.39551,-0.366211 -0.39551,-1.054688 0,-0.19043 0.0147,-0.351562 0.0293,-0.175782 0.0879,-0.38086 l 2.25586,-8.583984 q 0.0293,-0.117188 0.0439,-0.234375 0.0293,-0.131836 0.0293,-0.263672 0,-0.366211 -0.21972,-0.571289 -0.23438,-0.205078 -0.60059,-0.205078 -0.98145,0 -2.47559,1.582031 -1.49414,1.567383 -2.51953,3.208008 -0.70312,1.157226 -1.06933,2.182617 Q 275.20898,37.308594 274.18359,41 h -2.2705 l 4.6875,-17.768555 q 0.0439,-0.190429 0.0586,-0.322265 0.0147,-0.131836 0.0147,-0.249024 0,-0.629883 -0.41016,-0.74707 -0.41015,-0.131836 -1.56738,-0.07324 z" />
+                     </ns0:g>
+                  </ns0:g>
+               </ns0:g>
+            </ns0:g>
+         </ns0:g>
+      </ns0:g>
+   </ns0:svg>
+</ns0:svg>

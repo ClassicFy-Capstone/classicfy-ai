@@ -1,0 +1,2665 @@
+{
+  "piece": "Bach/Fugue/bwv_848/midi_score.mid",
+  "slurs": [
+    {
+      "part_id": "P1",
+      "number": "1",
+      "start_note_id": "P1:m12:n0",
+      "stop_note_id": "P1:m12:n2",
+      "start_quarters": "48",
+      "stop_onset_quarters": "48",
+      "stop_release_quarters": "97/2",
+      "start_scope": "P1:staff=1:voice=1",
+      "stop_scope": "P1:staff=1:voice=1",
+      "status": "nonpositive_onset_span"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "boundary_01cde7f031f6",
+      "scope": "P1:staff=1:voice=1",
+      "part_id": "P1",
+      "position_quarters": "0",
+      "uncertainty_start_quarters": "0",
+      "uncertainty_stop_quarters": "4",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=1:voice=1",
+          "part_id": "P1",
+          "position_quarters": "0",
+          "uncertainty_start_quarters": "0",
+          "uncertainty_stop_quarters": "4",
+          "note_ids": [
+            "P1:m0:n0"
+          ],
+          "details": {
+            "length_quarters": "4",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_98e626db1249",
+      "scope": "P1:staff=1:voice=3",
+      "part_id": "P1",
+      "position_quarters": "0",
+      "uncertainty_start_quarters": "0",
+      "uncertainty_stop_quarters": "1",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=1:voice=3",
+          "part_id": "P1",
+          "position_quarters": "0",
+          "uncertainty_start_quarters": "0",
+          "uncertainty_stop_quarters": "1",
+          "note_ids": [
+            "P1:m0:n1"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_ae2fb30ed107",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "0",
+      "uncertainty_start_quarters": "0",
+      "uncertainty_stop_quarters": "4",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "0",
+          "uncertainty_start_quarters": "0",
+          "uncertainty_stop_quarters": "4",
+          "note_ids": [
+            "P1:m0:n10"
+          ],
+          "details": {
+            "length_quarters": "4",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_f644950116de",
+      "scope": "P1:staff=1:voice=3",
+      "part_id": "P1",
+      "position_quarters": "1",
+      "uncertainty_start_quarters": "1",
+      "uncertainty_stop_quarters": "3/2",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=1:voice=3",
+          "part_id": "P1",
+          "position_quarters": "1",
+          "uncertainty_start_quarters": "1",
+          "uncertainty_stop_quarters": "3/2",
+          "note_ids": [
+            "P1:m0:n2"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_430ac1511555",
+      "scope": "P1:staff=1:voice=1",
+      "part_id": "P1",
+      "position_quarters": "4",
+      "uncertainty_start_quarters": "4",
+      "uncertainty_stop_quarters": "8",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=1:voice=1",
+          "part_id": "P1",
+          "position_quarters": "4",
+          "uncertainty_start_quarters": "4",
+          "uncertainty_stop_quarters": "8",
+          "note_ids": [
+            "P1:m1:n0"
+          ],
+          "details": {
+            "length_quarters": "4",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_820ad8dfa759",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "4",
+      "uncertainty_start_quarters": "4",
+      "uncertainty_stop_quarters": "8",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "4",
+          "uncertainty_start_quarters": "4",
+          "uncertainty_stop_quarters": "8",
+          "note_ids": [
+            "P1:m1:n10"
+          ],
+          "details": {
+            "length_quarters": "4",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_13987a074256",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "8",
+      "uncertainty_start_quarters": "8",
+      "uncertainty_stop_quarters": "9",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "8",
+          "uncertainty_start_quarters": "8",
+          "uncertainty_stop_quarters": "9",
+          "note_ids": [
+            "P1:m2:n15"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_a7862a64d55a",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "8",
+      "uncertainty_start_quarters": "8",
+      "uncertainty_stop_quarters": "12",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "8",
+          "uncertainty_start_quarters": "8",
+          "uncertainty_stop_quarters": "12",
+          "note_ids": [
+            "P1:m2:n24"
+          ],
+          "details": {
+            "length_quarters": "4",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_1298503dd01d",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "9",
+      "uncertainty_start_quarters": "9",
+      "uncertainty_stop_quarters": "19/2",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "9",
+          "uncertainty_start_quarters": "9",
+          "uncertainty_stop_quarters": "19/2",
+          "note_ids": [
+            "P1:m2:n16"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_e3442506279c",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "12",
+      "uncertainty_start_quarters": "12",
+      "uncertainty_stop_quarters": "16",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "12",
+          "uncertainty_start_quarters": "12",
+          "uncertainty_stop_quarters": "16",
+          "note_ids": [
+            "P1:m3:n22"
+          ],
+          "details": {
+            "length_quarters": "4",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_1d785e118089",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "16",
+      "uncertainty_start_quarters": "16",
+      "uncertainty_stop_quarters": "17",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "16",
+          "uncertainty_start_quarters": "16",
+          "uncertainty_stop_quarters": "17",
+          "note_ids": [
+            "P1:m4:n20"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_c3b209af5b3e",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "17",
+      "uncertainty_start_quarters": "17",
+      "uncertainty_stop_quarters": "35/2",
+      "cues": [
+        {
+          "kind": "voice_entry_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "17",
+          "uncertainty_start_quarters": "17",
+          "uncertainty_stop_quarters": "35/2",
+          "note_ids": [
+            "P1:m4:n21"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_675fdd2dc491",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "25",
+      "uncertainty_start_quarters": "25",
+      "uncertainty_stop_quarters": "51/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "25",
+          "uncertainty_start_quarters": "25",
+          "uncertainty_stop_quarters": "51/2",
+          "note_ids": [
+            "P1:m6:n7"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_969c37f1458d",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "29",
+      "uncertainty_start_quarters": "29",
+      "uncertainty_stop_quarters": "59/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "29",
+          "uncertainty_start_quarters": "29",
+          "uncertainty_stop_quarters": "59/2",
+          "note_ids": [
+            "P1:m7:n7"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_f9fbbcaae06e",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "33",
+      "uncertainty_start_quarters": "33",
+      "uncertainty_stop_quarters": "67/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "33",
+          "uncertainty_start_quarters": "33",
+          "uncertainty_stop_quarters": "67/2",
+          "note_ids": [
+            "P1:m8:n9"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_ef6d2307a422",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "37",
+      "uncertainty_start_quarters": "37",
+      "uncertainty_stop_quarters": "75/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "37",
+          "uncertainty_start_quarters": "37",
+          "uncertainty_stop_quarters": "75/2",
+          "note_ids": [
+            "P1:m9:n15"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_485b15d7aadb",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "45",
+      "uncertainty_start_quarters": "45",
+      "uncertainty_stop_quarters": "91/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "45",
+          "uncertainty_start_quarters": "45",
+          "uncertainty_stop_quarters": "91/2",
+          "note_ids": [
+            "P1:m11:n24"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_22dca3636512",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "46",
+      "uncertainty_start_quarters": "46",
+      "uncertainty_stop_quarters": "93/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "46",
+          "uncertainty_start_quarters": "46",
+          "uncertainty_stop_quarters": "93/2",
+          "note_ids": [
+            "P1:m11:n19"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_cb367ae1350e",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "47",
+      "uncertainty_start_quarters": "47",
+      "uncertainty_stop_quarters": "95/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "47",
+          "uncertainty_start_quarters": "47",
+          "uncertainty_stop_quarters": "95/2",
+          "note_ids": [
+            "P1:m11:n28"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_afb9478b7a2e",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "48",
+      "uncertainty_start_quarters": "48",
+      "uncertainty_stop_quarters": "97/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "48",
+          "uncertainty_start_quarters": "48",
+          "uncertainty_stop_quarters": "97/2",
+          "note_ids": [
+            "P1:m12:n17"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_e7b06c0d6bb7",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "49",
+      "uncertainty_start_quarters": "49",
+      "uncertainty_stop_quarters": "99/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "49",
+          "uncertainty_start_quarters": "49",
+          "uncertainty_stop_quarters": "99/2",
+          "note_ids": [
+            "P1:m12:n26"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_cc5ee8ae2a8d",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "53",
+      "uncertainty_start_quarters": "53",
+      "uncertainty_stop_quarters": "54",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "53",
+          "uncertainty_start_quarters": "53",
+          "uncertainty_stop_quarters": "54",
+          "note_ids": [
+            "P1:m13:n17"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_d788b5c7f552",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "53",
+      "uncertainty_start_quarters": "53",
+      "uncertainty_stop_quarters": "107/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "53",
+          "uncertainty_start_quarters": "53",
+          "uncertainty_stop_quarters": "107/2",
+          "note_ids": [
+            "P1:m13:n20"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_dbc782fa1c6e",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "54",
+      "uncertainty_start_quarters": "54",
+      "uncertainty_stop_quarters": "56",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "54",
+          "uncertainty_start_quarters": "54",
+          "uncertainty_stop_quarters": "56",
+          "note_ids": [
+            "P1:m13:n18"
+          ],
+          "details": {
+            "length_quarters": "2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_4a6cb2b7d904",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "60",
+      "uncertainty_start_quarters": "60",
+      "uncertainty_stop_quarters": "61",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "60",
+          "uncertainty_start_quarters": "60",
+          "uncertainty_stop_quarters": "61",
+          "note_ids": [
+            "P1:m15:n10"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_40fc4c4514fa",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "61",
+      "uncertainty_start_quarters": "61",
+      "uncertainty_stop_quarters": "123/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "61",
+          "uncertainty_start_quarters": "61",
+          "uncertainty_stop_quarters": "123/2",
+          "note_ids": [
+            "P1:m15:n11"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_8887434d5677",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "129/2",
+      "uncertainty_start_quarters": "129/2",
+      "uncertainty_stop_quarters": "65",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "129/2",
+          "uncertainty_start_quarters": "129/2",
+          "uncertainty_stop_quarters": "65",
+          "note_ids": [
+            "P1:m16:n11"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_0460bd2cfd53",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "65",
+      "uncertainty_start_quarters": "65",
+      "uncertainty_stop_quarters": "131/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "65",
+          "uncertainty_start_quarters": "65",
+          "uncertainty_stop_quarters": "131/2",
+          "note_ids": [
+            "P1:m16:n12"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_36c0f411ca45",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "137/2",
+      "uncertainty_start_quarters": "137/2",
+      "uncertainty_stop_quarters": "69",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "137/2",
+          "uncertainty_start_quarters": "137/2",
+          "uncertainty_stop_quarters": "69",
+          "note_ids": [
+            "P1:m17:n11"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_e6a62ca92e49",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "69",
+      "uncertainty_start_quarters": "69",
+      "uncertainty_stop_quarters": "139/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "69",
+          "uncertainty_start_quarters": "69",
+          "uncertainty_stop_quarters": "139/2",
+          "note_ids": [
+            "P1:m17:n12"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_f0674e4e1a39",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "73",
+      "uncertainty_start_quarters": "73",
+      "uncertainty_stop_quarters": "147/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "73",
+          "uncertainty_start_quarters": "73",
+          "uncertainty_stop_quarters": "147/2",
+          "note_ids": [
+            "P1:m18:n7"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_b9d7e8f389c5",
+      "scope": "P1:staff=1:voice=1",
+      "part_id": "P1",
+      "position_quarters": "87",
+      "uncertainty_start_quarters": "87",
+      "uncertainty_stop_quarters": "175/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=1",
+          "part_id": "P1",
+          "position_quarters": "87",
+          "uncertainty_start_quarters": "87",
+          "uncertainty_stop_quarters": "175/2",
+          "note_ids": [
+            "P1:m21:n7"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_d2ccad4e351c",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "87",
+      "uncertainty_start_quarters": "87",
+      "uncertainty_stop_quarters": "88",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "87",
+          "uncertainty_start_quarters": "87",
+          "uncertainty_stop_quarters": "88",
+          "note_ids": [
+            "P1:m21:n24"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_ec0d66cee5e0",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "88",
+      "uncertainty_start_quarters": "88",
+      "uncertainty_stop_quarters": "92",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "88",
+          "uncertainty_start_quarters": "88",
+          "uncertainty_stop_quarters": "92",
+          "note_ids": [
+            "P1:m22:n11"
+          ],
+          "details": {
+            "length_quarters": "4",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_6078411a66b9",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "92",
+      "uncertainty_start_quarters": "92",
+      "uncertainty_stop_quarters": "93",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "92",
+          "uncertainty_start_quarters": "92",
+          "uncertainty_stop_quarters": "93",
+          "note_ids": [
+            "P1:m23:n24"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_00e7c8a18be3",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "191/2",
+      "uncertainty_start_quarters": "191/2",
+      "uncertainty_stop_quarters": "96",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "191/2",
+          "uncertainty_start_quarters": "191/2",
+          "uncertainty_stop_quarters": "96",
+          "note_ids": [
+            "P1:m23:n23"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_b95a077af783",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "96",
+      "uncertainty_start_quarters": "96",
+      "uncertainty_stop_quarters": "97",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "96",
+          "uncertainty_start_quarters": "96",
+          "uncertainty_stop_quarters": "97",
+          "note_ids": [
+            "P1:m24:n11"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_060073f36fd0",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "205/2",
+      "uncertainty_start_quarters": "205/2",
+      "uncertainty_stop_quarters": "103",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "205/2",
+          "uncertainty_start_quarters": "205/2",
+          "uncertainty_stop_quarters": "103",
+          "note_ids": [
+            "P1:m25:n18"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_9f1990c71f66",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "103",
+      "uncertainty_start_quarters": "103",
+      "uncertainty_stop_quarters": "207/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "103",
+          "uncertainty_start_quarters": "103",
+          "uncertainty_stop_quarters": "207/2",
+          "note_ids": [
+            "P1:m25:n19"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_e56aff7e42bf",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "111",
+      "uncertainty_start_quarters": "111",
+      "uncertainty_stop_quarters": "223/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "111",
+          "uncertainty_start_quarters": "111",
+          "uncertainty_stop_quarters": "223/2",
+          "note_ids": [
+            "P1:m27:n12"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_43309832596f",
+      "scope": "P1:staff=1:voice=1",
+      "part_id": "P1",
+      "position_quarters": "112",
+      "uncertainty_start_quarters": "112",
+      "uncertainty_stop_quarters": "225/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=1",
+          "part_id": "P1",
+          "position_quarters": "112",
+          "uncertainty_start_quarters": "112",
+          "uncertainty_stop_quarters": "225/2",
+          "note_ids": [
+            "P1:m28:n0"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_c4c59d6750e6",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "113",
+      "uncertainty_start_quarters": "113",
+      "uncertainty_stop_quarters": "227/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "113",
+          "uncertainty_start_quarters": "113",
+          "uncertainty_stop_quarters": "227/2",
+          "note_ids": [
+            "P1:m28:n9"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_747b57e190a4",
+      "scope": "P1:staff=1:voice=1",
+      "part_id": "P1",
+      "position_quarters": "114",
+      "uncertainty_start_quarters": "114",
+      "uncertainty_stop_quarters": "229/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=1",
+          "part_id": "P1",
+          "position_quarters": "114",
+          "uncertainty_start_quarters": "114",
+          "uncertainty_stop_quarters": "229/2",
+          "note_ids": [
+            "P1:m28:n4"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_74c4adc379bc",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "115",
+      "uncertainty_start_quarters": "115",
+      "uncertainty_stop_quarters": "231/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "115",
+          "uncertainty_start_quarters": "115",
+          "uncertainty_stop_quarters": "231/2",
+          "note_ids": [
+            "P1:m28:n13"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_f7b9038e8f67",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "237/2",
+      "uncertainty_start_quarters": "237/2",
+      "uncertainty_stop_quarters": "119",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "237/2",
+          "uncertainty_start_quarters": "237/2",
+          "uncertainty_stop_quarters": "119",
+          "note_ids": [
+            "P1:m29:n14"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_19d17d13e2e9",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "119",
+      "uncertainty_start_quarters": "119",
+      "uncertainty_stop_quarters": "120",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "119",
+          "uncertainty_start_quarters": "119",
+          "uncertainty_stop_quarters": "120",
+          "note_ids": [
+            "P1:m29:n15"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_b33d994e9341",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "120",
+      "uncertainty_start_quarters": "120",
+      "uncertainty_stop_quarters": "241/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "120",
+          "uncertainty_start_quarters": "120",
+          "uncertainty_stop_quarters": "241/2",
+          "note_ids": [
+            "P1:m30:n16"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_729847844669",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "241/2",
+      "uncertainty_start_quarters": "241/2",
+      "uncertainty_stop_quarters": "121",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "241/2",
+          "uncertainty_start_quarters": "241/2",
+          "uncertainty_stop_quarters": "121",
+          "note_ids": [
+            "P1:m30:n27"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_26f3d48a83db",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "121",
+      "uncertainty_start_quarters": "121",
+      "uncertainty_stop_quarters": "243/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "121",
+          "uncertainty_start_quarters": "121",
+          "uncertainty_stop_quarters": "243/2",
+          "note_ids": [
+            "P1:m30:n28"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_d5c5ca748be2",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "243/2",
+      "uncertainty_start_quarters": "243/2",
+      "uncertainty_stop_quarters": "122",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "243/2",
+          "uncertainty_start_quarters": "243/2",
+          "uncertainty_stop_quarters": "122",
+          "note_ids": [
+            "P1:m30:n20"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_f503f2418aab",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "122",
+      "uncertainty_start_quarters": "122",
+      "uncertainty_stop_quarters": "245/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "122",
+          "uncertainty_start_quarters": "122",
+          "uncertainty_stop_quarters": "245/2",
+          "note_ids": [
+            "P1:m30:n21"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_93e4a3bca60e",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "245/2",
+      "uncertainty_start_quarters": "245/2",
+      "uncertainty_stop_quarters": "123",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "245/2",
+          "uncertainty_start_quarters": "245/2",
+          "uncertainty_stop_quarters": "123",
+          "note_ids": [
+            "P1:m30:n32"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_a99d0d4f3886",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "123",
+      "uncertainty_start_quarters": "123",
+      "uncertainty_stop_quarters": "247/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "123",
+          "uncertainty_start_quarters": "123",
+          "uncertainty_stop_quarters": "247/2",
+          "note_ids": [
+            "P1:m30:n33"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_b3c1bdae1525",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "247/2",
+      "uncertainty_start_quarters": "247/2",
+      "uncertainty_stop_quarters": "124",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "247/2",
+          "uncertainty_start_quarters": "247/2",
+          "uncertainty_stop_quarters": "124",
+          "note_ids": [
+            "P1:m30:n25"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_219fcb1dca25",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "124",
+      "uncertainty_start_quarters": "124",
+      "uncertainty_stop_quarters": "249/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "124",
+          "uncertainty_start_quarters": "124",
+          "uncertainty_stop_quarters": "249/2",
+          "note_ids": [
+            "P1:m31:n16"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_03bef351eda7",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "249/2",
+      "uncertainty_start_quarters": "249/2",
+      "uncertainty_stop_quarters": "125",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "249/2",
+          "uncertainty_start_quarters": "249/2",
+          "uncertainty_stop_quarters": "125",
+          "note_ids": [
+            "P1:m31:n27"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_6ecf0e34c289",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "125",
+      "uncertainty_start_quarters": "125",
+      "uncertainty_stop_quarters": "251/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "125",
+          "uncertainty_start_quarters": "125",
+          "uncertainty_stop_quarters": "251/2",
+          "note_ids": [
+            "P1:m31:n28"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_f480ac214687",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "251/2",
+      "uncertainty_start_quarters": "251/2",
+      "uncertainty_stop_quarters": "126",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "251/2",
+          "uncertainty_start_quarters": "251/2",
+          "uncertainty_stop_quarters": "126",
+          "note_ids": [
+            "P1:m31:n20"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_0081fa448aa8",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "126",
+      "uncertainty_start_quarters": "126",
+      "uncertainty_stop_quarters": "253/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "126",
+          "uncertainty_start_quarters": "126",
+          "uncertainty_stop_quarters": "253/2",
+          "note_ids": [
+            "P1:m31:n21"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_730c527f9a02",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "253/2",
+      "uncertainty_start_quarters": "253/2",
+      "uncertainty_stop_quarters": "127",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "253/2",
+          "uncertainty_start_quarters": "253/2",
+          "uncertainty_stop_quarters": "127",
+          "note_ids": [
+            "P1:m31:n32"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_fa5be84374ca",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "127",
+      "uncertainty_start_quarters": "127",
+      "uncertainty_stop_quarters": "255/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "127",
+          "uncertainty_start_quarters": "127",
+          "uncertainty_stop_quarters": "255/2",
+          "note_ids": [
+            "P1:m31:n33"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_1f6666cc5f45",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "255/2",
+      "uncertainty_start_quarters": "255/2",
+      "uncertainty_stop_quarters": "128",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "255/2",
+          "uncertainty_start_quarters": "255/2",
+          "uncertainty_stop_quarters": "128",
+          "note_ids": [
+            "P1:m31:n25"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_58c0c2154408",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "128",
+      "uncertainty_start_quarters": "128",
+      "uncertainty_stop_quarters": "257/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "128",
+          "uncertainty_start_quarters": "128",
+          "uncertainty_stop_quarters": "257/2",
+          "note_ids": [
+            "P1:m32:n16"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_1e144010e1df",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "257/2",
+      "uncertainty_start_quarters": "257/2",
+      "uncertainty_stop_quarters": "129",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "257/2",
+          "uncertainty_start_quarters": "257/2",
+          "uncertainty_stop_quarters": "129",
+          "note_ids": [
+            "P1:m32:n27"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_bd62cad7d648",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "129",
+      "uncertainty_start_quarters": "129",
+      "uncertainty_stop_quarters": "259/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "129",
+          "uncertainty_start_quarters": "129",
+          "uncertainty_stop_quarters": "259/2",
+          "note_ids": [
+            "P1:m32:n28"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_e4fac7d9be1f",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "259/2",
+      "uncertainty_start_quarters": "259/2",
+      "uncertainty_stop_quarters": "130",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "259/2",
+          "uncertainty_start_quarters": "259/2",
+          "uncertainty_stop_quarters": "130",
+          "note_ids": [
+            "P1:m32:n20"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_4f5e4e66346a",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "130",
+      "uncertainty_start_quarters": "130",
+      "uncertainty_stop_quarters": "261/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "130",
+          "uncertainty_start_quarters": "130",
+          "uncertainty_stop_quarters": "261/2",
+          "note_ids": [
+            "P1:m32:n21"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_c5b129cce826",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "261/2",
+      "uncertainty_start_quarters": "261/2",
+      "uncertainty_stop_quarters": "131",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "261/2",
+          "uncertainty_start_quarters": "261/2",
+          "uncertainty_stop_quarters": "131",
+          "note_ids": [
+            "P1:m32:n32"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_dcc103290279",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "131",
+      "uncertainty_start_quarters": "131",
+      "uncertainty_stop_quarters": "263/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "131",
+          "uncertainty_start_quarters": "131",
+          "uncertainty_stop_quarters": "263/2",
+          "note_ids": [
+            "P1:m32:n33"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_07d45d011a39",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "263/2",
+      "uncertainty_start_quarters": "263/2",
+      "uncertainty_stop_quarters": "132",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "263/2",
+          "uncertainty_start_quarters": "263/2",
+          "uncertainty_stop_quarters": "132",
+          "note_ids": [
+            "P1:m32:n25"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_371bb6e38aff",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "132",
+      "uncertainty_start_quarters": "132",
+      "uncertainty_stop_quarters": "265/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "132",
+          "uncertainty_start_quarters": "132",
+          "uncertainty_stop_quarters": "265/2",
+          "note_ids": [
+            "P1:m33:n16"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_fd68c34d7438",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "265/2",
+      "uncertainty_start_quarters": "265/2",
+      "uncertainty_stop_quarters": "133",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "265/2",
+          "uncertainty_start_quarters": "265/2",
+          "uncertainty_stop_quarters": "133",
+          "note_ids": [
+            "P1:m33:n23"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_5b9a5f4f3831",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "133",
+      "uncertainty_start_quarters": "133",
+      "uncertainty_stop_quarters": "267/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "133",
+          "uncertainty_start_quarters": "133",
+          "uncertainty_stop_quarters": "267/2",
+          "note_ids": [
+            "P1:m33:n24"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_c65257b8290a",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "267/2",
+      "uncertainty_start_quarters": "267/2",
+      "uncertainty_stop_quarters": "134",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "267/2",
+          "uncertainty_start_quarters": "267/2",
+          "uncertainty_stop_quarters": "134",
+          "note_ids": [
+            "P1:m33:n20"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_7db87bbf39f4",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "134",
+      "uncertainty_start_quarters": "134",
+      "uncertainty_stop_quarters": "136",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "134",
+          "uncertainty_start_quarters": "134",
+          "uncertainty_stop_quarters": "136",
+          "note_ids": [
+            "P1:m33:n21"
+          ],
+          "details": {
+            "length_quarters": "2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_627c23deee21",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "135",
+      "uncertainty_start_quarters": "135",
+      "uncertainty_stop_quarters": "136",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "135",
+          "uncertainty_start_quarters": "135",
+          "uncertainty_stop_quarters": "136",
+          "note_ids": [
+            "P1:m33:n28"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_3ecf530dd724",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "136",
+      "uncertainty_start_quarters": "136",
+      "uncertainty_stop_quarters": "273/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "136",
+          "uncertainty_start_quarters": "136",
+          "uncertainty_stop_quarters": "273/2",
+          "note_ids": [
+            "P1:m34:n13"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_7ffbe017a418",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "140",
+      "uncertainty_start_quarters": "140",
+      "uncertainty_stop_quarters": "281/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "140",
+          "uncertainty_start_quarters": "140",
+          "uncertainty_stop_quarters": "281/2",
+          "note_ids": [
+            "P1:m35:n13"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_343d38c3a041",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "144",
+      "uncertainty_start_quarters": "144",
+      "uncertainty_stop_quarters": "289/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "144",
+          "uncertainty_start_quarters": "144",
+          "uncertainty_stop_quarters": "289/2",
+          "note_ids": [
+            "P1:m36:n13"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_85b705e886e5",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "172",
+      "uncertainty_start_quarters": "172",
+      "uncertainty_stop_quarters": "173",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "172",
+          "uncertainty_start_quarters": "172",
+          "uncertainty_stop_quarters": "173",
+          "note_ids": [
+            "P1:m43:n15"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_3bca0bdb7a68",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "173",
+      "uncertainty_start_quarters": "173",
+      "uncertainty_stop_quarters": "347/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "173",
+          "uncertainty_start_quarters": "173",
+          "uncertainty_stop_quarters": "347/2",
+          "note_ids": [
+            "P1:m43:n16"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_33a9c90449bf",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "181",
+      "uncertainty_start_quarters": "181",
+      "uncertainty_stop_quarters": "363/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "181",
+          "uncertainty_start_quarters": "181",
+          "uncertainty_stop_quarters": "363/2",
+          "note_ids": [
+            "P1:m45:n20"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_4cd359b002ed",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "195",
+      "uncertainty_start_quarters": "195",
+      "uncertainty_stop_quarters": "391/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "195",
+          "uncertainty_start_quarters": "195",
+          "uncertainty_stop_quarters": "391/2",
+          "note_ids": [
+            "P1:m48:n11"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_117ccccc8bca",
+      "scope": "P1:staff=1:voice=2",
+      "part_id": "P1",
+      "position_quarters": "199",
+      "uncertainty_start_quarters": "199",
+      "uncertainty_stop_quarters": "399/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=1:voice=2",
+          "part_id": "P1",
+          "position_quarters": "199",
+          "uncertainty_start_quarters": "199",
+          "uncertainty_stop_quarters": "399/2",
+          "note_ids": [
+            "P1:m49:n11"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_e0b21e04221e",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "203",
+      "uncertainty_start_quarters": "203",
+      "uncertainty_stop_quarters": "407/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "203",
+          "uncertainty_start_quarters": "203",
+          "uncertainty_stop_quarters": "407/2",
+          "note_ids": [
+            "P1:m50:n30"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_5dcde1c166ef",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "421/2",
+      "uncertainty_start_quarters": "421/2",
+      "uncertainty_stop_quarters": "211",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "421/2",
+          "uncertainty_start_quarters": "421/2",
+          "uncertainty_stop_quarters": "211",
+          "note_ids": [
+            "P1:m52:n31"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_0abd6d2074da",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "211",
+      "uncertainty_start_quarters": "211",
+      "uncertainty_stop_quarters": "212",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "211",
+          "uncertainty_start_quarters": "211",
+          "uncertainty_stop_quarters": "212",
+          "note_ids": [
+            "P1:m52:n32"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_2f44cc65e308",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "212",
+      "uncertainty_start_quarters": "212",
+      "uncertainty_stop_quarters": "213",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "212",
+          "uncertainty_start_quarters": "212",
+          "uncertainty_stop_quarters": "213",
+          "note_ids": [
+            "P1:m53:n27"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_abfe60525a98",
+      "scope": "P1:staff=2:voice=6",
+      "part_id": "P1",
+      "position_quarters": "215",
+      "uncertainty_start_quarters": "215",
+      "uncertainty_stop_quarters": "216",
+      "cues": [
+        {
+          "kind": "voice_exit_rest",
+          "scope": "P1:staff=2:voice=6",
+          "part_id": "P1",
+          "position_quarters": "215",
+          "uncertainty_start_quarters": "215",
+          "uncertainty_stop_quarters": "216",
+          "note_ids": [
+            "P1:m53:n33"
+          ],
+          "details": {
+            "length_quarters": "1",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_c2d5049d8e12",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "216",
+      "uncertainty_start_quarters": "216",
+      "uncertainty_stop_quarters": "433/2",
+      "cues": [
+        {
+          "kind": "voice_rest",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "216",
+          "uncertainty_start_quarters": "216",
+          "uncertainty_stop_quarters": "433/2",
+          "note_ids": [
+            "P1:m54:n16"
+          ],
+          "details": {
+            "length_quarters": "1/2",
+            "global_silence": false
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "low_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_a9751ea00052",
+      "scope": "P1:part",
+      "part_id": "P1",
+      "position_quarters": "220",
+      "uncertainty_start_quarters": "218",
+      "uncertainty_stop_quarters": "220",
+      "cues": [
+        {
+          "kind": "harmonic_closure_hint",
+          "scope": "P1:part",
+          "part_id": "P1",
+          "position_quarters": "220",
+          "uncertainty_start_quarters": "218",
+          "uncertainty_stop_quarters": "220",
+          "note_ids": [
+            "P1:m54:n6",
+            "P1:m54:n12",
+            "P1:m54:n13",
+            "P1:m54:n14",
+            "P1:m54:n20"
+          ],
+          "details": {
+            "arrival_onset_quarters": "218",
+            "previous_onset_quarters": "435/2",
+            "previous_pitch_classes": [
+              0,
+              3,
+              6,
+              8
+            ],
+            "arrival_pitch_classes": [
+              1,
+              5,
+              8
+            ],
+            "bass_from": 44,
+            "bass_to": 37,
+            "tonic_pitch_class": 1,
+            "mode": "major",
+            "mode_source": "unconfirmed_key_signature_hypothesis",
+            "release_choice_uncertain": false,
+            "boundary_placement_uncertain": true,
+            "tonic_prolongation_possible": true,
+            "not_phrase_ground_truth": true
+          }
+        }
+      ],
+      "coincident_cue_kinds": [],
+      "review_priority": "medium_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_5a33d27ee1ef",
+      "scope": "P1:staff=1:voice=1",
+      "part_id": "P1",
+      "position_quarters": "220",
+      "uncertainty_start_quarters": "220",
+      "uncertainty_stop_quarters": "220",
+      "cues": [
+        {
+          "kind": "notation_fermata",
+          "scope": "P1:staff=1:voice=1",
+          "part_id": "P1",
+          "position_quarters": "220",
+          "uncertainty_start_quarters": "220",
+          "uncertainty_stop_quarters": "220",
+          "note_ids": [
+            "P1:m54:n6"
+          ],
+          "details": {
+            "not_phrase_ground_truth": true
+          }
+        }
+      ],
+      "coincident_cue_kinds": [
+        "harmonic_closure_hint"
+      ],
+      "review_priority": "high_review",
+      "status": "pending_score_review"
+    },
+    {
+      "candidate_id": "boundary_4514d7a90665",
+      "scope": "P1:staff=2:voice=5",
+      "part_id": "P1",
+      "position_quarters": "220",
+      "uncertainty_start_quarters": "220",
+      "uncertainty_stop_quarters": "220",
+      "cues": [
+        {
+          "kind": "notation_fermata",
+          "scope": "P1:staff=2:voice=5",
+          "part_id": "P1",
+          "position_quarters": "220",
+          "uncertainty_start_quarters": "220",
+          "uncertainty_stop_quarters": "220",
+          "note_ids": [
+            "P1:m54:n20"
+          ],
+          "details": {
+            "not_phrase_ground_truth": true
+          }
+        }
+      ],
+      "coincident_cue_kinds": [
+        "harmonic_closure_hint"
+      ],
+      "review_priority": "high_review",
+      "status": "pending_score_review"
+    }
+  ],
+  "diagnostics": [
+    {
+      "kind": "slur_pairing",
+      "status": "nonpositive_onset_span",
+      "start_note_id": "P1:m12:n0",
+      "stop_note_id": "P1:m12:n2"
+    }
+  ],
+  "policy": {
+    "minimum_rest_quarters": "1/2",
+    "coordinate": "Written MusicXML quarter Fractions",
+    "slur_matching": "part/number in XML document order; no nearest-note pairing",
+    "confidence": "Review priority only, not calibrated probability",
+    "phrase_status": "All candidates pending review; no complete phrase partition or hierarchy inferred",
+    "inputs": "Score notes/notations/key signatures only; no MIDI performance, features or retrieval results"
+  }
+}

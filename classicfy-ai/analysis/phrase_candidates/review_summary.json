@@ -1,0 +1,21 @@
+{
+  "reviewed_entries": 14,
+  "distinct_work_positions": 12,
+  "rendered_score_pages": 7,
+  "reviewer": "codex_score_visual",
+  "scope": "Assistant visual notation/scope/context review; not expert phrase ground truth",
+  "phrase_boundaries_confirmed": 0,
+  "active_embedding_boundaries": 0,
+  "interpretation": "Retaining a cue does not confirm a musical phrase boundary or hierarchy",
+  "duplicate_endpoint_groups": [
+    [
+      "case_02",
+      "case_03"
+    ],
+    [
+      "case_08",
+      "case_09"
+    ]
+  ],
+  "next": "Review melody/voice role, preceding phrase start, boundary placement and phrase hierarchy before activation"
+}

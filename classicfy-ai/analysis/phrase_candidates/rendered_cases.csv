@@ -1,0 +1,15 @@
+case_id,piece,page,svg_path,png_path,source_xml_ids,verovio_version
+case_01,Bach/Fugue/bwv_848/midi_score.mid,2,scores/Bach_Fugue_bwv_848_page_02.svg,scores/Bach_Fugue_bwv_848_page_02.png,"[""n128""]",6.3.0-425dd7b
+case_04,Bach/Fugue/bwv_848/midi_score.mid,2,scores/Bach_Fugue_bwv_848_page_02.svg,scores/Bach_Fugue_bwv_848_page_02.png,"[""n295"", ""n297""]",6.3.0-425dd7b
+case_02,Bach/Fugue/bwv_848/midi_score.mid,8,scores/Bach_Fugue_bwv_848_page_08.svg,scores/Bach_Fugue_bwv_848_page_08.png,"[""n1531"", ""n1537"", ""n1538"", ""n1539"", ""n1545""]",6.3.0-425dd7b
+case_03,Bach/Fugue/bwv_848/midi_score.mid,8,scores/Bach_Fugue_bwv_848_page_08.svg,scores/Bach_Fugue_bwv_848_page_08.png,"[""n1531""]",6.3.0-425dd7b
+case_05,Beethoven/Piano_Sonatas/31-2/midi_score.mid,1,scores/Beethoven_Piano_Sonatas_31-2_page_01.svg,scores/Beethoven_Piano_Sonatas_31-2_page_01.png,"[""n132""]",6.3.0-425dd7b
+case_06,Beethoven/Piano_Sonatas/31-2/midi_score.mid,1,scores/Beethoven_Piano_Sonatas_31-2_page_01.svg,scores/Beethoven_Piano_Sonatas_31-2_page_01.png,"[""n1"", ""n11""]",6.3.0-425dd7b
+case_08,Beethoven/Piano_Sonatas/31-2/midi_score.mid,1,scores/Beethoven_Piano_Sonatas_31-2_page_01.svg,scores/Beethoven_Piano_Sonatas_31-2_page_01.png,"[""n108"", ""n111"", ""n114"", ""n115""]",6.3.0-425dd7b
+case_09,Beethoven/Piano_Sonatas/31-2/midi_score.mid,1,scores/Beethoven_Piano_Sonatas_31-2_page_01.svg,scores/Beethoven_Piano_Sonatas_31-2_page_01.png,"[""n107"", ""n108""]",6.3.0-425dd7b
+case_07,Beethoven/Piano_Sonatas/31-2/midi_score.mid,2,scores/Beethoven_Piano_Sonatas_31-2_page_02.svg,scores/Beethoven_Piano_Sonatas_31-2_page_02.png,"[""n266""]",6.3.0-425dd7b
+case_10,Mozart/Piano_Sonatas/8-1/midi_score.mid,1,scores/Mozart_Piano_Sonatas_8-1_page_01.svg,scores/Mozart_Piano_Sonatas_8-1_page_01.png,"[""n148""]",6.3.0-425dd7b
+case_11,Mozart/Piano_Sonatas/8-1/midi_score.mid,1,scores/Mozart_Piano_Sonatas_8-1_page_01.svg,scores/Mozart_Piano_Sonatas_8-1_page_01.png,"[""n35"", ""n36""]",6.3.0-425dd7b
+case_13,Mozart/Piano_Sonatas/8-1/midi_score.mid,2,scores/Mozart_Piano_Sonatas_8-1_page_02.svg,scores/Mozart_Piano_Sonatas_8-1_page_02.png,"[""n234"", ""n244"", ""n245"", ""n246""]",6.3.0-425dd7b
+case_14,Mozart/Piano_Sonatas/8-1/midi_score.mid,2,scores/Mozart_Piano_Sonatas_8-1_page_02.svg,scores/Mozart_Piano_Sonatas_8-1_page_02.png,"[""n165"", ""n167"", ""n169""]",6.3.0-425dd7b
+case_12,Mozart/Piano_Sonatas/8-1/midi_score.mid,9,scores/Mozart_Piano_Sonatas_8-1_page_09.svg,scores/Mozart_Piano_Sonatas_8-1_page_09.png,"[""n1309"", ""n1315""]",6.3.0-425dd7b

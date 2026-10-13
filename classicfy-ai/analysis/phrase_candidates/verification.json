@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "work_grids": 55,
+  "candidates": 18044,
+  "cues": 19543,
+  "pilot_boundary_occurrences": 3645,
+  "numerical_checks": 98211,
+  "max_absolute_error": 0.0,
+  "scope": "Independent score evidence and original-index mapping arithmetic; no phrase ground-truth accuracy"
+}

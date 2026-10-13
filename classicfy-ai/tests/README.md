@@ -25,6 +25,15 @@ Beethoven 31-2 고정 6연주의 459개 원래 구간·230개 방문과 반복/e
 전체 55 grid·570연주 실데이터의 별도 검산과 선택 의존성 테스트의 실행 제한은
 [전체 연결 검증](../analysis/score_structure_full/VALIDATION.md)에 기록한다.
 
+`unit/preprocessing/test_phrase_candidates.py`의 14개 테스트는 문서 순서의 slur 짝·성부 교차·
+번호 재사용·모호한 짝·꾸밈음, 성부별 쉼과 전체 쉼의 구분, 고정 쉼 길이,
+종결형 화음의 조표/장단조 가설 및 명시적 구간 상대 위치를 검증한다.
+`integration/test_phrase_candidate_pipeline.py`의 3개 테스트는 실제 Bach 장식음 slur,
+Beethoven 경계의 반복 방문별 원래 index, Mozart 도착음의 경계 위치 불확실성을 검증한다.
+이번 신규 17개와 재사용 로더/마디 연결 23개, 총 40개가 skip 없이 통과했다.
+[악보 후보 보고서](../analysis/phrase_candidates/README.md)에 독립 수치 98,211개 검산 결과와 재현 방법이 있다.
+이 검증은 음악적 프레이즈 인식 정확도나 검색 효과의 검증이 아니다.
+
 ```text
 tests/
 ├── unit/

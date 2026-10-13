@@ -1,0 +1,19 @@
+{
+  "work_grids": 55,
+  "candidates": 18044,
+  "pilot_works": [
+    "Bach/Fugue/bwv_848/midi_score.mid",
+    "Beethoven/Piano_Sonatas/31-2/midi_score.mid",
+    "Mozart/Piano_Sonatas/8-1/midi_score.mid"
+  ],
+  "pilot_performances": 20,
+  "review_cases": 14,
+  "boundary_occurrences": 3645,
+  "confirmed_phrases": 0,
+  "active_embedding_boundaries": 0,
+  "mapping_statuses": {
+    "outside_original_grid": 85,
+    "interval_edge": 3205,
+    "inside_interval": 355
+  }
+}

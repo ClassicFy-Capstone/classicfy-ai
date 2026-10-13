@@ -1,0 +1,14 @@
+{
+  "verovio": "6.3.0-425dd7b",
+  "cairosvg": "2.9.1",
+  "options": {
+    "inputFrom": "musicxml",
+    "pageWidth": 1800,
+    "pageHeight": 1350,
+    "scale": 40,
+    "breaks": "auto",
+    "svgViewBox": true
+  },
+  "rendered_pages": 7,
+  "purpose": "Source notation inspection only, not phrase accuracy validation"
+}

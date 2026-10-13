@@ -26,6 +26,15 @@ ASAP beat interval에 악보 구조를 연결한다. `load_midi_score_timeline()
 `raw_match_onset_beats`/`raw_match_duration_beats`로 별도 보존한다.
 [전체 연결 및 재현 안내](../../analysis/score_structure_full/README.md)를 참고한다.
 
+`preprocessing.phrase_candidates.extract_phrase_candidates(score)`는 악보만으로 slur·성부별 쉼·
+표기상 전체 쉼·종결형 화음 등의 경계 근거를 추출한다. `pair_written_slurs()`는 part/number와
+XML 문서 순서로 짝을 연결하고 성부 교차·장식음·불명확한 짝 상태를 보존한다.
+후보에는 정확한 quarter 위치, 원본 기호 ID, scope, 경계 불확실성 범위와 검수 순서를 저장한다.
+전체 프레이즈 구간·계층을 자동 추정하지 않으며 모든 후보는 pending이다.
+`phrase_position(start, stop, q)`는 명시적으로 주어진 구간의 상대 위치와 3분할만 반환한다.
+[후보 생성·악보 검수 보고서](../../analysis/phrase_candidates/README.md)에 55악보 결과,
+3작품의 시각 검수와 반복 방문별 원래 beat 대응이 있다.
+
 ## 공개 인터페이스
 
 - `load_midi(path: str | Path) -> MidiData`: MIDI 파일 하나에서 비드럼 파트의 음표와 원본 CC64 이벤트를 읽는다. 시간 단위는 초다.

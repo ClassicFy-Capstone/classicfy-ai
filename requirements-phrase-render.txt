@@ -1,0 +1,3 @@
+# Optional engraved-score review; the core phrase extractor needs no renderer.
+verovio==6.3.0
+CairoSVG==2.9.1
