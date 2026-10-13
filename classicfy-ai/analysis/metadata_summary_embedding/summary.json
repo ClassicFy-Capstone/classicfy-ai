@@ -1,0 +1,228 @@
+{
+  "composer": "Chopin",
+  "types": [
+    "ballade",
+    "etude"
+  ],
+  "queries": 135,
+  "works": 8,
+  "family_pair_rows": 1234,
+  "selection_tied_queries": 0,
+  "full_cross_type_closer": 69,
+  "full_same_type_closer": 66,
+  "full_tied_queries": 0,
+  "mean_to_full_reversals": 64,
+  "representative_cross_type_queries": 57,
+  "full_retains_representative_cross_type": 31,
+  "full_agrees_with_range_only": 134,
+  "distance_balance": {
+    "b": {
+      "mean_range_share": 0.9094424416665984,
+      "median_range_share": 0.9304287879356258
+    },
+    "c": {
+      "mean_range_share": 0.9095409697605572,
+      "median_range_share": 0.9485329440254348
+    }
+  },
+  "summaries": [
+    {
+      "design": "global_nearest_representative",
+      "mode": "representative",
+      "query_type": "all",
+      "queries": 135,
+      "works": 8,
+      "query_weighted_preference": 0.4222222222222222,
+      "work_weighted_preference": 0.4244877875392581,
+      "tie_fraction": 0.0,
+      "mean_margin": -0.017265083224529708
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "representative",
+      "query_type": "ballade",
+      "queries": 29,
+      "works": 2,
+      "query_weighted_preference": 0.7586206896551724,
+      "work_weighted_preference": 0.7205882352941176,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.0722732815665143
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "representative",
+      "query_type": "etude",
+      "queries": 106,
+      "works": 6,
+      "query_weighted_preference": 0.330188679245283,
+      "work_weighted_preference": 0.3257876382876383,
+      "tie_fraction": 0.0,
+      "mean_margin": -0.04176142830887194
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "representative_range",
+      "query_type": "all",
+      "queries": 135,
+      "works": 8,
+      "query_weighted_preference": 0.5111111111111111,
+      "work_weighted_preference": 0.5071035990153637,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.0037101047521545176
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "representative_range",
+      "query_type": "ballade",
+      "queries": 29,
+      "works": 2,
+      "query_weighted_preference": 0.41379310344827586,
+      "work_weighted_preference": 0.3897058823529412,
+      "tie_fraction": 0.0,
+      "mean_margin": -0.04276563563657013
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "representative_range",
+      "query_type": "etude",
+      "queries": 106,
+      "works": 6,
+      "query_weighted_preference": 0.5377358490566038,
+      "work_weighted_preference": 0.5462361712361713,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.016425165801899937
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "range_only",
+      "query_type": "all",
+      "queries": 135,
+      "works": 8,
+      "query_weighted_preference": 0.5185185185185185,
+      "work_weighted_preference": 0.5175202656820304,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.009784118584865038
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "range_only",
+      "query_type": "ballade",
+      "queries": 29,
+      "works": 2,
+      "query_weighted_preference": 0.41379310344827586,
+      "work_weighted_preference": 0.3897058823529412,
+      "tie_fraction": 0.0,
+      "mean_margin": -0.08910567081950173
+    },
+    {
+      "design": "global_nearest_representative",
+      "mode": "range_only",
+      "query_type": "etude",
+      "queries": 106,
+      "works": 6,
+      "query_weighted_preference": 0.5471698113207547,
+      "work_weighted_preference": 0.5601250601250601,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.03683887228983329
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "representative",
+      "query_type": "all",
+      "queries": 135,
+      "works": 8,
+      "query_weighted_preference": 0.5271604938271606,
+      "work_weighted_preference": 0.49474033931754524,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.0012902253697852342
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "representative",
+      "query_type": "ballade",
+      "queries": 29,
+      "works": 2,
+      "query_weighted_preference": 0.43678160919540227,
+      "work_weighted_preference": 0.4072712418300654,
+      "tie_fraction": 0.0,
+      "mean_margin": -0.005582061990166899
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "representative",
+      "query_type": "etude",
+      "queries": 106,
+      "works": 6,
+      "query_weighted_preference": 0.5518867924528302,
+      "work_weighted_preference": 0.5238967051467052,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.0031703794588287433
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "representative_range",
+      "query_type": "all",
+      "queries": 135,
+      "works": 8,
+      "query_weighted_preference": 0.5323456790123458,
+      "work_weighted_preference": 0.5306031692980222,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.02107323137268332
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "representative_range",
+      "query_type": "ballade",
+      "queries": 29,
+      "works": 2,
+      "query_weighted_preference": 0.3333333333333333,
+      "work_weighted_preference": 0.32516339869281047,
+      "tie_fraction": 0.0,
+      "mean_margin": -0.08369422063235792
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "representative_range",
+      "query_type": "etude",
+      "queries": 106,
+      "works": 6,
+      "query_weighted_preference": 0.5867924528301887,
+      "work_weighted_preference": 0.5990830928330928,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.04973602484576064
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "range_only",
+      "query_type": "all",
+      "queries": 135,
+      "works": 8,
+      "query_weighted_preference": 0.5254320987654322,
+      "work_weighted_preference": 0.527361853832442,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.030512813274244363
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "range_only",
+      "query_type": "ballade",
+      "queries": 29,
+      "works": 2,
+      "query_weighted_preference": 0.32183908045977005,
+      "work_weighted_preference": 0.3174019607843137,
+      "tie_fraction": 0.0,
+      "mean_margin": -0.12694399214530558
+    },
+    {
+      "design": "family_pair_balanced",
+      "mode": "range_only",
+      "query_type": "etude",
+      "queries": 106,
+      "works": 6,
+      "query_weighted_preference": 0.5811320754716981,
+      "work_weighted_preference": 0.5973484848484849,
+      "tie_fraction": 0.0,
+      "mean_margin": 0.07359061853053632
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+﻿split,work_type,performances,works,families,composers
+test,ballade,6,1,1,1
+test,etude,32,3,3,2
+test,sonata,44,4,4,2
+train,ballade,29,2,2,1
+train,barcarolle,9,1,1,1
+train,etude,146,8,8,2
+train,fugue,38,6,6,1
+train,impromptu,12,1,1,1
+train,prelude,18,3,3,1
+train,scherzo,12,1,1,1
+train,sonata,121,16,14,6
+train,unclassified,10,1,1,1
+validation,etude,37,2,2,1
+validation,fugue,6,1,1,1
+validation,prelude,20,3,3,1
+validation,sonata,30,2,2,1

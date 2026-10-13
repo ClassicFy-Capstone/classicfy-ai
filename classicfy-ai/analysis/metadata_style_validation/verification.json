@@ -1,0 +1,40 @@
+{
+  "metadata_revision": "afc815c75c42e83a79c03feb6da8a35e77d4c6b8",
+  "committed_metadata_bytes_equal": true,
+  "csv_npz_export_max_error": 0.0,
+  "feature_cohort_identity_equal": true,
+  "performance_rows": 570,
+  "summed_type_performances": 570,
+  "summed_type_works": 55,
+  "csv_sha256": {
+    "performances.csv": "dd67c50875fd5839eeb4982fab779e1245c7546923820ee6e979d63880de7a61",
+    "works.csv": "05979d27d0f086f69a6a1e8097dd2062d4b894580a027c56fe7492b4c48eca02",
+    "families.csv": "6b62a9b3a40b6210fb62d8d9c8f516611c7d21a470aa5239dd55ab2411d0b00b",
+    "type_distribution.csv": "7755dd667d4df321e34dc935805abdd57e2792c40ce019f457ca7a6dd9aee64e",
+    "composer_type_counts.csv": "b5ba77344ff0f3c248186811d876139ff094f39dfc35f836384f6d11f4def5fb",
+    "split_type_counts.csv": "00bb54f790b3137438f132d1b46246b10c39123fbef4e3509efd1c170fb29fea",
+    "candidate_availability.csv": "71c1dc4011c4336fcb77786774cfc4c364f62c825f4c830099905547ba514188",
+    "directed_type_candidates.csv": "6f37752b8576125930c6b8dca07c85de4edc9ca9bd6703af69fa1f768446684a",
+    "pilot_options.csv": "6c1789e2afd893dc2473c34ea21dbe2bd2849b58db1bd9aeb57e31361574c4a3",
+    "classification_review.csv": "ed68eb804bb90aeae1e1e09aa12d86e7ec6ff36c6b68d559201328fbee94455a",
+    "outside_embedding_cohort.csv": "9b74a501a7320fa9dc75f4037d439b113befcfccc20be71c559d19ea6c4de67a"
+  },
+  "independent_metadata_rows": 570,
+  "independent_type_rows": 570,
+  "independent_query_counts": 965,
+  "independent_B_C_cartesian_checks": 31,
+  "reproducible_csvs": [
+    "candidate_availability.csv",
+    "classification_review.csv",
+    "composer_type_counts.csv",
+    "directed_type_candidates.csv",
+    "families.csv",
+    "outside_embedding_cohort.csv",
+    "performances.csv",
+    "pilot_options.csv",
+    "split_type_counts.csv",
+    "type_distribution.csv",
+    "works.csv"
+  ],
+  "tests_passed": 10
+}

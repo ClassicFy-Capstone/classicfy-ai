@@ -1,0 +1,10 @@
+﻿target,role,role_performances,eligible_performances,eligible_works,eligible_families,eligible_composers,incomplete_inputs,undefined_target
+change_concentration_cv,train,395,361,34,33,9,31,11
+change_concentration_cv,validation,67,67,4,4,2,0,0
+change_concentration_cv,test,67,67,6,6,3,0,0
+coupling_local_strength,train,395,358,33,32,9,31,34
+coupling_local_strength,validation,67,67,4,4,2,0,0
+coupling_local_strength,test,67,56,5,5,3,0,11
+coupling_local_variation,train,395,358,33,32,9,31,34
+coupling_local_variation,validation,67,67,4,4,2,0,0
+coupling_local_variation,test,67,56,5,5,3,0,11

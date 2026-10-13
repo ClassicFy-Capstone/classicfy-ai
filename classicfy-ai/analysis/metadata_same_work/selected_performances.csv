@@ -1,0 +1,4 @@
+﻿alias,key,piece,grid,split,windows,composer,title,folder,work_id,family_id,family_rule,work_type,classification_status,title_type,folder_type,source_subgroup
+M,Bach/Fugue/bwv_848/MiyashitaM01M.mid,Bach/Fugue/bwv_848/midi_score.mid,f727834b59a1,train,6,Bach,Fugue_bwv_848,Bach/Fugue/bwv_848,Bach::Fugue_bwv_848,Bach::BWV_848,bach_prelude_fugue_catalogue_group,fugue,title_and_folder_agree,fugue,fugue,Fugue
+L,Bach/Fugue/bwv_848/Lou01M.mid,Bach/Fugue/bwv_848/midi_score.mid,f727834b59a1,train,6,Bach,Fugue_bwv_848,Bach/Fugue/bwv_848,Bach::Fugue_bwv_848,Bach::BWV_848,bach_prelude_fugue_catalogue_group,fugue,title_and_folder_agree,fugue,fugue,Fugue
+S,Bach/Fugue/bwv_848/SunY01M.mid,Bach/Fugue/bwv_848/midi_score.mid,f727834b59a1,train,6,Bach,Fugue_bwv_848,Bach/Fugue/bwv_848,Bach::Fugue_bwv_848,Bach::BWV_848,bach_prelude_fugue_catalogue_group,fugue,title_and_folder_agree,fugue,fugue,Fugue
