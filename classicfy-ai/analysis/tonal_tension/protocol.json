@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "date": "2026-10-14",
+  "source_phrase_provenance": "e377885e86e97de428c79c32a2bf848d40044e6922be6b6584f6cd4af961721b",
+  "source": "Written nASAP MusicXML with frozen SHA; source spelling, all parts, positive written overlap duration; no performance input",
+  "reference": "https://partitura.readthedocs.io/en/latest/_modules/partitura/musicanalysis/tonal_tension.html",
+  "key_reference": "https://partitura.readthedocs.io/en/latest/_modules/partitura/musicanalysis/key_identification.html",
+  "pitch": "fifth index F=-1,C=0,G=1,D=2,A=3,E=4,B=5; alteration adds 7 steps; octave invariant",
+  "helix": {
+    "radius": 1.0,
+    "height_per_fifth": 0.9009674940214843,
+    "scale_C_to_Bsharp": 0.09249316305671976
+  },
+  "chord_key_weights": [
+    0.5165165165165165,
+    0.3153153153153153,
+    0.16816816816816818
+  ],
+  "minor_dominant_major_weight": 0.75,
+  "minor_subdominant_minor_weight": 0.75,
+  "window": "Exact half-open written projection of each original score interval, positive overlap only; grace/cue omitted; unsupported microtones invalidate cloud",
+  "diameter": "Maximum pairwise Euclidean pitch-point distance; one-note cloud is 0; silent is NaN",
+  "momentum": "Distance between consecutive duration-weighted centers; first/silent/structural jump/missing combined mask resets, never fill unknown with 0",
+  "strain": "Distance from cloud center to key center; signature section + explicit or estimated mode; missing/ambiguous/conflicting key -> NaN; major/minor alternative values retained",
+  "mode": "Use explicit XML mode when present. Otherwise correlate signature-section duration pitch histogram with Krumhansl-Kessler major/relative-minor profiles. Require absolute correlation margin >=0.1. This is a hypothesis, not expert key truth or local modulation detection.",
+  "labels": "Score-value tertiles using all finite projected score intervals, independent of performance feature values; ties stay together. 3 metrics x 3 bins x 22 responses =198D.",
+  "sensitivity": "Both signature-compatible major/minor strain curves retained; no selection by retrieval outcome",
+  "response_support": {
+    "beats_per_bin": 8,
+    "pairs_per_bin": 4
+  },
+  "limitations": [
+    "Signature sections do not detect unnotated modulation",
+    "Duration profile and correlation margin are not calibrated key probabilities",
+    "No empirical listener tension ground truth",
+    "Exact ASAP interval windows differ from Partitura default centered one-beat windows"
+  ]
+}

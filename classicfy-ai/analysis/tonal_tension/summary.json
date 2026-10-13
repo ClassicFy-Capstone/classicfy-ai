@@ -1,0 +1,23 @@
+{
+  "works": 55,
+  "performances": 570,
+  "score_clouds": 26349,
+  "key_contexts": 122,
+  "key_statuses": {
+    "estimated_mode": 82,
+    "explicit_mode": 28,
+    "ambiguous_mode": 12
+  },
+  "key_modes": {
+    "major": 71,
+    "minor": 39,
+    "unknown": 12
+  },
+  "usable_intervals": {
+    "cloud_diameter": 266264,
+    "cloud_momentum": 256436,
+    "tensile_strain": 239595
+  },
+  "source_phrase_commit": "ceee302",
+  "artifact": "/Users/ihun-ui/Desktop/Classicfy/datasets/tonal_tension_run01"
+}

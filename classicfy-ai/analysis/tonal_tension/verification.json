@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "score_clouds": 26349,
+  "performances": 570,
+  "numeric_checks": 1436703,
+  "maximum_absolute_error": 3.552713678800501e-15,
+  "scope": "Independent raw XML spelling/positive duration overlap, scalar helix/chord/key math, duration-profile mode correlations, chronological reset momentum, all projected tension values/tertiles and scalar responses on both disjoint views",
+  "code_sha256": "0793890d4661fdd0e04e3051a40feb72f570826aaa714649dbbb719d9dd53aec"
+}
