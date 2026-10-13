@@ -99,3 +99,10 @@ weighted ridge의 독립 최소제곱 일치, 절편 비규제, 학습-only 메�
 평가 정답이 CV·예측에 영향을 주지 않는 조건을 검증한다.
 [고정 설계 실행 결과](../analysis/metadata_information_results/README.md)는 전체 대조군과
 독립 예측·CV·오차 재계산 및 figure를 포함한다.
+
+`unit/embedding/test_retrieval_probe.py`는 메타데이터 동점의 비전이 처리,
+작품군당 1연주 검색과 K 지원 부족, 연주/작품군 겹침의 구분, 분리 블록·결측 비연결,
+검색 쪽 측정치에 평가 쪽 값이 영향을 주지 않는 조건, 상수 관계의 미정의,
+스타일 백분위의 무작위 기대값과 조건부 섞기의 메타데이터·길이 구간 보존을 검증한다.
+[다른 작품 검색 결과](../analysis/metadata_retrieval_results/README.md)는 별도 구간의 스타일 일치,
+같은 작품 연주 대조, 후보 수 균형, 원래 #14 구현을 이용한 독립 수치 검증을 포함한다.

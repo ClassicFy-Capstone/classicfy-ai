@@ -1,0 +1,19 @@
+{
+  "independent_view_descriptor_rows": 1140,
+  "independent_judge_rows": 3420,
+  "ranking_checks": 109440,
+  "neighbor_rows_validated": 9576000,
+  "score_rows": 34944,
+  "control_rows": 47424,
+  "maximum_numeric_error": 5.329070518200751e-15,
+  "independent_overlap_rows": 5546,
+  "novel_score_rows": 11232,
+  "balanced_ranking_checks": 27360,
+  "balanced_score_rows": 349440,
+  "macro_summary_rows": 4812,
+  "status": "passed",
+  "execution_sha256": "408b0256383728a62a41b4c68d03539d526f91bd1cc0c2cf1297a387c0feb116",
+  "verifier_sha256": "f0b84ccffac908c9edc292c10b8ea47000c351588bad247386fc9f09f2054fcf",
+  "ranking_scope": "Every query/method/cap, 11 tie seeds; primary conditional ranks at 4 control seeds; all archived main neighbor indices validated",
+  "overlap_scope": "Every 37th overlap row, all novel/balanced score exports and all hierarchical summary means; balanced primary/meta ranks at first tie seed"
+}

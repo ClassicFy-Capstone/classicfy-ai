@@ -1,0 +1,70 @@
+{
+  "status": "cohort_partitions_and_scales_frozen_before_ranking",
+  "availability": [
+    {
+      "experiment": "whole",
+      "role": "train",
+      "recordings": 351,
+      "works": 33,
+      "families": 32,
+      "gallery_recordings": 351,
+      "gallery_families": 32
+    },
+    {
+      "experiment": "whole",
+      "role": "validation",
+      "recordings": 67,
+      "works": 4,
+      "families": 4,
+      "gallery_recordings": 351,
+      "gallery_families": 32
+    },
+    {
+      "experiment": "whole",
+      "role": "test",
+      "recordings": 67,
+      "works": 6,
+      "families": 6,
+      "gallery_recordings": 351,
+      "gallery_families": 32
+    },
+    {
+      "experiment": "split",
+      "role": "train",
+      "recordings": 258,
+      "works": 25,
+      "families": 24,
+      "gallery_recordings": 258,
+      "gallery_families": 24
+    },
+    {
+      "experiment": "split",
+      "role": "validation",
+      "recordings": 56,
+      "works": 4,
+      "families": 4,
+      "gallery_recordings": 258,
+      "gallery_families": 24
+    },
+    {
+      "experiment": "split",
+      "role": "test",
+      "recordings": 48,
+      "works": 4,
+      "families": 4,
+      "gallery_recordings": 258,
+      "gallery_families": 24
+    }
+  ],
+  "source_recalculation": {
+    "summary_max_error": 6.661338147750939e-15,
+    "single_max_error": 5.551115123125783e-16,
+    "relation_max_error": 2.7755575615628914e-16,
+    "finite_masks_equal": true
+  },
+  "prepared_archive_sha256": "d4b5807996e81ef85962e33d46096b13ab396750794b26584073c98201f4a33b",
+  "prepared_metadata_sha256": "9041b745b4ade9c724a6fbbbeb9ea6cb8a53d96a1fc71a1e3c0e0f22f8bd9231",
+  "parameters_changed": false,
+  "scales": "Will be frozen by runner before any ranking",
+  "scales_sha256": "7e36da447fb8f8769aad0cb3b953ff92d0209dd24be3994dee3ba46744a252e2"
+}

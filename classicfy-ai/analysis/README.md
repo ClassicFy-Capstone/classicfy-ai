@@ -25,6 +25,8 @@
 | `metadata_same_work/` | 기존 BWV 848 세 연주의 동일 메타데이터와 14D/CNN/BiLSTM 전곡 거리 비교 | [같은 메타데이터 안의 연주 차이](metadata_same_work/README.md) |
 | `metadata_information_design/` | 메타데이터 대비 시간·공동 변화 정보의 추가 설명력: 측정치·평가 표본·fold·대조군을 고정한 실험 설계 | [추가 정보 실험 설계](metadata_information_design/README.md) |
 | `metadata_information_results/` | 고정한 전곡 정보 예측 실험·20회 섞기/잡음 대조·작품 내 차이·독립 수치 검증 | [추가 정보 실험 결과](metadata_information_results/README.md) |
+| `metadata_retrieval_design/` | 다른 작품 Top K 검색의 메타데이터 대비 차별성·별도 구간 스타일 일치·지식 보강 실험 설계 | [검색 축 실험 설계](metadata_retrieval_design/README.md) |
+| `metadata_retrieval_results/` | 메타데이터별 Top K 겹침·분리 구간 스타일 검색·같은 작품/조건부 섞기·후보 수 균형 대조 | [검색 축 실험 결과](metadata_retrieval_results/README.md) |
 | `_interpretation_embedding/` | 같은 작품 3연주의 차이·MIDI 원자료와 다른 작품 A·B·C 유사 특징 검색 | [연주 차이와 검색 사례](_interpretation_embedding/README.md) |
 | `_feature_search_roles/` | 다른 작품 검색에서 feature별 후보/순위 변화와 검색에 안 쓴 feature의 일치 검사 | [feature별 검색 역할](_feature_search_roles/README.md) |
 | `_listening_evaluation/` | 3인 청취 평가의 연주 선정·발췌·비공개 거리와 준비 기록 | [진행자 자료](_listening_evaluation/README.md) · [참가자 도구](../tools/listening_evaluation/README.md) |
@@ -56,6 +58,8 @@ classicfy-ai/analysis/
 ├── metadata_same_work/
 ├── metadata_information_design/
 ├── metadata_information_results/
+├── metadata_retrieval_design/
+├── metadata_retrieval_results/
 ├── _interpretation_embedding/
 │   ├── same_work/
 │   ├── cross_work/
