@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "performances": 570,
+  "work_grids": 55,
+  "xml_events": 179582,
+  "note_occurrences": 2027229,
+  "beat_rows": 294899,
+  "numerical_checks": 18671374,
+  "feature_and_mask_checks": 3454620,
+  "max_absolute_error": 0.0020833333334167037,
+  "scope": "Independent raw XML/match and pretty_midi tick checks; original seven-channel feature preservation; no musical style ground truth"
+}

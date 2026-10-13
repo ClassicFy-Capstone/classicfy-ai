@@ -17,7 +17,13 @@ Dynamics 원본 값/mask를 대조하며, 해당 XML/MIDI/match가 없으면 ski
 원본 XML 좌표·방문 번호, 양쪽 근거로 확인한 쉼표 마디, ending 생략, 미확인 전환의 mask와
 구조 경계의 인접 pair 차단을 검증한다. `integration/test_score_occurrence_pipeline.py`는
 Beethoven 31-2 고정 6연주의 459개 원래 구간·230개 방문과 반복/ending 5곳을 대조한다.
-이번 관련 69개 테스트는 skip 없이 통과했다. [반복 연결 검증 안내](../analysis/score_occurrence_bridge/README.md)를 참고한다.
+반복 pilot 당시 관련 69개 테스트는 skip 없이 통과했다. [반복 연결 검증 안내](../analysis/score_occurrence_bridge/README.md)를 참고한다.
+
+`unit/preprocessing/test_score_measure_bridge.py`의 9개 테스트는 마디별 match 박 단위,
+결합 마디의 정확한 경계, 반복 못갖춘마디, 좌표 충돌 mask, 잘못된 일정 거부,
+0길이 연주 구간, ID 충돌, 복수 part와 단일 onset의 미확정 단위를 검증한다.
+전체 55 grid·570연주 실데이터의 별도 검산과 선택 의존성 테스트의 실행 제한은
+[전체 연결 검증](../analysis/score_structure_full/VALIDATION.md)에 기록한다.
 
 ```text
 tests/

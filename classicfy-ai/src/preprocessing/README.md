@@ -17,6 +17,15 @@ ASAP beat interval에 악보 구조를 연결한다. `load_midi_score_timeline()
 `interval_written_quarters`를 구분한다. [31-2 반복 연결 보고서](../../analysis/score_occurrence_bridge/README.md)에
 지원 범위·6연주 검증·기존 cache 보존 및 사용 예가 있다.
 
+전체 cohort에는 `preprocessing.score_measure_bridge.build_score_measure_bridge()`를 사용한다.
+원래 downbeat 마디 순서와 MIDI pitch/onset을 대조하고, 반복 4종·결합 마디 표기·못갖춘마디와
+복수 part를 처리한다. 반환한 `parts`에는 part별 `ScoreOccurrenceBridge`와 미검증 mask가 있다.
+`match_coordinate_checks`에 마디별 원문 beat 단위·시작 관계와 충돌을 기록한다.
+`note_links.match_onset_quarters`에는 확인한 마디별 변환 좌표를 저장한다. 원문 duration의
+단위를 확정하지 않아 `match_duration_quarters`는 `None`으로 유지한다. 전체 CLI는 원문을
+`raw_match_onset_beats`/`raw_match_duration_beats`로 별도 보존한다.
+[전체 연결 및 재현 안내](../../analysis/score_structure_full/README.md)를 참고한다.
+
 ## 공개 인터페이스
 
 - `load_midi(path: str | Path) -> MidiData`: MIDI 파일 하나에서 비드럼 파트의 음표와 원본 CC64 이벤트를 읽는다. 시간 단위는 초다.

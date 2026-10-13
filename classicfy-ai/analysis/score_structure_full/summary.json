@@ -1,0 +1,40 @@
+{
+  "performances": 570,
+  "work_grids": 55,
+  "xml_inputs": 110,
+  "statuses": {
+    "complete": 488,
+    "partial": 82
+  },
+  "original_intervals": 287885,
+  "valid_intervals": 286208,
+  "existing_feature_intervals": 269183,
+  "combined_intervals": 268606,
+  "geometries": 55,
+  "note_statuses": {
+    "rest_position_only": 145571,
+    "verified": 1579597,
+    "tie_continuation_verified": 48455,
+    "grace_unverified": 8469,
+    "missing_midi": 20531,
+    "verified_onset_duration_differs": 219027,
+    "tie_head_unverified": 1073,
+    "ambiguous_tie": 944,
+    "missing_match": 1468,
+    "ambiguous_midi": 303,
+    "coordinate_conflict": 1791
+  },
+  "visit_statuses": {
+    "match_midi_anchored": 93896,
+    "rest_bracketed": 3597,
+    "midi_unverified": 637,
+    "coordinate_conflict": 35
+  },
+  "transitions": {
+    "start": 577,
+    "consecutive": 97524,
+    "repeat_jump": 35,
+    "ending_skip": 29
+  },
+  "failures": []
+}

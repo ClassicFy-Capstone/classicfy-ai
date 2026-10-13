@@ -1,0 +1,50 @@
+{
+  "code": {
+    "classicfy-ai/scripts/connect_score_structure.py": "6832221b5af1bdeba27c0dc0506811abf783ea266cd9a22b82aa08507523bf41",
+    "classicfy-ai/src/preprocessing/score_measure_bridge.py": "839186c635e88a483538ff2aa2055986c4a926b7fd634759da2092700e9a7d45",
+    "classicfy-ai/scripts/report_score_structure_full.py": "b01e7d0116b7844256faf1b5d847ad200469a47fd3f157ef0f9e36dc99008e26",
+    "classicfy-ai/scripts/verify_score_structure_full.py": "6ea459eee54e48c84fdff8d6f11823d145e569d5822dca22f579a3a33a414cc3",
+    "classicfy-ai/scripts/validate_score_beat_bridge.py": "7728a148287c55b953ea131e14ee94e73e91bc3c1704d6c55ea96af9c57a3f84",
+    "classicfy-ai/scripts/verify_score_beat_bridge.py": "2db2e48210d86cb3cc02c1555cdd309b565531c9c0b3ef8386ddd27eaee24d33",
+    "classicfy-ai/scripts/prepare_metadata_retrieval_experiment.py": "f70d42d02f3e6b34146ba8a76d9f85c7c5d3bf393172cd4464169e70436491bf",
+    "classicfy-ai/src/preprocessing/__init__.py": "b5f129027def16cf543baaa915ef6cb8dfd2b563f3ab3ce19a82ca6f8b22a011",
+    "classicfy-ai/src/preprocessing/asap_loader.py": "027f2b57b37dc5b9fd1da1d5a086471b84641cafa9a8e0dc00bd37eb3c6453c9",
+    "classicfy-ai/src/preprocessing/atepp_alignment.py": "180bc4d0f780778c56d0f1f44e656ef6c620f8027131dd72ceddf7e30168f0f1",
+    "classicfy-ai/src/preprocessing/exact_dtw_kernel.py": "eae8d7b88656e62aacc7cfe58d0b0665895e2f1193ce2487e9182836a612d6e1",
+    "classicfy-ai/src/preprocessing/gluenote_openvino.py": "3238c213b302ac5aeb411f7b7ab96f54cf47ce411136c528f97aab70e50566e2",
+    "classicfy-ai/src/preprocessing/midi_loader.py": "e3dd3994494e35bcd7877e02bb3783a05d479dc44a6c378d1eea56afc5c46d7a",
+    "classicfy-ai/src/preprocessing/musicxml_loader.py": "8d19ca7611c4a627adca6cd6119453ee1faef1de89ed5212891f0548e9776b82",
+    "classicfy-ai/src/preprocessing/note_alignment.py": "32904687ab8b35242c8865e6ec4432d3b51e978d3ab8cae9d79928b68522e8c9",
+    "classicfy-ai/src/preprocessing/research_alignment.py": "94e29f3b1791494cb75e8b702550e7d3ad73d6d22729af9943982c81f22a3e1c",
+    "classicfy-ai/src/preprocessing/score_beat_bridge.py": "9bf652b1dd8b050ab299755051c250c189c6a98e0e9dae110d25f231e8c6a7e8",
+    "classicfy-ai/src/preprocessing/score_occurrence_bridge.py": "e8cbb67d4d8a496a1165ae4747dbbd2cd324e8afcacc4919cd41ec8c4c331695"
+  },
+  "artifacts": {
+    "match_coordinates.csv.gz": "c1bb95e68b450061bb4be45434337c3b16cb6c56a8a3b1c03a2d001fe1c07bea",
+    "beat_map.csv.gz": "b18f0cd79afc4037502598f4acc837d63d170e8b7b4689f88b4bd2015f888e50",
+    "feature_join.npz": "7d7a3ddfffb8700f7ae498bf444873ec6f7918d133a43164831ca7f17ef1af37",
+    "xml_notes.csv.gz": "7978f22ee901cc41020ecabd785391c0bacb23c1566c78ca3da85ca4357e5f7b",
+    "measure_visits.csv.gz": "ce24b5c3c7a6d1762a72029031f0b3be09361055eee541c96e2a73c59623b368",
+    "note_occurrences.csv.gz": "dcd6d92d7fce6969de26061d19923b0aca1f6819e6cc0914afca0f12bb3208ac"
+  },
+  "results": {
+    "summary.json": "b70bfbb7e9af63b009bc337d3d7799a99543fd49f8749e1cb4634654ca04f8b2",
+    "coverage.csv": "66a01b80cdc67c4363fb27adfae9a209f45739c71f36754cbe6bd11ee83dbd34",
+    "xml_audit.csv": "51d627b50d8c697f5c4a028db14c061a1fb55a42a65d5611109be8e6e9edceb3",
+    "03_structure_feature.png": "9a7eb8a6c0cd3f5d5a89a1247b61da1fd3e114445337cbb9d6d7a3275add7aa8",
+    "03_structure_feature.pdf": "e6527221219ba5eab488d4469f80fe672d441612c90dc4735fa361e512d44c30",
+    "README.md": "61e223405aa3559000d0d052129361d28d77978a3adc668dc858345fe5e93371",
+    "01_full_coverage.png": "354ab2469209351edb1e6b92a5bc975c1f110c3e3cda3e1ea685a90a4e3ce12a",
+    "04_structure_feature.png": "9aff6518ac7620675ca323a3f1443eb710220db1f5b515521e409edd214567c8",
+    "04_structure_feature.pdf": "6c23248e86b7c72f68a267d0e589a80e6a6dc8f3b7a609beab31c93d3dd4b50f",
+    "01_full_coverage.pdf": "2ab077aedda32faec1ffb728f41ba44758955271a2584452308da7f7ce98a19d",
+    "works.csv": "5ba42f8c6f5befb2cb9cedab5f91cb174a4c47c2d2c847ab316d2a4764c4d83d",
+    "protocol.json": "f262048cf19917daa29479357b1f38e0f0b0a5acf970d063ccbcbc45c1364758",
+    "02_structure_feature.pdf": "e5187a658355e88e3bf58f7f14a325a6a5408cba9dca985ddaa28fdbf67f8e90",
+    "02_structure_feature.png": "48c4119b92aff30ffc37a6290a7997d876181635fa5f2ed4a2ccfedc859f60c0"
+  },
+  "post_validation": {
+    "verification.json": "a2bc33dee7fcd10eb0e8275c3bff1e2abfc8936a2301a32b0a26b7be7ecee1d2",
+    "VALIDATION.md": "7d1e11eafe1c39efd171537c3f8e7c730e99b3a92cf515281e4c6b0163e8a337"
+  }
+}
