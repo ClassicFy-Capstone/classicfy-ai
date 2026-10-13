@@ -1,0 +1,3108 @@
+{
+  "status": "completed_fixed_design",
+  "frozen_design_protocol_sha256": "62aaa058b150067e57df0e132d7c752910cc1fbcc2121470239c7c0957886e6a",
+  "design_source_commit": "861c9dd773df14f62e13d9611553e24923270c85",
+  "sources": {
+    "design_protocol": "62aaa058b150067e57df0e132d7c752910cc1fbcc2121470239c7c0957886e6a",
+    "design_csv": {
+      "target_preflight.csv": "3f48db0a9393bfaa62fb8cc3ad77e473049d4506f59b433844dcc7861cbd4c6b",
+      "eligibility_summary.csv": "a9b647e0ff0cc85f252b2421745cc3ba3f963d230f167b9adde65d5d78f6d632",
+      "descriptor_schema.csv": "656e345d1e4e1c5233e36333b07fb0ba0116e716bde89f2c7a4e21c4a8b79f94",
+      "fold_manifest.csv": "065ab684493772dcc1fd040ff78fc289158c6bc9523bd70fc5249656ba110c96"
+    },
+    "feature_export": "b661176b65716d282523350331f6ed3fc1f746327dd972868f6680c6abcb541b",
+    "learned_manifest": "26af98e7218391b67f08b69bea3fca670de16de15a56145afa54070dc4cb8e43",
+    "hand_csv": {
+      "single_temporal_metrics.csv": "3dcfd43013ae8184520bf5e9ab0ee74f357037096c073ac7ea66c77680a77eff",
+      "pair_metrics.csv": "3454eb086483f70e1901a69e9a3f5118815ba5c9e47b4ea6bf4fe192b57872a1"
+    },
+    "runner_code": "5a4901820b94b01d6b7a34f967f253e4c1b3cf5b4f337e83bdc3c922a770ae0b",
+    "core_code": "ff5b75ab98dc6da5f5931f963aebb61bcae0fad727b400c0edd2bba64827e891"
+  },
+  "inputs_archive_sha256": "55fa420dfee530929f0452cc891b272fc1864e1da1124d82a44cd82ba9330890",
+  "runtime_seconds": 7.241444542072713,
+  "python": "3.12.1 (v3.12.1:2305ca5144, Dec  7 2023, 17:23:38) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "2.5.4",
+  "numerical_method": "Weighted centered ridge via symmetric eigendecomposition; unpenalized intercept; all candidate alphas use the same fold decomposition",
+  "grouping": "Coupling endpoints share only the input matrix decomposition; alpha and coefficient column selected independently per endpoint",
+  "metadata_unknown": [
+    {
+      "target": "change_concentration_cv",
+      "role": "train",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 0
+    },
+    {
+      "target": "change_concentration_cv",
+      "role": "validation",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 0
+    },
+    {
+      "target": "change_concentration_cv",
+      "role": "test",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 6
+    },
+    {
+      "target": "coupling_local_strength",
+      "role": "train",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 0
+    },
+    {
+      "target": "coupling_local_strength",
+      "role": "validation",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 0
+    },
+    {
+      "target": "coupling_local_strength",
+      "role": "test",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 6
+    },
+    {
+      "target": "coupling_local_variation",
+      "role": "train",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 0
+    },
+    {
+      "target": "coupling_local_variation",
+      "role": "validation",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 0
+    },
+    {
+      "target": "coupling_local_variation",
+      "role": "test",
+      "composer": 0,
+      "work_type": 0,
+      "combination": 6
+    }
+  ],
+  "runs": [
+    {
+      "condition": "A0",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_A0_main_0_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 31,
+      "active_dimensions": 31,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "f1dcd148c0d1cb649c89d49579fba8d33ea5b2dd976d752466b4e6faeee4e319"
+    },
+    {
+      "condition": "A1",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_A1_main_0_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 33,
+      "active_dimensions": 33,
+      "selected_alphas": [
+        0.1
+      ],
+      "archive_sha256": "76123a6cf747ee5a2a36e8d279ea5854442407474140bbf03a848175f39ebf77"
+    },
+    {
+      "condition": "B",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_B_main_0_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 47,
+      "active_dimensions": 47,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "702c04ae8353ff111ce443c5dbb7174c82858aa76cf84ec55a9e445b749d2d1d"
+    },
+    {
+      "condition": "C",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_C_main_0_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "7f830d9d991cea2218fdc364b289f84c75458c446b9687b23a067ed9e8adfb0d"
+    },
+    {
+      "condition": "D",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_D_main_0_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "593797bacc0273c09e66833ca720e513a0ddc33a019ae351ae13ffcf8f19c48b"
+    },
+    {
+      "condition": "E_CNN",
+      "kind": "main",
+      "encoder_seed": 20261006,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_E_CNN_main_20261006_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "f29eadf2b98fba56d62bc5d71c6866127ef3ae36bc3f7c4c8d51d1594076cdf7"
+    },
+    {
+      "condition": "E_CNN",
+      "kind": "main",
+      "encoder_seed": 20261007,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_E_CNN_main_20261007_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "c2889b3f1e79b9f13014fb9a75d20d6cbc3a89f3a7382bab39431f2e461cc46f"
+    },
+    {
+      "condition": "E_CNN",
+      "kind": "main",
+      "encoder_seed": 20261008,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_E_CNN_main_20261008_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "70d11d1b8c460eaf9d9d4c0cafa090377011116921fcdb3e4474f7e88f6c101a"
+    },
+    {
+      "condition": "E_BiLSTM",
+      "kind": "main",
+      "encoder_seed": 20261006,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_E_BiLSTM_main_20261006_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "5f6cca09777b9fa9fc4a17243fb1b981dda1b598fa5f5d8f0c1d4c470deed547"
+    },
+    {
+      "condition": "E_BiLSTM",
+      "kind": "main",
+      "encoder_seed": 20261007,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_E_BiLSTM_main_20261007_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "86223adbf93618dcec2242cf817b13f5c666e1a049867b668e4707c12ee6aae2"
+    },
+    {
+      "condition": "E_BiLSTM",
+      "kind": "main",
+      "encoder_seed": 20261008,
+      "control_seed": 0,
+      "group": "dynamics",
+      "file": "dynamics_E_BiLSTM_main_20261008_0.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "f2793540f2c59f3ba39cef4e9b0abfc1e0f044d20b6aa1776178b1dd874e8191"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261101.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "e87a629a4d13814a726719fea2b40d4f504ccc106f32955669a143f072f04b47"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261102.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "071e6b084e521e45233012dc71c80590477e9dc11bdb05c04cb9fa1a6b93877f"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261103.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "47ee8eb5bbd2f322fb8b412162f2c1d0b66772ddec1df68a398e2412634713c9"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261104.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "8fbee88b93f23c740282594a69c5e4b1b402a3f08462543d5c995e355ce43f38"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261105.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "4bdbc52aa1d97d3b71fe36960127f04bc2a220b0d1346d5a96c63c8d7cce6434"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261106.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "26d94a15c121b7f4547b81a806312c26dd48de8afab4ff24b0444f3462645aea"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261107.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "e3971d81119e7d364e427889db690a814bff41540b11029cd895fdb80a4ad4e6"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261108.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "de863336ede443c8a3fedc6f13de7e02edc1f8c9a52be57010a62442682faab6"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261109.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "597e2863a1b4396cef9298ac9f0538da849d111acf27bee64cc303a7403963d3"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261110.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "f0b485f59f2835871426cc0e6fd885e57d40612f9cbe396655d56188de275019"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261111.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "c036f1dcf8243f3754a662c361f90687f8aaa6b7757c012fc68f8104ebacb351"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261112.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "f6186755526a8dfdd33f090d45e5273294a00cb3524e09075e11e96f3cf0b788"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261113.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "d52a12a0c12dbfb050976298a98f0775439b5c12b3ce9d1629432cb4ebed1b87"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261114.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "624c49f2be54096c42318b4ccc59aacdbf7373c24032572b8bcbe40ea4fe1179"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261115.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "885faa7e2403b0be93e92f7a2f225ea7a1bb919c460a754daad78ef733552c9e"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261116.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "c42c3aa27b2ab816f93c0ef3eaea962b285a82faf3a26bd8bc75d888d8fb1f52"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261117.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "e28b7cd99b13b7d586e284be2f0e8e40b5e4f140ab9001d0484c1c11532946c4"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261118.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "fbdf3ad72371efcee42d8c81cdfc1c4d68174c64a0db4ff98a911cf423ddbffc"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261119.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "cf04f0ebca0bfc198c854a3f4b90b09c4e60a3d2907dbb92680565f35b855061"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "dynamics",
+      "file": "dynamics_C_shuffle_0_20261120.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "92f85b03c8960d7544d693ee6246970c1e1a63cd27dda40a9ca35be38cdaa5ea"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261101.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "8fcda2bd59bc1ad5b5b4204317dbd4e11710ed9d0b6a21ecb1ec041ef1bad104"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261102.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "88397025bdd2bdd6c6e7795cc98685bf3c0242f8a2e7eb078a35b61ad9b0c946"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261103.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "b939d758c67a7db7ff63b027029a3cad2e5ee52eec3676f5c0cb3499fa8be90f"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261104.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "9c9a19f133380f849ab32f43e17a2bfb660344cabdf5c112b160614632eca88c"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261105.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "ca3ad392f2d6935ff54e0586c32c51f29385d3d7d03954d690bb29d2c07211d7"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261106.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "63489ff9b7ded838e49ff568a7de5a27837b5170455c0e435009ed33a27bd11e"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261107.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "5eeff11b4002824704b6bdbc35cc604c351d1c77e1311272a01961f9a3061bb3"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261108.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "1b6ec88089897d32e4e6055669ecef20c839ce5682c5d6432f48238f74dcb86b"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261109.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "5cdbbfd46e6863ba90f9cbb61a07bc3a0e5370ea5c545954a9e69ee85cccbbb4"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261110.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "57508c0ac7d16a677adc5505c838334be5a570958061a579c1a2cf7120cfd852"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261111.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "4ab764b1c6ee69ead7a4bd3c9de13c1d2db2790dfb79d6de52f20ae2cae1e002"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261112.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "f300d4ad75515ee61ed359160db253a4f8cf3a76cd8d77c949879ea8c7d9bd9e"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261113.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "a0815ca66208fb4cae5c41d57d2a8606a0145358c6aad84c26b5195b87c30912"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261114.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "0f46482fe3946a5f9310fcc75fc895f3291811b39e47a24a6655b6658290bde5"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261115.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "e5ae9ee4228365eb0e018897c05e3e37a0e9ec8444847ae9eb17145e6a1e3b39"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261116.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "5f3fb602f8bea42968efc7d8d45fafd960e930a432996debe3341db5c04a6c2d"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261117.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "9c3c2323d04338a6daef5cd5114b5bc990596a01298c09b3d5121dd2e8870d10"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261118.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "416eb8d38b2790a06ca23bb6bcdb5ff5ffe9868c8362ec3b145d07c29cbd1b7c"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261119.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "6c4bbade4c865ab789f98d48063a072063c45baf9583e24da86568d02e934447"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "dynamics",
+      "file": "dynamics_C_noise_0_20261120.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "56b5bce12a5c0c9e28fdb9b4a1184aad21ec5a114595cd5651a80682d8815a70"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261101.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "56dc88cd1e19aff317cc35b5aedb9084c26592ed6d79f06c91786d8d3c931807"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261102.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "98f05661e43de7a84aa0ae3a6a6bcd5b3425df3c285f798ba63da477ec9f10c1"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261103.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "d83c210b79e4c6397dce5f13c749367054405331f9b8de9837932980d127ee22"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261104.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "e014b41998192148a807fd2c26de6f4cb4ceed84d6ef64926d7b091a8e573de1"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261105.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "15cba7ca809f143b4def9991cc6c1bcfb6234df60f249a85f60b5c4bffc5bb4f"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261106.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "ccbe8b190efeae1b8f7ba81a603eb9b0cdaf650578a051d9f08e00d047423f23"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261107.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "64f179ce878dc955d91f4bb8520bbaf9fada4a538ab49b2030cb4ee9f1c97ca7"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261108.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "7cebda4dd2f630f4d6b07f102b9471065d5039faae074bbd9b94c161fe7d098b"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261109.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "e6aba466419a13017b950664826994fb5fbc49a0fbd49ce8ee6a26055a097cd0"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261110.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "42e13a975ea63dacf0799f142ee1b837a6921abf113b1fb09edf933b1346b4c8"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261111.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "b3ad9a703163a3f0f769ec702cb14c92f36cae8586dc250a6e0e41d10ff387e8"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261112.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "241e68d7165ad5ce95198e649fafcfe2500a13d199bc41a2d12033ff1a93275b"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261113.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "2a64198cf751547457f87a32d916b9c38ca3ea29136566e8929e056095d12a27"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261114.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "1cea902d2c16162712fe0d4be761f3fb68a493c9d231b05ef28750f7d1bc193f"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261115.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "6551c86fc94dfeea2aad76de43684f3c646727e46790b24c48db7a94b78adea3"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261116.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "4f6cffb406318cfc912f390d95657821d32d01e8631849727cdf891389206a7b"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261117.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "6613f8796db0704fc882132917b06119e382d9f70abd4a0bb6f7507e95da0e4a"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261118.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "dbaebd2c461e039d63410740274d4aafc1a6baedac96fe2f47264d3fcbee04f8"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261119.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "0270a435bbc29b4daff8f66905375a2e3865ceac443cb96bdbe70c55f8d4524c"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "dynamics",
+      "file": "dynamics_D_shuffle_0_20261120.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "0501ca2b3add0dd557c8a77cac2352c22bb491bd7455164cda94278600702f68"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261101.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "b425f62eb6ab71599f827cd42372876fbd027910d7670542a6e91facbdd1ec52"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261102.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "23b442bb5fcde1bf7506458835795db22bb2a4a44cc859bddd263a091d8ee975"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261103.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "fa23e3ab634833a1bbe79b913670d6c2c3aa1677771f78a8b93ae72a1c06f3c3"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261104.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "290c90e4674b0fb99c56f039f68c5f2052f8bc59acec11f12922db5a93e08664"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261105.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "6c6f90881732479fcfa9d11cc01e7969d4deb5a700eb1c52d3063dfdd5a3f9fa"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261106.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "5c65e2d1e47d2fcab87ddc6b79528a1a0d811cc105c8e06797c02811a92bc704"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261107.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "b9c433b04bf8d59f43449f9fb8ca6bcee48d88028cbd109bd6cf0aca89cf3802"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261108.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "8fc2811bbf32c16743dfed8a5ba9571ceb8d995a6cd5e6fe16e533fb8ea40fb2"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261109.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "3df7d84545894d89e0e03886a26034b7cec521631088473098edda00ecf3e3a4"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261110.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "3f8e606160d9f285fc0a660b52e3eeb6defb6703a3b0fe61652c743a59d59c38"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261111.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0
+      ],
+      "archive_sha256": "7cb171a70fb50e9caa8c3feb280b515037731508425fd3f84754ed3931cd2210"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261112.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "585b2cea16891696cb0f634774739bff136b8b0d46ee8edbc8e5c22a1322a94d"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261113.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "517d6280279e8e5ad8599e5ee30d3993f5d6a7866cd66df5ee30a6458abdd5e0"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261114.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "9250be2a1e3a6cd0a6ace5e73281b00583e9c44a3464db4e00fbf1dfd0319344"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261115.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "bf7f0540e38c9b3f8ccac1ef6b87b04ca89a167e6e40d95e07f0545eb72eeab3"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261116.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "96610401b605116c87fe05c48b77bc9b8be765f11ebac208bc8149fe857035be"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261117.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "b95c966cb1d305a21584085cafed82682a39751d8506a3f18c9b332f52d0bd0a"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261118.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "01ab07f6ce8741e2533557b0e3f8fe9d7decc68459752aed5bdb97466cb3af33"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261119.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "f7bf9945ca8faee366b1fa1c88a3941bb66d8542a90ca65aca2dd1b7393ac03b"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "dynamics",
+      "file": "dynamics_D_noise_0_20261120.npz",
+      "rows": 495,
+      "train_rows": 361,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1.0
+      ],
+      "archive_sha256": "17a8eb9e4f0b04a7c807b637a0cda8799391c239cb6c9efc08c3c3e85d0fe913"
+    },
+    {
+      "condition": "A0",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_A0_main_0_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 31,
+      "active_dimensions": 31,
+      "selected_alphas": [
+        10.0,
+        1000.0
+      ],
+      "archive_sha256": "923631c9dc8d0cfe9b4bd21d180f6b472a7a4257cf6782c5f143e960e9c8ae7d"
+    },
+    {
+      "condition": "A1",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_A1_main_0_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 33,
+      "active_dimensions": 33,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "d1deb6fc34a450c5f0b7eaa336e4c86c68aea9edb4529f4dae4e6672723bd43c"
+    },
+    {
+      "condition": "B",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_B_main_0_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 47,
+      "active_dimensions": 47,
+      "selected_alphas": [
+        10.0,
+        1000.0
+      ],
+      "archive_sha256": "3cc41b7509f88e97f41ab1896801583c03c23e377a0a57f8991ca48abb3051ca"
+    },
+    {
+      "condition": "C",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_C_main_0_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "8513abdd0e39d3da407be6df0034bd42bbd2ebd0e13b5df62a50d5072134ab4d"
+    },
+    {
+      "condition": "D",
+      "kind": "main",
+      "encoder_seed": 0,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_D_main_0_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "f919898364f49d187fad38f4bfc84b227a4b108fa20b42275860cebd40dd6d56"
+    },
+    {
+      "condition": "E_CNN",
+      "kind": "main",
+      "encoder_seed": 20261006,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_E_CNN_main_20261006_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "a502347177ef2b7b7b63cce918c9771398f67c9d4dd8ccae38231b9163c4e02c"
+    },
+    {
+      "condition": "E_CNN",
+      "kind": "main",
+      "encoder_seed": 20261007,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_E_CNN_main_20261007_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "e19f5a0c9421291312353b7c833a69efd580de0c18bbbaeafbf72cae7c9802db"
+    },
+    {
+      "condition": "E_CNN",
+      "kind": "main",
+      "encoder_seed": 20261008,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_E_CNN_main_20261008_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "4c5dc2dc45897543d8402f7a00b4f6de59bf35c1414f22472d4cd1ea4842eff4"
+    },
+    {
+      "condition": "E_BiLSTM",
+      "kind": "main",
+      "encoder_seed": 20261006,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_E_BiLSTM_main_20261006_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "107db2c948d74eebed98e30288aa72c6b9bb8a5b6e87a3d8fb391b94db5f5dfc"
+    },
+    {
+      "condition": "E_BiLSTM",
+      "kind": "main",
+      "encoder_seed": 20261007,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_E_BiLSTM_main_20261007_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "775561cd226afae169b038adbc6eb9b6a0cb7777b139b23da215de970c2a96f8"
+    },
+    {
+      "condition": "E_BiLSTM",
+      "kind": "main",
+      "encoder_seed": 20261008,
+      "control_seed": 0,
+      "group": "coupling",
+      "file": "coupling_E_BiLSTM_main_20261008_0.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 175,
+      "active_dimensions": 175,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "d73e807948a1b0715d00a56d84dadd668cd7fde8247542b3084b1697759cf073"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261101.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "942ea34b5dd5bce0e7df0517a7de879b6acd961d7d4ee7464433aebac63321fd"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261102.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "575235cf07e52200184b82409389b499e6d986832a342d87b4c9ccf6693e771f"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261103.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        10.0
+      ],
+      "archive_sha256": "9bcf251f815f7e53a30fe8dd901158f1d451eb65cba94b4c506bdccdf9b01757"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261104.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "456bcb123265c7624ed7ce9ad6be2480034fa57c6daf1308d0936dd70933b23e"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261105.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "a5fdcc660993d4ca03682704339be06b19a9f5e2f6f077832cf556388cc18b23"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261106.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "749b774afeb60c4513f2ea4244271f059e7b5cbe7a501c9d163447a962a04496"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261107.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "9a6a1ea7f738bd9b7cea537d42ccbad87f95fe43026c8ec7b0deb346b00480fb"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261108.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "74f984e1c73d9a32a4cf0043428bec043733e86d485cded42396b6d528ab844b"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261109.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "eb48a2364b8e21ae1597a44d07e0094c0d1bf633c54cc85d73934d67925c07e1"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261110.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "d3edf7b219532a0c9c732a7360229c856c645f431c91bdbe727b01db0fcfd6f9"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261111.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "f223673b992329391e356cc69b17d4ded6ba66951648182c6a295bfcfd217164"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261112.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "d359fd4d81a6a06de5dfdfea3234fdb3581e23b354e4bc23bd65bc92d4e82b8b"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261113.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        10.0
+      ],
+      "archive_sha256": "555234b08cd57adf356a85477cb0b689fff61a1556ea61388b264468db244fb0"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261114.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "7a200371ac8b8ad08fe71153cb7fe55f64b1db150412fd9d1cb2184a60dd60e1"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261115.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "2b8c81fcdee1ba48a7a5c077a3cd8b0d0b2f28c6d6f900a83ad5f72aa733a07b"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261116.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "3a7a75c142615b26122096ce21230dedc806b640e2b2b873701c7ec40187ffc9"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261117.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        1000.0
+      ],
+      "archive_sha256": "cbcd7afd6e417aaef1a9aec31239ee3be88f373f52e622bdf4ff1a71f7a68d49"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261118.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "301a0c25e0133cf56ee0f379740d0c38838ac93b38fdafe0868eac3f29077541"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261119.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "0b23acb346000a82332e05e5e9bc517ff623236ce5a519b9ff4d08a50e85ea02"
+    },
+    {
+      "condition": "C",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "coupling",
+      "file": "coupling_C_shuffle_0_20261120.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "2aebfefc1f786377c00fc01ee42bcc1c54966303b300d7368f860740414ebff7"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261101.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        1000.0
+      ],
+      "archive_sha256": "ad0f594f762f2a95db9c343b33c6bfb3d71caf76121479f1beee9b9c6df9a237"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261102.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "d97d6330956c4cc9ffb7af9a1bbce7e651c38f081bd5e47191814bd054390d8f"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261103.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "e97223616e00784c1d324b98d8916a5c57e1101b7fa9ca63257d52e148a8a12c"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261104.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "bbc6dc9f9d34b6c17d09861c4f10fdcebd9f023161cb040c5965f48d5ba2b03b"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261105.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "0bebf48b8a486c3300712e2b5e03a0de8786f28af324a284074fa3f6908ed94a"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261106.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "37f1820121cb0ffa325bf219eadc336ace0f04d946405ad36f4fa40677b6dbf1"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261107.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        1000.0
+      ],
+      "archive_sha256": "b160bc8bcf3c2c1100c4b0f04c66431e596bca820959bd0893a262b59299950d"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261108.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "9411f44f1b1f01f16797ac6bc91f2d425f5858859914f3548bcc9c53e4b15f1f"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261109.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "743183b6a194bbd60c3124e3cc59aef26fbe68bf3af1c8f68ea9d3d4eebc2c8d"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261110.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "373b5e2b1c33415c54702674ba686da639f8c2051073da5f8ea7c91a30c26882"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261111.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "58d47a0d9150b20d322240c7e133e0f34194510e14118021e0fad05671632ad8"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261112.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "2400d7501dd06f684de08a083b27094cf0d63042ebecfc05b8a1c7df742b5a04"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261113.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "00ef7e114ebe6a990a17a953458a1640b55dfb6e2adeabb0dfdc401865c7f369"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261114.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "437e418e333d8311ee54d7c9a7b25f26cd8b562094d1868e1935129f633e2ea1"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261115.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "bd1f3822c9265fc467520a677eaef536a3f1ca9237f65ac1414f70ef9d516302"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261116.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "71fe53c14177c4bae5a48ec1939826b7d1003b8f97b78975a97253f404ce369a"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261117.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "9810c176468415c7a1d130f20d9ca6b7b7a6a5d67b46471ca658633434cba9fd"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261118.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "49cac5f76d37a0f9a56af904ee5225c3f64774c03c160849ba3999d42e9ae1a0"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261119.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "580010aefa0d70cebdaa139bc32fba0f87737214b070796ebd95f37d6b31b24c"
+    },
+    {
+      "condition": "C",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "coupling",
+      "file": "coupling_C_noise_0_20261120.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 104,
+      "active_dimensions": 104,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "012f4145cb54b69ba9b8e679d0b378113358370777b875c5bcdccd02e1386b10"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261101.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "c86594981852c253abe830c10fcc01ddf2381df6d68fecb881ce8b53c4888850"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261102.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "e52fc23c68e4d8ca3c0aa1b7f18508e9ebfce21e7dd400b18809ba5b9bd5bcbf"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261103.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "7a968aaadc33fae316eb2fe20044110f98ba004a1f8d091fbf2ab433848d0cc6"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261104.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "8dbee66f2816cc50bacd0d82f157c2817be3b698465f93c45dbac27cfd5cb306"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261105.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "74d7c58c1590a914b00f5317b7a69e5d5e7e27e22c5ed96eef8f1436aa3d4bab"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261106.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "105419bc85b3e2aded396ef7c8c772e8dbf71180539ed49f3398d8f949fb3027"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261107.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "f4ac95e93083690c24381ac68b468fd213cfa22668d5b90c0ee769990b40cc0b"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261108.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "ef8b481131ca0491e0c0354b04a26512a4fa284fead2f9b31e05d79e7ad1bf1b"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261109.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "aa15bfc524fb4952732122939167e274c4b84bbb84b96a2705fdd2c9f4102282"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261110.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "e446dc74c456ba2d176c8886fa6e6bfd3df7c4023456230fbddecb2bebdbcf73"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261111.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "dc8959fd3fcb89ab3ca33237005ed0b2f0e7bf1e1875aafa9c346ea2faf66d24"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261112.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "52d2e4f9b5f70b8f7fcc55c4aa513c67d67254fc718d912ba5b33e3b8249740b"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261113.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        10.0
+      ],
+      "archive_sha256": "ea439bf9ee9ec82cbc45c4fbb7608cd65a9dc286f681798087fd83f915d44894"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261114.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "459dec8bb48e9d8f8fc448930cb2cf6d569cf821115375497db7f21b07968d76"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261115.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "498dfbb4f7730a04ff02ab5139f4d7dbf2f7f7f5c25ef8915eeda8af420e7ce8"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261116.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "4e328a5f673c47200ca047bc4f634c1c6df86860f5543b179153ef55dafe0404"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261117.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "686689d343b36efc84d23407bb7f35c98efe193e7fe149036468097b10703d78"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261118.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "74142d7d88830addfd72cc3c4299138e78821f4223caf656fe39802ef05df864"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261119.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "80819001cc4162f6afe898bda3f5345bf23312c9f455927f456eaa0e274bee38"
+    },
+    {
+      "condition": "D",
+      "kind": "shuffle",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "coupling",
+      "file": "coupling_D_shuffle_0_20261120.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "76dd11268b8865868b9d37393f2052bcd089194aa1ea7c4c25d6fe20a0360005"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261101,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261101.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        1000.0
+      ],
+      "archive_sha256": "94bad0c97182bffa079413502c82a19015d2dd60f5d7fb7929e30798ec5fa9a1"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261102,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261102.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "59aff82650549e4e272b40230abf853c3aeccf9d67fbe8cb531e1a130523473b"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261103,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261103.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "18e6e1245983c6b4e206fecb3cd62c14ce7885a99dd2b2b8af2fa481bae0f49b"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261104,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261104.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "c4e799cc8e4b504600854aaeacf1ce1f6a5e71f05860a88d5fc996f053218cc1"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261105,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261105.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "b01738f776b59762f281b30258dee9a4b5eacc1cc215ba5a9a8a9944c201bab6"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261106,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261106.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "1b6598a25255b7f2c55d9318337e3e816184e2e667cdc2b5ee445511bb86e81c"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261107,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261107.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        100.0
+      ],
+      "archive_sha256": "eeeda0f1bf9d5e91a8372e127ab59f03f9fdbdba02f0b16a1e16100a4ce9ed47"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261108,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261108.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "d2ee20f4adb6d2b3ee86ca7d12f166d3c92bfc63fddbc1afb16d7387f8b8a796"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261109,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261109.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        10.0
+      ],
+      "archive_sha256": "452db745f5357c06fd05ffd915e573bdc26542a1e9b88892c8942809c5d3e9c7"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261110,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261110.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        100.0
+      ],
+      "archive_sha256": "94500657d725144c35e53e8c9f3ff3b9baaab8d99201b9b3bd3abab3b9319328"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261111,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261111.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        1000.0
+      ],
+      "archive_sha256": "1209d69c00be472bffc43f3d59e7f21de2e35455c7ffbe421ff7ede2b77fde22"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261112,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261112.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        10.0
+      ],
+      "archive_sha256": "569b436e77fb560b9b1d04552bc19e8c68f15e05e0d5e2db46353232097a155a"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261113,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261113.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        100.0,
+        10.0
+      ],
+      "archive_sha256": "03b4ca4349e92cfe217bb645e3d083db1c0b0cee472ab16cbb7ec1b45b989535"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261114,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261114.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "c45a36715caa83ea3fdd9db3c10098639188ef2ef670c39ddb45c4ddae0cad7d"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261115,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261115.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "ec1dd88eb87c61577704abf48e73035d24f34e7f12a4b375f3fbcde9b42a55f0"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261116,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261116.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "aa508aa8a960d13e3f71a0b8fce9b99e777e253b7406cc04655eedddad3731c1"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261117,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261117.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "1d6074821db36dc1781ffb12d73f2c760622a2ed778b74580112bfebb754cd46"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261118,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261118.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        10.0
+      ],
+      "archive_sha256": "029bc0547247eeb8819dd14c4f99066509178d178881fc6086c53de7f8d1e835"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261119,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261119.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        1000.0,
+        10.0
+      ],
+      "archive_sha256": "01d7ae3a5b886a24c7d02b0ba62ee588e21066ab98b023b3688292e62b88f2c9"
+    },
+    {
+      "condition": "D",
+      "kind": "noise",
+      "encoder_seed": 0,
+      "control_seed": 20261120,
+      "group": "coupling",
+      "file": "coupling_D_noise_0_20261120.npz",
+      "rows": 481,
+      "train_rows": 358,
+      "raw_dimensions": 223,
+      "active_dimensions": 223,
+      "selected_alphas": [
+        10.0,
+        100.0
+      ],
+      "archive_sha256": "614dcdbad5ee23a750fd5672ca18a3bd315d5ef61634d3d508c355d7e4133ba0"
+    }
+  ],
+  "csv_sha256": {
+    "predictions.csv": "2bc8ef6102216a2c6cc10c97ffb057c1212f16f4fc2c73ad0c6bdb3e769811e4",
+    "metrics.csv": "bde45cf41a4fd8acd4217c9dd4e9f2c3cea289c5b5ef52daf00018e673f23d4c",
+    "controls.csv": "652c2475410aaae86926ab1b4b745025ce5b8ecdc14cdbbde460ab6e8cdb6ea2",
+    "per_work_metrics.csv": "63e5e266a9d28ca76e88fbc2f95eaf01109f10d80cfe6d1d281c88af895b8488",
+    "cv_results.csv": "79eea4b16086e90d139b85b2e8b47a8e26a4dd9f134c339e10b659c8971934c6",
+    "bootstrap.csv": "780c5fc567afb583af898fe6ede74b048613414c27dcb919f70f4f5b41cda661"
+  },
+  "external_control_predictions_sha256": "a873206c679ad391b99ea1a0b83a7769eee53c2eeef6b06b9f7ad88548c490f0",
+  "external_control_works_sha256": "2aff8298ee2f11218314dc7f77c62f25d56c4485beaf7ae19181f2a58990cb65"
+}

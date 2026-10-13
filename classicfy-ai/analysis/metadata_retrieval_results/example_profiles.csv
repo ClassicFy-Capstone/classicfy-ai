@@ -1,0 +1,43 @@
+label,key,channel,statistic,standardized_value,active
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,tempo,median,-0.6194350347562165,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,rubato,median,-0.5781415999212581,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,dynamics,median,0.3441327203021454,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,articulation,median,-0.4560476483757585,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,pedal_depth,median,0.025224856025395502,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,pedal_down_ratio,median,0.05813313907748306,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,pedal_changes,median,,False
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,tempo,IQR,-0.6373209879657241,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,rubato,IQR,-0.6483827374298067,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,dynamics,IQR,2.9449681848728546,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,articulation,IQR,0.33150671209969734,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,pedal_depth,IQR,-1.0393259061680933,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,pedal_down_ratio,IQR,-1.0561540592484757,True
+기준 연주,Beethoven/Piano_Sonatas/18-1/Avdeeva01.mid,pedal_changes,IQR,-0.6021564042492851,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,tempo,median,0.39927402993997124,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,rubato,median,0.2692304740084701,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,dynamics,median,-0.02041427508399184,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,articulation,median,0.2522841224955903,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,pedal_depth,median,-0.07376591304716251,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,pedal_down_ratio,median,0.05813313907748306,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,pedal_changes,median,,False
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,tempo,IQR,0.1992279442928526,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,rubato,IQR,-0.05244301975004432,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,dynamics,IQR,-1.2166329448260826,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,articulation,IQR,-1.4597611424351005,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,pedal_depth,IQR,0.3426387515417588,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,pedal_down_ratio,IQR,0.276092830204886,True
+작곡가+유형 첫 후보,Beethoven/Piano_Sonatas/26-1/MorozovY02.mid,pedal_changes,IQR,-0.6021564042492851,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,tempo,median,0.15156527104263462,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,rubato,median,-0.8589195179250222,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,dynamics,median,1.587039639485875,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,articulation,median,0.021947785383018448,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,pedal_depth,median,0.025224856025395502,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,pedal_down_ratio,median,0.05813313907748306,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,pedal_changes,median,,False
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,tempo,IQR,-1.8404230273066398,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,rubato,IQR,-1.3037844975182453,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,dynamics,IQR,-1.2381679738777827,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,articulation,IQR,0.6631201307203355,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,pedal_depth,IQR,-0.6414411560203795,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,pedal_down_ratio,IQR,-0.8768018424130011,True
+평균·범위 첫 후보,Chopin/Etudes_op_10/4/Richardson_2013_03M.mid,pedal_changes,IQR,-0.6021564042492851,True

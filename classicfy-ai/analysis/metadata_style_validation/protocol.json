@@ -1,0 +1,120 @@
+{
+  "performances": 570,
+  "works": 55,
+  "families": 45,
+  "composers": 9,
+  "classified_performances": 560,
+  "unclassified_performances": 10,
+  "unclassified_works": 1,
+  "metadata_rows": 1067,
+  "all_keys_joined": true,
+  "outside_embedding_cohort": 497,
+  "availability": {
+    "all": {
+      "queries": 570,
+      "supported_queries": 326,
+      "reason_counts": {
+        "supported": 326,
+        "unclassified_query": 10,
+        "no_different_type_same_composer": 132,
+        "no_same_type_other_family": 102
+      }
+    },
+    "train": {
+      "queries": 395,
+      "supported_queries": 191,
+      "reason_counts": {
+        "supported": 191,
+        "unclassified_query": 10,
+        "no_different_type_same_composer": 107,
+        "no_same_type_other_family": 87
+      }
+    }
+  },
+  "family_split_overlap": 6,
+  "proposed_pilot": {
+    "composer": "Chopin",
+    "type_a": "ballade",
+    "type_b": "etude",
+    "type_a_performances": 29,
+    "type_b_performances": 106,
+    "type_a_works": 2,
+    "type_b_works": 6,
+    "type_a_families": 2,
+    "type_b_families": 6,
+    "supported_queries_a": 29,
+    "supported_queries_b": 106,
+    "total_supported_queries": 135,
+    "bidirectional_pilot": true
+  },
+  "source_run": "/Users/ihun-ui/Desktop/Classicfy/datasets/temporal_embedding_cluster_run01",
+  "source_provenance": {
+    "asap_revision": "afc815c75c42e83a79c03feb6da8a35e77d4c6b8",
+    "nasap_revision": "4097b45757bed854818cf87e77b92323ebf90615",
+    "input_sha256": "19fd51ad1f964733ca888a8da68216057a57ba0302835d055a501df5ad62077a",
+    "collector_version": 1
+  },
+  "input_sha256": {
+    "metadata.csv": "b327d92e498e281b381161ee387dacfd4b1c360c9c240d9107171f78e571b2a5",
+    "embeddings.csv": "4e5f7757f5a09ee6cf66a137b61f490cac53315412eb2ff4c7f7d34919445c84",
+    "embeddings.npz": "378955925d86d705399eeff8cc843db8830e8b172df523ed581823e90bc154e8",
+    "dataset.json": "85486dadf913a454a38dc48131d8f8090c3d9c4ce92fe79f7bbe0c1c8427e7b4",
+    "training.json": "3f93b78f99e2a8692aa62518ce284e2be95a781fdd711719dd99598e8689dfab",
+    "best.pt": "11abbfc8b4a79c81610d256c44d4849ea9ae7af72ecceba445d1bb4a3f217279",
+    "feature_embeddings.csv": "b661176b65716d282523350331f6ed3fc1f746327dd972868f6680c6abcb541b",
+    "previous_audit.json": "bbba0258dbe9acdbb8d639955a6ac709d0c5da22bc8519bedd402176d2056fe8"
+  },
+  "code_sha256": "83dcb145856e6f7f9756be473c75e544c1f842ec68397be75c07685660b1e4f8",
+  "rules": [
+    [
+      "sonata",
+      "^(?:piano_sonatas?|keyboard_sonatas?|sonatas?)(?:_|$)"
+    ],
+    [
+      "etude",
+      "^(?:etudes?|transcendental_etudes?|concert_etudes?|gran_etudes_de_paganini)(?:_|$)"
+    ],
+    [
+      "prelude",
+      "^preludes?(?:_|$)"
+    ],
+    [
+      "fugue",
+      "^fugues?(?:_|$)"
+    ],
+    [
+      "ballade",
+      "^ballades?(?:_|$)"
+    ],
+    [
+      "impromptu",
+      "^impromptus?(?:_|$)"
+    ],
+    [
+      "scherzo",
+      "^scherzos?(?:_|$)"
+    ],
+    [
+      "barcarolle",
+      "^barcarolles?(?:_|$)"
+    ]
+  ],
+  "canonical_work": "ASAP (composer,title); movements remain separate in work counts",
+  "family_policy": "merge named sonata movements and same-BWV Bach prelude/fugue; do not merge opus collections",
+  "candidate_policy": "same composer for A/B/C; C same type, B different type; all three families distinct",
+  "primary_scope": "train only; all-split counts are descriptive availability, not generalization performance",
+  "pilot_selection": "train >=2 families/type and both directions supported; maximize query coverage then lexical ties",
+  "csv_npz_export_max_error": 0.0,
+  "prior_report_identity": {
+    "checkpoint_hash_matches": false,
+    "embedding_archive_hash_matches": false
+  },
+  "limits": [
+    "Work types are dataset-name-derived labels, not verified formal analysis or service genre tags.",
+    "Same-composer candidate availability does not guarantee feature-close B or feature-far C.",
+    "No CNN/feature distances or mapping success were evaluated; no encoder re-training.",
+    "Current local saved run differs from prior temporal-neighbor checkpoint/archive hashes; old distance results are not transferred.",
+    "Family rules are conservative exclusions, not guaranteed complete musical family resolution; some families span original splits.",
+    "No validated performer identities, eras, mood tags, listening labels or recommendation ground truth are introduced."
+  ]
+}

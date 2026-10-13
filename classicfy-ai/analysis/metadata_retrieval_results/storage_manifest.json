@@ -1,0 +1,32 @@
+{
+  "execution_sha256": "408b0256383728a62a41b4c68d03539d526f91bd1cc0c2cf1297a387c0feb116",
+  "archiver_sha256": "7f95b9e29bbaf430ef171b679f97fb93f2cbbb56f86fe123fbec819e7e2e51ca",
+  "policy": "Large query-level tables outside Git; bytes and original execution hashes unchanged; summaries and figures remain in analysis",
+  "files": {
+    "overlap.csv": {
+      "path": "datasets/metadata_retrieval_run01/tables/overlap.csv",
+      "sha256": "d4617e1bc703aa66506b19962ff01e38820401c1844aefca91b6db18a395fb30",
+      "bytes": 40371918
+    },
+    "metadata_exposure.csv": {
+      "path": "datasets/metadata_retrieval_run01/tables/metadata_exposure.csv",
+      "sha256": "589c6c2c7722929811caef16aebdc1f82e7f1cc146a768bf797fb58ab41288e6",
+      "bytes": 19664307
+    },
+    "style_scores.csv": {
+      "path": "datasets/metadata_retrieval_run01/tables/style_scores.csv",
+      "sha256": "f961690f064b0d8d6cc996771b18bfeb90265cceb84c7fe7bddf0b4e11b29a51",
+      "bytes": 5910652
+    },
+    "controls.csv": {
+      "path": "datasets/metadata_retrieval_run01/tables/controls.csv",
+      "sha256": "b25e34262deaf7ad79dcccdc0ab4b567bb855b387aa08066dc54c4f9dc845d6c",
+      "bytes": 9994037
+    },
+    "balanced_gallery.csv": {
+      "path": "datasets/metadata_retrieval_run01/tables/balanced_gallery.csv",
+      "sha256": "fa783547fe9379c017f34c437ad0bfc2831835d69a6c3dc70c2a2061a22c259e",
+      "bytes": 62083528
+    }
+  }
+}

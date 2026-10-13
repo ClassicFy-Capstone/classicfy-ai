@@ -1,0 +1,12 @@
+{
+  "reconstructed_performances": 570,
+  "train_schema_performances": 395,
+  "retained_single_coordinates": 57,
+  "retained_relation_coordinates": 119,
+  "csv_sha256": {
+    "target_preflight.csv": "3f48db0a9393bfaa62fb8cc3ad77e473049d4506f59b433844dcc7861cbd4c6b",
+    "eligibility_summary.csv": "a9b647e0ff0cc85f252b2421745cc3ba3f963d230f167b9adde65d5d78f6d632",
+    "descriptor_schema.csv": "656e345d1e4e1c5233e36333b07fb0ba0116e716bde89f2c7a4e21c4a8b79f94",
+    "fold_manifest.csv": "065ab684493772dcc1fd040ff78fc289158c6bc9523bd70fc5249656ba110c96"
+  }
+}

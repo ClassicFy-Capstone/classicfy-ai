@@ -68,3 +68,41 @@ HTTP Range 재생·구간 이동 및 pack 밖 파일 차단을 다룬다. 합성
 결측 beat를 잇지 않는 변화량 계산, Pedaling의 동일 feature 비중,
 최근접 후보를 제외한 대조·동점 처리, 결과와 무관한 대표 사례 선정을 검증한다.
 [검색 관찰 보고서](../analysis/temporal_neighbors/README.md)는 feature 기반 대조이며 사람의 청취 정답 평가가 아니다.
+
+`unit/features/test_asap_metadata.py`는 작품명/폴더 기반 유형 분류의 충돌·미분류 보존,
+메타데이터의 정확한 연결, 소나타 악장/BWV 작품군 제외, 동일 작곡가의 B/C 후보 구성,
+train-only 지원 수, 양방향 파일럿 조건 및 CSV/NPZ 벡터·identity 일치를 검증한다.
+[메타데이터 점검 보고서](../analysis/metadata_style_validation/README.md)는 후보 구성 분석이며
+CNN 거리 또는 청취 유사성의 성공률을 평가하지 않는다.
+
+`unit/features/test_metadata_summary_embedding.py`는 기존 14D의 5개 음악 요소 동일 가중치,
+대표값/범위 거리 분해, 대표값으로 고정한 최근접 B/C, 세 작품군 제외, 선정/비교 동점,
+작품군 pair 집계와 세 점의 가중 PCA 거리 보존을 검증한다.
+[평균·범위 파일럿](../analysis/metadata_summary_embedding/README.md)은 수치적 배치 성향 비교이며
+청취 스타일 정답이나 추천 정확도를 검증한 결과가 아니다.
+
+`unit/features/test_metadata_temporal_embeddings.py`는 시간·관계 좌표의 train-only scale,
+A/B/C 공통 좌표와 그룹 지지, 결측을 0으로 대체하지 않는 거리, 페달의 동일 음악 요소 비중,
+cosine/유클리드의 차이, 조건부 분모·작품 동일 비중 및 모든 작품군 쌍 지원 조건을 검증한다.
+[보강 임베딩 비교](../analysis/metadata_temporal_embedding/README.md)는 #13의 24개 checkpoint를
+재추출하고 #14 통계를 고정 후보에 적용하며, 별도 CLI로 거리와 집계를 독립 재계산한다.
+
+`unit/features/test_metadata_information_design.py`는 추가 정보 실험 정답의 시간적 편중,
+양/음의 지역 관계 강도·변동, 값 배율 불변성, 결측 비연결, 상수 관계·평균 변화 0의 미정의,
+불완전 마지막 구간 제외 및 기존 인코더 split의 작품군 중복 제외를 검증한다.
+[실험 설계](../analysis/metadata_information_design/README.md)는 정답·표본·CV fold를 고정한 준비 단계이며
+예측기 학습·추가 설명력 수치 결과는 아직 포함하지 않는다.
+
+`unit/embedding/test_information_probe.py`는 작품군/작품/연주의 동일 가중치,
+weighted ridge의 독립 최소제곱 일치, 절편 비규제, 학습-only 메타데이터 어휘,
+규제 동점, 작품 내 평균 제거, paired bootstrap, 작품/grid/split 안의 섞기,
+평가 정답이 CV·예측에 영향을 주지 않는 조건을 검증한다.
+[고정 설계 실행 결과](../analysis/metadata_information_results/README.md)는 전체 대조군과
+독립 예측·CV·오차 재계산 및 figure를 포함한다.
+
+`unit/embedding/test_retrieval_probe.py`는 메타데이터 동점의 비전이 처리,
+작품군당 1연주 검색과 K 지원 부족, 연주/작품군 겹침의 구분, 분리 블록·결측 비연결,
+검색 쪽 측정치에 평가 쪽 값이 영향을 주지 않는 조건, 상수 관계의 미정의,
+스타일 백분위의 무작위 기대값과 조건부 섞기의 메타데이터·길이 구간 보존을 검증한다.
+[다른 작품 검색 결과](../analysis/metadata_retrieval_results/README.md)는 별도 구간의 스타일 일치,
+같은 작품 연주 대조, 후보 수 균형, 원래 #14 구현을 이용한 독립 수치 검증을 포함한다.

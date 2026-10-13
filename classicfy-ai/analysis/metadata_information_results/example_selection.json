@@ -1,0 +1,9 @@
+{
+  "selected_key": "Beethoven/Piano_Sonatas/18-1/Smirnov01.mid",
+  "selection": "lexical first eligible test piece, median eligible recording",
+  "targets": {
+    "change_concentration_cv": 0.2189594225449061,
+    "coupling_local_strength": 0.12185477531750134,
+    "coupling_local_variation": 0.11219634966115492
+  }
+}

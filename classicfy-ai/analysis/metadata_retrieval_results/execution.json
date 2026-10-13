@@ -1,0 +1,31 @@
+{
+  "status": "completed_fixed_retrieval_design",
+  "runtime_seconds": 407.3762340419926,
+  "protocol_sha256": "49aa69fe090feeb754de45c07370539609e7d604836977e890b36c528a0cffb7",
+  "preflight_sha256": "ed26d61b0099da180ac4fcbf50777ff7ca06bef3a0e840161e84f7254226d9cb",
+  "prepared_sha256": "d4b5807996e81ef85962e33d46096b13ab396750794b26584073c98201f4a33b",
+  "arrays_sha256": "cfab8f27e7db32ad0fb8d607b0aa9ed9ec0e9ff836092dcd54124a28d7562713",
+  "runner_sha256": "4fcffab1fcacd88000279d69ade5f2ddbb0403b59c878616c42a10f1d2031439",
+  "core_sha256": "bb446301d5c256d642e1f4944dcb3cfe7b2a465c3619a285040a7795b8bab68b",
+  "csv_sha256": {
+    "availability.csv": "5da6431fc557c3db6b79833394c5de13a53d9657c3cc7ab77b548069c48bdc49",
+    "balanced_gallery.csv": "fa783547fe9379c017f34c437ad0bfc2831835d69a6c3dc70c2a2061a22c259e",
+    "bootstrap.csv": "abe0fc0bc5cb3eadf13bb397ad66fbceb0d33ed01e982dbcad19ed6e7fcba0e9",
+    "cohort.csv": "5b1097c7d8c6ec42657da8ba7be4382e86b4204641386ac8044fcec86e7a5adb",
+    "control_support.csv": "b1ddc47f6e048515f2617e34b45e2d77b7736f07399bfb35c4fa4fedebc3c190",
+    "controls.csv": "b25e34262deaf7ad79dcccdc0ab4b567bb855b387aa08066dc54c4f9dc845d6c",
+    "metadata_exposure.csv": "589c6c2c7722929811caef16aebdc1f82e7f1cc146a768bf797fb58ab41288e6",
+    "neighbors.csv": "2030460483c27f159a414272ea81da9c96509fb74bdb59c451b04abc9563567f",
+    "novel_scores.csv": "7e6417bc4e17ce4018d63fa44046fc4da1f852620b88ed81bd1e1d834e8ee3eb",
+    "overlap.csv": "d4617e1bc703aa66506b19962ff01e38820401c1844aefca91b6db18a395fb30",
+    "partition_manifest.csv": "decfbcdaa99322a0a27a3faeb570776a95693b446d9a89efedb178f9f8c52ba9",
+    "per_work_metrics.csv": "953397d9c12fc533886ccc19f63a1861f5ce187e4979dfb9c2e72b8f42ed635b",
+    "query_availability.csv": "5707a51642381651f65184c1adde87b9a30b8277146988a2c2486628409d114e",
+    "style_scores.csv": "f961690f064b0d8d6cc996771b18bfeb90265cceb84c7fe7bddf0b4e11b29a51",
+    "summary.csv": "7374e677075bdc4c3f1da61c121c1199bc8163bfc0b9e96bee0b9255efd51347"
+  },
+  "full_first_seed_neighbors_sha256": "5f4dc9bc64b08497a7646fd00ad35055d0d20008f9a7da45a8dd7bb65c1d8acd",
+  "replicates": "100 independent paired tie/control replicates; not a 100x100 Cartesian product",
+  "archive": "All method/model seeds, tie/control indices, distances and balanced galleries are archived outside Git",
+  "unsupported_intervals": "Disjoint-view test and validation each contain only four query families; no bootstrap interval reported"
+}

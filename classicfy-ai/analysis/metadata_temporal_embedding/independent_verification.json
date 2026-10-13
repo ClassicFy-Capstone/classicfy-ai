@@ -1,0 +1,18 @@
+{
+  "candidate_constraint_rows_checked": 76664,
+  "frozen_variants_checked": 112,
+  "independent_learned_triplets": 65712,
+  "independent_baseline_triplets": 4107,
+  "independent_descriptor_triplets": 4107,
+  "independent_hybrid_triplets": 2738,
+  "train_coordinate_scales_checked": 342,
+  "maximum_learned_distance_error": 1.9984014443252818e-15,
+  "independent_summary_rows": 504,
+  "common_hand_support": 119,
+  "code_sha256": "61b1f898aabbe1db603f1d1ac5d315a1b2a86daa365c565d6f54f4155d7c0272",
+  "checked_input_sha256": {
+    "comparisons.csv": "d00e062c631eece4300257d69eb5205776242c34d0b6b4d32c3d851dba114e72",
+    "summary.csv": "211e99a6e6b9d9560c52ac691fa33a26e41abd1612a8a2d227a3c43961032df2",
+    "verification.json": "3a2ea748da7ceabe0e3f536d33799581ad3ea42b09314ff307b1e2657cb39d2e"
+  }
+}

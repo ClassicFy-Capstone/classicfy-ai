@@ -1,0 +1,7 @@
+﻿role,candidate,reference,judge,k,delta,improved_works,families,ci_low,ci_high,interval_status
+validation,B,M-CT,E-L,5,0.20958016600983229,4,4,nan,nan,fewer_than_five_families
+validation,B+T,B,E-T,5,-0.0014878390348665588,3,4,nan,nan,fewer_than_five_families
+validation,B+T+R,B+T,E-R,5,-0.003134222789440519,1,4,nan,nan,fewer_than_five_families
+test,B,M-CT,E-L,5,0.18536885253239904,4,4,nan,nan,fewer_than_five_families
+test,B+T,B,E-T,5,0.021369413622873645,4,4,nan,nan,fewer_than_five_families
+test,B+T+R,B+T,E-R,5,-0.0029620575414440464,3,4,nan,nan,fewer_than_five_families
