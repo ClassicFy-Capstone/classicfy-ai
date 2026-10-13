@@ -67,11 +67,21 @@ def note_rows(score):
     return result
 
 
-def plot_overlay(score, beat_rows, features, diagnostics, out):
+def plot_overlay(score, beat_rows, features, diagnostics, out, *, title_prefix='BWV 848',
+                 detail_indices=None, transition_indices=()):
     setup_style()
     # The central 32 original intervals, fixed by count rather than any feature.
     count = len(beat_rows)
     start, stop = (count-32)//2, (count-32)//2+32
+    if detail_indices is not None:
+        start,stop=detail_indices
+    def break_trace(xs,ys):
+        xout,yout=[],[]
+        for x,y in zip(xs,ys):
+            if int(x) in transition_indices:
+                xout.append(np.nan);yout.append(np.nan)
+            xout.append(x);yout.append(y)
+        return xout,yout
     left, right = beat_rows[start].xml_start_quarters, beat_rows[stop-1].xml_stop_quarters
     notes = [n for n in score.notes if n.pitch is not None and
              float(n.onset_quarters) < right and float(n.offset_quarters) >= left]
@@ -83,7 +93,7 @@ def plot_overlay(score, beat_rows, features, diagnostics, out):
         axes[0].plot([x(n.onset_quarters), x(n.offset_quarters)],
                      [float(n.pitch.midi_pitch)]*2, color=color, linewidth=2, alpha=.7)
     axes[0].set_ylabel('Score MIDI pitch')
-    axes[0].set_title('BWV 848: written score and unchanged Dynamics on original beat indices',
+    axes[0].set_title(title_prefix+': written score and unchanged Dynamics on original beat indices',
                       loc='left', fontsize=15, pad=24)
     axes[0].text(0, 1.025, 'XML positions → score MIDI quarters → ASAP intervals; raw slurs are not phrase labels',
                  transform=axes[0].transAxes, fontsize=10)
@@ -103,7 +113,8 @@ def plot_overlay(score, beat_rows, features, diagnostics, out):
     for key in sorted(features):
         rs = sorted(features[key], key=lambda r:int(r['beat_index']))[start:stop]
         values = [float(r['standardized']) if r['standardized_mask']=='True' else np.nan for r in rs]
-        axes[2].plot(np.arange(start, stop)+.5, values, linewidth=1.1, alpha=.85,
+        xs,ys=break_trace(np.arange(start, stop)+.5,values)
+        axes[2].plot(xs, ys, linewidth=1.1, alpha=.85,
                      label=Path(key).stem)
     axes[2].set_ylabel('Dynamics residual / scale')
     axes[2].set_xlabel('Original ASAP beat interval index (0-based)')
@@ -116,6 +127,10 @@ def plot_overlay(score, beat_rows, features, diagnostics, out):
         if not interval.valid:
             for ax in axes:
                 ax.axvspan(interval.index, interval.index+1, color='#e4aba0', alpha=.4)
+    for index in transition_indices:
+        if start<=index<stop:
+            for ax in axes:
+                ax.axvline(index,color='#517d54',linestyle='--',linewidth=1.3)
     axes[0].set_ylim(35, 89)
     axes[2].set_xlim(start, stop)
     fig.subplots_adjust(left=.09, right=.98, top=.9, bottom=.18, hspace=.16)
@@ -127,7 +142,7 @@ def plot_overlay(score, beat_rows, features, diagnostics, out):
     axes[0].plot([i.index+.5 for i in beat_rows], [i.verified_onsets for i in beat_rows],
                  color='#2878c8', linewidth=1)
     axes[0].set_ylabel('Verified pitched onsets')
-    axes[0].set_title('All 216 original beat intervals × 9 performances', loc='left', fontsize=16)
+    axes[0].set_title(f'All {count} original beat intervals × {len(features)} performances', loc='left', fontsize=16)
     for row in diagnostics:
         if row['status']!='missing_midi':
             continue
@@ -137,12 +152,16 @@ def plot_overlay(score, beat_rows, features, diagnostics, out):
         axes[0].text(index+.8,.92,label,transform=axes[0].get_xaxis_transform(),fontsize=8,color='#984b44')
     for key in sorted(features):
         rs=sorted(features[key], key=lambda r:int(r['beat_index']))
-        axes[1].plot([int(r['beat_index'])+.5 for r in rs],
-                     [float(r['standardized']) if r['standardized_mask']=='True' else np.nan for r in rs],
+        xs,ys=break_trace([int(r['beat_index'])+.5 for r in rs],
+                     [float(r['standardized']) if r['standardized_mask']=='True' else np.nan for r in rs])
+        axes[1].plot(xs,ys,
                      linewidth=.8, alpha=.75, label=Path(key).stem)
     axes[1].set_ylabel('Unchanged Dynamics')
     axes[1].set_xlabel('Original ASAP beat interval index (0-based)')
     axes[1].legend(ncol=5, fontsize=8, loc='upper center', bbox_to_anchor=(.5, -.2))
+    for index in transition_indices:
+        for ax in axes:
+            ax.axvline(index,color='#517d54',linestyle='--',linewidth=.9)
     axes[1].set_xlim(0,count)
     fig.subplots_adjust(left=.08,right=.98,top=.92,bottom=.2,hspace=.1)
     fig.savefig(out/'02_full_beat_coverage.png',dpi=160)

@@ -11,6 +11,9 @@ from .score_beat_bridge import (
     MidiScoreNote, MidiScoreTimeline, ScoreBeatBridge, ScoreBeatInterval, ScoreNoteLink,
     build_score_beat_bridge, load_midi_score_timeline,
 )
+from .score_occurrence_bridge import (
+    MeasureVisit, NoteOccurrence, ScoreOccurrenceBridge, build_score_occurrence_bridge,
+)
 
 __all__ = [
     "ASAPLoader",
@@ -41,4 +44,8 @@ __all__ = [
     "ScoreNoteLink",
     "build_score_beat_bridge",
     "load_midi_score_timeline",
+    "MeasureVisit",
+    "NoteOccurrence",
+    "ScoreOccurrenceBridge",
+    "build_score_occurrence_bridge",
 ]

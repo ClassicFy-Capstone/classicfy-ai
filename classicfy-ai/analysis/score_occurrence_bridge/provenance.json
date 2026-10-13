@@ -1,0 +1,29 @@
+{
+  "code": {
+    "classicfy-ai/scripts/validate_score_occurrence_bridge.py": "8c6ef7a44f14281268f11b0b23e3aa031ba962f86a42d9b6c9176b4736bb7350",
+    "classicfy-ai/src/preprocessing/score_occurrence_bridge.py": "e8cbb67d4d8a496a1165ae4747dbbd2cd324e8afcacc4919cd41ec8c4c331695",
+    "classicfy-ai/src/preprocessing/score_beat_bridge.py": "9bf652b1dd8b050ab299755051c250c189c6a98e0e9dae110d25f231e8c6a7e8",
+    "classicfy-ai/scripts/validate_score_beat_bridge.py": "7728a148287c55b953ea131e14ee94e73e91bc3c1704d6c55ea96af9c57a3f84",
+    "classicfy-ai/scripts/verify_score_beat_bridge.py": "2db2e48210d86cb3cc02c1555cdd309b565531c9c0b3ef8386ddd27eaee24d33",
+    "classicfy-ai/scripts/verify_score_occurrence_bridge.py": "9b0065bfb5f83a379a5652b247f8bace7eebf56fa6cd464b7d7a6ad017214739",
+    "classicfy-ai/src/preprocessing/musicxml_loader.py": "8d19ca7611c4a627adca6cd6119453ee1faef1de89ed5212891f0548e9776b82",
+    "classicfy-ai/src/preprocessing/note_alignment.py": "32904687ab8b35242c8865e6ec4432d3b51e978d3ab8cae9d79928b68522e8c9",
+    "classicfy-ai/src/preprocessing/asap_loader.py": "027f2b57b37dc5b9fd1da1d5a086471b84641cafa9a8e0dc00bd37eb3c6453c9",
+    "classicfy-ai/src/preprocessing/midi_loader.py": "e3dd3994494e35bcd7877e02bb3783a05d479dc44a6c378d1eea56afc5c46d7a",
+    "classicfy-ai/src/features/dynamics.py": "928b0308800486a4cb66e9c7f848d02922b555c8ee8452f3f1477c8bd6120a3d",
+    "classicfy-ai/src/features/beat_grid.py": "04197afaba32e3a4425ab6bcae8d745e64e6c0a618e7db31a1719acb18a8359e"
+  },
+  "results": {
+    "01_structure_feature_alignment.pdf": "4838e5229220918156c880774e31725f118d0a5c7ffd313ceee7003a856b94e5",
+    "01_structure_feature_alignment.png": "55e39d85017754867def574285ed64a009d259a86217c4e70c84b2225c2c9e6a",
+    "02_full_beat_coverage.png": "544be47a2a1e36fd8c5d75bf959a88e2aa3d1b80173862470a1dd1255b95180c",
+    "beat_map.csv": "7cc7aac1e0b305730bb44a99b1017f36dcc80d98a08482857aac8ce8abf51db5",
+    "coverage.csv": "5190e77638a27633733170dc45f22b4f913755082df4d555b0492f7c69579332",
+    "feature_join.csv": "5f356800207241bc54fc8bd85c8abc7bf09bb4de91f9c0667327d95636611afd",
+    "measure_visits.csv": "765f55709e7f99bcc8f3756f194b2c00becf227be169aec1f8565d13d8adfc16",
+    "note_occurrences.csv": "a7c73222aac498670fbae0cd3502afdcf557ce004a13c2ec01dda546400404a6",
+    "protocol.json": "ccd7d9b6d01e4c6c65263ea39479ff4cc851e054a3eef0ed976295fdf8545829",
+    "summary.json": "d84666f5b7f606f078314927398ed5e6966d08b60ae2cea4874bdeea65fc3f83",
+    "xml_notes.csv": "be61e435b3bb9664d9367c2a134a8718c8486aff8ed2774f08bd5cdb9198908a"
+  }
+}

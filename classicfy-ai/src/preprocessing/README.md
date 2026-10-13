@@ -11,6 +11,12 @@ ASAP beat interval에 악보 구조를 연결한다. `load_midi_score_timeline()
 음별 미대응·타이·길이 차이와 구간의 유효 상태를 보존한다. 지원 범위와 BWV 848 9연주의 독립 계산은
 [악보와 원래 beat 연결 보고서](../../analysis/score_beat_bridge/README.md)에 있다.
 
+`build_score_occurrence_bridge()`는 match·score MIDI에서 확인한 반복 마디 방문을 구분하고,
+원본 XML 좌표와 진행 회차·원래 beat의 대응을 제공한다. 반복/ending 경계에서는
+`adjacent_pair_mask()`로 인접 변화 계산을 끊는다. 임시 진행 축의 `bridge.xml_*`와 원래 쓰인
+`interval_written_quarters`를 구분한다. [31-2 반복 연결 보고서](../../analysis/score_occurrence_bridge/README.md)에
+지원 범위·6연주 검증·기존 cache 보존 및 사용 예가 있다.
+
 ## 공개 인터페이스
 
 - `load_midi(path: str | Path) -> MidiData`: MIDI 파일 하나에서 비드럼 파트의 음표와 원본 CC64 이벤트를 읽는다. 시간 단위는 초다.

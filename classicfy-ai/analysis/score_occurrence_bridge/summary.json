@@ -1,0 +1,77 @@
+{
+  "work": "Beethoven/Piano_Sonatas/31-2",
+  "coverage": [
+    {
+      "key": "Beethoven/Piano_Sonatas/31-2/ADIG05M.mid",
+      "grid": "16a5b8773bf1",
+      "original_intervals": 459,
+      "valid_intervals": 459,
+      "visits": 230,
+      "rest_bracketed": 13,
+      "repeat_jumps": 3,
+      "ending_skips": 2,
+      "valid_dynamics": 429,
+      "note_statuses": "{\"duration_mismatch\": 1, \"rest_position_only\": 114, \"tie_continuation_verified\": 82, \"tie_head_unverified\": 1, \"verified\": 1082, \"verified_onset_duration_differs\": 262}"
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-2/AbdelmoulaJS04.mid",
+      "grid": "16a5b8773bf1",
+      "original_intervals": 459,
+      "valid_intervals": 459,
+      "visits": 230,
+      "rest_bracketed": 13,
+      "repeat_jumps": 3,
+      "ending_skips": 2,
+      "valid_dynamics": 434,
+      "note_statuses": "{\"duration_mismatch\": 1, \"rest_position_only\": 114, \"tie_continuation_verified\": 82, \"tie_head_unverified\": 1, \"verified\": 1082, \"verified_onset_duration_differs\": 262}"
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-2/HuangSW09.mid",
+      "grid": "16a5b8773bf1",
+      "original_intervals": 459,
+      "valid_intervals": 459,
+      "visits": 230,
+      "rest_bracketed": 13,
+      "repeat_jumps": 3,
+      "ending_skips": 2,
+      "valid_dynamics": 433,
+      "note_statuses": "{\"duration_mismatch\": 1, \"rest_position_only\": 114, \"tie_continuation_verified\": 82, \"tie_head_unverified\": 1, \"verified\": 1082, \"verified_onset_duration_differs\": 262}"
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-2/LeungM04.mid",
+      "grid": "16a5b8773bf1",
+      "original_intervals": 459,
+      "valid_intervals": 459,
+      "visits": 230,
+      "rest_bracketed": 13,
+      "repeat_jumps": 3,
+      "ending_skips": 2,
+      "valid_dynamics": 434,
+      "note_statuses": "{\"duration_mismatch\": 1, \"rest_position_only\": 114, \"tie_continuation_verified\": 82, \"tie_head_unverified\": 1, \"verified\": 1082, \"verified_onset_duration_differs\": 262}"
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-2/Stahievitch02.mid",
+      "grid": "16a5b8773bf1",
+      "original_intervals": 459,
+      "valid_intervals": 459,
+      "visits": 230,
+      "rest_bracketed": 13,
+      "repeat_jumps": 3,
+      "ending_skips": 2,
+      "valid_dynamics": 431,
+      "note_statuses": "{\"duration_mismatch\": 1, \"rest_position_only\": 114, \"tie_continuation_verified\": 82, \"tie_head_unverified\": 1, \"verified\": 1082, \"verified_onset_duration_differs\": 262}"
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-2/Zuber04.mid",
+      "grid": "16a5b8773bf1",
+      "original_intervals": 459,
+      "valid_intervals": 459,
+      "visits": 230,
+      "rest_bracketed": 13,
+      "repeat_jumps": 3,
+      "ending_skips": 2,
+      "valid_dynamics": 431,
+      "note_statuses": "{\"duration_mismatch\": 1, \"rest_position_only\": 114, \"tie_continuation_verified\": 82, \"tie_head_unverified\": 1, \"verified\": 1082, \"verified_onset_duration_differs\": 262}"
+    }
+  ]
+}

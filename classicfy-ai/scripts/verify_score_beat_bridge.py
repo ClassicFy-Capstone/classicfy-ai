@@ -80,13 +80,16 @@ def raw_match(path):
         identifier,step,alter,octave,bar,offset,duration,onset,stop,attrs,tail=match.groups()
         performed=None
         if tail!='deletion':
-            # BWV 848 uses the fixed 1.0.0 integer-pitch performed-note format.
             parts=re.fullmatch(r'note\(([^,]+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)',tail)
-            if not parts:
-                raise ValueError('Unexpected performed-note format in BWV 848 verifier')
-            performed=int(parts[3])*rate/units/1_000_000
+            if parts:
+                performed=int(parts[3])*rate/units/1_000_000
+            else:
+                parts=re.fullmatch(r'note\(([^,]+),\[([A-G]),([^\]]+)\],(\d+),(\d+),(\d+),(\d+),(\d+)\)',tail)
+                if not parts:
+                    raise ValueError('Unexpected performed-note format in independent verifier')
+                performed=int(parts[5])*rate/units/1_000_000
         records[identifier]=dict(pitch=12*(int(octave)+1)+pitch_class[step]+alterations[alter],
-            onset=float(onset),duration=float(stop)-float(onset),performed=performed)
+            onset=float(onset),duration=float(stop)-float(onset),performed=performed,bar=bar)
     if len(records)!=text.count('snote('):
         raise ValueError('Independent regex did not cover every score note')
     return records

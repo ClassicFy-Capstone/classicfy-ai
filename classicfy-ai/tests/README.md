@@ -13,6 +13,12 @@ Dynamics 원본 값/mask를 대조하며, 해당 XML/MIDI/match가 없으면 ski
 실제 입력 환경에서 skip 없이 통과했다. 전체 suite 결과와 구분한다.
 [독립 계산 및 재현 안내](../analysis/score_beat_bridge/README.md)를 참고한다.
 
+`unit/preprocessing/test_score_occurrence_bridge.py`의 7개 테스트는 반복 occurrence 분리,
+원본 XML 좌표·방문 번호, 양쪽 근거로 확인한 쉼표 마디, ending 생략, 미확인 전환의 mask와
+구조 경계의 인접 pair 차단을 검증한다. `integration/test_score_occurrence_pipeline.py`는
+Beethoven 31-2 고정 6연주의 459개 원래 구간·230개 방문과 반복/ending 5곳을 대조한다.
+이번 관련 69개 테스트는 skip 없이 통과했다. [반복 연결 검증 안내](../analysis/score_occurrence_bridge/README.md)를 참고한다.
+
 ```text
 tests/
 ├── unit/

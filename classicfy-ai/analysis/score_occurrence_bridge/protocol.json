@@ -1,0 +1,67 @@
+{
+  "work": "Beethoven/Piano_Sonatas/31-2",
+  "performances": 6,
+  "inputs": {
+    "ASAP/Beethoven/Piano_Sonatas/31-2/xml_score.musicxml": "7802c1c47bb87cb9fecb4696fac8161069c3f420ef14e185c02bcf29d9b89836",
+    "nASAP/Beethoven/Piano_Sonatas/31-2/xml_score.musicxml": "54f8ebd231971ed1dda11b65510ace6d9eb7c3560f26cb0aaa33d6fdabdb82cd",
+    "cache/feature_normalization_standardized.npz": "7db8c538661b625fe9c1c34e95f12a60e4ec7f661dc09f1aa5cb50e9827ac3ee",
+    "inventory/performances.csv": "a9426c5f7c95281e45c2ff53af55e832d62fa149b5964a2a79962402b5c9f727",
+    "inventory/works.csv": "7bb4e7b5faa27d033e6f0aa8559f46fd774fcda2ee4c0e5fe999605142d70811",
+    "inventory/nasap_works.csv": "61c8d53275d44b0e51143b4570dead3e1a0bb1be0a06fe291c5adfdc07fa8530",
+    "ASAP/Beethoven/Piano_Sonatas/31-2/midi_score.mid": "e797cfed8cf987c3975c9dd8c645a31b47a33f032e76f328a0ad409822b90572",
+    "ASAP/metadata.csv": "b327d92e498e281b381161ee387dacfd4b1c360c9c240d9107171f78e571b2a5",
+    "ASAP/asap_annotations.json": "02e4b80f0a78150d1bd0fc21c9cee72ed65a61710c1b1f84368c52216b3e0ff7",
+    "nASAP/metadata.csv": "5c6622cae9ae34643fc5b35150de5e2891fd8ffbddd1fd579fa6b984014e6924",
+    "ASAP/Beethoven/Piano_Sonatas/31-2/ADIG05M.mid": "c243d89b0aae80a0f6befb2e8e168760c4c1612fcf328dcf685e1db26893c7f8",
+    "nASAP/Beethoven/Piano_Sonatas/31-2/ADIG05M.match": "c625f1b4ec8cd74b41eaf95f5c5f57770a6c8e6f31d3efd134dab613cce3f477",
+    "ASAP/Beethoven/Piano_Sonatas/31-2/AbdelmoulaJS04.mid": "37deea88de77a0b9f1c71a6fd6ceeb89df3ab212a8236e0ff91c04819693fcd1",
+    "nASAP/Beethoven/Piano_Sonatas/31-2/AbdelmoulaJS04.match": "854f925232b0c29f5c53453870997ee109f3be25d764bd90bdbcb2e50556d90d",
+    "ASAP/Beethoven/Piano_Sonatas/31-2/HuangSW09.mid": "863409e1895c2ec4f770d87966ece5de0f1ef5dfe0a16640f7e686d3a83405dc",
+    "nASAP/Beethoven/Piano_Sonatas/31-2/HuangSW09.match": "eab7248d5e5141f4b2e066bdfe9c6be9a419ea9044c19e29bf59fd4f91533407",
+    "ASAP/Beethoven/Piano_Sonatas/31-2/LeungM04.mid": "77b6b9539887337ce7063658518d7f8cb2fe7268b47618b3f9db0e41933f5139",
+    "nASAP/Beethoven/Piano_Sonatas/31-2/LeungM04.match": "196706042cfbc995d6078554a2cd17b5cc9d18382b54f1dff562891d28167281",
+    "ASAP/Beethoven/Piano_Sonatas/31-2/Stahievitch02.mid": "06513493354ba8669c875f9c0156c6fe74b48fd8edd93da9dcb6d6b2c6ea44fd",
+    "nASAP/Beethoven/Piano_Sonatas/31-2/Stahievitch02.match": "f04a5a9e3479a621f6e3d84cf22a28c2f97a92a8a28c26374593bbb750b3bc3c",
+    "ASAP/Beethoven/Piano_Sonatas/31-2/Zuber04.mid": "99c6feda0403241747dc60a813bca441da7da51d7580d922eb061d80c256fcd6",
+    "nASAP/Beethoven/Piano_Sonatas/31-2/Zuber04.match": "f6cf104c55756618b671e4b20871c13c450059a119da8505eb6b43bf19e0a4f6"
+  },
+  "scope": "Observed single-part repeat and first/second ending pilot",
+  "source_selection": "Smallest match-note count of the four fixed repeat-score candidates; all six fixed performances",
+  "unfolding": "Score-side IDs and within-measure positions, validated against score MIDI and repeat/ending signs",
+  "rest_policy": "Only rest-only measures bracketed by exact neighboring positions/durations are inferred",
+  "break_policy": "Repeat jumps and ending skips block adjacent differences; masked source values remain masked",
+  "original_break_indices": [
+    16,
+    98,
+    158,
+    368,
+    428
+  ],
+  "figure_detail_indices": [
+    8,
+    32
+  ],
+  "cache_policy": "Read existing normalized Dynamics only; raw/mask re-extracted, common and fixed-scale formula checked; no refit or cache writes",
+  "cache_provenance": {
+    "asap_revision": "afc815c75c42e83a79c03feb6da8a35e77d4c6b8",
+    "nasap_revision": "4097b45757bed854818cf87e77b92323ebf90615",
+    "input_sha256": "19fd51ad1f964733ca888a8da68216057a57ba0302835d055a501df5ad62077a",
+    "collector_version": 1,
+    "include_non_robust": false,
+    "policy": {
+      "dynamics": "mad",
+      "pedal_depth": "std",
+      "pedal_down_ratio": "std",
+      "pedal_changes": "std",
+      "articulation": "mad"
+    },
+    "normalization_version": 1
+  },
+  "ppq": 480,
+  "time_policy": "Score seconds snapped to nearest MIDI tick (<=half tick); original annotation seconds and feature arrays preserved",
+  "limitations": [
+    "One repeated score only",
+    "No phrase/tension inference",
+    "Unknown transitions are masked; nested/general navigation not established"
+  ]
+}

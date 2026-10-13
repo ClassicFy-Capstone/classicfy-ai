@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Independent repeat route/occurrences/original beats/cache preservation for 31-2",
+  "performances": 6,
+  "measure_visits": 1380,
+  "note_occurrences": 9252,
+  "beat_rows": 2754,
+  "numeric_checks": 78708,
+  "max_absolute_error": 0.0,
+  "transition_counts": {
+    "start": 6,
+    "consecutive": 1344,
+    "repeat_jump": 18,
+    "ending_skip": 12
+  },
+  "code_sha256": "9b0065bfb5f83a379a5652b247f8bace7eebf56fa6cd464b7d7a6ad017214739",
+  "csv_sha256": {
+    "note_occurrences.csv": "a7c73222aac498670fbae0cd3502afdcf557ce004a13c2ec01dda546400404a6",
+    "coverage.csv": "5190e77638a27633733170dc45f22b4f913755082df4d555b0492f7c69579332",
+    "measure_visits.csv": "765f55709e7f99bcc8f3756f194b2c00becf227be169aec1f8565d13d8adfc16",
+    "xml_notes.csv": "be61e435b3bb9664d9367c2a134a8718c8486aff8ed2774f08bd5cdb9198908a",
+    "beat_map.csv": "7cc7aac1e0b305730bb44a99b1017f36dcc80d98a08482857aac8ce8abf51db5",
+    "feature_join.csv": "5f356800207241bc54fc8bd85c8abc7bf09bb4de91f9c0667327d95636611afd"
+  }
+}
