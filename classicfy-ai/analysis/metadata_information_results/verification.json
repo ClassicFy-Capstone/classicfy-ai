@@ -1,0 +1,13 @@
+{
+  "readout_archives": 182,
+  "independent_augmented_readouts": 273,
+  "main_cv_linear_solves": 1320,
+  "independently_checked_alpha_choices": 273,
+  "checked_prediction_rows": 132587,
+  "independent_metric_rows": 819,
+  "bootstrap_intervals": 60,
+  "maximum_augmented_prediction_error": 2.3314683517128287e-15,
+  "maximum_cv_prediction_error": 9.963890823527777e-12,
+  "source_code_sha256": "b41c02f7c14c5c9a340070f50edb9984fec2e0eb104978763118673e5f537a43",
+  "execution_sha256": "58593c24fed59a34cd2b9246414ed9ac03af98896993fbc6ff2f94f4f6c0a673"
+}

@@ -92,3 +92,10 @@ cosine/유클리드의 차이, 조건부 분모·작품 동일 비중 및 모든
 불완전 마지막 구간 제외 및 기존 인코더 split의 작품군 중복 제외를 검증한다.
 [실험 설계](../analysis/metadata_information_design/README.md)는 정답·표본·CV fold를 고정한 준비 단계이며
 예측기 학습·추가 설명력 수치 결과는 아직 포함하지 않는다.
+
+`unit/embedding/test_information_probe.py`는 작품군/작품/연주의 동일 가중치,
+weighted ridge의 독립 최소제곱 일치, 절편 비규제, 학습-only 메타데이터 어휘,
+규제 동점, 작품 내 평균 제거, paired bootstrap, 작품/grid/split 안의 섞기,
+평가 정답이 CV·예측에 영향을 주지 않는 조건을 검증한다.
+[고정 설계 실행 결과](../analysis/metadata_information_results/README.md)는 전체 대조군과
+독립 예측·CV·오차 재계산 및 figure를 포함한다.
