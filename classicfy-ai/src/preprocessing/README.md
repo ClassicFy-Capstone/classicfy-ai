@@ -2,6 +2,10 @@
 
 `preprocessing`은 MIDI 파일의 원본 이벤트, ASAP 데이터셋의 악보-연주 관계, (n)ASAP의 note 단위 정렬을 읽는다. 연주 해석 feature와 score-performance alignment를 새로 계산하지 않는다.
 
+`load_musicxml(path) -> ScoreStructure`는 악보의 음표·쉼표·마디·slur·조표·박자·반복 표기를 읽는다.
+위치는 part별 쓰인 악보의 4분음표 단위 `Fraction`이며, 반복을 펼치거나 ASAP beat index로
+변환하지 않는다. 자세한 모델·사용 예·검증 결과는 [MusicXML 로더 안내](../../analysis/musicxml_loader/README.md)를 참고한다.
+
 ## 공개 인터페이스
 
 - `load_midi(path: str | Path) -> MidiData`: MIDI 파일 하나에서 비드럼 파트의 음표와 원본 CC64 이벤트를 읽는다. 시간 단위는 초다.

@@ -1,0 +1,16 @@
+{
+  "inventory": {
+    "works.csv": "7bb4e7b5faa27d033e6f0aa8559f46fd774fcda2ee4c0e5fe999605142d70811",
+    "nasap_works.csv": "61c8d53275d44b0e51143b4570dead3e1a0bb1be0a06fe291c5adfdc07fa8530"
+  },
+  "code": {
+    "classicfy-ai/scripts/validate_musicxml_loader.py": "42cce355d784f2a80bf1ed5d61ea2cc700a1d3d12b47ccb268b22fab1f0148a9",
+    "classicfy-ai/src/preprocessing/musicxml_loader.py": "8d19ca7611c4a627adca6cd6119453ee1faef1de89ed5212891f0548e9776b82",
+    "classicfy-ai/src/preprocessing/__init__.py": "d5c5f42e0e5f93785ed3dab98dd2d8e16f866fa56a36ff64824d82d67f8596ff"
+  },
+  "results": {
+    "scores.csv": "7e5e9bdd3b01c9ea256c8b448ec7f7a3e25c54989526359d35dc7baf0b20939a",
+    "diagnostics.csv": "609b94be9f31bc6a6394458188726856ac9acd48f9636f527114affa43d26279",
+    "summary.json": "77a06b138b7b862cb7b756540450374e1c429463f7216d8d1de12c6686c08783"
+  }
+}

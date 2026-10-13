@@ -1,0 +1,48 @@
+{
+  "files": 110,
+  "loaded": 110,
+  "errors": 0,
+  "datasets": {
+    "ASAP": {
+      "files": 55,
+      "loaded": 55,
+      "counts": {
+        "notes": 179582,
+        "measures": 9280,
+        "rests": 14034,
+        "grace": 748,
+        "chord_members": 37006,
+        "slurs": 14708,
+        "keys": 128,
+        "meters": 164,
+        "repeats": 12,
+        "endings": 20
+      },
+      "diagnostics": {
+        "measure_duration_differs_from_meter": 74,
+        "compensated_backup_underflow": 2
+      }
+    },
+    "nASAP": {
+      "files": 55,
+      "loaded": 55,
+      "counts": {
+        "notes": 179582,
+        "measures": 9280,
+        "rests": 14034,
+        "grace": 748,
+        "chord_members": 37006,
+        "slurs": 14708,
+        "keys": 128,
+        "meters": 164,
+        "repeats": 12,
+        "endings": 20
+      },
+      "diagnostics": {
+        "measure_duration_differs_from_meter": 74,
+        "compensated_backup_underflow": 2
+      }
+    }
+  },
+  "scope": "Written MusicXML loading and field preservation, not beat alignment or phrase/tension inference"
+}

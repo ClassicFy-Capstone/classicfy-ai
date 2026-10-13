@@ -7,6 +7,9 @@
 이번 단계에서는 파일·기호·ID·마디 대응표를 점검했다. 프레이즈 추정, 조성 긴장도 계산,
 구조별 임베딩 생성 및 검색 실험은 다음 단계다.
 
+이 문서는 1번 점검 당시의 상태를 기록한다. 이후 구현한 로더는
+[MusicXML 로더 안내](../musicxml_loader/README.md)에서 확인할 수 있다.
+
 ## 점검 대상과 결과
 
 기존 [메타데이터 분석](../metadata_style_validation/README.md)의 `performances.csv`를 그대로
@@ -41,7 +44,7 @@
 | [정렬 벤치마크의 변환 예제](../../scripts/benchmark_research_alignment.py) | `time_to_tick(t) / resolution`으로 악보 MIDI 초를 4분음표 단위 위치로 변환 | nASAP의 악보 좌표와 항상 단위·시작점이 같다고 가정하지 않는다 |
 | [`common_pattern`](../../src/features/common_pattern.py), [`validate_embedding`](../../scripts/validate_embedding.py) | 공통 패턴 제거, 유효 mask와 `shared_indices` 보존 | 구조 분석 때문에 기존 잔차·정규화 기준이나 beat 번호를 바꾸지 않는다 |
 
-현재 저장소에는 음표·쉼표·성부·slur·조표와 악보 시간축을 함께 보존하는 공통 MusicXML
+점검 당시 저장소에는 음표·쉼표·성부·slur·조표와 악보 시간축을 함께 보존하는 공통 MusicXML
 로더가 없다. Partitura는 선택 의존성인 `requirements-alignment.txt`에 `1.9.0`으로 선언되어
 있지만, 점검한 `.venv`에는 설치되어 있지 않다. 이번 파일 점검은 표준 XML 파서로 수행했다.
 
