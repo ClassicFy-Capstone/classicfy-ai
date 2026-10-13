@@ -6,6 +6,13 @@
 위치, divisions 변경, slur·조표·반복 보존, namespace·ID 안정성 및 잘못된 입력 처리를 검증한다.
 실제 악보 110개에 대한 필드 보존 검증은 [MusicXML 로더 보고서](../analysis/musicxml_loader/README.md)에 있다.
 
+`unit/preprocessing/test_score_beat_bridge.py`의 13개 테스트는 XML/MIDI 위치 차이, 타이·꾸밈음,
+MIDI 중복·겹친 음 길이, 경계·0폭/bR·결측 index 보존 및 미지원 반복을 검증한다.
+`integration/test_score_structure_pipeline.py`는 고정한 BWV 848 9연주의 public API 연결과 기존
+Dynamics 원본 값/mask를 대조하며, 해당 XML/MIDI/match가 없으면 skip한다. 이번 관련 61개 테스트는
+실제 입력 환경에서 skip 없이 통과했다. 전체 suite 결과와 구분한다.
+[독립 계산 및 재현 안내](../analysis/score_beat_bridge/README.md)를 참고한다.
+
 ```text
 tests/
 ├── unit/

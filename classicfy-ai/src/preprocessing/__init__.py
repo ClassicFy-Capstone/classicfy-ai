@@ -7,6 +7,10 @@ from .musicxml_loader import (
     BarlineMark, KeySignatureChange, MusicXMLNote, PitchSpelling, ScoreMeasure,
     ScoreStructure, SlurMark, StructureDiagnostic, TimeSignatureChange, load_musicxml,
 )
+from .score_beat_bridge import (
+    MidiScoreNote, MidiScoreTimeline, ScoreBeatBridge, ScoreBeatInterval, ScoreNoteLink,
+    build_score_beat_bridge, load_midi_score_timeline,
+)
 
 __all__ = [
     "ASAPLoader",
@@ -30,4 +34,11 @@ __all__ = [
     "StructureDiagnostic",
     "TimeSignatureChange",
     "load_musicxml",
+    "MidiScoreNote",
+    "MidiScoreTimeline",
+    "ScoreBeatBridge",
+    "ScoreBeatInterval",
+    "ScoreNoteLink",
+    "build_score_beat_bridge",
+    "load_midi_score_timeline",
 ]

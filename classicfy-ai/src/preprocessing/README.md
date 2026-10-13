@@ -6,6 +6,11 @@
 위치는 part별 쓰인 악보의 4분음표 단위 `Fraction`이며, 반복을 펼치거나 ASAP beat index로
 변환하지 않는다. 자세한 모델·사용 예·검증 결과는 [MusicXML 로더 안내](../../analysis/musicxml_loader/README.md)를 참고한다.
 
+`build_score_beat_bridge()`는 반복 없는 단일 part의 XML·기존 match·score MIDI를 대조하여 원래
+ASAP beat interval에 악보 구조를 연결한다. `load_midi_score_timeline()`의 PPQ·tempo map을 사용하며
+음별 미대응·타이·길이 차이와 구간의 유효 상태를 보존한다. 지원 범위와 BWV 848 9연주의 독립 계산은
+[악보와 원래 beat 연결 보고서](../../analysis/score_beat_bridge/README.md)에 있다.
+
 ## 공개 인터페이스
 
 - `load_midi(path: str | Path) -> MidiData`: MIDI 파일 하나에서 비드럼 파트의 음표와 원본 CC64 이벤트를 읽는다. 시간 단위는 초다.

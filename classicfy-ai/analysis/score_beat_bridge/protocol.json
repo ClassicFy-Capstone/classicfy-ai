@@ -1,0 +1,64 @@
+{
+  "work": "Bach/Fugue/bwv_848",
+  "performances": 9,
+  "scope": "Non-repeating single-part XML/score-MIDI/ASAP bridge",
+  "symbolic_mapping": "XML plus score side of match (including deletions); no performed timing fit",
+  "match_rounding_tolerance_quarters": 0.0001,
+  "midi_tolerance_quarters": 0.002183333333333333,
+  "ppq": 480,
+  "note_duration_policy": "Overlapping same-channel/pitch durations remain ambiguous; zero-length grace retained; ties explicitly linked",
+  "libraries": {
+    "mido": "1.3.3",
+    "pretty_midi": "0.2.11.post0",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2"
+  },
+  "feature": "Existing normalized Dynamics, unchanged CSV; direct source raw/mask/count verification",
+  "performed_boundary_policy": "Within half a match MIDI tick plus 0.5 microseconds and 1e-10 second float guard of any performed beat: uncertain; excluded from assignment agreement denominator",
+  "figure_selection": "Central 32 original intervals, all nine performances; full coverage figure",
+  "figure_detail_original_indices": [
+    92,
+    124
+  ],
+  "inputs": {
+    "ASAP/Bach/Fugue/bwv_848/xml_score.musicxml": "124839f43d92171e69547eaafc7af636ac7b558a1fe7f0d416057d2680905e94",
+    "nASAP/Bach/Fugue/bwv_848/xml_score.musicxml": "e195f8633f7a25758c57798faa9679191d300c88f0db16ff7fff6d563d4799b0",
+    "feature/beat_features.csv": "e7bcf2db51a7307a4c62fb3cfe30d80896b7a9807d4f2a9c2f3c469ddf6630f1",
+    "inventory/works.csv": "7bb4e7b5faa27d033e6f0aa8559f46fd774fcda2ee4c0e5fe999605142d70811",
+    "inventory/nasap_works.csv": "61c8d53275d44b0e51143b4570dead3e1a0bb1be0a06fe291c5adfdc07fa8530",
+    "inventory/performances.csv": "a9426c5f7c95281e45c2ff53af55e832d62fa149b5964a2a79962402b5c9f727",
+    "ASAP/metadata.csv": "b327d92e498e281b381161ee387dacfd4b1c360c9c240d9107171f78e571b2a5",
+    "ASAP/asap_annotations.json": "02e4b80f0a78150d1bd0fc21c9cee72ed65a61710c1b1f84368c52216b3e0ff7",
+    "nASAP/metadata.csv": "5c6622cae9ae34643fc5b35150de5e2891fd8ffbddd1fd579fa6b984014e6924",
+    "ASAP/Bach/Fugue/bwv_848/midi_score.mid": "90e6e132b7d1076a57706e42d626e3ae49d830beb156f623ef7cc419df54fbf1",
+    "nASAP/Bach/Fugue/bwv_848/Denisova06M.match": "e23dac109be4d114871e307dbb6c8f2b689920a6a133a3a1f42bddba97124ef2",
+    "ASAP/Bach/Fugue/bwv_848/Denisova06M.mid": "bae80f1467be7e6530a8f13b8930bf9c7637a2b9f9368ee1538c8643b1e4952d",
+    "nASAP/Bach/Fugue/bwv_848/Lee01M.match": "9647fdb8fb45295f79879f1b2f9db0f6bb90566cab67653ff5c0b3f3e237344c",
+    "ASAP/Bach/Fugue/bwv_848/Lee01M.mid": "76a3b66ea57b705d51ddc306f6c99eba7998edbd9cbae6234e249dc7a0fa3e16",
+    "nASAP/Bach/Fugue/bwv_848/LeeSH01M.match": "7c02f2c8ebf168787f3bb000fed9757191d2823c25163c904bd8dc41ca6661bf",
+    "ASAP/Bach/Fugue/bwv_848/LeeSH01M.mid": "7c4bdfef92c8eb343e06ae76f76342f8f38ee9d20d77a4a0e07bb876bddc8f01",
+    "nASAP/Bach/Fugue/bwv_848/Lin04M.match": "e4e534a64fd4c9eaf146b16776ca29cbc3119e5b4a02bf19326ad7ae2ae1cd5d",
+    "ASAP/Bach/Fugue/bwv_848/Lin04M.mid": "6815d94b424c83cc247f73192806c0873ecbef53b24a5b79c6e4184d3fd79be8",
+    "nASAP/Bach/Fugue/bwv_848/Lou01M.match": "6d824d9299034059732e9c3d24d69507ade63f9ad6ead496460c415f0dd4512f",
+    "ASAP/Bach/Fugue/bwv_848/Lou01M.mid": "9ba0018b0a09bc7b434a8b7819cb9fa138a1eea20e237bb9e3c4344ff9bbaad4",
+    "nASAP/Bach/Fugue/bwv_848/MiyashitaM01M.match": "912dbe2c13d8c69dc219d6b0faa508cb22e9f09626c79029cb03dac9d69e00c2",
+    "ASAP/Bach/Fugue/bwv_848/MiyashitaM01M.mid": "614ed6ef478eaec432b5f482e7cf7434530e89fed8c566db4835d0f8c8d238c9",
+    "nASAP/Bach/Fugue/bwv_848/Mizumoto03M.match": "51547451befb639dee585dc6c44c667248de965002bb06015ec840f557f40ad6",
+    "ASAP/Bach/Fugue/bwv_848/Mizumoto03M.mid": "a14190ad6df6ed756fd50369a7396908ed7acdd4516aac08e213a1aa14d73b27",
+    "nASAP/Bach/Fugue/bwv_848/SunY01M.match": "f6bdf958dbc8bcee19e40be7d7cc2142508abec44a84ef05899a27cbaa76c7a4",
+    "ASAP/Bach/Fugue/bwv_848/SunY01M.mid": "8ea167ff24370c3ffe5c2e7692a7dfc48616c21e3d088fbad895609c3248051b",
+    "nASAP/Bach/Fugue/bwv_848/Zhou01M.match": "b8434461c8f57d5b72a6a3d525755913512ce0d54003d35d43d8230c60d13c59",
+    "ASAP/Bach/Fugue/bwv_848/Zhou01M.mid": "32b1ceeb0f307f6809015a79f95b1d945e7f758d9f320c2425528282d5d0ac06"
+  },
+  "xml_sources": {
+    "ASAP": "https://raw.githubusercontent.com/fosfrancesco/asap-dataset/master/Bach/Fugue/bwv_848/xml_score.musicxml",
+    "nASAP": "https://raw.githubusercontent.com/CPJKU/asap-dataset/main/Bach/Fugue/bwv_848/xml_score.musicxml"
+  },
+  "limitations": [
+    "Not repeat unfolding or phrase/tension inference",
+    "Coordinate coverage is distinct from verification of every MIDI note",
+    "Performed onset assignment is a diagnostic, not the definition of symbolic structure",
+    "Voice-specific rests are not silence of the whole score",
+    "A single work does not establish other-work alignment or retrieval quality"
+  ]
+}

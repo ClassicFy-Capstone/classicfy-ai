@@ -1,0 +1,28 @@
+{
+  "code": {
+    "classicfy-ai/scripts/validate_score_beat_bridge.py": "4dab75227197e1c990665b86c38d7411ba9a94c2a201796302ebb406b4cab30f",
+    "classicfy-ai/src/preprocessing/score_beat_bridge.py": "9bf652b1dd8b050ab299755051c250c189c6a98e0e9dae110d25f231e8c6a7e8",
+    "classicfy-ai/src/preprocessing/musicxml_loader.py": "8d19ca7611c4a627adca6cd6119453ee1faef1de89ed5212891f0548e9776b82",
+    "classicfy-ai/src/preprocessing/asap_loader.py": "027f2b57b37dc5b9fd1da1d5a086471b84641cafa9a8e0dc00bd37eb3c6453c9",
+    "classicfy-ai/src/preprocessing/note_alignment.py": "32904687ab8b35242c8865e6ec4432d3b51e978d3ab8cae9d79928b68522e8c9",
+    "classicfy-ai/src/preprocessing/midi_loader.py": "e3dd3994494e35bcd7877e02bb3783a05d479dc44a6c378d1eea56afc5c46d7a",
+    "classicfy-ai/src/preprocessing/__init__.py": "29e069468054398f5a10975811f3fd7bf9c6fe29fff27a54da15d94ba0d81ee9",
+    "classicfy-ai/src/features/dynamics.py": "928b0308800486a4cb66e9c7f848d02922b555c8ee8452f3f1477c8bd6120a3d",
+    "classicfy-ai/src/features/beat_grid.py": "04197afaba32e3a4425ab6bcae8d745e64e6c0a618e7db31a1719acb18a8359e",
+    "classicfy-ai/src/features/models.py": "457176b04f2c3cac88bb7cb00dccf8e2327169f1dc5f06ee4b03351c47660195",
+    "classicfy-ai/scripts/verify_score_beat_bridge.py": "febb6b8d603e80ac58f2c60353a491b6c6b0a1cb363c33a29c00fa339ac2223b"
+  },
+  "results": {
+    "01_structure_feature_alignment.pdf": "9c9a17de0dcdba364c23af9e7cee37e956a35bc6e95980be4df7f5330f90dbe7",
+    "01_structure_feature_alignment.png": "75c175621f832a649f8b2622b2215e80cc0ae47b88e94cfc9c578dc08f4249a6",
+    "02_full_beat_coverage.png": "ed808c04bda3364d9db299ae5850277a8925b057326578b675b2a00a46a769af",
+    "beat_map.csv": "8ea537641f192a4e461295c0382250dcf91c75929996f7674a9a90e932f6e514",
+    "coverage.csv": "c4727bee63a8f33e0ee47b9102cbea2ca14d2f42380fe56894bac819167f7b3a",
+    "feature_join.csv": "0940321565264f31ca6e604871f6f29a3b16b11167386fc9350cf23b0709485f",
+    "note_diagnostics.csv": "c00697f648673c7e305fb116b410df1230a15c32db810bfab490cb51a6c658e1",
+    "note_links.csv": "3d534a8189eace33e3b1e9a0716a70383b420cc066df60c7166b64da2974791a",
+    "protocol.json": "4b229f28a4e2e8a7d5d3d23f1acc67c232f45325210410a4cfdc2a05fa71beee",
+    "summary.json": "647244e52d53fe7a1354d35fb4837d264c55613532a6f941db260ae4b7e80ef5",
+    "xml_notes.csv": "607d0d159a868e2daf9a70d402e00591d4934ded1d537c13e755cfc412c9166f"
+  }
+}

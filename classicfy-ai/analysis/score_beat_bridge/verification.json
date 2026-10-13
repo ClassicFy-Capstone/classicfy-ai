@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "numerical_checks": 147284,
+  "max_absolute_error": 2.842170943040401e-14,
+  "input_hashes_checked": 28,
+  "xml_events": 1582,
+  "note_link_rows": 14238,
+  "beat_map_rows": 1944,
+  "feature_join_rows": 1944,
+  "note_status_counts": {
+    "rest_position_only": 837,
+    "verified": 12411,
+    "tie_continuation_verified": 468,
+    "grace_unverified": 27,
+    "missing_midi": 27,
+    "verified_onset_duration_differs": 459,
+    "tie_head_unverified": 9
+  },
+  "method": "Independent raw XML quarters, regex match, pretty_midi ticks and scalar half-open assignment",
+  "scope": "Fixed BWV 848; does not validate repeat handling or other works",
+  "code_sha256": "febb6b8d603e80ac58f2c60353a491b6c6b0a1cb363c33a29c00fa339ac2223b",
+  "csv_sha256": {
+    "xml_notes.csv": "607d0d159a868e2daf9a70d402e00591d4934ded1d537c13e755cfc412c9166f",
+    "note_links.csv": "3d534a8189eace33e3b1e9a0716a70383b420cc066df60c7166b64da2974791a",
+    "beat_map.csv": "8ea537641f192a4e461295c0382250dcf91c75929996f7674a9a90e932f6e514",
+    "feature_join.csv": "0940321565264f31ca6e604871f6f29a3b16b11167386fc9350cf23b0709485f",
+    "coverage.csv": "c4727bee63a8f33e0ee47b9102cbea2ca14d2f42380fe56894bac819167f7b3a"
+  }
+}
