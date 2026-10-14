@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "numerical_checks": 2990332,
+  "maximum_absolute_error": 3.552713678800501e-15,
+  "scope": "Independent scalar B/T/F/P and held-out judges, verified H CSV, train scales, all standalone/blended distances, Top5, metadata ties, same-work expectations, 20 balanced-gallery seeds and macro aggregation",
+  "limitations": "Reuses previously verified score/feature join and H CSV; no musical phrase/key accuracy or new tension-episode judge",
+  "verifier_sha256": "cc5514fda244435ebc056314a795f3bb7e4a422034e09a0b52216f2bb1bbe534"
+}

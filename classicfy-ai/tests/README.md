@@ -2,6 +2,12 @@
 
 테스트는 검증 대상의 책임에 따라 나눈다.
 
+`unit/embedding/test_standalone_structure.py`의 4개 테스트는 전곡 B 값을 바꿔도 단독 P/H 거리가
+바뀌지 않는 조건, 좌표 수와 무관한 동일 블록 가중치, query 값에 독립적인 train scale,
+미정의 입력을 채우지 않는 처리를 확인한다. 기존 구조 검색 7개와 총 11개가 skip 없이 통과했다.
+[단독 표현 비교](../analysis/standalone_structure/README.md)는 기존 335연주의 순위/점수 재현과
+독립 검산 2,990,332개를 포함한다. 음악적 프레이즈·조성 정답을 검증하는 테스트는 아니다.
+
 `unit/preprocessing/test_musicxml_loader.py`는 쓰인 악보의 못갖춘마디·화음·꾸밈음·성부별
 위치, divisions 변경, slur·조표·반복 보존, namespace·ID 안정성 및 잘못된 입력 처리를 검증한다.
 실제 악보 110개에 대한 필드 보존 검증은 [MusicXML 로더 보고서](../analysis/musicxml_loader/README.md)에 있다.

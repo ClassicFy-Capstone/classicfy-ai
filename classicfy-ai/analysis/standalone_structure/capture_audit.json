@@ -1,0 +1,35 @@
+{
+  "phrase_hypotheses": 1814,
+  "expert_confirmed_phrases": 0,
+  "stop_evidence": {
+    "fixed_length_cap": 477,
+    "score_end": 55,
+    "global_notated_silence": 461,
+    "notation_fermata": 59,
+    "long_same_scope_slur_arrival": 766
+  },
+  "fixed_length_cap_fraction": 0.262954796030871,
+  "tonal_summary": {
+    "works": 55,
+    "performances": 570,
+    "score_clouds": 26349,
+    "key_contexts": 122,
+    "key_statuses": {
+      "estimated_mode": 82,
+      "explicit_mode": 28,
+      "ambiguous_mode": 12
+    },
+    "key_modes": {
+      "major": 71,
+      "minor": 39,
+      "unknown": 12
+    },
+    "usable_intervals": {
+      "cloud_diameter": 266264,
+      "cloud_momentum": 256436,
+      "tensile_strain": 239595
+    },
+    "source_phrase_commit": "ceee302"
+  },
+  "interpretation": "Input availability and arithmetic are verified; musical segmentation/local key accuracy is unmeasured. Limited score rules are a modeling choice, not a runtime fallback caused by unavailable XML."
+}

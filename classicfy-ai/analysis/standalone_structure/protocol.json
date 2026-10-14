@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-14",
+  "status": "frozen_standalone_ablation",
+  "K": 5,
+  "reference_cohort_sha256": "eb1bfcb7b9602ace276df23185eab419f176c31c167454e14ec7ccfc8c12e907",
+  "arms": {
+    "B": [
+      "B"
+    ],
+    "B+T": [
+      "B",
+      "T"
+    ],
+    "B+F": [
+      "B",
+      "F"
+    ],
+    "B+P": [
+      "B",
+      "P"
+    ],
+    "B+H": [
+      "B",
+      "H"
+    ],
+    "B+P+H": [
+      "B",
+      "P",
+      "H"
+    ],
+    "T": [
+      "T"
+    ],
+    "F": [
+      "F"
+    ],
+    "P": [
+      "P"
+    ],
+    "H": [
+      "H"
+    ],
+    "P+H": [
+      "P",
+      "H"
+    ],
+    "M-CT": [
+      "composer",
+      "work_type"
+    ]
+  },
+  "dimensions": {
+    "B": 14,
+    "T": 15,
+    "F": 66,
+    "P": 66,
+    "H": 198
+  },
+  "standalone": "Remove the extra global B block; P/H still contain context-conditioned means",
+  "training": "Reuse family-balanced train-only SD and other-family median calibration; equal squared block distances",
+  "views": "Same alternating full 64-original-beat A/B blocks, both directions; original indices and pair cuts retained",
+  "judges": "Unchanged E-L/E-T/E-R/E-S, opposite view only; E-S covers provisional phrase phase Tempo/Dynamics signs, not tension episodes",
+  "support": "Exact prior 335 cohort, including its strict 20-shift support selection; no new exclusion or threshold relaxation",
+  "controls": "Same-work recording exact expectation; 20 balanced-gallery seeds with three recordings per work/grid; metadata ties 100 seeds",
+  "reconstruction": "Verified P/H CSVs plus original-index join; reproduce all six prior B-based arms and M-CT scores/ranks before interpreting new arms",
+  "limits": [
+    "Three test and three validation families; exploratory, no population CI",
+    "No new general 57D/119D or CNN/BiLSTM comparison",
+    "No tension-conditioned judge or whole-episode holdout added here",
+    "Provisional phrase boundaries and signature-based tension unchanged",
+    "No standalone structure-shift control; previous controls covered B+P/B+H/B+P+H",
+    "Current catalog normalization and disjoint-beat consistency limits remain"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "prior_rankings_reproduced": 1232,
+  "prior_query_score_max_error": 4.440892098500626e-16,
+  "phrase_response_max_error": 0.0,
+  "original_features": "Every included original values/feature mask digest matches prior phrase report",
+  "limits": "Verified H CSVs reused; this run does not revalidate musical phrase or key truth"
+}

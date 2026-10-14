@@ -37,6 +37,7 @@
 | `tonal_tension/` | 55악보의 Spiral Array 3지표·조성 가설/불확실성과 잔차 반응 | [조성 긴장도 계산](tonal_tension/README.md) |
 | `structure_response_comparison/` | 같은 표본의 프레이즈·긴장도 Top 5 비교·별도 구간 평가와 구조 섞기/후보 수 대조 | [구조 반응의 유용성 비교](structure_response_comparison/README.md) |
 | `structure_conditioned_style_plan/` | 16번 작업 완료 근거·이슈별 상태와 원래 beat 연결부터 구조 기반 검색까지의 구현 계획 | [16번 진행 추적 및 다음 계획](structure_conditioned_style_plan/README.md) |
+| `standalone_structure/` | 전곡 평균·범위 블록을 뺀 프레이즈·긴장도 반응의 단독 검색과 동일 표본의 결합/고정 구간 대조 | [단독 표현 비교 및 구조 포착의 한계](standalone_structure/README.md) |
 | `_interpretation_embedding/` | 같은 작품 3연주의 차이·MIDI 원자료와 다른 작품 A·B·C 유사 특징 검색 | [연주 차이와 검색 사례](_interpretation_embedding/README.md) |
 | `_feature_search_roles/` | 다른 작품 검색에서 feature별 후보/순위 변화와 검색에 안 쓴 feature의 일치 검사 | [feature별 검색 역할](_feature_search_roles/README.md) |
 | `_listening_evaluation/` | 3인 청취 평가의 연주 선정·발췌·비공개 거리와 준비 기록 | [진행자 자료](_listening_evaluation/README.md) · [참가자 도구](../tools/listening_evaluation/README.md) |
