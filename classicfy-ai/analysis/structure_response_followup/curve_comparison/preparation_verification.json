@@ -1,0 +1,307 @@
+{
+  "source_sha256": "db0eba5697093e421dc5ea208d45575ae85c261b2ee4877dca7d8d5f281392b6",
+  "map_sha256": "b18f0cd79afc4037502598f4acc837d63d170e8b7b4689f88b4bd2015f888e50",
+  "xml_sha256": {
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Bach/Fugue/bwv_883/xml_score.musicxml": "a6a57e969b03231b44cf61d87e69d68b16b44a2c3f13f08335e214a43cd7dd35",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/11-1/xml_score.musicxml": "6a7c26118aa61c1b2b82e2503b10d40c8b3fef584fa8e2ade30ee5f78be231a6",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/16-1/xml_score.musicxml": "54eb37ede22d5464c3bcf7d5436b3a2f4d7e1c44f7dd36dd572b779c4e95307c",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/17-1_no_repeat/xml_score.musicxml": "7cf6fbda77afed00994424a0cbbbc766debe19daff45d3f3b5a218191734acfa",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/21-1_no_repeat/xml_score.musicxml": "3dcdd4878c7946e2d347339124d45f6b4cb24e8922c4f01cd4e05db871bb6ac3",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/26-1/xml_score.musicxml": "65a221c59288c549385052f85f6f973fc9d291d86abfdf384efb9253881def1d",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/27-1/xml_score.musicxml": "44979eef81a17ad6c79f955f20645328e5c6a7491c8c5a344c10f01c6deeec2f",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/31-1/xml_score.musicxml": "3a1bd1b25a2f1ac8881be318f301a2f71b0bae347b374067d82c24a7f5e3b5b0",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/32-1/xml_score.musicxml": "60b205a25ca4cdc9b2d6b8f06425e0177a2bcc6239e683e3e1a7234184640aaa",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/4-1/xml_score.musicxml": "ad99e639297c70bbe4d7a6a60b80b49de547719b5ddf3f86da23bef039d33d27",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Beethoven/Piano_Sonatas/7-1/xml_score.musicxml": "c6360750d04606bceb89446d31a44e1091b09424a6ac4fbf8288fcbc9a4f9e83",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Ballades/1/xml_score.musicxml": "320d521bff13a637c6e980d5edf3b8519e1bcd35b813a97e1de33e77272d2ab5",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Ballades/4/xml_score.musicxml": "b58cbc177aa1ba39e8db49b02e55ccc709647284f1d0c716fe46ba3a1f6635a5",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Barcarolle/xml_score.musicxml": "d34aa90ddb57d26bb817bd3ff8086a7bbb9494243df4b56d4a71424abec7f501",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Etudes_op_10/12/xml_score.musicxml": "eb2f2fc7f8e634bc76b8847103be57edfe460fe604f40f7dcae47825c3d3fa4a",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Etudes_op_10/4/xml_score.musicxml": "75becc16d2673bd1e5d594917aae1a4ef06cd67bbac1b08e2db5a7efeae71a23",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Etudes_op_10/8/xml_score.musicxml": "81bda839e432430da30b6d73f3c408d25f3edb71ef31db9e837ecda8befc5632",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Etudes_op_25/10/xml_score.musicxml": "0fb04b03b9b7cbcbb28d39b738c37aca7add99df199d9830a8d75a5f6a067c48",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Etudes_op_25/12/xml_score.musicxml": "14ee5350019164991b33071c2eee39864bd3d90d0fde7ee4f537713983a74a81",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Scherzos/31/xml_score.musicxml": "3ea7bca6b39aadda2929493e01e6e7c5e17d1942659cc1926da3a3bdf4d4e583",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Sonata_3/2nd/xml_score.musicxml": "ee51cc1833163929acf3a9052056a36fb3366883e5c077e6f614224767724ac9",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Chopin/Sonata_3/4th/xml_score.musicxml": "4372cf85bd2e1b836cf9c3f9c1b95c0ef49f53ad4b515a860106b7d6978d5b14",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Haydn/Keyboard_Sonatas/50-1_no_repeat/xml_score.musicxml": "7bf27c56f5f04968dca796d97ab7ac3e0d78b2df9d0f5c340354f453787a67d3",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Liszt/Ballade_2/xml_score.musicxml": "986b81ee58314b646182e050c58da9778dd2fee6a51ac6ff280c1c42d131f19a",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml": "0cf29e7d09a71efc6fc791e465bb5ba97ee11ac94aed72fe7d879c9f854ec543",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Liszt/Transcendental_Etudes/10/xml_score.musicxml": "e63f819fa039430d8eeea95d0f02e59d41e2517e36eb37dc61a3e20b74a44351",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Liszt/Transcendental_Etudes/5/xml_score.musicxml": "6736543490384fc394a213a3ff69ed8ab27c1167e2f8aec14cad44135d7ea1a4",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Mozart/Piano_Sonatas/8-1/xml_score.musicxml": "2c7ab17956e15d27e9b70eafd1ef8248c26d968306b2b358cb0fb82ca7bc155e",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Schubert/Piano_Sonatas/894-2_no_repeat/xml_score.musicxml": "b7ddbbd8f762ca37b52797966fcb71caecaaf6c5e1c1c22b5a4aeb6552683079",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/nASAP/Scriabin/Sonatas/5/xml_score.musicxml": "a42a3dd4de392fca3b4c4b02f7f191ee5cccc3ed9680ca9bebd9c885ac728b65"
+  },
+  "max_H_response_reconstruction_error": 0.37189163486953447,
+  "max_tertile_threshold_error": 8.326672684688674e-17,
+  "float_tie_affected_summaries": [
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/ADIG05M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.15932611403033528
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/ADIG05M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.10382751764310189
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/AbdelmoulaJS03M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.17542180294567128
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/AbdelmoulaJS03M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.14891454219524158
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Ahfat02M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.1978306068278033
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Ahfat02M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.27699892874422805
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Ahn01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.28253830888046133
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Ahn01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.2679448966467026
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/BrendleA03M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.1863884839314418
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/BrendleA03M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.2901613418753186
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Goh02.mid",
+      "view": 0,
+      "max_coordinate_error": 0.1656991585915487
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Goh02.mid",
+      "view": 1,
+      "max_coordinate_error": 0.37189163486953447
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/HUAN_B01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.22757849983559886
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/HUAN_B01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.09083688418981439
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Huang01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.13728263860304457
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Huang01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.3277610217614413
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/HuangSW08M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.2198434922297311
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/HuangSW08M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.14604623609715128
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Karpeyev01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.23367830057782518
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Karpeyev01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.0769033293690654
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Kavalerova01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.30127483630793794
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Kavalerova01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.21629108808657715
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/LeungM03M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.1407147972443613
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/LeungM03M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.12290761429514907
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Mikhailoff04.mid",
+      "view": 0,
+      "max_coordinate_error": 0.0949951915634033
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Mikhailoff04.mid",
+      "view": 1,
+      "max_coordinate_error": 0.24651122634906475
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Na06M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.20175543808872215
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Na06M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.3089068789297942
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/SINKEV02.mid",
+      "view": 0,
+      "max_coordinate_error": 0.14617543534170738
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/SINKEV02.mid",
+      "view": 1,
+      "max_coordinate_error": 0.12992990803728977
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/SOLOM04.mid",
+      "view": 0,
+      "max_coordinate_error": 0.16365082806894668
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/SOLOM04.mid",
+      "view": 1,
+      "max_coordinate_error": 0.1250311140142264
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Stahievitch02.mid",
+      "view": 0,
+      "max_coordinate_error": 0.22105369723445611
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Stahievitch02.mid",
+      "view": 1,
+      "max_coordinate_error": 0.28299486917327155
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Sun01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.19932588009491553
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Sun01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.1418893622619355
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Tang01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.1922399768247468
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Tang01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.23573653754148527
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/YOU01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.2759290552790832
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/YOU01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.13891069213392448
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Zuber04M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.1901126668975095
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/31-1/Zuber04M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.1940765695095128
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/32-1/DupreeF03M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.037442465669856456
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/32-1/HouY04M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.034860477609504364
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/32-1/Jussow02.mid",
+      "view": 1,
+      "max_coordinate_error": 0.06366819775856772
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/32-1/Jussow06M.mid",
+      "view": 1,
+      "max_coordinate_error": 0.04608230425500326
+    },
+    {
+      "key": "Beethoven/Piano_Sonatas/32-1/MORET01.mid",
+      "view": 1,
+      "max_coordinate_error": 0.04544483853661535
+    },
+    {
+      "key": "Schubert/Piano_Sonatas/894-2_no_repeat/BianF14.mid",
+      "view": 0,
+      "max_coordinate_error": 0.11774477327472943
+    },
+    {
+      "key": "Schubert/Piano_Sonatas/894-2_no_repeat/CHEN11M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.05013349417128915
+    },
+    {
+      "key": "Schubert/Piano_Sonatas/894-2_no_repeat/Chan01.mid",
+      "view": 0,
+      "max_coordinate_error": 0.0681272975769838
+    },
+    {
+      "key": "Schubert/Piano_Sonatas/894-2_no_repeat/HouY09.mid",
+      "view": 0,
+      "max_coordinate_error": 0.06768372315960293
+    },
+    {
+      "key": "Schubert/Piano_Sonatas/894-2_no_repeat/Lee10M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.04462277151747772
+    },
+    {
+      "key": "Schubert/Piano_Sonatas/894-2_no_repeat/SINKEV12M.mid",
+      "view": 0,
+      "max_coordinate_error": 0.050726578958724934
+    }
+  ],
+  "interpretation": "Reconstructed finite coverage and raw score quantile thresholds match within 1e-10. Tiny float differences can change tertile membership on ties, hence original saved H descriptors are used without alteration; rounded raw curves are used only for new peak detection and lag judges.",
+  "curves_sha256": "7f0f377b1b9617df3f77ed5017cd3c5fdd8304bd196305de7f6a1d2d2c8516e3"
+}

@@ -1,0 +1,129 @@
+{
+  "status": "passed_coordinate_and_context_audit",
+  "counts": [
+    {
+      "view": 0,
+      "role": "train",
+      "category": "P",
+      "groups": 254,
+      "curves": 2750,
+      "min_recordings": 4,
+      "max_recordings": 28,
+      "groups_with_three_or_more": 254
+    },
+    {
+      "view": 0,
+      "role": "train",
+      "category": "H",
+      "groups": 476,
+      "curves": 5035,
+      "min_recordings": 4,
+      "max_recordings": 28,
+      "groups_with_three_or_more": 476
+    },
+    {
+      "view": 0,
+      "role": "validation",
+      "category": "P",
+      "groups": 52,
+      "curves": 596,
+      "min_recordings": 9,
+      "max_recordings": 21,
+      "groups_with_three_or_more": 52
+    },
+    {
+      "view": 0,
+      "role": "validation",
+      "category": "H",
+      "groups": 69,
+      "curves": 893,
+      "min_recordings": 9,
+      "max_recordings": 21,
+      "groups_with_three_or_more": 69
+    },
+    {
+      "view": 0,
+      "role": "test",
+      "category": "P",
+      "groups": 47,
+      "curves": 648,
+      "min_recordings": 6,
+      "max_recordings": 23,
+      "groups_with_three_or_more": 47
+    },
+    {
+      "view": 0,
+      "role": "test",
+      "category": "H",
+      "groups": 84,
+      "curves": 1296,
+      "min_recordings": 6,
+      "max_recordings": 23,
+      "groups_with_three_or_more": 84
+    },
+    {
+      "view": 1,
+      "role": "train",
+      "category": "P",
+      "groups": 215,
+      "curves": 2248,
+      "min_recordings": 4,
+      "max_recordings": 28,
+      "groups_with_three_or_more": 215
+    },
+    {
+      "view": 1,
+      "role": "train",
+      "category": "H",
+      "groups": 454,
+      "curves": 4599,
+      "min_recordings": 4,
+      "max_recordings": 28,
+      "groups_with_three_or_more": 454
+    },
+    {
+      "view": 1,
+      "role": "validation",
+      "category": "P",
+      "groups": 24,
+      "curves": 248,
+      "min_recordings": 9,
+      "max_recordings": 21,
+      "groups_with_three_or_more": 24
+    },
+    {
+      "view": 1,
+      "role": "validation",
+      "category": "H",
+      "groups": 54,
+      "curves": 654,
+      "min_recordings": 9,
+      "max_recordings": 21,
+      "groups_with_three_or_more": 54
+    },
+    {
+      "view": 1,
+      "role": "test",
+      "category": "P",
+      "groups": 44,
+      "curves": 607,
+      "min_recordings": 6,
+      "max_recordings": 23,
+      "groups_with_three_or_more": 44
+    },
+    {
+      "view": 1,
+      "role": "test",
+      "category": "H",
+      "groups": 76,
+      "curves": 1191,
+      "min_recordings": 6,
+      "max_recordings": 23,
+      "groups_with_three_or_more": 76
+    }
+  ],
+  "examples_sha256": "45ecb58453b10419569bd1075759c266cecf9cc87a7b7b56c53bdc152cf20cf8",
+  "map_sha256": "b18f0cd79afc4037502598f4acc837d63d170e8b7b4689f88b4bd2015f888e50",
+  "passages_sha256": "8bb2f5ecd0c5a5643ec6d9f3d52d100b30f0ff5caed509a2f91110d39017d621",
+  "note": "Audit uses score identities/support only; no test response pair targets or retrieval scores computed."
+}

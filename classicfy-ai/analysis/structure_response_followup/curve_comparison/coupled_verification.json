@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "checks": 479448,
+  "max_absolute_error": 2.842170943040401e-14,
+  "scope": "Input/result digests, separately assembled performance/tension equal-weight window costs, train calibration, all coupled distance blocks and all query scores."
+}

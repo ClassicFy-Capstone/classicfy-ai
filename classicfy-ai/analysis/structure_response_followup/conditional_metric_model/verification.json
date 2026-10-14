@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "unit_tests": 13,
+  "train_only_one_step_smoke_checks": 8,
+  "coordinate_and_context_group_audit": "passed_coordinate_and_context_audit",
+  "trained_checkpoints_created": false,
+  "new_test_rankings_computed": false,
+  "source_files_match_completed_previous_manifest": true
+}

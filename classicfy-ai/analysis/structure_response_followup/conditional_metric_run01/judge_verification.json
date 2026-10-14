@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "direction": "A_to_B",
+      "axis": "E-L",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "A_to_B",
+      "axis": "E-T",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "A_to_B",
+      "axis": "E-R",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "A_to_B",
+      "axis": "E-S",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "A_to_B",
+      "axis": "E-PC",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "A_to_B",
+      "axis": "E-PN",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "A_to_B",
+      "axis": "E-HL",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "B_to_A",
+      "axis": "E-L",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "B_to_A",
+      "axis": "E-T",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "B_to_A",
+      "axis": "E-R",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "B_to_A",
+      "axis": "E-S",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "B_to_A",
+      "axis": "E-PC",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "B_to_A",
+      "axis": "E-PN",
+      "max_frozen_score_error": 0.0
+    },
+    {
+      "direction": "B_to_A",
+      "axis": "E-HL",
+      "max_frozen_score_error": 0.0
+    }
+  ],
+  "source_comparison_sha256": "0b7fdd3da861161de0f4f03cb67d5dd9c85e3e8626d454870554ce2ebfc8aa4a",
+  "source_curves_sha256": "7f0f377b1b9617df3f77ed5017cd3c5fdd8304bd196305de7f6a1d2d2c8516e3",
+  "within_judges_sha256": "f15e7864fcd34d5402d344ff088f3bdb6829f5543fa381492550c89c23c4b534",
+  "baseline_distances_sha256": "238fb45647ca98cbf4ef4184d042cd33b79e3b843a385a9bcde78f0756f2f228",
+  "interpretation": "Heldout candidate extension uses frozen train-only scales; all14 opposite-view percentile arrays match prior gallery results."
+}

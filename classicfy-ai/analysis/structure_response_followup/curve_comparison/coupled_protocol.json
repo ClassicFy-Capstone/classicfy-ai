@@ -1,0 +1,14 @@
+{
+  "status": "supplemental_search_defined_after_initial_curve_results_before_its_own_results",
+  "reason": "Peak-aligned performance curves alone do not preserve the detailed tension trajectory. Pair the score tension curve and performance curve from the same window.",
+  "pairing": "Every 17-beat window has its own rounded three-metric score-tension curve and seven-channel performance curve. Performance is centered by its own search-view global mean.",
+  "cost": "For each pair of windows, equally weight mean channel-scaled performance squared distance and scaled tension squared distance. Match paired windows, not independently chosen tension/performance matches. Use symmetric nearest-window mean and same train-only block median calibration.",
+  "controls": [
+    "H_context_only: compare score tension curves without any performance input",
+    "same returned work random recording expectation",
+    "20 three-candidate seeds",
+    "20 independently permuted performance point-order seeds with score-tension curves held fixed"
+  ],
+  "unchanged": "Same 329 recordings, 241 gallery, 45 test and 43 validation queries, opposite-view judges and no new fitted neural model.",
+  "limitation": "Peak windows are provisional, not verified full tension episodes; equal weights are fixed before these outcomes, not selected by results."
+}

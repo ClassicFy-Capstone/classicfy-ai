@@ -1,0 +1,24 @@
+{
+  "source_sha256": "db0eba5697093e421dc5ea208d45575ae85c261b2ee4877dca7d8d5f281392b6",
+  "recordings": 335,
+  "gallery": 247,
+  "queries": 88,
+  "max_distance_reconstruction_error": 0.0,
+  "max_original_score_error": 1.4210854715202004e-14,
+  "definitions": {
+    "means_only": "Only the seven context-conditioned level means; drop all 15 change coordinates per bin.",
+    "change_only": "Drop seven level means; keep delta mean, delta RMS and joint Tempo-Dynamics moment.",
+    "mean_centered": "Subtract same-recording, same-search-view global signed mean from each of seven context means; other coordinates unchanged.",
+    "shared_variance": "Between-recording variance of level coordinates decomposed into a shared three-bin component and bin contrasts; channel-scaled using gallery global-mean SD; family-balanced across the frozen 335 recordings.",
+    "correlations": "Signed Pearson correlation between context mean and same-view global signed mean, family-balanced. Within-piece correlations first subtract each piece mean. B uses median absolute rubato, so B is not identical to the seven signed global means.",
+    "retrieval": "Same gallery, per-family top-5 cap, opposite-view saved judges, gallery-only SD and distance-median calibration; no tuning."
+  },
+  "limitations": [
+    "Exploratory diagnostics chosen after viewing prior results, not a preregistered success test.",
+    "Only three test and three validation families; no population inference.",
+    "No tension-specific judge, no new phrase truth, no new model.",
+    "Delta coordinates may still encode overall change scale; removing levels is not removing all range information.",
+    "Shared-level variance fraction concerns level coordinates only, not all 66/198 coordinates.",
+    "Main comparisons retain unequal candidate counts by work; exact same-work expectation and existing twenty balanced-gallery seeds are included."
+  ]
+}

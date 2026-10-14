@@ -1,0 +1,2 @@
+# Preserve immutable snapshot bytes, including CSV CRLF and source provenance hashes.
+** -text

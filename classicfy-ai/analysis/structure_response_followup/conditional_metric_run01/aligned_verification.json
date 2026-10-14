@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": 114960,
+  "max_scalar_error": 4.263256414560601e-14,
+  "scope": "All exploratory aligned rankings, opposite-view scores, random expectations and seed aggregates; scalar corresponding-passage distance samples for all6 works, both views, all3 primary seeds.",
+  "limits": "Additional inference diagnostic was defined after seeing primary results and remains exploratory."
+}

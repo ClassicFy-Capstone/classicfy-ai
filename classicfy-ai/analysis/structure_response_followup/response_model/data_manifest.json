@@ -1,0 +1,30 @@
+{
+  "source_curves_sha256": "7f0f377b1b9617df3f77ed5017cd3c5fdd8304bd196305de7f6a1d2d2c8516e3",
+  "source_comparison_sha256": "0b7fdd3da861161de0f4f03cb67d5dd9c85e3e8626d454870554ce2ebfc8aa4a",
+  "map_sha256": "b18f0cd79afc4037502598f4acc837d63d170e8b7b4689f88b4bd2015f888e50",
+  "examples_sha256": "45ecb58453b10419569bd1075759c266cecf9cc87a7b7b56c53bdc152cf20cf8",
+  "views": [
+    {
+      "view": 0,
+      "curves": 15877,
+      "role_curve_counts": {
+        "train": 11003,
+        "validation": 2041,
+        "test": 2833
+      },
+      "lag_supported_coordinates": 130032
+    },
+    {
+      "view": 1,
+      "curves": 13800,
+      "role_curve_counts": {
+        "train": 9756,
+        "validation": 1273,
+        "test": 2771
+      },
+      "lag_supported_coordinates": 115988
+    }
+  ],
+  "context": "Three tension values+three validity channels+position+log score-interval span+five type channels",
+  "targets": "17-point curve differences/positions; H lag units are original beats. These are observed normalized-residual properties, not raw crescendo/ritardando labels."
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checks": 60499,
+  "max_scalar_error": 2.842170943040401e-14,
+  "max_checkpoint_reencode_error": 2.86102294921875e-06,
+  "scope": "Data/source hashes, balanced train-only scale moments, train/validation/test recording separation, actual original training source snapshot for repaired serializer metadata, checkpoint minimum, identical initialization, sampled checkpoint reload embeddings, every top-5 rank/score and all macro aggregates.",
+  "unit_tests": "8 meaningful tests passed: hidden-target leakage, score-only isolation, order preservation, collapse prevention, lag sign/missing support, amplitude-independent targets, no validation/test fit, and finite gradients.",
+  "limitations": "Numeric proxy verification; no human music-structure/style ground truth. Scalar learned F/P set-distance samples also match."
+}

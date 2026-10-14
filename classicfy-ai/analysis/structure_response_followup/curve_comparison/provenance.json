@@ -1,0 +1,27 @@
+{
+  "source": "db0eba5697093e421dc5ea208d45575ae85c261b2ee4877dca7d8d5f281392b6",
+  "curves": "7f0f377b1b9617df3f77ed5017cd3c5fdd8304bd196305de7f6a1d2d2c8516e3",
+  "code": {
+    "prepare.py": "69de2232dc60dd019ece9dff844ae57ff5f3044af38ca89a08bdf7af341a8857",
+    "compare.py": "2256adf33391dabb30094f2f4a118316393487e1c07637b3869b943ee84e83e9"
+  },
+  "results": {
+    "summary.csv": "29a8c8203f11ee17943704e5bf7f5c3d4ac848e06d9ae856b91b035d54927ffd",
+    "followup_protocol.json": "f76bd60cc2a2fb119ec26d465db289bc213866b58d7add343e2c684826c63d75",
+    "coverage.csv": "162b183144cf1cae6fa51d55b1445a141bf78b1e3f860675153764adf26c1c93",
+    "controls.csv": "5e500259ebf8631614813ab5b8677bff15959af1412d59b9082f0cb85731f243",
+    "curves.npz": "7f0f377b1b9617df3f77ed5017cd3c5fdd8304bd196305de7f6a1d2d2c8516e3",
+    "test_curves.py": "02d394f3b40469d76ae642ad5eb01245460bc29199f9ae787bb1f0ddf76e41ed",
+    "cohort.json": "678cda9adaa7a0cb6fcf0dd30d1334b509187a7f71f7f6eaa6f3e860364f3a85",
+    "rankings.csv": "b41893908e6fcb7c62c2c2f46de90b398ccb2c3f6ebcd4b0adebfb943dd9e2eb",
+    "comparison.npz": "0b7fdd3da861161de0f4f03cb67d5dd9c85e3e8626d454870554ce2ebfc8aa4a",
+    "scores.csv": "4def8885dd0290c9d1b6bee67e2b71a9728b96e47bfd806da839997e652ee485",
+    "protocol.json": "c22bd3fbc57aa73ef21623e6cd8e078ed08159d19772deb858a4f89036b07992",
+    "preparation_verification.json": "2aee37c9b3ae8dd7f6d99efd221bf6bf174167fb3473182893defe0bb794c2c2",
+    "verify.py": "12f3d1837e5f0cb615caf5ae7c33c39496b0be9845c35de41650e6f402ceac0f",
+    "control_summary.csv": "6ec636231f1990165446c5b508478cd86b7991e4312a55c88d33cd713d6c572c",
+    "compare.py": "2256adf33391dabb30094f2f4a118316393487e1c07637b3869b943ee84e83e9",
+    "prepare.py": "69de2232dc60dd019ece9dff844ae57ff5f3044af38ca89a08bdf7af341a8857",
+    "scales.json": "b470390275c608612195ef418a922470866db078ecf600c329673b98068c82d0"
+  }
+}

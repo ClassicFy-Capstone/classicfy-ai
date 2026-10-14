@@ -1,0 +1,8 @@
+{
+  "status": "exploratory_diagnostic_defined_after_initial_retrieval_results_not_primary_protocol",
+  "reason": "Training distance supervision matches the same score passage while primary set retrieval freely matches nearest passages. Check this single fixed inference change without retraining or selecting weights.",
+  "method": "Within each heldout piece/grid/view/category, retain only passages shared by every eligible recording. Compute squared unit-embedding distance for each corresponding passage, average within kind, then equally average the3 H metrics. No coordinate scaling or outcome-selected weights. Exclude own recording; top3 and opposite-view within-work judges unchanged.",
+  "cohort": "All43 validation and45 reused-test recordings retained; all6 heldout work/grid groups have shared passages for all4 types in both views",
+  "models": "All4 trained conditions and2 matching untrained conditions, all3 seeds and both directions",
+  "limits": "Exploratory after looking at primary results; not a new untouched test. Exact aligned inference applies within the same work, not across different works. No final perceptual validation."
+}

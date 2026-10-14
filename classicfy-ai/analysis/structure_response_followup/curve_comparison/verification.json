@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": 649839,
+  "max_absolute_error": 2.842170943040401e-14,
+  "scope": "Artifact digests, all curve span validity and A/B separation, scalar sampled F/P set distances, full scalar B distance/calibration, every top-5 rank/score and all macro aggregates. Five targeted functional tests separately passed.",
+  "limits": "Does not establish musical phrase truth, listener tension truth or preferred-recording similarity."
+}

@@ -1,0 +1,15 @@
+{
+  "code_sha256": "868522d9227dee11653de6cdb92f7f43d751672cdbcfc682c3f4d9c307ffcb62",
+  "source_comparison": "0b7fdd3da861161de0f4f03cb67d5dd9c85e3e8626d454870554ce2ebfc8aa4a",
+  "source_curves": "7f0f377b1b9617df3f77ed5017cd3c5fdd8304bd196305de7f6a1d2d2c8516e3",
+  "results": {
+    "coupled_scores.csv": "ccf5e11cd8a47e5252c97aefbe040b97ad37f1584d6aa583073c625daf954094",
+    "coupled_scales.json": "e0c9c3c905d066873bdc8325889b1fb1ee621116f2ea1842c24b42bfdcb622db",
+    "coupled_summary.csv": "64c4ed7168737a5a3ed6be44281d57b238a772298ceaf979333f2e940b314296",
+    "coupled_protocol.json": "232cf659412f696c4bf10a5eb84220627648c30b51325398a221072ed7549b88",
+    "coupled_distances.npz": "615845c16ca9f89a85cf4b30f344782525082618cebb5b27d9b32f10641d7783",
+    "coupled_rankings.csv": "fd2ff56f24383247ea8db35ec1a8afed733bd676368b90f5cc14a87fa605f946",
+    "coupled_control_summary.csv": "4540f6a14c022e1809412ead268eafbda74e52b638d39aacd1bbb201591ed0aa",
+    "coupled_controls.csv": "3e5d0e47126a7955eabac086104f1af1b863796dd98c97d3834a82d6c547cd54"
+  }
+}

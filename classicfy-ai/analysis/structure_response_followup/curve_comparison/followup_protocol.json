@@ -1,0 +1,7 @@
+{
+  "status": "supplemental_judge_defined_after_initial_curve_and_order_control_results_before_its_own_results",
+  "reason": "E-PC rose substantially but independently permuting search curve point order preserved most of the gain. Test whether agreement is primarily change amplitude rather than relative temporal shape.",
+  "E-PN": "On the opposite view, use existing 24-point phrase-curve Tempo/Dynamics differences. Retain curves only when both channel delta RMS exceed 1e-6, divide each channel's differences by its own RMS, then compute symmetric nearest-curve distance with gallery-only channel SD and weighted percentile scores.",
+  "unchanged": "329-recording cohort, original search descriptors, all search rankings, all other judges, same-work expectations, candidate controls and order permutation seeds.",
+  "interpretation": "Amplitude-normalized curve consistency proxy, not an independent human judgment or proof of phrase correctness. Post hoc diagnostic; no search tuning based on its values."
+}

@@ -26,6 +26,10 @@ ATEPP DualDTW 데이터의 공통 패턴 제거·표준화·다섯 feature 시�
 [시계열 연주 임베딩](classicfy-ai/src/embedding/README.md)은 기존 beat별 feature를
 1D CNN으로 읽고, 숨긴 특징을 복원하는 자기지도 학습과 다른 작품 후보 검색을 제공한다.
 
+[프레이즈·긴장 반응 후속 실험](classicfy-ai/analysis/structure_response_followup/README.md)은
+개별 구간 표현·24개 모델의 거리 학습과 검색 비교를 보존한다. 전체 흐름 모델을 고정된 구간 score로
+평가해야 한다는 [후속 평가 방향](classicfy-ai/analysis/structure_response_followup/EVALUATION_FRAMEWORK.md)도 함께 기록했다.
+
 ## Server Architecture
 추후 이미지 업데이트
 

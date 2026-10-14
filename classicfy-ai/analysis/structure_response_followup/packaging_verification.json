@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "snapshot_and_external_files_verified": 314,
+  "restore_unit_tests": 6,
+  "restored_model_and_pipeline_tests": 18,
+  "restored_primary_numeric_checks": 701142,
+  "restored_aligned_numeric_checks": 114960,
+  "steps": [
+    {
+      "step": "restore",
+      "status": "passed"
+    },
+    {
+      "step": "test_design.py",
+      "status": "passed"
+    },
+    {
+      "step": "test_pipeline.py",
+      "status": "passed"
+    },
+    {
+      "step": "verify.py",
+      "status": "passed"
+    },
+    {
+      "step": "verify_aligned.py",
+      "status": "passed"
+    }
+  ],
+  "note": "Actual archived snapshots plus hash-verified external binaries were restored in a temporary workspace; tests and full numeric audits passed. Temporary replay removed after validation; original artifacts unchanged."
+}

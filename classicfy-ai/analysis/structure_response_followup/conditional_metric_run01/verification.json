@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checks": 701142,
+  "max_scalar_error": 2.68422330140794e-07,
+  "max_checkpoint_reencode_error": 1.9744038581848145e-07,
+  "scope": "All24 selected checkpoints and input/code/scaler identities; paired initializations and all shared epoch sample/mask streams; every cross-work and within-work TopK rank, score and random-recording expectation; all retrieval and passage metrics/aggregates, every seed mean/SD and control aggregate; scalar target samples.",
+  "unit_tests": 18,
+  "limits": "Control aggregate arithmetic checked, not every shuffled ranking independently replayed. Numeric proxies and a reused test do not constitute perceptual or new-data validation."
+}

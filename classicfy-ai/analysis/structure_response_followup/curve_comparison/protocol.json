@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-14 KST",
+  "status": "definitions_frozen_before_new_rankings",
+  "source": "Existing frozen 335 recordings and their exact 7-channel normalized residual arrays",
+  "split": "Same alternating complete 64-original-beat blocks, both directions; no curve spans A/B or missing/structural-pair cuts",
+  "phrase": "Full contiguous runs of the existing provisional owner labels, >=4 original beat intervals, all intervals and pairs valid, contained in one 64-beat block",
+  "fixed": "Complete 16-original-beat windows with all intervals and pairs valid",
+  "tension": "Per metric: score-only local maximum above whole-score upper tertile, higher than both 8-beat-away endpoints; retain original-index window [peak-8,peak+8]; strain never crosses key section; chronologically select non-overlapping windows",
+  "terminology": "Tension-peak windows are provisional contexts, not verified buildup/resolution episodes. Momentum peaks indicate movement, not necessarily tension culmination.",
+  "representation": "Each segment separately interpolated to 17 ordered points; phrase interpolation uses written-quarter midpoint, F/H uses original beat index; H preserves the exact central peak sample; never average different segments into one curve",
+  "numeric_ties": "Round reconstructed tension values to 12 decimal places before peak selection and lag judge, to avoid local maxima created by float-roundoff on flat clouds. Original frozen summary H remains unchanged.",
+  "cap": "At most 32 curves per recording/view/type, uniformly selected by chronological index without using performance values",
+  "variants": [
+    "raw curves",
+    "subtract same-recording search-view signed global mean"
+  ],
+  "distance": "Gallery-only family-balanced per-channel curve-point SD; symmetric mean nearest-segment squared distance; three H metrics equally weighted; P+H equally weighted after train-other-family median distance calibration",
+  "cohort": "Eligibility based on curve support, fixed before new rankings. Phrase comparison requires F/P in both views; joint comparison additionally all three H metrics in both views. Rerank all old baselines with the same eligible gallery/query cohort.",
+  "evaluation": "Four existing opposite-view judges recomputed against the eligible gallery. Additional E-PC uses opposite-view 24-point per-phrase successive differences in Tempo/Dynamics. E-HL uses opposite-view peak-window delta tension vs delta Tempo/Dynamics correlations at lags -4..4.",
+  "controls": [
+    "same returned work/grid random-recording exact expectation",
+    "20 fixed seeds with up to three candidates per work/grid",
+    "20 fixed seeds independently permuting point order per recording/view/type, identically across its curves; preserves curve means/ranges but destroys relative timing across recordings"
+  ],
+  "limits": [
+    "No new phrase or tension truth",
+    "17-point resampling remains a representation, not lossless storage of every beat",
+    "E-PC/E-HL are numeric consistency proxies, not listener ground truth",
+    "No outcome tuning, neural training or population inference"
+  ]
+}

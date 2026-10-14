@@ -1,0 +1,87 @@
+{
+  "status": "completed_design_and_smoke_validation",
+  "python": "3.12.1 (v3.12.1:2305ca5144, Dec  7 2023, 17:23:38) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "torch": "2.14.1",
+  "files": {
+    "DESIGN.md": {
+      "sha256": "41b3fb446e95ff0ff4ced16cfb796ca4261b0c40c0ccac9d467163902ebde9d0",
+      "bytes": 15069
+    },
+    "alignment_audit.json": {
+      "sha256": "9628a5fec225426c1d6b5fd5ba67564c8c2cfcd4cdafa414d1a9ff284e5ed677",
+      "bytes": 2999
+    },
+    "data.py": {
+      "sha256": "c4e608f6cc509caa568da3acf8faab29293a63615a3eb9fd1476a3968c0e4133",
+      "bytes": 9233
+    },
+    "model.py": {
+      "sha256": "abaca1324375920d321652cc95169378cb04919c1cafb744ef372977bb34fab8",
+      "bytes": 6987
+    },
+    "passages.csv": {
+      "sha256": "8bb2f5ecd0c5a5643ec6d9f3d52d100b30f0ff5caed509a2f91110d39017d621",
+      "bytes": 528235
+    },
+    "protocol.json": {
+      "sha256": "37fe2d69363e90235adb238b7e6c4fb75b505531f20ad639f56ffce892553f9b",
+      "bytes": 4287
+    },
+    "smoke.py": {
+      "sha256": "6251e1d83ee1f9c6de60f4f35c45aca60e6441244d5194e71f77ea2fa791fc36",
+      "bytes": 3355
+    },
+    "smoke_results.json": {
+      "sha256": "b5347c62de395b112065c54b20be33631f6862f7bb31c4971e61a79634eaa44d",
+      "bytes": 11585
+    },
+    "test_design.py": {
+      "sha256": "2825576199f6084e0d3220d4acfdaca29b488b332c2c3368399dcfa003553a11",
+      "bytes": 7885
+    },
+    "verification.json": {
+      "sha256": "54b59f25e67743f9b30222cdad41206d95a0270af94bb0c4fce1e73eeb2e7af3",
+      "bytes": 302
+    },
+    "view0_amplitude_scales.json": {
+      "sha256": "c9fea0f43f3960455e4e19504a1d02dc0775f212c13f3fa1dcd946793b98b5ea",
+      "bytes": 2266
+    },
+    "view1_amplitude_scales.json": {
+      "sha256": "ef20fad92792433bb099024a9c9acd154a9a62a08ce3d175777265b0a8b5f37e",
+      "bytes": 2264
+    }
+  },
+  "reused_previous_files": {
+    "data.py": {
+      "sha256": "60b4db967a70076dcf5fa26191e9987375a25e7a803b55e0d9fdfbf3b054c7c1",
+      "bytes": 9850
+    },
+    "model.py": {
+      "sha256": "b8d849fb6b52d6377e75f4cf9f5fdae9e3ded5e455a9fc267a647dfab289f1db",
+      "bytes": 4818
+    },
+    "examples.npz": {
+      "sha256": "45ecb58453b10419569bd1075759c266cecf9cc87a7b7b56c53bdc152cf20cf8",
+      "bytes": 17657185
+    },
+    "data_manifest.json": {
+      "sha256": "b116a0e0b7944de15d880454f7b82ac5428dca13ab14eb0a6168b23fb98fff7b",
+      "bytes": 1083
+    },
+    "manifest.json": {
+      "sha256": "d0425aa2eb561d318300689242c5ceb4e3059630029a7606e780cd4e9aa5d68f",
+      "bytes": 13509
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "unit_tests": 13,
+    "train_only_one_step_smoke_checks": 8,
+    "coordinate_and_context_group_audit": "passed_coordinate_and_context_audit",
+    "trained_checkpoints_created": false,
+    "new_test_rankings_computed": false,
+    "source_files_match_completed_previous_manifest": true
+  },
+  "limits": "No full training or new retrieval result; the prior test is now a reused development benchmark."
+}
