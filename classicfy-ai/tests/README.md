@@ -106,3 +106,18 @@ weighted ridge의 독립 최소제곱 일치, 절편 비규제, 학습-only 메�
 스타일 백분위의 무작위 기대값과 조건부 섞기의 메타데이터·길이 구간 보존을 검증한다.
 [다른 작품 검색 결과](../analysis/metadata_retrieval_results/README.md)는 별도 구간의 스타일 일치,
 같은 작품 연주 대조, 후보 수 균형, 원래 #14 구현을 이용한 독립 수치 검증을 포함한다.
+`unit/features/test_temporal_shape.py`는 수작업 변화량·분포·방향 전이, 결측 인접성,
+빈/상수 시퀀스, strict 임계값, 기준 고정, offset 불변과 입력 보존을 검증한다.
+`test_temporal_shape_analysis.py`는 원래 beat 위치 복원, test 값의 임계값 fit 제외,
+중복/잘못된 index 거부와 기존 source 변경 시 cache 재사용 거부를 검증한다.
+두 파일의 신규 테스트 13개가 통과했다. [변화 형태 보고서](../analysis/temporal_shape/README.md).
+
+`unit/features/test_temporal_duration.py`는 관측된 run의 길이 단위·경계 censoring,
+결측/상수·빈 입력, tolerance, 선형 지속과 주기/교대 신호, gap 내부를 가로지르는 lag 쌍 제외,
+독립 Pearson 및 양의 affine 변환 불변성을 검증한다. `test_temporal_duration_analysis.py`는
+실제 runner의 원래 index 보존·support·출력 필드 및 설정을 검증한다.
+신규14개와 변화 형태13개를 합쳐27개 통과했다. [지속·반복 보고서](../analysis/temporal_duration/README.md).
+
+`unit/features/test_temporal_pair_explanations.py`는 평균·폭 두 조건과 퇴화 입력,
+전곡과 두 반쪽의 차이 방향 일치, 결측 support 거부 및 전곡 평균이 상쇄한 반쪽 차이를
+검증한다. 새4개 테스트가 통과했다. [실제 쌍의 추가 설명](../analysis/temporal_pair_explanations/README.md).

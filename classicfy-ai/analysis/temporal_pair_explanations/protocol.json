@@ -1,0 +1,44 @@
+{
+  "source_provenance": {
+    "asap_revision": "afc815c75c42e83a79c03feb6da8a35e77d4c6b8",
+    "nasap_revision": "4097b45757bed854818cf87e77b92323ebf90615",
+    "input_sha256": "19fd51ad1f964733ca888a8da68216057a57ba0302835d055a501df5ad62077a",
+    "collector_version": 1
+  },
+  "cache_sha256": "79ab737a08335c7fd7e9a912159de65b7c26795e1ef22e45114e5a8c6eb8ad2e",
+  "split": "train",
+  "initial_performances": 395,
+  "initial_works": 39,
+  "min_coverage": 0.9,
+  "max_length_ratio": 2,
+  "eligible_performances": 342,
+  "eligible_works": 33,
+  "eligible_pairs": 34293,
+  "close_quantile": 0.05,
+  "close_distance_cut": 0.49087566401543686,
+  "close_pairs": 1715,
+  "baseline": "existing 14D means/Rubato median abs and p95-p5; equal weights for five blocks; pedaling subchannels averaged",
+  "strict_dynamics": "mean gap <= 5% average width and width gap <= 5% maximum width",
+  "divergence": "Dynamics lag1 gap >= .2 full; same signed gap >= .1 in each original half; different composers; choose minimum baseline distance among qualifying pairs",
+  "consistency": "Dynamics lag1 gap <= .05 full and <= .1 each half; large ratio gap <= .01; positive and negative observed run mean ratios <=1.2; different composers; choose minimum baseline distance",
+  "robust_case_count": 13,
+  "consistent_case_count": 7,
+  "undefined": "NaN is excluded with denominators; level-run comparison requires >=20 runs per side in main aggregate",
+  "limits": [
+    "Exploratory matched-pair numeric explanation; no preference/listening/style truth",
+    "Existing per-work normalization uses cohort; structure and beat duration differences remain",
+    "Pair observations are dependent; no significance claim",
+    "Half comparisons are within the same recordings and not independent evaluation",
+    "Main figure Dynamics was chosen because previous train shuffle review showed clear order dependence"
+  ],
+  "analysis_code_sha256": "04cc30ed83f7e16fb68e6c20ac28d03ec0b1115f3e86ba7cb8fbf721720b6af2",
+  "input_csv_sha256": {
+    "classicfy-ai/analysis/temporal_shape/performance_channels.csv": "780e7c700e4e0ba3f707e1df9c0c709d830f3a81c16af96463572c234e529eb8",
+    "classicfy-ai/analysis/temporal_shape/thresholds.csv": "03caacc740070244ca2f57b8af91fc9b1960901faacc5ec104210b03d8bd16c5",
+    "classicfy-ai/analysis/temporal_duration/performance_durations.csv": "dbc707285199d73e9166f80c8f33e544f8582b3eee2f3f92ac139c598deb5aa2",
+    "classicfy-ai/analysis/temporal_duration/lag_correlations.csv": "853866a75f6cbf65c0330d78f08db7c9d1523e452d968dcb6c73f7b00c2fa2cc"
+  },
+  "close_dynamics_lag1_gap_ge_02": 269,
+  "close_dynamics_gap_robust_in_halves": 229,
+  "strict_dynamics_summary_pairs": 144
+}

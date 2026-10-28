@@ -65,15 +65,17 @@ def collect_sample(key):
     }
 
 
-def source_signature(asap_root, nasap_root):
+def source_signature(asap_root, nasap_root, *, source_files=None):
     def revision(root):
         result = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, capture_output=True, text=True)
         return result.stdout.strip() if result.returncode == 0 else None
     src = Path(__file__).resolve().parents[1] / "src"
     paths = [asap_root / "metadata.csv", asap_root / "asap_annotations.json", nasap_root / "metadata.csv"]
-    paths += sorted((src / "features").glob("*.py"))
-    paths = [p for p in paths if p.name not in {"normalization.py", "__init__.py"}]
-    paths += sorted((src / "preprocessing").glob("*.py"))
+    if source_files is None:
+        source_files = [p for p in sorted((src / "features").glob("*.py"))
+                        if p.name not in {"normalization.py", "__init__.py"}]
+        source_files += sorted((src / "preprocessing").glob("*.py"))
+    paths += list(source_files)
     return {
         "asap_revision": revision(asap_root), "nasap_revision": revision(nasap_root),
         "input_sha256": hashlib.sha256(b"".join(p.read_bytes() for p in paths)).hexdigest(),
