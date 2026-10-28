@@ -1,0 +1,43 @@
+{
+  "total_performances": 1067,
+  "groups": {
+    "bytes": [
+      {
+        "hash": "98e8ee6c2887444058298d69112036517a77bf642ad3d3e15ced92e0d4bcb8b7",
+        "keys": [
+          "Beethoven/Piano_Sonatas/18-2/Schmitt01.mid",
+          "Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "hash": "8961b2f22ec7b1c41fc69d8673d4bf4c9552a7e6dfd1193c9228a34fccc85a28",
+        "keys": [
+          "Beethoven/Piano_Sonatas/18-2/Schmitt01.mid",
+          "Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid"
+        ]
+      }
+    ],
+    "shifted_events": [
+      {
+        "hash": "90b65ad735dd48b14b8bf75e32be1ccd5e862c2d0e21bf08b4bbd1174eec1340",
+        "keys": [
+          "Beethoven/Piano_Sonatas/18-2/Schmitt01.mid",
+          "Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid"
+        ]
+      }
+    ],
+    "shifted_notes": [
+      {
+        "hash": "172bac0f957dfa0f339e3c04562b77ed781dad12ce8ae99ec2ea8ac7b70ba799",
+        "keys": [
+          "Beethoven/Piano_Sonatas/18-2/Schmitt01.mid",
+          "Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid"
+        ]
+      }
+    ]
+  },
+  "metadata_sha256": "b327d92e498e281b381161ee387dacfd4b1c360c9c240d9107171f78e571b2a5",
+  "scope": "Local ASAP complete MIDI files; exact bytes and note/CC64 events at microsecond precision. Does not exhaustively detect edited/transcribed/partially cropped recordings."
+}

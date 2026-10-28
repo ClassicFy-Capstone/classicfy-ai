@@ -1,0 +1,50 @@
+﻿atepp_artist,asap_surname_prefix_candidates,same_work_candidate_pairs,asap_candidate_paths,limitation
+Alexandre Tharaud,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Alfred Brendel,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Alfred Cortot,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Alice Sara Ott,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Alicia de Larrocha,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+András Schiff,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Anne Queffélec,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Artur Schnabel,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Arturo Benedetti Michelangeli,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Bertrand Chamayou,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Claudio Arrau,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Daniel Barenboim,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Dinu Lipatti,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Earl Wild,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Edwin Fischer,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Emanuel Ax,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Emil Gilels,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Evgeny Kissin,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Friedrich Gulda,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Glenn Gould,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Grigory Sokolov,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Hélène Grimaud,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Ivo Pogorelich,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Krystian Zimerman,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Lang Lang,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Lazar Berman,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Leif Ove Andsnes,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Leopold Godowsky,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Marc-André Hamelin,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Martha Argerich,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Maurizio Pollini,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Mikhail Pletnev,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Mitsuko Uchida,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Murray Perahia,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Myra Hess,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Nikolai Lugansky,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Pierre-Laurent Aimard,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Radu Lupu,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Robert Casadesus,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Samson François,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Sviatoslav Richter,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Valentina Lisitsa,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Van Cliburn,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Vladimir Ashkenazy,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Vladimir Horowitz,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Walter Gieseking,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Wilhelm Kempff,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification
+Yuja Wang,26,0,Bach/Fugue/bwv_854/WangA01M.mid;Bach/Fugue/bwv_857/WangA01M.mid;Bach/Fugue/bwv_880/WangA04M.mid;Bach/Fugue/bwv_889/Wang01M.mid;Bach/Prelude/bwv_854/WangA01M.mid;Bach/Prelude/bwv_857/WangA01M.mid;Bach/Prelude/bwv_880/WangA04M.mid;Bach/Prelude/bwv_889/Wang01M.mid;Beethoven/Piano_Sonatas/17-1_no_repeat/WangH03M.mid;Beethoven/Piano_Sonatas/21-1_no_repeat/WangA02M.mid;Beethoven/Piano_Sonatas/24-1/WangV01.mid;Beethoven/Piano_Sonatas/28-1/WangY04M.mid;Beethoven/Piano_Sonatas/7-1/Wang02M.mid;Beethoven/Piano_Sonatas/7-1/WangY01M.mid;Chopin/Etudes_op_10/10/WangH02M.mid;Chopin/Etudes_op_25/10/WangA03M.mid;Chopin/Etudes_op_25/11/WangA02M.mid;Chopin/Etudes_op_25/11/WangV02.mid;Liszt/Gran_Etudes_de_Paganini/6_Theme_and_Variations/WangA01.mid;Liszt/Gran_Etudes_de_Paganini/6_Theme_and_Variations/WangA07M.mid;Liszt/Mephisto_Waltz/WangV03.mid;Liszt/Transcendental_Etudes/5/Wang06M.mid;Liszt/Transcendental_Etudes/5/WangY02M.mid;Ravel/Gaspard_de_la_Nuit/1_Ondine/WangY09.mid;Schubert/Impromptu_op142/3/WangH06M.mid;Schumann/Toccata_repeat/WangY07M.mid,surname-prefix heuristic only; not audio/MIDI recording verification
+Zoltán Kocsis,0,0,,surname-prefix heuristic only; not audio/MIDI recording verification

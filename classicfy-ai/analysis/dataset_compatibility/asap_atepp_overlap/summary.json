@@ -1,0 +1,45 @@
+{
+  "scope": "Complete local ASAP metadata and complete official ATEPP 1.2 metadata; no feature/quality filtering",
+  "asap_total_work_keys": 222,
+  "asap_total_performances": 1067,
+  "atepp_total_composition_ids": 1595,
+  "atepp_total_performances": 11674,
+  "asap_same_unit_work_keys": 201,
+  "asap_same_unit_performances": 953,
+  "atepp_same_unit_composition_ids": 202,
+  "atepp_same_unit_performances": 3474,
+  "same_unit_unique_musical_works": 200,
+  "asap_split_work_keys": 2,
+  "asap_overlapping_work_keys": 203,
+  "asap_performances_on_overlapping_works": 967,
+  "atepp_overlapping_composition_ids": 208,
+  "atepp_performances_on_overlapping_works": 3535,
+  "source_work_aliases": {
+    "ASAP": "Schumann Toccata and Toccata_repeat refer to Op.7; source keys retained",
+    "ATEPP": "Chopin Barcarolle Op.60 and Polonaise Op.53 each have two matching IDs; source IDs retained"
+  },
+  "recording_overlap": {
+    "confirmed_identical_recordings": 0,
+    "artist_surname_and_same_work_candidate_pairs": 0,
+    "exhaustive_recording_deduplication": false,
+    "reason": "No shared recording identifier; ASAP has no full artist-name field and local ATEPP contains metadata only. Zero confirmed matches does not establish zero true overlap."
+  },
+  "sources": [
+    {
+      "path": "datasets/ASAP/metadata.csv",
+      "sha256": "b327d92e498e281b381161ee387dacfd4b1c360c9c240d9107171f78e571b2a5"
+    },
+    {
+      "path": "datasets/ATEPP/ATEPP-metadata-1.2.csv",
+      "sha256": "b6bed1190cb85e607282fe4b761bc42d017f8144851940a4103aaa1a1d84536d"
+    }
+  ],
+  "asap_overlapping_work_percent": 91.44144144144144,
+  "asap_overlapping_repertoire_performance_percent": 90.62792877225867,
+  "asap_same_unit_work_percent": 90.54054054054055,
+  "asap_same_unit_performance_percent": 89.31583880037488,
+  "atepp_overlapping_work_percent": 13.04075235109718,
+  "atepp_overlapping_repertoire_performance_percent": 30.28096624978585,
+  "atepp_same_unit_work_percent": 12.664576802507836,
+  "atepp_same_unit_performance_percent": 29.758437553537775
+}

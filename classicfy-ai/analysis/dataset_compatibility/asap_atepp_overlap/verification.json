@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": [
+    "ASAP full census and per-work counts",
+    "all mapped ATEPP IDs belong to the correct composer",
+    "no duplicated ID inside a mapping",
+    "independent set-union counts for strict and expanded scopes",
+    "per-work ATEPP performance counts"
+  ],
+  "note": "This validates arithmetic and mapping integrity; musical equivalence was reviewed from the recorded labels and score headings."
+}

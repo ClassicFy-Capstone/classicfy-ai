@@ -1,0 +1,20 @@
+{
+  "source": "All local ASAP aligned performances",
+  "metadata_rows": 1067,
+  "original_aligned": 1036,
+  "identical_byte_duplicate_excluded": 1,
+  "converted": 1035,
+  "failed": 0,
+  "normalized": 968,
+  "native_intervals": 553924,
+  "native_one_quarter_intervals": 380059,
+  "native_shorter_intervals": 57724,
+  "native_longer_intervals": 116141,
+  "native_nonquarter_percent": 31.387879925765994,
+  "quarter_intervals": 611258,
+  "quarter_boundaries": 612293,
+  "inferred_quarter_boundaries": 222693,
+  "special_or_invalid_quarter_intervals": 4581,
+  "cache_sha256": "d9d9a41b63953ae7f6d22e2db12a6c66cfa3439acdc1c9a64ecf89162c9427e3",
+  "behavior": "Separate diagnostic inputs; original caches and models unchanged. Per-score/grid references need >=2 performances. Existing 64-beat checkpoints were not trained on this quarter-note input."
+}

@@ -11,6 +11,10 @@
 
 ## AI 분석 자료
 
+[ATEPP–ASAP 호환성 및 작업 인계](classicfy-ai/analysis/dataset_compatibility/README.md)는
+공통 작품·동일 MIDI 중복·특징 분포 차이와 4분음표 입력 변환 결과를 정리한다.
+다른 컴퓨터에서 이어서 작업할 때의 Git LFS 입력 캐시와 재현 절차도 포함한다.
+
 연주 feature의 그림·CSV·보고서는 [분석 목록](classicfy-ai/analysis/README.md)에서
 Tempo, Rubato, Dynamics·Pedaling, Articulation, 정규화 등의 주제별로 확인할 수 있다.
 

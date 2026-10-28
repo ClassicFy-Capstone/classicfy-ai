@@ -5,6 +5,7 @@
 
 | 폴더 | 분석 주제 | 시작 문서 |
 |---|---|---|
+| `dataset_compatibility/` | ATEPP–ASAP 공통 작품·동일 MIDI 중복·특징 분포 차이·quarter-note 입력 변환 및 다른 컴퓨터 작업 인계 | [호환성 및 작업 인계](dataset_compatibility/README.md) |
 | `atepp_style_diversity/` | 정규화 후 동일 작품 내 다섯 feature 다양성·다른 작곡가의 연주 피처 유사성 | [ATEPP 연주 다양성과 작곡가 간 비교](atepp_style_diversity/README.md) |
 | `atepp_normalization/` | ATEPP 공통 패턴 제거·표준화·다섯 feature figure·14차원 결측/검색 분석 | [ATEPP 정규화 및 피처 분석](atepp_normalization/README.md) |
 | `alignment_comparison/` | ASAP의 DualDTW·TheGlueNote beat/note 정렬 비교 및 정렬기 선택 | [정렬 비교 보고서](alignment_comparison/README.md) |

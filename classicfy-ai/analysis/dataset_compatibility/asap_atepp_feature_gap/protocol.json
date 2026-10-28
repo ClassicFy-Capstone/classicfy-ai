@@ -1,0 +1,10 @@
+{
+  "seed": 20261028,
+  "comparison": "Matched individual works/movements, source-summary available in ATEPP",
+  "source_filters": "ASAP aligned; robust articulation only; duplicate bytes removed. ATEPP saved quality-accepted normalized cohort; duplicate MIDI hashes removed.",
+  "time_axis": "Integer quarter-note grid within annotation coverage, exact score MIDI tempo-map conversion, piecewise-linear performance boundary interpolation, no feature-value interpolation",
+  "special_intervals": "bR-adjacent bins invalid; non-increasing anchors rejected; no extrapolation",
+  "pedal_policy": "No CC64 events means missing in both datasets for this diagnostic",
+  "statistics": "At least 2 performances per dataset/work/channel; equal-weight work medians and rank separation; 5-fold heldout-work logistic dataset classification with equal dataset/work weights and train-only standardization",
+  "limits": "Different artists, score editions, alignment methods and crops remain. These are observed dataset gaps, not pure transcription errors. ATEPP source MIDI is not local."
+}

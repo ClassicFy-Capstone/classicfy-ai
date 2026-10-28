@@ -1,0 +1,5 @@
+﻿features,stage,works,asap_n,atepp_n,heldout_work_macro_auc,work_bootstrap_lower,work_bootstrap_upper,interpretation
+dynamics_articulation,raw,80,367,843,0.4375699270426806,0.3851091974751856,0.48460555995054516,"Dataset separability, not transcription error or transfer accuracy"
+dynamics_articulation,standardized,80,367,843,0.4649683265890028,0.41653396143115895,0.5156356189177453,"Dataset separability, not transcription error or transfer accuracy"
+all_channels,raw,79,355,839,0.49013216688268,0.43638009400367384,0.5358129383945205,"Dataset separability, not transcription error or transfer accuracy"
+all_channels,standardized,79,355,839,0.5234990756648803,0.4637877997664743,0.5777350347573202,"Dataset separability, not transcription error or transfer accuracy"
