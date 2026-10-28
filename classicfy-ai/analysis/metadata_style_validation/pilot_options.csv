@@ -1,0 +1,13 @@
+﻿composer,type_a,type_b,type_a_performances,type_b_performances,type_a_works,type_b_works,type_a_families,type_b_families,supported_queries_a,supported_queries_b,total_supported_queries,bidirectional_pilot
+Chopin,ballade,etude,29,106,2,6,2,6,29,106,135,True
+Bach,fugue,prelude,38,18,6,3,6,3,38,18,56,True
+Chopin,barcarolle,etude,9,106,1,6,1,6,0,106,106,False
+Chopin,etude,scherzo,106,12,6,1,6,1,106,0,106,False
+Chopin,etude,sonata,106,18,6,2,6,1,106,0,106,False
+Chopin,ballade,barcarolle,29,9,2,1,2,1,29,0,29,False
+Chopin,ballade,scherzo,29,12,2,1,2,1,29,0,29,False
+Chopin,ballade,sonata,29,18,2,2,2,1,29,0,29,False
+Chopin,barcarolle,scherzo,9,12,1,1,1,1,0,0,0,False
+Chopin,barcarolle,sonata,9,18,1,2,1,1,0,0,0,False
+Chopin,scherzo,sonata,12,18,1,2,1,1,0,0,0,False
+Schubert,impromptu,sonata,12,6,1,1,1,1,0,0,0,False

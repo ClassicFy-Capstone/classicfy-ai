@@ -1,0 +1,7 @@
+﻿experiment,role,recordings,works,families,gallery_recordings,gallery_families
+whole,train,351,33,32,351,32
+whole,validation,67,4,4,351,32
+whole,test,67,6,6,351,32
+split,train,258,25,24,258,24
+split,validation,56,4,4,258,24
+split,test,48,4,4,258,24

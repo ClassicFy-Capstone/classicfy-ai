@@ -1,0 +1,28 @@
+{
+  "existing_export_rows_checked": 570,
+  "full_distance_cells_checked": 18225,
+  "maximum_full_distance_error": 4.440892098500626e-16,
+  "maximum_decomposition_error": 1.7763568394002505e-15,
+  "csv_sha256": {
+    "pilot_profiles.csv": "a266ff19fbf3e7bb86936c5f6a39479d49477152ad92243770f5548a4b024acb",
+    "query_comparisons.csv": "b76000531103f9290f66f8db4dd9e39912e7aea72e753194138e1282648bd626",
+    "family_comparisons.csv": "bc5a71185ab0ac81a6fde66638d322c66b94e41ea4456410a9342b4662510c66",
+    "balanced_queries.csv": "8402f2d6e5c2c5395e282a6d6925d62cba6d0432568bb9f0e3612781f12ca916",
+    "summary.csv": "78f09ade5c8449944bb3ebda2d3255f065828dade3895f1f9feabe2e9ff48dc5",
+    "work_results.csv": "3578e2e7ccb0d19a862452ec97011aab097989c778871a3e7a23cdae3b153e65",
+    "feature_contributions.csv": "af31c731cb4b414beeb585266502b16b7c61cf2a9315cb30dadb7dedd8dfe7f6",
+    "distance_balance.csv": "209e5a8b8f081515df615f5dd6a8b6c2cdc0d05f7ec7b2fab98821df78a9e950"
+  },
+  "independent_candidate_and_result_rows": 1369,
+  "independent_summary_rows": 18,
+  "reproducible_csvs": [
+    "balanced_queries.csv",
+    "family_comparisons.csv",
+    "feature_contributions.csv",
+    "pilot_profiles.csv",
+    "query_comparisons.csv",
+    "summary.csv",
+    "work_results.csv"
+  ],
+  "tests_passed": 8
+}

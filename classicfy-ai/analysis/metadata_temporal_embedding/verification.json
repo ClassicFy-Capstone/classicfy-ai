@@ -1,0 +1,21 @@
+{
+  "frozen_global_triplets": 135,
+  "frozen_family_triplets": 1234,
+  "reencoded_exports_checked": 24,
+  "family_detail_sha256": "c72dad2fbf63b8d2c9ca76b553c3b4c253bb2d1006c17c7131214302483229d0",
+  "maximum_archive_reencoding_error": 0,
+  "verified_hand_csv_sha256": {
+    "profiles.csv": "80e662f56d3e0cdbbece4e5485aafc4e194c0afb201b00e7f5d89e43271bd0a2",
+    "single_temporal_metrics.csv": "3dcfd43013ae8184520bf5e9ab0ee74f357037096c073ac7ea66c77680a77eff",
+    "pair_metrics.csv": "3454eb086483f70e1901a69e9a3f5118815ba5c9e47b4ea6bf4fe192b57872a1"
+  },
+  "csv_sha256": {
+    "comparisons.csv": "d00e062c631eece4300257d69eb5205776242c34d0b6b4d32c3d851dba114e72",
+    "summary.csv": "211e99a6e6b9d9560c52ac691fa33a26e41abd1612a8a2d227a3c43961032df2",
+    "work_results.csv": "1a81a6a08e5328d6f3b09428696a7a73bbf99778da2dd5bfdb501e7f389c19b1",
+    "balanced_queries.csv": "72778f64db4e436d2fde7c5b1316719c1fa3547cdbaa09cad3496d6d638a4358",
+    "descriptor_scales.csv": "ef2f98cde874036116beda535c8a7ac78ab81c227f4ce6e6f2bcf96fcfbf26bd",
+    "stability.csv": "e4e35b3689858b59507440eaf6042bdabb89dfad5e233e81b847258eb86003d1",
+    "example_comparisons.csv": "4037ce6802b7ca9ed58023d5eae4ca7704e237212122348fa4557030053854cc"
+  }
+}

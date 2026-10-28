@@ -1,0 +1,27 @@
+{
+  "execution_sha256": "408b0256383728a62a41b4c68d03539d526f91bd1cc0c2cf1297a387c0feb116",
+  "reporter_sha256": "f6d59051d7c35770c315329930c81c987b30b8a44d1bd668dcfb9d68ac888503",
+  "figure_sha256": {
+    "01_metadata_overlap.pdf": "6b5b532b5c39fb3507e38fdb77406d646b2fea4e9abae564cf57e22b1c207358",
+    "01_metadata_overlap.png": "61e1f394c6d114b87ef3ae49b492e2a7bd7ff5751be72571219ebb35ad59c997",
+    "01_metadata_overlap.svg": "deec5b9a3b6caf54f715d1dce4a7350eda92db7e91f712df54c493a451397c8d",
+    "02_heldout_style.pdf": "c932a11f988d4835091048a1374c3de6001ab05d8a8a0ae0ebb5670175235667",
+    "02_heldout_style.png": "11f6561d02aae733fe49d7acaaad9f5e0cdf547edd97ee9d5d4d9d19f6b16ca0",
+    "02_heldout_style.svg": "7710dc618db2b1a621bad667f911ef77d4e16033a5a4a4c2c3a2d31061b64f24",
+    "03_conditional_controls.pdf": "491d5d054a9777124bf7b70c97295767f6c44aea3001362049c86b5fb7e77f90",
+    "03_conditional_controls.png": "aad09358f77a2f24449db92862210463c0c78c099a61ed8682ae7fefcd8f6b50",
+    "03_conditional_controls.svg": "e134f2c9f1cf2768faa0dabce5164129dbdc7cae3db668d14d848093b398ad47",
+    "04_per_work_gain.pdf": "3fbff3e6c9750337f027ee866d990c267fffc9a4219c626fe135644da2b800be",
+    "04_per_work_gain.png": "7da2e2bfdbaa12ba7b60d6d6ffffe705833a83704b5e002084238627e12e80ab",
+    "04_per_work_gain.svg": "1466c44619672a3dd89977248350b4434c131741e0d7e8878ba8461dd16b404c",
+    "05_retrieval_example.pdf": "a7c5013047668802769b686631c2353a7792df521eaf88816eddde5a2d9b77c9",
+    "05_retrieval_example.png": "bf926bbe3606e2481d03931abb4503400d6bc68a4f8d81e0da0d94cc31a9eb69",
+    "05_retrieval_example.svg": "6ab837a6c257e8f2b9fc00b77461c61051b43ab06c84578d9e9d10edda0496fc",
+    "06_heldout_example_profiles.pdf": "00196a88b77e812ccf0511c1eb851487e174cd3e555285de3e40048235b97236",
+    "06_heldout_example_profiles.png": "32bc83d384cad635622bc077247289101b4fe5f1b737a91d86e8ccca6874055e",
+    "06_heldout_example_profiles.svg": "f06d6a5cb9306ff3974e04ea8ca7d712ac6fd86eb96f82639df731ed13001394"
+  },
+  "controls_sha256": "fc07256d943b562f8a9ca08c1d58f69d4847cb8bca43a19d6aef8706936f2a83",
+  "profiles_sha256": "876d824130ecf2a90910b3b8ae11e0d595f90d7c2fda717faf561e6975522977",
+  "example_selection": "Lexical first eligible test query, first fixed tie seed, no outcome selection"
+}

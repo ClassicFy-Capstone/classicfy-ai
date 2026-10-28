@@ -1,0 +1,14 @@
+{
+  "protocol": "49aa69fe090feeb754de45c07370539609e7d604836977e890b36c528a0cffb7",
+  "sources": {
+    "classicfy-ai/analysis/metadata_style_validation/performances.csv": "dd67c50875fd5839eeb4982fab779e1245c7546923820ee6e979d63880de7a61",
+    "classicfy-ai/analysis/metadata_information_design/target_preflight.csv": "3f48db0a9393bfaa62fb8cc3ad77e473049d4506f59b433844dcc7861cbd4c6b",
+    "classicfy-ai/analysis/metadata_information_design/descriptor_schema.csv": "656e345d1e4e1c5233e36333b07fb0ba0116e716bde89f2c7a4e21c4a8b79f94",
+    "../datasets/metadata_information_run01/inputs.npz": "55fa420dfee530929f0452cc891b272fc1864e1da1124d82a44cd82ba9330890",
+    "../datasets/metadata_temporal_exports_run01/manifest.json": "26af98e7218391b67f08b69bea3fca670de16de15a56145afa54070dc4cb8e43",
+    "../datasets/temporal_embedding_cluster_run01/dataset.json": "85486dadf913a454a38dc48131d8f8090c3d9c4ce92fe79f7bbe0c1c8427e7b4"
+  },
+  "code": "f70d42d02f3e6b34146ba8a76d9f85c7c5d3bf393172cd4464169e70436491bf",
+  "core": "bb446301d5c256d642e1f4944dcb3cfe7b2a465c3619a285040a7795b8bab68b",
+  "threshold": "0d5ecb04c907471648ed4b94f47aad8687857f31c72467ed8ab0a8f1c25635c4"
+}

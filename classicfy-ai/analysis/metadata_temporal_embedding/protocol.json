@@ -1,0 +1,158 @@
+{
+  "queries": 135,
+  "family_pairs": 1234,
+  "cohort": 570,
+  "train_scale_performances": 395,
+  "representative_b_closer": 57,
+  "common_hand_support_queries": 119,
+  "hand_source_commit": "dcf13498fb0273ec4aa0c3d2d956b98f0cca9be5",
+  "learned_source_commit": "192e7960520bb48b29f4a8b6088c6edb710ec395",
+  "candidate_selection": "Exactly the previous representative-selected A/B/C; no reselection in any enhanced representation",
+  "single_stats": [
+    "large_ratio",
+    "roughness",
+    "rise_ratio",
+    "reversal_ratio",
+    "positive_run",
+    "negative_run",
+    "value_lag1",
+    "value_lag8",
+    "delta_lag1",
+    "delta_lag8"
+  ],
+  "pair_lags": [
+    -4,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    4
+  ],
+  "independent_pairs": [
+    [
+      "articulation",
+      "pedal_changes"
+    ],
+    [
+      "articulation",
+      "pedal_depth"
+    ],
+    [
+      "articulation",
+      "pedal_down_ratio"
+    ],
+    [
+      "dynamics",
+      "articulation"
+    ],
+    [
+      "dynamics",
+      "pedal_changes"
+    ],
+    [
+      "dynamics",
+      "pedal_depth"
+    ],
+    [
+      "dynamics",
+      "pedal_down_ratio"
+    ],
+    [
+      "rubato",
+      "articulation"
+    ],
+    [
+      "rubato",
+      "dynamics"
+    ],
+    [
+      "rubato",
+      "pedal_changes"
+    ],
+    [
+      "rubato",
+      "pedal_depth"
+    ],
+    [
+      "rubato",
+      "pedal_down_ratio"
+    ],
+    [
+      "tempo",
+      "articulation"
+    ],
+    [
+      "tempo",
+      "dynamics"
+    ],
+    [
+      "tempo",
+      "pedal_changes"
+    ],
+    [
+      "tempo",
+      "pedal_depth"
+    ],
+    [
+      "tempo",
+      "pedal_down_ratio"
+    ]
+  ],
+  "scaling": "Train-only IQR/1.349, SD fallback; >=10 finite samples; constant coordinates inactive; no imputation",
+  "support": "Same A/B/C intersection for both distances; >=80% active dimensions per group; single: all channels; relations: >=80% pairs",
+  "weights": "Single: equal five music features with three pedal channels sharing one fifth; relations: equal 17 non-derived pairs",
+  "hybrids": "New descriptor baselines: equal component mean squared distances, each divided by median supported cross-work train distance",
+  "train_distance_calibrations": {
+    "single_temporal": {
+      "median": 1.4636342563258795,
+      "supported_pairs": 64831,
+      "eligible_pairs": 75266
+    },
+    "coupling": {
+      "median": 1.4825882220443178,
+      "supported_pairs": 71793,
+      "eligible_pairs": 75266
+    },
+    "joint_direction": {
+      "median": 1.622236655423667,
+      "supported_pairs": 75266,
+      "eligible_pairs": 75266
+    },
+    "representative_range": {
+      "median": 0.8947191075518998,
+      "supported_pairs": 75266,
+      "eligible_pairs": 75266
+    }
+  },
+  "learned": "Original window-latent mean+SD pooling; cosine primary as existing retrieval; RMS Euclidean sensitivity without coordinate fitting",
+  "dimensions": "Learned 64/128/256 per window => 128/256/512 per performance",
+  "aggregation": "Unsupported global rows excluded with counts; family-balanced query requires all frozen family pairs supported; common_hand_support uses identical supported queries across descriptors and learned vectors",
+  "seeds": "Every existing 20261006/07/08 run; no seed selected using results; ranges are not confidence intervals",
+  "source_provenance": {
+    "asap_revision": "afc815c75c42e83a79c03feb6da8a35e77d4c6b8",
+    "nasap_revision": "4097b45757bed854818cf87e77b92323ebf90615",
+    "input_sha256": "19fd51ad1f964733ca888a8da68216057a57ba0302835d055a501df5ad62077a",
+    "collector_version": 1
+  },
+  "limits": [
+    "Train-only pilot: eight Chopin works, ballade/etude; not held-out generalization.",
+    "B is other work type and C is same type; either can be closer in style. No ground-truth listening labels.",
+    "More B preferences do not by themselves mean a better embedding. Frozen selection uses representative coordinates.",
+    "Handcrafted metrics were verified in #14; their new concatenation, weighting and hybrids are exploratory baselines.",
+    "Per-work reference includes candidates; performer and musical context are not controlled.",
+    "Mean+SD pooling loses global window order; more epochs/dimensions do not guarantee style retention.",
+    "Euclidean/cosine operate in different learned geometries; do not compare their raw distances across models."
+  ],
+  "input_sha256": {
+    "pilot_profiles.csv": "a266ff19fbf3e7bb86936c5f6a39479d49477152ad92243770f5548a4b024acb",
+    "query_comparisons.csv": "b76000531103f9290f66f8db4dd9e39912e7aea72e753194138e1282648bd626",
+    "family_comparisons.csv": "bc5a71185ab0ac81a6fde66638d322c66b94e41ea4456410a9342b4662510c66",
+    "learned_manifest": "26af98e7218391b67f08b69bea3fca670de16de15a56145afa54070dc4cb8e43",
+    "reference": "85486dadf913a454a38dc48131d8f8090c3d9c4ce92fe79f7bbe0c1c8427e7b4"
+  },
+  "code_sha256": {
+    "classicfy-ai/scripts/compare_metadata_temporal_embeddings.py": "a1ee911b013183a5559f8bde909a43f4d62a726ffd6514f19d11de99742b4229",
+    "classicfy-ai/scripts/extract_metadata_temporal_embeddings.py": "4ec2a60ed5bee72b5829ad7b1f38b537e431cb366f38d16f56ddf49a85d84792"
+  }
+}

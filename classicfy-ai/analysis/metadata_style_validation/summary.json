@@ -1,0 +1,50 @@
+{
+  "performances": 570,
+  "works": 55,
+  "families": 45,
+  "composers": 9,
+  "classified_performances": 560,
+  "unclassified_performances": 10,
+  "unclassified_works": 1,
+  "metadata_rows": 1067,
+  "all_keys_joined": true,
+  "outside_embedding_cohort": 497,
+  "availability": {
+    "all": {
+      "queries": 570,
+      "supported_queries": 326,
+      "reason_counts": {
+        "supported": 326,
+        "unclassified_query": 10,
+        "no_different_type_same_composer": 132,
+        "no_same_type_other_family": 102
+      }
+    },
+    "train": {
+      "queries": 395,
+      "supported_queries": 191,
+      "reason_counts": {
+        "supported": 191,
+        "unclassified_query": 10,
+        "no_different_type_same_composer": 107,
+        "no_same_type_other_family": 87
+      }
+    }
+  },
+  "family_split_overlap": 6,
+  "proposed_pilot": {
+    "composer": "Chopin",
+    "type_a": "ballade",
+    "type_b": "etude",
+    "type_a_performances": 29,
+    "type_b_performances": 106,
+    "type_a_works": 2,
+    "type_b_works": 6,
+    "type_a_families": 2,
+    "type_b_families": 6,
+    "supported_queries_a": 29,
+    "supported_queries_b": 106,
+    "total_supported_queries": 135,
+    "bidirectional_pilot": true
+  }
+}

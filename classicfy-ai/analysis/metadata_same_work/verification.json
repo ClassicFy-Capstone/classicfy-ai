@@ -1,0 +1,14 @@
+{
+  "original_profile_coordinates_checked": 42,
+  "maximum_original_vector_error": 0.0,
+  "independent_pair_distances_checked": 24,
+  "maximum_independent_distance_error": 3.3306690738754696e-16,
+  "metadata_identical_pairs": 3,
+  "verified_learned_exports": 6,
+  "csv_sha256": {
+    "selected_performances.csv": "bdbad52337cfaf130de6bb5b599358861a20bacdf79bac05ed90c441142670e0",
+    "pair_distances.csv": "7bf3bb7c214c0306f72bebaca46acb4991fc1e916329fa64fceac9cb78675d38",
+    "pair_summary.csv": "b1d7332079a9eeca240ff5455182c5425458dd7f27d9701f9fc9d1dfb2f155ef",
+    "profile_display.csv": "4cf638b762f8c862ff716741f330aa5011881dbb8bd78f38dfdae20b1a0742a5"
+  }
+}
