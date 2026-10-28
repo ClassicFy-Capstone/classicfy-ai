@@ -1,0 +1,17 @@
+{
+  "eligible_pairs": 34293,
+  "close_pairs": 1715,
+  "checked_numeric_values": 3590,
+  "max_absolute_error": 8.881784197001252e-16,
+  "method": "Independent coordinate weights 1/10 and 1/30; original-index contiguous blocks, groupby level runs, direct numpy Pearson/quantiles; full peer means from source CSV",
+  "sha256": {
+    "profiles.csv": "1f62886a25e14905c826645c1e19c6daaec801a190ac24e6e4df0e66d4947ea4",
+    "selected.json": "4cd55557233bdb31dbff2445bab1763ac255febcc7c0e98ea13125bb7f33947e",
+    "case_metrics.csv": "f21fdcb375a16fce17b994bf7edffbe858078e8e79d9a90a62ffddfb64536cb0",
+    "piece_effects.csv": "132cbca2705fa270560caa8ca0344358d1316937ac120b7bfead8f26a6a80eb0",
+    "case_values.csv": "64d7143ad02404d214534dad6d85e5728d8698209ec3bb738964a2dff5dfafc2",
+    "protocol.json": "c2072f7c3f6bc450c1d220fb87093869c645dbde7e9f1c55d3b2c1477ed64dcb",
+    "additional_information.csv": "913acd9c9f39238994ae51442a620ad78a391f30ed9b6468a80bce7ffa42ac84",
+    "close_pairs.csv": "dd1fc66531b173c26d368c14e97c82e4b7f9994fde44ef69bd70a5c788a5a71f"
+  }
+}

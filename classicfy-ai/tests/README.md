@@ -68,3 +68,19 @@ HTTP Range 재생·구간 이동 및 pack 밖 파일 차단을 다룬다. 합성
 결측 beat를 잇지 않는 변화량 계산, Pedaling의 동일 feature 비중,
 최근접 후보를 제외한 대조·동점 처리, 결과와 무관한 대표 사례 선정을 검증한다.
 [검색 관찰 보고서](../analysis/temporal_neighbors/README.md)는 feature 기반 대조이며 사람의 청취 정답 평가가 아니다.
+
+`unit/features/test_temporal_shape.py`는 수작업 변화량·분포·방향 전이, 결측 인접성,
+빈/상수 시퀀스, strict 임계값, 기준 고정, offset 불변과 입력 보존을 검증한다.
+`test_temporal_shape_analysis.py`는 원래 beat 위치 복원, test 값의 임계값 fit 제외,
+중복/잘못된 index 거부와 기존 source 변경 시 cache 재사용 거부를 검증한다.
+두 파일의 신규 테스트 13개가 통과했다. [변화 형태 보고서](../analysis/temporal_shape/README.md).
+
+`unit/features/test_temporal_duration.py`는 관측된 run의 길이 단위·경계 censoring,
+결측/상수·빈 입력, tolerance, 선형 지속과 주기/교대 신호, gap 내부를 가로지르는 lag 쌍 제외,
+독립 Pearson 및 양의 affine 변환 불변성을 검증한다. `test_temporal_duration_analysis.py`는
+실제 runner의 원래 index 보존·support·출력 필드 및 설정을 검증한다.
+신규14개와 변화 형태13개를 합쳐27개 통과했다. [지속·반복 보고서](../analysis/temporal_duration/README.md).
+
+`unit/features/test_temporal_pair_explanations.py`는 평균·폭 두 조건과 퇴화 입력,
+전곡과 두 반쪽의 차이 방향 일치, 결측 support 거부 및 전곡 평균이 상쇄한 반쪽 차이를
+검증한다. 새4개 테스트가 통과했다. [실제 쌍의 추가 설명](../analysis/temporal_pair_explanations/README.md).

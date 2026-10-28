@@ -1,0 +1,188 @@
+{
+  "train_performances": 342,
+  "train_works": 33,
+  "eligible_pairs": 34293,
+  "baseline_close_cut": 0.49087566401543686,
+  "baseline_close_pairs": 1715,
+  "single_temporal_close_cut": 1.2562285330607346,
+  "single_temporal_supported_pairs": 30170,
+  "both_close_pairs": 1018,
+  "divergent_case_candidates": 85,
+  "consistent_case_candidates": 3684,
+  "unique_stable_pairs": 104,
+  "unique_phase_supported_stable_pairs": 55,
+  "performances": 570,
+  "works": 55,
+  "source_provenance": {
+    "asap_revision": "afc815c75c42e83a79c03feb6da8a35e77d4c6b8",
+    "nasap_revision": "4097b45757bed854818cf87e77b92323ebf90615",
+    "input_sha256": "19fd51ad1f964733ca888a8da68216057a57ba0302835d055a501df5ad62077a",
+    "collector_version": 1
+  },
+  "cache_sha256": "79ab737a08335c7fd7e9a912159de65b7c26795e1ef22e45114e5a8c6eb8ad2e",
+  "reference_manifest_sha256": "85486dadf913a454a38dc48131d8f8090c3d9c4ce92fe79f7bbe0c1c8427e7b4",
+  "source_reference": "20a4168",
+  "split": {
+    "Bach/Fugue/bwv_860/midi_score.mid": "validation",
+    "Bach/Prelude/bwv_854/midi_score.mid": "validation",
+    "Beethoven/Piano_Sonatas/31-1/midi_score.mid": "validation",
+    "Chopin/Etudes_op_10/12/midi_score.mid": "validation",
+    "Bach/Prelude/bwv_857/midi_score.mid": "validation",
+    "Beethoven/Piano_Sonatas/4-1/midi_score.mid": "validation",
+    "Bach/Prelude/bwv_848/midi_score.mid": "validation",
+    "Chopin/Etudes_op_25/11/midi_score.mid": "validation",
+    "Chopin/Sonata_3/3rd/midi_score.mid": "test",
+    "Beethoven/Piano_Sonatas/21-1_no_repeat/midi_score.mid": "test",
+    "Chopin/Etudes_op_10/5/midi_score.mid": "test",
+    "Liszt/Transcendental_Etudes/10/midi_score.mid": "test",
+    "Liszt/Ballade_2/midi_score.mid": "test",
+    "Beethoven/Piano_Sonatas/18-1/midi_score.mid": "test",
+    "Chopin/Etudes_op_25/1/midi_score.mid": "test",
+    "Beethoven/Piano_Sonatas/31-2/midi_score.mid": "test",
+    "Bach/Prelude/bwv_889/midi_score.mid": "train",
+    "Bach/Prelude/bwv_885/midi_score.mid": "train",
+    "Chopin/Etudes_op_10/4/midi_score.mid": "train",
+    "Schubert/Piano_Sonatas/894-2_no_repeat/midi_score.mid": "train",
+    "Chopin/Sonata_3/4th/midi_score.mid": "train",
+    "Bach/Fugue/bwv_883/midi_score.mid": "train",
+    "Chopin/Barcarolle/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/26-1/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/17-1_no_repeat/midi_score.mid": "train",
+    "Bach/Fugue/bwv_854/midi_score.mid": "train",
+    "Balakirev/Islamey/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/32-1/midi_score.mid": "train",
+    "Bach/Fugue/bwv_848/midi_score.mid": "train",
+    "Chopin/Scherzos/31/midi_score.mid": "train",
+    "Mozart/Piano_Sonatas/8-1/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/11-1/midi_score.mid": "train",
+    "Chopin/Sonata_3/2nd/midi_score.mid": "train",
+    "Bach/Fugue/bwv_857/midi_score.mid": "train",
+    "Chopin/Etudes_op_25/12/midi_score.mid": "train",
+    "Chopin/Etudes_op_10/2/midi_score.mid": "train",
+    "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/24-1_no_2_repeat/midi_score.mid": "train",
+    "Bach/Fugue/bwv_889/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/16-1/midi_score.mid": "train",
+    "Schubert/Impromptu_op.90_D.899/3/midi_score.mid": "train",
+    "Liszt/Transcendental_Etudes/5/midi_score.mid": "train",
+    "Chopin/Etudes_op_10/1/midi_score.mid": "train",
+    "Scriabin/Sonatas/5/midi_score.mid": "train",
+    "Chopin/Ballades/4/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/27-1/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/28-1/midi_score.mid": "train",
+    "Chopin/Etudes_op_25/10/midi_score.mid": "train",
+    "Chopin/Ballades/1/midi_score.mid": "train",
+    "Bach/Fugue/bwv_885/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/26-2/midi_score.mid": "train",
+    "Chopin/Etudes_op_10/8/midi_score.mid": "train",
+    "Beethoven/Piano_Sonatas/7-1/midi_score.mid": "train",
+    "Bach/Prelude/bwv_860/midi_score.mid": "train",
+    "Haydn/Keyboard_Sonatas/50-1_no_repeat/midi_score.mid": "train"
+  },
+  "channels": [
+    "tempo",
+    "rubato",
+    "dynamics",
+    "articulation",
+    "pedal_depth",
+    "pedal_down_ratio",
+    "pedal_changes"
+  ],
+  "lags": [
+    -4,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    4
+  ],
+  "min_pairs": 32,
+  "direction_tolerance": 1e-06,
+  "std_tolerance": 1e-12,
+  "phase": {
+    "samples": 199,
+    "seed": 20261012,
+    "min_segment": 64,
+    "min_shift": 8,
+    "minimum_control_coverage_for_selection": 0.8,
+    "min_abs_excess": 0.1
+  },
+  "single_stats": [
+    "large_ratio",
+    "roughness",
+    "rise_ratio",
+    "reversal_ratio",
+    "positive_run",
+    "negative_run",
+    "value_lag1",
+    "value_lag8",
+    "delta_lag1",
+    "delta_lag8"
+  ],
+  "single_scale": "train-only IQR/1.349 -> SD; constant unsupported; no imputation",
+  "single_distance": ">=80% supported active coordinates per channel; equal five musical block weights; run means log1p, >=20 runs",
+  "pair_selection": "train coverage>=.9, different works, length ratio<=2; 14D bottom5%; single-temporal bottom25% of all supported eligible pairs",
+  "divergence": "full signed r difference>=.3 and same sign >=.15 each half; at least one side phase supported; choose smallest 14D distance across 17 exploratory relations",
+  "consistency": "full r difference<=.05 and each half<=.1; choose smallest 14D distance across 17 exploratory relations",
+  "related_definition": "Tempo/Rubato and pedal internal pairs reported but excluded from cross-work case search",
+  "triple_channels": [
+    [
+      "tempo",
+      "dynamics",
+      "articulation"
+    ],
+    [
+      "tempo",
+      "dynamics",
+      "pedal_depth"
+    ],
+    [
+      "tempo",
+      "articulation",
+      "pedal_depth"
+    ],
+    [
+      "rubato",
+      "dynamics",
+      "articulation"
+    ],
+    [
+      "rubato",
+      "dynamics",
+      "pedal_depth"
+    ],
+    [
+      "rubato",
+      "articulation",
+      "pedal_depth"
+    ],
+    [
+      "dynamics",
+      "articulation",
+      "pedal_depth"
+    ]
+  ],
+  "pair_status_counts": {
+    "ok": 11844,
+    "constant_pairs": 126
+  },
+  "limits": [
+    "Exploratory added numeric explanations; no listening or recommendation validation.",
+    "Per-work common and scale include candidates; score, beat definitions, note density and alignment effects remain.",
+    "Pairs are dependent; thresholds are exploratory, not perceptual; no significance claims or test-set case selection.",
+    "Circular delta shifts preserve marginals and circular autocorrelation, not all finite-boundary ordering; periodic relations may survive.",
+    "Triple TV from independent marginals can be caused solely by pair dependence; no irreducible higher-order claim.",
+    "Cross-correlation does not establish causality; tempo and rubato are mathematically related.",
+    "Single-temporal matching controls only selected descriptors, not entire individual trajectories."
+  ],
+  "environment": {
+    "python": "3.12.1 (v3.12.1:2305ca5144, Dec  7 2023, 17:23:38) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "numpy": "2.5.4"
+  },
+  "code_sha256": {
+    "classicfy-ai/scripts/analyze_temporal_coupling.py": "9af512dde4ce43b0c9454afdb73672cf52d0aaccb42b1e798ab962ca30532d03",
+    "classicfy-ai/src/features/temporal_coupling.py": "ba60fce5c289eb638c052a625fcdfcb736d51e00aa2400a9b72cc2bddd0962ac"
+  },
+  "threshold_file_sha256": "03caacc740070244ca2f57b8af91fc9b1960901faacc5ec104210b03d8bd16c5"
+}
