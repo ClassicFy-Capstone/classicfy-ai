@@ -30,6 +30,9 @@ ATEPP DualDTW 데이터의 공통 패턴 제거·표준화·다섯 feature 시�
 [시계열 연주 임베딩](classicfy-ai/src/embedding/README.md)은 기존 beat별 feature를
 1D CNN으로 읽고, 숨긴 특징을 복원하는 자기지도 학습과 다른 작품 후보 검색을 제공한다.
 
+[8마디 연주 프로필과 Triplet 전처리](classicfy-ai/src/embedding/STYLE_TRIPLETS.md)는
+음표별 R에서 train 기준 잔차·23차원 프로필·작품 간 학습 관계를 생성한다.
+
 ## Server Architecture
 추후 이미지 업데이트
 
