@@ -12,7 +12,7 @@ import numpy as np
 
 from features.note_performance import extract_note_performance
 from features.note_score_context import extract_note_score_context
-from features.performance_time import BeatTimeMap
+from features.performance_time import BeatTimeMap, mask_estimated_beat_intervals
 from .musicxml_score import read_musicxml
 from .note_alignment import NoteAlignment, PerformedNote, ScoreNote, load_match
 from .performance_midi import load_performance_midi, score_seconds_to_quarters
@@ -174,8 +174,9 @@ def prepare_atepp_note_performance(xml_path, score_midi_path, performance_midi_p
                                              aliases=aliases, policy=policy, verify_velocity=False)
     beats = BeatTimeMap(q, seconds, valid, {'granularity': 'beat', 'source': 'accepted ATEPP quarter-grid alignment',
                                           'estimated': True, 'alignment_sha256': _hash(alignment_cache)})
+    beats = mask_estimated_beat_intervals(beats)
     r = extract_note_performance(score, performance, links, beats, record_key=record_key, work_key=work_key,
                                  split=split, dataset='ATEPP', grace_reference_keys=grace_reference_keys,
-                                 provenance={'adapter': 'atepp-note-r-v1', 'alignment': audit,
+                                 provenance={'adapter': 'atepp-note-r-v2', 'alignment': audit,
                                              'alignment_sha256': _hash(alignment_cache), 'xml_bridge': xml_bridge})
     return score, r

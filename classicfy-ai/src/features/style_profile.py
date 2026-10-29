@@ -235,6 +235,29 @@ def fit_reference(recordings, config=StyleConfig()):
                                          for rec in recordings])
 
 
+@dataclass(frozen=True)
+class NotePerformanceDelta:
+    """One verified, read-only R/reference snapshot shared by its windows."""
+    arrays: tuple
+    reference_id: str
+    config_id: str
+    R_fingerprint: str
+    performance: NotePerformanceFeatures
+
+    def __post_init__(self):
+        for value in self.arrays:
+            value.setflags(write=False)
+
+    def __iter__(self):
+        return iter(self.arrays)
+
+    def __getitem__(self, index):
+        return self.arrays[index]
+
+    def __len__(self):
+        return len(self.arrays)
+
+
 def reference_delta(r, reference):
     check_artifact(reference, 'reference')
     table = reference['tables'].get(cohort_key(r), {})
@@ -254,14 +277,21 @@ def reference_delta(r, reference):
             bm[row] = bool(r.beats.valid[row] and cell['mask'][0])
             if bm[row]:
                 bd[row] = r.beats.log2_qpm[row] - cell['values'][0]
-    return delta, mask, counts, bd, bm, bc
+    return NotePerformanceDelta((delta, mask, counts, bd, bm, bc), reference['id'], reference['config_id'], r.fingerprint, r)
 
 
 def summarize_window(r, window, reference, config=StyleConfig(), *, deltas=None):
-    check_artifact(reference, 'reference', config)
-    if window['R_fingerprint'] != r.fingerprint:
-        raise ValueError('Window and R fingerprint mismatch')
-    delta, mask, counts, bd, bm, bc = reference_delta(r, reference) if deltas is None else deltas
+    if deltas is None:
+        deltas = reference_delta(r, reference)
+    if isinstance(deltas, NotePerformanceDelta):
+        if (deltas.performance is not r or deltas.reference_id != reference['id'] or deltas.config_id != stable_id(asdict(config))
+                or window['R_fingerprint'] != deltas.R_fingerprint):
+            raise ValueError('Window/R/reference/config delta snapshot mismatch')
+    else:
+        check_artifact(reference, 'reference', config)
+        if window['R_fingerprint'] != r.fingerprint:
+            raise ValueError('Window and R fingerprint mismatch')
+    delta, mask, counts, bd, bm, bc = deltas
     raw, known = np.zeros(23), np.zeros(23, bool)
     coverage, valid_counts, reference_counts, channel_reasons = [], [], [], []
     rows, bis = np.array(window['row_indices'], int), np.array(window['beat_indices'], int)
@@ -382,12 +412,44 @@ def fit_profile_scaler(profiles, config=StyleConfig(), *, profiles_id):
                     metric_ready=not failed, calibration_failure_blocks=failed)
 
 
+@dataclass(frozen=True)
+class FrozenProfileScaler:
+    """Compact immutable view of an integrity-checked global g scaler."""
+    center: np.ndarray
+    scale: np.ndarray
+    trained: np.ndarray
+    artifact_id: str
+
+    def __post_init__(self):
+        for field, dtype in (('center', float), ('scale', float), ('trained', bool)):
+            value = np.array(getattr(self, field), dtype=dtype, copy=True)
+            if value.shape != (23,):
+                raise ValueError('Expected 23 scaler features')
+            value.setflags(write=False)
+            object.__setattr__(self, field, value)
+        if (not self.artifact_id or not np.isfinite(self.center).all()
+                or not np.isfinite(self.scale).all() or np.any(self.scale <= 0)):
+            raise ValueError('Invalid g scaler snapshot')
+
+    @classmethod
+    def from_artifact(cls, scaler):
+        check_artifact(scaler, 'profile-scaler')
+        return cls(scaler['center'], scaler['scale'], scaler['trained_feature_mask'], scaler['id'])
+
+
 def scale_profile(profile, scaler):
-    check_artifact(scaler, 'profile-scaler')
-    valid = np.asarray(profile['g_mask']) & np.asarray(scaler['trained_feature_mask'])
+    if not isinstance(scaler, FrozenProfileScaler):
+        scaler = FrozenProfileScaler.from_artifact(scaler)
+    valid = np.asarray(profile['g_mask']) & scaler.trained
     values = np.zeros(23)
-    values[valid] = ((np.asarray(profile['g_raw'])[valid] - np.asarray(scaler['center'])[valid])
-                     / np.asarray(scaler['scale'])[valid])
+    values[valid] = (np.asarray(profile['g_raw'])[valid] - scaler.center[valid]) / scaler.scale[valid]
     if not np.isfinite(values).all():
         raise ValueError('Profile scaling overflow')
-    return {**profile, 'g_scaled': values.tolist(), 'g_scaled_mask': valid.tolist(), 'scaler_id': scaler['id']}
+    return {**profile, 'g_scaled': values.tolist(), 'g_scaled_mask': valid.tolist(), 'scaler_id': scaler.artifact_id}
+
+
+def scale_profiles(profiles, scaler):
+    """Validate the full scaler once for bulk transform, preserving all outputs."""
+    if not isinstance(scaler, FrozenProfileScaler):
+        scaler = FrozenProfileScaler.from_artifact(scaler)
+    return [scale_profile(p, scaler) for p in profiles]

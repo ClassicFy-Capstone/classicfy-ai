@@ -3,11 +3,12 @@
 from collections import Counter, defaultdict
 import heapq
 import math
+import logging
 
 import numpy as np
 
 from features.style_profile import (
-    G_BLOCKS, StyleConfig, artifact, check_artifact, scale_profile, stable_id, unique_profiles,
+    G_BLOCKS, StyleConfig, artifact, check_artifact, scale_profile, scale_profiles, stable_id, unique_profiles,
 )
 
 
@@ -53,24 +54,101 @@ def candidate_allowed(a, b, signature):
 
 
 class _CandidateIndex:
-    """Only O(N) profile indices are retained; candidate lists live for one anchor."""
+    """O(N) typed indices and one distance vector, never an NxN matrix."""
     def __init__(self, profiles, signature):
-        self.by_work, self.by_window = defaultdict(list), defaultdict(list)
-        for p in profiles:
-            if p['sampling_eligible'] and all(p['g_mask'][j] for j in signature):
-                self.by_work[p['window']['work_id']].append(p)
-                self.by_window[p['window']['same_window_key']].append(p)
+        self.profiles = [p for p in profiles if p['sampling_eligible'] and all(p['g_mask'][j] for j in signature)]
         self.signature = signature
+        self.positions = {p['window']['window_id']: i for i, p in enumerate(self.profiles)}
+        self.labels = {}
+        for field in ('work_id', 'same_window_key', 'score_version_id', 'repeat_route_id', 'performance_id', 'recording_id'):
+            values = [p['window'][field] for p in self.profiles]
+            codes = {v: i for i, v in enumerate(sorted(set(values)))}
+            self.labels[field] = np.array([codes[v] for v in values], dtype=np.int64)
+        self.groups = {}
+        for field in ('work_id', 'same_window_key', 'performance_id', 'recording_id'):
+            groups = defaultdict(list)
+            for i, code in enumerate(self.labels[field]):
+                groups[int(code)].append(i)
+            self.groups[field] = {k: np.array(v, dtype=np.int64) for k, v in groups.items()}
+        self.work_names = {int(self.labels['work_id'][i]): p['window']['work_id'] for i, p in enumerate(self.profiles)}
+        self.matrix = np.array([p['g_scaled'] for p in self.profiles], dtype=float).reshape(-1, 23)
+        self.block_columns = [[j for j in ids if j in signature] for ids in G_BLOCKS.values()]
+        self.block_columns = [ids for ids in self.block_columns if ids]
+
+    def indices(self, anchor):
+        at = self.positions[anchor['window']['window_id']]
+        labels = self.labels
+        same = labels['work_id'] == labels['work_id'][at]
+        allowed = (~same | ((labels['same_window_key'] == labels['same_window_key'][at])
+                            & (labels['score_version_id'] == labels['score_version_id'][at])
+                            & (labels['repeat_route_id'] == labels['repeat_route_id'][at])))
+        allowed &= labels['performance_id'] != labels['performance_id'][at]
+        allowed &= labels['recording_id'] != labels['recording_id'][at]
+        return np.flatnonzero(allowed)
+
+    def count(self, anchor):
+        at = self.positions[anchor['window']['window_id']]
+        labels = self.labels
+        own = labels['work_id'][at]
+        same = self.groups['same_window_key'][int(labels['same_window_key'][at])]
+        own_valid = ((labels['work_id'][same] == own)
+                     & (labels['score_version_id'][same] == labels['score_version_id'][at])
+                     & (labels['repeat_route_id'][same] == labels['repeat_route_id'][at]))
+        excluded = np.union1d(self.groups['performance_id'][int(labels['performance_id'][at])],
+                              self.groups['recording_id'][int(labels['recording_id'][at])])
+        removed = ((labels['work_id'][excluded] != own)
+                   | ((labels['same_window_key'][excluded] == labels['same_window_key'][at])
+                      & (labels['score_version_id'][excluded] == labels['score_version_id'][at])
+                      & (labels['repeat_route_id'][excluded] == labels['repeat_route_id'][at])))
+        return len(self.profiles) - len(self.groups['work_id'][int(own)]) + int(own_valid.sum()) - int(removed.sum())
 
     def buckets(self, anchor):
-        own = anchor['window']['work_id']
-        buckets = {}
-        for work, profiles in sorted(self.by_work.items()):
-            pool = profiles if work != own else self.by_window.get(anchor['window']['same_window_key'], [])
-            candidates = [p for p in pool if candidate_allowed(anchor, p, self.signature)]
-            if candidates:
-                buckets[work] = candidates
-        return buckets
+        allowed = np.zeros(len(self.profiles), dtype=bool)
+        allowed[self.indices(anchor)] = True
+        result = {}
+        for work, positions in self.groups['work_id'].items():
+            candidates = positions[allowed[positions]]
+            if len(candidates):
+                result[work] = candidates
+        # Preserve the original sorted-work random choice order.
+        return dict(sorted(result.items()))
+
+    def draw_context(self, anchor):
+        """Candidate work counts without materializing every candidate bucket."""
+        at = self.positions[anchor['window']['window_id']]
+        labels = self.labels
+        own = int(labels['work_id'][at])
+        excluded = np.union1d(self.groups['performance_id'][int(labels['performance_id'][at])],
+                              self.groups['recording_id'][int(labels['recording_id'][at])])
+        removed = np.bincount(labels['work_id'][excluded], minlength=len(self.groups['work_id']))
+        available = np.array([len(self.groups['work_id'][k]) for k in range(len(removed))]) - removed
+        same = self.groups['same_window_key'][int(labels['same_window_key'][at])]
+        valid = ((labels['work_id'][same] == own)
+                 & (labels['score_version_id'][same] == labels['score_version_id'][at])
+                 & (labels['repeat_route_id'][same] == labels['repeat_route_id'][at])
+                 & (labels['performance_id'][same] != labels['performance_id'][at])
+                 & (labels['recording_id'][same] != labels['recording_id'][at]))
+        own_pool = same[valid]
+        available[own] = len(own_pool)
+        return np.flatnonzero(available), own, own_pool, removed
+
+    def draw_pool(self, anchor, context, work):
+        _, own, own_pool, removed = context
+        if work == own:
+            return own_pool
+        pool = self.groups['work_id'][int(work)]
+        if removed[work] == 0:
+            return pool
+        at = self.positions[anchor['window']['window_id']]
+        labels = self.labels
+        return pool[(labels['performance_id'][pool] != labels['performance_id'][at])
+                    & (labels['recording_id'][pool] != labels['recording_id'][at])]
+
+    def distances(self, anchor, indices):
+        delta = self.matrix[indices] - np.asarray(anchor['g_scaled'])
+        # Match the scalar reduction order exactly at inclusive near/far cutoffs.
+        blocks = [np.mean(np.ascontiguousarray(delta[:, ids] ** 2), axis=1) for ids in self.block_columns]
+        return np.mean(np.ascontiguousarray(np.stack(blocks, axis=1)), axis=1)
 
 
 def _prepare(profiles, scaler, config, profiles_id):
@@ -78,7 +156,7 @@ def _prepare(profiles, scaler, config, profiles_id):
     if scaler['parents']['profiles'] != profiles_id:
         raise ValueError('Scaler was fit on a different profile artifact')
     profiles = unique_profiles(profiles, train_only=True)
-    return [scale_profile(p, scaler) for p in profiles]
+    return scale_profiles(profiles, scaler)
 
 
 def _rng(seed, identity):
@@ -93,35 +171,74 @@ def calibrate_distances(profiles, scaler, config=StyleConfig(), *, profiles_id):
         if signature:
             signatures[signature].append(p)
     results = {}
-    for signature, anchors in sorted(signatures.items()):
+    for si, (signature, anchors) in enumerate(sorted(signatures.items()), 1):
+        logging.getLogger(__name__).info('signature %d/%d anchors=%d', si, len(signatures), len(anchors))
         index = _CandidateIndex(profiles, signature)
         anchor_works = defaultdict(list)
+        possible_pairs = 0
         for anchor in anchors:
-            if index.buckets(anchor):
+            n = index.count(anchor)
+            if n:
                 anchor_works[anchor['window']['work_id']].append(anchor)
+                possible_pairs += n
         rng = _rng(config.seed, ['calibration', signature])
-        heap, possible_pairs = [], 0
-        # Exponential-race weighted reservoir: equivalent to sampling the specified
-        # hierarchical pair distribution without replacement. Retain <= cap pairs;
-        # enumerate keys in a bounded stream, calculate distances only after sampling.
-        for work, work_anchors in sorted(anchor_works.items()):
-            for anchor in work_anchors:
-                buckets = index.buckets(anchor)
-                for candidates in buckets.values():
-                    weight = 1. / (len(anchor_works) * len(work_anchors) * len(buckets) * len(candidates))
-                    for candidate in candidates:
-                        possible_pairs += 1
-                        priority = math.log(max(float(rng.random()), np.finfo(float).tiny)) / weight
-                        entry = (priority, anchor['window']['window_id'], candidate['window']['window_id'],
-                                 anchor, candidate)
-                        if len(heap) < config.max_calibration_pairs:
-                            heapq.heappush(heap, entry)
-                        elif priority > heap[0][0]:
-                            heapq.heapreplace(heap, entry)
+        selected = set()
+        cap = config.max_calibration_pairs
+        if possible_pairs <= cap:
+            for work_anchors in anchor_works.values():
+                for anchor in work_anchors:
+                    at = index.positions[anchor['window']['window_id']]
+                    selected.update((at, int(i)) for i in index.indices(anchor))
+        else:
+            # Draw exactly the prescribed hierarchical distribution, rejecting
+            # already-seen ordered pairs. Memory and distance computations are capped.
+            works = sorted(anchor_works)
+            cache = {}
+            attempts = 0
+            while len(selected) < cap and attempts < max(10000, cap * 100):
+                attempts += 1
+                work = works[int(rng.integers(len(works)))]
+                pool = anchor_works[work]
+                anchor = pool[int(rng.integers(len(pool)))]
+                at = index.positions[anchor['window']['window_id']]
+                if at not in cache:
+                    if len(cache) >= 32:
+                        cache.pop(next(iter(cache)))
+                    cache[at] = index.draw_context(anchor)
+                context = cache[at]
+                work = context[0][int(rng.integers(len(context[0])))]
+                candidates = index.draw_pool(anchor, context, work)
+                selected.add((at, int(candidates[int(rng.integers(len(candidates)))])))
+            if len(selected) < cap:
+                # Rare, highly imbalanced near-exhaustion fallback: exact weighted
+                # reservoir on remaining keys, with the same pair probabilities.
+                heap = []
+                remaining = cap - len(selected)
+                for work_anchors in anchor_works.values():
+                    for anchor in work_anchors:
+                        at = index.positions[anchor['window']['window_id']]
+                        buckets = index.buckets(anchor)
+                        for candidates in buckets.values():
+                            weight = 1. / (len(works) * len(work_anchors) * len(buckets) * len(candidates))
+                            for candidate in candidates:
+                                pair = (at, int(candidate))
+                                if pair in selected:
+                                    continue
+                                priority = math.log(max(float(rng.random()), np.finfo(float).tiny)) / weight
+                                entry = (priority, *pair)
+                                if len(heap) < remaining:
+                                    heapq.heappush(heap, entry)
+                                elif priority > heap[0][0]:
+                                    heapq.heapreplace(heap, entry)
+                selected.update((a, b) for _, a, b in heap)
         pairs = []
-        for _, aid, bid, anchor, candidate in sorted(heap, key=lambda item: (item[1], item[2])):
+        ordered = sorted(selected, key=lambda pair: (index.profiles[pair[0]]['window']['window_id'],
+                                                      index.profiles[pair[1]]['window']['window_id']))
+        for ai, bi in ordered:
+            anchor, candidate = index.profiles[ai], index.profiles[bi]
             distance, _ = profile_distance(anchor, candidate, signature)
-            pairs.append({'anchor_window_id': aid, 'candidate_window_id': bid, 'distance': distance})
+            pairs.append({'anchor_window_id': anchor['window']['window_id'],
+                          'candidate_window_id': candidate['window']['window_id'], 'distance': distance})
         distances = [p['distance'] for p in pairs]
         result = {'J_a': list(signature), 'pair_count': len(pairs), 'possible_pair_count': possible_pairs,
                   'pairs': pairs, 'status': 'insufficient_pairs', 'global_near': 0., 'global_far': 0.,
@@ -137,11 +254,12 @@ def calibrate_distances(profiles, scaler, config=StyleConfig(), *, profiles_id):
                           delta_g=config.gap_fraction * spread, scale_method=method,
                           status='valid' if spread > config.epsilon else 'degenerate_metric')
         results[signature_key(signature)] = result
+        logging.getLogger(__name__).info('signature %d/%d pairs=%d status=%s', si, len(signatures), len(pairs), result['status'])
     return artifact('distance-calibration', config, parents={'profiles': profiles_id, 'scaler': scaler['id']},
                     fit_split='train', seed=config.seed, signatures=results,
                     status='valid' if any(r['status'] == 'valid' for r in results.values()) else
                            'inactive_core' if not scaler['metric_ready'] else 'no_valid_signature',
-                    pair_sampling='hierarchical work-uniform exponential reservoir without replacement',
+                    pair_sampling='hierarchical work-uniform unique draws; exact remaining-key reservoir fallback',
                     quantile_method='numpy linear')
 
 
@@ -191,41 +309,62 @@ def build_triplets(profiles, scaler, calibration, config=StyleConfig(), *, profi
             continue
         if signature not in indexes:
             indexes[signature] = _CandidateIndex(profiles, signature)
-        buckets = indexes[signature].buckets(anchor)
-        candidates = [p for pool in buckets.values() for p in pool]
-        outcome.update(candidate_count=len(candidates), candidate_work_counts={k: len(v) for k, v in buckets.items()})
-        if len(candidates) < config.min_candidates:
+        index = indexes[signature]
+        indices = index.indices(anchor)
+        at = index.positions[wa['window_id']]
+        candidate_works = index.labels['work_id'][indices]
+        work_codes, work_counts = np.unique(candidate_works, return_counts=True)
+        names = index.work_names
+        outcome.update(candidate_count=len(indices),
+                       candidate_work_counts={names[int(k)]: int(v) for k, v in zip(work_codes, work_counts)})
+        if len(indices) < config.min_candidates:
             skip('candidates_insufficient')
             continue
-        if not any(p['window']['work_id'] != wa['work_id'] for p in candidates):
+        cross_work = candidate_works != index.labels['work_id'][at]
+        if not cross_work.any():
             skip('cross_work_candidate_missing')
             continue
-        distances = [(p, *profile_distance(anchor, p, signature)) for p in candidates]
-        near, far = np.quantile([d for _, d, _ in distances],
-                                [config.near_quantile, config.far_quantile], method='linear')
+        distances = index.distances(anchor, indices)
+        near, far = np.quantile(distances, [config.near_quantile, config.far_quantile], method='linear')
         near, far = min(float(near), calibrated['global_near']), max(float(far), calibrated['global_far'])
-        positives = [(p, d, blocks) for p, d, blocks in distances if p['window']['work_id'] != wa['work_id'] and d <= near]
-        negatives = [(p, d, blocks) for p, d, blocks in distances if p['window']['same_window_key'] == wa['same_window_key']
-                     and p['window']['work_id'] == wa['work_id'] and d >= far]
-        if not positives:
+        pmask = cross_work & (distances <= near)
+        nmask = ~cross_work & (distances >= far)
+        pi, ni = indices[pmask], indices[nmask]
+        pd, nd = distances[pmask], distances[nmask]
+        if not len(pi):
             skip('positive_missing')
             continue
-        if not negatives:
+        if not len(ni):
             skip('same_window_far_negative_missing')
             continue
         gap = calibrated['delta_g']
-        feasible = [(p, d, blocks) for p, d, blocks in positives
-                    if any(dn - d >= gap and p['window']['recording_id'] != n['window']['recording_id']
-                           and p['window']['performance_id'] != n['window']['performance_id'] for n, dn, _ in negatives)]
-        if not feasible:
+        potential = nd.max() - pd >= gap
+        feasible = np.zeros(len(pi), dtype=bool)
+        labels = index.labels
+        # Highest negatives only accelerate the existence test. Final p/n choices
+        # remain uniform over exactly the same feasible sets and in the same order.
+        for npos in np.argsort(-nd, kind='stable'):
+            if not potential.any() or feasible[potential].all():
+                break
+            n = ni[npos]
+            feasible |= (potential & (nd[npos] - pd >= gap)
+                         & (labels['recording_id'][pi] != labels['recording_id'][n])
+                         & (labels['performance_id'][pi] != labels['performance_id'][n]))
+        feasible_positions = np.flatnonzero(feasible)
+        if not len(feasible_positions):
             skip('gap_insufficient')
             continue
         rng = _rng(config.seed, ['triplet', wa['performance_id'], wa['window_id']])
-        positive, dap, bp = feasible[int(rng.integers(len(feasible)))]
-        allowed = [(n, dn, blocks) for n, dn, blocks in negatives if dn - dap >= gap
-                   and positive['window']['recording_id'] != n['window']['recording_id']
-                   and positive['window']['performance_id'] != n['window']['performance_id']]
-        negative, dan, bn = allowed[int(rng.integers(len(allowed)))]
+        ppos = feasible_positions[int(rng.integers(len(feasible_positions)))]
+        p = pi[ppos]
+        positive, dap = index.profiles[int(p)], float(pd[ppos])
+        allowed = np.flatnonzero((nd - dap >= gap)
+                                 & (labels['recording_id'][ni] != labels['recording_id'][p])
+                                 & (labels['performance_id'][ni] != labels['performance_id'][p]))
+        npos = allowed[int(rng.integers(len(allowed)))]
+        negative, dan = index.profiles[int(ni[npos])], float(nd[npos])
+        _, bp = profile_distance(anchor, positive, signature)
+        _, bn = profile_distance(anchor, negative, signature)
         validate_triplet(anchor, positive, negative, signature, near=near, far=far, gap=gap)
         triplet = {'anchor_window_id': wa['window_id'], 'positive_window_id': positive['window']['window_id'],
                    'negative_window_id': negative['window']['window_id'],

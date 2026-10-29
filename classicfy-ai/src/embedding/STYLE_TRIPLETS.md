@@ -68,10 +68,11 @@ near/far Q20/Q80, gap=train 거리 IQR의 .1배(std fallback), seed 2026.
 필요한 명시적 설정은 `make-windows --config config.json`으로 전달하며 모든 산출물에 기록된다.
 테스트에서 낮춘 임계값은 production 기본값을 바꾸지 않는다.
 
-Calibration은 work→anchor→candidate work→candidate 순의 균등 확률을 반영한
-exponential reservoir 표집을 사용한다. ordered pair를 중복 없이 최대 20,000개 유지하며,
-가능 pair가 작으면 모두 사용한다. 전체 N×N 거리 행렬을 만들지 않는다. pair 키는
-전체 후보를 순회하므로 실행 시간은 후보 수에 따라 제곱으로 늘 수 있다.
+Calibration은 work→anchor→candidate work→candidate 순의 균등 확률로 ordered pair를
+중복 없이 표집한다. 최대 20,000개를 유지하며 가능 pair가 작으면 모두 사용한다.
+표집이 거의 소진되는 불균형 사례에는 같은 확률을 반영한 remaining-key reservoir로 마무리한다.
+전체 N×N 거리 행렬은 만들지 않는다. typed 후보 인덱스와 anchor당 거리 벡터를 사용하며,
+영역별 거리 식과 비교 피처 signature는 그대로 유지한다.
 
 ## 실행 순서
 

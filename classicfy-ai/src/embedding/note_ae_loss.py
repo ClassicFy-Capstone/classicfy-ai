@@ -11,6 +11,30 @@ from .note_autoencoder import validate_padding
 RECONSTRUCTION_GROUPS = ('tempo', 'onset', 'velocity', 'articulation', 'pedal')
 
 
+def mean_tempo_loss(prediction, beat_targets, beat_mask, *, delta=1.):
+    """Huber against the window mean of once-scaled, once-counted valid beats.
+
+    Use full beat tables and window ownership masks, including beats without
+    attacks. Neither note density nor repeated note-level tempo copies weight
+    this target. All-missing windows contribute no loss or denominator.
+    """
+    if (beat_targets.ndim != 2 or beat_mask.shape != beat_targets.shape or beat_mask.dtype != torch.bool
+            or prediction.shape != beat_targets.shape[:1] or not len(prediction)
+            or not math.isfinite(delta) or delta <= 0):
+        raise ValueError('Expected mean prediction [B], scaled beat targets/mask [B,K], and positive Huber delta')
+    counts = beat_mask.sum(-1)
+    valid = counts > 0
+    clean = torch.where(beat_mask, beat_targets, 0.)
+    pred = torch.where(valid, prediction, 0.)
+    if not torch.isfinite(clean).all() or not torch.isfinite(pred).all():
+        raise ValueError('Observed mean tempo prediction and beat targets must be finite')
+    target = (clean.sum(-1) / counts.clamp_min(1)).detach()
+    errors = F.huber_loss(pred, target, reduction='none', delta=delta)
+    return {'loss': errors[valid].mean() if valid.any() else pred.sum() * 0.,
+            'window_losses': torch.where(valid, errors, 0.), 'valid_windows': valid,
+            'target': target, 'prediction': pred, 'beat_counts': counts, 'skip': not bool(valid.any())}
+
+
 def reconstruction_loss(prediction, target, M, P, beat_id, *, delta=1.):
     if (prediction.shape != target.shape or target.shape != (*P.shape, 11)
             or M.shape != target.shape or M.dtype != torch.bool or beat_id.shape != P.shape

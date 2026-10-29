@@ -1,7 +1,7 @@
 """Small-run friendly training, validation, checkpointing and note-window export."""
 
 from collections import Counter
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 import json
 import math
 from pathlib import Path
@@ -16,7 +16,7 @@ from features.note_performance_normalization import NotePerformanceScaler
 from features.note_score_context import NoteScoreScale, note_score_schema
 from features.style_profile import stable_id
 from .note_ae_data import to_device
-from .note_ae_loss import RECONSTRUCTION_GROUPS, reconstruction_loss, triplet_style_loss
+from .note_ae_loss import RECONSTRUCTION_GROUPS, mean_tempo_loss, reconstruction_loss, triplet_style_loss
 from .note_autoencoder import NoteAEConfig, NotePerformanceAutoencoder
 from .note_score_encoder import NoteScoreEncoderConfig
 
@@ -37,22 +37,29 @@ class NoteAETrainingConfig:
     torch_threads: int = 1
     max_steps_per_epoch: int = 0
     max_validation_batches: int = 0
+    beta_mean_tempo: float = 0.
+    early_stopping_patience: int = 0
+    early_stopping_min_delta: float = 0.
+    evaluate_train_each_epoch: bool = False
 
     def __post_init__(self):
         for key in ('epochs', 'batch_size', 'triplet_batch_size', 'torch_threads'):
             value = getattr(self, key)
             if isinstance(value, bool) or not isinstance(value, int) or value < 1:
                 raise ValueError('Positive integer training sizes required')
-        for key in ('seed', 'max_steps_per_epoch', 'max_validation_batches'):
+        for key in ('seed', 'max_steps_per_epoch', 'max_validation_batches', 'early_stopping_patience'):
             value = getattr(self, key)
             if isinstance(value, bool) or not isinstance(value, int) or value < 0:
                 raise ValueError('Nonnegative integer seed/limits required')
-        for key in ('learning_rate', 'gradient_clip', 'huber_delta', 'weight_decay', 'margin', 'lambda_style'):
+        for key in ('learning_rate', 'gradient_clip', 'huber_delta', 'weight_decay', 'margin', 'lambda_style',
+                    'beta_mean_tempo', 'early_stopping_min_delta'):
             value = getattr(self, key)
             if not math.isfinite(value) or value < 0 or (key in {'learning_rate', 'gradient_clip', 'huber_delta'} and value == 0):
                 raise ValueError('Invalid optimizer or loss setting')
         if self.device not in {'cpu', 'cuda', 'mps'}:
             raise ValueError('Supported devices are cpu, cuda and mps')
+        if not isinstance(self.evaluate_train_each_epoch, bool):
+            raise ValueError('evaluate_train_each_epoch must be boolean')
 
 
 def ae_schema():
@@ -96,18 +103,44 @@ class _RecMetrics:
                 'channel_counts': self.counts.tolist()}
 
 
+class _MeanTempoMetrics:
+    def __init__(self):
+        self.total, self.squared, self.windows = 0., 0., 0
+
+    def add(self, loss):
+        valid = loss['valid_windows']
+        self.windows += int(valid.sum())
+        self.total += float(loss['window_losses'][valid].detach().sum())
+        self.squared += float((loss['prediction'][valid] - loss['target'][valid]).detach().square().sum())
+
+    def result(self):
+        return {'loss': self.total / self.windows if self.windows else None,
+                'standardized_RMSE': math.sqrt(self.squared / self.windows) if self.windows else None,
+                'valid_windows': self.windows}
+
+
+def _mean_tempo_output(output, batch, delta):
+    if 'mean_tempo_hat' not in output:
+        return None
+    return mean_tempo_loss(output['mean_tempo_hat'], batch['beat_scaled'], batch['beat_loss_mask'], delta=delta)
+
+
 @torch.no_grad()
 def evaluate_note_ae(model, dataset, collate, config):
     model.eval()
-    metrics, latents = _RecMetrics(), []
+    metrics, latents, mean_metrics = _RecMetrics(), [], _MeanTempoMetrics()
     for step, batch in enumerate(_loader(dataset, config.batch_size, collate)):
         if config.max_validation_batches and step >= config.max_validation_batches:
             break
         batch = to_device(batch, config.device)
         output = model(batch)
         metrics.add(reconstruction_loss(output['R_hat'], batch['R'], batch['M'], batch['P'], batch['beat_id'], delta=config.huber_delta))
+        mean = _mean_tempo_output(output, batch, config.huber_delta)
+        if mean is not None:
+            mean_metrics.add(mean)
         latents.append(output['z'].cpu())
     result = metrics.result()
+    result['mean_tempo_auxiliary'] = mean_metrics.result() if model.config.mean_tempo_auxiliary else None
     result['status'] = 'evaluated' if result['windows'] else 'no_validation_windows'
     if latents:
         z = torch.cat(latents)
@@ -134,7 +167,7 @@ def _restore_rng(state):
 
 
 def save_note_ae_checkpoint(path, model, optimizer, config, corpus, *, epoch, step, triplets=None,
-                            generators=None, best_validation=None):
+                            generators=None, best_validation=None, early_stopping_state=None):
     payload = {'schema': ae_schema(), 'model_config': asdict(model.config),
                'score_config': asdict(model.score_encoder.config), 'training_config': asdict(config),
                'model': model.state_dict(), 'optimizer': optimizer.state_dict(), 'epoch': epoch, 'step': step,
@@ -143,7 +176,8 @@ def save_note_ae_checkpoint(path, model, optimizer, config, corpus, *, epoch, st
                'score_scale': json.loads(json.dumps(asdict(corpus.score_scale))),
                'g_dependencies': triplets.dependencies if triplets is not None else {},
                'generators': {k: g.get_state() for k, g in (generators or {}).items()},
-               'best_validation': best_validation, 'checkpoint_boundary': 'completed epoch'}
+               'best_validation': best_validation, 'checkpoint_boundary': 'completed epoch',
+               'early_stopping_state': early_stopping_state or {'significant_best': None, 'bad_epochs': 0}}
     path = Path(path)
     temporary = path.with_suffix(path.suffix + '.tmp')
     torch.save(payload, temporary)
@@ -183,10 +217,14 @@ def load_note_ae_model(path, *, corpus=None):
 
 def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=None, triplets=None, resume=None):
     config, model_config = config or NoteAETrainingConfig(), model_config or NoteAEConfig()
+    if config.beta_mean_tempo > 0 and not model_config.mean_tempo_auxiliary:
+        raise ValueError('Positive beta_mean_tempo requires the mean tempo auxiliary head')
     seed_run(config)
     train, validation = corpus.dataset('train'), corpus.dataset('validation')
     if not len(train):
         raise ValueError('No observed full eight-bar train windows')
+    if config.early_stopping_patience and not len(validation):
+        raise ValueError('Validation early stopping requires validation windows')
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     model = NotePerformanceAutoencoder(model_config, score_config).to(config.device)
@@ -195,11 +233,12 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
     optimizer = torch.optim.AdamW((p for p in model.parameters() if p.requires_grad), lr=config.learning_rate, weight_decay=config.weight_decay)
     generators = {key: torch.Generator().manual_seed(config.seed + i) for i, key in enumerate(('reconstruction', 'style'))}
     start_epoch, step, best = 0, 0, None
+    stopping = {'significant_best': None, 'bad_epochs': 0}
     if resume:
         payload, _, _ = read_note_ae_checkpoint(resume, corpus=corpus, triplets=triplets)
         expected_g = triplets.dependencies if triplets is not None else {}
-        old_config = {k: v for k, v in payload['training_config'].items() if k != 'epochs'}
-        if (payload['model_config'] != asdict(model_config) or payload['score_config'] != asdict(model.score_encoder.config)
+        old_config = {k: v for k, v in asdict(NoteAETrainingConfig(**payload['training_config'])).items() if k != 'epochs'}
+        if (asdict(NoteAEConfig(**payload['model_config'])) != asdict(model_config) or payload['score_config'] != asdict(model.score_encoder.config)
                 or old_config != {k: v for k, v in asdict(config).items() if k != 'epochs'} or payload['g_dependencies'] != expected_g):
             raise ValueError('Resume model/training/g configuration mismatch')
         model.load_state_dict(payload['model'])
@@ -208,6 +247,9 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
         for k, g in generators.items():
             g.set_state(payload['generators'][k])
         start_epoch, step, best = payload['epoch'], payload['step'], payload['best_validation']
+        stopping = payload.get('early_stopping_state', stopping).copy()
+        if config.early_stopping_patience and stopping['bad_epochs'] >= config.early_stopping_patience:
+            raise ValueError('Checkpoint already reached its validation early stopping limit')
     if config.epochs <= start_epoch:
         raise ValueError('Resume epoch limit must exceed the completed checkpoint epoch')
     rec_loader = _loader(train, config.batch_size, corpus.collate, shuffle=True, generator=generators['reconstruction'])
@@ -215,8 +257,11 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                     if triplets is not None and len(triplets) and config.lambda_style > 0 else None)
     initial = evaluate_note_ae(model, train, corpus.collate, config)
     history = []
+    expected_windows = Counter(item['window']['window_id'] for item in train.items)
+    stop_reason = 'max_epochs'
     for epoch in range(start_epoch, config.epochs):
         model.train()
+        mean_metrics = _MeanTempoMetrics()
         metrics, style_sum, active_sum, dap_sum, dan_sum, margin_sum = _RecMetrics(), 0., 0., 0., 0., 0.
         total_sum, updates, exposed, cycles, skipped = 0., 0, 0, 0, 0
         style_iter = iter(style_loader) if style_loader is not None else None
@@ -229,6 +274,9 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
             optimizer.zero_grad(set_to_none=True)
             output = model(batch)
             rec = reconstruction_loss(output['R_hat'], batch['R'], batch['M'], batch['P'], batch['beat_id'], delta=config.huber_delta)
+            mean = _mean_tempo_output(output, batch, config.huber_delta)
+            if mean is not None:
+                mean_metrics.add(mean)
             metrics.add(rec)
             rec_ids.update(w['window_id'] for w, valid in zip(raw['window_metadata'], rec['valid_windows']) if valid)
             style = None
@@ -251,10 +299,12 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                 dan_sum += float(style['d_an'].detach().sum())
                 margin_sum += float(style['margin_satisfied']) * count
                 exposure_ids.update(w['window_id'] for w in style_batch['anchor']['window_metadata'])
-            if rec['skip'] and style is None:
+            if rec['skip'] and style is None and (mean is None or mean['skip'] or config.beta_mean_tempo == 0):
                 skipped += 1
                 continue
             loss = rec['loss'] + (config.lambda_style * style['loss'] if style is not None else 0.)
+            if mean is not None and config.beta_mean_tempo > 0:
+                loss = loss + config.beta_mean_tempo * mean['loss']
             if not torch.isfinite(loss):
                 raise ValueError('Nonfinite training objective')
             loss.backward()
@@ -270,9 +320,27 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
         improved = score is not None and (best is None or score < best)
         if improved:
             best = score
+        if config.early_stopping_patience:
+            if score is None:
+                raise ValueError('Early stopping requires an observed validation reconstruction loss')
+            # Checkpoint selection always keeps the true minimum. min_delta
+            # controls only patience, independently of small best improvements.
+            if (stopping['significant_best'] is None
+                    or score < stopping['significant_best'] - config.early_stopping_min_delta):
+                stopping = {'significant_best': score, 'bad_epochs': 0}
+            else:
+                stopping['bad_epochs'] += 1
+        complete_epoch = rec_ids == expected_windows
+        if config.max_steps_per_epoch == 0 and not complete_epoch:
+            raise ValueError('Unlimited reconstruction epoch did not use every train window exactly once')
+        full_train = (evaluate_note_ae(model, train, corpus.collate, replace(config, max_validation_batches=0))
+                      if config.evaluate_train_each_epoch else None)
         train_metrics = metrics.result()
         z = torch.cat(latents) if latents else None
         row = {'epoch': epoch + 1, 'step': step, 'reconstruction': train_metrics, 'validation': validation_metrics,
+               'full_train_evaluation': full_train, 'early_stopping_state': stopping.copy(),
+               'complete_train_epoch': complete_epoch,
+               'mean_tempo_auxiliary': mean_metrics.result() if model_config.mean_tempo_auxiliary else None,
                'total_loss': total_sum / updates if updates else None,
                'style_loss': style_sum / exposed if exposed else None,
                'weighted_style_loss': config.lambda_style * style_sum / exposed if exposed else None,
@@ -287,11 +355,16 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                'embedding_variance': float(z.var(dim=0, unbiased=False).mean()) if z is not None else None}
         history.append(row)
         save_note_ae_checkpoint(out / 'last.pt', model, optimizer, config, corpus, epoch=epoch + 1, step=step,
-                                triplets=triplets, generators=generators, best_validation=best)
+                                triplets=triplets, generators=generators, best_validation=best, early_stopping_state=stopping)
         if improved:
             save_note_ae_checkpoint(out / 'best.pt', model, optimizer, config, corpus, epoch=epoch + 1, step=step,
-                                    triplets=triplets, generators=generators, best_validation=best)
-        print(json.dumps({'epoch': epoch + 1, 'rec': train_metrics['loss'], 'style': row['style_loss'], 'validation': score}), flush=True)
+                                    triplets=triplets, generators=generators, best_validation=best, early_stopping_state=stopping)
+        print(json.dumps({'epoch': epoch + 1, 'rec': train_metrics['loss'], 'style': row['style_loss'], 'validation': score,
+                          'full_train': full_train['loss'] if full_train is not None else None,
+                          'complete_train_epoch': complete_epoch, 'bad_epochs': stopping['bad_epochs']}), flush=True)
+        if config.early_stopping_patience and stopping['bad_epochs'] >= config.early_stopping_patience:
+            stop_reason = 'validation_early_stopping'
+            break
     final = evaluate_note_ae(model, train, corpus.collate, config)
     report = {'schema': ae_schema(), 'training_config': asdict(config), 'model_config': asdict(model_config),
               'score_config': asdict(model.score_encoder.config), 'score_context': 'computed on demand; ' + model_config.score_gradient,
@@ -299,8 +372,12 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
               'train_windows': len(train), 'validation_windows': len(validation),
               'test_windows_not_used': len(corpus.dataset('test')), 'eligible_triplets': len(triplets) if triplets is not None else 0,
               'style_training_performed': bool(style_loader is not None and any(r['triplet_exposures'] for r in history)),
+              'mean_tempo_auxiliary': {'enabled': model_config.mean_tempo_auxiliary, 'beta': config.beta_mean_tempo,
+                  'target': 'mean of beat_scaled over window-owned valid beats, including rests; same train tempo scaler',
+                  'decoder_receives_target_mean': False},
               'excluded_windows': corpus.excluded, 'initial_train': initial, 'final_train': final, 'history': history,
               'best_validation': best, 'checkpoint_selection': 'validation reconstruction' if best is not None else 'no best selection; last only',
+              'stop_reason': stop_reason, 'completed_epoch': history[-1]['epoch'], 'early_stopping_state': stopping,
               'limits': 'initial hyperparameters; train g agreement is not listener-style generalization'}
     (out / 'training.json').write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False))
     return model, report

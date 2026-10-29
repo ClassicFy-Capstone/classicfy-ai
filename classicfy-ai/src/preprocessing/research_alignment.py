@@ -9,6 +9,7 @@ import os
 import numpy as np
 from .note_alignment import NoteAlignment, PerformedNote
 from features.articulation import build_tempo_map
+from features.performance_time import ESTIMATED_BEAT_MIN_TAU, ESTIMATED_BEAT_MAX_TAU
 
 MODELS = ('dual_dtw', 'gluenote')
 
@@ -117,7 +118,8 @@ def align_research(score, midi, model):
                    monotone_anchor_ratio=len(positions)/max(unique_onsets, 1),
                    timing_p90_beats=float(np.percentile(errors, 90)) if errors else 999.,
                    note_count_ratio=len(midi.notes)/len(score), beat_intervals=len(widths),
-                   extreme_beat_fraction=float(np.mean((widths < .08)|(widths > 5.))) if len(widths) else 1.)
+                   extreme_beat_fraction=float(np.mean((widths < ESTIMATED_BEAT_MIN_TAU)
+                                                       | (widths > ESTIMATED_BEAT_MAX_TAU))) if len(widths) else 1.)
     reasons = []
     for name, threshold in [('score_recall', .70), ('performance_precision', .60),
                             ('span_coverage', .90), ('monotone_anchor_ratio', .90)]:

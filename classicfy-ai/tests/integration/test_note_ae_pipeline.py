@@ -2,6 +2,7 @@
 from dataclasses import replace
 import copy
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 import torch
@@ -199,7 +200,71 @@ class NoteAEPipelineTest(XMLFixture):
         cfg = replace(self.tc, epochs=2)
         full, _ = train_note_ae(corpus, self.folder / 'full', config=cfg, model_config=self.mc, score_config=self.sc)
         train_note_ae(corpus, self.folder / 'first', config=replace(cfg, epochs=1), model_config=self.mc, score_config=self.sc)
+        # Pre-auxiliary checkpoints omitted these fields; their defaults are
+        # equivalent and must remain resumable.
+        path = self.folder / 'first/last.pt'
+        legacy = torch.load(path, weights_only=True)
+        legacy['model_config'].pop('mean_tempo_auxiliary')
+        legacy['training_config'].pop('beta_mean_tempo')
+        torch.save(legacy, path)
         resumed, _ = train_note_ae(corpus, self.folder / 'resumed', config=cfg, model_config=self.mc, score_config=self.sc, resume=self.folder / 'first/last.pt')
+        for k, value in full.state_dict().items():
+            torch.testing.assert_close(value, resumed.state_dict()[k], rtol=0, atol=0)
+
+    def test_mean_auxiliary_training_checkpoint_and_exact_resume(self):
+        corpus, _ = self.corpus()
+        cfg = replace(self.tc, epochs=2, lambda_style=0., beta_mean_tempo=1.)
+        mc = replace(self.mc, mean_tempo_auxiliary=True)
+        full, report = train_note_ae(corpus, self.folder / 'aux-full', config=cfg, model_config=mc, score_config=self.sc)
+        self.assertTrue(report['mean_tempo_auxiliary']['enabled'])
+        self.assertEqual(report['history'][0]['mean_tempo_auxiliary']['valid_windows'], 3)
+        self.assertIsNotNone(report['history'][0]['validation']['mean_tempo_auxiliary']['loss'])
+        train_note_ae(corpus, self.folder / 'aux-first', config=replace(cfg, epochs=1), model_config=mc, score_config=self.sc)
+        resumed, _ = train_note_ae(corpus, self.folder / 'aux-resumed', config=cfg, model_config=mc,
+                                 score_config=self.sc, resume=self.folder / 'aux-first/last.pt')
+        loaded, _, _, _ = load_note_ae_model(self.folder / 'aux-full/last.pt', corpus=corpus)
+        for other in (resumed, loaded):
+            for k, value in full.state_dict().items():
+                torch.testing.assert_close(value, other.state_dict()[k], rtol=0, atol=0)
+        with self.assertRaisesRegex(ValueError, 'requires.*head'):
+            train_note_ae(corpus, self.folder / 'missing-head', config=cfg, model_config=self.mc, score_config=self.sc)
+
+    def test_full_epochs_and_early_stopping_keep_actual_validation_minimum(self):
+        corpus, _ = self.corpus()
+        cfg = replace(self.tc, epochs=10, batch_size=2, max_steps_per_epoch=0,
+                      early_stopping_patience=2, early_stopping_min_delta=.1, evaluate_train_each_epoch=True)
+        scores = iter([1., .95, .94])
+
+        def evaluate(model, dataset, collate, config):
+            model.eval()
+            return {'loss': next(scores) if len(dataset) == 1 else .8, 'windows': len(dataset)}
+
+        with patch('embedding.note_ae_training.evaluate_note_ae', side_effect=evaluate):
+            _, report = train_note_ae(corpus, self.folder / 'early', config=cfg, model_config=self.mc, score_config=self.sc)
+        self.assertEqual(report['stop_reason'], 'validation_early_stopping')
+        self.assertEqual(report['completed_epoch'], 3)
+        expected = {i['window']['window_id']: 1 for i in corpus.dataset('train').items}
+        for row in report['history']:
+            self.assertEqual(row['reconstruction_window_exposures'], expected)
+            self.assertEqual(row['updates'], 2)  # The final short batch is included.
+            self.assertTrue(row['complete_train_epoch'])
+            self.assertEqual(row['full_train_evaluation']['windows'], 3)
+        # Small improvements do not reset patience but still select the minimum.
+        _, payload, _, _ = load_note_ae_model(self.folder / 'early/best.pt', corpus=corpus)
+        self.assertEqual(payload['epoch'], 3)
+        self.assertEqual(payload['best_validation'], .94)
+        self.assertEqual(payload['early_stopping_state']['bad_epochs'], 2)
+
+    def test_early_stopping_state_resumes_exactly(self):
+        corpus, _ = self.corpus()
+        cfg = replace(self.tc, epochs=3, max_steps_per_epoch=0, early_stopping_patience=3,
+                      early_stopping_min_delta=100., evaluate_train_each_epoch=True)
+        full, report = train_note_ae(corpus, self.folder / 'stop-full', config=cfg, model_config=self.mc, score_config=self.sc)
+        train_note_ae(corpus, self.folder / 'stop-first', config=replace(cfg, epochs=2), model_config=self.mc, score_config=self.sc)
+        resumed, resumed_report = train_note_ae(corpus, self.folder / 'stop-resume', config=cfg,
+            model_config=self.mc, score_config=self.sc, resume=self.folder / 'stop-first/last.pt')
+        self.assertEqual(resumed_report['early_stopping_state'], report['early_stopping_state'])
+        self.assertEqual(report['early_stopping_state']['bad_epochs'], 2)
         for k, value in full.state_dict().items():
             torch.testing.assert_close(value, resumed.state_dict()[k], rtol=0, atol=0)
 

@@ -121,12 +121,13 @@ def _fraction(text, name):
 
 def _root(path):
     data = path.read_bytes()
-    if path.suffix.lower() == '.mxl':
+    # Some released ATEPP .mxl files contain ordinary, uncompressed XML.
+    if path.suffix.lower() == '.mxl' and data.startswith(b'PK'):
         with ZipFile(path) as archive:
             container = ET.fromstring(archive.read('META-INF/container.xml'))
             roots = [n.get('full-path') for n in container.iter()
                      if n.tag.rsplit('}', 1)[-1] == 'rootfile'
-                     and n.get('media-type') == 'application/vnd.recordare.musicxml+xml']
+                     and n.get('media-type') in (None, 'application/vnd.recordare.musicxml+xml')]
             if len(roots) != 1:
                 raise ValueError('Expected one MusicXML rootfile in MXL')
             member = PurePosixPath(roots[0])

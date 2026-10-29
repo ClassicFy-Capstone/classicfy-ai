@@ -1,8 +1,14 @@
 """Strict beat-scale quarter/second reference maps, independent of note deviations."""
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 import numpy as np
+
+
+# Existing research-alignment quality bounds, in seconds per quarter note.
+# These flag uncertain estimated intervals; they are not universal tempo limits.
+ESTIMATED_BEAT_MIN_TAU = .08
+ESTIMATED_BEAT_MAX_TAU = 5.
 
 
 @dataclass(frozen=True)
@@ -84,3 +90,23 @@ class BeatTimeMap:
         if start_time is None or stop_time is None or stop_time <= start_time:
             return None
         return stop_time - start_time
+
+
+def mask_estimated_beat_intervals(beats: BeatTimeMap) -> BeatTimeMap:
+    """Exclude implausible estimated slopes without changing anchors or prior masks.
+
+    Whole-alignment acceptance can tolerate a few extreme intervals. Those
+    intervals must still be unknown targets, rather than observed tempo values.
+    Annotated reference maps are deliberately outside this policy.
+    """
+    if beats.provenance.get('estimated') is not True:
+        raise ValueError('Interval bounds require an explicitly estimated beat map')
+    outside = (beats.tau < ESTIMATED_BEAT_MIN_TAU) | (beats.tau > ESTIMATED_BEAT_MAX_TAU)
+    provenance = {**beats.provenance, 'interval_validation': {
+        'policy': 'estimated-beat-tau-bounds-v1',
+        'min_seconds_per_quarter': ESTIMATED_BEAT_MIN_TAU,
+        'max_seconds_per_quarter': ESTIMATED_BEAT_MAX_TAU,
+        'out_of_range_indices': np.flatnonzero(outside).tolist(),
+        'source_invalid_indices': np.flatnonzero(~beats.valid).tolist(),
+    }}
+    return replace(beats, valid=beats.valid & ~outside, provenance=provenance)

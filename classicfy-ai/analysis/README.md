@@ -5,6 +5,8 @@
 
 | 폴더 | 분석 주제 | 시작 문서 |
 |---|---|---|
+| `note_ae_full_reconstruction/` | 복원 전용 AE의 전체 train 순회·validation 조기 종료·평균값 baseline 대비 평가 | [전체 순회 학습 결과](note_ae_full_reconstruction/README.md) |
+| `atepp_pre_ae_validation/` | ATEPP 원본·악보 연결·R/scaler·AE 입력 배치와 g/Triplet 검증 | [앞단 전수 검증](atepp_pre_ae_validation/README.md) |
 | `performance_autoencoder_plan/` | 조건부 AE의 악보 S 추출·ATEPP 캐시 연결·위치별 ScoreEncoder | [구현 안내](performance_autoencoder_plan/README.md) |
 | `score_context_validation/` | 968연주의 악보/연주 연결·독립 산술 및 초기 encoder 검증 | [검증 결과](score_context_validation/README.md) |
 | `dataset_compatibility/` | ATEPP–ASAP 공통 작품·동일 MIDI 중복·특징 분포 차이·quarter-note 입력 변환 및 다른 컴퓨터 작업 인계 | [호환성 및 작업 인계](dataset_compatibility/README.md) |

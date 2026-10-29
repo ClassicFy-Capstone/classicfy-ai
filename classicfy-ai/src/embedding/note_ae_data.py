@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 
 from features.note_performance_normalization import fit_note_performance_scaler
 from features.note_score_context import extract_note_score_context, fit_note_score_scale
-from features.style_profile import check_artifact, stable_id, validate_recordings
+from features.style_profile import check_artifact, stable_id, validate_recordings, scale_profiles
 from .note_performance_data import NotePerformancePair, NotePerformanceSegment, collate_note_performance
 from .note_score_context_data import NoteScoreSegment
 from .style_profile_data import verify_window_sources
@@ -113,7 +113,15 @@ def collate_ae_windows(items, *, r_scaler, score_scale):
     for i, item in enumerate(items):
         if batch['R_metadata'][i]['row_keys'] != item['window']['score_note_keys']:
             raise ValueError('Padded AE rows disagree with window note keys')
-        batch['beat_occurrence_keys'].append(item['window']['beat_keys'])
+        # Onset-based chunks can begin after a boundary rest. Full eight-bar
+        # inputs own tempo beats by measure q bounds, independently of note onsets.
+        r = item['segment'].pair.performance
+        w = item['window']
+        owned = (r.beats.valid & (r.beats.q[:-1] >= w['q_start'])
+                 & (r.beats.q[:-1] < w['q_end']) & r_scaler.trained_channel_mask[0])
+        batch['beat_loss_mask'][i] = False
+        batch['beat_loss_mask'][i, :len(owned)] = torch.from_numpy(owned.copy())
+        batch['beat_occurrence_keys'].append(w['beat_keys'])
     return batch
 
 
@@ -127,7 +135,7 @@ class FixedNoteTriplets(Dataset):
                 or calibration['parents'] != {'profiles': profiles['id'], 'scaler': scaler['id']}
                 or triplets['parents'] != {'profiles': profiles['id'], 'scaler': scaler['id'], 'calibration': calibration['id']}):
             raise ValueError('Fixed g/Triplet provenance does not match the AE corpus')
-        lookup = {p['window']['window_id']: scale_profile(p, scaler) for p in profiles['profiles']}
+        lookup = {p['window']['window_id']: p for p in scale_profiles(profiles['profiles'], scaler)}
         self.rows, self.corpus = [], corpus
         for t in triplets['triplets']:
             ids = [t[role + '_window_id'] for role in ('anchor', 'positive', 'negative')]

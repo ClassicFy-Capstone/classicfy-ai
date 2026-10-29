@@ -1,6 +1,7 @@
 """Hand-computable checks for the pre-AE note performance contract."""
 
 from dataclasses import replace
+import hashlib
 
 import mido
 import numpy as np
@@ -17,7 +18,7 @@ from features.note_performance_normalization import (
 from features.note_score_context import extract_note_score_context
 from features.performance_time import BeatTimeMap
 from preprocessing.note_alignment import NoteAlignment, PerformedNote, ScoreNote
-from preprocessing.note_performance_adapters import bind_alignment_to_raw_midi
+from preprocessing.note_performance_adapters import bind_alignment_to_raw_midi, prepare_atepp_note_performance
 from preprocessing.performance_midi import (
     ControlEvent, PedalObservation, PerformanceMidi, PerformanceNote,
     load_performance_midi, score_seconds_to_quarters,
@@ -111,6 +112,60 @@ class NotePerformancePipelineTest(XMLFixture):
         bad = replace(self.alignment, matches=((replace(first[0], onset_beats=9), first[1]), *others))
         with self.assertRaisesRegex(ValueError, 'coordinate'):
             bind_alignment_to_raw_midi(self.xml, self.score, self.performance, bad)
+
+    def test_atepp_masks_extreme_beats_and_dependent_targets(self):
+        # A file may pass whole-alignment acceptance while one beat collapses.
+        path = self.folder / 'performance.mid'
+        midi = mido.MidiFile(ticks_per_beat=480)
+        track = mido.MidiTrack()
+        midi.tracks.append(track)
+        events = []
+        for n in self.performance.notes:
+            events.extend([(round(n.onset_sec * 960), 'note_on', n.pitch, n.velocity),
+                           (round(n.key_offset_sec * 960), 'note_off', n.pitch, 0)])
+        events.extend((round(c.time_sec * 960), 'control_change', c.number, c.value)
+                      for c in self.performance.controls)
+        previous = 0
+        for tick, kind, pitch, velocity in sorted(events):
+            fields = ({'control': pitch, 'value': velocity} if kind == 'control_change'
+                      else {'note': pitch, 'velocity': velocity})
+            track.append(mido.Message(kind, **fields, time=tick - previous))
+            previous = tick
+        midi.save(path)
+        cache = self.folder / 'alignment.npz'
+        matches = self.alignment.matches
+        columns = dict(
+            score_ids=[s.note_id for s, _ in matches], performance_ids=[p.note_id for _, p in matches],
+            score_onsets=[s.onset_beats for s, _ in matches], score_offsets=[s.offset_beats for s, _ in matches],
+            performance_onsets=[p.onset for _, p in matches], performance_offsets=[p.offset for _, p in matches],
+            pitch=[s.pitch for s, _ in matches], score_beats=np.arange(5),
+            performance_beats=np.array([0., .5, 1., 1. + 1 / 240, 1.5 + 1 / 240]))
+        score_path = self.folder / 'score.mid'
+        mido.MidiFile().save(score_path)
+        bridge = {'xml_sha256': self.xml.source_sha256,
+                  'score_midi_sha256': hashlib.sha256(score_path.read_bytes()).hexdigest(),
+                  'score_coordinate_unit': 'quarter', 'alignment_accepted': True,
+                  'score_id_to_occurrence': {s.note_id: s.note_id for s, _ in matches}}
+        for supplied_mask in (None, np.array([False, True, True, True])):
+            with self.subTest(supplied_mask=supplied_mask):
+                np.savez(cache, **columns, **({} if supplied_mask is None else {'beat_valid': supplied_mask}))
+                _, r = prepare_atepp_note_performance(
+                    self.folder / 'score-1.musicxml', score_path, path, cache, bridge,
+                    record_key='fixture', work_key='work', split='train', score_features=self.score,
+                    pedal_observations=self.performance.pedal_observations)
+                self.assertFalse(r.beats.valid[2])
+                self.assertEqual(r.provenance['adapter'], 'atepp-note-r-v2')
+                self.assertFalse(r.mask[2, [0, 1, 3, 7, 9]].any())
+                self.assertTrue(r.mask[2, [2, 4, 5, 6, 8, 10]].all())
+                self.assertTrue(r.mask[3, :3].all())
+                self.assertEqual(bool(r.beats.valid[0]), supplied_mask is None)
+                scaler = fit_note_performance_scaler([r], fit_manifest_id='masked-estimated-beats')
+                self.assertEqual(scaler.valid_counts[0], int(r.beats.valid.sum()))
+                batch = collate_note_performance([NotePerformancePair(self.score, r)], scaler)
+                self.assertFalse(batch['beat_mask'][0, 2])
+                self.assertFalse(batch['beat_loss_mask'][0, 2])
+                self.assertFalse(batch['R_mask'][0, 2, [0, 1, 3, 7, 9]].any())
+                self.assertTrue(np.isfinite(batch['R_scaled'].numpy()).all())
 
     def test_scaler_train_only_roundtrip_and_beat_weighting(self):
         scaler = fit_note_performance_scaler([self.r, self.r], fit_manifest_id='fixture')

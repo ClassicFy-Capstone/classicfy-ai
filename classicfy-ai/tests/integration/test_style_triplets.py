@@ -306,3 +306,60 @@ class StyleTripletsTest(XMLFixture):
             deltas=(d, m, c, np.array([0., 0., 10.]), np.ones(3, bool), np.full(3, 3)))
         self.assertEqual(p['per_channel_coverage'][0], 1.)
         self.assertAlmostEqual(p['g_raw'][0], float(weighted_quantile([0, 0, 10], [10, 10, 12], .5)))
+
+    def test_vectorized_candidate_distances_equal_scalar_contract(self):
+        from embedding.style_triplets import _CandidateIndex
+        ps = self.profile_set()
+        scaler = fit_profile_scaler(ps, profiles_id='p')
+        scaled = [scale_profile(p, scaler) for p in ps]
+        for anchor in scaled[:3]:
+            signature = anchor_signature(anchor, scaler)
+            index = _CandidateIndex(scaled, signature)
+            indices = index.indices(anchor)
+            self.assertEqual(index.count(anchor), len(indices))
+            context = index.draw_context(anchor)
+            buckets = index.buckets(anchor)
+            self.assertEqual(list(context[0]), list(buckets))
+            for work in context[0]:
+                np.testing.assert_array_equal(index.draw_pool(anchor, context, work), buckets[work])
+            expected = [p['window']['window_id'] for p in scaled if candidate_allowed(anchor, p, signature)]
+            self.assertEqual([index.profiles[i]['window']['window_id'] for i in indices], expected)
+            direct = [profile_distance(anchor, index.profiles[i], signature)[0] for i in indices]
+            np.testing.assert_array_equal(index.distances(anchor, indices), direct)
+        cfg = replace(StyleConfig(), max_calibration_pairs=100)
+        scaler = fit_profile_scaler(ps, cfg, profiles_id='p')
+        calibration = calibrate_distances(ps, scaler, cfg, profiles_id='p')
+        for signature in calibration['signatures'].values():
+            keys = [(pair['anchor_window_id'], pair['candidate_window_id']) for pair in signature['pairs']]
+            self.assertEqual(len(keys), len(set(keys)))
+            self.assertEqual(len(keys), min(signature['possible_pair_count'], 100))
+
+    def test_verified_delta_snapshot_is_readonly_and_bound_to_its_record(self):
+        xml = self.make_score()
+        records = [self.record(xml, f'p{i}', i - 1) for i in range(3)]
+        reference = fit_reference(records)
+        r = records[0].performance
+        delta = reference_delta(r, reference)
+        self.assertEqual(len(delta), 6)
+        with self.assertRaises(ValueError):
+            delta[0][0, 1] = 9
+        first = summarize_window(r, make_windows(records[0])[0], reference, deltas=delta)
+        self.assertEqual(first, summarize_window(r, make_windows(records[0])[0], reference))
+        other = replace(r, record_key='different')
+        window = make_windows(replace(records[0], performance=other))[0]
+        with self.assertRaisesRegex(ValueError, 'snapshot'):
+            summarize_window(other, window, reference, deltas=delta)
+
+    def test_compact_scaler_snapshot_preserves_bulk_values_and_masks(self):
+        from features.style_profile import FrozenProfileScaler, scale_profiles
+        profiles = self.profile_set()
+        scaler = fit_profile_scaler(profiles, profiles_id='p')
+        snapshot = FrozenProfileScaler.from_artifact(scaler)
+        expected = [scale_profile(p, scaler) for p in profiles[:3]]
+        self.assertEqual(scale_profiles(profiles[:3], snapshot), expected)
+        self.assertEqual(scale_profiles(profiles[:3], scaler), expected)
+        with self.assertRaises(ValueError):
+            snapshot.scale[0] = 2
+        corrupt = {**scaler, 'center': [999.] * 23}
+        with self.assertRaisesRegex(ValueError, 'integrity'):
+            FrozenProfileScaler.from_artifact(corrupt)

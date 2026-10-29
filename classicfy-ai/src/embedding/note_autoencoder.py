@@ -21,6 +21,7 @@ class NoteAEConfig:
     dropout: float = .1
     latent_dim: int = 64
     score_gradient: str = 'joint'
+    mean_tempo_auxiliary: bool = False
 
     def __post_init__(self):
         for name in ('context_dim', 'condition_dim', 'input_dim', 'hidden_size', 'layers', 'latent_dim'):
@@ -29,6 +30,8 @@ class NoteAEConfig:
                 raise ValueError('AE dimensions must be positive integers')
         if not math.isfinite(self.dropout) or not 0 <= self.dropout < 1 or self.score_gradient not in {'joint', 'frozen'}:
             raise ValueError('Invalid AE dropout or score gradient policy')
+        if not isinstance(self.mean_tempo_auxiliary, bool):
+            raise ValueError('mean_tempo_auxiliary must be boolean')
 
 
 def validate_padding(P, lengths):
@@ -66,6 +69,13 @@ class ConditionalNoteAutoencoder(nn.Module):
         self.articulation_head = nn.Linear(2 * c.hidden_size, 1)
         self.pedal_head = nn.Linear(2 * c.hidden_size, 7)
         self.tempo_head = nn.Linear(2 * c.hidden_size, 1)
+        self.mean_tempo_head = None
+        if c.mean_tempo_auxiliary:
+            # Adding this deterministic head must not change shared initialization
+            # or the seeded dropout stream in a controlled baseline comparison.
+            with torch.random.fork_rng(devices=[]):
+                self.mean_tempo_head = nn.Sequential(nn.Linear(c.latent_dim, c.latent_dim), nn.GELU(),
+                                                      nn.Linear(c.latent_dim, 1))
 
     def _condition(self, C, P, lengths):
         validate_padding(P, lengths)
@@ -88,7 +98,10 @@ class ConditionalNoteAutoencoder(nn.Module):
         h = _packed(self.encoder, x, lengths)
         pooled = torch.where(P[..., None], h, 0.).sum(1) / lengths.to(h.device)[:, None]
         z = self.latent(pooled)
-        return {'z': z, 'e': F.normalize(z, dim=-1)}
+        result = {'z': z, 'e': F.normalize(z, dim=-1)}
+        if self.mean_tempo_head is not None:
+            result['mean_tempo_hat'] = self.mean_tempo_head(z).squeeze(-1)
+        return result
 
     def decode(self, C, z, P, lengths, beat_id):
         condition = self._condition(C, P, lengths)

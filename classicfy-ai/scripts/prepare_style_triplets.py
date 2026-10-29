@@ -13,7 +13,7 @@ from embedding.style_profile_data import (
 )
 from embedding.style_triplets import build_triplets, calibrate_distances
 from features.style_profile import (
-    StyleConfig, artifact, check_artifact, fit_profile_scaler, fit_reference, scale_profile,
+    StyleConfig, artifact, check_artifact, fit_profile_scaler, fit_reference, scale_profile, scale_profiles,
 )
 
 
@@ -47,7 +47,7 @@ def run(args):
                 if scaler['parents']['profiles'] != profiles['id']:
                     raise ValueError('Scaler/profile dependency mismatch')
                 result = artifact('scaled-profiles', config, parents={'profiles': profiles['id'], 'scaler': scaler['id']},
-                                  profiles=[scale_profile(p, scaler) for p in profiles['profiles']])
+                                  profiles=scale_profiles(profiles['profiles'], scaler))
             elif args.command == 'calibrate-distances':
                 result = calibrate_distances(train, scaler, config, profiles_id=profiles['id'])
             else:
