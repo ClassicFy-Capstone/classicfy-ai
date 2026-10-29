@@ -4,6 +4,8 @@ from .asap_loader import ASAPLoader, AsapSample, BeatType
 from .midi_loader import MidiData, NoteEvent, PedalEvent, load_midi
 from .note_alignment import NoteAlignment, PerformedNote, ScoreNote, load_match
 from .score_midi import load_score_midi, read_score_midi
+from .musicxml_score import MusicXMLScore, XMLNote, read_musicxml
+from .score_note_mapping import TieMapping, NoteAlignmentLinks, build_tie_mapping, link_note_alignment
 
 __all__ = [
     "ASAPLoader",
@@ -19,4 +21,11 @@ __all__ = [
     "load_midi",
     "load_score_midi",
     "read_score_midi",
+    "MusicXMLScore",
+    "XMLNote",
+    "read_musicxml",
+    "TieMapping",
+    "NoteAlignmentLinks",
+    "build_tie_mapping",
+    "link_note_alignment",
 ]

@@ -12,6 +12,10 @@ from .beat_grid import BeatGrid, as_beat_array, assign_windows, build_beat_grid
 from .common_pattern import PieceFeatureInput, SeparatedFeature, separate_piece_feature
 from .dynamics import DynamicsFeature, extract_dynamics, summarize_dynamics
 from .models import BeatSequence
+from .note_score_context import (
+    NoteScoreFeatures, NoteScoreScale, encode_note_numeric, extract_note_score_context,
+    fit_note_score_scale, note_score_schema,
+)
 from .score_context import (
     SCORE_CHANNELS, ScoreContextFeatures, ScoreContextScale, encode_score_features,
     extract_score_context, fit_score_context_scale, load_score_context, score_context_schema,
@@ -34,6 +38,12 @@ __all__ = [
     "ArticulationFeature",
     "BeatGrid",
     "BeatSequence",
+    "NoteScoreFeatures",
+    "NoteScoreScale",
+    "encode_note_numeric",
+    "extract_note_score_context",
+    "fit_note_score_scale",
+    "note_score_schema",
     "DynamicsFeature",
     "DEFAULT_SCALE_METHODS",
     "NormalizedFeature",

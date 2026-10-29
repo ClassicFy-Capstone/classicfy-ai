@@ -4,6 +4,10 @@
 **악보 입력 S 추출·ATEPP 캐시 adapter·위치별 ScoreEncoder까지 구현했다.**
 전체 PerformanceAutoencoder와 실제 ATEPP 학습은 후속이다.
 
+후속 [MusicXML 음표별 입력·ScoreEncoder 계획](NOTE_SCORE_CONTEXT_PLAN.md)은
+음표별 특징 명세, 지시 전파, 반복·붙임줄·정렬 연결 및 onset별 문맥 인코딩을 정리한다.
+아래 MIDI/quarter 구현과 구분되는 구현 전 설계안이다.
+
 ```text
 score MIDI + 동일 quarter 경계 → S[T,30] → batch[B,K,T,30]
                                       ↓
