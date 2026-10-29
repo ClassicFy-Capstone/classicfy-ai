@@ -159,3 +159,7 @@ PYTHONPATH=src ../.venv/bin/python -m unittest discover -s tests/unit/embedding 
 
 구간의 결측·padding·tail, 작품 split, hidden 정답 누출 방지, 5feature 오차 비중,
 가중치 학습, checkpoint 재로드 및 다른 작품 후보 제외를 검증한다.
+
+## 조건부 AE의 악보 맥락
+
+`score_encoder.py`의 `ScoreEncoder`는 가변 `[B,K,T,Ds]`와 실제 길이 mask를 받아 시점별 `[B,K,T,2H]` 맥락을 만든다. 기본 H=64이며 padding이 유효 출력에 영향을 주지 않도록 packed BiGRU를 사용한다. `score_context_data.py`는 기존 ATEPP/quarter cache와 source score를 연결하고 연주 소속을 보존하는 batch를 만든다. [구현 안내](../../analysis/performance_autoencoder_plan/README.md)에 사용법이 있다. 전체 연주 AE·실제 ATEPP 학습·학습된 임베딩 생성과는 구분한다.

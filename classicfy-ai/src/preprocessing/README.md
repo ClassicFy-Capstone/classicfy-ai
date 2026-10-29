@@ -105,3 +105,7 @@ PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 로더의 단위 테스트는 `tests/unit/preprocessing`, 로더에서 feature extraction까지의
 연결 검증은 `tests/integration`에 둔다. 자세한 테스트 구조는 `tests/README.md`를
 참고한다.
+
+## 정렬 engine과 독립적인 score MIDI 읽기
+
+`preprocessing.score_midi.load_score_midi`는 기존 ATEPP의 symbolic quarter-note reader를 제공한다. `read_score_midi`는 notes와 encoded extent·duplicate/zero-length/unclosed/orphan 진단을 함께 반환한다. `atepp_alignment.load_score_midi`도 같은 함수를 재노출한다. 새 score-context 경로는 numba를 import하지 않는다. 자세한 계약은 [악보 맥락 구현](../../analysis/performance_autoencoder_plan/README.md)에 있다.

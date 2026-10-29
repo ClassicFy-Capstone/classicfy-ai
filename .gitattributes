@@ -1,3 +1,5 @@
 # Keep recorded SHA256 values stable across Windows and macOS checkouts.
 classicfy-ai/analysis/dataset_compatibility/** -text
 classicfy-ai/analysis/dataset_compatibility/asap_atepp_feature_gap/*.npz filter=lfs diff=lfs merge=lfs -text
+classicfy-ai/analysis/score_context_validation/** -text
+classicfy-ai/analysis/score_context_validation/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

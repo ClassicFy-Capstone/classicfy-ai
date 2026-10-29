@@ -12,6 +12,10 @@ from .beat_grid import BeatGrid, as_beat_array, assign_windows, build_beat_grid
 from .common_pattern import PieceFeatureInput, SeparatedFeature, separate_piece_feature
 from .dynamics import DynamicsFeature, extract_dynamics, summarize_dynamics
 from .models import BeatSequence
+from .score_context import (
+    SCORE_CHANNELS, ScoreContextFeatures, ScoreContextScale, encode_score_features,
+    extract_score_context, fit_score_context_scale, load_score_context, score_context_schema,
+)
 from .normalization import (
     DEFAULT_SCALE_METHODS, NormalizedFeature, ResidualScale, fit_residual_scale,
     standardize_piece_feature, standardize_sequence,
@@ -61,4 +65,12 @@ __all__ = [
     "summarize_pedaling",
     "summarize_rubato",
     "summarize_tempo",
+    "SCORE_CHANNELS",
+    "ScoreContextFeatures",
+    "ScoreContextScale",
+    "encode_score_features",
+    "extract_score_context",
+    "fit_score_context_scale",
+    "load_score_context",
+    "score_context_schema",
 ]

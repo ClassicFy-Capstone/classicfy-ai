@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-29",
+  "dataset": "ASAP integration audit; ATEPP raw inputs unavailable locally",
+  "recordings": 968,
+  "unique_score_files": 170,
+  "score_grid_references": 170,
+  "original_intervals": 584868,
+  "supported_score_intervals": 584868,
+  "usable_intervals": 580558,
+  "eligible_recordings": 968,
+  "segments": 9602,
+  "performance_values_masks_and_quarters_preserved": true,
+  "independent_numeric_checks": 7680,
+  "independent_max_absolute_error": 7.958078640513122e-13,
+  "independent_scope": "Raw MIDI ticks / exact Fraction overlap scalar arithmetic at 32 evenly spaced score/grid references and <=8 evenly spaced supported intervals each; all records checked for unchanged R/masks/q",
+  "midi_diagnostics": {
+    "positive_notes_before_deduplication": 516205,
+    "duplicate_notes_removed": 1,
+    "zero_length_notes": 13142,
+    "unclosed_notes": 0,
+    "orphan_offsets": 0
+  },
+  "encoder_smoke": {
+    "initial_random_weights": true,
+    "score_shape": [
+      4,
+      20,
+      64,
+      30
+    ],
+    "context_shape": [
+      4,
+      20,
+      64,
+      128
+    ],
+    "finite": true,
+    "padding_zero": true,
+    "individual_segment_matches_batch": true
+  },
+  "runtime": {
+    "torch": "2.14.1",
+    "numpy": "2.5.3",
+    "python": "3.14.3"
+  },
+  "limitations": [
+    "No actual ATEPP export/training performed",
+    "No complete PerformanceAutoencoder or learned context exported",
+    "MIDI tie/grace/voice semantics not inferred",
+    "Original performance normalization remains corpus-fitted"
+  ]
+}
