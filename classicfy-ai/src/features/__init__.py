@@ -16,6 +16,14 @@ from .note_score_context import (
     NoteScoreFeatures, NoteScoreScale, encode_note_numeric, extract_note_score_context,
     fit_note_score_scale, note_score_schema,
 )
+from .note_performance import (
+    R_CHANNELS, NotePerformanceFeatures, extract_note_performance, inverse_r_physical,
+    note_performance_schema, summarize_note_performance,
+)
+from .note_performance_normalization import (
+    NotePerformanceScaler, fit_note_performance_scaler, load_note_performance_scaler, save_note_performance_scaler,
+)
+from .performance_time import BeatTimeMap
 from .score_context import (
     SCORE_CHANNELS, ScoreContextFeatures, ScoreContextScale, encode_score_features,
     extract_score_context, fit_score_context_scale, load_score_context, score_context_schema,
@@ -44,6 +52,17 @@ __all__ = [
     "extract_note_score_context",
     "fit_note_score_scale",
     "note_score_schema",
+    "R_CHANNELS",
+    "NotePerformanceFeatures",
+    "extract_note_performance",
+    "inverse_r_physical",
+    "note_performance_schema",
+    "summarize_note_performance",
+    "NotePerformanceScaler",
+    "fit_note_performance_scaler",
+    "load_note_performance_scaler",
+    "save_note_performance_scaler",
+    "BeatTimeMap",
     "DynamicsFeature",
     "DEFAULT_SCALE_METHODS",
     "NormalizedFeature",

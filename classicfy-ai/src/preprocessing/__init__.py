@@ -6,6 +6,7 @@ from .note_alignment import NoteAlignment, PerformedNote, ScoreNote, load_match
 from .score_midi import load_score_midi, read_score_midi
 from .musicxml_score import MusicXMLScore, XMLNote, read_musicxml
 from .score_note_mapping import TieMapping, NoteAlignmentLinks, build_tie_mapping, link_note_alignment
+from .performance_midi import PerformanceMidi, PerformanceNote, ControlEvent, PedalObservation, load_performance_midi
 
 __all__ = [
     "ASAPLoader",
@@ -28,4 +29,9 @@ __all__ = [
     "NoteAlignmentLinks",
     "build_tie_mapping",
     "link_note_alignment",
+    "PerformanceMidi",
+    "PerformanceNote",
+    "ControlEvent",
+    "PedalObservation",
+    "load_performance_midi",
 ]
