@@ -17,7 +17,7 @@ from preprocessing.musicxml_score import MusicXMLScore, PARSER_VERSION
 from preprocessing.score_note_mapping import TieMapping, build_tie_mapping
 
 
-SCHEMA_VERSION = 'note-score-context-v1'
+SCHEMA_VERSION = 'note-score-context-v2'
 PAD, NONE, UNK = 0, 1, 2
 SLOTS = ('tempo_base', 'tempo_relative', 'tempo_gradual', 'tempo_local',
          'dynamic_base', 'dynamic_gradual', 'dynamic_local')
@@ -263,8 +263,13 @@ class _Directions:
             mark = _Mark(token, q, known, event.value if slot == 'tempo_base' else None, event.source_id)
             if slot == 'tempo_base':
                 for change in ('tempo_relative', 'tempo_gradual', 'tempo_local'):
-                    self.state[scope + (change,)] = _Mark(None, q)
-            if previous is not None and previous.start == q:
+                    change_key = scope + (change,)
+                    current = self.state.get(change_key)
+                    # Independent directions at the same position must survive
+                    # whichever order MusicXML serializes their elements in.
+                    if current is None or current.start != q:
+                        self.state[change_key] = _Mark(None, q)
+            if previous is not None and previous.start == q and previous.token is not None:
                 complementary = (slot == 'tempo_base' and previous.known and mark.known
                                  and 'metronome' in {previous.token, token}
                                  and previous.token != token)
