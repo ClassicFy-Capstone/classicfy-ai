@@ -1,0 +1,539 @@
+{
+  "definition": "each full performance channel mean, including valid tail observations; tempo once per valid beat, other channels once per observed notation row; fixed existing train R scaler; original Huber group/window aggregation",
+  "source_index_id": "6061a94fab09fb4d973b354041352bfdb6b937a589aed4bfdf892d9e09260f37",
+  "R_scaler": "ae7e91f581117b4757b0e41ff494d19604e6a42f84fc5d43a8ac3fa2e40fdf67",
+  "model_used": false,
+  "training_or_checkpoint_selection_changed": false,
+  "scope": "target-derived descriptive baseline; full-performance information exceeds an 8-bar input",
+  "results": {
+    "train": {
+      "windows": 51638,
+      "recordings": 2070,
+      "train_mean": {
+        "loss": 0.35292877912789156,
+        "windows": 51638,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.40139686892089277,
+            "valid_windows": 51637
+          },
+          "onset": {
+            "loss": 0.12962422601863205,
+            "valid_windows": 51637
+          },
+          "velocity": {
+            "loss": 0.44007983529607886,
+            "valid_windows": 51638
+          },
+          "articulation": {
+            "loss": 0.4010229386457215,
+            "valid_windows": 51637
+          },
+          "pedal": {
+            "loss": 0.3925865073196188,
+            "valid_windows": 51615
+          }
+        },
+        "channel_counts": [
+          1227785,
+          5811236,
+          5822099,
+          5808553,
+          5804861,
+          5807194,
+          5804861,
+          5794112,
+          5805353,
+          5795298,
+          5669348
+        ],
+        "channel_losses": {
+          "tempo_log2_qpm": {
+            "loss": 0.40139686923726087,
+            "valid_windows": 51637
+          },
+          "onset_deviation_q": {
+            "loss": 0.12962422590378056,
+            "valid_windows": 51637
+          },
+          "velocity_unit": {
+            "loss": 0.44007982995955974,
+            "valid_windows": 51638
+          },
+          "articulation_log2_ratio": {
+            "loss": 0.4010229397458426,
+            "valid_windows": 51637
+          },
+          "sustain_onset_unit": {
+            "loss": 0.3984865773657848,
+            "valid_windows": 51568
+          },
+          "sustain_offset_unit": {
+            "loss": 0.3842701526894049,
+            "valid_windows": 51570
+          },
+          "sustain_min_hold_unit": {
+            "loss": 0.4569387088641449,
+            "valid_windows": 51568
+          },
+          "sustain_min_hold_delay_q": {
+            "loss": 0.3094172042699096,
+            "valid_windows": 51568
+          },
+          "sustain_min_gap_unit": {
+            "loss": 0.46763392031431383,
+            "valid_windows": 51570
+          },
+          "sustain_min_gap_delay_q": {
+            "loss": 0.27422291104032914,
+            "valid_windows": 51570
+          },
+          "soft_onset_unit": {
+            "loss": 0.4576949016720205,
+            "valid_windows": 50767
+          }
+        }
+      },
+      "performance_mean": {
+        "loss": 0.2646254799177065,
+        "windows": 51638,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.09665764659186647,
+            "valid_windows": 51637
+          },
+          "onset": {
+            "loss": 0.12907660821259068,
+            "valid_windows": 51637
+          },
+          "velocity": {
+            "loss": 0.3652238244122782,
+            "valid_windows": 51638
+          },
+          "articulation": {
+            "loss": 0.37637623003238946,
+            "valid_windows": 51637
+          },
+          "pedal": {
+            "loss": 0.3558457950214008,
+            "valid_windows": 51615
+          }
+        },
+        "channel_counts": [
+          1227785,
+          5811236,
+          5822099,
+          5808553,
+          5804861,
+          5807194,
+          5804861,
+          5794112,
+          5805353,
+          5795298,
+          5669348
+        ],
+        "channel_losses": {
+          "tempo_log2_qpm": {
+            "loss": 0.09665764569955172,
+            "valid_windows": 51637
+          },
+          "onset_deviation_q": {
+            "loss": 0.1290766079625327,
+            "valid_windows": 51637
+          },
+          "velocity_unit": {
+            "loss": 0.3652238258010556,
+            "valid_windows": 51638
+          },
+          "articulation_log2_ratio": {
+            "loss": 0.3763762340726597,
+            "valid_windows": 51637
+          },
+          "sustain_onset_unit": {
+            "loss": 0.35174396844960504,
+            "valid_windows": 51568
+          },
+          "sustain_offset_unit": {
+            "loss": 0.33648802847671455,
+            "valid_windows": 51570
+          },
+          "sustain_min_hold_unit": {
+            "loss": 0.41441993446320297,
+            "valid_windows": 51568
+          },
+          "sustain_min_hold_delay_q": {
+            "loss": 0.3097050994416833,
+            "valid_windows": 51568
+          },
+          "sustain_min_gap_unit": {
+            "loss": 0.4216239814831394,
+            "valid_windows": 51570
+          },
+          "sustain_min_gap_delay_q": {
+            "loss": 0.27921121577007163,
+            "valid_windows": 51570
+          },
+          "soft_onset_unit": {
+            "loss": 0.37790270197405595,
+            "valid_windows": 50767
+          }
+        }
+      }
+    },
+    "validation": {
+      "windows": 6474,
+      "recordings": 314,
+      "train_mean": {
+        "loss": 0.34479410451505155,
+        "windows": 6474,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.4791583008776486,
+            "valid_windows": 6474
+          },
+          "onset": {
+            "loss": 0.060049925131822834,
+            "valid_windows": 6474
+          },
+          "velocity": {
+            "loss": 0.41381966246474405,
+            "valid_windows": 6474
+          },
+          "articulation": {
+            "loss": 0.4014206510065955,
+            "valid_windows": 6474
+          },
+          "pedal": {
+            "loss": 0.36952200133306284,
+            "valid_windows": 6474
+          }
+        },
+        "channel_counts": [
+          131286,
+          725005,
+          725841,
+          724549,
+          724403,
+          724751,
+          724403,
+          723615,
+          724509,
+          723747,
+          704028
+        ],
+        "channel_losses": {
+          "tempo_log2_qpm": {
+            "loss": 0.4791582827682689,
+            "valid_windows": 6474
+          },
+          "onset_deviation_q": {
+            "loss": 0.060049925488306545,
+            "valid_windows": 6474
+          },
+          "velocity_unit": {
+            "loss": 0.4138196409157177,
+            "valid_windows": 6474
+          },
+          "articulation_log2_ratio": {
+            "loss": 0.4014206569242485,
+            "valid_windows": 6474
+          },
+          "sustain_onset_unit": {
+            "loss": 0.42646798809212316,
+            "valid_windows": 6474
+          },
+          "sustain_offset_unit": {
+            "loss": 0.42288157674732824,
+            "valid_windows": 6474
+          },
+          "sustain_min_hold_unit": {
+            "loss": 0.40950976084580587,
+            "valid_windows": 6474
+          },
+          "sustain_min_hold_delay_q": {
+            "loss": 0.21350671911188066,
+            "valid_windows": 6474
+          },
+          "sustain_min_gap_unit": {
+            "loss": 0.46141849228757026,
+            "valid_windows": 6474
+          },
+          "sustain_min_gap_delay_q": {
+            "loss": 0.17522700972898822,
+            "valid_windows": 6474
+          },
+          "soft_onset_unit": {
+            "loss": 0.48104901537443434,
+            "valid_windows": 6326
+          }
+        }
+      },
+      "performance_mean": {
+        "loss": 0.21793822342501698,
+        "windows": 6474,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.04735769730568816,
+            "valid_windows": 6474
+          },
+          "onset": {
+            "loss": 0.059585639308697286,
+            "valid_windows": 6474
+          },
+          "velocity": {
+            "loss": 0.32503574425547366,
+            "valid_windows": 6474
+          },
+          "articulation": {
+            "loss": 0.3507286339289324,
+            "valid_windows": 6474
+          },
+          "pedal": {
+            "loss": 0.3069834271661654,
+            "valid_windows": 6474
+          }
+        },
+        "channel_counts": [
+          131286,
+          725005,
+          725841,
+          724549,
+          724403,
+          724751,
+          724403,
+          723615,
+          724509,
+          723747,
+          704028
+        ],
+        "channel_losses": {
+          "tempo_log2_qpm": {
+            "loss": 0.04735770024631689,
+            "valid_windows": 6474
+          },
+          "onset_deviation_q": {
+            "loss": 0.05958563980113374,
+            "valid_windows": 6474
+          },
+          "velocity_unit": {
+            "loss": 0.3250357226224356,
+            "valid_windows": 6474
+          },
+          "articulation_log2_ratio": {
+            "loss": 0.3507286336820758,
+            "valid_windows": 6474
+          },
+          "sustain_onset_unit": {
+            "loss": 0.3345425174627174,
+            "valid_windows": 6474
+          },
+          "sustain_offset_unit": {
+            "loss": 0.32167970611471286,
+            "valid_windows": 6474
+          },
+          "sustain_min_hold_unit": {
+            "loss": 0.3402217265645946,
+            "valid_windows": 6474
+          },
+          "sustain_min_hold_delay_q": {
+            "loss": 0.20198505888070453,
+            "valid_windows": 6474
+          },
+          "sustain_min_gap_unit": {
+            "loss": 0.39403915888524693,
+            "valid_windows": 6474
+          },
+          "sustain_min_gap_delay_q": {
+            "loss": 0.16988286858936585,
+            "valid_windows": 6474
+          },
+          "soft_onset_unit": {
+            "loss": 0.3889700057825854,
+            "valid_windows": 6326
+          }
+        }
+      }
+    },
+    "test": {
+      "windows": 9430,
+      "recordings": 417,
+      "train_mean": {
+        "loss": 0.34782403184778493,
+        "windows": 9430,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.42949000547698296,
+            "valid_windows": 9430
+          },
+          "onset": {
+            "loss": 0.0898951087498589,
+            "valid_windows": 9430
+          },
+          "velocity": {
+            "loss": 0.4164649380858857,
+            "valid_windows": 9430
+          },
+          "articulation": {
+            "loss": 0.4125023098538056,
+            "valid_windows": 9430
+          },
+          "pedal": {
+            "loss": 0.390774103533269,
+            "valid_windows": 9423
+          }
+        },
+        "channel_counts": [
+          225678,
+          1155019,
+          1155854,
+          1154625,
+          1151330,
+          1151829,
+          1151330,
+          1150562,
+          1151640,
+          1150900,
+          1121547
+        ],
+        "channel_losses": {
+          "tempo_log2_qpm": {
+            "loss": 0.42949001177521234,
+            "valid_windows": 9430
+          },
+          "onset_deviation_q": {
+            "loss": 0.08989511083000194,
+            "valid_windows": 9430
+          },
+          "velocity_unit": {
+            "loss": 0.41646493107301685,
+            "valid_windows": 9430
+          },
+          "articulation_log2_ratio": {
+            "loss": 0.41250229462199034,
+            "valid_windows": 9430
+          },
+          "sustain_onset_unit": {
+            "loss": 0.4298139370928216,
+            "valid_windows": 9414
+          },
+          "sustain_offset_unit": {
+            "loss": 0.4248522339546743,
+            "valid_windows": 9414
+          },
+          "sustain_min_hold_unit": {
+            "loss": 0.43237437303086007,
+            "valid_windows": 9414
+          },
+          "sustain_min_hold_delay_q": {
+            "loss": 0.24515794219189177,
+            "valid_windows": 9414
+          },
+          "sustain_min_gap_unit": {
+            "loss": 0.472267411771603,
+            "valid_windows": 9414
+          },
+          "sustain_min_gap_delay_q": {
+            "loss": 0.24176067559059217,
+            "valid_windows": 9414
+          },
+          "soft_onset_unit": {
+            "loss": 0.4899675775343591,
+            "valid_windows": 9240
+          }
+        }
+      },
+      "performance_mean": {
+        "loss": 0.2387291852768001,
+        "windows": 9430,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.052816033843719065,
+            "valid_windows": 9430
+          },
+          "onset": {
+            "loss": 0.08962011736751488,
+            "valid_windows": 9430
+          },
+          "velocity": {
+            "loss": 0.3433293705654043,
+            "valid_windows": 9430
+          },
+          "articulation": {
+            "loss": 0.3671812045359283,
+            "valid_windows": 9430
+          },
+          "pedal": {
+            "loss": 0.3408321842929177,
+            "valid_windows": 9423
+          }
+        },
+        "channel_counts": [
+          225678,
+          1155019,
+          1155854,
+          1154625,
+          1151330,
+          1151829,
+          1151330,
+          1150562,
+          1151640,
+          1150900,
+          1121547
+        ],
+        "channel_losses": {
+          "tempo_log2_qpm": {
+            "loss": 0.052816035074730844,
+            "valid_windows": 9430
+          },
+          "onset_deviation_q": {
+            "loss": 0.08962011502470282,
+            "valid_windows": 9430
+          },
+          "velocity_unit": {
+            "loss": 0.34332935489607486,
+            "valid_windows": 9430
+          },
+          "articulation_log2_ratio": {
+            "loss": 0.3671811937452279,
+            "valid_windows": 9430
+          },
+          "sustain_onset_unit": {
+            "loss": 0.35600365123517425,
+            "valid_windows": 9414
+          },
+          "sustain_offset_unit": {
+            "loss": 0.35086742314440894,
+            "valid_windows": 9414
+          },
+          "sustain_min_hold_unit": {
+            "loss": 0.38025387986273346,
+            "valid_windows": 9414
+          },
+          "sustain_min_hold_delay_q": {
+            "loss": 0.23865931557377543,
+            "valid_windows": 9414
+          },
+          "sustain_min_gap_unit": {
+            "loss": 0.4057143102017364,
+            "valid_windows": 9414
+          },
+          "sustain_min_gap_delay_q": {
+            "loss": 0.24930560437063123,
+            "valid_windows": 9414
+          },
+          "soft_onset_unit": {
+            "loss": 0.4067186796335079,
+            "valid_windows": 9240
+          }
+        }
+      }
+    }
+  },
+  "seconds": 31.790638874999786
+}

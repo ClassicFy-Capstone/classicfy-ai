@@ -1,0 +1,12 @@
+{
+  "completed_epoch": 27,
+  "current": {
+    "stage": "training",
+    "epoch": 28,
+    "batch": 250,
+    "batches": 404,
+    "windows_used": 31926,
+    "windows_expected": 51638,
+    "seconds": 346.763582874999
+  }
+}

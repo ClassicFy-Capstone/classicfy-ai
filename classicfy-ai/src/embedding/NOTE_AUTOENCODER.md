@@ -1,5 +1,27 @@
 # 8마디 조건부 연주 시퀀스 AE
 
+검증을 통과한 ATEPP 전체 입력의 학습·평가 상태는
+[전체 데이터 실행 보고서](../../analysis/note_ae_full_corpus_reconstruction/README.md)에 기록한다.
+기존 7작품 실험의 전체 epoch 순회와 전체 코퍼스 학습은 구분한다.
+
+대규모 per-record window index는 한꺼번에 전부 적재하지 않고 텐서 캐시로 준비한다.
+S/R 값·관측 mask·구간 대응을 확인하고 train 전용 scaler를 한 번 적용한다.
+ScoreEncoder의 C는 학습 중 계산한다. `bucket_by_length`는 padding을 줄이며
+모든 full train window를 매 epoch 한 번씩 사용한다.
+
+```sh
+.venv/bin/python scripts/train_indexed_note_autoencoder.py prepare \
+  --source /path/to/validated-pipeline --out runs/full-corpus-inputs
+.venv/bin/python scripts/train_indexed_note_autoencoder.py train \
+  --corpus runs/full-corpus-inputs --config configs/note_ae_full_corpus_reconstruction.json \
+  --out runs/full-corpus-training
+```
+
+이 설정은 MPS GPU가 필요하다. 초기 tempo 조건·평균 보조 head·Triplet은 사용하지 않는다.
+기존과 동일한 beat 평균·복원 목적을 일괄 연산하며, 기존 구현 대비 출력과 gradient를 대조했다.
+`epochs.jsonl`은 완료 epoch별 지표와 구간별 실제 노출 횟수,
+`progress.json`은 최근 배치 진행 상태다. 체크포인트는 완료 epoch 경계에서 저장한다.
+
 기존 g의 full 8마디 manifest에서 원래 S/R을 읽는다. ΔR과 g_scaled는 AE 입력이나
 복원 목표가 아니다. g는 고정 Triplet 관계의 출처로만 사용하며 학습 중 갱신하지 않는다.
 
@@ -63,6 +85,18 @@ Triplet이 없으면 복원만 실행하고 거리 학습이 없었음을 기록
 AdamW lr=.001·weight decay=.0001·gradient clip=1·seed=2026이다.
 
 ## 실행
+
+전체 순회 복원 전용 설정은 `configs/note_ae_full_reconstruction.json`이다.
+`max_steps_per_epoch=0`이면 마지막 짧은 배치까지 모든 train 구간을 정확히 한 번 사용했는지 검사한다.
+최대 epoch와 validation early stopping은 별개이며, 실제 최소 validation 복원 loss의 모델을 선택한다.
+`evaluate_train_each_epoch=true`는 학습 중 minibatch loss와 구분되는 전체 train의 eval loss를 기록한다.
+
+`configs/note_ae_plateau_reconstruction.json`은 같은 조건에 `lr_scheduler=plateau`만 추가한다.
+Validation 이후 `ReduceLROnPlateau(mode=min, threshold_mode=abs)`를 한 번 호출하며,
+`learning_rate`는 해당 epoch에서 사용한 값, `next_learning_rate`는 다음 epoch에 적용할 값이다.
+기본 감소 계수는 .5, patience는 5, 절대 개선 threshold는 .0001, 최소 LR은 .00001이다.
+LR 감소는 early stopping의 대기 횟수를 초기화하지 않는다. Scheduler 상태는 optimizer와 함께
+checkpoint에 저장하고 resume 시 복원한다. 기본값 `lr_scheduler=none`은 기존 고정 학습률 동작을 유지한다.
 
 `classicfy-ai`에서 실행한다. 아래 경로는 사용자가 준비한 각 단계의 산출물이다.
 출력 디렉터리는 새 경로여야 한다.

@@ -1,0 +1,94 @@
+{
+  "scope": "all 2801 accepted ATEPP recordings / 254 source works; not all raw ATEPP",
+  "splits": {
+    "train": {
+      "works": 185,
+      "recordings": 2070,
+      "windows": 51638,
+      "notes": 6659406
+    },
+    "validation": {
+      "works": 35,
+      "recordings": 314,
+      "windows": 6474,
+      "notes": 797214
+    },
+    "test": {
+      "works": 34,
+      "recordings": 417,
+      "windows": 9430,
+      "notes": 1283223
+    }
+  },
+  "overlap": {
+    "work": 0,
+    "score": 0,
+    "recording": 0
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 128,
+    "triplet_batch_size": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "margin": 0.2,
+    "lambda_style": 0.0,
+    "huber_delta": 1.0,
+    "seed": 2026,
+    "device": "mps",
+    "torch_threads": 1,
+    "max_steps_per_epoch": 0,
+    "max_validation_batches": 0,
+    "beta_mean_tempo": 0.0,
+    "early_stopping_patience": 15,
+    "early_stopping_min_delta": 0.0001,
+    "evaluate_train_each_epoch": true,
+    "lr_scheduler": "none",
+    "lr_scheduler_factor": 0.5,
+    "lr_scheduler_patience": 5,
+    "lr_scheduler_threshold": 0.0001,
+    "lr_scheduler_min_lr": 1e-05,
+    "bucket_by_length": true
+  },
+  "model": {
+    "context_dim": 128,
+    "condition_dim": 64,
+    "input_dim": 128,
+    "hidden_size": 64,
+    "layers": 2,
+    "dropout": 0.1,
+    "latent_dim": 64,
+    "score_gradient": "joint",
+    "mean_tempo_auxiliary": false
+  },
+  "initialization": "from scratch; no previous trained weights",
+  "normalization": "existing full-corpus train-only R/S scalers; no fitting on validation/test",
+  "selection": "lowest full validation reconstruction loss; no test-based changes",
+  "budget": "100 complete epochs maximum; validation patience15 / min_delta0.0001; no batch or sample caps",
+  "expected_updates_per_epoch": 404,
+  "implementation": "same score encoder, AE and equal-group/equal-window Huber objective; equivalent batched beat operations; length buckets reduce padding only",
+  "comparison_limit": "different split, scalers and batch size from the 7-work pilot; not an isolated causal ablation of data size",
+  "test_history": "expanded test includes potentially previously inspected pilot works; report is not a completely untouched benchmark",
+  "source_hashes": {
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/embedding/note_autoencoder.py": "f953c359f92a377bc98616103e4638aea05da49dcb822ef53c2acb44851755d2",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/embedding/note_ae_loss.py": "430e62a8bf723b955708deeaa05c260c53f2f329a2ca3edd623d1f301fea9fb8",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/embedding/note_ae_training.py": "06594d8a1026e85120c02183269c4256daa7ba5e4dc3911445a545b4aa6fb643",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/embedding/note_ae_indexed_data.py": "31fa65f132e32eeb752b90e9e32ac91585d3f3195975b0ae602e2efcd70c73ba",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/embedding/note_score_encoder.py": "7e7f240330beea6720d80977ef86b442b1cae9532f3c892e05b14948a9d994a9",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/configs/note_ae_full_corpus_reconstruction.json": "5cfc5d161a117e1570e8e41de13db98823a8c41de70b42bc2f14a2c36804db5a",
+    "/Users/ihun-ui/Desktop/Classicfy/diagnostics/full_corpus_reconstruction/run01/corpus/manifest.json": "53cff7d9406961f26a5914eb05ac02843f0fef177b12957ea8e08e35a3369c13",
+    "/Users/ihun-ui/Desktop/Classicfy/diagnostics/full_corpus_reconstruction/run01/corpus/R_scaler.json": "db61dfb1503e6d06c7ce19cf328a6b772dbbdb11d9975a64be51f6ddb2c44814",
+    "/Users/ihun-ui/Desktop/Classicfy/diagnostics/full_corpus_reconstruction/run01/corpus/S_scale.json": "1355b3cfdf380f50c71e8762d0c645ae7dcad488806f55db41d75ff831691b49"
+  },
+  "input_parity": {
+    "passed": true
+  },
+  "operation_parity": {
+    "status": "passed",
+    "batches": 3,
+    "largest_notes": 638,
+    "maximum_prediction_difference": 2.9802322387695312e-08,
+    "maximum_gradient_difference": 2.9802322387695312e-08
+  }
+}
