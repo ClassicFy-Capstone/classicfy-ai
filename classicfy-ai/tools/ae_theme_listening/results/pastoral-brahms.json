@@ -1,0 +1,48 @@
+{
+  "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+  "case_id": "pastoral-brahms",
+  "near_clip": "19e679066b2f44b6",
+  "far_clip": "78b7f5a78c9965bb",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 2,
+  "recordings": {
+    "b0d9e907f4dbbb2c": {
+      "performance_id": "ATEPP:08254",
+      "artist": "Daniel Barenboim",
+      "title": "Beethoven: Piano Sonata No. 15 in D Major, Op. 28 \"Pastoral\": II. Andante",
+      "album": "Beethoven: Complete Piano Sonatas & Diabelli Variations",
+      "album_date": "2021-08-20"
+    },
+    "19e679066b2f44b6": {
+      "performance_id": "ATEPP:04995",
+      "artist": "Wilhelm Kempff",
+      "title": "6 Piano Pieces, Op.118: 6. Intermezzo in E flat minor",
+      "album": "Schumann / Brahms: Complete 1950s Solo Recordings",
+      "album_date": "2003-01-01"
+    },
+    "78b7f5a78c9965bb": {
+      "performance_id": "ATEPP:04993",
+      "artist": "Murray Perahia",
+      "title": "Six Piano Pieces, Op. 118: Intermezzo in E-flat Minor, Op. 118, No. 6",
+      "album": "Brahms: Händel Variations",
+      "album_date": "2010-11-12"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "19e679066b2f44b6",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.05271468686556002,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "78b7f5a78c9965bb",
+      "role": "far",
+      "global_rank": 72,
+      "cosine_distance_to_anchor": 0.11085208673184033,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

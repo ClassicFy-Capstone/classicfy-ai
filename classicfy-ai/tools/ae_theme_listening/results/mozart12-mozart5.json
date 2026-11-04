@@ -1,0 +1,48 @@
+{
+  "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+  "case_id": "mozart12-mozart5",
+  "near_clip": "f465c5b86727f870",
+  "far_clip": "3f436bc91d9b91db",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 4,
+  "recordings": {
+    "cc5f23d94b7ddba3": {
+      "performance_id": "ATEPP:05249",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No. 12 in F, K.332: 2. Adagio",
+      "album": "Mozart: Piano Sonatas Nos. 12 & 13",
+      "album_date": "1987-01-01"
+    },
+    "f465c5b86727f870": {
+      "performance_id": "ATEPP:05334",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No.5 in G, K.283: 2. Andante",
+      "album": "Mozart",
+      "album_date": "2003-01-01"
+    },
+    "3f436bc91d9b91db": {
+      "performance_id": "ATEPP:05341",
+      "artist": "Ivo Pogorelich",
+      "title": "Piano Sonata No.5 In G, K.283: 2. Andante",
+      "album": "Mozart: Piano Sonatas K.283 & K.331; Fantasia K.397",
+      "album_date": "1995-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "f465c5b86727f870",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.03659253534367557,
+      "same_artist_as_anchor": true
+    },
+    {
+      "clip": "3f436bc91d9b91db",
+      "role": "far",
+      "global_rank": 373,
+      "cosine_distance_to_anchor": 0.2027053921316373,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

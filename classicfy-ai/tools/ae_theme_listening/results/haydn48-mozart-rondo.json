@@ -1,0 +1,48 @@
+{
+  "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+  "case_id": "haydn48-mozart-rondo",
+  "near_clip": "b003319f878b5071",
+  "far_clip": "408c6d176dbf97f6",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 13,
+  "recordings": {
+    "c3dfc0ae5909df04": {
+      "performance_id": "ATEPP:04934",
+      "artist": "Vladimir Horowitz",
+      "title": "Keyboard Sonata in C Major, Hob.XVI:48: I. Andante con espressione",
+      "album": "Vladimir Horowitz in Recital at Yale University, New Haven, November 3, 1968",
+      "album_date": "1971"
+    },
+    "b003319f878b5071": {
+      "performance_id": "ATEPP:10790",
+      "artist": "Alfred Brendel",
+      "title": "Rondo in A Minor, K. 511",
+      "album": "Alfred Brendel, the Legendary Mozart & Beethoven Recordings, Vol. 1",
+      "album_date": "2013"
+    },
+    "408c6d176dbf97f6": {
+      "performance_id": "ATEPP:10798",
+      "artist": "Lazar Berman",
+      "title": "Rondo in A Minor, K. 511",
+      "album": "Lazar Berman at Carnegie Hall, New York City, March 11, 1979",
+      "album_date": "1980"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "b003319f878b5071",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.08386416512731987,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "408c6d176dbf97f6",
+      "role": "far",
+      "global_rank": 586,
+      "cosine_distance_to_anchor": 0.300864830085825,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

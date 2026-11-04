@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "pathetique-brahms-op118-6",
+  "near_clip": "19e679066b2f44b6",
+  "far_clip": "78b7f5a78c9965bb",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 2,
+  "recordings": {
+    "de596335d0b29946": {
+      "performance_id": "ATEPP:08076",
+      "artist": "Friedrich Gulda",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "album": "Beethoven: Complete Piano Sonatas",
+      "album_date": "2021-07-23"
+    },
+    "19e679066b2f44b6": {
+      "performance_id": "ATEPP:04995",
+      "artist": "Wilhelm Kempff",
+      "title": "6 Piano Pieces, Op.118: 6. Intermezzo in E flat minor",
+      "album": "Schumann / Brahms: Complete 1950s Solo Recordings",
+      "album_date": "2003-01-01"
+    },
+    "78b7f5a78c9965bb": {
+      "performance_id": "ATEPP:04993",
+      "artist": "Murray Perahia",
+      "title": "Six Piano Pieces, Op. 118: Intermezzo in E-flat Minor, Op. 118, No. 6",
+      "album": "Brahms: Händel Variations",
+      "album_date": "2010-11-12"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "19e679066b2f44b6",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.05040671303275435,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "78b7f5a78c9965bb",
+      "role": "far",
+      "global_rank": 133,
+      "cosine_distance_to_anchor": 0.12212310721945474,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

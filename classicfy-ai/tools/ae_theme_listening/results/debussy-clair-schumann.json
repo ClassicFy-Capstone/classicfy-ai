@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "debussy-clair-schumann",
+  "near_clip": "de3b2c62a6e6a426",
+  "far_clip": "0070f369b7c1dc0e",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 21,
+  "recordings": {
+    "d507419bcd1da345": {
+      "performance_id": "ATEPP:03104",
+      "artist": "Emil Gilels",
+      "title": "Suite bergamasque: III. Clair de lune",
+      "album": "Gilels, Emil: Early Recordings, Vol. 1 (1935-1951)",
+      "album_date": "2008-10-28"
+    },
+    "de3b2c62a6e6a426": {
+      "performance_id": "ATEPP:00962",
+      "artist": "Vladimir Horowitz",
+      "title": "Kreisleriana, Op. 16: No. 6, Sehr langsam",
+      "album": "Vladimir Horowitz in Recital at Academy of Music, Philadelphia, December 1, 1968",
+      "album_date": "1971"
+    },
+    "0070f369b7c1dc0e": {
+      "performance_id": "ATEPP:00974",
+      "artist": "Alicia de Larrocha",
+      "title": "Kreisleriana, Op. 16: 6. Sehr langsam",
+      "album": "Schumann: Carnaval; Kreisleriana; Faschingsswank aus Wien etc",
+      "album_date": "2006-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "de3b2c62a6e6a426",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.18395421611589247,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "0070f369b7c1dc0e",
+      "role": "far",
+      "global_rank": 781,
+      "cosine_distance_to_anchor": 0.4858206877014182,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

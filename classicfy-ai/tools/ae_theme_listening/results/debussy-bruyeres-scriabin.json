@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "debussy-bruyeres-scriabin",
+  "near_clip": "0e579c2ec0b1cc15",
+  "far_clip": "37022712922f74bd",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 2,
+  "recordings": {
+    "810b7a7519ca9bd6": {
+      "performance_id": "ATEPP:03187",
+      "artist": "Sviatoslav Richter",
+      "title": "Préludes, Book 2, L. 123: No. 5, Bruyères",
+      "album": "Un homme de concert, Vol. 8: Sviatoslav Richter",
+      "album_date": "1994-01-19"
+    },
+    "0e579c2ec0b1cc15": {
+      "performance_id": "ATEPP:00461",
+      "artist": "Vladimir Ashkenazy",
+      "title": "12 Etudes, Op. 8: No. 11 in B-Flat Minor",
+      "album": "Scriabin: Vers la Flamme",
+      "album_date": "2015-04-06"
+    },
+    "37022712922f74bd": {
+      "performance_id": "ATEPP:00460",
+      "artist": "Vladimir Horowitz",
+      "title": "12 Études, Op. 8: No. 11 in B-Flat Minor",
+      "album": "Vladimir Horowitz: The Complete Masterworks Recordings 1962-1973",
+      "album_date": "1962"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "0e579c2ec0b1cc15",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.14308402353933558,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "37022712922f74bd",
+      "role": "far",
+      "global_rank": 33,
+      "cosine_distance_to_anchor": 0.2087810651156008,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

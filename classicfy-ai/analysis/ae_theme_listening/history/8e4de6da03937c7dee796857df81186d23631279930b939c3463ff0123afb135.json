@@ -1,0 +1,1618 @@
+{
+  "schema": "ae-theme-choice-organizer-v2",
+  "model": {
+    "checkpoint_sha256": "cec9803ffcf24828e9fa20c2c3ae9642cdafd243cb766346db23b51af3993288",
+    "epoch": 100,
+    "corpus_manifest_sha256": "53cff7d9406961f26a5914eb05ac02843f0fef177b12957ea8e08e35a3369c13",
+    "pooling": "arithmetic mean of all full 8-measure window e vectors, then L2 normalization",
+    "distance": "1 - cosine similarity",
+    "device": "cpu",
+    "batch_size": 32,
+    "id": "06c51162575cb105782f42d59c185ed5d880997d89e3b6dd7dad75895ce6ceb3"
+  },
+  "storage_id": "359beaccecadae58d748416b0a7f8f73fac26b1ae3e57ad934e053ba091a57c8",
+  "catalogue": {
+    "recordings": 2801,
+    "works": 254,
+    "full_windows": 67542
+  },
+  "selection": "B = nearest to A across all other works; C = farthest FROM A among recordings of B's work, excluding identical MIDI recordings; no availability reranking",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "themes_sha256": "7d6eb7e58c242ffb6cc9152ebd5d87d801853ea6b216e6517c345db380fee8a6",
+  "metadata_sha256": "b6bed1190cb85e607282fe4b761bc42d017f8144851940a4103aaa1a1d84536d",
+  "cases": [
+    {
+      "id": "schumann-beethoven",
+      "label": "슈만 → 베토벤",
+      "anchor": "ATEPP:00983",
+      "candidate_count": 2779,
+      "candidate_works": 253,
+      "near": "ATEPP:08067",
+      "far": "ATEPP:08055",
+      "far_work_pool": 41,
+      "candidates": [
+        {
+          "clip": "ATEPP:08067",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.15598936764932925,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:08055",
+          "role": "far",
+          "global_rank": 521,
+          "cosine_distance_to_anchor": 0.32171378410366436,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "rachmaninoff-scriabin",
+      "label": "라흐마니노프 → 스크랴빈",
+      "anchor": "ATEPP:00239",
+      "candidate_count": 2797,
+      "candidate_works": 253,
+      "near": "ATEPP:00461",
+      "far": "ATEPP:00463",
+      "far_work_pool": 2,
+      "candidates": [
+        {
+          "clip": "ATEPP:00461",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.1709473518015706,
+          "same_artist_as_anchor": true
+        },
+        {
+          "clip": "ATEPP:00463",
+          "role": "far",
+          "global_rank": 72,
+          "cosine_distance_to_anchor": 0.2706336718629583,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "beethoven-op10-1-pathetique",
+      "label": "베토벤 5번 → 비창",
+      "anchor": "ATEPP:09162",
+      "candidate_count": 2782,
+      "candidate_works": 253,
+      "near": "ATEPP:08080",
+      "far": "ATEPP:08082",
+      "far_work_pool": 41,
+      "candidates": [
+        {
+          "clip": "ATEPP:08080",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.029020444749723873,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:08082",
+          "role": "far",
+          "global_rank": 307,
+          "cosine_distance_to_anchor": 0.16253647715233244,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "beethoven-op2-3-pathetique",
+      "label": "베토벤 3번 → 비창",
+      "anchor": "ATEPP:06208",
+      "candidate_count": 2782,
+      "candidate_works": 253,
+      "near": "ATEPP:08080",
+      "far": "ATEPP:08082",
+      "far_work_pool": 41,
+      "candidates": [
+        {
+          "clip": "ATEPP:08080",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.03482592228457104,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:08082",
+          "role": "far",
+          "global_rank": 424,
+          "cosine_distance_to_anchor": 0.21402306688867778,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "pathetique-brahms-op118-6",
+      "label": "베토벤 → 브람스",
+      "anchor": "ATEPP:08076",
+      "candidate_count": 2759,
+      "candidate_works": 253,
+      "near": "ATEPP:04995",
+      "far": "ATEPP:04993",
+      "far_work_pool": 2,
+      "candidates": [
+        {
+          "clip": "ATEPP:04995",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.05040671303275435,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:04993",
+          "role": "far",
+          "global_rank": 133,
+          "cosine_distance_to_anchor": 0.12212310721945474,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "beethoven-op26-pathetique",
+      "label": "베토벤 12번 → 비창",
+      "anchor": "ATEPP:08197",
+      "candidate_count": 2786,
+      "candidate_works": 253,
+      "near": "ATEPP:08052",
+      "far": "ATEPP:08082",
+      "far_work_pool": 41,
+      "candidates": [
+        {
+          "clip": "ATEPP:08052",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.05637074615265991,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:08082",
+          "role": "far",
+          "global_rank": 435,
+          "cosine_distance_to_anchor": 0.23354603990499778,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "scriabin-ravel-pavane",
+      "label": "스크랴빈 → 라벨",
+      "anchor": "ATEPP:00463",
+      "candidate_count": 2798,
+      "candidate_works": 253,
+      "near": "ATEPP:10686",
+      "far": "ATEPP:10680",
+      "far_work_pool": 7,
+      "candidates": [
+        {
+          "clip": "ATEPP:10686",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.1137234131274113,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:10680",
+          "role": "far",
+          "global_rank": 433,
+          "cosine_distance_to_anchor": 0.2911844225223289,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "debussy-bruyeres-scriabin",
+      "label": "드뷔시 → 스크랴빈",
+      "anchor": "ATEPP:03187",
+      "candidate_count": 2797,
+      "candidate_works": 253,
+      "near": "ATEPP:00461",
+      "far": "ATEPP:00460",
+      "far_work_pool": 2,
+      "candidates": [
+        {
+          "clip": "ATEPP:00461",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.14308402353933558,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:00460",
+          "role": "far",
+          "global_rank": 33,
+          "cosine_distance_to_anchor": 0.2087810651156008,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "debussy-clair-schumann",
+      "label": "드뷔시 → 슈만",
+      "anchor": "ATEPP:03104",
+      "candidate_count": 2788,
+      "candidate_works": 253,
+      "near": "ATEPP:00962",
+      "far": "ATEPP:00974",
+      "far_work_pool": 21,
+      "candidates": [
+        {
+          "clip": "ATEPP:00962",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.18395421611589247,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:00974",
+          "role": "far",
+          "global_rank": 781,
+          "cosine_distance_to_anchor": 0.4858206877014182,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "rachmaninoff-moonlight",
+      "label": "라흐마니노프 → 월광",
+      "anchor": "ATEPP:00242",
+      "candidate_count": 2797,
+      "candidate_works": 253,
+      "near": "ATEPP:08976",
+      "far": "ATEPP:08971",
+      "far_work_pool": 39,
+      "candidates": [
+        {
+          "clip": "ATEPP:08976",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.21723425392808815,
+          "same_artist_as_anchor": true
+        },
+        {
+          "clip": "ATEPP:08971",
+          "role": "far",
+          "global_rank": 685,
+          "cosine_distance_to_anchor": 0.4693386905303374,
+          "same_artist_as_anchor": false
+        }
+      ]
+    }
+  ],
+  "clips": {
+    "ATEPP:08067": {
+      "performance_id": "ATEPP:08067",
+      "work_id": "ATEPP/1242",
+      "recording_id": "e9abba100c687c61e7867f0b8fac078e8b0074d5cb423b880e3b74c53770a758",
+      "split": "train",
+      "record_key": "08067",
+      "windows": 9,
+      "composer": "Ludwig van Beethoven",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "artist": "Glenn Gould",
+      "video_id": "JuFd49TCYdE",
+      "youtube_url": "https://www.youtube.com/watch?v=JuFd49TCYdE",
+      "track_duration_seconds": 283.426,
+      "album": "Glenn Gould plays Beethoven: Piano Sonatas Nos. 1-3; 5-10; 12-14; 15-18; 23; 30-32",
+      "album_date": "1965",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 8번 Op.13, 2악장",
+        "label": "첫 주제 · 최초 제시",
+        "formal_measures": "1–8마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "Tonic Chord, Second Movement / First Part, bars 1–16",
+        "source_url": "https://tonic-chord.com/beethoven-piano-sonata-no-8-in-c-minor-pathetique-analysis/",
+        "evidence": "첫 8마디의 주제 뒤에 9–16마디에서 옥타브 위 변주 반복이 이어진다. 최초 제시만 청취한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._8_in_C_Minor,_Op._13_\"Pathétique\"/II._Adagio_cantabile/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 16.0,
+      "start_seconds": 1.081,
+      "end_seconds": 29.824,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "R_fingerprint": "6667b76890bb673ecad4cc96f50ccb6fa722a55191d2a645e717346a4c7c2664",
+        "R_array_sha256": "5c1fb3df818727cc69addd2a220474d0565aacc93f81b78abb836cdad5a45abe",
+        "windows_sha256": "dc38ff3fb6f5843bd953e3e519d491d52059e110cba88b33030908b38bf77081"
+      }
+    },
+    "ATEPP:08055": {
+      "performance_id": "ATEPP:08055",
+      "work_id": "ATEPP/1242",
+      "recording_id": "90beb0087768c8f30579e526929317229e15e6ae98e91f8e421675368d262b50",
+      "split": "train",
+      "record_key": "08055",
+      "windows": 9,
+      "composer": "Ludwig van Beethoven",
+      "title": "Beethoven: Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "artist": "Walter Gieseking",
+      "video_id": "l8vZR_hSU1A",
+      "youtube_url": "https://www.youtube.com/watch?v=l8vZR_hSU1A",
+      "track_duration_seconds": 347.826,
+      "album": "Piano Sonatas 8, 9, 10, 13, 14 - Beethoven",
+      "album_date": "1995-10-17",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 8번 Op.13, 2악장",
+        "label": "첫 주제 · 최초 제시",
+        "formal_measures": "1–8마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "Tonic Chord, Second Movement / First Part, bars 1–16",
+        "source_url": "https://tonic-chord.com/beethoven-piano-sonata-no-8-in-c-minor-pathetique-analysis/",
+        "evidence": "첫 8마디의 주제 뒤에 9–16마디에서 옥타브 위 변주 반복이 이어진다. 최초 제시만 청취한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._8_in_C_Minor,_Op._13_\"Pathétique\"/II._Adagio_cantabile/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 16.0,
+      "start_seconds": 0.337,
+      "end_seconds": 38.751,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "R_fingerprint": "a717e109ab548613256de7570eacf2b8054cc8f4be283ec357013c84f348e5d4",
+        "R_array_sha256": "ce3b49fed5863c8c1c9ec5274a222188eb0a5dc00beb3c8cf59183a7533d5784",
+        "windows_sha256": "cf7acdfdd041ecaeda098440d6e7729d0a3d6d31694154e4f0770e562ee553fd"
+      }
+    },
+    "ATEPP:00983": {
+      "performance_id": "ATEPP:00983",
+      "work_id": "ATEPP/214",
+      "recording_id": "97646262454d1ba2303137b6a4632230876103981a33b46e2a6f3ae07a0ec692",
+      "split": "test",
+      "record_key": "00983",
+      "windows": 5,
+      "composer": "Robert Schumann",
+      "title": "Kreisleriana, Op.16: 6. Sehr langsam",
+      "artist": "Mitsuko Uchida",
+      "video_id": "BD2nJNAKB4c",
+      "youtube_url": "https://www.youtube.com/watch?v=BD2nJNAKB4c",
+      "track_duration_seconds": 312.0,
+      "album": "Schumann: Carnival / Kreisleriana",
+      "album_date": "1995-01-01",
+      "theme": {
+        "title": "슈만 · 크라이슬레리아나 Op.16, No.6",
+        "label": "주제 X · 전주부",
+        "formal_measures": "못갖춘마디 + 문헌 1–5마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "6",
+        "source_title": "Hyun Sook J. Tekin (2010), Table 4.62 / Figure 4.72, pp.145–147",
+        "source_url": "https://www.scribd.com/document/625500930/Robert-Schumann-s-Miniature-Piano-Pieces",
+        "evidence": "전주 X(1–5), 간주 X′(11–18), 후주 X(35–39)에 돌아오는 주제. A(6–10)와 구분한다.",
+        "mapping_note": "이 MusicXML은 8분음표 못갖춘마디를 1번으로 매긴다. 문헌의 완전마디 1–5는 XML 2–6에 대응하므로 XML 1의 못갖춘마디부터 포함한다. XML 20의 6/8 Etwas bewegter가 문헌 19마디에 대응하는 것도 확인했다.",
+        "annotation_status": "문헌 근거 + 해당 XML의 마디 번호/박자 전환 대조",
+        "score_sha256": "a31022a4cca34c55f46833db8527308516e8f1459f0463d3a093157a36ef398d",
+        "score_path": "Robert_Schumann/Kreisleriana,_Op._16/VI._Sehr_langsam/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 30.5,
+      "start_seconds": 1.408,
+      "end_seconds": 57.762,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "previously_playable",
+        "checked_at_utc": "2026-10-30T11:37:51+00:00",
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "a31022a4cca34c55f46833db8527308516e8f1459f0463d3a093157a36ef398d",
+        "R_fingerprint": "11b3996fc60fe86aaa06adac16ce3910f59950e6d4784170e11d43cefd843249",
+        "R_array_sha256": "66fa10c0949516355d30d74af127b265a7797cc618e43a850ca039ef02ab96ba",
+        "windows_sha256": "2f8affd34211770dc2be1154b2f46fcd142882fea0080acd5d218c5afe31aeee"
+      }
+    },
+    "ATEPP:00461": {
+      "performance_id": "ATEPP:00461",
+      "work_id": "ATEPP/127",
+      "recording_id": "8d688333cbeded74cc7b19d288e8960872e776643387aa1c952eae062e113680",
+      "split": "train",
+      "record_key": "00461",
+      "windows": 6,
+      "composer": "Alexander Scriabin",
+      "title": "12 Etudes, Op. 8: No. 11 in B-Flat Minor",
+      "artist": "Vladimir Ashkenazy",
+      "video_id": "0QIgscF9ezY",
+      "youtube_url": "https://www.youtube.com/watch?v=0QIgscF9ezY",
+      "track_duration_seconds": 253.348,
+      "album": "Scriabin: Vers la Flamme",
+      "album_date": "2015-04-06",
+      "theme": {
+        "title": "스크랴빈 · 연습곡 Op.8, No.11",
+        "label": "A부 · 첫 주제 제시 구간",
+        "formal_measures": "1–14마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "14",
+        "source_title": "Albert Christiaan Combrink (1992), Chapter 2, p.201",
+        "source_url": "https://researchspace.ukzn.ac.za/items/2d80d7d6-c866-4f04-8c28-5f97a5605b10",
+        "source_text_url": "https://www.scribd.com/document/391883401/A-STYLISTIC-AND-TECHNICAL-ANALYSIS-OF-SCRIABIN-S-ETUDES-OP-8",
+        "evidence": "형식 분석에서 A 1–14, B 15–28, 변형된 A 29–54로 나눈다. 첫 주제를 담은 최초 A부를 사용한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "3645da20686eec70bfe066e5f58a3d3f3636694aae731ce0242fded5d7171335",
+        "score_path": "Alexander_Scriabin/12_Etudes,_Op._8/No._11_in_B-Flat_Minor/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 42.0,
+      "start_seconds": 0.706,
+      "end_seconds": 66.997,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "3645da20686eec70bfe066e5f58a3d3f3636694aae731ce0242fded5d7171335",
+        "R_fingerprint": "29edc89ba0c2b14cac4d8ba645054bd5d0d8536ba703c9a5d8eaaa4a22739ec9",
+        "R_array_sha256": "de5f006228b5d9a4d194faa45a9146a958ae2461f43e8993a30d4ff45ed800ed",
+        "windows_sha256": "180d3113fd1f04dee81b968e34dace728fb596fa06cf1d00ec5f5fe0586ae6ca"
+      }
+    },
+    "ATEPP:00463": {
+      "performance_id": "ATEPP:00463",
+      "work_id": "ATEPP/127",
+      "recording_id": "a4b2bdf12d5d69a2b305a712a5561d2e18b68b0e9c591fd4b12017c07c90fd62",
+      "split": "train",
+      "record_key": "00463",
+      "windows": 6,
+      "composer": "Alexander Scriabin",
+      "title": "12 Etudes, Op. 8: No. 11 in B-Flat Minor",
+      "artist": "Lang Lang",
+      "video_id": "C1oP4icUG0s",
+      "youtube_url": "https://www.youtube.com/watch?v=C1oP4icUG0s",
+      "track_duration_seconds": 248.226,
+      "album": "Rachmaninoff: Piano Concerto No. 3 in D Minor, Op. 30 - Scriabin: Etudes",
+      "album_date": "2002-04-23",
+      "theme": {
+        "title": "스크랴빈 · 연습곡 Op.8, No.11",
+        "label": "A부 · 첫 주제 제시 구간",
+        "formal_measures": "1–14마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "14",
+        "source_title": "Albert Christiaan Combrink (1992), Chapter 2, p.201",
+        "source_url": "https://researchspace.ukzn.ac.za/items/2d80d7d6-c866-4f04-8c28-5f97a5605b10",
+        "source_text_url": "https://www.scribd.com/document/391883401/A-STYLISTIC-AND-TECHNICAL-ANALYSIS-OF-SCRIABIN-S-ETUDES-OP-8",
+        "evidence": "형식 분석에서 A 1–14, B 15–28, 변형된 A 29–54로 나눈다. 첫 주제를 담은 최초 A부를 사용한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "3645da20686eec70bfe066e5f58a3d3f3636694aae731ce0242fded5d7171335",
+        "score_path": "Alexander_Scriabin/12_Etudes,_Op._8/No._11_in_B-Flat_Minor/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 42.0,
+      "start_seconds": 0.174,
+      "end_seconds": 62.578,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "3645da20686eec70bfe066e5f58a3d3f3636694aae731ce0242fded5d7171335",
+        "R_fingerprint": "86acfc578d7e25f104212a99495ffae4076aa5ea5fc558e4d02971a3a3f93ac3",
+        "R_array_sha256": "5c4c4972388f3692171c0633ed2fe30f172e587f1d5628570944eabcdce52097",
+        "windows_sha256": "8629a5cad10b8475368fdd76773a1a0f2dda0400dda3740f595373b4afab86fd"
+      }
+    },
+    "ATEPP:00239": {
+      "performance_id": "ATEPP:00239",
+      "work_id": "ATEPP/80",
+      "recording_id": "d5f51af267d11c31afc9d666db86ffd76a35574a0bc117ce5cb71d7af4f41bf9",
+      "split": "validation",
+      "record_key": "00239",
+      "windows": 9,
+      "composer": "Sergei Rachmaninoff",
+      "title": "10 Preludes, Op. 23: No. 4 in D Major: Andante cantabile",
+      "artist": "Vladimir Ashkenazy",
+      "video_id": "Nx4gw4IJOrY",
+      "youtube_url": "https://www.youtube.com/watch?v=Nx4gw4IJOrY",
+      "track_duration_seconds": 336.133,
+      "album": "Rachmaninov: The Complete Recordings",
+      "album_date": "2014-01-01",
+      "theme": {
+        "title": "라흐마니노프 · 전주곡 Op.23, No.4",
+        "label": "주제 · 서주 이후 최초 제시",
+        "formal_measures": "3–18마디",
+        "xml_measure_start": "3",
+        "xml_measure_end_inclusive": "18",
+        "source_title": "Yi-Hsuan Lee (2017), Table 1, p.11",
+        "source_url": "https://cardinalscholar.bsu.edu/bitstreams/24ba80d7-eea5-45f0-ad73-a99869d078b7/download",
+        "evidence": "형식표에서 서주 1–2, 주제 3–18, 제1변주 19–34를 구분한다. 서주를 제외한 주제 전체를 사용한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "4fe66c25d20a350f741fab14566f1c67078ad5681bdb436a6a4c305ccb666c95",
+        "score_path": "Sergei_Rachmaninoff/10_Preludes,_Op._23/No._4_in_D_Major/musicxml_cleaned.musicxml"
+      },
+      "q_start": 6.0,
+      "q_end": 54.0,
+      "start_seconds": 11.366,
+      "end_seconds": 81.979,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "previously_playable",
+        "checked_at_utc": "2026-10-30T11:41:03+00:00",
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "4fe66c25d20a350f741fab14566f1c67078ad5681bdb436a6a4c305ccb666c95",
+        "R_fingerprint": "412ef2382c1748180002599c091c775a96d90ea0b26482c8db35d0c351ed9f25",
+        "R_array_sha256": "9e419080b7bba5c10ba05d922cbb5be7aa51c35978835fae63eefc671a0c122b",
+        "windows_sha256": "5bf97c067bc5d6c032dcf92aedc6f23b45ec0db1ab2ffae77d227abcbb84ba8b"
+      }
+    },
+    "ATEPP:08080": {
+      "performance_id": "ATEPP:08080",
+      "work_id": "ATEPP/1242",
+      "recording_id": "dcb72523cbf778be97c29f18902fcea8fbae9abd5f8a50fba090cce5b1053696",
+      "split": "train",
+      "record_key": "08080",
+      "windows": 9,
+      "composer": "Ludwig van Beethoven",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": 2. Adagio cantabile",
+      "artist": "Radu Lupu",
+      "video_id": "bXF03vt5e4k",
+      "youtube_url": "https://www.youtube.com/watch?v=bXF03vt5e4k",
+      "track_duration_seconds": 421.466,
+      "album": "Radu Lupu plays Beethoven",
+      "album_date": "2005-01-01",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 8번 Op.13, 2악장",
+        "label": "첫 주제 · 최초 제시",
+        "formal_measures": "1–8마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "Tonic Chord, Second Movement / First Part, bars 1–16",
+        "source_url": "https://tonic-chord.com/beethoven-piano-sonata-no-8-in-c-minor-pathetique-analysis/",
+        "evidence": "첫 8마디의 주제 뒤에 9–16마디에서 옥타브 위 변주 반복이 이어진다. 최초 제시만 청취한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._8_in_C_Minor,_Op._13_\"Pathétique\"/II._Adagio_cantabile/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 16.0,
+      "start_seconds": 0.197,
+      "end_seconds": 42.358,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "R_fingerprint": "f7dc696a9add34241931a92d5423056cec565b43eede900c4df94b434a335ae2",
+        "R_array_sha256": "24ee5b9d1fcebae37672346585af5912af9ebaedb0dddabc27111bd57d80f2c3",
+        "windows_sha256": "aa217b05a94ceac98232f76fd764e1ae480ff8680d6741372223d57f0c1c69e1"
+      }
+    },
+    "ATEPP:08082": {
+      "performance_id": "ATEPP:08082",
+      "work_id": "ATEPP/1242",
+      "recording_id": "2195717bc24673a7c072eadd02c73bb0c36e668b7de6121930c1cb95002d6c7a",
+      "split": "train",
+      "record_key": "08082",
+      "windows": 9,
+      "composer": "Ludwig van Beethoven",
+      "title": "Sonata No. 8 in C Minor, Op. 13 'Pathetique': II. Adagio cantabile",
+      "artist": "Wilhelm Kempff",
+      "video_id": "NIZ2Z6nHRwA",
+      "youtube_url": "https://www.youtube.com/watch?v=NIZ2Z6nHRwA",
+      "track_duration_seconds": 247.066,
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 8번 Op.13, 2악장",
+        "label": "첫 주제 · 최초 제시",
+        "formal_measures": "1–8마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "Tonic Chord, Second Movement / First Part, bars 1–16",
+        "source_url": "https://tonic-chord.com/beethoven-piano-sonata-no-8-in-c-minor-pathetique-analysis/",
+        "evidence": "첫 8마디의 주제 뒤에 9–16마디에서 옥타브 위 변주 반복이 이어진다. 최초 제시만 청취한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._8_in_C_Minor,_Op._13_\"Pathétique\"/II._Adagio_cantabile/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 16.0,
+      "start_seconds": 0.793,
+      "end_seconds": 26.782,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "R_fingerprint": "5179e216daba81289427ccfb0f1f0b9f520ae41772dea18eb98c664bbd68a003",
+        "R_array_sha256": "a9e0b1ea44c12139aaacb824e282d8fa4d2a309460e285479514be31bcce5380",
+        "windows_sha256": "35a4dbf096c4a157a3bd67b5af9890100dc628989533129d5b148d0e49480015"
+      }
+    },
+    "ATEPP:09162": {
+      "performance_id": "ATEPP:09162",
+      "work_id": "ATEPP/1310",
+      "recording_id": "3dd44d79bd75e91c9d9c1028399d5304e986475429540639e48c8e19b61229a8",
+      "split": "train",
+      "record_key": "09162",
+      "windows": 14,
+      "composer": "Ludwig van Beethoven",
+      "title": "Piano Sonata No. 5 in C Minor, Op. 10 No. 1: II. Adagio molto",
+      "artist": "Daniel Barenboim",
+      "video_id": "3G9rO0YTdi0",
+      "youtube_url": "https://www.youtube.com/watch?v=3G9rO0YTdi0",
+      "track_duration_seconds": 502.84,
+      "album": "Beethoven: Piano Sonatas Nos. 1-6",
+      "album_date": "2020-10-30",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 5번 Op.10 No.1, 2악장",
+        "label": "첫 주제 · 최초 제시",
+        "formal_measures": "1–16마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "16",
+        "source_title": "Tonic Chord, Sonata No.5 / Second Movement, First subject",
+        "source_url": "https://tonic-chord.com/beethoven-piano-sonata-no-5-in-c-minor-analysis/",
+        "evidence": "2악장 제1주제 1–16마디를 사용한다. 17마디부터의 연결부는 제외한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "012390d4aa02180e5754271df28f3cbb62d4e610c77707d084c627f5b2a14856",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No.5_in_C_minor,_Op.10_No.1/2._Adagio_molto/Sonate_No._5_2nd_Movement.mxl"
+      },
+      "q_start": 0.0,
+      "q_end": 32.0,
+      "start_seconds": 1.366,
+      "end_seconds": 70.667,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "012390d4aa02180e5754271df28f3cbb62d4e610c77707d084c627f5b2a14856",
+        "R_fingerprint": "029b767efa53c396db8a16a101fd9bd3fc87fc719927d2c0ea70d8f25c21bd25",
+        "R_array_sha256": "d58fe36428d986c64aed99c812e87a1de34c540c958c7a849c38e7be3c0f44e9",
+        "windows_sha256": "f45294ea38e638445af3dab2cb9c4e39bd7ec3e31f7122465d2a098e546a8f68"
+      }
+    },
+    "ATEPP:06208": {
+      "performance_id": "ATEPP:06208",
+      "work_id": "ATEPP/1179",
+      "recording_id": "6dc86a907eceada09610d287fa89a2d8cd4f63103d5cd6ea4612e5a6b4acc6da",
+      "split": "train",
+      "record_key": "06208",
+      "windows": 10,
+      "composer": "Ludwig van Beethoven",
+      "title": "Piano Sonata No. 3 in C Major, Op. 2 No. 3: II. Adagio",
+      "artist": "Lang Lang",
+      "video_id": "FEjcR94JLFE",
+      "youtube_url": "https://www.youtube.com/watch?v=FEjcR94JLFE",
+      "track_duration_seconds": 538.306,
+      "album": "Live in Vienna",
+      "album_date": "2010-08-23",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 3번 Op.2 No.3, 2악장",
+        "label": "첫 주제 · 연결부 이전",
+        "formal_measures": "1–8마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "Musica Libra, Op.2-3 Second Movement Analysis, A Section",
+        "source_url": "https://www.musicalibra.com/blog/?bmode=view&idx=167370722",
+        "evidence": "분석에서 8마디 주제와 뒤따르는 2마디 연결부를 구분한다. 첫 주제 1–8마디만 발췌한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "3439a6067545e1006ecdf146e0e2da2ba463aeb7058a36a7556e7da1e72288dc",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._3_in_C_Major,_Op._2_No._3/II._Adagio/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 16.0,
+      "start_seconds": 0.232,
+      "end_seconds": 57.57,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "3439a6067545e1006ecdf146e0e2da2ba463aeb7058a36a7556e7da1e72288dc",
+        "R_fingerprint": "2c70ca73060d8aa9c9897f494703d9295158c93aee1cbd5ca9d22b002ea32788",
+        "R_array_sha256": "a7316ee5ca475354dcfcddf67537a8aa0c73e6e33a30e7c20ad7b47c1f66c49a",
+        "windows_sha256": "310bd9827f3067ec7e5fcd272777e1810945de4afce7f37a09683c882d76d018"
+      }
+    },
+    "ATEPP:04995": {
+      "performance_id": "ATEPP:04995",
+      "work_id": "ATEPP/1082",
+      "recording_id": "ae048e0c3f8b75a9a426088f391b361cccf105da5563375de4dafbbea41c58c0",
+      "split": "validation",
+      "record_key": "04995",
+      "windows": 10,
+      "composer": "Johannes Brahms",
+      "title": "6 Piano Pieces, Op.118: 6. Intermezzo in E flat minor",
+      "artist": "Wilhelm Kempff",
+      "video_id": "SxBuvv39mLM",
+      "youtube_url": "https://www.youtube.com/watch?v=SxBuvv39mLM",
+      "track_duration_seconds": 290.373,
+      "album": "Schumann / Brahms: Complete 1950s Solo Recordings",
+      "album_date": "2003-01-01",
+      "theme": {
+        "title": "브람스 · 간주곡 Op.118 No.6",
+        "label": "첫 주제 동기 · 제시 구간",
+        "formal_measures": "1–8마디 · A부 일부",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "GMTH Proceedings Band 3, Abbildung 1: Intermezzo es-Moll op.118/6, T.1–8",
+        "source_url": "https://storage.gmth.de/proceedings/issues/3/pdf/gmth-proceedings-band-3.pdf",
+        "evidence": "첫 동기의 1–8마디를 다룬 악보 예시를 참고해 수동 선정했다. A부 전체가 아닌 주제 동기 제시 부분이다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "a8079366bf3ba904e1c2db54a706e61ff4ed9be9bb07a18c64b21707617c6c86",
+        "score_path": "Johannes_Brahms/6_Piano_Pieces,_Op._118/No._6,_Intermezzo_in_E-Flat_Minor/Brahms_Intermezzo_in_E-flat_minor.mxl"
+      },
+      "q_start": 0.0,
+      "q_end": 12.0,
+      "start_seconds": 0.505,
+      "end_seconds": 28.438,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "a8079366bf3ba904e1c2db54a706e61ff4ed9be9bb07a18c64b21707617c6c86",
+        "R_fingerprint": "4edc576cbbcd0d0c28829a6814c868fb3996589fbeba110370a07822bcabca66",
+        "R_array_sha256": "fcfa895350a979bfa080b8cc4988b2f0ba017e390d41b5af2cf287c2ffa79e9d",
+        "windows_sha256": "34d507e9c636f7398438acb3779816f0ba980cf96ade874941d28a9443538a1c"
+      }
+    },
+    "ATEPP:04993": {
+      "performance_id": "ATEPP:04993",
+      "work_id": "ATEPP/1082",
+      "recording_id": "6aa93fe55bcc51d5575b4ffefb2670661cfc491a3213d18bd53b3ae5eb0256c1",
+      "split": "validation",
+      "record_key": "04993",
+      "windows": 10,
+      "composer": "Johannes Brahms",
+      "title": "Six Piano Pieces, Op. 118: Intermezzo in E-flat Minor, Op. 118, No. 6",
+      "artist": "Murray Perahia",
+      "video_id": "gndLtJe9CqI",
+      "youtube_url": "https://www.youtube.com/watch?v=gndLtJe9CqI",
+      "track_duration_seconds": 310.386,
+      "album": "Brahms: Händel Variations",
+      "album_date": "2010-11-12",
+      "theme": {
+        "title": "브람스 · 간주곡 Op.118 No.6",
+        "label": "첫 주제 동기 · 제시 구간",
+        "formal_measures": "1–8마디 · A부 일부",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "GMTH Proceedings Band 3, Abbildung 1: Intermezzo es-Moll op.118/6, T.1–8",
+        "source_url": "https://storage.gmth.de/proceedings/issues/3/pdf/gmth-proceedings-band-3.pdf",
+        "evidence": "첫 동기의 1–8마디를 다룬 악보 예시를 참고해 수동 선정했다. A부 전체가 아닌 주제 동기 제시 부분이다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "a8079366bf3ba904e1c2db54a706e61ff4ed9be9bb07a18c64b21707617c6c86",
+        "score_path": "Johannes_Brahms/6_Piano_Pieces,_Op._118/No._6,_Intermezzo_in_E-Flat_Minor/Brahms_Intermezzo_in_E-flat_minor.mxl"
+      },
+      "q_start": 0.0,
+      "q_end": 12.0,
+      "start_seconds": 0.398,
+      "end_seconds": 28.297,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "a8079366bf3ba904e1c2db54a706e61ff4ed9be9bb07a18c64b21707617c6c86",
+        "R_fingerprint": "9cd5dedb9f07f6903ac74c0f67a087d054041eb50d196ae8fd78bc2ac88378da",
+        "R_array_sha256": "888127c13e027accc3f082f77090a086c9833ed0ee4a274fc5b8f90bcba05fd6",
+        "windows_sha256": "f4182d1c536b2a59cea071def3af816894eababcf960e22b0563f78f143d40c1"
+      }
+    },
+    "ATEPP:08076": {
+      "performance_id": "ATEPP:08076",
+      "work_id": "ATEPP/1242",
+      "recording_id": "f77c435e64ac7acacc32f89cc16c377eb39db6e63e15927839aeac2d97a69e45",
+      "split": "train",
+      "record_key": "08076",
+      "windows": 9,
+      "composer": "Ludwig van Beethoven",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "artist": "Friedrich Gulda",
+      "video_id": "1MNAIIY-X64",
+      "youtube_url": "https://www.youtube.com/watch?v=1MNAIIY-X64",
+      "track_duration_seconds": 317.493,
+      "album": "Beethoven: Complete Piano Sonatas",
+      "album_date": "2021-07-23",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 8번 Op.13, 2악장",
+        "label": "첫 주제 · 최초 제시",
+        "formal_measures": "1–8마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "Tonic Chord, Second Movement / First Part, bars 1–16",
+        "source_url": "https://tonic-chord.com/beethoven-piano-sonata-no-8-in-c-minor-pathetique-analysis/",
+        "evidence": "첫 8마디의 주제 뒤에 9–16마디에서 옥타브 위 변주 반복이 이어진다. 최초 제시만 청취한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._8_in_C_Minor,_Op._13_\"Pathétique\"/II._Adagio_cantabile/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 16.0,
+      "start_seconds": 0.148,
+      "end_seconds": 34.325,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "R_fingerprint": "4ee43a6c48f97506904011c5b4aa6abb0bf909888f3c5af140cdd3b9a1534612",
+        "R_array_sha256": "427afded5136bb1af5140a254d6c5f56e310eb68f3b10318e5ec41544638d7a6",
+        "windows_sha256": "4f9c0eac4f02029c88d5c053b9e6c972d36b0ff53449489d8696fd3a1ca96380"
+      }
+    },
+    "ATEPP:08052": {
+      "performance_id": "ATEPP:08052",
+      "work_id": "ATEPP/1242",
+      "recording_id": "47dd5df05de54225948e203a93639a7507fcc694dc9579536dabf2544566f071",
+      "split": "train",
+      "record_key": "08052",
+      "windows": 9,
+      "composer": "Ludwig van Beethoven",
+      "title": "Sonata No. 8 in C Minor, Op. 13 \"Pathetique\": II. Adagio cantabile",
+      "artist": "Walter Gieseking",
+      "video_id": "Sj-gr0T8hIo",
+      "youtube_url": "https://www.youtube.com/watch?v=Sj-gr0T8hIo",
+      "track_duration_seconds": 341.322,
+      "album": "Beethoven: Sonatas No. 1 in F Minor, Op. 2 No. 1, No. 8 in C Minor, Op. 13 \"Pathètique\", No. 19 in G Minor, Op. 49 No.1 & No. 20 in G Major, Op. 49 No. 2",
+      "album_date": "2020-04-03",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 8번 Op.13, 2악장",
+        "label": "첫 주제 · 최초 제시",
+        "formal_measures": "1–8마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "Tonic Chord, Second Movement / First Part, bars 1–16",
+        "source_url": "https://tonic-chord.com/beethoven-piano-sonata-no-8-in-c-minor-pathetique-analysis/",
+        "evidence": "첫 8마디의 주제 뒤에 9–16마디에서 옥타브 위 변주 반복이 이어진다. 최초 제시만 청취한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._8_in_C_Minor,_Op._13_\"Pathétique\"/II._Adagio_cantabile/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 16.0,
+      "start_seconds": 0.145,
+      "end_seconds": 38.542,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "9b0cda7d39eb5b913c60a2afc999d707272e1045cfb4f7e4a8e05b1071df5f94",
+        "R_fingerprint": "f12dd314397f082b30cd5f9312e7f9b4e824b21a5c00e21e94c06af88dd288ca",
+        "R_array_sha256": "18c15d089499c7b5a9b00d20a054be9df1690d5d2eeb456a7daae15c8de5910a",
+        "windows_sha256": "8162bfb4d1dbd47069189da85404a273e43bbd3279368799128a98e968ce03ba"
+      }
+    },
+    "ATEPP:08197": {
+      "performance_id": "ATEPP:08197",
+      "work_id": "ATEPP/1247",
+      "recording_id": "c4d0d9d2a86ab6816f4d3b0e4bac213086c49bf5dcc1bad67298891e9b065f2c",
+      "split": "train",
+      "record_key": "08197",
+      "windows": 28,
+      "composer": "Ludwig van Beethoven",
+      "title": "Piano Sonata No. 12 in A-Flat Major, Op. 26 \"Funeral March\": I. Andante con variazioni (Live)",
+      "artist": "Emil Gilels",
+      "video_id": "wdB7vHpzIB4",
+      "youtube_url": "https://www.youtube.com/watch?v=wdB7vHpzIB4",
+      "track_duration_seconds": 513.986,
+      "album": "Beethoven, Schumann & Brahms: Piano Works (Live)",
+      "album_date": "2018-08-31",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 12번 Op.26, 1악장",
+        "label": "변주 주제 · 첫 문장",
+        "formal_measures": "못갖춘마디 + 1–8마디 · 주제 일부",
+        "xml_measure_start": "0",
+        "xml_measure_end_inclusive": "8",
+        "source_title": "PTNA Piano Music Encyclopedia, Op.26 / First Movement",
+        "source_url": "https://enc.piano.or.jp/en/musics/424",
+        "evidence": "34마디 변주 주제 중 첫 8마디 문장과 그 못갖춘마디를 발췌한다. 주제 전체나 변주 부분을 뜻하지 않는다.",
+        "mapping_note": "XML 0은 못갖춘마디다. 문헌의 완전마디 1–8에 XML 0의 못갖춘마디를 함께 포함한다.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "dd83f3a91753b772551c48252f64e21726e563d32eb740ecde4b2082487d1122",
+        "score_path": "Ludwig_van_Beethoven/Sonata_No._12_In_A_Flat_Op._26/1._Andante_con_variazioni_-_Live/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 12.5,
+      "start_seconds": 1.569,
+      "end_seconds": 24.839,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "dd83f3a91753b772551c48252f64e21726e563d32eb740ecde4b2082487d1122",
+        "R_fingerprint": "a7f98fc8cf0a9567bb16b80d125c812c61e3b27dd4c92d1448d07929045e2d78",
+        "R_array_sha256": "c80304a44df6f79a820c94e9530ef159786d3b3182485ac29684285cf829ee42",
+        "windows_sha256": "e6e584b1cca173e4c8d7dd4549bbe54b6066fbb7f7fa9c0fa064de46574fb2df"
+      }
+    },
+    "ATEPP:10686": {
+      "performance_id": "ATEPP:10686",
+      "work_id": "ATEPP/1543",
+      "recording_id": "c4d6b0b9078cb2c0e167f8cbd3c55a5e9942ad60ac218778d26b03e66659f3cc",
+      "split": "train",
+      "record_key": "10686",
+      "windows": 9,
+      "composer": "Maurice Ravel",
+      "title": "Ravel: Pavane pour une infante défunte, M. 19",
+      "artist": "Anne Queffélec",
+      "video_id": "JBRpgANcUgA",
+      "youtube_url": "https://www.youtube.com/watch?v=JBRpgANcUgA",
+      "track_duration_seconds": 425.585,
+      "album": "The Complete Erato Recordings",
+      "album_date": "2019-01-18",
+      "theme": {
+        "title": "라벨 · 죽은 왕녀를 위한 파반느 M.19",
+        "label": "주제 A · 최초 제시",
+        "formal_measures": "1–12마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "12",
+        "source_title": "Alfred, Ravel Piano Masterpieces, Pavane structure notes",
+        "source_url": "https://content.alfred.com/catpages/00-2599.pdf",
+        "evidence": "편집 해설의 A=1–12, B=13–27 구분을 참고해 주제 A의 최초 제시를 선택한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "94e55a3aa0603e19c874b434ac101805c684badb3302957e5ad7ff7fab9cc520",
+        "score_path": "Maurice_Ravel/Pavane_pour_une_infante_défunte,_M._19/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 48.0,
+      "start_seconds": 0.086,
+      "end_seconds": 71.525,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "94e55a3aa0603e19c874b434ac101805c684badb3302957e5ad7ff7fab9cc520",
+        "R_fingerprint": "ab6e7132d5e09895b1d600443a3318285c2d49efe66a6b45aaf53c109d88eb83",
+        "R_array_sha256": "30ea1b9c25b601157b1762c3eab83484ac50558abd4b44318634f670d8dc303f",
+        "windows_sha256": "4ca8d6db23ce21e5b6eed64c88460750861590e55bb4f92bfea3fae1041b244c"
+      }
+    },
+    "ATEPP:10680": {
+      "performance_id": "ATEPP:10680",
+      "work_id": "ATEPP/1543",
+      "recording_id": "bd78651c335c3f0f8a090378def0626e55610b5b6fb6bed2d79f4a8ea54fd83e",
+      "split": "train",
+      "record_key": "10680",
+      "windows": 9,
+      "composer": "Maurice Ravel",
+      "title": "Pavane pour une infante défunte, M. 19",
+      "artist": "Robert Casadesus",
+      "video_id": "ob37uotmHf4",
+      "youtube_url": "https://www.youtube.com/watch?v=ob37uotmHf4",
+      "track_duration_seconds": 331.466,
+      "album": "Masterworks Heritage: Ravel - Complete Solo Piano Music",
+      "album_date": "1947",
+      "theme": {
+        "title": "라벨 · 죽은 왕녀를 위한 파반느 M.19",
+        "label": "주제 A · 최초 제시",
+        "formal_measures": "1–12마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "12",
+        "source_title": "Alfred, Ravel Piano Masterpieces, Pavane structure notes",
+        "source_url": "https://content.alfred.com/catpages/00-2599.pdf",
+        "evidence": "편집 해설의 A=1–12, B=13–27 구분을 참고해 주제 A의 최초 제시를 선택한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "94e55a3aa0603e19c874b434ac101805c684badb3302957e5ad7ff7fab9cc520",
+        "score_path": "Maurice_Ravel/Pavane_pour_une_infante_défunte,_M._19/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 48.0,
+      "start_seconds": 1.643,
+      "end_seconds": 53.931,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "94e55a3aa0603e19c874b434ac101805c684badb3302957e5ad7ff7fab9cc520",
+        "R_fingerprint": "5c599ecab6e06e6615f7951f1146d81979fe4370d3602c5399042bd2d3ddf5cb",
+        "R_array_sha256": "facc4695400ab63592e6ee9787c36fbb2f4735f5b9a09909bee1022c0a065fb7",
+        "windows_sha256": "85403d0ee7bd6beaf877a02b9586b60d491b0bad004ae7efe0ca2dd2b40ddbc2"
+      }
+    },
+    "ATEPP:00460": {
+      "performance_id": "ATEPP:00460",
+      "work_id": "ATEPP/127",
+      "recording_id": "9b817a23a29e6f956ca723245ba2f4e865f0fbaaf0c20c1c210dccaa3530d49f",
+      "split": "train",
+      "record_key": "00460",
+      "windows": 6,
+      "composer": "Alexander Scriabin",
+      "title": "12 Études, Op. 8: No. 11 in B-Flat Minor",
+      "artist": "Vladimir Horowitz",
+      "video_id": "Ec5XJepIYZA",
+      "youtube_url": "https://www.youtube.com/watch?v=Ec5XJepIYZA",
+      "track_duration_seconds": 235.306,
+      "album": "Vladimir Horowitz: The Complete Masterworks Recordings 1962-1973",
+      "album_date": "1962",
+      "theme": {
+        "title": "스크랴빈 · 연습곡 Op.8, No.11",
+        "label": "A부 · 첫 주제 제시 구간",
+        "formal_measures": "1–14마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "14",
+        "source_title": "Albert Christiaan Combrink (1992), Chapter 2, p.201",
+        "source_url": "https://researchspace.ukzn.ac.za/items/2d80d7d6-c866-4f04-8c28-5f97a5605b10",
+        "source_text_url": "https://www.scribd.com/document/391883401/A-STYLISTIC-AND-TECHNICAL-ANALYSIS-OF-SCRIABIN-S-ETUDES-OP-8",
+        "evidence": "형식 분석에서 A 1–14, B 15–28, 변형된 A 29–54로 나눈다. 첫 주제를 담은 최초 A부를 사용한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "3645da20686eec70bfe066e5f58a3d3f3636694aae731ce0242fded5d7171335",
+        "score_path": "Alexander_Scriabin/12_Etudes,_Op._8/No._11_in_B-Flat_Minor/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 42.0,
+      "start_seconds": 0.21,
+      "end_seconds": 60.805,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "3645da20686eec70bfe066e5f58a3d3f3636694aae731ce0242fded5d7171335",
+        "R_fingerprint": "394554d8af63faa25414a0369979dfef9bd333dc0149c157a97a6043fa7720d5",
+        "R_array_sha256": "b0c55bfa7b3c2252f1b62c06b9f09df3887622614283c3faa46ee24f37bb4198",
+        "windows_sha256": "2bb79f59b390b0debdde30f6ecfb1abfc752f347d3127858d05add6f1f4c780c"
+      }
+    },
+    "ATEPP:03187": {
+      "performance_id": "ATEPP:03187",
+      "work_id": "ATEPP/667",
+      "recording_id": "7190551de8798a8eb77de078cb2dcc4fed92e1089a46cddab0910180458ad720",
+      "split": "train",
+      "record_key": "03187",
+      "windows": 6,
+      "composer": "Claude Debussy",
+      "title": "Préludes, Book 2, L. 123: No. 5, Bruyères",
+      "artist": "Sviatoslav Richter",
+      "video_id": "CbydSzu7Lnc",
+      "youtube_url": "https://www.youtube.com/watch?v=CbydSzu7Lnc",
+      "track_duration_seconds": 172.16,
+      "album": "Un homme de concert, Vol. 8: Sviatoslav Richter",
+      "album_date": "1994-01-19",
+      "theme": {
+        "title": "드뷔시 · 전주곡집 2권, 브뤼예르",
+        "label": "첫 주제 · 도입 악구",
+        "formal_measures": "1–5마디 · 주제 일부",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "5",
+        "source_title": "The Harmonic and Textural Languages of Ravel and Debussy, §2.4.1 Respirations",
+        "source_url": "https://doi.org/10.13140/RG.2.2.30031.80803",
+        "evidence": "분석의 도입 선율과 호흡 예시(1–5마디)를 참고해 첫 악구를 발췌한다. A부 전체가 아닌 주제 일부다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석. 첫 마디의 기보된 쉼표는 제외하고, 악보에 있는 최초 발음부터 시작한다. 시간 지도 범위를 임의로 보간하거나 외삽하지 않는다.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "4c8b8e61eb90b767b71f5ec6fe55b181f2cdba8ad7d2d1cdffd0f4ae763c4a26",
+        "score_path": "Claude_Debussy/Préludes,_Book_2,_L._123/No._5,_Bruyères/Debussy_Prelude_Book_2_No_5_Bruyres.mxl",
+        "omit_initial_rests": true
+      },
+      "q_start": 2.5,
+      "q_end": 15.0,
+      "start_seconds": 0.346,
+      "end_seconds": 16.014,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "4c8b8e61eb90b767b71f5ec6fe55b181f2cdba8ad7d2d1cdffd0f4ae763c4a26",
+        "R_fingerprint": "9682a3d51648fae9a11e450d5a886fe2e7bc3cab2ad4df64d5a7fbe1bf0e8dbf",
+        "R_array_sha256": "17438548571da17a4ba0bfce0dcbb412a23dc52778aab7b6d7c095dd781e8a60",
+        "windows_sha256": "c36a54779771a6aa401513f9e0019ce4107190de890a18a5f7c01a224a482ba1"
+      }
+    },
+    "ATEPP:00962": {
+      "performance_id": "ATEPP:00962",
+      "work_id": "ATEPP/214",
+      "recording_id": "877c1dc5d2c79b5586fc7ef6e07029e84cba27093bbacac41b62e901c3547f24",
+      "split": "test",
+      "record_key": "00962",
+      "windows": 5,
+      "composer": "Robert Schumann",
+      "title": "Kreisleriana, Op. 16: No. 6, Sehr langsam",
+      "artist": "Vladimir Horowitz",
+      "video_id": "0eA7YZD6T84",
+      "youtube_url": "https://www.youtube.com/watch?v=0eA7YZD6T84",
+      "track_duration_seconds": 232.506,
+      "album": "Vladimir Horowitz in Recital at Academy of Music, Philadelphia, December 1, 1968",
+      "album_date": "1971",
+      "theme": {
+        "title": "슈만 · 크라이슬레리아나 Op.16, No.6",
+        "label": "주제 X · 전주부",
+        "formal_measures": "못갖춘마디 + 문헌 1–5마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "6",
+        "source_title": "Hyun Sook J. Tekin (2010), Table 4.62 / Figure 4.72, pp.145–147",
+        "source_url": "https://www.scribd.com/document/625500930/Robert-Schumann-s-Miniature-Piano-Pieces",
+        "evidence": "전주 X(1–5), 간주 X′(11–18), 후주 X(35–39)에 돌아오는 주제. A(6–10)와 구분한다.",
+        "mapping_note": "이 MusicXML은 8분음표 못갖춘마디를 1번으로 매긴다. 문헌의 완전마디 1–5는 XML 2–6에 대응하므로 XML 1의 못갖춘마디부터 포함한다. XML 20의 6/8 Etwas bewegter가 문헌 19마디에 대응하는 것도 확인했다.",
+        "annotation_status": "문헌 근거 + 해당 XML의 마디 번호/박자 전환 대조",
+        "score_sha256": "a31022a4cca34c55f46833db8527308516e8f1459f0463d3a093157a36ef398d",
+        "score_path": "Robert_Schumann/Kreisleriana,_Op._16/VI._Sehr_langsam/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 30.5,
+      "start_seconds": 0.234,
+      "end_seconds": 41.951,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "a31022a4cca34c55f46833db8527308516e8f1459f0463d3a093157a36ef398d",
+        "R_fingerprint": "25673b025fdf1ca0e22eff8e204bba847cb005a15adfdb8911d4a62fd84c6edf",
+        "R_array_sha256": "9f71c575f18c762e42f59ab6e149832f09aa1ace4a2bf2e073133fbe9d38d366",
+        "windows_sha256": "7d0a9db12635109167d368f1108efb25fd1440783a274b491d21a468d91e0c67"
+      }
+    },
+    "ATEPP:00974": {
+      "performance_id": "ATEPP:00974",
+      "work_id": "ATEPP/214",
+      "recording_id": "51b51e6551fb677dec68e435ab803d45ef5bea4c4067d7ecf6a7ee4a4bce1dfd",
+      "split": "test",
+      "record_key": "00974",
+      "windows": 5,
+      "composer": "Robert Schumann",
+      "title": "Kreisleriana, Op. 16: 6. Sehr langsam",
+      "artist": "Alicia de Larrocha",
+      "video_id": "Ay8pnSZGAo4",
+      "youtube_url": "https://www.youtube.com/watch?v=Ay8pnSZGAo4",
+      "track_duration_seconds": 243.306,
+      "album": "Schumann: Carnaval; Kreisleriana; Faschingsswank aus Wien etc",
+      "album_date": "2006-01-01",
+      "theme": {
+        "title": "슈만 · 크라이슬레리아나 Op.16, No.6",
+        "label": "주제 X · 전주부",
+        "formal_measures": "못갖춘마디 + 문헌 1–5마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "6",
+        "source_title": "Hyun Sook J. Tekin (2010), Table 4.62 / Figure 4.72, pp.145–147",
+        "source_url": "https://www.scribd.com/document/625500930/Robert-Schumann-s-Miniature-Piano-Pieces",
+        "evidence": "전주 X(1–5), 간주 X′(11–18), 후주 X(35–39)에 돌아오는 주제. A(6–10)와 구분한다.",
+        "mapping_note": "이 MusicXML은 8분음표 못갖춘마디를 1번으로 매긴다. 문헌의 완전마디 1–5는 XML 2–6에 대응하므로 XML 1의 못갖춘마디부터 포함한다. XML 20의 6/8 Etwas bewegter가 문헌 19마디에 대응하는 것도 확인했다.",
+        "annotation_status": "문헌 근거 + 해당 XML의 마디 번호/박자 전환 대조",
+        "score_sha256": "a31022a4cca34c55f46833db8527308516e8f1459f0463d3a093157a36ef398d",
+        "score_path": "Robert_Schumann/Kreisleriana,_Op._16/VI._Sehr_langsam/musicxml_cleaned.musicxml"
+      },
+      "q_start": 0.0,
+      "q_end": 30.5,
+      "start_seconds": 0.214,
+      "end_seconds": 47.439,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "a31022a4cca34c55f46833db8527308516e8f1459f0463d3a093157a36ef398d",
+        "R_fingerprint": "1d54ed5beca0dc6086dfee9470e2fd5c1a9978e42d677dbfe24b705df653f96f",
+        "R_array_sha256": "10846c5933d9a222c077bee6a8b1ae868f19a73d964523981c494b188e95fe44",
+        "windows_sha256": "9cbb32133cdd11e4f076214e2a6813a8c430a719bf2750755fcb90ba2502b4d4"
+      }
+    },
+    "ATEPP:03104": {
+      "performance_id": "ATEPP:03104",
+      "work_id": "ATEPP/655",
+      "recording_id": "a6845b337c0864e5c2ac2d312dbe7e477ac3c937e21239343791f37d7d3012d5",
+      "split": "test",
+      "record_key": "03104",
+      "windows": 9,
+      "composer": "Claude Debussy",
+      "title": "Suite bergamasque: III. Clair de lune",
+      "artist": "Emil Gilels",
+      "video_id": "-w2XgZpMMwc",
+      "youtube_url": "https://www.youtube.com/watch?v=-w2XgZpMMwc",
+      "track_duration_seconds": 270.973,
+      "album": "Gilels, Emil: Early Recordings, Vol. 1 (1935-1951)",
+      "album_date": "2008-10-28",
+      "theme": {
+        "title": "드뷔시 · 베르가마스크 모음곡, 달빛",
+        "label": "첫 주제 제시 · Tempo rubato 이전",
+        "formal_measures": "1–14마디",
+        "xml_measure_start": "1",
+        "xml_measure_end_inclusive": "14",
+        "source_title": "Playing Debussy’s Piano Works, Clair de Lune (2006)",
+        "source_url": "https://stevedebussy.wordpress.com/2006/09/29/clair-de-lune-suite-bergemasque-1890-1905/",
+        "evidence": "해설의 1–14마디와 15마디의 패턴 전환을 참고했다. XML의 15마디 Tempo rubato 표시와 대조했다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석. 첫 마디의 기보된 쉼표는 제외하고, 악보에 있는 최초 발음부터 시작한다. 시간 지도 범위를 임의로 보간하거나 외삽하지 않는다.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "1c2b0c329295a2b1cd1387f18a063fbb5672721574dbd32cf91a5daf0f551072",
+        "score_path": "Claude_Debussy/Suite_bergamasque,_L._75/III._Clair_de_lune/Clair_de_Lune__Debussy.mxl",
+        "omit_initial_rests": true
+      },
+      "q_start": 0.5,
+      "q_end": 63.0,
+      "start_seconds": 1.345,
+      "end_seconds": 53.988,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "1c2b0c329295a2b1cd1387f18a063fbb5672721574dbd32cf91a5daf0f551072",
+        "R_fingerprint": "1fb30db800a9b66a51871d2b47194a1429a85aae6db396706f71e1d3f081c098",
+        "R_array_sha256": "1b41ee3ab37e9f947c80076a6940a69ea299106d0251e9c27307e01f1692a4fe",
+        "windows_sha256": "73035c45b4811ba32406474690a8d7393e3893822424f881bf81ec766abbe348"
+      }
+    },
+    "ATEPP:08976": {
+      "performance_id": "ATEPP:08976",
+      "work_id": "ATEPP/1305",
+      "recording_id": "fcf7ef3d5018059be5382793559808fcf1c328d0b707d09c087dac0e5471e9fc",
+      "split": "train",
+      "record_key": "08976",
+      "windows": 8,
+      "composer": "Ludwig van Beethoven",
+      "title": "Piano Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 \"Moonlight\": I. Adagio sostenuto",
+      "artist": "Nikolai Lugansky",
+      "video_id": "LZYUGKkvx0E",
+      "youtube_url": "https://www.youtube.com/watch?v=LZYUGKkvx0E",
+      "track_duration_seconds": 380.013,
+      "album": "Beethoven: Piano Sonatas Nos. 14, 17 & 23",
+      "album_date": "2022-02-11",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 14번 Op.27 No.2 월광, 1악장",
+        "label": "서주 이후 첫 주제 진입",
+        "formal_measures": "5–9마디",
+        "xml_measure_start": "5",
+        "xml_measure_end_inclusive": "9",
+        "source_title": "Vienna Piano School, Moonlight Sonata First Movement: Voicing and Pedal Guide",
+        "source_url": "https://viennapianoschool.com/blog/moonlight-sonata-first-movement-voicing-pedal",
+        "evidence": "주제 선율이 들어오는 5–9마디를 발췌한다. 앞의 반주 도입 1–4마디를 제외하며 진입 마디 전체부터 시작한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "720157f962523207a783d40e5c6573a131f943b38b73bd563f695a05bc3a4f78",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._14_in_C-Sharp_Minor,_Op._27_No._2_\"Moonlight\"/1._Adagio_sostenuto/Sonate_No._14_Moonlight_1st_Movement.mxl"
+      },
+      "q_start": 16.0,
+      "q_end": 36.0,
+      "start_seconds": 23.456,
+      "end_seconds": 49.826,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "720157f962523207a783d40e5c6573a131f943b38b73bd563f695a05bc3a4f78",
+        "R_fingerprint": "08f691604613e8ba594972866ff87b70d403dccb54fa117199c650393f1749a9",
+        "R_array_sha256": "c154c37a745478ee63a9d76a2a29fd5b2b43e6c27bdb7d346b6f73e970195e28",
+        "windows_sha256": "dbe221b657ce75041fd17345addea475c22ca70f33ee61d57e4130ad023f23e9"
+      }
+    },
+    "ATEPP:08971": {
+      "performance_id": "ATEPP:08971",
+      "work_id": "ATEPP/1305",
+      "recording_id": "931d118661455aa3e5e8251270e935d77b3cc699eee45fc791dce038e3796a02",
+      "split": "train",
+      "record_key": "08971",
+      "windows": 8,
+      "composer": "Ludwig van Beethoven",
+      "title": "Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 'Mondschein': I. Adagio sostenuto",
+      "artist": "Wilhelm Kempff",
+      "video_id": "gc_xOdoQCN0",
+      "youtube_url": "https://www.youtube.com/watch?v=gc_xOdoQCN0",
+      "track_duration_seconds": 381.026,
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27",
+      "theme": {
+        "title": "베토벤 · 피아노 소나타 14번 Op.27 No.2 월광, 1악장",
+        "label": "서주 이후 첫 주제 진입",
+        "formal_measures": "5–9마디",
+        "xml_measure_start": "5",
+        "xml_measure_end_inclusive": "9",
+        "source_title": "Vienna Piano School, Moonlight Sonata First Movement: Voicing and Pedal Guide",
+        "source_url": "https://viennapianoschool.com/blog/moonlight-sonata-first-movement-voicing-pedal",
+        "evidence": "주제 선율이 들어오는 5–9마디를 발췌한다. 앞의 반주 도입 1–4마디를 제외하며 진입 마디 전체부터 시작한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호를 대조한 수동 주석.",
+        "annotation_status": "문헌/해설 참고 + 해당 XML 대조 · 프로토타입 수동 주석",
+        "score_sha256": "720157f962523207a783d40e5c6573a131f943b38b73bd563f695a05bc3a4f78",
+        "score_path": "Ludwig_van_Beethoven/Piano_Sonata_No._14_in_C-Sharp_Minor,_Op._27_No._2_\"Moonlight\"/1._Adagio_sostenuto/Sonate_No._14_Moonlight_1st_Movement.mxl"
+      },
+      "q_start": 16.0,
+      "q_end": 36.0,
+      "start_seconds": 18.967,
+      "end_seconds": 43.435,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "unverified",
+        "checked_at_utc": null,
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "720157f962523207a783d40e5c6573a131f943b38b73bd563f695a05bc3a4f78",
+        "R_fingerprint": "78542078ed806e11c3f09744c840acfcbb9e1f82adc4cdcf12672699fc4c1118",
+        "R_array_sha256": "b40c3d0d770e4b476885809a7bb13dad7052303840887db0fac984247801aa58",
+        "windows_sha256": "10adb1cf7d15469e30a1385b58756155aeca59848df73e4250b2538ae6f0cfff"
+      }
+    },
+    "ATEPP:00242": {
+      "performance_id": "ATEPP:00242",
+      "work_id": "ATEPP/80",
+      "recording_id": "3fc5f9bc6ca1f9dd6a534a12767db08813f9178c2b352cea005d1008c92769b2",
+      "split": "validation",
+      "record_key": "00242",
+      "windows": 9,
+      "composer": "Sergei Rachmaninoff",
+      "title": "Rachmaninov: 10 Preludes, Op. 23: No. 4 in D Major",
+      "artist": "Nikolai Lugansky",
+      "video_id": "IfjhdNIbV4s",
+      "youtube_url": "https://www.youtube.com/watch?v=IfjhdNIbV4s",
+      "track_duration_seconds": 276.56,
+      "album": "Rachmaninov : 10 Preludes Op.23",
+      "album_date": "2001-01-05",
+      "theme": {
+        "title": "라흐마니노프 · 전주곡 Op.23, No.4",
+        "label": "주제 · 서주 이후 최초 제시",
+        "formal_measures": "3–18마디",
+        "xml_measure_start": "3",
+        "xml_measure_end_inclusive": "18",
+        "source_title": "Yi-Hsuan Lee (2017), Table 1, p.11",
+        "source_url": "https://cardinalscholar.bsu.edu/bitstreams/24ba80d7-eea5-45f0-ad73-a99869d078b7/download",
+        "evidence": "형식표에서 서주 1–2, 주제 3–18, 제1변주 19–34를 구분한다. 서주를 제외한 주제 전체를 사용한다.",
+        "mapping_note": "MusicXML 번호와 문헌의 마디 번호가 일치한다.",
+        "annotation_status": "문헌 근거 + 해당 XML 마디 번호 대조",
+        "score_sha256": "4fe66c25d20a350f741fab14566f1c67078ad5681bdb436a6a4c305ccb666c95",
+        "score_path": "Sergei_Rachmaninoff/10_Preludes,_Op._23/No._4_in_D_Major/musicxml_cleaned.musicxml"
+      },
+      "q_start": 6.0,
+      "q_end": 54.0,
+      "start_seconds": 7.392,
+      "end_seconds": 62.47,
+      "time_mapping": {
+        "start_method": "aligned-note-onset",
+        "end_method": "aligned-note-onset",
+        "basis": "ATEPP MIDI clock, estimated score alignment",
+        "youtube_offset_seconds": 0,
+        "youtube_offset_verified": false,
+        "audio_listened_by_agent": false
+      },
+      "availability": {
+        "state": "previously_playable",
+        "checked_at_utc": "2026-10-30T11:41:04+00:00",
+        "full_playback_verified": false
+      },
+      "provenance": {
+        "score_sha256": "4fe66c25d20a350f741fab14566f1c67078ad5681bdb436a6a4c305ccb666c95",
+        "R_fingerprint": "5ecdc3d093af448e32ea5518b6257c04dc29b8253d06a8c64d0145f727839329",
+        "R_array_sha256": "07510b63efe1509477963ca7678b991bc72d8074840ac635ddbfef2ee609fd78",
+        "windows_sha256": "b9e6ec3683382508f10be742ea13338f59d5ad025730d200e8b099ede8fc0b92"
+      }
+    }
+  },
+  "id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135"
+}
