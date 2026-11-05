@@ -5,6 +5,11 @@
 
 | 폴더 | 분석 주제 | 시작 문서 |
 |---|---|---|
+| `ae_theme_listening/` | 최종 AE의 다른 작품 최근접 + 같은 작품의 먼 연주, A/X/Y 청취 선택과 임베딩 일치·반대 비교 | [주제 구간 청취](ae_theme_listening/README.md) · [실행 방법](../tools/ae_theme_listening/README.md) |
+| `note_ae_checkpoint_cases/` | epoch 8 AE의 동일 작품·연주자 중복 제거·다른 작품 검색·연주자/작곡가/시대 비교 그림과 재현 자료 | [단일 기준 연주 사례](note_ae_checkpoint_cases/README.md) |
+| `note_ae_performance_mean_baseline/` | 각 연주 전체의 채널별 평균을 출력하는 baseline과 학습 중 AE validation 비교 | [연주별 평균 baseline](note_ae_performance_mean_baseline/README.md) |
+| `note_ae_full_corpus_reconstruction/` | 검증 통과 254작품·2,801연주 전체 입력의 복원 AE 학습·평가 상태 | [전체 데이터 실행 현황](note_ae_full_corpus_reconstruction/README.md) |
+| `note_ae_plateau_multiseed/` | 고정 LR과 validation plateau scheduler의 3 seed 전체 순회 비교 | [학습률 비교 결과](note_ae_plateau_multiseed/README.md) |
 | `note_ae_full_reconstruction/` | 복원 전용 AE의 전체 train 순회·validation 조기 종료·평균값 baseline 대비 평가 | [전체 순회 학습 결과](note_ae_full_reconstruction/README.md) |
 | `atepp_pre_ae_validation/` | ATEPP 원본·악보 연결·R/scaler·AE 입력 배치와 g/Triplet 검증 | [앞단 전수 검증](atepp_pre_ae_validation/README.md) |
 | `performance_autoencoder_plan/` | 조건부 AE의 악보 S 추출·ATEPP 캐시 연결·위치별 ScoreEncoder | [구현 안내](performance_autoencoder_plan/README.md) |

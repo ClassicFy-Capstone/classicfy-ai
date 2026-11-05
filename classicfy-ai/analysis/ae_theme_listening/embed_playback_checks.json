@@ -1,0 +1,797 @@
+{
+  "schema": "ae-theme-embed-playback-checks-v1",
+  "checked_on": "2026-11-04",
+  "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+  "method": "official YouTube IFrame API in isolated, muted headless Chrome; actual state=1 observed before pause",
+  "user_browser_opened": false,
+  "profile_isolated": true,
+  "human_listening_completed": false,
+  "theme_boundaries_audio_verified": false,
+  "watch_metadata_embed_flag_not_sufficient": true,
+  "counts": {
+    "checked": 30,
+    "playing": 30,
+    "error_150": 0
+  },
+  "checks": {
+    "JuFd49TCYdE": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "l8vZR_hSU1A": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "BD2nJNAKB4c": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "V4bTHofOXgE": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "C1oP4icUG0s": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "Nx4gw4IJOrY": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "lm5fOANENKs": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "nwtrcTwdArQ": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "G1okliOhemQ": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "SxBuvv39mLM": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "gndLtJe9CqI": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "nVUZ0YUVV-I": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "wg4KhOqy5NM": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "Aqsw017ucBw": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "LCjWh1jykt0": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "D_2uSkZWhwk": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "wSdDXcksHfk": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "W25BznCnpHA": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "OMSkDS7Q3lk": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "KBRP2exRXjA": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "5U-SCt8XP5c": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "yDWmtFwi7uk": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "ys_9ntWJolA": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "pP2YCmYpRQk": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "uK1WYCwqJpk": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "ob37uotmHf4": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "8Kz_rgjWZ58": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "T3ea7k_rgLM": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "jbDrf8N_guI": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "uw8laPS8LNA": {
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    }
+  },
+  "scope": "Anonymous isolated muted Chrome from this network at http://localhost:8766; state=1 observed for all 30 resolved sources. Previous http://127.0.0.1:8766 results are retained separately. YouTube internal hostname policy is unknown; no upload identities, model selection or distances changed.",
+  "previous_ip_origin_check": {
+    "counts": {
+      "checked": 30,
+      "playing": 1,
+      "error_150": 29
+    },
+    "checks": {
+      "JuFd49TCYdE": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "l8vZR_hSU1A": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "BD2nJNAKB4c": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "V4bTHofOXgE": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "C1oP4icUG0s": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "Nx4gw4IJOrY": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "lm5fOANENKs": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "nwtrcTwdArQ": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "G1okliOhemQ": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "SxBuvv39mLM": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "gndLtJe9CqI": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "nVUZ0YUVV-I": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "wg4KhOqy5NM": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "Aqsw017ucBw": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "LCjWh1jykt0": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "D_2uSkZWhwk": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "wSdDXcksHfk": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "W25BznCnpHA": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "OMSkDS7Q3lk": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "KBRP2exRXjA": {
+        "ready": true,
+        "states": [
+          -1,
+          3,
+          -1,
+          1,
+          2
+        ],
+        "error": null,
+        "advanced": true
+      },
+      "5U-SCt8XP5c": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "yDWmtFwi7uk": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "ys_9ntWJolA": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "pP2YCmYpRQk": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "uK1WYCwqJpk": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      },
+      "ob37uotmHf4": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "8Kz_rgjWZ58": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "T3ea7k_rgLM": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "jbDrf8N_guI": {
+        "ready": true,
+        "states": [],
+        "error": 150,
+        "advanced": false
+      },
+      "uw8laPS8LNA": {
+        "ready": true,
+        "states": [
+          3
+        ],
+        "error": 150,
+        "advanced": false
+      }
+    },
+    "control_video": {
+      "video_id": "M7lc1UVf-VE",
+      "ready": true,
+      "states": [
+        -1,
+        3,
+        -1,
+        1,
+        2
+      ],
+      "error": null,
+      "advanced": true
+    },
+    "scope": "Anonymous temporary browser profile on this network, with local HTTP origin and default cross-origin Referer. Playback can vary by time, browser, account and region. No performance identities or embedding rankings changed."
+  },
+  "origin": "http://localhost:8766",
+  "recheck_after_initial_timeouts": [
+    "wSdDXcksHfk",
+    "W25BznCnpHA",
+    "pP2YCmYpRQk"
+  ],
+  "origin_comparison": {
+    "checked_on": "2026-11-04",
+    "headless": true,
+    "muted": true,
+    "profile_isolated": true,
+    "no_identity_or_referer_spoofing": true,
+    "variants": {
+      "127-default-range": {
+        "configuration": {
+          "name": "127-default-range",
+          "url": "http://127.0.0.1:8766/?qa=1",
+          "id": "BD2nJNAKB4c",
+          "controls": 0,
+          "host": "https://www.youtube.com",
+          "range": true
+        },
+        "embed_requests": [
+          {
+            "host": "www.youtube.com",
+            "referer": "http://127.0.0.1:8766/"
+          }
+        ],
+        "player_responses": [
+          {
+            "status": "UNPLAYABLE",
+            "reason": "이 동영상은 볼 수 없습니다.",
+            "screen_reason": "",
+            "subreason": ""
+          }
+        ],
+        "iframe_error_texts": [
+          "이 동영상은 볼 수 없습니다."
+        ],
+        "result": {
+          "api_ready": true,
+          "ready": true,
+          "states": [
+            3,
+            -1
+          ],
+          "error": 150,
+          "playing": false
+        }
+      },
+      "localhost-default-range": {
+        "configuration": {
+          "name": "localhost-default-range",
+          "url": "http://localhost:8766/?qa=1",
+          "id": "BD2nJNAKB4c",
+          "controls": 0,
+          "host": "https://www.youtube.com",
+          "range": true
+        },
+        "embed_requests": [
+          {
+            "host": "www.youtube.com",
+            "referer": "http://localhost:8766/"
+          }
+        ],
+        "player_responses": [
+          {
+            "status": "OK",
+            "reason": "",
+            "playableInEmbed": true,
+            "screen_reason": "",
+            "subreason": ""
+          }
+        ],
+        "iframe_error_texts": [],
+        "result": {
+          "api_ready": true,
+          "ready": true,
+          "states": [
+            -1,
+            3,
+            -1,
+            1,
+            2
+          ],
+          "error": null,
+          "playing": true
+        }
+      },
+      "127-standard-full-video": {
+        "configuration": {
+          "name": "127-standard-full-video",
+          "url": "http://127.0.0.1:8766/?qa=1",
+          "id": "BD2nJNAKB4c",
+          "controls": 1,
+          "host": "https://www.youtube.com",
+          "range": false
+        },
+        "embed_requests": [
+          {
+            "host": "www.youtube.com",
+            "referer": "http://127.0.0.1:8766/"
+          }
+        ],
+        "player_responses": [],
+        "iframe_error_texts": [
+          "이 동영상은 볼 수 없습니다."
+        ],
+        "result": {
+          "api_ready": true,
+          "ready": true,
+          "states": [],
+          "error": 150,
+          "playing": false
+        }
+      },
+      "127-official-privacy-mode": {
+        "configuration": {
+          "name": "127-official-privacy-mode",
+          "url": "http://127.0.0.1:8766/?qa=1",
+          "id": "BD2nJNAKB4c",
+          "controls": 0,
+          "host": "https://www.youtube-nocookie.com",
+          "range": true
+        },
+        "embed_requests": [
+          {
+            "host": "www.youtube-nocookie.com",
+            "referer": "http://127.0.0.1:8766/"
+          }
+        ],
+        "player_responses": [],
+        "iframe_error_texts": [],
+        "result": {
+          "api_ready": true,
+          "ready": true,
+          "states": [
+            3
+          ],
+          "error": 150,
+          "playing": false
+        }
+      },
+      "127-playing-recording-control": {
+        "configuration": {
+          "name": "127-playing-recording-control",
+          "url": "http://127.0.0.1:8766/?qa=1",
+          "id": "KBRP2exRXjA",
+          "controls": 0,
+          "host": "https://www.youtube.com",
+          "range": true
+        },
+        "embed_requests": [
+          {
+            "host": "www.youtube.com",
+            "referer": "http://127.0.0.1:8766/"
+          }
+        ],
+        "player_responses": [
+          {
+            "status": "OK",
+            "reason": "",
+            "playableInEmbed": true,
+            "screen_reason": "",
+            "subreason": ""
+          }
+        ],
+        "iframe_error_texts": [],
+        "result": {
+          "api_ready": true,
+          "ready": true,
+          "states": [
+            -1,
+            3,
+            -1,
+            1,
+            2
+          ],
+          "error": null,
+          "playing": true
+        }
+      }
+    }
+  }
+}

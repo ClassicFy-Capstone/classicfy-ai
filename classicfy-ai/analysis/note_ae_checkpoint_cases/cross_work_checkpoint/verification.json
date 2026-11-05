@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "all_67542_windows_used_once_in_2801_recordings": true,
+  "all_2779_distances_independently_recomputed": true,
+  "global_ranks_and_true_group_minima_verified": true,
+  "unit_pooled_embeddings": true,
+  "provisional_profile_counts": [
+    8,
+    4
+  ],
+  "eligible_cross_era_feature_rank": [
+    2074,
+    2085
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "ae-theme-listening-source-replacements-v1",
+  "checked_on": "2026-11-04",
+  "scope": "Playback URLs only; frozen embeddings, selected performances, pack ID and saved X/Y mappings remain unchanged.",
+  "replacements": [
+    {
+      "performance_id": "ATEPP:00461",
+      "original_video_id": "0QIgscF9ezY",
+      "original_status": "unavailable on the original watch page; observed in Safari and reported by the user in Chrome",
+      "replacement_video_id": "V4bTHofOXgE",
+      "replacement_url": "https://www.youtube.com/watch?v=V4bTHofOXgE",
+      "recording_identity_basis": {
+        "artist": "Vladimir Ashkenazy",
+        "track": "Scriabin: 12 Etudes, Op. 8: No. 11 in B-Flat Minor",
+        "album": "Scriabin: Vers la Flamme",
+        "copyright": "2015 Decca Music Group Limited",
+        "provider": "Universal Music Group",
+        "producer": "Jeremy Hayes",
+        "engineer": "Ben Connellan",
+        "metadata_duration_seconds": 253.348,
+        "replacement_player_duration_seconds": 253,
+        "official_album_url": "https://www.deccaclassics.com/en/catalogue/products/ashkenazy-scriabin-vers-la-flamme-11087"
+      },
+      "browser_check": {
+        "browser": "Safari",
+        "pause_control_and_progress_observed": true,
+        "observed_timeline_seconds": 3,
+        "paused_at_seconds": 40,
+        "public_watch_page_playability_status": "OK"
+      },
+      "waveform_identity_verified": false,
+      "theme_boundary_audio_verified": false,
+      "youtube_offset_verified": false,
+      "offset_seconds_assumed": 0,
+      "implementation": "tools/ae_theme_listening/study.js sourceReplacements; data.js retains the original corpus metadata URL for provenance."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "rachmaninoff-moonlight",
+  "near_clip": "91e029cd2b5588e9",
+  "far_clip": "7da6326341ae5d35",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 39,
+  "recordings": {
+    "a74206e097a47e72": {
+      "performance_id": "ATEPP:00242",
+      "artist": "Nikolai Lugansky",
+      "title": "Rachmaninov: 10 Preludes, Op. 23: No. 4 in D Major",
+      "album": "Rachmaninov : 10 Preludes Op.23",
+      "album_date": "2001-01-05"
+    },
+    "91e029cd2b5588e9": {
+      "performance_id": "ATEPP:08976",
+      "artist": "Nikolai Lugansky",
+      "title": "Piano Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 \"Moonlight\": I. Adagio sostenuto",
+      "album": "Beethoven: Piano Sonatas Nos. 14, 17 & 23",
+      "album_date": "2022-02-11"
+    },
+    "7da6326341ae5d35": {
+      "performance_id": "ATEPP:08971",
+      "artist": "Wilhelm Kempff",
+      "title": "Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 'Mondschein': I. Adagio sostenuto",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "91e029cd2b5588e9",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.21723425392808815,
+      "same_artist_as_anchor": true
+    },
+    {
+      "clip": "7da6326341ae5d35",
+      "role": "far",
+      "global_rank": 685,
+      "cosine_distance_to_anchor": 0.4693386905303374,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

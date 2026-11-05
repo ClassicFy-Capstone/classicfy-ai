@@ -1,0 +1,92 @@
+{
+  "epoch": 13,
+  "status": "interim; AE training continues; no AE test evaluation",
+  "validation": {
+    "loss": 0.12839481629521013,
+    "windows": 6474,
+    "skipped_windows": 0,
+    "groups": {
+      "tempo": {
+        "loss": 0.023997514841546976,
+        "valid_windows": 6474
+      },
+      "onset": {
+        "loss": 0.058316896791844076,
+        "valid_windows": 6474
+      },
+      "velocity": {
+        "loss": 0.12026752186734845,
+        "valid_windows": 6474
+      },
+      "articulation": {
+        "loss": 0.20764460370685717,
+        "valid_windows": 6474
+      },
+      "pedal": {
+        "loss": 0.231747550216029,
+        "valid_windows": 6474
+      }
+    },
+    "channel_counts": [
+      131286,
+      725005,
+      725841,
+      724549,
+      724403,
+      724751,
+      724403,
+      723615,
+      724509,
+      723747,
+      704028
+    ],
+    "mean_tempo_auxiliary": null,
+    "status": "evaluated",
+    "z_norm_mean": 2.1698994636535645,
+    "embedding_variance": 0.06133405491709709
+  },
+  "train": {
+    "loss": 0.13241397295363752,
+    "windows": 51638,
+    "skipped_windows": 0,
+    "groups": {
+      "tempo": {
+        "loss": 0.026798158299394966,
+        "valid_windows": 51637
+      },
+      "onset": {
+        "loss": 0.12103346995519493,
+        "valid_windows": 51637
+      },
+      "velocity": {
+        "loss": 0.08472465261897201,
+        "valid_windows": 51638
+      },
+      "articulation": {
+        "loss": 0.1796975081597244,
+        "valid_windows": 51637
+      },
+      "pedal": {
+        "loss": 0.24989205936608153,
+        "valid_windows": 51615
+      }
+    },
+    "channel_counts": [
+      1227785,
+      5811236,
+      5822099,
+      5808553,
+      5804861,
+      5807194,
+      5804861,
+      5794112,
+      5805353,
+      5795298,
+      5669348
+    ],
+    "mean_tempo_auxiliary": null,
+    "status": "evaluated",
+    "z_norm_mean": 2.0490221977233887,
+    "embedding_variance": 0.06514181941747665
+  }
+}

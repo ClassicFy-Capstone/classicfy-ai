@@ -1,0 +1,239 @@
+{
+  "schema": "ae-theme-choice-ui-verification-v2",
+  "browser": "Safari",
+  "normal_mode": {
+    "initial_roles_and_distances_hidden": true,
+    "three_cards_A_X_Y": true,
+    "no_listener_answers_entered": true,
+    "original_watch_buttons_displayed": true,
+    "broken_embedded_players_removed": true,
+    "second_case_link_resolves_to_official_replacement": true,
+    "replacement_removes_unavailable_source_warning": true
+  },
+  "qa_mode": {
+    "storage_isolated": true,
+    "synthetic_answer_only": true,
+    "choice_enables_submit": true,
+    "choice_locked_after_submit": true,
+    "embedding_opposite_result_displayed": true,
+    "comparison_table_displayed": true,
+    "summary_excludes_unanswered_cases": true,
+    "unavailable_source_warning_displayed": true,
+    "unavailable_case_choice_alone_cannot_submit": true,
+    "all_three_synthetic_listen_confirmations_enable_submit": true,
+    "removing_one_listen_confirmation_disables_submit": true,
+    "second_case_no_response_submitted": true,
+    "unavailable_guard_checked_before_replacement": true
+  },
+  "automated_checks": {
+    "python_tests_passed": 18,
+    "node_tests_passed": 17,
+    "app_and_study_javascript_syntax_passed": true,
+    "embedded_player_unit_tests_passed": 6,
+    "canonical_origin_server_tests_passed": 6
+  },
+  "human_listening_completed": false,
+  "youtube_embed_limit_observed": 150,
+  "youtube_offset_verified": false,
+  "source_playback_check": {
+    "checked_on": "2026-11-04",
+    "browser": "Safari",
+    "method": "Original YouTube watch-page player controls and timeline observed through native accessibility UI; paused after checking.",
+    "embed_replaced_by_original_watch_links": true,
+    "automatic_excerpt_end": false,
+    "videos": {
+      "BD2nJNAKB4c": {
+        "status": "playing",
+        "observed_timeline_seconds": 7,
+        "duration_seconds": 312
+      },
+      "l8vZR_hSU1A": {
+        "status": "playing",
+        "observed_timeline_seconds": 2,
+        "duration_seconds": 347
+      },
+      "JuFd49TCYdE": {
+        "status": "playing",
+        "observed_timeline_seconds": 1,
+        "duration_seconds": 283
+      },
+      "Nx4gw4IJOrY": {
+        "status": "playing",
+        "observed_timeline_seconds": 11,
+        "duration_seconds": 336
+      },
+      "C1oP4icUG0s": {
+        "status": "playing",
+        "observed_timeline_seconds": 0,
+        "duration_seconds": 248
+      },
+      "0QIgscF9ezY": {
+        "status": "unavailable",
+        "observed_message": "동영상을 재생할 수 없음 / 동영상을 볼 수 없습니다."
+      },
+      "V4bTHofOXgE": {
+        "status": "playing",
+        "observed_timeline_seconds": 3,
+        "paused_at_seconds": 40,
+        "duration_seconds": 253,
+        "replacement_for": "0QIgscF9ezY"
+      }
+    },
+    "first_case_all_three_sources_playing": true,
+    "second_case_one_source_unavailable": false,
+    "same_model_selected_recordings_preserved": true,
+    "second_case_original_source_unavailable": true,
+    "second_case_official_album_track_replacement_playing": true,
+    "replacement_evidence": "source_replacements.json",
+    "selection_and_result_unchanged_after_source_replacement": true
+  },
+  "previous_browser_verification_scope": "Earlier two-question pack only; additional eight questions were checked without opening browser UI.",
+  "ten_question_extension": {
+    "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+    "questions": 10,
+    "recordings": 25,
+    "playback_urls_background_passed": 25,
+    "check_method": "public-watch-player-audio-v1",
+    "browser_ui_opened": false,
+    "audio_listened": false,
+    "theme_boundaries_audio_verified": false,
+    "saved_response_migration_unit_tested": true,
+    "legacy_browser_storage_overwritten": false,
+    "scope": "Previous repetitive ten-question pack, retained as verification history."
+  },
+  "diverse_ten_question_revision": {
+    "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+    "questions": 10,
+    "unique_question_works": 20,
+    "maximum_questions_per_work": 1,
+    "recordings": 30,
+    "unique_recording_hashes": 30,
+    "composers": 12,
+    "playback_urls_background_passed": 30,
+    "check_method": "public-watch-player-audio-v1",
+    "browser_ui_opened": false,
+    "audio_listened": false,
+    "theme_boundaries_audio_verified": false,
+    "unchanged_first_two_questions_retained": true,
+    "unchanged_answer_migration_unit_tested": true,
+    "replaced_question_answers_archived_unit_tested": true,
+    "archived_answers_excluded_from_active_score": true,
+    "legacy_browser_storage_overwritten": false
+  },
+  "loop_and_time_concealment_revision": {
+    "checked_on": "2026-11-04",
+    "headless": true,
+    "profile_isolated": true,
+    "audio_muted": true,
+    "user_browser_opened": false,
+    "real_youtube_playback_tested": false,
+    "app": {
+      "time_numbers_hidden_before_choice": true,
+      "loop_and_concealment_in_all_links": true,
+      "manual_time_exposure_recorded": true,
+      "times_shown_after_choice": true,
+      "synthetic_response_in_isolated_qa_storage_only": true
+    },
+    "synthetic_player": {
+      "network_requests_fulfilled_locally": 3,
+      "actual_audio_loop_rewinds": 3,
+      "time_and_progress_hidden": true,
+      "panel_time_numbers_hidden": true,
+      "manual_pause_preserved": true,
+      "repeat_off_releases_playhead": true,
+      "navigation_removes_loop_and_time_mask": true
+    },
+    "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+    "extension_installation_tested": false,
+    "superseded": true,
+    "superseded_reason": "User requested no extension. Extension source and download removed; replaced by official embed controls."
+  },
+  "current_playback": "Official bounded YouTube embeds at http://localhost:8766; all 30 resolved sources observed playing. Legacy IP entry migrates this app response storage non-destructively.",
+  "embedded_player_revision": {
+    "checked_on": "2026-11-04",
+    "headless": true,
+    "profile_isolated": true,
+    "audio_muted": true,
+    "user_browser_opened": false,
+    "extension_required": false,
+    "qa_storage_only": true,
+    "app": {
+      "time_hidden_before_choice": true,
+      "no_extension_download": true,
+      "embedded_buttons_present": true,
+      "player_minimum_size_met": true,
+      "embedded_controls_hidden": true,
+      "repeat_at_end": true,
+      "one_player_at_a_time": true,
+      "range_edit_applied": true,
+      "time_exposure_recorded": true,
+      "times_shown_after_choice": true,
+      "navigation_destroys_old_players": true
+    },
+    "live_youtube": {
+      "video_id": "KBRP2exRXjA",
+      "real_official_iframe_api": true,
+      "muted": true,
+      "loop_restarts_observed": 2,
+      "automatic_stop_without_repeat": true,
+      "excerpt_for_test_only": [
+        1,
+        2.5
+      ],
+      "formal_theme_boundaries_audio_verified": false
+    },
+    "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+    "full_pack_embed_check": "embed_playback_checks.json",
+    "embed_playing_recordings": 1,
+    "embed_error_150_recordings": 29,
+    "verification_origin": "http://127.0.0.1:8766",
+    "superseded_by": "canonical_origin_revision"
+  },
+  "canonical_origin_revision": {
+    "checked_on": "2026-11-04",
+    "headless": true,
+    "profile_isolated": true,
+    "audio_muted": true,
+    "user_browser_opened": false,
+    "extension_required": false,
+    "qa_storage_only": true,
+    "origin_migration": {
+      "automatic_canonical_navigation": true,
+      "old_response_preserved": true,
+      "existing_answered_canonical_pack_preserved": true,
+      "collision_copies_archived": true,
+      "unrelated_keys_not_transferred": true,
+      "original_storage_not_deleted": true
+    },
+    "app": {
+      "time_hidden_before_choice": true,
+      "no_extension_download": true,
+      "embedded_buttons_present": true,
+      "player_minimum_size_met": true,
+      "embedded_controls_hidden": true,
+      "repeat_at_end": true,
+      "one_player_at_a_time": true,
+      "range_edit_applied": true,
+      "time_exposure_recorded": true,
+      "times_shown_after_choice": true,
+      "navigation_destroys_old_players": true
+    },
+    "live_youtube": {
+      "video_id": "KBRP2exRXjA",
+      "real_official_iframe_api": true,
+      "muted": true,
+      "loop_restarts_observed": 2,
+      "automatic_stop_without_repeat": true,
+      "excerpt_for_test_only": [
+        1,
+        2.5
+      ],
+      "formal_theme_boundaries_audio_verified": false
+    },
+    "origin": "http://localhost:8766",
+    "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+    "embed_playing_recordings": 30,
+    "embed_error_150_recordings": 0,
+    "full_pack_embed_check": "embed_playback_checks.json"
+  }
+}

@@ -1,0 +1,919 @@
+{
+  "preferred": "baseline",
+  "validation_loss": {
+    "baseline": {
+      "mean": 0.24243847458135515,
+      "sample_std": 0.029456688794949868,
+      "values": [
+        0.23329164300646102,
+        0.2753834979874747,
+        0.2186402827501297
+      ]
+    },
+    "plateau": {
+      "mean": 0.26772874286250464,
+      "sample_std": 0.03849742437680077,
+      "values": [
+        0.2802087465922038,
+        0.29843787919907344,
+        0.22453960279623666
+      ]
+    }
+  },
+  "paired_plateau_minus_baseline": {
+    "mean": 0.025290268281149497,
+    "sample_std": 0.02060009793343087,
+    "values": [
+      0.046917103585742775,
+      0.02305438121159875,
+      0.005899320046106965
+    ]
+  },
+  "plateau_seed_wins": 0,
+  "baseline_2026_last_weights_match_prior": true,
+  "paired_losses_match_before_first_lr_change": true,
+  "runs": [
+    {
+      "arm": "baseline",
+      "seed": 2026,
+      "selected_epoch": 37,
+      "completed_epoch": 52,
+      "stop_reason": "validation_early_stopping",
+      "selected_validation": {
+        "loss": 0.23329164300646102,
+        "windows": 21,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.1394187424864088,
+            "valid_windows": 21
+          },
+          "onset": {
+            "loss": 0.18785031281766437,
+            "valid_windows": 21
+          },
+          "velocity": {
+            "loss": 0.1388366115944726,
+            "valid_windows": 21
+          },
+          "articulation": {
+            "loss": 0.3313785195350647,
+            "valid_windows": 21
+          },
+          "pedal": {
+            "loss": 0.36897406975428265,
+            "valid_windows": 21
+          }
+        },
+        "channel_counts": [
+          845,
+          3399,
+          3401,
+          3388,
+          3253,
+          3262,
+          3253,
+          3251,
+          3248,
+          3246,
+          3362
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 3.267573833465576,
+        "embedding_variance": 0.062020640820264816
+      },
+      "selected_full_train": {
+        "loss": 0.1504172922634497,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.01283515434394159,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.1429132061397157,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.10628289711184619,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.2141455361028997,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.2759096600660464,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.4350810050964355,
+        "embedding_variance": 0.09598439186811447
+      },
+      "last_full_train": {
+        "loss": 0.1389259612414895,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.012300644910371885,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.13193817945515238,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.09498584924674616,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.19436593826224163,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.26103919926213054,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.8854992389678955,
+        "embedding_variance": 0.13864092528820038
+      },
+      "best_checkpoint": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/plateau_multiseed/run01/baseline/2026/training/best.pt",
+      "checkpoint_sha256": "4ea10599bb502277a25d8c2f048d4c29ad610c3026a35340a3e842e5fd6b484c",
+      "lr_reductions": [],
+      "last_lr": 0.001,
+      "every_epoch_complete": true,
+      "seconds": 269.39692808300003
+    },
+    {
+      "arm": "baseline",
+      "seed": 2027,
+      "selected_epoch": 25,
+      "completed_epoch": 40,
+      "stop_reason": "validation_early_stopping",
+      "selected_validation": {
+        "loss": 0.2753834979874747,
+        "windows": 21,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.30415279666582745,
+            "valid_windows": 21
+          },
+          "onset": {
+            "loss": 0.18494009049165816,
+            "valid_windows": 21
+          },
+          "velocity": {
+            "loss": 0.1945153914746784,
+            "valid_windows": 21
+          },
+          "articulation": {
+            "loss": 0.3524715630781083,
+            "valid_windows": 21
+          },
+          "pedal": {
+            "loss": 0.34083763261636096,
+            "valid_windows": 21
+          }
+        },
+        "channel_counts": [
+          845,
+          3399,
+          3401,
+          3388,
+          3253,
+          3262,
+          3253,
+          3251,
+          3248,
+          3246,
+          3362
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.994276285171509,
+        "embedding_variance": 0.05458831787109375
+      },
+      "selected_full_train": {
+        "loss": 0.17669870177420174,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.03403454192164468,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.14792908092097537,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.13788390486705593,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.26759312647144967,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.29605286659263985,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 1.9728742837905884,
+        "embedding_variance": 0.05418110638856888
+      },
+      "last_full_train": {
+        "loss": 0.1489254850439909,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.014027913657539502,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.13838553664887823,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.11001496562143652,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.20896073776047405,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.27323826893073755,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.6511802673339844,
+        "embedding_variance": 0.10503503680229187
+      },
+      "best_checkpoint": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/plateau_multiseed/run01/baseline/2027/training/best.pt",
+      "checkpoint_sha256": "3d264964bbbaa9b07e1be76e3a0b49d4aefb209739461f200d61910ccec073f6",
+      "lr_reductions": [],
+      "last_lr": 0.001,
+      "every_epoch_complete": true,
+      "seconds": 206.75487066699998
+    },
+    {
+      "arm": "baseline",
+      "seed": 2028,
+      "selected_epoch": 38,
+      "completed_epoch": 53,
+      "stop_reason": "validation_early_stopping",
+      "selected_validation": {
+        "loss": 0.2186402827501297,
+        "windows": 21,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.08564264007977077,
+            "valid_windows": 21
+          },
+          "onset": {
+            "loss": 0.18613803244772412,
+            "valid_windows": 21
+          },
+          "velocity": {
+            "loss": 0.1609101848942893,
+            "valid_windows": 21
+          },
+          "articulation": {
+            "loss": 0.30334590446381343,
+            "valid_windows": 21
+          },
+          "pedal": {
+            "loss": 0.35716462561062406,
+            "valid_windows": 21
+          }
+        },
+        "channel_counts": [
+          845,
+          3399,
+          3401,
+          3388,
+          3253,
+          3262,
+          3253,
+          3251,
+          3248,
+          3246,
+          3362
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 3.258132219314575,
+        "embedding_variance": 0.0793837457895279
+      },
+      "selected_full_train": {
+        "loss": 0.15205551720247035,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.02158610395542005,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.14006253168350313,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.11503885904463326,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.20820290213677942,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.2753871882834086,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.4483096599578857,
+        "embedding_variance": 0.0980072170495987
+      },
+      "last_full_train": {
+        "loss": 0.13654625052359046,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.013253645903271874,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.13116178080076124,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.09232385729144259,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.18922060364630164,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.256771363136245,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 3.1943483352661133,
+        "embedding_variance": 0.16483967006206512
+      },
+      "best_checkpoint": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/plateau_multiseed/run01/baseline/2028/training/best.pt",
+      "checkpoint_sha256": "2c4668b07fc2b23c1b12763a8fa6de248e8de8baf1b1c4d9976e8ee6af6f49e5",
+      "lr_reductions": [],
+      "last_lr": 0.001,
+      "every_epoch_complete": true,
+      "seconds": 252.99799437500008
+    },
+    {
+      "arm": "plateau",
+      "seed": 2026,
+      "selected_epoch": 7,
+      "completed_epoch": 22,
+      "stop_reason": "validation_early_stopping",
+      "selected_validation": {
+        "loss": 0.2802087465922038,
+        "windows": 21,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.18978897020930335,
+            "valid_windows": 21
+          },
+          "onset": {
+            "loss": 0.19124963595753625,
+            "valid_windows": 21
+          },
+          "velocity": {
+            "loss": 0.18837529988515944,
+            "valid_windows": 21
+          },
+          "articulation": {
+            "loss": 0.4328972924323309,
+            "valid_windows": 21
+          },
+          "pedal": {
+            "loss": 0.39873251744679045,
+            "valid_windows": 21
+          }
+        },
+        "channel_counts": [
+          845,
+          3399,
+          3401,
+          3388,
+          3253,
+          3262,
+          3253,
+          3251,
+          3248,
+          3246,
+          3362
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.5268795490264893,
+        "embedding_variance": 0.018446773290634155
+      },
+      "selected_full_train": {
+        "loss": 0.2134451695331713,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.02404507901519537,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.1551173249395882,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.20753475405820987,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.33589678130498746,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.34463191468541216,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 1.6205289363861084,
+        "embedding_variance": 0.0470246784389019
+      },
+      "last_full_train": {
+        "loss": 0.17164473417328624,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.014640591538897374,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.14975701018077572,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.11812458241858133,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.2777994231479924,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.29790207525578943,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 1.8324570655822754,
+        "embedding_variance": 0.057497307658195496
+      },
+      "best_checkpoint": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/plateau_multiseed/run01/plateau/2026/training/best.pt",
+      "checkpoint_sha256": "83a660d49c91828e34083ff696410a1676c9c83ad74148a05ad374cf571aa250",
+      "lr_reductions": [
+        13,
+        19
+      ],
+      "last_lr": 0.00025,
+      "every_epoch_complete": true,
+      "seconds": 111.075471375
+    },
+    {
+      "arm": "plateau",
+      "seed": 2027,
+      "selected_epoch": 12,
+      "completed_epoch": 27,
+      "stop_reason": "validation_early_stopping",
+      "selected_validation": {
+        "loss": 0.29843787919907344,
+        "windows": 21,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.35351888764472233,
+            "valid_windows": 21
+          },
+          "onset": {
+            "loss": 0.1879198309921083,
+            "valid_windows": 21
+          },
+          "velocity": {
+            "loss": 0.18575226905800046,
+            "valid_windows": 21
+          },
+          "articulation": {
+            "loss": 0.4186999187583015,
+            "valid_windows": 21
+          },
+          "pedal": {
+            "loss": 0.34629849238055094,
+            "valid_windows": 21
+          }
+        },
+        "channel_counts": [
+          845,
+          3399,
+          3401,
+          3388,
+          3253,
+          3262,
+          3253,
+          3251,
+          3248,
+          3246,
+          3362
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.4654815196990967,
+        "embedding_variance": 0.049649693071842194
+      },
+      "selected_full_train": {
+        "loss": 0.19369238287937351,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.029873430501760508,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.1535646661025722,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.17432779182748095,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.30184562068159987,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.30885040687351695,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 1.5930390357971191,
+        "embedding_variance": 0.03905441612005234
+      },
+      "last_full_train": {
+        "loss": 0.16731139799443687,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.017550836567108225,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.1459855028405422,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.11841196512303702,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.2679857855162969,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.28662289424640375,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 1.8760197162628174,
+        "embedding_variance": 0.05145946890115738
+      },
+      "best_checkpoint": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/plateau_multiseed/run01/plateau/2027/training/best.pt",
+      "checkpoint_sha256": "560a9c1ada81820b9386c924816a2be9a3bb6c3fdec2c5707dd626c4d4e60dbc",
+      "lr_reductions": [
+        18,
+        24
+      ],
+      "last_lr": 0.00025,
+      "every_epoch_complete": true,
+      "seconds": 145.16667708399996
+    },
+    {
+      "arm": "plateau",
+      "seed": 2028,
+      "selected_epoch": 41,
+      "completed_epoch": 56,
+      "stop_reason": "validation_early_stopping",
+      "selected_validation": {
+        "loss": 0.22453960279623666,
+        "windows": 21,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.1120024813073022,
+            "valid_windows": 21
+          },
+          "onset": {
+            "loss": 0.186477583079111,
+            "valid_windows": 21
+          },
+          "velocity": {
+            "loss": 0.14380731681982675,
+            "valid_windows": 21
+          },
+          "articulation": {
+            "loss": 0.3195664229847136,
+            "valid_windows": 21
+          },
+          "pedal": {
+            "loss": 0.36084421333812533,
+            "valid_windows": 21
+          }
+        },
+        "channel_counts": [
+          845,
+          3399,
+          3401,
+          3388,
+          3253,
+          3262,
+          3253,
+          3251,
+          3248,
+          3246,
+          3362
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.936922073364258,
+        "embedding_variance": 0.07507624477148056
+      },
+      "selected_full_train": {
+        "loss": 0.14638966067535122,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.011035125112024749,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.13960823525742785,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.09915115066417833,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.20810964630871284,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.27404415534763804,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.658176898956299,
+        "embedding_variance": 0.11717789620161057
+      },
+      "last_full_train": {
+        "loss": 0.14155223311447515,
+        "windows": 82,
+        "skipped_windows": 0,
+        "groups": {
+          "tempo": {
+            "loss": 0.009798728043168056,
+            "valid_windows": 82
+          },
+          "onset": {
+            "loss": 0.1371537545105306,
+            "valid_windows": 82
+          },
+          "velocity": {
+            "loss": 0.09307067532364915,
+            "valid_windows": 82
+          },
+          "articulation": {
+            "loss": 0.1990169272190187,
+            "valid_windows": 82
+          },
+          "pedal": {
+            "loss": 0.26872107677343415,
+            "valid_windows": 82
+          }
+        },
+        "channel_counts": [
+          2252,
+          14359,
+          14359,
+          14359,
+          12974,
+          13012,
+          12974,
+          12974,
+          13012,
+          13012,
+          12579
+        ],
+        "mean_tempo_auxiliary": null,
+        "status": "evaluated",
+        "z_norm_mean": 2.9046504497528076,
+        "embedding_variance": 0.1390780210494995
+      },
+      "best_checkpoint": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/plateau_multiseed/run01/plateau/2028/training/best.pt",
+      "checkpoint_sha256": "4132508d97a41b564c7b3e37c15846cb5209a21e32949da1897746560784fc10",
+      "lr_reductions": [
+        24,
+        35,
+        47,
+        53
+      ],
+      "last_lr": 6.25e-05,
+      "every_epoch_complete": true,
+      "seconds": 258.33074391700006
+    }
+  ],
+  "test_used_for_selection": false
+}

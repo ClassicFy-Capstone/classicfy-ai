@@ -5,7 +5,7 @@ import math
 import torch
 from torch.nn import functional as F
 
-from .note_autoencoder import validate_padding
+from .note_autoencoder import beat_groups, validate_padding
 
 
 RECONSTRUCTION_GROUPS = ('tempo', 'onset', 'velocity', 'articulation', 'pedal')
@@ -48,47 +48,33 @@ def reconstruction_loss(prediction, target, M, P, beat_id, *, delta=1.):
     if not torch.isfinite(pred).all() or not torch.isfinite(truth).all():
         raise ValueError('Observed prediction/target must be finite')
     errors = F.huber_loss(pred, truth, reduction='none', delta=delta)
-    window_losses, group_losses, group_masks, counts = [], [], [], []
     zero = pred.sum() * 0.
-    for i in range(len(P)):
-        losses, flags = [], []
-        count = torch.zeros(11, dtype=torch.long, device=target.device)
-        beat_losses = []
-        for key in torch.unique(beat_id[i, valid[i, :, 0]]):
-            rows = valid[i, :, 0] & (beat_id[i] == key)
-            t, p = truth[i, rows, 0], pred[i, rows, 0]
-            if not torch.allclose(t, t[:1].expand_as(t), atol=1e-6, rtol=1e-6):
-                raise ValueError('Copied tempo targets disagree within one beat')
-            if not torch.allclose(p, p[:1].expand_as(p), atol=1e-6, rtol=1e-6):
-                raise ValueError('Tempo predictions must be shared within one beat')
-            beat_losses.append(F.huber_loss(p.mean(), t[0], delta=delta))
-        count[0] = len(beat_losses)
-        losses.append(torch.stack(beat_losses).mean() if beat_losses else zero)
-        flags.append(bool(beat_losses))
-        for k in (1, 2, 3):
-            count[k] = valid[i, :, k].sum()
-            ok = bool(count[k] > 0)
-            losses.append(errors[i, valid[i, :, k], k].mean() if ok else zero)
-            flags.append(ok)
-        pedal = []
-        for k in range(4, 11):
-            count[k] = valid[i, :, k].sum()
-            if count[k] > 0:
-                pedal.append(errors[i, valid[i, :, k], k].mean())
-        losses.append(torch.stack(pedal).mean() if pedal else zero)
-        flags.append(bool(pedal))
-        gs = torch.stack(losses)
-        gm = torch.tensor(flags, dtype=torch.bool, device=target.device)
-        group_losses.append(gs)
-        group_masks.append(gm)
-        counts.append(count)
-        window_losses.append(gs[gm].mean() if gm.any() else zero)
-    groups, masks = torch.stack(group_losses), torch.stack(group_masks)
+    counts = valid.sum(1)
+    channel_losses = errors.sum(1) / counts.clamp_min(1)
+    rows, keys, inverse, sizes = beat_groups(beat_id, valid[..., 0])
+    beat_count = torch.bincount(keys[:, 0], minlength=len(P))
+    tempo_loss = pred.new_zeros(len(P)) + zero
+    if len(keys):
+        t, p = truth[rows[:, 0], rows[:, 1], 0], pred[rows[:, 0], rows[:, 1], 0]
+        first = torch.full((len(keys),), len(rows), device=target.device, dtype=torch.long)
+        first.scatter_reduce_(0, inverse, torch.arange(len(rows), device=target.device), reduce='amin')
+        if not torch.allclose(t, t[first][inverse], atol=1e-6, rtol=1e-6):
+            raise ValueError('Copied tempo targets disagree within one beat')
+        if not torch.allclose(p, p[first][inverse], atol=1e-6, rtol=1e-6):
+            raise ValueError('Tempo predictions must be shared within one beat')
+        means = p.new_zeros(len(keys)).index_add(0, inverse, p) / sizes
+        beat_losses = F.huber_loss(means, t[first], reduction='none', delta=delta)
+        tempo_loss = tempo_loss.index_add(0, keys[:, 0], beat_losses) / beat_count.clamp_min(1)
+    counts[:, 0] = beat_count
+    pedal_mask = counts[:, 4:] > 0
+    pedal_loss = channel_losses[:, 4:].sum(-1) / pedal_mask.sum(-1).clamp_min(1)
+    groups = torch.cat([tempo_loss[:, None], channel_losses[:, 1:4], pedal_loss[:, None]], -1)
+    masks = torch.cat([(beat_count > 0)[:, None], counts[:, 1:4] > 0, pedal_mask.any(-1)[:, None]], -1)
     valid_windows = masks.any(-1)
-    windows = torch.stack(window_losses)
+    windows = groups.sum(-1) / masks.sum(-1).clamp_min(1)
     return {'loss': windows[valid_windows].mean() if valid_windows.any() else zero,
             'window_losses': windows, 'valid_windows': valid_windows,
-            'group_losses': groups, 'group_mask': masks, 'channel_counts': torch.stack(counts),
+            'group_losses': groups, 'group_mask': masks, 'channel_counts': counts,
             'skip': not bool(valid_windows.any()), 'skip_reason': None if valid_windows.any() else 'no_observed_reconstruction'}
 
 

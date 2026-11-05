@@ -1,0 +1,21 @@
+{
+  "date_kst": "2026-10-30",
+  "passed": true,
+  "tests": {
+    "command": "PYTHONPATH=classicfy-ai/src:classicfy-ai/tests .venv/bin/python -m unittest integration.test_note_ae_pipeline integration.test_note_ae_indexed_data",
+    "count": 33,
+    "result": "OK"
+  },
+  "rerender": {
+    "command": ".venv/bin/python classicfy-ai/scripts/render_note_ae_checkpoint_cases.py --out /tmp/classicfy-ae-cases",
+    "archive_sha256_checks": 41,
+    "raw_datasets_required": false,
+    "model_inference_or_training_run": false,
+    "PNG_pixel_equality": {
+      "same_work_checkpoint": true,
+      "same_work_checkpoint_unique_artists": true,
+      "cross_work_checkpoint": true,
+      "ae_metadata_comparison": true
+    }
+  }
+}

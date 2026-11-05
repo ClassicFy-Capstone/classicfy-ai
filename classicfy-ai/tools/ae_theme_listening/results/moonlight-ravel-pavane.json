@@ -1,0 +1,48 @@
+{
+  "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+  "case_id": "moonlight-ravel-pavane",
+  "near_clip": "51ae7cb6c16851ea",
+  "far_clip": "06830cb1f762c399",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 7,
+  "recordings": {
+    "7fc28f74bc738b6f": {
+      "performance_id": "ATEPP:08945",
+      "artist": "Daniel Barenboim",
+      "title": "Beethoven: Piano Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 \"Moonlight\": I. Adagio sostenuto",
+      "album": "Les Stars Du Classique : Daniel Barenboim",
+      "album_date": "2010-09-15"
+    },
+    "51ae7cb6c16851ea": {
+      "performance_id": "ATEPP:10685",
+      "artist": "Alice Sara Ott",
+      "title": "Pavane pour une infante défunte, M. 19",
+      "album": "Nightfall",
+      "album_date": "2018-08-24"
+    },
+    "06830cb1f762c399": {
+      "performance_id": "ATEPP:10680",
+      "artist": "Robert Casadesus",
+      "title": "Pavane pour une infante défunte, M. 19",
+      "album": "Masterworks Heritage: Ravel - Complete Solo Piano Music",
+      "album_date": "1947"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "51ae7cb6c16851ea",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.06958459313355991,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "06830cb1f762c399",
+      "role": "far",
+      "global_rank": 139,
+      "cosine_distance_to_anchor": 0.20725877942430038,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

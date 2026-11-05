@@ -1,0 +1,19 @@
+{
+  "model": {"mean_tempo_auxiliary": false},
+  "training": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "lambda_style": 0.0,
+    "beta_mean_tempo": 0.0,
+    "max_steps_per_epoch": 0,
+    "max_validation_batches": 0,
+    "early_stopping_patience": 15,
+    "early_stopping_min_delta": 0.0001,
+    "evaluate_train_each_epoch": true,
+    "bucket_by_length": true,
+    "device": "mps",
+    "torch_threads": 1,
+    "seed": 2026
+  }
+}
