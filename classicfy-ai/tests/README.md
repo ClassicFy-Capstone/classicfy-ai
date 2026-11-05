@@ -121,3 +121,7 @@ weighted ridge의 독립 최소제곱 일치, 절편 비규제, 학습-only 메�
 `unit/features/test_temporal_pair_explanations.py`는 평균·폭 두 조건과 퇴화 입력,
 전곡과 두 반쪽의 차이 방향 일치, 결측 support 거부 및 전곡 평균이 상쇄한 반쪽 차이를
 검증한다. 새4개 테스트가 통과했다. [실제 쌍의 추가 설명](../analysis/temporal_pair_explanations/README.md).
+
+## 악보 맥락 S/C의 첫 구현 검증
+
+`test_score_context.py` 9개, `test_score_encoder.py` 6개, `test_score_context_data.py` 14개와 `test_score_context_pipeline.py` 2개를 추가했다. 신규31개를 포함한 관련53개 테스트가 skip 없이 통과했다. 실제 ASAP968연주에서 R/mask/q 보존과 source score 연결을 확인하고, raw MIDI/Fraction의 독립7680개 산술을 대조했다. 실제 ATEPP 입력은 이 기기에 없어 native cache 형식은 합성 파일로 검증했다. 전체 suite/numba 정렬 engine 및 전체 AE 학습은 이번 범위 밖이다. [검증 결과](../analysis/score_context_validation/README.md)를 참조한다.

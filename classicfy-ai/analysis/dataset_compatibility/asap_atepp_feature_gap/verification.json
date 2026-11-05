@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checks": [
+    "1035 distinct source MIDI hashes; no duplicated performance",
+    "all raw grids have quarter-note step 1, increasing performance times and consistent masks",
+    "tempo is independently checked against 120-BPM quarter reference",
+    "Dynamics and pedal depth independently recalculated from source note/CC64 events in 36 sampled bins",
+    "Normalized quarter cache passes the existing seven-channel WindowDataset with 64-quarter windows",
+    "Held-out-work AUC independently recomputed by all cross-dataset score pairs; work stays in one fold",
+    "Raw/standardized classification uses exactly the same performances in each feature subset"
+  ],
+  "max_independent_dynamics_error": 0.0,
+  "max_independent_pedal_depth_error": 8.659739592076221e-15,
+  "normalized_sequences": 968,
+  "eligible_64_quarter_windows": 12889,
+  "sequences_with_eligible_windows": 767,
+  "caveat": "These checks verify conversion and arithmetic, not autoencoder transfer quality or causal attribution of dataset differences."
+}

@@ -11,6 +11,10 @@
 
 ## AI 분석 자료
 
+[ATEPP–ASAP 호환성 및 작업 인계](classicfy-ai/analysis/dataset_compatibility/README.md)는
+공통 작품·동일 MIDI 중복·특징 분포 차이와 4분음표 입력 변환 결과를 정리한다.
+다른 컴퓨터에서 이어서 작업할 때의 Git LFS 입력 캐시와 재현 절차도 포함한다.
+
 연주 feature의 그림·CSV·보고서는 [분석 목록](classicfy-ai/analysis/README.md)에서
 Tempo, Rubato, Dynamics·Pedaling, Articulation, 정규화 등의 주제별로 확인할 수 있다.
 
@@ -25,6 +29,12 @@ ATEPP DualDTW 데이터의 공통 패턴 제거·표준화·다섯 feature 시�
 
 [시계열 연주 임베딩](classicfy-ai/src/embedding/README.md)은 기존 beat별 feature를
 1D CNN으로 읽고, 숨긴 특징을 복원하는 자기지도 학습과 다른 작품 후보 검색을 제공한다.
+
+[8마디 연주 프로필과 Triplet 전처리](classicfy-ai/src/embedding/STYLE_TRIPLETS.md)는
+음표별 R에서 train 기준 잔차·23차원 프로필·작품 간 학습 관계를 생성한다.
+
+[음표별 조건부 시퀀스 AE](classicfy-ai/src/embedding/NOTE_AUTOENCODER.md)는
+8마디 S/R 입력의 복원과 고정 Triplet 거리 학습·검증·체크포인트·임베딩 추출을 제공한다.
 
 ## Server Architecture
 추후 이미지 업데이트

@@ -557,3 +557,7 @@ run은 더 길 수 있다. 해당 상태가 없으면 count 0 / 길이 통계 Na
 `insufficient_pairs` / `constant_pairs`를 반환하고, 유효하면 `ok`다.
 높은 r은 지속·드리프트로도 생기므로 음악적 반복이나 추천 성공을 뜻하지 않는다.
 전체 정의·그림·실제 결과는 [지속·반복 baseline](../../analysis/temporal_duration/README.md)에 있다.
+
+## 조건부 AE용 악보 입력
+
+`score_context.py`는 연주값과 독립적인 score MIDI의 quarter 위치에서 30D 특징을 계산한다. 같은 `q`의 연주와 연결할 수 있고, raw/고정 transform/선택적 train-only score scale을 구분한다. MIDI reader는 `preprocessing.score_midi`로 분리해 정렬 engine 없이 사용할 수 있다. API·채널·export·제약은 [구현 안내](../../analysis/performance_autoencoder_plan/README.md), 실제 데이터 검증은 [검증 결과](../../analysis/score_context_validation/README.md)를 참조한다.

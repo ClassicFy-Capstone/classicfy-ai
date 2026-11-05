@@ -1,0 +1,15 @@
+﻿table,key,included,rows,lines,group,beat_intervals,dynamics_mean,pedal_depth_mean,articulation_mean,flags
+dynamics_pedaling/performance_summary.csv,Beethoven/Piano_Sonatas/18-2/Schmitt01.mid,True,1,235,Beethoven/Piano_Sonatas/18-2,462,0.44875938022732176,0.09308251346607616,,short_beat_interval
+dynamics_pedaling/performance_summary.csv,Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid,True,1,237,Beethoven/Piano_Sonatas/18-2_no_repeat,340,0.44927992964526087,0.12648270947449172,,
+articulation/performance_summary.csv,Beethoven/Piano_Sonatas/18-2/Schmitt01.mid,True,1,235,Beethoven/Piano_Sonatas/18-2,462,,,-1.6891861803462775,low_beat_coverage
+articulation/performance_summary.csv,Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid,True,1,237,Beethoven/Piano_Sonatas/18-2_no_repeat,340,,,-1.680436406527916,
+feature_normalization/performance_summary.csv,Beethoven/Piano_Sonatas/18-2/Schmitt01.mid,False,0,,,,,,,
+feature_normalization/performance_summary.csv,Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid,True,5,206;1174;2142;3110;4074,Beethoven/Piano_Sonatas/18-2_no_repeat/midi_score.mid,340,,,,
+_embedding_validation/embeddings.csv,Beethoven/Piano_Sonatas/18-2/Schmitt01.mid,False,0,,,,,,,
+_embedding_validation/embeddings.csv,Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid,False,0,,,,,,,
+metadata_style_validation/performances.csv,Beethoven/Piano_Sonatas/18-2/Schmitt01.mid,False,0,,,,,,,
+metadata_style_validation/performances.csv,Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid,False,0,,,,,,,
+tempo/performance_summary.csv,Beethoven/Piano_Sonatas/18-2/Schmitt01.mid,False,0,,,,,,,
+tempo/performance_summary.csv,Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid,False,0,,,,,,,
+rubato/performance_summary.csv,Beethoven/Piano_Sonatas/18-2/Schmitt01.mid,False,0,,,,,,,
+rubato/performance_summary.csv,Beethoven/Piano_Sonatas/18-2_no_repeat/Schmitt01.mid,False,0,,,,,,,

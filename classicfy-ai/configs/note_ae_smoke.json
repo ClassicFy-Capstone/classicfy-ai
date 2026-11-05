@@ -1,0 +1,9 @@
+{
+  "training": {
+    "epochs": 2,
+    "batch_size": 2,
+    "triplet_batch_size": 2,
+    "max_steps_per_epoch": 2,
+    "max_validation_batches": 2
+  }
+}

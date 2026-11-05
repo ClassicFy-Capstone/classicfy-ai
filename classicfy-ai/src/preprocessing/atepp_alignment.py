@@ -8,12 +8,12 @@ from pathlib import Path
 import unicodedata
 import re
 
-import mido
 import numpy as np
 from numba import njit
 
 from .midi_loader import MidiData
 from .note_alignment import NoteAlignment, ScoreNote, PerformedNote
+from .score_midi import load_score_midi
 
 
 def canonical_path(value):
@@ -24,29 +24,6 @@ def canonical_path(value):
         pass
     value = ''.join(c for c in unicodedata.normalize('NFKD', value) if not unicodedata.combining(c))
     return re.sub(r'[^a-z0-9/]', '', value.lower().replace('\\', '/'))
-
-
-def load_score_midi(path: str | Path):
-    """Read symbolic quarter-note positions directly from ticks, ignoring tempo."""
-    midi = mido.MidiFile(path)
-    notes = []
-    for track in midi.tracks:
-        tick, active = 0, {}
-        for msg in track:
-            tick += msg.time
-            if msg.type not in ('note_on', 'note_off') or getattr(msg, 'channel', 0) == 9:
-                continue
-            key = (getattr(msg, 'channel', 0), msg.note)
-            if msg.type == 'note_on' and msg.velocity > 0:
-                active.setdefault(key, []).append(tick)
-            elif active.get(key):
-                start = active[key].pop(0)
-                if tick > start:
-                    notes.append((msg.note, start / midi.ticks_per_beat, tick / midi.ticks_per_beat))
-    notes.sort(key=lambda n: (n[1], n[0], n[2]))
-    # Parallel score parts occasionally duplicate a voice. Avoid counting it twice.
-    notes = list(dict.fromkeys(notes))
-    return tuple(ScoreNote(str(i), p, a, b, ()) for i, (p, a, b) in enumerate(notes))
 
 
 def _frames(pitches, onsets, ends, step, last):

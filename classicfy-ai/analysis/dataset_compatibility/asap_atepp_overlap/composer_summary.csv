@@ -1,0 +1,17 @@
+﻿composer,asap_total_works,asap_same_unit_works,asap_split_works,asap_total_performances,asap_performances_on_overlapping_works,atepp_matching_ids,atepp_performances_on_overlapping_works
+Bach,59,58,0,169,166,58,174
+Balakirev,1,0,0,10,0,0,0
+Beethoven,57,56,1,271,271,58,1907
+Brahms,1,0,0,1,0,0,0
+Chopin,34,34,0,289,289,36,762
+Debussy,2,1,0,3,2,1,22
+Glinka,1,0,0,2,0,0,0
+Haydn,11,5,0,44,32,5,27
+Liszt,16,9,0,121,58,9,77
+Mozart,6,6,0,16,16,6,104
+Prokofiev,1,0,0,8,0,0,0
+Rachmaninoff,4,4,0,8,8,4,23
+Ravel,4,4,0,22,22,4,67
+Schubert,13,12,1,62,62,16,149
+Schumann,10,10,0,28,28,9,211
+Scriabin,2,2,0,13,13,2,12

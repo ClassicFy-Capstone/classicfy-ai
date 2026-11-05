@@ -1,0 +1,9 @@
+{
+  "model": {
+    "mean_tempo_auxiliary": true
+  },
+  "training": {
+    "lambda_style": 0.0,
+    "beta_mean_tempo": 1.0
+  }
+}

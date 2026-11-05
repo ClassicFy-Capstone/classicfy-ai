@@ -1,0 +1,209 @@
+﻿composition_id,composer,example_track,performances,same_unit_match,asap_titles
+9,Sergei Rachmaninoff,"Prelude in B minor, Op.32, No.10",12,True,Preludes_op_32_10
+10,Sergei Rachmaninoff,"13 Preludes, Op. 32: No. 5 in G Major: Moderato",1,True,Preludes_op_32_5
+77,Sergei Rachmaninoff,"10 Preludes, Op. 23: No. 6 in E-Flat Major: Andante",2,True,Preludes_op_23_6
+80,Sergei Rachmaninoff,"Preludes, Op. 23: No. 4 in D Major",8,True,Preludes_op_23_4
+105,Franz Liszt,"Années de pèlerinage, 2nd Year, S. 162 ""Italy Supplement"": No. 1. Gondoliera (Gondolier's Song)",2,True,Annees_de_pelerinage_2_1_Gondoliera
+116,Franz Liszt,"2 Etudes de Concert, S.145: No.2 Gnomenreigen",6,True,Concert_Etude_S145_2
+117,Franz Liszt,"12 Etudes d'exécution transcendante, S.139: No.11 Harmonies du soir (Andantino)",9,True,Transcendental_Etudes_11
+119,Franz Liszt,"12 Etudes d'exécution transcendante, S.139: No.1 Prélude (Presto)",4,True,Transcendental_Etudes_1
+121,Franz Liszt,"12 Etudes d'exécution transcendante, S.139: No.10 Allegro agitato molto",9,True,Transcendental_Etudes_10
+123,Franz Liszt,"12 Etudes d'exécution transcendante, S.139: No.5 Feux follets (Allegretto)",9,True,Transcendental_Etudes_5
+124,Franz Liszt,"12 Etudes d'exécution transcendante, S.139: No.3 Paysage (Poco adagio)",5,True,Transcendental_Etudes_3
+127,Alexander Scriabin,"12 Etudes, Op. 8: No. 11 in B-Flat Minor",6,True,Etudes_op_8_11
+214,Robert Schumann,"Kreisleriana, Op.16: 6. Sehr langsam",25,True,Kreisleriana_6
+215,Robert Schumann,"Kreisleriana, Op. 16: 2. Sehr innig und nicht zu rasch",28,True,Kreisleriana_2
+217,Robert Schumann,"Kreisleriana, Op.16: 4. Sehr langsam",26,True,Kreisleriana_4
+218,Robert Schumann,"Kreisleriana, Op.16: 3. Sehr aufgeregt",25,True,Kreisleriana_3
+219,Robert Schumann,"Kreisleriana, Op. 16: Sehr lebhaft",25,True,Kreisleriana_5
+220,Robert Schumann,"Kreisleriana, Op. 16: Äußerst bewegt",26,True,Kreisleriana_1
+221,Robert Schumann,"Kreisleriana, Op.16: 7. Sehr rasch",25,True,Kreisleriana_7
+515,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 9 in E Major, BWV 854: Prelude",4,True,Prelude_bwv_854
+517,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 12 in F Minor, BWV 857: Prelude",4,True,Prelude_bwv_857
+518,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 17 in A-Flat Major, BWV 862",4,True,Prelude_bwv_862
+520,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 17 in A-Flat Major, BWV 862: Fugue",2,True,Fugue_bwv_862
+521,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 11 in F Major, BWV 856",5,True,Prelude_bwv_856
+522,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 23 in B Major, BWV 868: Fugue",4,True,Fugue_bwv_868
+523,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 11 in F Major, BWV 856: Fugue",2,True,Fugue_bwv_856
+525,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 15 in G Major, BWV 860",5,True,Fugue_bwv_860
+526,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 1 in C Major, BWV 846",4,True,Fugue_bwv_846
+527,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 18 in G-Sharp Minor, BWV 863",5,True,Prelude_bwv_863
+531,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 22 in B-Flat Minor, BWV 867",5,True,Fugue_bwv_867
+533,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 22 in B-Flat Minor, BWV 867: Prelude",3,True,Prelude_bwv_867
+534,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 23 in B Major, BWV 868",4,True,Prelude_bwv_868
+535,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 19 in A Major, BWV 864",5,True,Prelude_bwv_864
+538,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 13 in F-Sharp Major, BWV 858",5,True,Fugue_bwv_858
+540,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 13 in F-Sharp Major, BWV 858",5,True,Prelude_bwv_858
+541,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 20 in A Minor, BWV 865",5,True,Prelude_bwv_865
+542,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 15 in G Major, BWV 860",5,True,Prelude_bwv_860
+544,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 21 in B-Flat Major, BWV 866",5,True,Fugue_bwv_866
+545,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 9 in E Major, BWV 854: Fugue",2,True,Fugue_bwv_854
+546,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 1 in C Major, BWV 846",3,True,Prelude_bwv_846
+547,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 21 in B-Flat Major, BWV 866",6,True,Prelude_bwv_866
+550,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 12 in F Minor, BWV 857: Fugue",4,True,Fugue_bwv_857
+551,Johann Sebastian Bach,"The Well-Tempered Clavier, Book I: No. 18 in G-Sharp minor, BWV 863: Fugue",3,True,Fugue_bwv_863
+552,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Prelude No. 3 in C-Sharp Major, BWV 848",3,True,Prelude_bwv_848
+555,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 19 in A Major, BWV 864",5,True,Fugue_bwv_864
+558,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 3 in C-Sharp Major, BWV 848",4,True,Fugue_bwv_848
+560,Johann Sebastian Bach,"The Well-Tempered Clavier, Book 1: Fugue No. 20 in A Minor, BWV 865",4,True,Fugue_bwv_865
+597,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in C major BWV 870",2,True,Fugue_bwv_870
+599,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in C sharp minor BWV 873",2,True,Fugue_bwv_873
+600,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in G major BWV 884",2,True,Prelude_bwv_884
+601,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in A minor BWV 889",2,True,Fugue_bwv_889
+602,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in D minor BWV 875",3,True,Fugue_bwv_875
+603,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in A major BWV 888",2,True,Fugue_bwv_888
+606,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in G minor BWV 885",2,True,Fugue_bwv_885
+609,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in F major BWV 880",2,True,Prelude_bwv_880
+610,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in G sharp minor BWV 887",2,True,Prelude_bwv_887
+614,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in E flat major BWV 876",1,True,Fugue_bwv_876
+615,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in B flat minor BWV 891",1,True,Prelude_bwv_891
+616,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in B flat minor BWV 891",2,True,Fugue_bwv_891
+617,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in B minor BWV 893",2,True,Prelude_bwv_893
+618,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in D major BWV 874",2,True,Fugue_bwv_874
+620,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in C sharp minor BWV 873",2,True,Prelude_bwv_873
+621,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in F sharp minor BWV 883",2,True,Fugue_bwv_883
+624,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in A major BWV 888",2,True,Prelude_bwv_888
+625,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in F sharp minor BWV 883",2,True,Prelude_bwv_883
+630,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in D minor BWV 875",4,True,Prelude_bwv_875
+632,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in B minor BWV 893",2,True,Fugue_bwv_893
+633,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in B major BWV 892",2,True,Prelude_bwv_892
+636,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in C major BWV 870",2,True,Prelude_bwv_870
+637,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in D major BWV 874",1,True,Prelude_bwv_874
+639,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in E flat major BWV 876",2,True,Prelude_bwv_876
+640,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in B major BWV 892",2,True,Fugue_bwv_892
+642,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in G major BWV 884",2,True,Fugue_bwv_884
+643,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in F major BWV 880",2,True,Fugue_bwv_880
+644,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in A minor BWV 889",2,True,Prelude_bwv_889
+646,Claude Debussy,"Images, Book 1: No. 1. Reflets dans l'eau",22,True,Images_Book_1_1_Reflets_dans_lEau
+713,Maurice Ravel,"Miroirs, M.43: 3. Une barque sur l'océan",10,True,Miroirs_3_Une_Barque
+716,Maurice Ravel,"Miroirs, M.43: 4. Alborada del gracioso",16,True,Miroirs_4_Alborada_del_gracioso
+721,Maurice Ravel,Gaspard de la nuit: I. Ondine,26,True,Gaspard_de_la_Nuit_1_Ondine
+861,Franz Schubert,"6 Moments musicaux, Op.94 D780: No.3 in F Minor (Allegro moderato)",14,True,Moment_musical_no_3
+865,Franz Schubert,"6 Moments musicaux, Op.94 D.780: No.1 in C (Moderato)",5,True,Moment_Musical_no_1
+870,Franz Schubert,"Piano Sonata No.13 in A, D664: 1. Allegro moderato",19,True,Piano_Sonatas_664-1
+871,Franz Schubert,"Piano Sonata No.13 in A, D664: 3. Allegro",14,True,Piano_Sonatas_664-3
+872,Franz Schubert,"Piano Sonata No.13 in A, D664: 2. Andante",14,True,Piano_Sonatas_664-2
+885,Franz Schubert,"Piano Sonata No.18 in G, D.894: 2. Andante",8,True,Piano_Sonatas_894-2
+894,Franz Schubert,"Wanderer Fantasy in C Major, Op. 15, D. 760: II. Adagio",6,False,Wanderer_fantasie
+895,Franz Schubert,"Wanderer Fantasy in C Major, Op. 15, D. 760: IV. Allegro",5,False,Wanderer_fantasie
+896,Franz Schubert,"Wanderer Fantasy in C Major, Op. 15, D. 760: I. Allegro con fuoco ma non troppo",6,False,Wanderer_fantasie
+897,Franz Schubert,"Wanderer Fantasy in C Major, Op. 15, D. 760: III. Presto",5,False,Wanderer_fantasie
+910,Franz Schubert,"4 Impromptus, Op.90, D.899: No.1 in C minor: Allegro molto moderato",15,True,Impromptu_op.90_D.899_1
+911,Franz Schubert,"4 Impromptus, Op. 90, D. 899: No. 2 in E-Flat Major. Allegro",1,True,Impromptu_op.90_D.899_2
+912,Franz Schubert,"4 Impromptus, Op.90, D.899: No.4 in A flat: Allegretto",11,True,Impromptu_op.90_D.899_4
+913,Franz Schubert,"4 Impromptus, Op. 90, D. 899: 3. Andante",1,True,Impromptu_op.90_D.899_3
+917,Franz Schubert,"4 Impromptus Op.142, D.935: No.3 in B flat: Theme (Andante) with Variations",10,True,Impromptu_op142_3
+918,Franz Schubert,"4 Impromptus Op.142, D.935: No.1 in F minor: Allegro moderato",15,True,Impromptu_op142_1
+1064,Franz Joseph Haydn,"Piano Sonata in A Flat Major, Hob. XVI:46: 1. Allegro moderato",1,True,Keyboard_Sonatas_46-1
+1067,Franz Joseph Haydn,"Piano Sonata in C Major, Hob. XVI:48: I. Andante con espressione",7,True,Keyboard_Sonatas_48-1
+1068,Franz Joseph Haydn,"Piano Sonata in C, H.XVI No.48: 2. Rondo (Presto)",8,True,Keyboard_Sonatas_48-2
+1072,Franz Joseph Haydn,"Piano Sonata in C, H.XVI No.50: 1. Allegro",8,True,Keyboard_Sonatas_50-1
+1076,Franz Joseph Haydn,"Piano Sonata in B Minor, Hob.XVI: 32: 1. Allegro moderato",3,True,Keyboard_Sonatas_32-1
+1116,Wolfgang Amadeus Mozart,"Piano Sonata No.12 in F, K.332: 3. Allegro assai",11,True,Piano_Sonatas_12-3
+1117,Wolfgang Amadeus Mozart,"Piano Sonata No.12 in F, K.332: 2. Adagio",22,True,Piano_Sonatas_12-2
+1118,Wolfgang Amadeus Mozart,"Piano Sonata No.12 in F, K.332: 1. Allegro",12,True,Piano_Sonatas_12-1
+1148,Wolfgang Amadeus Mozart,"Piano Sonata in A Major, K. 331: III. Alla turca. Allegretto",19,True,Piano_Sonatas_11-3
+1154,Wolfgang Amadeus Mozart,"Piano Sonata No.8 in A minor, K.310: 1. Allegro maestoso",15,True,Piano_Sonatas_8-1
+1165,Ludwig van Beethoven,"Piano Sonata No.7 In D, Op.10 No.3: 3. Menuetto (Allegro)",32,True,Piano_Sonatas_7-3
+1166,Ludwig van Beethoven,"Piano Sonata No.7 In D, Op.10 No.3: 4. Rondo (Allegro)",47,True,Piano_Sonatas_7-4
+1167,Ludwig van Beethoven,"Piano Sonata No.7 In D, Op.10 No.3: 2. Largo e mesto",49,True,Piano_Sonatas_7-2
+1168,Ludwig van Beethoven,"Piano Sonata No.7 In D, Op.10 No.3: 1. Presto",47,True,Piano_Sonatas_7-1
+1177,Ludwig van Beethoven,"Piano Sonata No.3 In C, Op.2 No.3: 1. Allegro con brio",47,True,Piano_Sonatas_3-1
+1179,Ludwig van Beethoven,"Piano Sonata No.3 In C, Op.2 No.3: 2. Adagio",43,True,Piano_Sonatas_3-2
+1183,Ludwig van Beethoven,"Piano Sonata No.1 in F minor, Op.2 No.1: 1. Allegro",17,True,Piano_Sonatas_1-1
+1185,Ludwig van Beethoven,"Piano Sonata No.9 in E, Op.14 No.1: 2. Allegretto",23,True,Piano_Sonatas_9-2
+1186,Ludwig van Beethoven,"Piano Sonata No.9 in E, Op.14 No.1: 1. Allegro",30,True,Piano_Sonatas_9-1
+1187,Ludwig van Beethoven,"Piano Sonata No.9 in E, Op.14 No.1: 3. Rondo (Allegro comodo)",33,True,Piano_Sonatas_9-3
+1190,Ludwig van Beethoven,"Piano Sonata in A-Flat Major, Op. 110: I. Moderato cantabile molto espressivo",53,True,Piano_Sonatas_31-1
+1193,Ludwig van Beethoven,"Piano Sonata No. 31 in A-Flat Major, Op. 110: 4. Fuga. Allegro ma non troppo",19,False,Piano_Sonatas_31-3_4
+1194,Ludwig van Beethoven,"Sonata No. 31 in A-Flat Major, Op. 110: II. Allegro molto",69,True,Piano_Sonatas_31-2
+1195,Ludwig van Beethoven,"Piano Sonata No. 31 in A-Flat Major, Op. 110: 3. Adagio ma non troppo",20,False,Piano_Sonatas_31-3_4
+1196,Ludwig van Beethoven,"Piano Sonata No.26 in E flat, Op.81a -""Les adieux"": 2. Abwesenheit (Andante espressivo)",11,True,Piano_Sonatas_26-2
+1197,Ludwig van Beethoven,"Piano Sonata No.26 in E flat, Op.81a -""Les adieux"": 1. Das Lebewohl (Adagio - Allegro)",13,True,Piano_Sonatas_26-1
+1198,Ludwig van Beethoven,"Piano Sonata No.26 in E flat, Op.81a -""Les adieux"": 3. Das Wiedersehn (Vivacissimamente)",11,True,Piano_Sonatas_26-3
+1202,Ludwig van Beethoven,"Piano Sonata No. 4 in E-Flat Major, Op. 7: 1. Allegro molto e con brio",14,True,Piano_Sonatas_4-1
+1206,Ludwig van Beethoven,"Piano Sonata No. 30 in E Major, Op. 109: I. Vivace ma non troppo, sempre legato - Adagio espressivo",3,True,Piano_Sonatas_30-1
+1209,Ludwig van Beethoven,"Piano Sonata No.2 In A, Op.2 No.2: 1. Allegro vivace",25,True,Piano_Sonatas_2-1
+1213,Ludwig van Beethoven,"Sonata No. 21 in C Major, Op. 53 Waldstein: I. Allegro con brio",43,True,Piano_Sonatas_21-1
+1214,Ludwig van Beethoven,"Piano Sonata No. 21 in C Major Op. 53 ""Waldstein"": III. Rondo. Allegretto moderato",53,True,Piano_Sonatas_21-3
+1215,Ludwig van Beethoven,"Piano Sonata No.21 In C, Op.53 -""Waldstein"": 2. Introduzione (Adagio molto)",39,True,Piano_Sonatas_21-2
+1223,Ludwig van Beethoven,"Sonata in F Minor, Op. 57 ""Appassionata"": Allegro assai",93,True,Piano_Sonatas_23-1
+1225,Ludwig van Beethoven,"Piano Sonata in G Major, Op. 14,2: I. Allegro",30,True,Piano_Sonatas_10-1
+1227,Ludwig van Beethoven,"Sonata No.18 in E-Flat Major, Op. 31 No. 3: I. Allegro",19,True,Piano_Sonatas_18-1
+1228,Ludwig van Beethoven,"Sonata No.18 in E-Flat Major, Op. 31 No. 3: III. Presto con fuoco",24,True,Piano_Sonatas_18-4
+1229,Ludwig van Beethoven,"Piano Sonata No. 18 in E-Flat Major, Op. 31 No. 3: II. Scherzo. Allegretto vivace",22,True,Piano_Sonatas_18-2
+1230,Ludwig van Beethoven,"Piano Sonata No. 18 in E-Flat Major, Op. 31 No. 3: III. Menuetto. Moderato e grazioso",19,True,Piano_Sonatas_18-3
+1231,Ludwig van Beethoven,"Piano Sonata No. 29 in B-Flat Major, Op. 106 ""Hammerklavier"": III. Adagio sostenuto. Appassionato e con moto sentimento",13,True,Piano_Sonatas_29-3
+1233,Ludwig van Beethoven,"Piano Sonata No. 29 in B-Flat Major, Op. 106 ""Hammerklavier"": II. Scherzo. Assai vivace",32,True,Piano_Sonatas_29-2
+1234,Ludwig van Beethoven,"Piano Sonata No. 29 in B-Flat Major, Op. 106 ""Hammerklavier"": 4. Largo - Allegro risoluto",36,True,Piano_Sonatas_29-4
+1235,Ludwig van Beethoven,"Piano Sonata No.22 in F, Op.54: 1. In Tempo d'un Menuetto",35,True,Piano_Sonatas_22-1
+1236,Ludwig van Beethoven,"Piano Sonata No. 22 in F Major, Op. 54: II. Allegretto - Più allegro",14,True,Piano_Sonatas_22-2
+1238,Ludwig van Beethoven,"Sonata No. 28 in A Major, Op. 101: II. Lebhaft, marschmäßig",19,True,Piano_Sonatas_28-2
+1240,Ludwig van Beethoven,"Piano Sonata No. 28 in A Major, Op. 101: I. Etwas lebhaft und mit der innigsten Empfindung",46,True,Piano_Sonatas_28-1
+1241,Ludwig van Beethoven,"Sonata in C Minor, Op. 13 ""Pathétique"": Grave: Allegro di molto e con brio",69,True,Piano_Sonatas_8-1
+1242,Ludwig van Beethoven,"Sonata in C Minor, Op. 13 ""Pathétique"": Adagio contabile",60,True,Piano_Sonatas_8-2
+1243,Ludwig van Beethoven,"Piano Sonata No. 8 in C Minor, Op. 13: 3. Rondo. Allegro",61,True,Piano_Sonatas_8-3
+1247,Ludwig van Beethoven,"Piano Sonata No.12 in A flat, Op.26: 1. Andante con variazioni",19,True,Piano_Sonatas_12-1
+1248,Ludwig van Beethoven,"Piano Sonata No.15 In D, Op.28 -""Pastorale"": 4. Rondo. Allegro ma non troppo",32,True,Piano_Sonatas_15-4
+1251,Ludwig van Beethoven,"Piano Sonata No.15 In D, Op.28 -""Pastorale"": 1. Allegro",29,True,Piano_Sonatas_15-1
+1252,Ludwig van Beethoven,"Piano Sonata No. 17 in D Minor, Op. 31, No. 2: II. Adagio",45,True,Piano_Sonatas_17-2
+1253,Ludwig van Beethoven,"Piano Sonata No. 17 in D Minor, Op. 31, No. 2: I. Largo - Allegro",49,True,Piano_Sonatas_17-1
+1254,Ludwig van Beethoven,"Piano Sonata No. 17 in D Minor, Op. 31, No. 2: III. Allegretto",28,True,Piano_Sonatas_17-3
+1258,Ludwig van Beethoven,"Piano Sonata No.13 in E flat, Op.27 No.1: 4. Allegro vivace - Tempo I - Presto",9,True,Piano_Sonatas_13-4
+1259,Ludwig van Beethoven,"Sonata No. 27 in E Minor, Op. 90: II. Nicht zu geschwind und sehr singbar vorgetragen",38,True,Piano_Sonatas_27-2
+1260,Ludwig van Beethoven,"Piano Sonata No.27 in E minor, Op.90: 1. Mit Lebhaftigkeit und durchaus mit Empfindung und Ausdruck",33,True,Piano_Sonatas_27-1
+1263,Ludwig van Beethoven,"Piano Sonata No. 24 in F-Sharp Major, Op. 78: I. Adagio cantabile - Allegro ma non troppo",18,True,Piano_Sonatas_24-1
+1264,Ludwig van Beethoven,"Sonata No. 24 in F-Sharp Major, Op. 78: II. Allegro vivace",24,True,Piano_Sonatas_24-2
+1300,Ludwig van Beethoven,"Sonata No. 11 in B-Flat Major, Op. 22: I. Allegro con brio",20,True,Piano_Sonatas_11-1
+1301,Ludwig van Beethoven,"Sonata No. 11 in B-Flat Major, Op. 22: II. Adagio con molta espressione",23,True,Piano_Sonatas_11-2
+1303,Ludwig van Beethoven,"Sonata No. 11 in B-Flat Major, Op. 22: III. Minuet",21,True,Piano_Sonatas_11-3
+1304,Ludwig van Beethoven,"Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 'Mondschein': III. Presto agitato",48,True,Piano_Sonatas_14-3
+1308,Ludwig van Beethoven,"Sonata No. 32 in C Minor, Op. 111: I. Maestoso - Allegro con brio ed appassionato",57,True,Piano_Sonatas_32-1
+1309,Ludwig van Beethoven,"Piano Sonata No.5 In C Minor, Op.10 No.1: 1. Allegro molto e con brio",22,True,Piano_Sonatas_5-1
+1315,Ludwig van Beethoven,"Piano Sonata No.16 In G, Op.31 No.1: 1. Allegro vivace",30,True,Piano_Sonatas_16-1
+1316,Ludwig van Beethoven,"Piano Sonata No.16 In G, Op.31 No.1: 2. Adagio grazioso",29,True,Piano_Sonatas_16-2
+1410,Frédéric Chopin,"12 Etudes, Op.10: No.5 In G Flat - ""Black Keys""",18,True,Etudes_op_10_5
+1411,Frédéric Chopin,"Études, Op. 10: No. 12 in C Minor ""Revolutionary""",24,True,Etudes_op_10_12
+1412,Frédéric Chopin,"12 Études, Op. 10: No. 1 in C Major ""Waterfall""",6,True,Etudes_op_10_1
+1413,Frédéric Chopin,"12 Études, Op. 10: No. 2 in A Minor ""Chromatique""",16,True,Etudes_op_10_2
+1414,Frédéric Chopin,"Études, Op. 10: No. 8 in F Major",15,True,Etudes_op_10_8
+1415,Frédéric Chopin,"12 Etudes, Op.10: No.7 In C Major",10,True,Etudes_op_10_7
+1416,Frédéric Chopin,"12 Etudes, Op.10: No. 3. in E ""Tristesse""",22,True,Etudes_op_10_3
+1417,Frédéric Chopin,"Études, Op. 10: No. 10 in A-Flat Major",19,True,Etudes_op_10_10
+1420,Frédéric Chopin,"12 Études, Op. 10: No.4 in C-Sharp Minor",22,True,Etudes_op_10_4
+1421,Frédéric Chopin,"Etudes, Op. 25: No. 10 in B Minor",15,True,Etudes_op_25_10
+1425,Frédéric Chopin,"Études, Op. 25: No. 8 in D-Flat Major",17,True,Etudes_op_25_8
+1426,Frédéric Chopin,"Etudes, Op. 25: No. 2 in F Minor",16,True,Etudes_op_25_2
+1427,Frédéric Chopin,"Etudes, Op. 25: No. 4 in A Minor",13,True,Etudes_op_25_4
+1428,Frédéric Chopin,"Études, Op. 25: No. 12 in C Minor",21,True,Etudes_op_25_12
+1429,Frédéric Chopin,"12 Études, Op. 25: No. 1 in A-Flat Major ""Harp Study""",8,True,Etudes_op_25_1
+1430,Frédéric Chopin,"Etudes, Op. 25: No. 5 in E Minor",27,True,Etudes_op_25_5
+1431,Frédéric Chopin,"Études, Op. 25: No. 11 in A Minor ""Winter Wind""",18,True,Etudes_op_25_11
+1451,Frédéric Chopin,"Piano Sonata No.2 in B flat minor, Op.35: 4. Finale (Presto)",8,True,Sonata_2_4th
+1452,Frédéric Chopin,"Piano Sonata No.2 In B Flat Minor, Op.35: 1. Grave - Doppio movimento",11,True,Sonata_2_1st
+1453,Frédéric Chopin,"Piano Sonata No.2 In B Flat Minor, Op.35: 3. Marche funèbre (Lento)",11,True,Sonata_2_3rd
+1454,Frédéric Chopin,"Piano Sonata No.2 in B flat minor, Op.35: 2. Scherzo - Più lento - Tempo I",9,True,Sonata_2_2nd
+1458,Frédéric Chopin,Piano Sonata No 3 in B Minor Op 58: III. Largo,32,True,Sonata_3_3rd
+1459,Frédéric Chopin,Piano Sonata No 3 in B Minor Op 58: IV. Finale. Presto non tanto,36,True,Sonata_3_4th
+1461,Frédéric Chopin,Piano Sonata No 3 in B Minor Op 58: II. Scherzo. Molto vivace,27,True,Sonata_3_2nd
+1495,Franz Liszt,Sonata in B Minor,13,True,Sonata
+1503,Franz Liszt,Mephisto Waltz,20,True,Mephisto_Waltz
+1512,Alexander Scriabin,"Sonata No. 5, Op. 53",6,True,Sonatas_5
+1517,Robert Schumann,"Arabeske, Op. 18",11,True,Arabeske
+1518,Robert Schumann,"Toccata in C Major, Op. 7",20,True,Toccata;Toccata_repeat
+1543,Maurice Ravel,Pavane pour une infante défunte,15,True,Pavane
+1565,Wolfgang Amadeus Mozart,"Fantasia in C Minor, K.475",25,True,Fantasie_475
+1611,Frédéric Chopin,Ballade No. 1,63,True,Ballades_1
+1617,Frédéric Chopin,"Polonaise in A-Flat Major, Op. 53",32,True,Polonaises_53
+1630,Frédéric Chopin,Barcarolle Op. 60,17,True,Barcarolle
+1637,Frédéric Chopin,Ballade No. 3,33,True,Ballades_3
+1652,Frédéric Chopin,"Barcarolle in F-Sharp, Op. 60",26,True,Barcarolle
+1657,Frédéric Chopin,"Scherzo No.1 In B Minor, Op.20",29,True,Scherzos_20
+1658,Frédéric Chopin,Ballade No. 4,45,True,Ballades_4
+1659,Frédéric Chopin,"Scherzo No. 2 in B-Flat Minor, Op. 31",25,True,Scherzos_31
+1668,Frédéric Chopin,"Ballade No. 2 in F Major, Op. 38",26,True,Ballades_2
+1672,Frédéric Chopin,"Berceuse in D flat, Op.57",6,True,Berceuse_op_57
+1677,Frédéric Chopin,"Scherzo No.3 in C-Sharp Minor, Op. 39",33,True,Scherzos_39
+1680,Frédéric Chopin,"Polonaise No.6 in A flat, Op.53 -""Heroic""",6,True,Polonaises_53
+1693,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Prelude in G minor BWV 885",1,True,Prelude_bwv_885
+1694,Johann Sebastian Bach,"Das Wohltemperierte Klavier: Book 2, BWV 870-893: Fugue in G sharp minor BWV 887",2,True,Fugue_bwv_887

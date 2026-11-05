@@ -1,0 +1,13 @@
+{
+  "selected_epoch": 37,
+  "selected_update": 777,
+  "completed_epochs": 52,
+  "stop_reason": "validation_early_stopping",
+  "best_validation_loss": 0.23329164300646102,
+  "checkpoint_sha256": "58efc3a42e4e0dc2d8468133004cf0234464aea9a9c4fa95938573fef5353568",
+  "every_epoch_82_windows_exactly_once": true,
+  "updates_per_epoch": 21,
+  "max_budget_and_patience_fixed_before_training": true,
+  "training_seconds": 247.8504430828616,
+  "test_used_for_selection": false
+}

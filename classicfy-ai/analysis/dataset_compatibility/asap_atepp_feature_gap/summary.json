@@ -1,0 +1,134 @@
+{
+  "asap_attempted": 496,
+  "asap_converted": 496,
+  "asap_rejected": 0,
+  "asap_normalized": 451,
+  "atepp_performances": 1510,
+  "common_work_keys": 134,
+  "native_intervals": 270617,
+  "native_one_quarter_intervals": 161717,
+  "native_nonquarter_percent": 40.241374340858115,
+  "quarter_intervals": 284509,
+  "inferred_boundaries": 117558,
+  "quarter_boundaries": 285005,
+  "special_or_invalid_quarter_intervals": 1726,
+  "pedal": [
+    {
+      "dataset": "ASAP",
+      "performances": 496,
+      "no_cc64": 12,
+      "no_cc64_percent": 2.4193548387096775,
+      "median_nonempty_pedal_value_levels": 110.0,
+      "at_most_two_pedal_levels": 2,
+      "at_most_two_pedal_levels_percent": 0.4132231404958678
+    },
+    {
+      "dataset": "ATEPP",
+      "performances": 1510,
+      "no_cc64": 0,
+      "no_cc64_percent": 0.0,
+      "median_nonempty_pedal_value_levels": 67.0,
+      "at_most_two_pedal_levels": 0,
+      "at_most_two_pedal_levels_percent": 0.0
+    }
+  ],
+  "domain": [
+    {
+      "features": "dynamics_articulation",
+      "stage": "raw",
+      "works": 80,
+      "asap_n": 367,
+      "atepp_n": 843,
+      "heldout_work_macro_auc": 0.7946157465018512,
+      "work_bootstrap_lower": 0.7453750226885553,
+      "work_bootstrap_upper": 0.842573742007916,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    },
+    {
+      "features": "dynamics_articulation",
+      "stage": "standardized",
+      "works": 80,
+      "asap_n": 367,
+      "atepp_n": 843,
+      "heldout_work_macro_auc": 0.7618182458056089,
+      "work_bootstrap_lower": 0.7044427599382257,
+      "work_bootstrap_upper": 0.8174764297942846,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    },
+    {
+      "features": "all_channels",
+      "stage": "raw",
+      "works": 79,
+      "asap_n": 355,
+      "atepp_n": 839,
+      "heldout_work_macro_auc": 0.9376809455002154,
+      "work_bootstrap_lower": 0.8972463846397604,
+      "work_bootstrap_upper": 0.9717812136757465,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    },
+    {
+      "features": "all_channels",
+      "stage": "standardized",
+      "works": 79,
+      "asap_n": 355,
+      "atepp_n": 839,
+      "heldout_work_macro_auc": 0.7685411197501893,
+      "work_bootstrap_lower": 0.7162271077790824,
+      "work_bootstrap_upper": 0.8239788085543455,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    }
+  ],
+  "label_shuffle_control": [
+    {
+      "features": "dynamics_articulation",
+      "stage": "raw",
+      "works": 80,
+      "asap_n": 367,
+      "atepp_n": 843,
+      "heldout_work_macro_auc": 0.4375699270426806,
+      "work_bootstrap_lower": 0.3851091974751856,
+      "work_bootstrap_upper": 0.48460555995054516,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    },
+    {
+      "features": "dynamics_articulation",
+      "stage": "standardized",
+      "works": 80,
+      "asap_n": 367,
+      "atepp_n": 843,
+      "heldout_work_macro_auc": 0.4649683265890028,
+      "work_bootstrap_lower": 0.41653396143115895,
+      "work_bootstrap_upper": 0.5156356189177453,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    },
+    {
+      "features": "all_channels",
+      "stage": "raw",
+      "works": 79,
+      "asap_n": 355,
+      "atepp_n": 839,
+      "heldout_work_macro_auc": 0.49013216688268,
+      "work_bootstrap_lower": 0.43638009400367384,
+      "work_bootstrap_upper": 0.5358129383945205,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    },
+    {
+      "features": "all_channels",
+      "stage": "standardized",
+      "works": 79,
+      "asap_n": 355,
+      "atepp_n": 839,
+      "heldout_work_macro_auc": 0.5234990756648803,
+      "work_bootstrap_lower": 0.4637877997664743,
+      "work_bootstrap_upper": 0.5777350347573202,
+      "interpretation": "Dataset separability, not transcription error or transfer accuracy"
+    }
+  ],
+  "source_hashes": {
+    "datasets/ASAP/metadata.csv": "b327d92e498e281b381161ee387dacfd4b1c360c9c240d9107171f78e571b2a5",
+    "datasets/ASAP/asap_annotations.json": "02e4b80f0a78150d1bd0fc21c9cee72ed65a61710c1b1f84368c52216b3e0ff7",
+    "repository/classicfy-ai/analysis/atepp_normalization/feature_normalization/performance_summary.csv": "d21fa1abb21b28616dc76da10e4b980a6a825ddf308b996a062d66b89f4f72f7",
+    "repository/classicfy-ai/analysis/atepp_normalization/performance_catalog.csv": "5b6eed43a8072bbc48978468019a2241713f947e16ae5a374337d5e3020d38f9",
+    "repository/classicfy-ai/analysis/dataset_compatibility/asap_atepp_overlap/work_crosswalk.csv": "bf14a221ddf1a3647b75e32c9f15abda15e8de4bd3d1ffaa2a8843dc883a04dc"
+  }
+}

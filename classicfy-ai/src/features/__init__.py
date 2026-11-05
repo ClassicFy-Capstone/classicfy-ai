@@ -12,6 +12,22 @@ from .beat_grid import BeatGrid, as_beat_array, assign_windows, build_beat_grid
 from .common_pattern import PieceFeatureInput, SeparatedFeature, separate_piece_feature
 from .dynamics import DynamicsFeature, extract_dynamics, summarize_dynamics
 from .models import BeatSequence
+from .note_score_context import (
+    NoteScoreFeatures, NoteScoreScale, encode_note_numeric, extract_note_score_context,
+    fit_note_score_scale, note_score_schema,
+)
+from .note_performance import (
+    R_CHANNELS, NotePerformanceFeatures, extract_note_performance, inverse_r_physical,
+    note_performance_schema, summarize_note_performance,
+)
+from .note_performance_normalization import (
+    NotePerformanceScaler, fit_note_performance_scaler, load_note_performance_scaler, save_note_performance_scaler,
+)
+from .performance_time import BeatTimeMap
+from .score_context import (
+    SCORE_CHANNELS, ScoreContextFeatures, ScoreContextScale, encode_score_features,
+    extract_score_context, fit_score_context_scale, load_score_context, score_context_schema,
+)
 from .normalization import (
     DEFAULT_SCALE_METHODS, NormalizedFeature, ResidualScale, fit_residual_scale,
     standardize_piece_feature, standardize_sequence,
@@ -30,6 +46,23 @@ __all__ = [
     "ArticulationFeature",
     "BeatGrid",
     "BeatSequence",
+    "NoteScoreFeatures",
+    "NoteScoreScale",
+    "encode_note_numeric",
+    "extract_note_score_context",
+    "fit_note_score_scale",
+    "note_score_schema",
+    "R_CHANNELS",
+    "NotePerformanceFeatures",
+    "extract_note_performance",
+    "inverse_r_physical",
+    "note_performance_schema",
+    "summarize_note_performance",
+    "NotePerformanceScaler",
+    "fit_note_performance_scaler",
+    "load_note_performance_scaler",
+    "save_note_performance_scaler",
+    "BeatTimeMap",
     "DynamicsFeature",
     "DEFAULT_SCALE_METHODS",
     "NormalizedFeature",
@@ -61,4 +94,12 @@ __all__ = [
     "summarize_pedaling",
     "summarize_rubato",
     "summarize_tempo",
+    "SCORE_CHANNELS",
+    "ScoreContextFeatures",
+    "ScoreContextScale",
+    "encode_score_features",
+    "extract_score_context",
+    "fit_score_context_scale",
+    "load_score_context",
+    "score_context_schema",
 ]
