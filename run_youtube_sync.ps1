@@ -31,7 +31,7 @@ if (-not $PythonExe) {
     else { $PythonExe = (Get-Command python -ErrorAction Stop).Source }
 }
 if ($Mode -in @('run','benchmark')) {
-    & $PythonExe -c 'import importlib.util,sys; sys.exit(int(any(importlib.util.find_spec(m) is None for m in ["synctoolbox","yt_dlp","pretty_midi","soundfile","imageio_ffmpeg"])))'
+    & $PythonExe -c 'import importlib.util,sys; sys.exit(int(any(importlib.util.find_spec(m) is None for m in sys.argv[1:])))' synctoolbox yt_dlp pretty_midi soundfile imageio_ffmpeg
     if ($LASTEXITCODE -ne 0) {
         $taskVenv = Join-Path $PSScriptRoot '.venv-youtube-sync'
         & $PythonExe -m venv $taskVenv

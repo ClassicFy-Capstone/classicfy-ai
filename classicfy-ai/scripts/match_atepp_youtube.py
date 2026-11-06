@@ -177,6 +177,14 @@ def run(args):
              if importlib.util.find_spec(m) is None]
     if missing:
         raise RuntimeError('Missing dependencies; install requirements-youtube-sync.txt: '+', '.join(missing))
+    # Detect broken binary dependencies once, before launching thousands of jobs.
+    preflight=subprocess.run([sys.executable,'-c',
+        'from synctoolbox.dtw.mrmsdtw import sync_via_mrmsdtw; '
+        'from synctoolbox.feature.csv_tools import df_to_pitch_features; '
+        'import pretty_midi, soundfile, imageio_ffmpeg; imageio_ffmpeg.get_ffmpeg_exe()'],
+        capture_output=True,text=True,encoding='utf-8',timeout=120)
+    if preflight.returncode:
+        raise RuntimeError('Dependency import check failed before batch execution:\n'+preflight.stderr[-4000:])
     if not args.offline and not shutil.which('node'):
         print('Note: Node.js was not found; YouTube may require a supported JavaScript runtime.',flush=True)
     with runner_lock(output):
@@ -337,6 +345,23 @@ def estimate(args):
     else:
         report['estimate_status']='Run benchmark first; no invented measured runtime.'
     atomic_json(output/'runtime_estimate.json',report)
+    lines=['# 전체 매칭 예상 시간', '',
+        f'- 연주 {count:,}개 / 입력 목록 {len(segments):,}행 / 실제 매칭 대상 {report["eligible_candidates"]:,}개',
+        f'- 원본 음원 총길이: {total/3600:,.2f}시간',
+        f'- 동시 처리: {args.workers}개', '']
+    if 'predicted_workers_hours_low' in report:
+        low,high=report['predicted_workers_hours_low'],report['predicted_workers_hours_high']
+        lines += [f'**예상 {low:.1f}~{high:.1f}시간 (약 {low/24:.1f}~{high/24:.1f}일)**', '',
+            f'실측 표본 {len(records)}개 중 계산 모델 {len(model_records)}개, 실제 다운로드 표본 {len(downloaded)}개를 사용했습니다.',
+            f'단일 처리 기준 계산 약 {cpu_total/3600:.1f}시간 + 다운로드·디코딩 약 {download_total/3600:.1f}시간입니다.', '',
+            '병렬 효율과 변동 폭은 계획용 가정입니다. 영상 접근 차단·절전·네트워크 지연·다른 프로그램 부하는 별도이며, 수동 검수 시간은 포함하지 않습니다.',
+            '삭제되거나 접근할 수 없는 영상은 실패 사유를 남기므로 모든 후보가 성공한다는 보장은 없습니다.', '']
+    else:
+        lines += ['현재 컴퓨터의 실측 자료가 없습니다. 먼저 benchmark 명령을 실행하세요.', '']
+    lines += [f'원음 WAV 전체 보관 시 약 {report["whole_audio_wav_gib"]:.1f} GiB, 후보 WAV 저장 시 약 {report["candidate_wav_gib"]:.1f} GiB가 필요합니다.',
+        '기본 실행은 전체 원음을 처리 후 정리하고 구간 WAV를 저장하지 않습니다.', '',
+        '세부 근거: runtime_estimate.json']
+    (output/'runtime_estimate.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False,indent=2))
     return 0
 

@@ -95,7 +95,7 @@ class BatchSyncTests(unittest.TestCase):
             work=Path(td)/'job';work.mkdir()
             request=dict(metadata=row,segments=segments[:2],options={'keep_audio':False},fingerprint='abc')
             sync.atomic_json(work/'request.json',request)
-            with patch.object(sync,'acquire_audio',side_effect=RuntimeError('HTTP Error 429: Too Many Requests')):
+            with patch.object(sync,'acquire_audio',side_effect=RuntimeError('HTTP Error 429: Too Many Requests')), patch('traceback.print_exc'):
                 self.assertEqual(sync.execute_job(work/'request.json'),2)
             result=sync.read_json(work/'result.json')
             self.assertEqual(result['status'],'access_blocked')
