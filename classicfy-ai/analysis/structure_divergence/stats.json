@@ -1,0 +1,16 @@
+{
+  "pieces": 161,
+  "performances": 2489,
+  "window": 16,
+  "threshold": 0.9,
+  "example": "ATEPP/1302/32b5fbadbd77",
+  "median_theme_share": 0.3875432525951557,
+  "median_principal_share": 0.0,
+  "rho_recurrence_median": -0.07084533891119943,
+  "rho_channels_median": {
+    "rho_rubato_dynamics": 0.17708439247585153,
+    "rho_rubato_articulation": 0.24496579396414467,
+    "rho_dynamics_articulation": 0.1205481303437351
+  },
+  "top_window_in_first": 0.08074534161490683
+}

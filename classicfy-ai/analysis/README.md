@@ -5,6 +5,7 @@
 
 | 폴더 | 분석 주제 | 시작 문서 |
 |---|---|---|
+| `structure_divergence/` | 연주 간 차이가 큰 위치와 악보 구조(주제·경계·종지)의 관계, 미리듣기 구간 기준 | [구조와 차이 위치](structure_divergence/README.md) |
 | `performance_autoencoder_plan/` | 조건부 AE의 악보 S 추출·ATEPP 캐시 연결·위치별 ScoreEncoder | [구현 안내](performance_autoencoder_plan/README.md) |
 | `score_context_validation/` | 968연주의 악보/연주 연결·독립 산술 및 초기 encoder 검증 | [검증 결과](score_context_validation/README.md) |
 | `dataset_compatibility/` | ATEPP–ASAP 공통 작품·동일 MIDI 중복·특징 분포 차이·quarter-note 입력 변환 및 다른 컴퓨터 작업 인계 | [호환성 및 작업 인계](dataset_compatibility/README.md) |

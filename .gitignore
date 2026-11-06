@@ -1,4 +1,5 @@
 .venv/
+.venv-youtube-sync/
 __pycache__/
 *.pyc
 AGENTS.md

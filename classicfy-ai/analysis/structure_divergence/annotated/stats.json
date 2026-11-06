@@ -1,0 +1,23 @@
+{
+  "beethoven_pieces": 23,
+  "beethoven_aligned": 24,
+  "mozart_pieces": 23,
+  "mozart_aligned": 24,
+  "example": "ATEPP/1223/8154e8464f3d",
+  "beethoven_overlap": {
+    "auto_in_theme": 0.53,
+    "theme_share": 0.427,
+    "theme_detected": 0.518,
+    "slow_in_boundary": 0.269,
+    "boundary_share": 0.123,
+    "slow_in_theme_inner": 0.316,
+    "theme_inner_share": 0.376
+  },
+  "mozart_overlap": {
+    "slow_in_cadence": 0.403,
+    "cadence_share": 0.271,
+    "slow_in_phrase_end": 0.51,
+    "phrase_end_share": 0.331,
+    "cadence_slow_share": 0.151
+  }
+}
