@@ -1,180 +1,66 @@
-# AE가 가까운 다른 작품의 주제·주제 악구 청취 프로토타입
+# 선정 주제부 청취 구성 — 2026-11-09
 
-[청취 화면](../../tools/ae_theme_listening/index.html)을 로컬 HTTP 서버로 연다.
-[실행 방법](../../tools/ae_theme_listening/README.md) · [수동 주제 주석](themes.json) ·
-[전체 재생 목록과 근거](listening.json) · [데이터 검증](verification.json).
+**완료: 14 epoch 모델, 고전·바로크 4문항 / 낭만 4문항 / 인상주의 2문항.**
+시대 비율은 각 문항의 기준 A에 적용한다. X/Y는 A와 다른 한 작품의 두 연주다.
 
-최종 **epoch 100** 복원 AE를 고정하고 254작품·2,801연주의 full 8마디 67,542개를 다시 추론했다.
-각 연주의 모든 full 구간 `e`를 평균한 뒤 L2 정규화하고 cosine 거리를 계산했다.
-학습이나 scaler fitting은 수행하지 않았다. 이전 epoch 8 검색 결과를 재사용하지 않는다.
+총 10문항·20개 작품/악장 ID·30개 독립 원본 녹음. 연주자당 최대 2회, 한 문항 안에서는 3명 모두 다르다.
+모든 구간을 한 번씩 들으면 약 15분이며 반복·판단·메모 시간은 별도다.
+사이트: http://localhost:8766/ (기존 화면이 열려 있다면 새로고침).
 
-문헌·연주 해설·악보에서 구간을 수동 지정한 **10문항**이다. 무작위 표본이 아니다.
-처음 2문항을 유지하고 나머지 8문항을 재구성해, **20개 작품이 문항 간에 중복되지 않도록** 했다.
-한 문항의 X/Y는 비교 목적상 같은 작품이며, 그 작품이 다른 문항에 다시 등장하지 않는다.
-세 영상이 백그라운드 검사를 통과한 기준 연주 후보 중 수동 선정했다.
-B/C는 아래 절차 그대로 선정하며 재생 여부로 순위를 바꾸지 않는다.
-각 기준에서 같은 `work_id`(악장 단위)·동일 MIDI SHA 녹음을 제외한 **전체 후보**를 먼저 정렬한다.
-가장 가까운 B 한 개를 선택한 뒤, **B와 같은 작품에서 A와의 거리가 가장 먼 C**를 선택한다.
-가까움/멀음의 기준은 모두 A다. B–C 거리가 큰 연주를 선택하는 절차가 아니다.
-B/C는 서로 다른 녹음이며 같은 score SHA·주제 마디·quarter 범위를 사용한다.
-영상 재생 여부나 연주자 조건으로 순위를 바꾸지 않는다.
+## 청취 프로그램
 
-10문항·20작품·30개 녹음의 선정 결과는 `listening.json`에 있고 **실험 결과를 미리 알게 되는 자료**다.
-초기 참가자 `data.js`에는 거리·역할·후보 연주자 이름이 없다. 각 사례의 `results/*.json`은
-선택을 먼저 저장한 뒤 불러온다. X/Y는 무작위로 배치하고 해당 브라우저에서 유지한다.
-가까운 쪽을 고르면 일치, 먼 쪽을 고르면 반대로 표시한다. 동점/판단 어려움은 따로 기록한다.
-결과를 본 뒤 최초 선택을 바꿀 수 없고, 응답 JSON에 X/Y 매핑·최초 선택·거리·판정·제출 당시
-발췌 시간 설정을 함께 남긴다. 이 시간 설정은 실제 청취 완료 로그를 의미하지 않는다.
+아래 표의 대상 연주자 순서는 가까운/먼 순서다. 실제 사이트는 X/Y 순서를 무작위로 배치하며 선택 후에만 공개한다.
 
-선택 전에는 구간의 시작·종료·길이 숫자를 기본으로 숨겨 재생 길이를 보고 추측하는 단서를 줄인다.
-선택 후 공개하며, 재생 문제 확인용으로 먼저 표시한 이력은 다시 숨겨도 응답에 남긴다.
-삽입 플레이어는 공식 API의 `controls=0`으로 시간 막대를 표시하지 않고 구간 종료·반복을 제어한다.
-원본 YouTube 링크에서는 시간 표시를 숨기거나 자동 종료·반복하지 않는다. 확장 설치 방식은 제거했다.
-들리는 템포와 악구 길이는 원래 연주 특성이므로 이 기능으로 제거하지 않는다.
-
-거리는 **전곡의 평균 임베딩** 기준이다. 주제만의 거리 또는 실제 청취 유사도의 증거로 해석하지 않는다.
-복원 loss로 학습한 AE의 탐색적 개인 청취 사례이며, 모델 전체 성능·추천 만족도는 아직 미평가다.
-이전 화면에서 일부 가까운 후보의 정체와 거리가 이미 공개됐으므로, 그 사례를 미열람 상태의
-독립 맹검 평가로 해석하지 않는다. YouTube 제목/영상에도 연주자 이름이 보일 수 있다.
-
-## 음악 형식상의 구간 지정
-
-주제를 자동 탐지했다고 표시하지 않는다. 문헌·연주 해설을 해당 source MusicXML과 대조한 수동 주석이다.
-처음 N초나 모든 작품의 첫 8마디를 일괄 사용하지 않는다. 첫 제시/첫 주제를 담은 구간을 사용한다.
-주제 구간 길이는 문헌의 경계에 따라 달라진다.
-일부는 주제 전체가 아닌 첫 문장이나 동기의 제시 구간이며 그 범위를 카드에 명시했다.
-
-| 작품 | 형식상 구간 | 이 데이터의 XML 번호 | 근거 |
+| 번호 | 기준 A 작품 | 연주자 | 대상 작품의 두 연주 |
 |---|---|---|---|
-| 슈만 Op.16-6 | 주제 X를 담은 전주 1–5, 못갖춘마디 포함 | 1–6 | Tekin, Table 4.62 / Fig.4.72, pp.145–147 |
-| 베토벤 Op.13 2악장 | 첫 주제 최초 제시 1–8 | 1–8 | Tonic Chord, Second Movement, First Part |
-| 라흐마니노프 Op.23-4 | 2마디 서주 이후 주제 3–18 | 3–18 | Lee, Table 1, p.11 |
-| 스크랴빈 Op.8-11 | 최초 주제를 담은 A부 1–14 | 1–14 | Combrink, Chapter 2, p.201 |
-| 베토벤 Op.2-3 2악장 | 2마디 연결부 이전 주제 1–8 | 1–8 | Musica Libra, A Section |
-| 브람스 Op.118-6 | 첫 동기 제시 1–8, A부 일부 | 1–8 | GMTH Proceedings Band 3, Abbildung 1 |
-| 라벨 파반느 M.19 | 주제 A 최초 제시 1–12 | 1–12 | Alfred, Ravel Piano Masterpieces |
-| 드뷔시 브뤼예르 | 도입 주제 악구 1–5, 첫 쉼표 제외 | 1–5 | Harmonic and Textural Languages, §2.4.1 |
-| 드뷔시 달빛 | Tempo rubato 이전 1–14, 첫 쉼표 제외 | 1–14 | Playing Debussy’s Piano Works |
-| 베토벤 월광 1악장 | 반주 도입 이후 주제 진입 5–9 | 5–9 | Vienna Piano School, Voicing and Pedal Guide |
-| 베토벤 Op.28 2악장 | 첫 주제 문장 1–8, 반복 전 | 1–8 | Tonic Chord / 악보 반복 경계 대조 |
-| 모차르트 K.576 2악장 | 주요 주제 첫 문장 1–8 | 1–8 | Tonic Chord, Principal Theme |
-| 바흐 BWV 858 전주곡 | 첫 악구 1–6, Period I 일부 | 1–6 | Tonic Chord, Period I의 6마디 종지 |
-| 모차르트 K.332 2악장 | 첫 주제 1–8 | 1–8 | Tonic Chord, First Subject |
-| 모차르트 K.283 2악장 | 첫 주제 도입 악구 1–4 | 1–4 | Tonic Chord / 악보 대조 |
-| 슈베르트 D.664 2악장 | 첫 7마디 악구 | 1–7 | Steven Rings, §1.3.4 / Figure 1.4 |
-| 베토벤 Op.79 2악장 | 첫 주제 문장 1–8 | 1–8 | 악보 기준 프로토타입 수동 지정 |
-| 리스트 풍경 S.139-3 | cantando 이전 도입 선율 1–12 | 1–12 | 악보의 13마디 지시어 기준 수동 지정 |
-| 하이든 Hob.XVI:48 1악장 | 첫 반복 단락 1–10 | 1–10 | 악보의 10마디 반복 경계 기준 수동 지정 |
-| 모차르트 론도 K.511 | 못갖춘마디와 첫 두 악구 1–8 | 0–8 | PTNA, Kazuo Oi 연주 해설 |
+| 1 | 바로크 · 바흐 — 영국 모음곡 2번 · 지그 | Ivo Pogorelich | Piano Sonata No. 3 in C Major, Op. 2 No. 3: IV. Allegro assai — Lang Lang / Wilhelm Kempff |
+| 2 | 바로크 · 바흐 — 파르티타 3번 · 사라방드 | Claudio Arrau | Piano Sonata No. 14 in C Minor, K. 457: II. Adagio — Zoltán Kocsis / Vladimir Ashkenazy |
+| 3 | 고전 · 모차르트 — 피아노 소나타 5번 · 1악장 | Claudio Arrau | Piano Sonata No. 3 In C Major, Op. 2, No. 3: 1. Allegro con brio — Daniel Barenboim / Murray Perahia |
+| 4 | 고전 · 베토벤 — 피아노 소나타 15번 «전원» · 4악장 | Emil Gilels | Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 19 in A Major, BWV 864: Fugue — Daniel Barenboim / Glenn Gould |
+| 5 | 낭만 · 쇼팽 — 연습곡 Op.10-3 «이별» | Vladimir Ashkenazy | Schumann: Kinderszenen, Op. 15: No. 10, Fast zu ernst (Live) — Martha Argerich / Artur Schnabel |
+| 6 | 낭만 · 슈만 — 다비드 동맹 무곡 Op.6 · 6번 | Murray Perahia | Piano Sonata No.30 In E, Op.109: 2. Prestissimo — Emil Gilels / Wilhelm Kempff |
+| 7 | 낭만 · 리스트 — 초절기교 연습곡 11번 «저녁의 선율» | Lazar Berman | Piano Sonata No. 32 in C Minor, Op. 111: II. Arietta. Adagio molto semplice e cantabile — Friedrich Gulda / Ivo Pogorelich |
+| 8 | 낭만 · 라흐마니노프 — 회화적 연습곡 Op.39 · 4번 | Nikolai Lugansky | Piano Sonata No.2 in A, Op.2 No.2: 1. Allegro vivace — Alfred Brendel / Mikhail Pletnev |
+| 9 | 인상주의 · 드뷔시 — 영상 1집 «물의 반영» | Arturo Benedetti Michelangeli | Kinderszenen, Op. 15: No. 7, Träumerei — Vladimir Horowitz / Martha Argerich |
+| 10 | 인상주의 · 라벨 — 밤의 가스파르 «스카르보» | Alexandre Tharaud | Fantasie in C, Op. 17: 3. Langsam getragen. Durchweg leise zu halten - Etwas bewegter — Mitsuko Uchida / Sviatoslav Richter |
 
-각 행의 원문 링크와 선택 근거는 [themes.json](themes.json)에 있다. K.511의 0번은 못갖춘마디다.
-현재 사용하지 않는 과거 문항의 주석도 해당 파일에 보존했다.
-달빛·브뤼예르는 명시적 `omit_initial_rests` 주석으로 악보의 최초 발음(.5q / 2.5q)부터 시작한다.
-MusicXML과 압축 MXL을 모두 읽고 원본 파일 hash를 검증한다.
+## 거리와 구간
 
-문항 순서는 슈만→베토벤 비창, 라흐마니노프→스크랴빈, 드뷔시 브뤼예르→바흐,
-베토벤 전원→브람스, 모차르트 12번→5번, 슈베르트→베토벤 25번,
-드뷔시 달빛→리스트 풍경, 베토벤 3번→모차르트 18번, 베토벤 월광→라벨,
-하이든→모차르트 론도다. 12작곡가·20작품·30녹음이며 녹음 파일 SHA도 중복되지 않는다.
-생성 시 작품당 최대 1문항 제한을 검증한다. 중복 제거는 무작위 표집이나 통계적 독립성을 보장하지 않는다.
-30개 발췌를 한 번씩 들으면 약 18.9분이며 반복·탭 이동·메모 시간은 별도다.
+- 선정 구간 AE 입력 4,898개를 14 epoch checkpoint로 다시 추론했다. 동일 원본 녹음 alias를 합쳐 검색 대상은 4,897개, 작품/악장 ID는 469개다.
+- A와 다른 작품·악보 전체에서 실제 최근접 B를 찾는다. C는 B와 같은 작품·악보·반복 경로·선정 후보에서 A까지 가장 먼 다른 녹음이다.
+- 10문항의 B는 모두 해당 전체 후보에서 1위다. 영상 상태에 따라 차순위 연주로 바꾸지 않았다.
+- 동일 녹음 및 문항 사이 작품/악장 ID를 중복하지 않는다. 바로크 A 둘은 서로 다른 BWV 작품이다.
+- 15–90초 구간과 거리 차이 최소 0.05를 적용한다. 기준 A는 고정 난수 순서와 다양성 조건으로 고르고 heldout split을 우선했다.
+- 모델이 g와 잘 맞는지, 사람이 듣기에 잘 맞는지로 사례를 골라내지 않았다.
+- 재생 구간은 AE `source_segments.csv`의 연주별 원본 MIDI 시작·종료 초를 그대로 사용한다.
+- X/Y는 같은 작품·악보·반복 경로·후보 번호로 묶인다. 동일한 악보 경계나 동일한 음표 집합을 보장하는 조건은 아니다.
+  현재 10문항 모두 X/Y의 추정 quarter 경계 또는 음표 집합이 다르며, 시작 경계 차이의 최댓값은 약 4.47 quarter다.
+  모델 입력과 청취 구간은 유지했고, 경계 차이의 영향과 음악적 대응은 별도 검수가 필요하다.
+- 정규화 R/S scaler를 다시 학습하거나 모델 가중치를 바꾸지 않았다.
 
-슈만의 XML은 첫 8분음표 못갖춘마디를 별도 1번으로 세므로 문헌의 완전마디 번호와 1만큼 차이 난다.
-XML 20의 `Etwas bewegter`·6/8 시작도 문헌의 19마디 B부와 대응한다. 이 대응은 본 작업의 score 대조다.
-전주 X는 A(문헌 6–10)와 구분한다. [Tekin의 원문](https://www.scribd.com/document/625500930/Robert-Schumann-s-Miniature-Piano-Pieces).
+## 재생과 사용자 응답
 
-베토벤은 첫 8마디 제시 뒤 9–16마디에서 옥타브 위 변주 반복을 하므로 첫 제시만 사용한다.
-[형식 분석](https://tonic-chord.com/beethoven-piano-sonata-no-8-in-c-minor-pathetique-analysis/).
+30개 모두 임시 Chrome 프로필에서 localhost 공식 YouTube IFrame API로 **실제 선정 구간의 무음 재생과 0.5초 이상 시간 진행**을 확인했다.
+영상 ID 일치, 재생 위치, 구간 종료가 영상 길이 안에 있는지도 확인했다.
+검사 중 외부 재생 제한을 반환한 영상이 포함된 문항은 제외하고 다른 기준 A로 전체 문항을 교체했다.
+검색 상대를 임의의 차순위로 교체하지 않았다. 이전 후보/검사 기록도 workspace 진단 폴더에 보존한다.
 
-라흐마니노프는 서주 1–2, 주제 3–18, 변주 19–34를 구분한 형식표를 사용한다.
-[Yi-Hsuan Lee의 논문](https://cardinalscholar.bsu.edu/bitstreams/24ba80d7-eea5-45f0-ad73-a99869d078b7/download).
+이것은 음원과 MIDI의 시작 오프셋 또는 주제 경계를 사람이 청음 검수했다는 뜻은 아니다.
+위치가 어긋나면 사이트의 시간 조정 기능으로 수정한다. 인터넷·계정·지역·시점에 따라 재생 상태는 달라질 수 있다.
 
-스크랴빈은 A 1–14, B 15–28, 변형 A 29–54라는 분석에서 첫 A부를 사용한다.
-[Combrink의 기관 저장소](https://researchspace.ukzn.ac.za/items/2d80d7d6-c866-4f04-8c28-5f97a5605b10) ·
-[확인한 본문 p.201](https://www.scribd.com/document/391883401/A-STYLISTIC-AND-TECHNICAL-ANALYSIS-OF-SCRIABIN-S-ETUDES-OP-8).
+새 pack ID/storage ID를 사용한다. 이전 모델의 실제 응답을 새 문항에 승계하지 않고 기존 브라우저 저장본을 그대로 보존한다.
+이전 사이트 파일은 `diagnostics/atepp_selected_theme_listening/run01/previous_site/`에 전체 보관한다.
 
-## MIDI 정렬 기준의 재생 시간
+## 검증과 파일
 
-각 녹음의 재생 시간과 정렬 근거는 `listening.json`에 보관한다. 화면은 A/X/Y 세 구간을 제공하며
-X/Y는 같은 주제 마디를 연주 속도에 따라 서로 다른 길이로 들려준다.
-악보 마디 → 기존 repeat route의 quarter 좌표 → 해당 연주의 정렬된 음표 onset으로 연결한다.
-경계에 음표가 있으면 chord onset 중앙값을 사용하고 곡 시작은 첫 정렬 attack부터 포함한다.
-음표가 없는 경계는 유효 beat 보간만 허용한다. 범위 밖 좌표를 clamp/extrapolate하지 않는다.
-종료는 다음 구간 시작 경계다. 원본 녹음을 잘라 저장하지 않는다.
+- 별도 검증기로 모든 문항의 전체 최근접 및 같은 cohort 최원거리를 재계산했다.
+- 4/4/2 구성, 20개 작품/악장 ID·30개 원본 녹음, 연주자 최대 2회, 원래 선정 초 범위를 검사했다.
+- JavaScript 17개(선택/저장/배치/실제 파일 11 + 재생 6), 서버 6개 테스트 통과.
+- 임시 브라우저의 `?qa=1` 저장 공간에서 10문항 표시, 선택 전 결과 숨김, 선택 저장 후 거리 공개, 다음 문항 이동을 확인했다.
+  실제 사용자 응답 저장 공간에는 판단을 입력하지 않았다.
+- 현재 `listening.json`, `selected_segment_protocol.json`, `selected_playback_checks.json`, `verification.json`이 새 문항 자료다.
+- `themes.json`, `background_checks.json`, `embed_playback_checks.json` 등 예전 파일은 이전 전곡 기반 문항의 이력이며 이번 선정 근거가 아니다.
+- 전체 재현 자료와 CSV: `diagnostics/atepp_selected_theme_listening/run01/`.
 
-시각은 **영상 오프셋 0초를 가정한 MIDI 시계의 추정값**이다. 실제 주제 경계를 청음 검수한
-결과가 아니다. 삽입 재생이 허용되는 영상은 소수 초의 시작·종료 경계로 재생하고 반복할 수 있다.
-외부 재생이 제한된 영상은 원본 페이지에서 듣고, 필요하면 시간 표시를 켜서 종료 시각에 직접 멈춘다.
-원본 시작 링크는 초 단위로 내림하며, 삽입 재생의 실제 시작은 YouTube keyframe에 영향을 받을 수 있다.
-어긋나면 시간 설정을 수정한다. 수정은 삽입 플레이어에 바로 적용되며 원본 링크는 다시 열어야 한다.
-영상 가용성으로 실제 nearest/farthest를 다른 연주로 바꾸지 않는다.
-초기 playlist와 결과 파일은 정적 파일이다. 화면에서의 역할 숨김이며 결과 파일 접근 통제는 아니다.
-
-## 재현 및 검증 범위
-
-`prepare_ae_theme_listening.py --stage all`은 전체 추론과 목록 생성을,
-`--stage build`는 이미 추론한 목록에서 주제·시간 연결을 수행한다.
-체크포인트/corpus/scaler 계약, source index, score SHA, R 배열, window route SHA와 연주 ID를 검증한다.
-동률은 performance ID 순서다. 메모는 실제 사용자가 남기며 샘플 응답을 사람의 결과로 포함하지 않는다.
-
-원본 추론·모든 후보 CSV·chunk 캐시는 저장소 밖 `Classicfy/diagnostics/ae_theme_listening/run01/`에 있다.
-사용 모델은 `Classicfy/diagnostics/full_corpus_reconstruction/run01/training_resume01/best.pt`다.
-체크포인트 SHA와 구체적인 입력 hash는 `listening.json`에 남겼다.
-
-12개 Python 테스트는 A를 기준으로 한 nearest/farthest 선정(잘못된 B 기준 선정과 구별),
-동일 작품·녹음 제외, 주제 경계, 시간 범위, 문항 간 작품/녹음 중복 없음,
-초기 playlist의 역할/거리 비공개를 확인한다.
-별도 6개 서버 테스트는 localhost 정규 주소, 이 앱의 키만 전송하는 응답 복사,
-다른 출처·경로 거부와 응답 문자열의 안전한 보존을 확인한다.
-17개 Node 테스트 중 11개는 X/Y 교환 시 선택 복원, 일치/반대, 동점/불확실 분모, stale 결과 거부,
-실제 생성 결과 파일과 두 배치 순서의 일관성, 원본 영상 ID·시작 시각 링크,
-변경된 문항 응답의 별도 보관과 선택된 30개 영상의 백그라운드 검사 결과를 확인한다.
-나머지 6개는 공식 삽입 API의 구간/controls 설정, 자동 종료, 구간 반복과 중복 종료 이벤트 처리,
-일시정지·시간 수정·정리, 외부 재생 거부와 브라우저 자동 재생 제한, 잘못된 구간 거부를 확인한다.
-JavaScript 문법·pack 생성도 검증한다.
-이 검증에는 인간의 청취 판단을 포함하지 않았다. UI 검증용 `?qa=1`은 별도 저장 공간과 `is_test: true`를 사용한다.
-Safari에서 이전 화면의 YouTube 재생 제한(150)을 확인해 임베드를 원본 청취 버튼으로 교체했다.
-[오류 150](https://developers.google.com/youtube/iframe_api_reference#onError)은 외부 재생 불허를 뜻한다.
-원본 페이지의 플레이어 재생 상태 확인과 주제 경계의 청음 검증은 구분한다.
-2026-11-04 원본 여섯 개를 확인해 첫 사례의 A/X/Y와 두 번째 사례의 두 개에서 재생 상태를 확인했다.
-두 번째 사례의 한 원본은 재생 불가여서 같은 앨범 트랙의 UMG 공식 업로드로 재생 URL을 교체했다.
-같은 앨범·트랙·공식 제작 정보와 길이를 대조하고 새 영상의 실제 플레이어 재생 상태를 확인했다.
-이 재생 URL 교체 자체는 선정 연주·거리·pack ID·응답을 바꾸지 않는다.
-파형의 동일성이나 주제 경계 청음 검수를 뜻하지 않는다.
-[대체 출처와 검증 근거](source_replacements.json). 새 응답에는 제출 당시의 재생 URL도 보관한다.
-
-추가 문항의 재생 확인은 사용자 화면에 영상을 띄우지 않는 백그라운드 검사로 수행했다.
-[검사 기록](background_checks.json)의 공개 player 응답 `OK`, videoId 일치, 오디오 형식 정보가
-있는 경우에만 통과시켰다. 사용한 30개 재생 URL이 모두 통과했다. 브라우저에서 실제 소리를 재생한
-검사와는 구분하며, 주제 경계나 영상 오프셋의 청음 검수는 수행하지 않았다.
-브뤼예르의 한 영상은 metadata보다 2.494초 길어 그 차이를 검사 기록에 남겼다.
-여백의 위치나 영상 오프셋이 확인됐다는 뜻은 아니다.
-
-문항 재구성에는 새 pack ID를 부여한다. 기존 문항의 연주·거리·주제·시간이 모두 동일한 경우에만
-그 문항의 응답·X/Y 순서·메모·시간 수정 사본을 승계한다. 처음 두 문항은 그대로 유지했다.
-교체된 문항의 기존 응답은 `archived_packs`에 별도 보관해 JSON 내보내기에 포함하고 새 점수에서는 제외한다.
-원래 브라우저 저장본과 이전 진행자 pack도 보존하며 출처 pack ID와 승계 이력을 남긴다.
-clip ID는 고정 `storage_id` 기준이어서 유지된 문항의 후보 매핑이 바뀌지 않는다.
-
-이전 2문항 pack의 Safari에서 A/X/Y 카드, 선택 전 정보 숨김, 선택 활성화,
-제출 후 응답 잠금과 일치/반대 결과 표를 확인했다.
-브라우저 동작 검증은 별도 `?qa=1` 저장 공간의 합성 선택으로만 수행했다. 실제 응답 저장 공간에는
-판단을 입력하지 않았다. [화면 검증 기록](ui_verification.json).
-
-확장 설치 안내와 다운로드는 제거하고 공식 YouTube 삽입 플레이어를 추가했다.
-최초 IP 주소 `http://127.0.0.1:8766`의 삽입 검사에서는 29개가 오류 150, 1개가 재생됐다.
-그러나 같은 영상·코드·임시 브라우저에서 `http://localhost:8766`으로 바꾸자 정상 재생됐고,
-최종적으로 **localhost에서는 30개 모두 실제 재생 상태를 확인**했다. 두 조건 모두 실제 주소에 맞는
-Referer가 전송됐다. IP 주소에서 컨트롤 표시·전체 영상 재생·공식 privacy-enhanced 모드를 사용해도
-실패했으므로 이번 재현에서 확인한 차이는 재생 페이지의 호스트다. YouTube의 세부 내부 정책은 미확인이다.
-이전 결과를 영상 자체의 모든 외부 사이트 재생 금지로 일반화하지 않는다.
-[실제 삽입 재생과 호스트 비교 기록](embed_playback_checks.json)에 이전 IP 결과도 보관했다.
-현재 서버는 localhost 주소로 안내하고, 기존 IP 주소에서 진입하면 이 앱의 응답 저장 키만 복사해 이동한다.
-원래 저장본과 충돌 사본을 보존하며, 임베딩 선정과 원본 녹음은 바꾸지 않았다.
-검사는 새 임시 프로필과 별도 QA 응답 공간에서 수행하며 사용자 화면이나 실제 응답을 건드리지 않는다.
-최종 UI는 mock API로 시간 숨김/공개·구간 수정·한 번에 한 연주 재생·문항 이동 시 정리를 확인했다.
-실제 삽입 허용 영상에서는 무음 상태로 테스트 전용 1–2.5초 범위를 2회 반복하고,
-반복 해제 후 자동 종료까지 확인했다. 형식상 주제 구간을 청음 검수한 결과는 아니다.
-localhost 전환은 별도 임시 브라우저에서 이전 응답·메모·X/Y 순서 보존, 기존 localhost 응답 유지,
-충돌 사본 보관, 무관한 저장 키 미전송, 이전 주소 원본 미삭제까지 검증했다.
-이 과정의 합성 응답은 격리된 QA 저장 공간에만 입력했다.
+이 청취 구성은 전체 catalogue를 검색하므로 학습 작품을 포함한다. 청취 응답 일치율은 독립 test 성능이 아니며,
+고전·바로크/낭만/인상주의 전체를 대표하는 무작위 표본도 아니다. g 없는 모델 대비 우월성을 검증하는 구성은 아니다.

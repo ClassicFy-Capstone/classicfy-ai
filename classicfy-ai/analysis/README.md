@@ -5,6 +5,11 @@
 
 | 폴더 | 분석 주제 | 시작 문서 |
 |---|---|---|
+| `era_refine_expression/` | refine 전체의 루바토·다이내믹·페달링 절대/상대 값 및 같은 시대별22작품 figure | [세 feature와 시대 비교](era_refine_expression/README.md) |
+| `era_refine_tempo/` | 고정 300작품의 절대·상대 tempo 값, 시대 라벨 figure와 산출 coverage·탐색 통계 | [작품별 tempo와 시대 비교](era_refine_tempo/README.md) |
+| `era_refine_balanced_100/` | ATEPP_refine 전체에서 고전·바로크 / 낭만 / 인상주의·현대 각 100작품·악장, 총 1,864녹음 선정 | [현재 시대별 100개 표본](era_refine_balanced_100/README.md) |
+| `era_cohort/` | 전체 표본으로 취급한 판단을 철회한 과거 161그룹 부분집합의 이력 | [이전 부분집합 기록](era_cohort/README.md) |
+| `performance_style_full/` | 전체 11,674개 중 2,801개 연주의 전곡 g 부분 계산, reference·scaler·관측률 및 전체 모집단 처리 대조 | [전곡 g 부분 계산 결과](performance_style_full/README.md) |
 | `ae_theme_listening/` | 최종 AE의 다른 작품 최근접 + 같은 작품의 먼 연주, A/X/Y 청취 선택과 임베딩 일치·반대 비교 | [주제 구간 청취](ae_theme_listening/README.md) · [실행 방법](../tools/ae_theme_listening/README.md) |
 | `note_ae_checkpoint_cases/` | epoch 8 AE의 동일 작품·연주자 중복 제거·다른 작품 검색·연주자/작곡가/시대 비교 그림과 재현 자료 | [단일 기준 연주 사례](note_ae_checkpoint_cases/README.md) |
 | `note_ae_performance_mean_baseline/` | 각 연주 전체의 채널별 평균을 출력하는 baseline과 학습 중 AE validation 비교 | [연주별 평균 baseline](note_ae_performance_mean_baseline/README.md) |

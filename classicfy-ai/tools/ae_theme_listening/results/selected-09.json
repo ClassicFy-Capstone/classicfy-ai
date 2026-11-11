@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-09",
+  "near_clip": "71a4e1c983da3737",
+  "far_clip": "223448f4ea54c2f0",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 40,
+  "recordings": {
+    "a1cf0462bf2a9e1a": {
+      "performance_id": "ATEPP:02983",
+      "artist": "Arturo Benedetti Michelangeli",
+      "title": "Images - Book 1, L. 110: I. Reflets dans l'eau",
+      "album": "Debussy: Clair De Lune (CC)",
+      "album_date": "2012-01-01"
+    },
+    "71a4e1c983da3737": {
+      "performance_id": "ATEPP:00849",
+      "artist": "Vladimir Horowitz",
+      "title": "Kinderszenen, Op. 15: No. 7, Träumerei",
+      "album": "Vladimir Horowitz in Recital at Constitution Hall, Washington D. C., April 22, 1979",
+      "album_date": "1979"
+    },
+    "223448f4ea54c2f0": {
+      "performance_id": "ATEPP:00867",
+      "artist": "Martha Argerich",
+      "title": "Kinderszenen, Op. 15: 7. Träumerei - Live",
+      "album": "Carte Blanche (Live)",
+      "album_date": "2015-06-26"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "71a4e1c983da3737",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.017606584923057444,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "223448f4ea54c2f0",
+      "role": "far",
+      "global_rank": 3348,
+      "cosine_distance_to_anchor": 0.6742149332389364,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

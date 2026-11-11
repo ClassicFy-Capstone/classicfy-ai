@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-01",
+  "near_clip": "f095d567386c1f5f",
+  "far_clip": "6973df1188f2ffe7",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 26,
+  "recordings": {
+    "60d9bfc59385e46f": {
+      "performance_id": "ATEPP:02738",
+      "artist": "Ivo Pogorelich",
+      "title": "English Suite No. 2 in A Minor, BWV 807: VI. Gigue",
+      "album": "Bach, J.S.: English Suites No. 2 & 3 / Scarlatti: 4 Sonatas",
+      "album_date": "1986-01-01"
+    },
+    "f095d567386c1f5f": {
+      "performance_id": "ATEPP:06255",
+      "artist": "Lang Lang",
+      "title": "Piano Sonata No. 3 in C Major, Op. 2 No. 3: IV. Allegro assai",
+      "album": "Live in Vienna",
+      "album_date": "2010-08-23"
+    },
+    "6973df1188f2ffe7": {
+      "performance_id": "ATEPP:06254",
+      "artist": "Wilhelm Kempff",
+      "title": "Piano Sonata No. 3 in C Major, Op. 2 No. 3: IV. Allegro assai",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "1995-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "f095d567386c1f5f",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.03920506694231707,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "6973df1188f2ffe7",
+      "role": "far",
+      "global_rank": 1224,
+      "cosine_distance_to_anchor": 0.5838434007866344,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

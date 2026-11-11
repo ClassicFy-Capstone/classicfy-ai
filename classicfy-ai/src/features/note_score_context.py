@@ -5,7 +5,7 @@ from __future__ import annotations
 from bisect import bisect_left, bisect_right
 from collections import Counter, defaultdict
 from copy import deepcopy
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from fractions import Fraction
 import hashlib
 import json
@@ -18,6 +18,7 @@ from preprocessing.score_note_mapping import TieMapping, build_tie_mapping
 
 
 SCHEMA_VERSION = 'note-score-context-v2'
+_DIRECTION_REPAIR_PREFIX = 'direction-offset-normalization-v1:'
 PAD, NONE, UNK = 0, 1, 2
 SLOTS = ('tempo_base', 'tempo_relative', 'tempo_gradual', 'tempo_local',
          'dynamic_base', 'dynamic_gradual', 'dynamic_local')
@@ -116,7 +117,68 @@ class NoteScoreFeatures:
     @property
     def cache_key(self):
         payload = json.dumps(note_score_schema(), sort_keys=True) + self.source_sha256 + self.traversal_id
+        # Opt-in direction normalization changes S, but not source note identity.
+        # Keep keys of every existing, unnormalized artifact unchanged.
+        repairs = [d for d in self.diagnostics if d.startswith(_DIRECTION_REPAIR_PREFIX)]
+        if repairs:
+            payload += json.dumps(repairs, sort_keys=True)
         return hashlib.sha256(payload.encode()).hexdigest()
+
+
+def normalize_direction_offsets(score: MusicXMLScore, *, max_overflow_q=Fraction(1, 32)):
+    """Relocate small boundary offsets without clipping or changing note times.
+
+    This is an explicit recovery operation, never applied by the extractor by
+    default. The direction keeps its exact written and unfolded quarter position.
+    All occurrences of the source and destination measures must be adjacent in
+    the supplied traversal; otherwise moving a written direction could create or
+    remove events on repeat passes. Large or out-of-score offsets remain errors.
+
+    Returns ``(score, audit)``. Audit records also enter S diagnostics/cache keys,
+    while source SHA, traversal identity, and all notes remain unchanged.
+    """
+    maximum = Fraction(max_overflow_q)
+    if not 0 < maximum <= Fraction(1, 32):
+        raise ValueError('Direction recovery limit must be positive and at most 1/32 quarter')
+    durations = score.measure_durations
+    visits = tuple(v.measure for v in score.visits)
+    directions, audit = [], []
+    for original in score.directions:
+        source, position = original.measure, original.position
+        if not 0 <= source < len(durations):
+            raise ValueError('Direction refers to a nonexistent measure')
+        if 0 <= position <= durations[source]:
+            directions.append(original)
+            continue
+        step = -1 if position < 0 else 1
+        overflow = -position if step < 0 else position - durations[source]
+        target = source + step
+        if overflow > maximum:
+            raise ValueError('Direction offset exceeds conservative recovery limit')
+        if not 0 <= target < len(durations):
+            raise ValueError('Direction offset leaves the score')
+        relocated = durations[target] + position if step < 0 else overflow
+        if not 0 <= relocated <= durations[target]:
+            raise ValueError('Direction offset crosses more than one measure')
+        source_visits = {i for i, mi in enumerate(visits) if mi == source}
+        target_visits = {i for i, mi in enumerate(visits) if mi == target}
+        paired = {i + step for i in source_visits}
+        if not source_visits or paired != target_visits:
+            raise ValueError('Direction offset crosses an ambiguous repeat/traversal boundary')
+        # The bijection above also prevents unpaired destination visits from
+        # acquiring a direction that was not present in their source pass.
+        record = {'source_id': original.source_id, 'kind': original.kind,
+                  'token': original.token, 'source_measure': source,
+                  'source_position_q': str(position), 'target_measure': target,
+                  'target_position_q': str(relocated), 'max_overflow_q': str(maximum),
+                  'occurrences': len(source_visits), 'absolute_time_changed': False}
+        audit.append(record)
+        directions.append(replace(original, measure=target, position=relocated))
+    if not audit:
+        return score, ()
+    diagnostics = tuple(_DIRECTION_REPAIR_PREFIX + json.dumps(r, sort_keys=True) for r in audit)
+    return replace(score, directions=tuple(directions),
+                   diagnostics=score.diagnostics + diagnostics), tuple(audit)
 
 
 def _grouping(meter):

@@ -1,0 +1,300 @@
+{
+  "scope": "Entire current ATEPP_refine, all currently available accepted exact-input DualDTW maps; not the former 300-work sample.",
+  "refine_recordings": 10699,
+  "refine_works": 1511,
+  "accepted_recordings": 2821,
+  "aligned_works": 247,
+  "work_unit": "Original composition_id (may be a movement).",
+  "relative_policy": "Per-position median over used recordings is subtracted; reference includes self. Relative amount measures typical local residual magnitude, NOT IQR of global signed tempo representatives.",
+  "rubato": "raw=log2(QPM)-own median over common valid positions; per-recording absolute/relative amounts=median(abs(raw/residual)); work=median over recording amounts. Display=100*(2**amount-1).",
+  "dynamics": "Per-quarter mean onset velocity/127. Absolute=median over recording means. Relative=median over recording mean(abs(local residual)). Display multiply 127.",
+  "pedaling": "CC64 depth time-average/127; down ratio >=64 time fraction; on/off transition counts per quarter. Absolute=median recording means; relative=median recording mean(abs(residual)).",
+  "missing_pedal": "Absent CC64 and intervals starting before first CC64 event are unknown; never silently converted to zero usage.",
+  "validity": "Same exact quarter positions across all recordings within each channel; tau in [.08,5]; >=32 quarters and >=50% of largest map. D requires onset in every recording; pedal requires known initial state. No per-recording dropping to inflate coverage.",
+  "singletons": "Absolute may be available; relative remains missing.",
+  "normalization": "No work scale division, z-score, clipping or missing-value imputation; /127 is the established feature definition only.",
+  "score_editions": "Largest identical canonical-score cohort, ties by score hash; report all counts.",
+  "balanced_works_per_era": 22,
+  "balanced_policy": "Maximum 30 per era, limited by intersection of all five channels with both values; composer-count proportional quotas, min one per represented composer; SHA256 ranking seed 20261106; no value-based selection. Original within-work recordings/reference unchanged.",
+  "balanced_allocations": [
+    {
+      "era": "classical_baroque",
+      "composer": "Domenico Scarlatti",
+      "eligible_works": 1,
+      "selected_works": 1
+    },
+    {
+      "era": "classical_baroque",
+      "composer": "Franz Joseph Haydn",
+      "eligible_works": 4,
+      "selected_works": 1
+    },
+    {
+      "era": "classical_baroque",
+      "composer": "Johann Sebastian Bach",
+      "eligible_works": 49,
+      "selected_works": 6
+    },
+    {
+      "era": "classical_baroque",
+      "composer": "Ludwig van Beethoven",
+      "eligible_works": 78,
+      "selected_works": 10
+    },
+    {
+      "era": "classical_baroque",
+      "composer": "Wolfgang Amadeus Mozart",
+      "eligible_works": 28,
+      "selected_works": 4
+    },
+    {
+      "era": "romantic",
+      "composer": "Alexander Scriabin",
+      "eligible_works": 2,
+      "selected_works": 1
+    },
+    {
+      "era": "romantic",
+      "composer": "Franz Liszt",
+      "eligible_works": 13,
+      "selected_works": 6
+    },
+    {
+      "era": "romantic",
+      "composer": "Franz Schubert",
+      "eligible_works": 12,
+      "selected_works": 6
+    },
+    {
+      "era": "romantic",
+      "composer": "Johannes Brahms",
+      "eligible_works": 1,
+      "selected_works": 1
+    },
+    {
+      "era": "romantic",
+      "composer": "Robert Schumann",
+      "eligible_works": 9,
+      "selected_works": 4
+    },
+    {
+      "era": "romantic",
+      "composer": "Sergei Rachmaninoff",
+      "eligible_works": 9,
+      "selected_works": 4
+    },
+    {
+      "era": "impressionist_modern",
+      "composer": "Claude Debussy",
+      "eligible_works": 15,
+      "selected_works": 15
+    },
+    {
+      "era": "impressionist_modern",
+      "composer": "Maurice Ravel",
+      "eligible_works": 7,
+      "selected_works": 7
+    }
+  ],
+  "coverage": [
+    {
+      "channel": "rubato",
+      "era": "classical_baroque",
+      "era_ko": "고전·바로크",
+      "refine_works": 621,
+      "absolute_works": 167,
+      "relative_works": 162,
+      "used_recordings": 2181,
+      "absolute_display_median": 5.84600441033105,
+      "relative_display_median": 3.1974517714314126,
+      "status_counts": "{\"absolute_only_single_recording\": 5, \"no_accepted_alignment\": 454, \"ok\": 162}"
+    },
+    {
+      "channel": "rubato",
+      "era": "romantic",
+      "era_ko": "낭만",
+      "refine_works": 691,
+      "absolute_works": 54,
+      "relative_works": 46,
+      "used_recordings": 416,
+      "absolute_display_median": 14.99692126352053,
+      "relative_display_median": 5.154369754367453,
+      "status_counts": "{\"absolute_only_single_recording\": 8, \"no_accepted_alignment\": 637, \"ok\": 46}"
+    },
+    {
+      "channel": "rubato",
+      "era": "impressionist_modern",
+      "era_ko": "인상주의·현대",
+      "refine_works": 199,
+      "absolute_works": 26,
+      "relative_works": 22,
+      "used_recordings": 224,
+      "absolute_display_median": 14.780908391384997,
+      "relative_display_median": 5.985981023197209,
+      "status_counts": "{\"absolute_only_single_recording\": 4, \"no_accepted_alignment\": 173, \"ok\": 22}"
+    },
+    {
+      "channel": "dynamics",
+      "era": "classical_baroque",
+      "era_ko": "고전·바로크",
+      "refine_works": 621,
+      "absolute_works": 167,
+      "relative_works": 162,
+      "used_recordings": 2181,
+      "absolute_display_median": 64.68476398316434,
+      "relative_display_median": 5.38400717930148,
+      "status_counts": "{\"absolute_only_single_recording\": 5, \"no_accepted_alignment\": 454, \"ok\": 162}"
+    },
+    {
+      "channel": "dynamics",
+      "era": "romantic",
+      "era_ko": "낭만",
+      "refine_works": 691,
+      "absolute_works": 54,
+      "relative_works": 46,
+      "used_recordings": 416,
+      "absolute_display_median": 62.069927475378975,
+      "relative_display_median": 4.525398168116384,
+      "status_counts": "{\"absolute_only_single_recording\": 8, \"no_accepted_alignment\": 637, \"ok\": 46}"
+    },
+    {
+      "channel": "dynamics",
+      "era": "impressionist_modern",
+      "era_ko": "인상주의·현대",
+      "refine_works": 199,
+      "absolute_works": 26,
+      "relative_works": 22,
+      "used_recordings": 224,
+      "absolute_display_median": 57.28488762297543,
+      "relative_display_median": 4.843606823847671,
+      "status_counts": "{\"absolute_only_single_recording\": 4, \"no_accepted_alignment\": 173, \"ok\": 22}"
+    },
+    {
+      "channel": "pedal_depth",
+      "era": "classical_baroque",
+      "era_ko": "고전·바로크",
+      "refine_works": 621,
+      "absolute_works": 165,
+      "relative_works": 160,
+      "used_recordings": 2174,
+      "absolute_display_median": 57.22914786568356,
+      "relative_display_median": 9.544271750052232,
+      "status_counts": "{\"absolute_only_single_recording\": 5, \"insufficient_common_positions\": 2, \"no_accepted_alignment\": 454, \"ok\": 160}"
+    },
+    {
+      "channel": "pedal_depth",
+      "era": "romantic",
+      "era_ko": "낭만",
+      "refine_works": 691,
+      "absolute_works": 54,
+      "relative_works": 46,
+      "used_recordings": 416,
+      "absolute_display_median": 73.45109264977995,
+      "relative_display_median": 7.218046579918584,
+      "status_counts": "{\"absolute_only_single_recording\": 8, \"no_accepted_alignment\": 637, \"ok\": 46}"
+    },
+    {
+      "channel": "pedal_depth",
+      "era": "impressionist_modern",
+      "era_ko": "인상주의·현대",
+      "refine_works": 199,
+      "absolute_works": 26,
+      "relative_works": 22,
+      "used_recordings": 224,
+      "absolute_display_median": 71.71059463100212,
+      "relative_display_median": 9.600389034589737,
+      "status_counts": "{\"absolute_only_single_recording\": 4, \"no_accepted_alignment\": 173, \"ok\": 22}"
+    },
+    {
+      "channel": "pedal_down_ratio",
+      "era": "classical_baroque",
+      "era_ko": "고전·바로크",
+      "refine_works": 621,
+      "absolute_works": 165,
+      "relative_works": 160,
+      "used_recordings": 2174,
+      "absolute_display_median": 44.909965973879466,
+      "relative_display_median": 20.44638504957362,
+      "status_counts": "{\"absolute_only_single_recording\": 5, \"insufficient_common_positions\": 2, \"no_accepted_alignment\": 454, \"ok\": 160}"
+    },
+    {
+      "channel": "pedal_down_ratio",
+      "era": "romantic",
+      "era_ko": "낭만",
+      "refine_works": 691,
+      "absolute_works": 54,
+      "relative_works": 46,
+      "used_recordings": 416,
+      "absolute_display_median": 81.28938037352005,
+      "relative_display_median": 11.55641326427973,
+      "status_counts": "{\"absolute_only_single_recording\": 8, \"no_accepted_alignment\": 637, \"ok\": 46}"
+    },
+    {
+      "channel": "pedal_down_ratio",
+      "era": "impressionist_modern",
+      "era_ko": "인상주의·현대",
+      "refine_works": 199,
+      "absolute_works": 26,
+      "relative_works": 22,
+      "used_recordings": 224,
+      "absolute_display_median": 80.94150729910996,
+      "relative_display_median": 12.208450550130234,
+      "status_counts": "{\"absolute_only_single_recording\": 4, \"no_accepted_alignment\": 173, \"ok\": 22}"
+    },
+    {
+      "channel": "pedal_changes",
+      "era": "classical_baroque",
+      "era_ko": "고전·바로크",
+      "refine_works": 621,
+      "absolute_works": 165,
+      "relative_works": 160,
+      "used_recordings": 2174,
+      "absolute_display_median": 1.2366071428571428,
+      "relative_display_median": 0.864921644333409,
+      "status_counts": "{\"absolute_only_single_recording\": 5, \"insufficient_common_positions\": 2, \"no_accepted_alignment\": 454, \"ok\": 160}"
+    },
+    {
+      "channel": "pedal_changes",
+      "era": "romantic",
+      "era_ko": "낭만",
+      "refine_works": 691,
+      "absolute_works": 54,
+      "relative_works": 46,
+      "used_recordings": 416,
+      "absolute_display_median": 2.0462121212121214,
+      "relative_display_median": 0.9511767337807606,
+      "status_counts": "{\"absolute_only_single_recording\": 8, \"no_accepted_alignment\": 637, \"ok\": 46}"
+    },
+    {
+      "channel": "pedal_changes",
+      "era": "impressionist_modern",
+      "era_ko": "인상주의·현대",
+      "refine_works": 199,
+      "absolute_works": 26,
+      "relative_works": 22,
+      "used_recordings": 224,
+      "absolute_display_median": 1.9234892787524367,
+      "relative_display_median": 1.0463580007748934,
+      "status_counts": "{\"absolute_only_single_recording\": 4, \"no_accepted_alignment\": 173, \"ok\": 22}"
+    }
+  ],
+  "input_sha256": {
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/ATEPP-metadata-1.2.csv": "2e68e4c1e3598c74854e0b1abd36e51f95e9cefa23dfc51c644776245633511a",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/refinement_manifest.json": "bd82f089d6cc9a964a41b15a746b60b69d566b4161367512c747744dbfa6a2f4",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/file_checksums.csv": "00dcdf60a0456278529b12a0c30e8507934511bafec30606cd85c77f1c9eef25",
+    "/Users/ihun-ui/Desktop/Classicfy/diagnostics/atepp_note_training/run01/preprocessing/raw.jsonl": "25fbad7741f449b6059f267b5957af971cbec5cff72b6fa70d65f9a9ee91c832",
+    "/Users/ihun-ui/Desktop/Classicfy/diagnostics/atepp_note_training/run01/preprocessing/alignments.jsonl": "58a251999607975ff172cb4687dae30a3862ae50d062c7b9ff34dbac9f231434",
+    "/Users/ihun-ui/Desktop/Classicfy/diagnostics/era_tempo_refine/recordings.jsonl": "73d7edb445cf99af2c9aa35233da932c750c2e9a117749214a90df57ac6c24f9"
+  },
+  "code_sha256": {
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/scripts/analyze_era_expression.py": "fd4434abc5b6755cf3c7ce41b1bd06b7692db61119e7ad69422728fe9bcbf3be",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/features/rubato.py": "f69fd86d7e4d5dd9d84c5bf4807f22d1bc6ca3addeef3c1e1eff96d188bdeb63",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/features/dynamics.py": "928b0308800486a4cb66e9c7f848d02922b555c8ee8452f3f1477c8bd6120a3d",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/features/pedaling.py": "9e4e4f7bad90ee998841155b948bfac4ef3e5defdebd1590bf563c3984ea19d4",
+    "/Users/ihun-ui/Desktop/Classicfy/capstone-2026-2-classicfy/classicfy-ai/src/preprocessing/performance_midi.py": "64751f2b5aabae4702a9389b77950a101b5e7fb55c68b934c27aea99fe1d93ec"
+  },
+  "extraction_audit": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/era_expression_refine/extraction.jsonl",
+  "extraction_audit_sha256": "1135992e87201aff41cddd2b00d2a2cc31aa6b9b36789b2bbb0894656b701c72",
+  "packed_values": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/era_expression_refine/common_values.npz",
+  "packed_values_sha256": "19df6fd43550365001971eb888a1634730d44bf46a71535a3756bb3c9c37e73e"
+}

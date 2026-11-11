@@ -9,3 +9,17 @@ classicfy-ai/analysis/note_ae_checkpoint_cases/**/*.csv whitespace=blank-at-eol,
 classicfy-ai/analysis/note_ae_checkpoint_cases/**/*.svg -diff
 classicfy-ai/analysis/note_ae_full_corpus_reconstruction/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 classicfy-ai/analysis/note_ae_plateau_multiseed/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve generated analysis bytes and their recorded hashes across platforms.
+classicfy-ai/analysis/era_balanced_100/** -text
+classicfy-ai/analysis/era_balanced_100/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+classicfy-ai/analysis/era_cohort/** -text
+classicfy-ai/analysis/era_cohort/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+classicfy-ai/analysis/era_refine_balanced_100/** -text
+classicfy-ai/analysis/era_refine_balanced_100/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+classicfy-ai/analysis/era_refine_expression/** -text
+classicfy-ai/analysis/era_refine_expression/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+classicfy-ai/analysis/era_refine_tempo/** -text
+classicfy-ai/analysis/era_refine_tempo/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+classicfy-ai/analysis/performance_style_full/** -text
+classicfy-ai/analysis/performance_style_full/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
