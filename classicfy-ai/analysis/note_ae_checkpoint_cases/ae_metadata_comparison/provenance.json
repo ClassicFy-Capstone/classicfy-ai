@@ -1,0 +1,163 @@
+{
+  "anchor": {
+    "performance_id": "ATEPP:00957",
+    "record_key": "00957",
+    "recording_id": "4779f2504f65eb744db72c66aa295a4f86658f7666e2e30db711d698a8ca5d84",
+    "work": "ATEPP/214",
+    "split": "test",
+    "artist": "Vladimir Horowitz",
+    "composer": "Robert Schumann",
+    "title": "Kreisleriana, Op.16: 6. Sehr langsam",
+    "era": "낭만",
+    "group": "anchor",
+    "global_rank": "0",
+    "cosine_distance": "2.886579864025407e-15",
+    "windows": "5",
+    "selected": "False"
+  },
+  "selected": [
+    {
+      "performance_id": "ATEPP:00460",
+      "record_key": "00460",
+      "recording_id": "9b817a23a29e6f956ca723245ba2f4e865f0fbaaf0c20c1c210dccaa3530d49f",
+      "work": "ATEPP/127",
+      "split": "train",
+      "artist": "Vladimir Horowitz",
+      "composer": "Alexander Scriabin",
+      "title": "12 Études, Op. 8: No. 11 in B-Flat Minor",
+      "era": "낭만 / 근대",
+      "global_rank": 14,
+      "cosine_distance": 0.1241869497147916,
+      "windows": 6,
+      "selected": true,
+      "source_metadata_group": "same_era_other_composer",
+      "label": "1",
+      "condition": "같은 연주자",
+      "pool_count": 109,
+      "same_artist": true,
+      "same_composer": false,
+      "same_era": true
+    },
+    {
+      "performance_id": "ATEPP:01008",
+      "record_key": "01008",
+      "recording_id": "ad7409d04af5b5342ba0d3e4ed1a89905299dee5cc1333d2f86ae1e9fc34da5e",
+      "work": "ATEPP/215",
+      "split": "train",
+      "artist": "Radu Lupu",
+      "composer": "Robert Schumann",
+      "title": "Kreisleriana, Op. 16: 2. Sehr innig und nicht zu rasch - Intermezzo I (Sehr lebhaft) - Tempo I - Intermezzo II (Etwas bewegter) - Tempo I",
+      "era": "낭만",
+      "global_rank": 1,
+      "cosine_distance": 0.05173910600583054,
+      "windows": 27,
+      "selected": true,
+      "source_metadata_group": "same_composer",
+      "label": "2",
+      "condition": "같은 작곡가",
+      "pool_count": 128,
+      "same_artist": false,
+      "same_composer": true,
+      "same_era": true
+    },
+    {
+      "performance_id": "ATEPP:00315",
+      "record_key": "00315",
+      "recording_id": "ba60e45da66e30ff17258085d9a5ce2285e830870b9b595e311fe0cf4419413f",
+      "work": "ATEPP/96",
+      "split": "validation",
+      "artist": "Lazar Berman",
+      "composer": "Franz Liszt",
+      "title": "Harmonies poétiques et religieuses III, S. 173: No. 7, Funérailloes",
+      "era": "낭만",
+      "global_rank": 2,
+      "cosine_distance": 0.06713671156255185,
+      "windows": 24,
+      "selected": true,
+      "source_metadata_group": "same_era_other_composer",
+      "label": "3",
+      "condition": "같은 시대",
+      "pool_count": 1963,
+      "same_artist": false,
+      "same_composer": false,
+      "same_era": true
+    }
+  ],
+  "source_protocol_id": "e639ebaafce914dc0d9d00c75e902bb030fff8de6309687364e30ee7916761fe",
+  "checkpoint_epoch": 8,
+  "checkpoint_sha256": "2614c425bc248d04d42e45382b3d7b951c8d608436169546e981d54e11e0d5d4",
+  "catalogue_embeddings_sha256": "ba55965e5ef2e0a9842f71e094f4931b7b8e47b31840a321718a46fc6dc2d6f9",
+  "global_candidates": 2779,
+  "PCA_fit_count": 2801,
+  "PCA_variance": [
+    0.4345796692038591,
+    0.15522396378741604
+  ],
+  "projection_view": "local crop around A and 3 minima; no refitting on selected points",
+  "conditions": [
+    "same artist_id, any composer",
+    "same composer, any artist",
+    "same era overlap, different composer, any artist"
+  ],
+  "selection": "nearest original 64D cosine distance within each condition, global rank reused; no feature selection",
+  "era_mapping": {
+    "Johann Sebastian Bach": [
+      "Baroque"
+    ],
+    "Domenico Scarlatti": [
+      "Baroque"
+    ],
+    "Franz Joseph Haydn": [
+      "Classical"
+    ],
+    "Wolfgang Amadeus Mozart": [
+      "Classical"
+    ],
+    "Ludwig van Beethoven": [
+      "Classical",
+      "Romantic"
+    ],
+    "Franz Schubert": [
+      "Classical",
+      "Romantic"
+    ],
+    "Robert Schumann": [
+      "Romantic"
+    ],
+    "Franz Liszt": [
+      "Romantic"
+    ],
+    "Johannes Brahms": [
+      "Romantic"
+    ],
+    "Sergei Rachmaninoff": [
+      "Romantic",
+      "Modern"
+    ],
+    "Alexander Scriabin": [
+      "Romantic",
+      "Modern"
+    ],
+    "Claude Debussy": [
+      "Modern"
+    ],
+    "Maurice Ravel": [
+      "Modern"
+    ]
+  },
+  "verification": {
+    "passed": true,
+    "same_anchor_and_checkpoint": true,
+    "all_2779_saved_distances_recomputed": true,
+    "global_ranks_validated": true,
+    "selected_group_minima_and_scalar_dot_products_checked": true,
+    "selected_recordings_distinct_and_other_work": true
+  },
+  "limits": [
+    "one query, catalogue search including train/validation/test",
+    "unequal group sizes and overlapping group membership",
+    "no causal claim of performer/composer/era influence",
+    "same composer includes another movement of the same cycle",
+    "no listener similarity evaluation"
+  ]
+}

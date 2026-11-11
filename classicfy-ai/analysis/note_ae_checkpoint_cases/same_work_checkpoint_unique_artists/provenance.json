@@ -1,0 +1,141 @@
+{
+  "checkpoint_source": "presentation/figures/same_work_checkpoint/checkpoint.pt",
+  "snapshot_sha256": "2614c425bc248d04d42e45382b3d7b951c8d608436169546e981d54e11e0d5d4",
+  "checkpoint_epoch": 8,
+  "best_validation": 0.13213890697030253,
+  "checkpoint_policy": "snapshot of running full-corpus best.pt at invocation; reruns reuse snapshot",
+  "corpus_manifest_sha256": "53cff7d9406961f26a5914eb05ac02843f0fef177b12957ea8e08e35a3369c13",
+  "training_scope": "all 2801 accepted ATEPP recordings / 254 source works; not all raw ATEPP",
+  "selection": {
+    "anchor_policy": "fixed previous example ATEPP:00957; no embedding search",
+    "anchor": "ATEPP:00957",
+    "B": "ATEPP:00980",
+    "C": "ATEPP:00983",
+    "policy": "B/C = minimum/maximum equal-weight RMS 5D distance within same work/score/route cohort",
+    "candidate_count": 13,
+    "candidate_ids": [
+      "ATEPP:00957",
+      "ATEPP:00980",
+      "ATEPP:00983",
+      "ATEPP:00967",
+      "ATEPP:00969",
+      "ATEPP:00971",
+      "ATEPP:00972",
+      "ATEPP:00973",
+      "ATEPP:00974",
+      "ATEPP:00975",
+      "ATEPP:00977",
+      "ATEPP:00978",
+      "ATEPP:00979"
+    ],
+    "feature_scale": [
+      0.1277968591148233,
+      0.030684395157894614,
+      0.03936636500579285,
+      0.14090244084856002,
+      0.04669717576121014
+    ],
+    "scale_training_recordings": 1562,
+    "profiles_source_sha256": "907b5d26aac6855987b9985351c808f15287f023170df8b30c135b0640f53d6f",
+    "selection_uses_embedding": false,
+    "unique_artists": true,
+    "original_recording_count": 22,
+    "representative_policy": "preserve A; for each other artist_id keep minimum performance_id, before distances",
+    "excluded_ids": [
+      "ATEPP:00960",
+      "ATEPP:00962",
+      "ATEPP:00963",
+      "ATEPP:00964",
+      "ATEPP:00965",
+      "ATEPP:00966",
+      "ATEPP:00968",
+      "ATEPP:00970",
+      "ATEPP:00976"
+    ],
+    "profile_statistics": "reuse original cohort medians and train SD; deduplicate displayed/search candidates only"
+  },
+  "examples": [
+    {
+      "label": "A",
+      "performance_id": "ATEPP:00957",
+      "recording_id": "4779f2504f65eb744db72c66aa295a4f86658f7666e2e30db711d698a8ca5d84",
+      "artist": "Vladimir Horowitz",
+      "work": "ATEPP/214",
+      "feature_distance_to_A": 0.0,
+      "cosine_distance_to_A": 0.0,
+      "windows": 5,
+      "pc1": 0.27673533193135236,
+      "pc2": 0.23512263446710305,
+      "tempo": 2.047685256690814,
+      "rubato": 0.06566306062641906,
+      "dynamics": 0.9543899239560928,
+      "articulation": 0.9112737493200932,
+      "pedal": 0.28090668891228077
+    },
+    {
+      "label": "B",
+      "performance_id": "ATEPP:00980",
+      "recording_id": "03859b603c288e3cc6e25f063cd6301b7abfca285be242b2fdfccb2a1b85559f",
+      "artist": "Hélène Grimaud",
+      "work": "ATEPP/214",
+      "feature_distance_to_A": 1.1499367447733213,
+      "cosine_distance_to_A": 0.09026534291605848,
+      "windows": 5,
+      "pc1": 0.24667767123658346,
+      "pc2": -0.14591659666714762,
+      "tempo": 0.2484153281208123,
+      "rubato": -1.1122096192887128,
+      "dynamics": 1.32413326274001,
+      "articulation": -0.24306780677840245,
+      "pedal": -0.43867770102512216
+    },
+    {
+      "label": "C",
+      "performance_id": "ATEPP:00983",
+      "recording_id": "97646262454d1ba2303137b6a4632230876103981a33b46e2a6f3ae07a0ec692",
+      "artist": "Mitsuko Uchida",
+      "work": "ATEPP/214",
+      "feature_distance_to_A": 2.413874548400082,
+      "cosine_distance_to_A": 0.1707966083716015,
+      "windows": 5,
+      "pc1": -0.1955977097038373,
+      "pc2": -0.011182549172460561,
+      "tempo": -2.5484779829438273,
+      "rubato": 1.5038585812520477,
+      "dynamics": -0.8605889905915675,
+      "articulation": -0.61337604193944,
+      "pedal": -0.28665242687367304
+    }
+  ],
+  "embedding": "equal-window mean of unit e over every full 8-bar window, then L2 normalized; tail excluded",
+  "profile": "whole-record summary minus same work/score/route median, divided by existing eligible train residual SD",
+  "profile_definitions": [
+    "median valid beat log2 QPM",
+    "median absolute deviation from own median log2 QPM",
+    "mean attack velocity_unit",
+    "mean attack articulation_log2_ratio",
+    "mean attack sustain_onset_unit"
+  ],
+  "PCA_variance": [
+    0.562374082919602,
+    0.25230418624804973
+  ],
+  "distance_order_agrees": true,
+  "verification": {
+    "passed": true,
+    "checkpoint_corpus_contract": true,
+    "source_R_hashes_and_recomputed_summaries": 13,
+    "all_cohort_candidates_plotted": true,
+    "unit_pooled_embeddings": true,
+    "distinct_recordings": true,
+    "feature_only_extrema": true,
+    "one_recording_per_artist_id": true
+  },
+  "limits": [
+    "one fixed anchor, not dataset-wide performance",
+    "no listening evaluation",
+    "whole-record feature vs full-window-only embedding coverage differs",
+    "one point per recording does not measure repeated-sample cluster separation",
+    "descriptive heldout cohort medians use the collected heldout recordings"
+  ]
+}

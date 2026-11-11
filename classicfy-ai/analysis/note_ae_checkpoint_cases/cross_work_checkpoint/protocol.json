@@ -1,0 +1,60 @@
+{
+  "checkpoint_sha256": "2614c425bc248d04d42e45382b3d7b951c8d608436169546e981d54e11e0d5d4",
+  "corpus_sha256": "53cff7d9406961f26a5914eb05ac02843f0fef177b12957ea8e08e35a3369c13",
+  "anchor": "ATEPP:00957",
+  "era_mapping": {
+    "Johann Sebastian Bach": [
+      "Baroque"
+    ],
+    "Domenico Scarlatti": [
+      "Baroque"
+    ],
+    "Franz Joseph Haydn": [
+      "Classical"
+    ],
+    "Wolfgang Amadeus Mozart": [
+      "Classical"
+    ],
+    "Ludwig van Beethoven": [
+      "Classical",
+      "Romantic"
+    ],
+    "Franz Schubert": [
+      "Classical",
+      "Romantic"
+    ],
+    "Robert Schumann": [
+      "Romantic"
+    ],
+    "Franz Liszt": [
+      "Romantic"
+    ],
+    "Johannes Brahms": [
+      "Romantic"
+    ],
+    "Sergei Rachmaninoff": [
+      "Romantic",
+      "Modern"
+    ],
+    "Alexander Scriabin": [
+      "Romantic",
+      "Modern"
+    ],
+    "Claude Debussy": [
+      "Modern"
+    ],
+    "Maurice Ravel": [
+      "Modern"
+    ]
+  },
+  "era_policy": "sets may overlap; any Romantic overlap counts as same era, including Beethoven; no labels used in embedding ranking",
+  "scope": "one anchor searches every indexed accepted recording across train/validation/test; catalogue demo, not heldout evaluation",
+  "aggregation": "mean ALL full-window unit e in q_start order, then L2 normalize",
+  "distance": "64D cosine to the exact anchor vector of the previous figure",
+  "selection": "global different-work ranking, then group minima; no feature filtering",
+  "era_sources": [
+    "https://www.classicsforkids.com/musical-genres/",
+    "https://www.esm.rochester.edu/beethoven/transitional-composer-and-heroic-objective/"
+  ],
+  "id": "e639ebaafce914dc0d9d00c75e902bb030fff8de6309687364e30ee7916761fe"
+}

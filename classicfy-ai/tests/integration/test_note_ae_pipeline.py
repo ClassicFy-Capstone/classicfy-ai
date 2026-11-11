@@ -206,6 +206,10 @@ class NoteAEPipelineTest(XMLFixture):
         legacy = torch.load(path, weights_only=True)
         legacy['model_config'].pop('mean_tempo_auxiliary')
         legacy['training_config'].pop('beta_mean_tempo')
+        for key in tuple(legacy['training_config']):
+            if key.startswith('lr_scheduler'):
+                legacy['training_config'].pop(key)
+        legacy.pop('lr_scheduler_state')
         torch.save(legacy, path)
         resumed, _ = train_note_ae(corpus, self.folder / 'resumed', config=cfg, model_config=self.mc, score_config=self.sc, resume=self.folder / 'first/last.pt')
         for k, value in full.state_dict().items():
@@ -288,3 +292,35 @@ class NoteAEPipelineTest(XMLFixture):
         self.assertEqual(sum(row['reconstruction_window_exposures'].values()), 6)
         self.assertTrue(np.isfinite(row['style_loss']))
         self.assertEqual(report['g_dependencies']['triplets'], t['id'])
+
+    def test_plateau_steps_after_validation_and_logs_used_and_next_lr(self):
+        corpus, _ = self.corpus()
+        cfg = replace(self.tc, epochs=4, max_steps_per_epoch=0, lr_scheduler='plateau',
+                      lr_scheduler_patience=1, lr_scheduler_factor=.5)
+
+        def evaluate(model, dataset, collate, config):
+            model.eval()
+            return {'loss': 1., 'windows': len(dataset)}
+
+        with patch('embedding.note_ae_training.evaluate_note_ae', side_effect=evaluate):
+            _, report = train_note_ae(corpus, self.folder / 'plateau', config=cfg, model_config=self.mc, score_config=self.sc)
+        self.assertEqual([r['learning_rate'][0] for r in report['history']], [.01, .01, .01, .005])
+        self.assertEqual([r['next_learning_rate'][0] for r in report['history']], [.01, .01, .005, .005])
+        _, payload, _, _ = load_note_ae_model(self.folder / 'plateau/last.pt', corpus=corpus)
+        self.assertEqual(payload['lr_scheduler_state']['last_epoch'], 4)
+        self.assertEqual(payload['optimizer']['param_groups'][0]['lr'], .005)
+
+    def test_plateau_state_resumes_exactly_across_lr_change(self):
+        corpus, _ = self.corpus()
+        cfg = replace(self.tc, epochs=3, max_steps_per_epoch=0, lr_scheduler='plateau',
+                      lr_scheduler_patience=0, lr_scheduler_threshold=100.)
+        full, _ = train_note_ae(corpus, self.folder / 'lr-full', config=cfg, model_config=self.mc, score_config=self.sc)
+        train_note_ae(corpus, self.folder / 'lr-first', config=replace(cfg, epochs=2), model_config=self.mc, score_config=self.sc)
+        resumed, report = train_note_ae(corpus, self.folder / 'lr-resume', config=cfg, model_config=self.mc,
+            score_config=self.sc, resume=self.folder / 'lr-first/last.pt')
+        self.assertEqual(report['history'][0]['learning_rate'], [.005])
+        for key, value in full.state_dict().items():
+            torch.testing.assert_close(value, resumed.state_dict()[key], rtol=0, atol=0)
+        a = torch.load(self.folder / 'lr-full/last.pt', weights_only=True)
+        b = torch.load(self.folder / 'lr-resume/last.pt', weights_only=True)
+        self.assertEqual(a['lr_scheduler_state'], b['lr_scheduler_state'])

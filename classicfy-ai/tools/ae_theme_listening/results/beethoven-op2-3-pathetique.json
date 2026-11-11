@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "beethoven-op2-3-pathetique",
+  "near_clip": "6d2a23930702c1e8",
+  "far_clip": "25255f75d428c560",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 41,
+  "recordings": {
+    "1b416a48efc067c0": {
+      "performance_id": "ATEPP:06208",
+      "artist": "Lang Lang",
+      "title": "Piano Sonata No. 3 in C Major, Op. 2 No. 3: II. Adagio",
+      "album": "Live in Vienna",
+      "album_date": "2010-08-23"
+    },
+    "6d2a23930702c1e8": {
+      "performance_id": "ATEPP:08080",
+      "artist": "Radu Lupu",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": 2. Adagio cantabile",
+      "album": "Radu Lupu plays Beethoven",
+      "album_date": "2005-01-01"
+    },
+    "25255f75d428c560": {
+      "performance_id": "ATEPP:08082",
+      "artist": "Wilhelm Kempff",
+      "title": "Sonata No. 8 in C Minor, Op. 13 'Pathetique': II. Adagio cantabile",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "6d2a23930702c1e8",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.03482592228457104,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "25255f75d428c560",
+      "role": "far",
+      "global_rank": 424,
+      "cosine_distance_to_anchor": 0.21402306688867778,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

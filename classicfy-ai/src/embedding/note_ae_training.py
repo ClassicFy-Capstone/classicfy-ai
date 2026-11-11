@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import random
+import time
 
 import numpy as np
 import torch
@@ -41,18 +42,25 @@ class NoteAETrainingConfig:
     early_stopping_patience: int = 0
     early_stopping_min_delta: float = 0.
     evaluate_train_each_epoch: bool = False
+    lr_scheduler: str = 'none'
+    lr_scheduler_factor: float = .5
+    lr_scheduler_patience: int = 5
+    lr_scheduler_threshold: float = 1e-4
+    lr_scheduler_min_lr: float = 1e-5
+    bucket_by_length: bool = False
 
     def __post_init__(self):
         for key in ('epochs', 'batch_size', 'triplet_batch_size', 'torch_threads'):
             value = getattr(self, key)
             if isinstance(value, bool) or not isinstance(value, int) or value < 1:
                 raise ValueError('Positive integer training sizes required')
-        for key in ('seed', 'max_steps_per_epoch', 'max_validation_batches', 'early_stopping_patience'):
+        for key in ('seed', 'max_steps_per_epoch', 'max_validation_batches', 'early_stopping_patience',
+                    'lr_scheduler_patience'):
             value = getattr(self, key)
             if isinstance(value, bool) or not isinstance(value, int) or value < 0:
                 raise ValueError('Nonnegative integer seed/limits required')
         for key in ('learning_rate', 'gradient_clip', 'huber_delta', 'weight_decay', 'margin', 'lambda_style',
-                    'beta_mean_tempo', 'early_stopping_min_delta'):
+                    'beta_mean_tempo', 'early_stopping_min_delta', 'lr_scheduler_threshold', 'lr_scheduler_min_lr'):
             value = getattr(self, key)
             if not math.isfinite(value) or value < 0 or (key in {'learning_rate', 'gradient_clip', 'huber_delta'} and value == 0):
                 raise ValueError('Invalid optimizer or loss setting')
@@ -60,6 +68,13 @@ class NoteAETrainingConfig:
             raise ValueError('Supported devices are cpu, cuda and mps')
         if not isinstance(self.evaluate_train_each_epoch, bool):
             raise ValueError('evaluate_train_each_epoch must be boolean')
+        if not isinstance(self.bucket_by_length, bool):
+            raise ValueError('bucket_by_length must be boolean')
+        if (self.lr_scheduler not in {'none', 'plateau'} or not math.isfinite(self.lr_scheduler_factor)
+                or not 0 < self.lr_scheduler_factor < 1):
+            raise ValueError('Expected none/plateau scheduler and factor strictly between zero and one')
+        if self.lr_scheduler == 'plateau' and self.lr_scheduler_min_lr > self.learning_rate:
+            raise ValueError('Scheduler min_lr cannot exceed the initial learning rate')
 
 
 def ae_schema():
@@ -76,8 +91,37 @@ def seed_run(config):
     torch.set_num_threads(config.torch_threads)
 
 
-def _loader(dataset, size, collate, *, shuffle=False, generator=None):
-    return DataLoader(dataset, batch_size=size, shuffle=shuffle, collate_fn=collate, generator=generator if generator is not None else torch.Generator().manual_seed(0), num_workers=0)
+class LengthBucketBatches:
+    """Reduce padding while exposing each window exactly once, including tails."""
+
+    def __init__(self, dataset, size, *, shuffle, generator):
+        self.lengths = [v['window']['N'] for v in dataset.items]
+        self.size, self.shuffle, self.generator = size, shuffle, generator
+
+    def __len__(self):
+        return (len(self.lengths) + self.size - 1) // self.size
+
+    def __iter__(self):
+        if not self.shuffle:
+            order = sorted(range(len(self.lengths)), key=self.lengths.__getitem__)
+            yield from (order[i:i + self.size] for i in range(0, len(order), self.size))
+            return
+        order = torch.randperm(len(self.lengths), generator=self.generator).tolist()
+        batches = []
+        width = self.size * 20
+        for i in range(0, len(order), width):
+            bucket = sorted(order[i:i + width], key=self.lengths.__getitem__)
+            batches.extend(bucket[j:j + self.size] for j in range(0, len(bucket), self.size))
+        for i in torch.randperm(len(batches), generator=self.generator).tolist():
+            yield batches[i]
+
+
+def _loader(dataset, size, collate, *, shuffle=False, generator=None, bucket_by_length=False):
+    generator = generator if generator is not None else torch.Generator().manual_seed(0)
+    if bucket_by_length:
+        return DataLoader(dataset, batch_sampler=LengthBucketBatches(dataset, size, shuffle=shuffle, generator=generator),
+                          collate_fn=collate, generator=generator, num_workers=0)
+    return DataLoader(dataset, batch_size=size, shuffle=shuffle, collate_fn=collate, generator=generator, num_workers=0)
 
 
 class _RecMetrics:
@@ -129,7 +173,7 @@ def _mean_tempo_output(output, batch, delta):
 def evaluate_note_ae(model, dataset, collate, config):
     model.eval()
     metrics, latents, mean_metrics = _RecMetrics(), [], _MeanTempoMetrics()
-    for step, batch in enumerate(_loader(dataset, config.batch_size, collate)):
+    for step, batch in enumerate(_loader(dataset, config.batch_size, collate, bucket_by_length=config.bucket_by_length)):
         if config.max_validation_batches and step >= config.max_validation_batches:
             break
         batch = to_device(batch, config.device)
@@ -167,7 +211,7 @@ def _restore_rng(state):
 
 
 def save_note_ae_checkpoint(path, model, optimizer, config, corpus, *, epoch, step, triplets=None,
-                            generators=None, best_validation=None, early_stopping_state=None):
+                            generators=None, best_validation=None, early_stopping_state=None, scheduler=None):
     payload = {'schema': ae_schema(), 'model_config': asdict(model.config),
                'score_config': asdict(model.score_encoder.config), 'training_config': asdict(config),
                'model': model.state_dict(), 'optimizer': optimizer.state_dict(), 'epoch': epoch, 'step': step,
@@ -177,7 +221,8 @@ def save_note_ae_checkpoint(path, model, optimizer, config, corpus, *, epoch, st
                'g_dependencies': triplets.dependencies if triplets is not None else {},
                'generators': {k: g.get_state() for k, g in (generators or {}).items()},
                'best_validation': best_validation, 'checkpoint_boundary': 'completed epoch',
-               'early_stopping_state': early_stopping_state or {'significant_best': None, 'bad_epochs': 0}}
+               'early_stopping_state': early_stopping_state or {'significant_best': None, 'bad_epochs': 0},
+               'lr_scheduler_state': scheduler.state_dict() if scheduler is not None else None}
     path = Path(path)
     temporary = path.with_suffix(path.suffix + '.tmp')
     torch.save(payload, temporary)
@@ -225,12 +270,18 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
         raise ValueError('No observed full eight-bar train windows')
     if config.early_stopping_patience and not len(validation):
         raise ValueError('Validation early stopping requires validation windows')
+    if config.lr_scheduler == 'plateau' and not len(validation):
+        raise ValueError('Validation plateau scheduler requires validation windows')
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     model = NotePerformanceAutoencoder(model_config, score_config).to(config.device)
     model.r_scaler_fingerprint = corpus.r_scaler.fingerprint
     model.score_scale_fingerprint = stable_id(asdict(corpus.score_scale))
     optimizer = torch.optim.AdamW((p for p in model.parameters() if p.requires_grad), lr=config.learning_rate, weight_decay=config.weight_decay)
+    scheduler = (torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, mode='min', factor=config.lr_scheduler_factor, patience=config.lr_scheduler_patience,
+        threshold=config.lr_scheduler_threshold, threshold_mode='abs', min_lr=config.lr_scheduler_min_lr)
+        if config.lr_scheduler == 'plateau' else None)
     generators = {key: torch.Generator().manual_seed(config.seed + i) for i, key in enumerate(('reconstruction', 'style'))}
     start_epoch, step, best = 0, 0, None
     stopping = {'significant_best': None, 'bad_epochs': 0}
@@ -243,6 +294,10 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
             raise ValueError('Resume model/training/g configuration mismatch')
         model.load_state_dict(payload['model'])
         optimizer.load_state_dict(payload['optimizer'])
+        if scheduler is not None:
+            if payload.get('lr_scheduler_state') is None:
+                raise ValueError('Scheduler resume requires its saved state')
+            scheduler.load_state_dict(payload['lr_scheduler_state'])
         _restore_rng(payload['rng'])
         for k, g in generators.items():
             g.set_state(payload['generators'][k])
@@ -252,15 +307,21 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
             raise ValueError('Checkpoint already reached its validation early stopping limit')
     if config.epochs <= start_epoch:
         raise ValueError('Resume epoch limit must exceed the completed checkpoint epoch')
-    rec_loader = _loader(train, config.batch_size, corpus.collate, shuffle=True, generator=generators['reconstruction'])
+    rec_loader = _loader(train, config.batch_size, corpus.collate, shuffle=True, generator=generators['reconstruction'],
+                         bucket_by_length=config.bucket_by_length)
     style_loader = (_loader(triplets, config.triplet_batch_size, triplets.collate, shuffle=True, generator=generators['style'])
                     if triplets is not None and len(triplets) and config.lambda_style > 0 else None)
+    print(json.dumps({'stage': 'initial_train_evaluation', 'windows': len(train)}), flush=True)
     initial = evaluate_note_ae(model, train, corpus.collate, config)
     history = []
     expected_windows = Counter(item['window']['window_id'] for item in train.items)
     stop_reason = 'max_epochs'
     for epoch in range(start_epoch, config.epochs):
+        epoch_started = time.perf_counter()
+        print(json.dumps({'stage': 'training', 'epoch': epoch + 1, 'batches': len(rec_loader),
+                          'windows': len(train)}), flush=True)
         model.train()
+        epoch_lr = [float(group['lr']) for group in optimizer.param_groups]
         mean_metrics = _MeanTempoMetrics()
         metrics, style_sum, active_sum, dap_sum, dan_sum, margin_sum = _RecMetrics(), 0., 0., 0., 0., 0.
         total_sum, updates, exposed, cycles, skipped = 0., 0, 0, 0, 0
@@ -315,11 +376,22 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
             total_sum += float(loss.detach())
             updates += 1
             step += 1
+            if len(rec_loader) > 100 and (batch_index + 1) % 50 == 0:
+                progress = {'stage': 'training', 'epoch': epoch + 1, 'batch': batch_index + 1,
+                            'batches': len(rec_loader), 'windows_used': sum(rec_ids.values()),
+                            'windows_expected': len(train), 'seconds': time.perf_counter() - epoch_started}
+                (out / 'progress.json').write_text(json.dumps(progress))
+                print(json.dumps(progress), flush=True)
+        print(json.dumps({'stage': 'validation', 'epoch': epoch + 1, 'windows': len(validation)}), flush=True)
         validation_metrics = evaluate_note_ae(model, validation, corpus.collate, config)
         score = validation_metrics['loss']
         improved = score is not None and (best is None or score < best)
         if improved:
             best = score
+        if scheduler is not None:
+            if score is None:
+                raise ValueError('Plateau scheduler requires an observed validation reconstruction loss')
+            scheduler.step(score)
         if config.early_stopping_patience:
             if score is None:
                 raise ValueError('Early stopping requires an observed validation reconstruction loss')
@@ -338,6 +410,7 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
         train_metrics = metrics.result()
         z = torch.cat(latents) if latents else None
         row = {'epoch': epoch + 1, 'step': step, 'reconstruction': train_metrics, 'validation': validation_metrics,
+               'learning_rate': epoch_lr, 'next_learning_rate': [float(group['lr']) for group in optimizer.param_groups],
                'full_train_evaluation': full_train, 'early_stopping_state': stopping.copy(),
                'complete_train_epoch': complete_epoch,
                'mean_tempo_auxiliary': mean_metrics.result() if model_config.mean_tempo_auxiliary else None,
@@ -354,14 +427,19 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                'z_norm_mean': float(z.norm(dim=-1).mean()) if z is not None else None,
                'embedding_variance': float(z.var(dim=0, unbiased=False).mean()) if z is not None else None}
         history.append(row)
+        with (out / 'epochs.jsonl').open('a') as stream:
+            stream.write(json.dumps(row, allow_nan=False) + '\n')
         save_note_ae_checkpoint(out / 'last.pt', model, optimizer, config, corpus, epoch=epoch + 1, step=step,
-                                triplets=triplets, generators=generators, best_validation=best, early_stopping_state=stopping)
+                                triplets=triplets, generators=generators, best_validation=best, early_stopping_state=stopping,
+                                scheduler=scheduler)
         if improved:
             save_note_ae_checkpoint(out / 'best.pt', model, optimizer, config, corpus, epoch=epoch + 1, step=step,
-                                    triplets=triplets, generators=generators, best_validation=best, early_stopping_state=stopping)
+                                    triplets=triplets, generators=generators, best_validation=best, early_stopping_state=stopping,
+                                    scheduler=scheduler)
         print(json.dumps({'epoch': epoch + 1, 'rec': train_metrics['loss'], 'style': row['style_loss'], 'validation': score,
                           'full_train': full_train['loss'] if full_train is not None else None,
-                          'complete_train_epoch': complete_epoch, 'bad_epochs': stopping['bad_epochs']}), flush=True)
+                          'complete_train_epoch': complete_epoch, 'bad_epochs': stopping['bad_epochs'],
+                          'learning_rate': epoch_lr, 'next_learning_rate': row['next_learning_rate']}), flush=True)
         if config.early_stopping_patience and stopping['bad_epochs'] >= config.early_stopping_patience:
             stop_reason = 'validation_early_stopping'
             break

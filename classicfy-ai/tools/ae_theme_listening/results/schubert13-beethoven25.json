@@ -1,0 +1,48 @@
+{
+  "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
+  "case_id": "schubert13-beethoven25",
+  "near_clip": "36be7cee995c6c10",
+  "far_clip": "aff6ce93791d87ac",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 19,
+  "recordings": {
+    "0581039af17d2116": {
+      "performance_id": "ATEPP:04010",
+      "artist": "Wilhelm Kempff",
+      "title": "Piano Sonata No. 13 in A Major, D. 664: II. Andante",
+      "album": "Wilhelm Kempff, Piano (Vol.2)",
+      "album_date": "2011-01-01"
+    },
+    "36be7cee995c6c10": {
+      "performance_id": "ATEPP:07164",
+      "artist": "Daniel Barenboim",
+      "title": "Piano Sonata No. 25 in G Major, Op. 79 \"Sonatina\": II. Andante",
+      "album": "Beethoven: Piano Sonatas Nos. 20-26",
+      "album_date": "2020-10-30"
+    },
+    "aff6ce93791d87ac": {
+      "performance_id": "ATEPP:07177",
+      "artist": "Friedrich Gulda",
+      "title": "Piano Sonata No. 25 in G Major, Op. 79: II. Andante",
+      "album": "Beethoven: Complete Piano Sonatas",
+      "album_date": "2021-07-23"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "36be7cee995c6c10",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.05725574870393979,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "aff6ce93791d87ac",
+      "role": "far",
+      "global_rank": 992,
+      "cosine_distance_to_anchor": 0.42574532075173044,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

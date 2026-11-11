@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "beethoven-op26-pathetique",
+  "near_clip": "a11d70da7484b8a6",
+  "far_clip": "25255f75d428c560",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 41,
+  "recordings": {
+    "0bc509c248ac6a73": {
+      "performance_id": "ATEPP:08197",
+      "artist": "Emil Gilels",
+      "title": "Piano Sonata No. 12 in A-Flat Major, Op. 26 \"Funeral March\": I. Andante con variazioni (Live)",
+      "album": "Beethoven, Schumann & Brahms: Piano Works (Live)",
+      "album_date": "2018-08-31"
+    },
+    "a11d70da7484b8a6": {
+      "performance_id": "ATEPP:08052",
+      "artist": "Walter Gieseking",
+      "title": "Sonata No. 8 in C Minor, Op. 13 \"Pathetique\": II. Adagio cantabile",
+      "album": "Beethoven: Sonatas No. 1 in F Minor, Op. 2 No. 1, No. 8 in C Minor, Op. 13 \"Pathètique\", No. 19 in G Minor, Op. 49 No.1 & No. 20 in G Major, Op. 49 No. 2",
+      "album_date": "2020-04-03"
+    },
+    "25255f75d428c560": {
+      "performance_id": "ATEPP:08082",
+      "artist": "Wilhelm Kempff",
+      "title": "Sonata No. 8 in C Minor, Op. 13 'Pathetique': II. Adagio cantabile",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "a11d70da7484b8a6",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.05637074615265991,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "25255f75d428c560",
+      "role": "far",
+      "global_rank": 435,
+      "cosine_distance_to_anchor": 0.23354603990499778,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

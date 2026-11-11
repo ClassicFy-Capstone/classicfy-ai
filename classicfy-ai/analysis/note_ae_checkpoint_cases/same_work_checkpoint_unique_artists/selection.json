@@ -1,0 +1,48 @@
+{
+  "anchor_policy": "fixed previous example ATEPP:00957; no embedding search",
+  "anchor": "ATEPP:00957",
+  "B": "ATEPP:00980",
+  "C": "ATEPP:00983",
+  "policy": "B/C = minimum/maximum equal-weight RMS 5D distance within same work/score/route cohort",
+  "candidate_count": 13,
+  "candidate_ids": [
+    "ATEPP:00957",
+    "ATEPP:00980",
+    "ATEPP:00983",
+    "ATEPP:00967",
+    "ATEPP:00969",
+    "ATEPP:00971",
+    "ATEPP:00972",
+    "ATEPP:00973",
+    "ATEPP:00974",
+    "ATEPP:00975",
+    "ATEPP:00977",
+    "ATEPP:00978",
+    "ATEPP:00979"
+  ],
+  "feature_scale": [
+    0.1277968591148233,
+    0.030684395157894614,
+    0.03936636500579285,
+    0.14090244084856002,
+    0.04669717576121014
+  ],
+  "scale_training_recordings": 1562,
+  "profiles_source_sha256": "907b5d26aac6855987b9985351c808f15287f023170df8b30c135b0640f53d6f",
+  "selection_uses_embedding": false,
+  "unique_artists": true,
+  "original_recording_count": 22,
+  "representative_policy": "preserve A; for each other artist_id keep minimum performance_id, before distances",
+  "excluded_ids": [
+    "ATEPP:00960",
+    "ATEPP:00962",
+    "ATEPP:00963",
+    "ATEPP:00964",
+    "ATEPP:00965",
+    "ATEPP:00966",
+    "ATEPP:00968",
+    "ATEPP:00970",
+    "ATEPP:00976"
+  ],
+  "profile_statistics": "reuse original cohort medians and train SD; deduplicate displayed/search candidates only"
+}

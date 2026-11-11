@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "unique_artists": 13,
+  "original_recordings": 22,
+  "one_representative_per_original_artist": true,
+  "representatives_ID_only_with_anchor_preserved": true,
+  "all_retained_profiles_and_64D_embeddings_exactly_unchanged": true,
+  "same_epoch8_checkpoint": true,
+  "new_feature_nearest": "ATEPP:00980",
+  "feature_farthest": "ATEPP:00983",
+  "distance_order_agrees": true
+}

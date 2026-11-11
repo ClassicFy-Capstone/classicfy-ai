@@ -50,6 +50,14 @@ def _packed(gru, inputs, lengths):
     return pad_packed_sequence(result, batch_first=True, total_length=inputs.shape[1])[0]
 
 
+def beat_groups(beat_id, mask):
+    """Group note rows by (batch row, beat ID), without per-beat device syncs."""
+    rows = mask.nonzero(as_tuple=False)
+    keys = torch.stack([rows[:, 0], beat_id[mask]], -1)
+    unique, inverse, counts = torch.unique(keys, dim=0, sorted=True, return_inverse=True, return_counts=True)
+    return rows, unique, inverse, counts
+
+
 class ConditionalNoteAutoencoder(nn.Module):
     def __init__(self, config=None):
         super().__init__()
@@ -111,18 +119,22 @@ class ConditionalNoteAutoencoder(nn.Module):
             raise ValueError('Expected beat IDs [B,N], with -1 for unavailable correspondence')
         # Only score context and the shared latent enter the decoder.
         d = _packed(self.decoder, torch.cat([condition, z[:, None].expand(-1, P.shape[1], -1)], -1), lengths)
-        keys = [torch.unique(beat_id[i, P[i] & (beat_id[i] >= 0)], sorted=True) for i in range(len(P))]
-        width = max((len(k) for k in keys), default=0)
+        rows, keys, inverse, counts = beat_groups(beat_id, P & (beat_id >= 0))
+        per_window = torch.bincount(keys[:, 0], minlength=len(P))
+        width = int(per_window.max())
         beat_values = d.new_zeros((len(P), width))
         beat_keys = beat_id.new_full((len(P), width), -1)
         beat_mask = torch.zeros_like(beat_keys, dtype=torch.bool)
         tempo = d.new_zeros((*P.shape, 1))
-        for i, ids in enumerate(keys):
-            for j, key in enumerate(ids):
-                rows = P[i] & (beat_id[i] == key)
-                value = self.tempo_head(d[i, rows].mean(0)).squeeze(-1)
-                beat_values[i, j], beat_keys[i, j], beat_mask[i, j] = value, key, True
-                tempo[i, rows, 0] = value
+        if len(keys):
+            sums = d.new_zeros((len(keys), d.shape[-1])).index_add(0, inverse, d[rows[:, 0], rows[:, 1]])
+            values = self.tempo_head(sums / counts[:, None]).squeeze(-1)
+            offsets = per_window.cumsum(0) - per_window
+            columns = torch.arange(len(keys), device=d.device) - offsets[keys[:, 0]]
+            beat_values[keys[:, 0], columns] = values
+            beat_keys[keys[:, 0], columns] = keys[:, 1]
+            beat_mask[keys[:, 0], columns] = True
+            tempo[rows[:, 0], rows[:, 1], 0] = values[inverse]
         prediction = torch.cat([tempo, self.onset_head(d), self.velocity_head(d),
                                 self.articulation_head(d), self.pedal_head(d)], -1)
         return {'R_hat': torch.where(P[..., None], prediction, 0.), 'beat_prediction': beat_values,

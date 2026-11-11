@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "beethoven-op10-1-pathetique",
+  "near_clip": "6d2a23930702c1e8",
+  "far_clip": "25255f75d428c560",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 41,
+  "recordings": {
+    "3733fd067a1dd0cd": {
+      "performance_id": "ATEPP:09162",
+      "artist": "Daniel Barenboim",
+      "title": "Piano Sonata No. 5 in C Minor, Op. 10 No. 1: II. Adagio molto",
+      "album": "Beethoven: Piano Sonatas Nos. 1-6",
+      "album_date": "2020-10-30"
+    },
+    "6d2a23930702c1e8": {
+      "performance_id": "ATEPP:08080",
+      "artist": "Radu Lupu",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": 2. Adagio cantabile",
+      "album": "Radu Lupu plays Beethoven",
+      "album_date": "2005-01-01"
+    },
+    "25255f75d428c560": {
+      "performance_id": "ATEPP:08082",
+      "artist": "Wilhelm Kempff",
+      "title": "Sonata No. 8 in C Minor, Op. 13 'Pathetique': II. Adagio cantabile",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "6d2a23930702c1e8",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.029020444749723873,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "25255f75d428c560",
+      "role": "far",
+      "global_rank": 307,
+      "cosine_distance_to_anchor": 0.16253647715233244,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

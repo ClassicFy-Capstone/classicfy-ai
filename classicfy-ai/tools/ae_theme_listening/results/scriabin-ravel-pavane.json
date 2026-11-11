@@ -1,0 +1,48 @@
+{
+  "pack_id": "8e4de6da03937c7dee796857df81186d23631279930b939c3463ff0123afb135",
+  "case_id": "scriabin-ravel-pavane",
+  "near_clip": "0565e1d5cf83466b",
+  "far_clip": "06830cb1f762c399",
+  "distance_reference": "A",
+  "distance_scope": "whole-recording mean embedding, NOT theme-only distance or evidence of perceived similarity",
+  "far_work_pool": 7,
+  "recordings": {
+    "6794a157b2d9146e": {
+      "performance_id": "ATEPP:00463",
+      "artist": "Lang Lang",
+      "title": "12 Etudes, Op. 8: No. 11 in B-Flat Minor",
+      "album": "Rachmaninoff: Piano Concerto No. 3 in D Minor, Op. 30 - Scriabin: Etudes",
+      "album_date": "2002-04-23"
+    },
+    "0565e1d5cf83466b": {
+      "performance_id": "ATEPP:10686",
+      "artist": "Anne Queffélec",
+      "title": "Ravel: Pavane pour une infante défunte, M. 19",
+      "album": "The Complete Erato Recordings",
+      "album_date": "2019-01-18"
+    },
+    "06830cb1f762c399": {
+      "performance_id": "ATEPP:10680",
+      "artist": "Robert Casadesus",
+      "title": "Pavane pour une infante défunte, M. 19",
+      "album": "Masterworks Heritage: Ravel - Complete Solo Piano Music",
+      "album_date": "1947"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "0565e1d5cf83466b",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.1137234131274113,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "06830cb1f762c399",
+      "role": "far",
+      "global_rank": 433,
+      "cosine_distance_to_anchor": 0.2911844225223289,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

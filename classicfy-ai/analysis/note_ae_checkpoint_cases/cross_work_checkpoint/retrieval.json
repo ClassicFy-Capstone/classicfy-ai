@@ -1,0 +1,192 @@
+{
+  "anchor": {
+    "performance_id": "ATEPP:00957",
+    "record_key": "00957",
+    "recording_id": "4779f2504f65eb744db72c66aa295a4f86658f7666e2e30db711d698a8ca5d84",
+    "work": "ATEPP/214",
+    "split": "test",
+    "artist": "Vladimir Horowitz",
+    "composer": "Robert Schumann",
+    "title": "Kreisleriana, Op.16: 6. Sehr langsam",
+    "era": "낭만",
+    "group": "anchor",
+    "global_rank": 0,
+    "cosine_distance": 2.886579864025407e-15,
+    "windows": 5,
+    "selected": false,
+    "feature_distance": 0.0,
+    "feature_rank": null,
+    "feature_pool_count": 2085,
+    "feature_nearest_fraction": null,
+    "feature_profile": [
+      2.047685256690814,
+      0.06566306062641906,
+      0.9543899239560928,
+      0.9112737493200932,
+      0.28090668891228077
+    ],
+    "cohort_recordings": 22,
+    "feature_profile_provisional": false
+  },
+  "selected": [
+    {
+      "performance_id": "ATEPP:01008",
+      "record_key": "01008",
+      "recording_id": "ad7409d04af5b5342ba0d3e4ed1a89905299dee5cc1333d2f86ae1e9fc34da5e",
+      "work": "ATEPP/215",
+      "split": "train",
+      "artist": "Radu Lupu",
+      "composer": "Robert Schumann",
+      "title": "Kreisleriana, Op. 16: 2. Sehr innig und nicht zu rasch - Intermezzo I (Sehr lebhaft) - Tempo I - Intermezzo II (Etwas bewegter) - Tempo I",
+      "era": "낭만",
+      "group": "same_composer",
+      "global_rank": 1,
+      "cosine_distance": 0.05173910600583054,
+      "windows": 27,
+      "selected": true,
+      "feature_distance": 1.1500170468187754,
+      "feature_rank": null,
+      "feature_pool_count": 2085,
+      "feature_nearest_fraction": null,
+      "feature_profile": [
+        0.01605691740927817,
+        -1.3477879935105472,
+        0.45411690916742276,
+        1.3981235205789666,
+        0.2743752759279046
+      ],
+      "cohort_recordings": 8,
+      "feature_profile_provisional": true
+    },
+    {
+      "performance_id": "ATEPP:00315",
+      "record_key": "00315",
+      "recording_id": "ba60e45da66e30ff17258085d9a5ce2285e830870b9b595e311fe0cf4419413f",
+      "work": "ATEPP/96",
+      "split": "validation",
+      "artist": "Lazar Berman",
+      "composer": "Franz Liszt",
+      "title": "Harmonies poétiques et religieuses III, S. 173: No. 7, Funérailloes",
+      "era": "낭만",
+      "group": "same_era_other_composer",
+      "global_rank": 2,
+      "cosine_distance": 0.06713671156255185,
+      "windows": 24,
+      "selected": true,
+      "feature_distance": 2.1778172600897046,
+      "feature_rank": null,
+      "feature_pool_count": 2085,
+      "feature_nearest_fraction": null,
+      "feature_profile": [
+        0.6215258349723228,
+        4.605896584767237,
+        0.050709605026654406,
+        1.3476843865060135,
+        0.036577855646256055
+      ],
+      "cohort_recordings": 4,
+      "feature_profile_provisional": true
+    },
+    {
+      "performance_id": "ATEPP:03082",
+      "record_key": "03082",
+      "recording_id": "fb2a0f3d2a306eed5627be2b6d366cf5947ff5202fd15629e4db90dec3a79609",
+      "work": "ATEPP/653",
+      "split": "train",
+      "artist": "Claudio Arrau",
+      "composer": "Claude Debussy",
+      "title": "Suite bergamasque, L.75: 1. Prélude",
+      "era": "근대",
+      "group": "different_era_other_composer",
+      "global_rank": 4,
+      "cosine_distance": 0.09799236878364992,
+      "windows": 11,
+      "selected": true,
+      "feature_distance": 3.025995005734327,
+      "feature_rank": 2074,
+      "feature_pool_count": 2085,
+      "feature_nearest_fraction": 0.9947242206235012,
+      "feature_profile": [
+        -4.397107521483306,
+        1.4793172046193566,
+        1.8691986618464853,
+        1.5292653938302496,
+        1.2961249815009985
+      ],
+      "cohort_recordings": 10,
+      "feature_profile_provisional": false
+    }
+  ],
+  "candidate_count": 2779,
+  "candidate_works": 253,
+  "all_recordings": 2801,
+  "excluded_same_work_count": 22,
+  "candidate_splits": {
+    "train": 2070,
+    "validation": 314,
+    "test": 395
+  },
+  "group_sizes": {
+    "same_composer": 128,
+    "same_era_other_composer": 1963,
+    "different_era_other_composer": 688
+  },
+  "selection": "rank ALL different-work recordings first; take first member of each metadata group",
+  "anchor_embedding_reused_from_previous_figure": true,
+  "anchor_fresh_inference_matches_previous": true,
+  "work_definition": "existing movement-level work_id; other movements of same cycle remain candidates",
+  "feature_verification": [
+    {
+      "performance_id": "ATEPP:00957",
+      "current_R_sha256": "07af57e7438e290960f3e4ec0c5338bb1ae20db100b1f97bd806edbe3c02f47c",
+      "current_summary_matches_previous_feature_source": true,
+      "current_summary_recomputed": true,
+      "cohort_count": 22
+    },
+    {
+      "performance_id": "ATEPP:01008",
+      "current_R_sha256": "6e526069126abdc5ab838e6f8ccfa5642a1ac4570ac7fc178f8b343ef28fd742",
+      "current_summary_matches_previous_feature_source": false,
+      "current_summary_recomputed": true,
+      "cohort_count": 8
+    },
+    {
+      "performance_id": "ATEPP:00315",
+      "current_R_sha256": "5f2bf9b3b476392afc7dfb40ed124cef5ed1c1a70064d08d129a634914ed1e16",
+      "current_summary_matches_previous_feature_source": false,
+      "current_summary_recomputed": true,
+      "cohort_count": 4
+    },
+    {
+      "performance_id": "ATEPP:03082",
+      "current_R_sha256": "9dea8f83028c3c7bbfd8b84a344d452d4d36d56af483ff433256901fee99e40e",
+      "current_summary_matches_previous_feature_source": true,
+      "current_summary_recomputed": true,
+      "cohort_count": 10
+    }
+  ],
+  "feature_pool_count": 2085,
+  "feature_scale": [
+    0.1277968591148233,
+    0.030684395157894614,
+    0.03936636500579285,
+    0.14090244084856002,
+    0.04669717576121014
+  ],
+  "conclusion": "작곡가·시대가 다른 후보가 전체 4위에 등장하지만, 상대 feature 프로필은 A와 멀다.",
+  "protocol_id": "e639ebaafce914dc0d9d00c75e902bb030fff8de6309687364e30ee7916761fe",
+  "verification": {
+    "passed": true,
+    "entire_2801_recording_corpus_encoded": true,
+    "checkpoint_and_corpus_hash_checked": true,
+    "checkpoint_corpus_scaler_contract_checked": true,
+    "same_anchor_and_same_checkpoint_as_previous_figure": true,
+    "every_full_window_used_once": true,
+    "metadata_filter_applied_after_global_ranking": true,
+    "three_true_group_minima": true,
+    "no_feature_based_candidate_substitution": true,
+    "selected_current_R_summaries_recomputed": true,
+    "previously_eligible_profiles_matched": true,
+    "low_count_profiles_marked_provisional": true
+  }
+}
