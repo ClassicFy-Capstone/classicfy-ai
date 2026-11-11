@@ -3,13 +3,13 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Classicfy · 연주 청취 비교</title><link rel="stylesheet" href="style.css"></head>
 <body><main>
-<header><span class="brand">CLASSICFY · LISTENING</span><h1>귀로 느낀 연주 차이를 기록해 주세요.</h1><p class="lead">임베딩 결과를 보기 전에, 각자 두 구간을 듣고 판단합니다.</p></header>
+<header><span class="brand">CLASSICFY · LISTENING</span><h1 id="page-title">귀로 느낀 연주 차이를 기록해 주세요.</h1><p id="page-lead" class="lead">임베딩 결과를 보기 전에, 각자 두 구간을 듣고 판단합니다.</p></header>
 <section id="welcome" class="panel">
 <h2>같은 조건으로, 독립적으로</h2>
-<p>총 <strong id="task-count">11</strong>문항 · 약 25–35분. 세 팀원은 서로 다른 참가자 번호를 사용하고, 평가가 끝나기 전에는 답을 상의하지 않습니다.</p>
+<p id="study-intro">총 <strong id="task-count">11</strong>문항 · 약 25–35분. 세 팀원은 서로 다른 참가자 번호를 사용하고, 평가가 끝나기 전에는 답을 상의하지 않습니다.</p>
 <p>같은 헤드폰과 편안한 볼륨, 재생 속도 1배를 유지하세요. 개별 녹음의 음량을 따로 맞추지 마세요. 잘하는 연주나 마음에 드는 연주를 고르는 질문은 아닙니다.</p>
 <div class="guide"><h3>들어볼 다섯 가지</h3><dl><dt>Tempo</dt><dd>전체적인 빠르기</dd><dt>Rubato</dt><dd>국소적으로 빨라지고 느려지는 느낌</dd><dt>Dynamics</dt><dd>강약의 크기와 대비</dd><dt>Articulation</dt><dd>음을 이어가거나 분리하는 느낌</dd><dt>Pedaling</dt><dd>잔향과 울림의 겹침</dd></dl></div>
-<p><b>차이 척도:</b> 1 거의 없음 · 2 작은 차이 · 3 분명한 차이 · 4 큰 차이 · 5 매우 큰 차이. 듣기 어렵다면 ‘판단 어려움’을 선택하세요.</p>
+<p id="rating-guide"><b>차이 척도:</b> 1 거의 없음 · 2 작은 차이 · 3 분명한 차이 · 4 큰 차이 · 5 매우 큰 차이. 듣기 어렵다면 ‘판단 어려움’을 선택하세요.</p>
 <div class="actions"><label for="participant">참가자</label><select id="participant"><option value="">선택해 주세요</option><option value="P1">P1</option><option value="P2">P2</option><option value="P3">P3</option></select><button id="start" class="primary">평가 시작 / 이어하기</button></div>
 <p class="muted">응답은 이 브라우저에 임시 저장됩니다. 마지막에 JSON과 CSV를 내려받아 진행자에게 전달하세요. 응답을 서버로 전송하지 않습니다.</p>
 <details><summary>다른 컴퓨터에서 이어하기</summary><p>이전에 저장한 응답 JSON을 불러온 뒤 참가자를 선택하세요.</p><input id="import" type="file" accept=".json,application/json" aria-label="이전 응답 JSON 불러오기"></details>
@@ -22,7 +22,7 @@
 <div class="actions"><button id="prev">이전</button><button id="next" class="primary">다음</button><button id="export-json">응답 JSON 저장</button><button id="export-csv">CSV 저장</button><button id="exit" class="text-button">참가자 선택으로</button></div>
 <p id="message" class="error" role="alert"></p>
 </section>
-<section id="done" class="panel hidden"><span class="badge">평가 완료</span><h2>응답을 내려받아 주세요.</h2><p>세 명의 독립 응답을 모은 뒤, 진행자 분석에서 임베딩 결과와 비교합니다. 동점과 판단 어려움도 그대로 포함합니다.</p><p id="completion"></p><div class="actions"><button id="finish-json" class="primary">응답 JSON 저장</button><button id="finish-csv">CSV 저장</button><button id="back">평가 다시 확인</button><button id="home">참가자 선택으로</button></div></section>
+<section id="done" class="panel hidden"><span class="badge">평가 완료</span><h2>응답을 내려받아 주세요.</h2><p>세 명의 독립 응답을 모은 뒤, 진행자 분석에서 임베딩 결과와 비교합니다. 동점과 판단 어려움도 그대로 포함합니다.</p><p id="completion"></p><div class="actions"><button id="finish-json" class="primary">응답 JSON 저장</button><button id="finish-csv">CSV 저장</button><button id="back">평가 다시 확인</button><button id="home">참가자 선택으로</button></div><div id="feedback-section" class="hidden"><p id="feedback-message" class="muted"></p><button id="reveal-feedback">내 응답과 임베딩 기준 비교</button><div id="feedback-result" aria-live="polite"></div></div></section>
 <p id="global-message" class="error" role="alert"></p>
 <footer>실제 피아노 녹음 · <a href="https://magenta.withgoogle.com/datasets/maestro">MAESTRO v2.0.0</a> / <a href="https://github.com/fosfrancesco/asap-dataset">ASAP</a> · <a href="LICENSE.txt">CC BY-NC-SA 4.0</a><br>발췌 이외에 음량·속도·샘플레이트를 바꾸지 않았습니다.</footer>
 </main><script src="study.js"></script><script src="app.js"></script></body></html>

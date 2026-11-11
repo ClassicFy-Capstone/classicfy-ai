@@ -1,11 +1,13 @@
 """Guard against wrong-work retrieval and off-by-one theme/audio excerpts."""
 
 import json
+from collections import Counter
 from pathlib import Path
 import sys
 import tempfile
 from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 from zipfile import ZipFile
 
 import numpy as np
@@ -93,14 +95,25 @@ class AEThemeListeningTest(unittest.TestCase):
             self.assertEqual(theme_bounds(source, annotation), (0., 6.))
 
     def test_initial_rest_omission_is_explicit_and_uses_the_score_attack(self):
-        themes = json.loads((AI / "analysis/ae_theme_listening/themes.json").read_text())
-        pack = json.loads((AI / "analysis/ae_theme_listening/listening.json").read_text())
-        self.assertTrue(themes["works"]["ATEPP/655"]["omit_initial_rests"])
-        self.assertTrue(themes["works"]["ATEPP/667"]["omit_initial_rests"])
-        self.assertEqual(pack["clips"]["ATEPP:03108"]["q_start"], .5)
-        self.assertEqual(pack["clips"]["ATEPP:03190"]["q_start"], 2.5)
-        # The Moonlight melody follows the accompaniment introduction.
-        self.assertEqual(pack["clips"]["ATEPP:08945"]["q_start"], 16.)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            xml = root / "score.xml"
+            xml.write_text('<score-partwise><part id="P1"><measure number="1"/>'
+                           '<measure number="2"/></part></score-partwise>')
+            windows = root / "windows.json"
+            windows.write_text(json.dumps([{"measure_visits": [
+                {"key": "0@1", "q_start": "0", "duration_q": "4"},
+                {"key": "1@1", "q_start": "4", "duration_q": "4"}]}]))
+            source = dict(xml_path=xml, windows_file=windows, windows_sha256=file_sha(windows))
+            annotation = dict(score_sha256=file_sha(xml), xml_measure_start="1",
+                              xml_measure_end_inclusive="2", omit_initial_rests=True)
+            # Keep the original boundary contract independent of the changing playlist.
+            for first_attack in (.5, 2.5):
+                score = SimpleNamespace(notes=[SimpleNamespace(onset=first_attack)])
+                with patch('prepare_ae_theme_listening.read_musicxml', return_value=score):
+                    self.assertEqual(theme_bounds(source, annotation), (first_attack, 8.))
+            annotation["omit_initial_rests"] = False
+            self.assertEqual(theme_bounds(source, annotation), (0., 8.))
 
     def test_no_silent_clamping_extrapolation_or_invalid_beat_interpolation(self):
         performance = SimpleNamespace(metadata=[], beats=SimpleNamespace(
@@ -117,10 +130,15 @@ class AEThemeListeningTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 youtube_id(link)
 
-    def test_prepared_pack_matches_fixed_epoch_and_real_theme_bounds(self):
+    def test_prepared_pack_matches_selected_segment_protocol(self):
         pack = json.loads((AI / "analysis/ae_theme_listening/listening.json").read_text())
-        self.assertEqual(pack["model"]["epoch"], 100)
-        self.assertEqual(pack["catalogue"]["full_windows"], 67542)
+        protocol = json.loads((AI / "analysis/ae_theme_listening/selected_segment_protocol.json").read_text())
+        self.assertEqual(pack["model"], protocol["model"])
+        self.assertEqual(pack["model"]["epoch"], 14)
+        self.assertEqual(pack["model"]["pooling"],
+                         "one complete selected segment per performance; unit normalized latent")
+        self.assertEqual(Counter(case["era"] for case in pack["cases"]),
+                         {"바로크": 2, "고전": 2, "낭만": 4, "인상주의": 2})
         self.assertEqual(len(pack["cases"]), 10)
         self.assertEqual(len(pack["clips"]), 30)
         for case in pack["cases"]:
@@ -129,20 +147,25 @@ class AEThemeListeningTest(unittest.TestCase):
             self.assertEqual(case["candidates"][0]["global_rank"], 1)
             self.assertEqual(near["work_id"], far["work_id"])
             self.assertNotEqual(near["recording_id"], far["recording_id"])
-            self.assertEqual(near["q_start"], far["q_start"])
-            self.assertEqual(near["q_end"], far["q_end"])
+            # Matching candidate identity does not imply identical interpolated
+            # score endpoints; the per-performance AE excerpts remain unchanged.
+            self.assertLess(max(near["q_start"], far["q_start"]),
+                            min(near["q_end"], far["q_end"]))
+            for field in ("score_version_id", "repeat_route_id", "same_window_key", "candidate_index"):
+                self.assertEqual(near[field], far[field])
+            self.assertEqual(len({clip["artist"] for clip in (anchor, near, far)}), 3)
             self.assertLess(case["candidates"][0]["cosine_distance_to_anchor"],
                             case["candidates"][1]["cosine_distance_to_anchor"])
             for candidate in case["candidates"]:
                 clip = pack["clips"][candidate["clip"]]
                 self.assertNotEqual(anchor["work_id"], clip["work_id"])
                 self.assertNotEqual(anchor["recording_id"], clip["recording_id"])
-        # The Rachmaninoff theme starts AFTER the two-measure introduction.
-        self.assertEqual(pack["clips"]["ATEPP:00239"]["q_start"], 6.)
-        # Schumann's separately numbered pickup must not consume a full bar.
-        self.assertEqual(pack["clips"]["ATEPP:00983"]["q_end"], 30.5)
         for clip in pack["clips"].values():
-            self.assertLess(clip["start_seconds"], clip["end_seconds"])
+            duration = clip["end_seconds"] - clip["start_seconds"]
+            self.assertGreaterEqual(duration, protocol["selection"]["duration_range_seconds"][0])
+            self.assertLessEqual(duration, protocol["selection"]["duration_range_seconds"][1])
+            self.assertLess(clip["q_start"], clip["q_end"])
+            self.assertEqual(clip["time_mapping"]["basis"], "exact selected AE source segment times")
             self.assertFalse(clip["time_mapping"]["youtube_offset_verified"])
 
     def test_twenty_works_are_not_reused_across_questions(self):
@@ -153,7 +176,12 @@ class AEThemeListeningTest(unittest.TestCase):
         self.assertEqual(len(set(works)), 20)
         self.assertEqual(len({c["recording_id"] for c in pack["clips"].values()}), 30)
         verification = json.loads((AI / "analysis/ae_theme_listening/verification.json").read_text())
-        self.assertEqual(verification["maximum_questions_per_work"], 1)
+        self.assertEqual(verification["pack_id"], pack["id"])
+        self.assertEqual(verification["unique_works"], len(set(works)))
+        self.assertEqual(verification["unique_recordings"], len(pack["clips"]))
+        counts = Counter(clip["artist"] for clip in pack["clips"].values())
+        self.assertLessEqual(max(counts.values()), 2)
+        self.assertEqual(verification["max_artist_appearances"], max(counts.values()))
 
     def test_initial_pack_does_not_include_roles_distances_or_candidate_artist(self):
         organizer = json.loads((AI / "analysis/ae_theme_listening/listening.json").read_text())

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "scope": "ATEPP_refine only",
+  "population_recordings": 10699,
+  "population_works_movements": 1511,
+  "selected_works_movements": 300,
+  "selected_recordings": 1864,
+  "era_counts": [
+    {
+      "era": "classical_baroque",
+      "works": 100,
+      "recordings": 761
+    },
+    {
+      "era": "impressionist_modern",
+      "works": 100,
+      "recordings": 427
+    },
+    {
+      "era": "romantic",
+      "works": 100,
+      "recordings": 676
+    }
+  ],
+  "all_original_fields_preserved": true,
+  "all_recordings_of_selected_refine_works_retained": true,
+  "excluded_recordings_restored": 0,
+  "selected_refine_midi_sha256_checks": 1864,
+  "upstream_exclusion_membership_independently_reconstructed": true,
+  "all_25_composers_represented": true,
+  "reproducible_files": [
+    "classical_baroque_100.csv",
+    "composer_summary.csv",
+    "era_summary.csv",
+    "impressionist_modern_100.csv",
+    "population_works.csv",
+    "protocol.json",
+    "romantic_100.csv",
+    "selected_recordings.csv",
+    "selected_works.csv"
+  ],
+  "artifact_sha256": {
+    "classical_baroque_100.csv": "63f1704d167e000dcb722a42ce17b98fc3cf647ffb9d4aa705db24f42828124e",
+    "composer_summary.csv": "658199fe244c240f7b7c4432ff251d2e7f997e0004d45d2ab2bf6152614553c9",
+    "era_summary.csv": "c4c84bfab23b746a4ca54c8faa42a9eea60252ef4740c53babccbe295c7a8690",
+    "impressionist_modern_100.csv": "fe23389bb227152f49322b4e33e9d7091e71658c1deefd446bf98011b7874b36",
+    "population_works.csv": "7f00b0172f6e3e1c6c1bd3482374e5e200214877820d64584373d0cd1aca65da",
+    "protocol.json": "9bd238add003748e7d28cc656bec1acb06f8cdbc08649f9e5d144c34095f0015",
+    "romantic_100.csv": "5b818446a1d3a37c815186e2f545268e9177cc8793634ca36fa467c004a0dc96",
+    "selected_recordings.csv": "347bbe920aecd8038ce266f2ace4dedaeca17c93b186d873f0009d041cdd8311",
+    "selected_works.csv": "34dca7984f978c909377b507f8905dac8f537507d9dbb873c34a8d819676d60c"
+  },
+  "script_sha256": "89cb75f2fe0ec27a3119b807031ed3a629e76022dd96024657cac237fc353bdc",
+  "raw_feature_extraction_performed": false,
+  "normalization_performed": false
+}

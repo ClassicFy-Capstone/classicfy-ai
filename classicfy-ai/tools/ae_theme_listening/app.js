@@ -99,7 +99,7 @@ function renderClip(id,slot){
     <div class="clip-body"><p class="times"></p><p class="source-status" role="status"></p>
     <label class="listen-label"><input class="listen-confirm" type="checkbox"> ${slotLabel(slot)} 구간을 들었어요</label>
     <details class="adjust"><summary>재생 시간 조정</summary><label>시작(초) <input class="start-input" type="number" min="0" step="0.1" aria-label="${slotLabel(slot)} 시작 시간"></label><label>종료(초) <input class="end-input" type="number" min="0" step="0.1" aria-label="${slotLabel(slot)} 종료 시간"></label><button class="apply-times">적용</button> <button class="reset-times">추정 시간 복원</button><p class="time-error" role="alert"></p></details>
-    <details class="source-detail"><summary>주제 근거와 마디 번호</summary><p>${esc(theme.evidence)}</p><p>${esc(theme.mapping_note)}</p><a href="${esc(theme.source_url)}" target="_blank" rel="noopener noreferrer">${esc(theme.source_title)} ↗</a></details></div></article>`;
+    <details class="source-detail"><summary>선정 구간 안내</summary><p>${esc(theme.evidence)}</p><p>${esc(theme.mapping_note)}</p>${theme.source_url?`<a href="${esc(theme.source_url)}" target="_blank" rel="noopener noreferrer">${esc(theme.source_title)} ↗</a>`:""}</details></div></article>`;
 }
 function destroyPlayers(){
   playerGeneration++;requestedSlot=null;for(const player of players.values())player.destroy();players.clear();pendingPlayers.clear();
@@ -177,10 +177,10 @@ async function reveal(c){
   revealed.set(c.id,answer);Object.assign(response,evaluated);response.model_result=answer;persist();updateSummary();if(currentCase().id!==c.id)return;
   const messages={same:["임베딩과 일치했어요.","더 비슷하게 들렸다고 고른 쪽이 임베딩에서도 A에 더 가까웠습니다."],opposite:["임베딩과 반대였어요.","더 비슷하게 들렸다고 고른 쪽은 임베딩에서는 A에서 더 먼 연주였습니다."],tie:["두 후보가 비슷하게 들렸군요.","이 응답은 일치·반대에 포함하지 않습니다. 아래에서 모델의 거리 차이를 확인하세요."],unsure:["판단 어려움으로 기록했어요.","이 응답은 일치·반대에 포함하지 않습니다. 아래에서 모델의 거리 차이를 확인하세요."]};
   const [title,explanation]=messages[evaluated.outcome],labels={X:"X",Y:"Y",tie:"둘이 비슷함",unsure:"판단 어려움"};
-  $("#result").innerHTML=`<p class="eyebrow">YOUR CHOICE × EMBEDDING</p><h2>${title}</h2><p>${explanation}</p><p>내 선택: <strong>${labels[response.choice]}</strong> · 임베딩에서 더 가까운 쪽: <strong>${evaluated.model_closer_label}</strong></p><table><thead><tr><th>후보</th><th>실제 연주</th><th>A와의 전곡 거리</th><th>모델의 구분</th></tr></thead><tbody>${saved.orders[c.id].map((id,i)=>{
+  $("#result").innerHTML=`<p class="eyebrow">YOUR CHOICE × EMBEDDING</p><h2>${title}</h2><p>${explanation}</p><p>내 선택: <strong>${labels[response.choice]}</strong> · 임베딩에서 더 가까운 쪽: <strong>${evaluated.model_closer_label}</strong></p><table><thead><tr><th>후보</th><th>실제 연주</th><th>A와의 주제부 거리</th><th>모델의 구분</th></tr></thead><tbody>${saved.orders[c.id].map((id,i)=>{
     const row=answer.candidates.find(r=>r.clip===id),identity=answer.recordings[id];
     return `<tr><th>${i?"Y":"X"}${response.choice===(i?"Y":"X")?" · 내 선택":""}</th><td>${esc(identity.artist)}<small>${esc(identity.performance_id)}</small></td><td>${row.cosine_distance_to_anchor.toFixed(6)}</td><td>${id===answer.near_clip?"가까운 연주":"같은 작품의 먼 연주"}</td></tr>`;
-  }).join("")}</tbody></table><p class="result-note">가까운 연주는 다른 작품 전체에서 A와의 거리 1위입니다. 먼 연주는 그 작품의 나머지 ${answer.far_work_pool}개 연주 중 A와의 거리가 가장 큽니다. 작은 거리일수록 가깝습니다. 주제만의 거리가 아닌 전곡 평균 임베딩 기준입니다.</p>`;
+  }).join("")}</tbody></table><p class="result-note">가까운 연주는 다른 작품·악보 후보에서 A와의 거리 1위입니다. 먼 연주는 그 연주와 작품·악보·선정 후보가 같은 나머지 ${answer.far_work_pool}개 연주 중 A와의 거리가 가장 큽니다. 작은 거리일수록 가깝습니다. 세 연주 모두 실제로 듣는 선정 주제부의 임베딩으로 비교했습니다.</p>`;
   $("#result").hidden=false;$("#retry-result").hidden=true;updateTimingVisibility();clipIds().forEach((id,slot)=>$(`#clip-${slot} .artist`).textContent=answer.recordings[id].artist);
 }
 function resultError(c,error){if(currentCase().id!==c.id)return;$("#answer-status").textContent=`선택은 저장되어 있습니다. ${error.message}`;$("#retry-result").hidden=false;}

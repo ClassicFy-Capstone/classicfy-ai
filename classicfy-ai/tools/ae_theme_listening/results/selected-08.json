@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-08",
+  "near_clip": "cb676e553d4d0d63",
+  "far_clip": "d7b2c86fa9c50563",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 16,
+  "recordings": {
+    "9fbccee836f8b61b": {
+      "performance_id": "ATEPP:00170",
+      "artist": "Nikolai Lugansky",
+      "title": "Etudes-tableaux, Op. 39: No. 4 in B Minor. Allegro assai",
+      "album": "Rachmaninoff: Études-Tableaux, Op. 33 & Op. 39",
+      "album_date": "2007-07-22"
+    },
+    "cb676e553d4d0d63": {
+      "performance_id": "ATEPP:06909",
+      "artist": "Alfred Brendel",
+      "title": "Piano Sonata No.2 in A, Op.2 No.2: 1. Allegro vivace",
+      "album": "Beethoven: The Complete Piano Sonatas",
+      "album_date": "2009-01-01"
+    },
+    "d7b2c86fa9c50563": {
+      "performance_id": "ATEPP:06919",
+      "artist": "Mikhail Pletnev",
+      "title": "Piano Sonata No. 2 in A Major, Op. 2: 3 Piano Sonatas, Op. 2, No. 2. Sonata No. 2 in A Major: I. Allegro vivace",
+      "album": "Pletnev In Person",
+      "album_date": "2013-10-21"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "cb676e553d4d0d63",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.011781430186832198,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "d7b2c86fa9c50563",
+      "role": "far",
+      "global_rank": 1841,
+      "cosine_distance_to_anchor": 0.41576083728981383,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+﻿era,era_ko,selected_works,selected_recordings,absolute_works,relative_works,recordings_used,status_counts
+classical_baroque,고전·바로크,100,761,27,26,374,"{""absolute_only_single_recording"": 1, ""alignment_rejected"": 2, ""no_score"": 68, ""ok"": 26, ""unsupported_score"": 3}"
+romantic,낭만,100,676,7,6,78,"{""absolute_only_single_recording"": 1, ""no_score"": 91, ""ok"": 6, ""unsupported_score"": 2}"
+impressionist_modern,인상주의·현대,100,427,12,10,110,"{""absolute_only_single_recording"": 2, ""no_score"": 83, ""ok"": 10, ""unsupported_score"": 5}"

@@ -293,6 +293,28 @@ class NoteAEPipelineTest(XMLFixture):
         self.assertTrue(np.isfinite(row['style_loss']))
         self.assertEqual(report['g_dependencies']['triplets'], t['id'])
 
+        # Exact-epoch adapters distribute all fixed triplets over reconstruction
+        # steps and must fail if a sampler repeats one while omitting another.
+        triples.exact_once_per_epoch = True
+        triples.epoch_batch_sampler = lambda steps, generator: [
+            batch.tolist() for batch in np.array_split(
+                torch.randperm(len(triples), generator=generator).numpy(), steps)]
+        exact_config = replace(self.tc, epochs=1, max_steps_per_epoch=0,
+                               batch_size=len(corpus.dataset('train')))
+        _, exact = train_note_ae(corpus, self.folder / 'joint-exact', config=exact_config,
+                                model_config=self.mc, score_config=self.sc, triplets=triples)
+        exact_row = exact['history'][0]
+        self.assertTrue(exact_row['complete_style_epoch'])
+        self.assertEqual(exact_row['style_loader_restarts'], 0)
+        self.assertEqual(exact_row['triplet_id_exposures'], {r['triplet_id']: 1 for r in triples.rows})
+        for role in ('anchor', 'positive', 'negative'):
+            self.assertEqual(sum(exact_row['style_role_exposures'][role].values()), len(triples))
+        self.assertGreater(len(triples), 1)
+        triples.epoch_batch_sampler = lambda steps, generator: [[0] * len(triples)]
+        with self.assertRaisesRegex(ValueError, 'every fixed triplet exactly once'):
+            train_note_ae(corpus, self.folder / 'joint-invalid', config=exact_config,
+                          model_config=self.mc, score_config=self.sc, triplets=triples)
+
     def test_plateau_steps_after_validation_and_logs_used_and_next_lr(self):
         corpus, _ = self.corpus()
         cfg = replace(self.tc, epochs=4, max_steps_per_epoch=0, lr_scheduler='plateau',

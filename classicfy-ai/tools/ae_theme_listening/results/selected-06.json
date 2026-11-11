@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-06",
+  "near_clip": "c6036bd12afc5ed5",
+  "far_clip": "93cd9ce851ca2e99",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 28,
+  "recordings": {
+    "f13c99bd96a828d8": {
+      "performance_id": "ATEPP:01695",
+      "artist": "Murray Perahia",
+      "title": "Davidsbündlertänze, Op. 6: No. 6. Sehr rasch",
+      "album": "Schumann: Davidsbündlertänze; Fantasiestücke",
+      "album_date": "1973"
+    },
+    "c6036bd12afc5ed5": {
+      "performance_id": "ATEPP:06808",
+      "artist": "Emil Gilels",
+      "title": "Piano Sonata No.30 In E, Op.109: 2. Prestissimo",
+      "album": "Beethoven: Piano Sonatas Nos.27, 28, 30 & 31",
+      "album_date": "1998-01-01"
+    },
+    "93cd9ce851ca2e99": {
+      "performance_id": "ATEPP:06841",
+      "artist": "Wilhelm Kempff",
+      "title": "Sonata No. 30 in E Major, Op. 109: II. Prestissimo",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "c6036bd12afc5ed5",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.01607096051298429,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "93cd9ce851ca2e99",
+      "role": "far",
+      "global_rank": 3113,
+      "cosine_distance_to_anchor": 0.9503280559571365,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

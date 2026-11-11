@@ -11,8 +11,9 @@ import torch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 
 from embedding.note_ae_data import FixedNoteTriplets, NoteAECorpus
+from embedding.note_ae_source_index import IndexedNoteAECorpus
 from embedding.note_ae_training import (
-    NoteAETrainingConfig, export_note_embeddings, latent_ablation, load_note_ae_model, train_note_ae,
+    NoteAETrainingConfig, evaluate_note_ae, export_note_embeddings, latent_ablation, load_note_ae_model, train_note_ae,
 )
 from embedding.note_autoencoder import NoteAEConfig
 from embedding.note_score_encoder import NoteScoreEncoderConfig
@@ -23,9 +24,12 @@ from features.note_performance_normalization import load_note_performance_scaler
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest='command', required=True)
-    for name in ('train', 'export', 'diagnose'):
+    for name in ('train', 'export', 'diagnose', 'evaluate'):
         p = commands.add_parser(name)
-        p.add_argument('--windows', type=Path, required=True)
+        inputs = p.add_mutually_exclusive_group(required=True)
+        inputs.add_argument('--windows', type=Path)
+        inputs.add_argument('--index', type=Path, help='Bounded-memory AE index from prepare_note_ae_index.py')
+        p.add_argument('--cache-records', type=int, default=8)
         p.add_argument('--validation-windows', type=Path)
         p.add_argument('--out', type=Path, required=True)
         if name == 'train':
@@ -40,10 +44,15 @@ def main():
             p.add_argument('--batch-size', type=int, default=4)
             p.add_argument('--device', choices=['cpu', 'cuda', 'mps'], default='cpu')
     args = parser.parse_args()
-    windows = load_style_artifact(args.windows, 'windows')
+    windows = load_style_artifact(args.windows, 'windows') if args.windows else None
+    index = load_style_artifact(args.index, 'ae-training-index') if args.index else None
+    if args.index and args.validation_windows:
+        parser.error('Indexed inputs already contain their validation split')
     val = load_style_artifact(args.validation_windows, 'windows') if args.validation_windows else None
     if args.command == 'train':
         supplied = [args.triplets, args.g_profiles, args.g_scaler, args.g_calibration]
+        if args.index and any(supplied):
+            parser.error('Indexed input currently supports reconstruction training, without Triplet inputs')
         if any(supplied) and not all(supplied):
             parser.error('Triplet training requires --triplets, --g-profiles, --g-scaler and --g-calibration together')
         raw = json.loads(args.config.read_text()) if args.config else {}
@@ -51,8 +60,10 @@ def main():
             raise ValueError('Unknown config section')
         cfg, modelcfg = NoteAETrainingConfig(**raw.get('training', {})), NoteAEConfig(**raw.get('model', {}))
         scorecfg = NoteScoreEncoderConfig(**raw.get('score', {'context_dim': modelcfg.context_dim}))
-        corpus = NoteAECorpus(windows, validation_windows=val,
-                              r_scaler=load_note_performance_scaler(args.r_scaler) if args.r_scaler else None)
+        corpus = (IndexedNoteAECorpus(index, args.r_scaler or args.index.parent / 'R_scaler.json',
+                                      args.index.parent / 'S_scale.json', cache_records=args.cache_records)
+                  if index else NoteAECorpus(windows, validation_windows=val,
+                              r_scaler=load_note_performance_scaler(args.r_scaler) if args.r_scaler else None))
         triples = FixedNoteTriplets(corpus, *(load_style_artifact(p) for p in supplied)) if all(supplied) else None
         _, report = train_note_ae(corpus, args.out, config=cfg, model_config=modelcfg, score_config=scorecfg,
                                   triplets=triples, resume=args.resume)
@@ -60,12 +71,23 @@ def main():
                           'triplets': report['eligible_triplets'], 'style_trained': report['style_training_performed']}))
     else:
         torch.set_num_threads(1)
-        model, _, scaler, score = load_note_ae_model(args.checkpoint)
-        corpus = NoteAECorpus(windows, validation_windows=val, r_scaler=scaler, score_scale=score)
+        model, saved, scaler, score = load_note_ae_model(args.checkpoint)
+        corpus = (IndexedNoteAECorpus(index, scaler, score, cache_records=args.cache_records) if index
+                  else NoteAECorpus(windows, validation_windows=val, r_scaler=scaler, score_scale=score))
         if args.command == 'export':
             manifest = export_note_embeddings(model, corpus, args.out, split=args.split, batch_size=args.batch_size,
                 device=args.device, checkpoint_id=hashlib.sha256(args.checkpoint.read_bytes()).hexdigest())
             print(f"Exported {len(manifest['windows'])} window embeddings")
+        elif args.command == 'evaluate':
+            config = NoteAETrainingConfig(**{**saved['training_config'], 'device': args.device,
+                                            'batch_size': args.batch_size, 'max_validation_batches': 0})
+            model.to(args.device)
+            result = evaluate_note_ae(model, corpus.dataset(args.split), corpus.collate, config)
+            result.update(split=args.split, checkpoint_epoch=saved['epoch'],
+                          checkpoint_sha256=hashlib.sha256(args.checkpoint.read_bytes()).hexdigest())
+            with args.out.open('x') as stream:
+                json.dump(result, stream, indent=2, allow_nan=False)
+            print(json.dumps(result))
         else:
             result = latent_ablation(model, corpus, split=args.split, device=args.device)
             with args.out.open('x', encoding='utf-8') as stream:

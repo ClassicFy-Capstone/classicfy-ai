@@ -1,0 +1,115 @@
+{
+  "schema": "classicfy-refine-atepp-balanced-era-v1",
+  "dataset": "ATEPP_refine",
+  "population": {
+    "recordings": 10699,
+    "works_movements": 1511,
+    "composers": 25
+  },
+  "selection_unit": "Original composition_id; individual movements/pieces, not necessarily complete multi-movement works.",
+  "seed": 20261106,
+  "works_per_era": 100,
+  "classification": {
+    "classical_baroque": {
+      "label": "고전·바로크",
+      "composers": [
+        "Domenico Scarlatti",
+        "Franz Joseph Haydn",
+        "George Frideric Handel",
+        "Johann Sebastian Bach",
+        "Ludwig van Beethoven",
+        "Wolfgang Amadeus Mozart"
+      ]
+    },
+    "romantic": {
+      "label": "낭만",
+      "composers": [
+        "Alexander Scriabin",
+        "César Franck",
+        "Edvard Grieg",
+        "Felix Mendelssohn",
+        "Franz Liszt",
+        "Franz Schubert",
+        "Frédéric Chopin",
+        "Johannes Brahms",
+        "Modest Mussorgsky",
+        "Pyotr Ilyich Tchaikovsky",
+        "Robert Schumann",
+        "Sergei Rachmaninoff"
+      ]
+    },
+    "impressionist_modern": {
+      "label": "인상주의·현대",
+      "composers": [
+        "Anton Webern",
+        "Béla Bartók",
+        "Claude Debussy",
+        "Dmitri Shostakovich",
+        "Maurice Ravel",
+        "Paul Hindemith",
+        "Sergei Prokofiev"
+      ]
+    }
+  },
+  "boundary_policy": "Beethoven in classical_baroque; Rachmaninoff and all Scriabin in romantic, following the preceding whole-dataset count; no work-specific period verification.",
+  "allocation": "Composer work-count proportional integer quotas: floor exact shares, minimum one; allocate remaining seats to greatest exact_share-minus-current_quota, ties by composer name.",
+  "sampling": "Ascending SHA256 of UTF-8 seed|era|composer|composition_id within composer, take first quota works without replacement.",
+  "recording_policy": "Retain all current refine metadata rows for selected composition_ids; never restore excluded original recordings; no further recording downsampling or deduplication.",
+  "upstream_refine_filter": "track_duration >= 60 AND every representative candidate duration_seconds in [10, 60]",
+  "filters": "No additional score availability, quality label, alignment, existing feature availability, feature value, or minimum recording-count filter.",
+  "title_policy": "Most frequent original track title per composition_id, lexicographic tie-break; all original recording titles retained.",
+  "feature_status": "Selection only; raw extraction, normalization and era feature comparisons not performed.",
+  "analysis_weighting": "Era work counts are equal; recording counts are not. Summarize per composition_id before comparing eras.",
+  "source_metadata": "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/ATEPP-metadata-1.2.csv",
+  "source_metadata_sha256": "2e68e4c1e3598c74854e0b1abd36e51f95e9cefa23dfc51c644776245633511a",
+  "source_inventory": "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/local_inventory.csv",
+  "source_inventory_sha256": "12c5d713bf8acf8378b57251496de264871f24460050887cf9cfac7d8a56dd28",
+  "input_sha256": {
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/ATEPP-metadata-1.2.csv": "2e68e4c1e3598c74854e0b1abd36e51f95e9cefa23dfc51c644776245633511a",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/local_inventory.csv": "12c5d713bf8acf8378b57251496de264871f24460050887cf9cfac7d8a56dd28",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/refinement_manifest.json": "bd82f089d6cc9a964a41b15a746b60b69d566b4161367512c747744dbfa6a2f4",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/excluded_all_ids.txt": "ae96c51179eb7845de2da457009c845ecb11b46bff92d222fc700de849ee97d6",
+    "/Users/ihun-ui/Desktop/Classicfy/datasets/ATEPP_refine/file_checksums.csv": "00dcdf60a0456278529b12a0c30e8507934511bafec30606cd85c77f1c9eef25"
+  },
+  "original_metadata_sha256": "b6bed1190cb85e607282fe4b761bc42d017f8144851940a4103aaa1a1d84536d",
+  "script_sha256": "89cb75f2fe0ec27a3119b807031ed3a629e76022dd96024657cac237fc353bdc",
+  "selected_recording_files_checked": 1864,
+  "summary": [
+    {
+      "era": "classical_baroque",
+      "era_ko": "고전·바로크",
+      "population_composers": 6,
+      "population_works": 621,
+      "population_recordings": 5237,
+      "selected_composers": 6,
+      "selected_works": 100,
+      "selected_recordings": 761,
+      "selected_works_with_any_score": 32,
+      "selected_recordings_with_score": 509
+    },
+    {
+      "era": "romantic",
+      "era_ko": "낭만",
+      "population_composers": 12,
+      "population_works": 691,
+      "population_recordings": 4556,
+      "selected_composers": 12,
+      "selected_works": 100,
+      "selected_recordings": 676,
+      "selected_works_with_any_score": 9,
+      "selected_recordings_with_score": 90
+    },
+    {
+      "era": "impressionist_modern",
+      "era_ko": "인상주의·현대",
+      "population_composers": 7,
+      "population_works": 199,
+      "population_recordings": 906,
+      "selected_composers": 7,
+      "selected_works": 100,
+      "selected_recordings": 427,
+      "selected_works_with_any_score": 17,
+      "selected_recordings_with_score": 198
+    }
+  ]
+}

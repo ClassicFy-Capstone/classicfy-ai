@@ -13,11 +13,12 @@
     <p class="eyebrow">듣고 고른 뒤, 임베딩과 비교</p><h1>어느 연주가<br>더 가깝게 들리나요?</h1>
     <p class="lead">기준 A의 주제를 먼저 들어보세요.<br>그다음 같은 작품의 연주 X와 Y를 듣고, A와 연주 스타일이 더 비슷한 쪽을 고르세요.</p>
     <p class="model" id="model"></p>
+    <p class="retrieval">기준 A의 작품 구성: 고전·바로크 4곡 · 낭만 4곡 · 인상주의 2곡</p>
   </section>
   <nav id="case-tabs" aria-label="청취 사례"></nav>
   <div class="case-navigation" aria-label="문항 이동"><button id="previous-case">← 이전 문항</button><span id="case-position" aria-live="polite"></span><button id="next-case">다음 문항 →</button></div>
   <section class="selection"><div><p class="eyebrow">기준 연주 → 다른 작품의 두 연주</p><h2 id="case-label"></h2></div><p class="blind-badge">거리와 가까움/멀음은 선택 후 공개</p></section>
-  <p class="retrieval">X/Y는 같은 악보의 같은 주제 마디를 비교하도록 지정했습니다. 영상 재생 시간은 미검수 추정값입니다. 두 후보의 순서는 이 브라우저에서 무작위로 정하고 유지합니다.</p>
+  <p class="retrieval">X/Y는 같은 작품·악보에서 선정한 같은 후보 구간의 두 연주입니다. 연주별 추정 경계와 재생 길이는 다를 수 있습니다. 영상 시간 오프셋은 청음 검수 전입니다. 두 후보의 순서는 이 브라우저에서 무작위로 정하고 유지합니다.</p>
   <aside class="source-notice"><strong>페이지 안에서 주제 구간을 재생합니다.</strong> ‘구간 재생’은 지정한 끝에서 멈추며, ‘구간 반복’을 켜면 처음으로 돌아갑니다. 선택 전에는 구간 시간과 길이를 숨깁니다. 삽입 재생에 문제가 생기면 원본 링크도 이용할 수 있습니다.</aside>
   <div class="timing-controls"><label><input id="show-timing" type="checkbox"> 재생 문제 확인용 시간 표시</label><p id="timing-status" role="status"></p></div>
   <aside id="source-warning" class="source-notice unavailable-notice" hidden><strong>이 사례는 원본 영상 하나가 재생되지 않았습니다.</strong> 11월 4일 Safari에서 확인한 상태입니다. 우선 첫 번째 사례를 이용하세요. 이 사례는 세 구간을 모두 듣고 ‘구간을 들었어요’를 확인한 경우에만 제출할 수 있습니다.</aside>
@@ -46,10 +47,10 @@
   <section id="result" class="result" aria-live="polite" hidden></section>
   <section class="export-row"><div><p id="summary">아직 확인한 결과가 없습니다.</p><span id="save-status" role="status">이 브라우저에 선택과 X/Y 순서를 저장합니다.</span></div><button id="export">응답·임베딩 비교 JSON 저장 ↓</button></section>
   <details class="method"><summary>선정 방식과 주제 근거</summary>
-    <p>기준 A에 가장 가까운 다른 작품의 연주 B를 고른 뒤, B와 같은 작품에서 A와의 거리가 가장 먼 연주 C를 고릅니다. 가까움과 멀음의 기준은 모두 A입니다. B/C는 같은 작품의 같은 주제 마디를 사용합니다.</p>
+    <p>기준 A에 가장 가까운 다른 작품의 연주 B를 고른 뒤, B와 같은 작품에서 A와의 거리가 가장 먼 연주 C를 고릅니다. 가까움과 멀음의 기준은 모두 A입니다. B/C는 같은 작품·악보의 같은 후보 구간에 속하며, 연주별 추정 경계는 다를 수 있습니다.</p>
     <p>선택 전에는 X/Y로 표시하고, 선택을 저장한 뒤에만 거리와 연주자·모델 순위를 공개합니다. 결과를 본 응답은 수정하지 않습니다. 동점·판단 어려움은 일치율의 분모에서 제외합니다.</p>
-    <p>거리는 전곡의 8마디 임베딩을 평균한 cosine 거리이며 주제만의 거리가 아닙니다. 이 프로토타입의 개인 청취 결과로 모델 전체의 성능을 판단할 수는 없습니다.</p>
-    <p>주제는 음악 형식 분석 문헌과 MusicXML을 대조해 수동 지정했습니다. 녹음의 음색·음량·잔향과 악보 차이도 들립니다. YouTube가 외부 재생을 제한하는 녹음은 원본 페이지에서 듣습니다. 음원 다운로드·재합성·속도 보정은 하지 않습니다.</p>
+    <p>거리는 선정 주제부를 입력한 AE의 cosine 거리입니다. 가까움과 멀음을 계산한 구간을 그대로 듣습니다. 이 청취 구성은 학습에 사용한 작품도 검색 대상에 포함하므로, 응답 일치율을 미학습 작품에 대한 일반화 성능으로 해석하지 않습니다.</p>
+    <p>이번 AE 입력에 사용한 선정 구간을 그대로 연결했습니다. 선정 구간이 음악 형식상 주제 전체인지와 영상 시간 오프셋은 별도 청음 검수 전입니다. 녹음의 음색·음량·잔향과 악보 차이도 들립니다. YouTube 삽입 재생이 제한되면 원본 링크를 이용하세요.</p>
   </details>
   <footer><span>CLASSICFY · NEAR / FAR LISTENING</span><span id="pack-id"></span></footer>
 </main></body></html>
