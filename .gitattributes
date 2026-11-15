@@ -12,3 +12,4 @@ classicfy-ai/analysis/note_ae_plateau_multiseed/*.csv whitespace=blank-at-eol,bl
 
 # Preserve generated report assets as binary files.
 classicfy-ai/analysis/era_g_loss_report/*.pdf binary
+classicfy-ai/analysis/era_g_loss_report/model_architecture.svg -diff
