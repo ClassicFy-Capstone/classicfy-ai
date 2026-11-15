@@ -12,3 +12,34 @@ classicfy-ai/analysis/**/inventory.csv
 *.prof
 classicfy-ai/analysis/**/*.log
 kernel.errors.txt
+
+# Regenerable training inputs, checkpoints, embeddings and media stay local.
+/outputs/
+/classicfy-ai/outputs/
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.zip
+*.7z
+*.tar
+*.tgz
+*.tar.gz
+*.mid
+*.midi
+*.musicxml
+*.mxl
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.webm
+*.mp4
+
+# Disposable QA answers and a redundant historical source snapshot.
+classicfy-ai/analysis/ae_selected_era_listening/qa_export_response.json
+classicfy-ai/analysis/ae_selected_era_listening/source17_prepare.py

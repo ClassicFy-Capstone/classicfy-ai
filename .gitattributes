@@ -9,3 +9,6 @@ classicfy-ai/analysis/note_ae_checkpoint_cases/**/*.csv whitespace=blank-at-eol,
 classicfy-ai/analysis/note_ae_checkpoint_cases/**/*.svg -diff
 classicfy-ai/analysis/note_ae_full_corpus_reconstruction/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 classicfy-ai/analysis/note_ae_plateau_multiseed/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve generated report assets as binary files.
+classicfy-ai/analysis/era_g_loss_report/*.pdf binary

@@ -20,6 +20,7 @@ from .note_ae_data import to_device
 from .note_ae_loss import RECONSTRUCTION_GROUPS, mean_tempo_loss, reconstruction_loss, triplet_style_loss
 from .note_autoencoder import NoteAEConfig, NotePerformanceAutoencoder
 from .note_score_encoder import NoteScoreEncoderConfig
+from .style_supervision import STYLE_OBJECTIVES, style_objective_contract
 
 
 @dataclass(frozen=True)
@@ -31,6 +32,10 @@ class NoteAETrainingConfig:
     weight_decay: float = 1e-4
     gradient_clip: float = 1.
     margin: float = .2
+    style_objective: str = 'legacy'
+    margin_scale: float = .2
+    margin_min: float = .05
+    margin_max: float = .4
     lambda_style: float = .1
     huber_delta: float = 1.
     seed: int = 2026
@@ -60,10 +65,14 @@ class NoteAETrainingConfig:
             if isinstance(value, bool) or not isinstance(value, int) or value < 0:
                 raise ValueError('Nonnegative integer seed/limits required')
         for key in ('learning_rate', 'gradient_clip', 'huber_delta', 'weight_decay', 'margin', 'lambda_style',
-                    'beta_mean_tempo', 'early_stopping_min_delta', 'lr_scheduler_threshold', 'lr_scheduler_min_lr'):
+                    'beta_mean_tempo', 'early_stopping_min_delta', 'lr_scheduler_threshold', 'lr_scheduler_min_lr',
+                    'margin_scale', 'margin_min', 'margin_max'):
             value = getattr(self, key)
             if not math.isfinite(value) or value < 0 or (key in {'learning_rate', 'gradient_clip', 'huber_delta'} and value == 0):
                 raise ValueError('Invalid optimizer or loss setting')
+        if (self.style_objective not in STYLE_OBJECTIVES or self.margin_scale <= 0
+                or not 0 <= self.margin_min <= self.margin_max < 2):
+            raise ValueError('Invalid style objective or adaptive margin bounds/scale')
         if self.device not in {'cpu', 'cuda', 'mps'}:
             raise ValueError('Supported devices are cpu, cuda and mps')
         if not isinstance(self.evaluate_train_each_epoch, bool):
@@ -89,6 +98,29 @@ def seed_run(config):
     np.random.seed(config.seed)
     torch.manual_seed(config.seed)
     torch.set_num_threads(config.torch_threads)
+
+
+def style_loss_for_batch(encoded, batch, config):
+    """Prepare detached frozen targets on CPU, then move bounded values to z."""
+    margins, weights = None, None
+    low, high = 0., 0.
+    if config.style_objective in ('adaptive', 'adaptive_confidence'):
+        gap = batch.get('g_gap_normalized')
+        if (gap is None or gap.shape != encoded[0].shape[:1] or not torch.isfinite(gap).all()
+                or (gap <= 0).any()):
+            raise ValueError('Adaptive style loss requires finite positive normalized g gaps [B]')
+        unbounded = gap.detach().cpu().double() * config.margin_scale
+        low = float((unbounded < config.margin_min).double().mean())
+        high = float((unbounded > config.margin_max).double().mean())
+        margins = unbounded.clamp(config.margin_min, config.margin_max).to(encoded[0])
+    if config.style_objective in ('confidence', 'adaptive_confidence'):
+        confidence = batch.get('confidence')
+        if (confidence is None or confidence.shape != encoded[0].shape[:1] or not torch.isfinite(confidence).all()
+                or ((confidence < 0) | (confidence > 1)).any()):
+            raise ValueError('Confidence style loss requires finite confidence [B] in [0,1]')
+        weights = confidence.detach().to(encoded[0])
+    result = triplet_style_loss(*encoded, margin=config.margin, margins=margins, weights=weights)
+    return {**result, 'margin_clip_low_ratio': low, 'margin_clip_high_ratio': high}
 
 
 class LengthBucketBatches:
@@ -213,6 +245,7 @@ def _restore_rng(state):
 def save_note_ae_checkpoint(path, model, optimizer, config, corpus, *, epoch, step, triplets=None,
                             generators=None, best_validation=None, early_stopping_state=None, scheduler=None):
     payload = {'schema': ae_schema(), 'model_config': asdict(model.config),
+               'style_objective': style_objective_contract(config),
                'score_config': asdict(model.score_encoder.config), 'training_config': asdict(config),
                'model': model.state_dict(), 'optimizer': optimizer.state_dict(), 'epoch': epoch, 'step': step,
                'rng': _rng_state(), 'corpus_contract': corpus.contract,
@@ -233,6 +266,11 @@ def read_note_ae_checkpoint(path, *, corpus=None, triplets=None):
     payload = torch.load(path, map_location='cpu', weights_only=True)
     if payload.get('schema') != ae_schema():
         raise ValueError('Checkpoint AE/S/R schema mismatch')
+    training = NoteAETrainingConfig(**payload['training_config'])
+    objective = payload.get('style_objective')
+    if ((objective is None and training.style_objective != 'legacy')
+            or (objective is not None and objective != style_objective_contract(training))):
+        raise ValueError('Checkpoint style objective contract mismatch')
     r = payload['R_scaler']
     if r.get('schema') != note_performance_schema():
         raise ValueError('Checkpoint R scaler schema mismatch')
@@ -262,6 +300,10 @@ def load_note_ae_model(path, *, corpus=None):
 
 def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=None, triplets=None, resume=None):
     config, model_config = config or NoteAETrainingConfig(), model_config or NoteAEConfig()
+    if config.style_objective != 'legacy' and config.lambda_style > 0:
+        if triplets is None or not len(triplets):
+            raise ValueError('Nonlegacy style objective requires nonempty fixed triplets')
+        triplets.require_supervision(config.style_objective)
     if config.beta_mean_tempo > 0 and not model_config.mean_tempo_auxiliary:
         raise ValueError('Positive beta_mean_tempo requires the mean tempo auxiliary head')
     seed_run(config)
@@ -324,6 +366,8 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
         epoch_lr = [float(group['lr']) for group in optimizer.param_groups]
         mean_metrics = _MeanTempoMetrics()
         metrics, style_sum, active_sum, dap_sum, dan_sum, margin_sum = _RecMetrics(), 0., 0., 0., 0., 0.
+        style_diagnostics = {key: 0. for key in ('unweighted_hinge', 'confidence_mean', 'margin_mean',
+            'margin_clip_low_ratio', 'margin_clip_high_ratio', 'fixed_margin_0_2_satisfied')}
         total_sum, updates, exposed, cycles, skipped = 0., 0, 0, 0, 0
         style_iter = iter(style_loader) if style_loader is not None else None
         norms, latents, exposure_ids = [], [], Counter()
@@ -350,8 +394,11 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                     style_batch = next(style_iter)
                 encoded = [model.encode_batch(to_device(style_batch[role], config.device))['z']
                            for role in ('anchor', 'positive', 'negative')]
-                style = triplet_style_loss(*encoded, margin=config.margin)
+                style = style_loss_for_batch(encoded, style_batch, config)
                 count = len(encoded[0])
+                for key in style_diagnostics:
+                    value = style[key]
+                    style_diagnostics[key] += float(value.detach() if isinstance(value, torch.Tensor) else value) * count
                 exposed += count
                 triplet_ids.update(style_batch['triplet_ids'])
                 style_sum += float(style['loss'].detach()) * count
@@ -416,6 +463,8 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                'mean_tempo_auxiliary': mean_metrics.result() if model_config.mean_tempo_auxiliary else None,
                'total_loss': total_sum / updates if updates else None,
                'style_loss': style_sum / exposed if exposed else None,
+               'style_diagnostics': {key: value / exposed if exposed else None
+                                     for key, value in style_diagnostics.items()},
                'weighted_style_loss': config.lambda_style * style_sum / exposed if exposed else None,
                'active_triplet_ratio': active_sum / exposed if exposed else None,
                'd_ap': dap_sum / exposed if exposed else None, 'd_an': dan_sum / exposed if exposed else None,
@@ -445,6 +494,7 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
             break
     final = evaluate_note_ae(model, train, corpus.collate, config)
     report = {'schema': ae_schema(), 'training_config': asdict(config), 'model_config': asdict(model_config),
+              'style_objective': style_objective_contract(config),
               'score_config': asdict(model.score_encoder.config), 'score_context': 'computed on demand; ' + model_config.score_gradient,
               'corpus_contract': corpus.contract, 'g_dependencies': triplets.dependencies if triplets is not None else {},
               'train_windows': len(train), 'validation_windows': len(validation),

@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "selected_trial": {
+    "name": "deep",
+    "hidden_size": 64,
+    "layers": 2,
+    "pedal_weight": 1.0,
+    "seed": 2026,
+    "learning_rate": 0.001
+  },
+  "selected_epoch": 16,
+  "final_checkpoint": "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\outputs\\note_ae_selected_20261113\\training_run01\\final_all_5082.pt",
+  "final_sha256": "9bee1e7c364297cb18c8d6f9165a8144fb167125383f09eec703f74595770708",
+  "evaluated_checkpoint": "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\outputs\\note_ae_selected_20261113\\training_run01\\evaluated_best.pt",
+  "production_training_clips": 5082,
+  "evaluation_split_counts": {
+    "validation": 853,
+    "train": 3432,
+    "test": 797
+  },
+  "embeddings": {
+    "clips": 5082,
+    "latent_dim": 64,
+    "mean_dimension_std": 0.2533460259437561,
+    "aggregation": "observed-note-count weighted mean of unnormalized window z; unknown-only windows weight zero; final L2 normalization for e"
+  },
+  "comparison": [
+    {
+      "trial": {
+        "name": "compact",
+        "hidden_size": 32,
+        "layers": 1,
+        "pedal_weight": 1.0,
+        "seed": 2026,
+        "learning_rate": 0.001
+      },
+      "best_loss": 0.15488604401546557,
+      "best_epoch": 8,
+      "completed_epochs": 8
+    },
+    {
+      "trial": {
+        "name": "standard",
+        "hidden_size": 64,
+        "layers": 1,
+        "pedal_weight": 1.0,
+        "seed": 2026,
+        "learning_rate": 0.001
+      },
+      "best_loss": 0.15465855859483693,
+      "best_epoch": 6,
+      "completed_epochs": 8
+    },
+    {
+      "trial": {
+        "name": "deep",
+        "hidden_size": 64,
+        "layers": 2,
+        "pedal_weight": 1.0,
+        "seed": 2026,
+        "learning_rate": 0.001
+      },
+      "best_loss": 0.15321276878837822,
+      "best_epoch": 16,
+      "completed_epochs": 23
+    },
+    {
+      "trial": {
+        "name": "pedal15",
+        "hidden_size": 64,
+        "layers": 1,
+        "pedal_weight": 1.5,
+        "seed": 2026,
+        "learning_rate": 0.001
+      },
+      "best_loss": 0.15384775627526578,
+      "best_epoch": 12,
+      "completed_epochs": 19
+    }
+  ],
+  "scope": "best within the predeclared tested settings; no global-optimum or perceptual-style claim",
+  "production_has_independent_test": false
+}

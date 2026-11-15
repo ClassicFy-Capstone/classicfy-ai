@@ -242,6 +242,11 @@ def read_musicxml(path: str | Path, *, traversal: tuple[int, ...] | None = None)
     """Parse source notes and unfold a zero-based measure traversal, preserving IDs."""
     path = Path(path)
     root, digest = _root(path)
+    return read_musicxml_root(root, digest, traversal=traversal)
+
+
+def read_musicxml_root(root, digest, *, traversal=None) -> MusicXMLScore:
+    """Parse an explicit tree; callers must audit any repairs against source SHA."""
     parts = root.findall('part')
     if not parts:
         raise ValueError('MusicXML contains no parts')

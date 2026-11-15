@@ -145,6 +145,38 @@ class StyleTripletsTest(XMLFixture):
         p = summarize_window(r, make_windows(replace(records[-1], performance=r))[0], ref)
         self.assertEqual(p['roughness_edges'], 29)
         self.assertTrue(p['g_mask'][2])
+        self.assertAlmostEqual(p['g_quality'][2], (29 / 31) ** 2 * .5)
+
+    def test_quality_uses_observed_reference_counts_and_missing_weights(self):
+        xml = self.make_score()
+        records = [self.record(xml, f'p{i}', i - 1) for i in range(3)]
+        rec = records[-1]
+        ref = fit_reference(records)
+        window = make_windows(rec)[0]
+        baseline = summarize_window(rec.performance, window, ref)
+        np.testing.assert_allclose(baseline['g_quality'], .5)
+        arrays = [a.copy() for a in reference_delta(rec.performance, ref)]
+        arrays[2][:16, 2], arrays[2][16:, 2] = 3, 12
+        p = summarize_window(rec.performance, window, ref, deltas=arrays)
+        np.testing.assert_array_equal(p['g_raw'], baseline['g_raw'])
+        self.assertAlmostEqual(p['g_quality'][5], .65)
+        arrays[1][:2, 2] = False
+        p = summarize_window(rec.performance, window, ref, deltas=arrays)
+        self.assertAlmostEqual(p['g_quality'][5], (30 / 32) ** 2 * (14 * .5 + 16 * .8) / 30)
+        arrays[1][:8, 2] = False
+        p = summarize_window(rec.performance, window, ref, deltas=arrays)
+        self.assertFalse(p['g_mask'][5])
+        self.assertEqual(p['g_quality'][5], 0.)
+
+    def test_quality_is_chord_balanced_and_duplicate_recordings_do_not_boost_it(self):
+        profiles = []
+        for size in (1, 3):
+            xml = self.make_score(size=size)
+            records = [self.record(xml, f'p{i}', i - 1) for i in range(3)]
+            ref = fit_reference([*records, self.record(xml, 'copy', recording='p0')])
+            profiles.append(summarize_window(records[-1].performance, make_windows(records[-1])[0], ref))
+        np.testing.assert_allclose(profiles[0]['g_quality'], .5)
+        np.testing.assert_array_equal(profiles[0]['g_quality'], profiles[1]['g_quality'])
 
     def test_scaler_masks_constants_and_block_balance(self):
         ps = self.profile_set()

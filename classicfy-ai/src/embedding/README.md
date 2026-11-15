@@ -1,5 +1,36 @@
 # 시계열 연주 성향 임베딩
 
+## 복구된 ATEPP 대표구간 공통 AE 학습
+
+`scripts/train_selected_common_ae.py --dataset <selected_dataset> --out <new_output>`는
+`selected_segments.csv`의 모든 구간을 읽는다. `stages_path`/`masks_path`를 따라
+국소 복구 및 refit 변형까지 원래 전처리 결과를 사용하며 MusicXML을 요구하지 않는다.
+구간 경계와 유효 박 마스크를 재검증하고, 시간상의 결측 간격을 유지한다.
+64박 창을 겹치지 않게 만들고 짧은 구간과 마지막 조각도 포함한다. 매 epoch의
+관측 target 수가 전체 train 입력의 관측 수와 정확히 같은지 검사한다.
+
+작품 ID, 동일 원본 녹음 해시, 동일 score MIDI 해시를 묶은 후 약 70/15/15로
+train/validation/test를 분리한다. 제공된 작품별 정규화는 그대로 사용한다.
+이 실행은 아래 기존 masked-prediction 실험과 달리 **모든 관측 위치의 복원 MSE**를
+5개 feature 그룹에 동일 가중해 학습한다. G loss나 시대별 head는 아직 사용하지 않는다.
+최대 100 epoch, validation loss로 best checkpoint 선택, patience 10 및 min_delta 1e-4를
+적용한다. `dataset.json`, 입력 시계열, 코드 사본, history, best/last checkpoint와 test 결과를
+새 출력 폴더에 저장한다. `last.pt`는 모델 가중치이며 optimizer를 포함한 정확한 재개용은 아니다.
+
+이 결과는 공통 AE 사전학습 모델이다. 스타일 유사도 성능은 별도 평가해야 한다.
+
+페달 복원 loss 비교에는 `--loss huber --huber-delta 1 --pedal-weight 1`과
+`--pedal-weight 2`를 사용할 수 있다. Huber는 관측 오차에만 적용하며 입력/정답은
+변경하지 않는다. 그룹 손실은 `(tempo + rubato + dynamics + articulation +
+pedal_weight * mean(세 pedal 채널)) / (4 + pedal_weight)`이다.
+기본 MSE/weight=1 동작은 유지한다. history의 `train_loss`, validation의 `loss`는
+기존과 비교 가능한 비가중 5그룹 MSE이며, `train_objective`/`training_objective`는
+실제 최적화하는 손실이다. 서로 다른 종류의 objective 수치를 직접 비교하면 안 된다.
+checkpoint 선택·scheduler·조기 종료는 동일한 validation MSE를 사용한다.
+`--skip-test`는 test 평가를 보류한다. 후보 선택 후 `compare_common_ae_losses.py`가
+동일 입력/분할/초기 가중치를 검증하고 validation 기준으로 고른 후보만 test 평가한다.
+checkpoint에는 학습 objective와 데이터 manifest 해시도 저장한다.
+
 작품이 달라도 유사한 연주 성향을 검색하기 위한 첫 1D CNN 구현이다.
 기존 feature 추출·공통 패턴 제거·scale 정책은 그대로 재사용한다.
 학습에 연주 성향 유사도 라벨은 쓰지 않는다. 숨긴 beat의 feature 값을 복원하면서

@@ -23,6 +23,18 @@ G_BLOCKS = {'tempo': [0], 'timing': [1, 2, 3, 4], 'dynamics': [5, 6],
             'articulation': [7, 8], 'pedaling': list(range(9, 23))}
 
 
+def style_quality_schema():
+    # Versioned separately so old, content-hashed g artifacts remain readable.
+    return {'version': 'style-quality-v1', 'coverage_power': 2., 'reference_kappa': 3.,
+            'support': 'observed-weighted mean of n/(n+3); target may be included',
+            'roughness': 'adjacent valid edges; quarter-gap weights; minimum endpoint count'}
+
+
+def _reference_support(weights, valid, counts):
+    mass = weights[valid].sum()
+    return float(np.average(counts[valid] / (counts[valid] + 3.), weights=weights[valid])) if mass > 0 else 0.
+
+
 @dataclass(frozen=True)
 class StyleConfig:
     window_measures: int = 8
@@ -292,8 +304,8 @@ def summarize_window(r, window, reference, config=StyleConfig(), *, deltas=None)
         if window['R_fingerprint'] != r.fingerprint:
             raise ValueError('Window and R fingerprint mismatch')
     delta, mask, counts, bd, bm, bc = deltas
-    raw, known = np.zeros(23), np.zeros(23, bool)
-    coverage, valid_counts, reference_counts, channel_reasons = [], [], [], []
+    raw, known, quality = np.zeros(23), np.zeros(23, bool), np.zeros(23)
+    coverage, valid_counts, reference_counts, channel_reasons, supports = [], [], [], [], []
     rows, bis = np.array(window['row_indices'], int), np.array(window['beat_indices'], int)
     for k in range(11):
         if k == 0:
@@ -314,6 +326,8 @@ def summarize_window(r, window, reference, config=StyleConfig(), *, deltas=None)
             refs = counts[rows, k]
         cov = float(weights[valid].sum() / denominator) if denominator > 0 else 0.
         coverage.append(cov)
+        support = _reference_support(weights, valid, refs)
+        supports.append(support)
         valid_counts.append(n_valid)
         eligible_refs = refs[weights > 0]
         reference_counts.append({'min': int(eligible_refs.min()) if len(eligible_refs) else 0,
@@ -336,20 +350,25 @@ def summarize_window(r, window, reference, config=StyleConfig(), *, deltas=None)
             median, low, high = weighted_quantile(values[valid], weights[valid], [.5, .1, .9])
             indices = [0, 1] if k == 0 else [2 * k + 1, 2 * k + 2]
             raw[indices], known[indices] = [median, high - low], True
+            quality[indices] = cov ** 2 * support
     starts = r.beats.q[:-1]
     edges = ((starts[:-1] >= window['q_start']) & (starts[1:] < window['q_end']))
     valid_edges = edges & bm[:-1] & bm[1:]
     gaps = np.diff(starts)
     edge_total, edge_valid = float(gaps[edges].sum()), float(gaps[valid_edges].sum())
     edge_coverage = edge_valid / edge_total if edge_total > 0 else 0.
+    edge_support = _reference_support(gaps, valid_edges, np.minimum(bc[:-1], bc[1:]))
     if (known[0] and valid_edges.sum() >= config.min_roughness_edges
             and edge_coverage >= config.min_coverage and edge_valid > 0):
         raw[2] = np.abs(np.diff(bd))[valid_edges].sum() / edge_valid
         known[2] = True
+        quality[2] = edge_coverage ** 2 * edge_support
     reasons = sorted({reason for channel in channel_reasons[:4] for reason in channel})
     if not known[:9].all():
         reasons.append('core_missing')
     result = {'window': window, 'g_raw': raw.tolist(), 'g_mask': known.tolist(),
+              'quality_schema': style_quality_schema(), 'g_quality': quality.tolist(),
+              'reference_support': supports, 'roughness_reference_support': edge_support,
               'per_channel_coverage': coverage, 'valid_counts': valid_counts, 'reference_counts': reference_counts,
               'channel_reasons': channel_reasons, 'roughness_edges': int(valid_edges.sum()),
               'roughness_coverage': edge_coverage, 'sampling_eligible': bool(known[:9].all() and not window['tail']),

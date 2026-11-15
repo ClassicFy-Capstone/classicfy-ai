@@ -1,0 +1,37 @@
+{
+  "scope": "Actual deterministic batch replay through each final checkpoint epoch",
+  "objective_mode": "g_only",
+  "training_clips": 5082,
+  "reconstruction_clips": 0,
+  "clips_entering_G_objective": 3900,
+  "eras": {
+    "baroque": {
+      "training_clips": 558,
+      "reconstruction_clips": 0,
+      "final_epoch": 2,
+      "clips_entering_G_objective": 437,
+      "anchor_only_clips": 121,
+      "reconstruction_only_clips": 0,
+      "directed_pair_exposures": 8923
+    },
+    "classical_transition": {
+      "training_clips": 2303,
+      "reconstruction_clips": 0,
+      "final_epoch": 3,
+      "clips_entering_G_objective": 2101,
+      "anchor_only_clips": 202,
+      "reconstruction_only_clips": 0,
+      "directed_pair_exposures": 69281
+    },
+    "romantic_impressionist": {
+      "training_clips": 2221,
+      "reconstruction_clips": 0,
+      "final_epoch": 4,
+      "clips_entering_G_objective": 1362,
+      "anchor_only_clips": 859,
+      "reconstruction_only_clips": 0,
+      "directed_pair_exposures": 40332
+    }
+  },
+  "explanation": "G absence means insufficient comparable/reference-supported profiles or no eligible batch partner; all clips still enter encoder and anchor, no direct reconstruction."
+}

@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-baroque-02650",
+  "near_clip": "0c24da7874ed8964",
+  "far_clip": "c343bdce3bacec6c",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 3,
+  "recordings": {
+    "4e8bf123e8fa4887": {
+      "performance_id": "ATEPP:02650",
+      "artist": "Vladimir Ashkenazy",
+      "title": "Das Wohltemperierte Klavier: Book 1, BWV 846-869: Prelude in C major BWV 846",
+      "album": "Ashkenazy 50: Piano Encores",
+      "album_date": "2013-01-01"
+    },
+    "0c24da7874ed8964": {
+      "performance_id": "ATEPP:02686",
+      "artist": "Daniel Barenboim",
+      "title": "Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 19 in A Major, BWV 864: Fugue",
+      "album": "Bach, JS : Well-Tempered Clavier Book 1",
+      "album_date": "2005-05-24"
+    },
+    "c343bdce3bacec6c": {
+      "performance_id": "ATEPP:02689",
+      "artist": "Vladimir Ashkenazy",
+      "title": "Das Wohltemperierte Klavier: Book 1, BWV 846-869: Fugue in A major BWV 864",
+      "album": "Bach, J.S.: Das Wohltemperierte Klavier",
+      "album_date": "2005-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "0c24da7874ed8964",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.1401840194343178,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "c343bdce3bacec6c",
+      "role": "far",
+      "global_rank": 386,
+      "cosine_distance_to_anchor": 1.150630633159948,
+      "same_artist_as_anchor": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-classical_transition-10820",
+  "near_clip": "9f9e88606ae75ece",
+  "far_clip": "b715b37b91e6a227",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 36,
+  "recordings": {
+    "741af79ba611afde": {
+      "performance_id": "ATEPP:10820",
+      "artist": "Alicia de Larrocha",
+      "title": "Fantasia in C Minor, K. 475",
+      "album": "Mozart: Piano Sonata No. 11; Rondo in D Major; Fantasia in C Minor / Bach-Busoni: Chaconne",
+      "album_date": "1974-12-01"
+    },
+    "9f9e88606ae75ece": {
+      "performance_id": "ATEPP:09129",
+      "artist": "Wilhelm Kempff",
+      "title": "Piano Sonata No. 32 in C Minor, Op. 111: I. Maestoso - Allegro con brio ed appassionato",
+      "album": "Beethoven: The Late Piano Sonatas",
+      "album_date": "1965-01-01"
+    },
+    "b715b37b91e6a227": {
+      "performance_id": "ATEPP:09108",
+      "artist": "Alfred Brendel",
+      "title": "Piano Sonata No.32 in C minor, Op.111: 1. Maestoso - Allegro con brio ed appassionato",
+      "album": "Beethoven: Complete Piano Sonatas & Concertos",
+      "album_date": "2010-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "9f9e88606ae75ece",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.007642943270267599,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "b715b37b91e6a227",
+      "role": "far",
+      "global_rank": 1935,
+      "cosine_distance_to_anchor": 1.1713692424251425,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

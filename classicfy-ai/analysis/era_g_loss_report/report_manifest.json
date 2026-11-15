@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "pages": 7,
+  "figures": 5,
+  "all_pages_visually_reviewed": true,
+  "sha256": "828c06c915dbe3310ccfe183882ca9acc3ae2d2522835450d9732f0f8b84475c",
+  "scope": "Protected G-only train-only evaluation checkpoints; validation/test and weak Rec search; not all-data G-only refit",
+  "created_utc": "2026-11-13T14:48:54.800646+00:00"
+}

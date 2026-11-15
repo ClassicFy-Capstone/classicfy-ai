@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-classical_transition-06484",
+  "near_clip": "46f7070cd4520d33",
+  "far_clip": "ee0bc0281dd226d7",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 28,
+  "recordings": {
+    "698e7ded6934f204": {
+      "performance_id": "ATEPP:06484",
+      "artist": "Wilhelm Kempff",
+      "title": "Piano Sonata No. 19 in G Minor, Op. 49, No. 1: II. Rondo (Allegro)",
+      "album": "Beethoven: Sonatas Nos. 13 - 19",
+      "album_date": "2019-09-13"
+    },
+    "46f7070cd4520d33": {
+      "performance_id": "ATEPP:05857",
+      "artist": "Martha Argerich",
+      "title": "Piano Sonata No. 7 in D Major, Op. 10 No. 3: IV. Rondo. Allegro",
+      "album": "Mozart, Beethoven & Others: Piano Works",
+      "album_date": "2022-01-21"
+    },
+    "ee0bc0281dd226d7": {
+      "performance_id": "ATEPP:05871",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No. 7 in D Major, Op. 10 No. 3: IV. Rondo: Allegro",
+      "album": "Piano Recital: Arrau, Claudio - Beethoven, L. Van / Brahms, J. (Schwetzinger Festspiele Edition, 1963, 1973)",
+      "album_date": "2009-04-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "46f7070cd4520d33",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.10133090774917086,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "ee0bc0281dd226d7",
+      "role": "far",
+      "global_rank": 2238,
+      "cosine_distance_to_anchor": 1.3510367504790974,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

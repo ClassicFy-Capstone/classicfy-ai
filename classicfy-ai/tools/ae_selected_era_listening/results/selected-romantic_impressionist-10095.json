@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-romantic_impressionist-10095",
+  "near_clip": "462efcbfefee31e7",
+  "far_clip": "d8b92e0f3a814b4f",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 40,
+  "recordings": {
+    "c82ddcc6ddacb090": {
+      "performance_id": "ATEPP:10095",
+      "artist": "Maurizio Pollini",
+      "title": "Piano Sonata No.2 In B Flat Minor, Op.35: 3. Marche funèbre (Lento) - 1984 Recording",
+      "album": "Chopin",
+      "album_date": "2011-01-01"
+    },
+    "462efcbfefee31e7": {
+      "performance_id": "ATEPP:00879",
+      "artist": "Valentina Lisitsa",
+      "title": "Kinderszenen, Op. 15: No. 7. Traumerei",
+      "album": "Valentina Lisitsa Piano Recital",
+      "album_date": "2011-03-28"
+    },
+    "d8b92e0f3a814b4f": {
+      "performance_id": "ATEPP:00845",
+      "artist": "Vladimir Horowitz",
+      "title": "Kinderszenen, Op. 15: No. 7, Träumerei - Instrumental",
+      "album": "Horowitz: Favorite Encores",
+      "album_date": "1987-03-24"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "462efcbfefee31e7",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.04565130915954785,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "d8b92e0f3a814b4f",
+      "role": "far",
+      "global_rank": 2036,
+      "cosine_distance_to_anchor": 1.1502337043631217,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

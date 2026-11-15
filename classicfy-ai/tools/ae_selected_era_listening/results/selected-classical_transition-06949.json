@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-classical_transition-06949",
+  "near_clip": "0f9fe4b546747f6f",
+  "far_clip": "5164fa1c8ce05f1b",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 25,
+  "recordings": {
+    "eae59c17082fc35b": {
+      "performance_id": "ATEPP:06949",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No.2 in A, Op.2 No.2: 4. Rondo (Grazioso)",
+      "album": "The Final Sessions",
+      "album_date": "2006-01-01"
+    },
+    "0f9fe4b546747f6f": {
+      "performance_id": "ATEPP:08499",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No.27 in E minor, Op.90: 2. Nicht zu geschwind und sehr singbar vorgetragen",
+      "album": "Beethoven: Piano Sonatas Nos. 9, 10, 27 & 28",
+      "album_date": "1992-10-01"
+    },
+    "5164fa1c8ce05f1b": {
+      "performance_id": "ATEPP:08512",
+      "artist": "Friedrich Gulda",
+      "title": "Piano Sonata No. 27 in E Minor, Op. 90: II. Nicht zu geschwind und sehr singbar vorgetragen",
+      "album": "Gulda plays Beethoven",
+      "album_date": "2005-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "0f9fe4b546747f6f",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.04126597652345765,
+      "same_artist_as_anchor": true
+    },
+    {
+      "clip": "5164fa1c8ce05f1b",
+      "role": "far",
+      "global_rank": 2134,
+      "cosine_distance_to_anchor": 1.2527059749366738,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

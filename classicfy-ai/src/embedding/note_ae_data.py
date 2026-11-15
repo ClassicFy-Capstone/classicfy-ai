@@ -13,6 +13,7 @@ from .note_performance_data import NotePerformancePair, NotePerformanceSegment, 
 from .note_score_context_data import NoteScoreSegment
 from .style_profile_data import verify_window_sources
 from .style_triplets import anchor_signature, profile_distance, scale_profile, signature_key, validate_triplet
+from .style_supervision import STYLE_OBJECTIVES, triplet_confidence
 
 
 class NoteAECorpus:
@@ -136,13 +137,14 @@ class FixedNoteTriplets(Dataset):
                 or triplets['parents'] != {'profiles': profiles['id'], 'scaler': scaler['id'], 'calibration': calibration['id']}):
             raise ValueError('Fixed g/Triplet provenance does not match the AE corpus')
         lookup = {p['window']['window_id']: p for p in scale_profiles(profiles['profiles'], scaler)}
-        self.rows, self.corpus = [], corpus
+        self.rows, self.corpus, self.supervision = [], corpus, []
         for t in triplets['triplets']:
             ids = [t[role + '_window_id'] for role in ('anchor', 'positive', 'negative')]
             if any(key not in corpus.items or key not in lookup for key in ids):
                 raise ValueError('Triplet references an unavailable full AE window')
             a, p, n = [lookup[key] for key in ids]
-            if (any(corpus.items[key]['window'] != profile['window'] for key, profile in zip(ids, (a, p, n)))
+            if (any(not (corpus.matches_style_window(key, profile['window']) if hasattr(corpus, 'matches_style_window')
+                         else corpus.items[key]['window'] == profile['window']) for key, profile in zip(ids, (a, p, n)))
                     or [a['profile_id'], p['profile_id'], n['profile_id']] != t['profile_ids']
                     or any(profile['reference_id'] != t['reference_id'] for profile in (a, p, n))
                     or t['scaler_id'] != scaler['id'] or t['calibration_id'] != calibration['id'] or t['split'] != 'train'):
@@ -157,6 +159,20 @@ class FixedNoteTriplets(Dataset):
                     or not np.isclose(dan, t['D_an']) or not np.isclose(dan - dap, t['distance_gap'])):
                 raise ValueError('Triplet metric signature, distances or calibration disagree')
             validate_triplet(a, p, n, signature, near=t['tau_near'], far=t['tau_far'], gap=t['delta_g'])
+            supervision = {}
+            scale = fixed.get('distance_scale', 0.)
+            if np.isfinite(scale) and scale > config.epsilon:
+                gap = (dan - dap) / scale
+                if not np.isfinite(gap) or gap <= 0:
+                    raise ValueError('Invalid normalized g distance gap')
+                supervision['g_gap_normalized'] = gap
+            members = (a, p, n)
+            if 'quality' in t:
+                expected = [{'schema': p.get('quality_schema'), 'g_quality': p.get('g_quality')} for p in members]
+                if t['quality'] != expected:
+                    raise ValueError('Triplet quality disagrees with the frozen profiles')
+                supervision['confidence'] = triplet_confidence(members, signature)
+            self.supervision.append(supervision)
             self.rows.append(t)
         self.manifest_id = triplets['id']
         self.dependencies = {**triplets['parents'], 'reference': profiles['parents']['reference'], 'triplets': triplets['id']}
@@ -164,14 +180,28 @@ class FixedNoteTriplets(Dataset):
     def __len__(self):
         return len(self.rows)
 
+    def require_supervision(self, mode):
+        if mode not in STYLE_OBJECTIVES:
+            raise ValueError('Unknown style objective')
+        required = ([] if mode == 'legacy' else
+                    (['g_gap_normalized'] if mode == 'adaptive' else ['confidence'] if mode == 'confidence'
+                     else ['g_gap_normalized', 'confidence']))
+        for fields in self.supervision:
+            if any(key not in fields for key in required):
+                raise ValueError('Style objective requires valid calibration and regenerated quality profiles/triplets')
+
     def __getitem__(self, index):
         t = self.rows[index]
         return {**{role: self.corpus.items[t[role + '_window_id']] for role in ('anchor', 'positive', 'negative')},
-                'triplet_id': t['triplet_id']}
+                'triplet_id': t['triplet_id'], **self.supervision[index]}
 
     def collate(self, items):
-        return {**{role: self.corpus.collate([item[role] for item in items]) for role in ('anchor', 'positive', 'negative')},
-                'triplet_ids': [item['triplet_id'] for item in items]}
+        batch = {**{role: self.corpus.collate([item[role] for item in items]) for role in ('anchor', 'positive', 'negative')},
+                 'triplet_ids': [item['triplet_id'] for item in items]}
+        for key in ('g_gap_normalized', 'confidence'):
+            if all(key in item for item in items):
+                batch[key] = torch.tensor([item[key] for item in items], dtype=torch.float64)
+        return batch
 
 
 def to_device(batch, device):

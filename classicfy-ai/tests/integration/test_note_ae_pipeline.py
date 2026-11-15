@@ -1,6 +1,10 @@
 """Hand-computable AE/loss contracts and artifact-to-checkpoint integration."""
 from dataclasses import replace
 import copy
+import json
+from pathlib import Path
+import subprocess
+import sys
 import unittest
 from unittest.mock import patch
 
@@ -14,9 +18,9 @@ from embedding.note_ae_training import (NoteAETrainingConfig, export_note_embedd
     load_note_ae_model, train_note_ae)
 from embedding.note_performance_data import save_note_performance
 from embedding.note_score_encoder import NoteScoreEncoderConfig
-from embedding.style_profile_data import extract_profile_artifact, make_window_artifact, verify_window_sources
+from embedding.style_profile_data import extract_profile_artifact, make_window_artifact, save_style_artifact, verify_window_sources
 from embedding.style_triplets import build_triplets, calibrate_distances
-from features.style_profile import StyleConfig, artifact, fit_profile_scaler, fit_reference
+from features.style_profile import StyleConfig, artifact, fit_profile_scaler, fit_reference, stable_id
 from unit.preprocessing.musicxml_fixtures import XMLFixture
 from integration import test_style_triplets as style_helpers
 
@@ -274,14 +278,7 @@ class NoteAEPipelineTest(XMLFixture):
 
     def test_fixed_triplet_training_and_reconstruction_exposure(self):
         corpus, ws = self.corpus(many=True)
-        cfg = StyleConfig()
-        r = fit_reference(verify_window_sources(ws), cfg)
-        ref = artifact('reference', cfg, parents={'windows': ws['id']}, **{k:v for k,v in r.items() if k not in {'id','kind','schema','config','config_id','parents'}})
-        ps = extract_profile_artifact(ws, ref)
-        s = fit_profile_scaler(ps['profiles'], profiles_id=ps['id'])
-        c = calibrate_distances(ps['profiles'], s, profiles_id=ps['id'])
-        t = build_triplets(ps['profiles'], s, c, profiles_id=ps['id'])
-        triples = FixedNoteTriplets(corpus, t, ps, s, c)
+        triples = self.triplet_inputs(corpus, ws)
         self.assertGreater(len(triples), 0)
         _, report = train_note_ae(corpus, self.folder / 'joint', config=replace(self.tc, epochs=1, max_steps_per_epoch=2, triplet_batch_size=100), model_config=self.mc, score_config=self.sc, triplets=triples)
         self.assertTrue(report['style_training_performed'])
@@ -291,7 +288,165 @@ class NoteAEPipelineTest(XMLFixture):
         self.assertEqual(row['style_loader_restarts'], 1)
         self.assertEqual(sum(row['reconstruction_window_exposures'].values()), 6)
         self.assertTrue(np.isfinite(row['style_loss']))
-        self.assertEqual(report['g_dependencies']['triplets'], t['id'])
+        self.assertEqual(report['g_dependencies']['triplets'], triples.manifest_id)
+
+    def triplet_inputs(self, corpus, ws, legacy=False, return_artifacts=False):
+        cfg = StyleConfig()
+        r = fit_reference(verify_window_sources(ws), cfg)
+        ref = artifact('reference', cfg, parents={'windows': ws['id']}, **{k:v for k,v in r.items() if k not in {'id','kind','schema','config','config_id','parents'}})
+        ps = extract_profile_artifact(ws, ref)
+        if legacy:
+            for p in ps['profiles']:
+                for key in ('quality_schema', 'g_quality', 'reference_support', 'roughness_reference_support'):
+                    p.pop(key)
+                p['profile_id'] = stable_id({k: v for k, v in p.items() if k != 'profile_id'})
+            ps['id'] = stable_id({k: v for k, v in ps.items() if k != 'id'})
+        s = fit_profile_scaler(ps['profiles'], profiles_id=ps['id'])
+        c = calibrate_distances(ps['profiles'], s, profiles_id=ps['id'])
+        t = build_triplets(ps['profiles'], s, c, profiles_id=ps['id'])
+        if return_artifacts:
+            return t, ps, s, c
+        return FixedNoteTriplets(corpus, t, ps, s, c)
+
+    def test_g_loss_modes_training_and_exact_epoch_resume(self):
+        corpus, ws = self.corpus(many=True)
+        triples = self.triplet_inputs(corpus, ws)
+        batch = triples.collate([triples[0], triples[1]])
+        self.assertEqual(batch['confidence'].shape, (2,))
+        self.assertTrue(torch.all(batch['g_gap_normalized'] > 0))
+        torch.testing.assert_close(batch['confidence'], torch.full((2,), 2 / 3, dtype=torch.float64))
+        for mode in ('legacy', 'confidence', 'adaptive', 'adaptive_confidence'):
+            with self.subTest(mode=mode):
+                cfg = replace(self.tc, epochs=2, style_objective=mode)
+                full, report = train_note_ae(corpus, self.folder / (mode + '-full'), config=cfg,
+                    model_config=self.mc, score_config=self.sc, triplets=triples)
+                first = self.folder / (mode + '-first')
+                train_note_ae(corpus, first, config=replace(cfg, epochs=1), model_config=self.mc,
+                              score_config=self.sc, triplets=triples)
+                path = first / 'last.pt'
+                if mode == 'legacy':
+                    payload = torch.load(path, weights_only=True)
+                    payload.pop('style_objective')
+                    for key in ('style_objective', 'margin_scale', 'margin_min', 'margin_max'):
+                        payload['training_config'].pop(key)
+                    torch.save(payload, path)
+                resumed, _ = train_note_ae(corpus, self.folder / (mode + '-resume'), config=cfg,
+                    model_config=self.mc, score_config=self.sc, triplets=triples, resume=path)
+                for k, value in full.state_dict().items():
+                    torch.testing.assert_close(value, resumed.state_dict()[k], rtol=0, atol=0)
+                d = report['history'][0]['style_diagnostics']
+                self.assertAlmostEqual(d['confidence_mean'], 2 / 3 if 'confidence' in mode else 1., places=6)
+                self.assertGreaterEqual(d['unweighted_hinge'], report['history'][0]['style_loss'])
+                with self.assertRaisesRegex(ValueError, 'configuration mismatch'):
+                    train_note_ae(corpus, self.folder / (mode + '-wrong'),
+                        config=replace(cfg, margin_scale=.3), model_config=self.mc, score_config=self.sc,
+                        triplets=triples, resume=path)
+        path = self.folder / 'adaptive_confidence-first/last.pt'
+        payload = torch.load(path, weights_only=True)
+        payload['style_objective']['version'] = 'wrong'
+        torch.save(payload, path)
+        with self.assertRaisesRegex(ValueError, 'objective contract'):
+            load_note_ae_model(path)
+
+    def test_old_artifacts_and_missing_supervision(self):
+        corpus, ws = self.corpus(many=True)
+        triples = self.triplet_inputs(corpus, ws, legacy=True)
+        current = self.triplet_inputs(corpus, ws)
+        # Quality metadata does not change g values, cutoffs or chosen windows.
+        keys = ('anchor_window_id', 'positive_window_id', 'negative_window_id', 'D_ap', 'D_an', 'delta_g')
+        self.assertEqual([[t[k] for k in keys] for t in triples.rows],
+                         [[t[k] for k in keys] for t in current.rows])
+        self.assertGreater(len(triples), 0)
+        triples.require_supervision('legacy')
+        triples.require_supervision('adaptive')
+        for mode in ('confidence', 'adaptive_confidence'):
+            with self.assertRaisesRegex(ValueError, 'regenerated'):
+                train_note_ae(corpus, self.folder / mode, config=replace(self.tc, style_objective=mode),
+                    model_config=self.mc, score_config=self.sc, triplets=triples)
+        with self.assertRaisesRegex(ValueError, 'nonempty fixed triplets'):
+            train_note_ae(corpus, self.folder / 'missing', config=replace(self.tc, style_objective='adaptive'))
+        for fields in triples.supervision:
+            fields.pop('g_gap_normalized')
+        with self.assertRaisesRegex(ValueError, 'valid calibration'):
+            triples.require_supervision('adaptive')
+
+    def test_quality_and_calibration_provenance_rejected(self):
+        corpus, ws = self.corpus(many=True)
+        t, ps, s, c = self.triplet_inputs(corpus, ws, return_artifacts=True)
+        altered = copy.deepcopy(t)
+        altered['triplets'][0]['quality'][0]['g_quality'][0] = .1
+        altered['id'] = stable_id({k: v for k, v in altered.items() if k != 'id'})
+        with self.assertRaisesRegex(ValueError, 'quality disagrees'):
+            FixedNoteTriplets(corpus, altered, ps, s, c)
+        c = copy.deepcopy(c)
+        for entry in c['signatures'].values():
+            entry['distance_scale'] = 0.
+        c['id'] = stable_id({k: v for k, v in c.items() if k != 'id'})
+        t = build_triplets(ps['profiles'], s, c, profiles_id=ps['id'])
+        triples = FixedNoteTriplets(corpus, t, ps, s, c)
+        self.assertGreater(len(triples), 0)
+        triples.require_supervision('confidence')
+        with self.assertRaisesRegex(ValueError, 'valid calibration'):
+            triples.require_supervision('adaptive')
+
+    def test_g_loss_cli_config_reaches_real_training(self):
+        corpus, ws = self.corpus(many=True)
+        t, ps, s, c = self.triplet_inputs(corpus, ws, return_artifacts=True)
+        arguments = []
+        for flag, value in (('--windows', ws), ('--triplets', t), ('--g-profiles', ps),
+                            ('--g-scaler', s), ('--g-calibration', c)):
+            path = self.folder / (flag[2:] + '.json')
+            save_style_artifact(value, path)
+            arguments += [flag, str(path)]
+        root = Path(__file__).resolve().parents[2]
+        config = json.loads((root / 'configs/note_ae_g_loss.json').read_text(encoding='utf-8'))
+        config['training'].update(epochs=1, max_steps_per_epoch=1, batch_size=3)
+        config_path = self.folder / 'config.json'
+        config_path.write_text(json.dumps(config), encoding='utf-8')
+        out = self.folder / 'cli-training'
+        subprocess.run([sys.executable, str(root / 'scripts/train_note_autoencoder.py'), 'train',
+                        *arguments, '--config', str(config_path), '--out', str(out)],
+                       check=True, capture_output=True, text=True, timeout=120)
+        report = json.loads((out / 'training.json').read_text(encoding='utf-8'))
+        self.assertTrue(report['style_training_performed'])
+        self.assertEqual(report['style_objective']['mode'], 'adaptive_confidence')
+        self.assertAlmostEqual(report['history'][0]['style_diagnostics']['confidence_mean'], 2 / 3, places=6)
+
+    def test_bounded_full_pipeline_prepares_and_trains_all_windows(self):
+        import importlib.util
+        from embedding.note_ae_indexed_data import IndexedNoteAECorpus
+        from embedding.note_score_context_data import save_note_score_context
+        script = Path(__file__).resolve().parents[2] / 'scripts/run_local_atepp_ae.py'
+        spec = importlib.util.spec_from_file_location('local_pipeline_test', script)
+        runner = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(runner)
+        eager, windows = self.corpus(many=True)
+        out = self.folder / 'local-run'
+        out.mkdir()
+        runner.dump(out / 'inventory.json', {'scope': 'fixture'})
+        results = []
+        for source in windows['sources']:
+            pair = eager.pairs[source['performance_id']]
+            score_cache = self.folder / ('S-' + pair.score.cache_key)
+            if not score_cache.exists():
+                save_note_score_context(pair.score, score_cache)
+            recording = next(w['recording_id'] for w in windows['windows']
+                             if w['performance_id'] == source['performance_id'])
+            results.append({**source, 'score_cache': str(score_cache), 'recording_id': recording})
+        index = runner.prepare_inputs(out, results, lambda *args, **kwargs: None)
+        runner.pack_inputs(out, index, lambda *args, **kwargs: None)
+        runner.prepare_style(out, index, lambda *args, **kwargs: None)
+        packed = IndexedNoteAECorpus(out / 'packed')
+        from embedding.style_profile_data import load_style_artifact
+        triples = FixedNoteTriplets(packed, *(load_style_artifact(out / 'style' / name) for name in
+            ('triplets.json', 'profiles.json', 'scaler.json', 'calibration.json')))
+        self.assertEqual(len(packed.items), len(eager.items))
+        self.assertGreater(len(triples), 0)
+        triples.require_supervision('adaptive_confidence')
+        _, report = train_note_ae(packed, out / 'training', config=replace(self.tc, epochs=1,
+            style_objective='adaptive_confidence'), model_config=self.mc, score_config=self.sc, triplets=triples)
+        self.assertTrue(report['style_training_performed'])
+        self.assertAlmostEqual(report['history'][0]['style_diagnostics']['confidence_mean'], 2 / 3, places=6)
 
     def test_plateau_steps_after_validation_and_logs_used_and_next_lr(self):
         corpus, _ = self.corpus()
