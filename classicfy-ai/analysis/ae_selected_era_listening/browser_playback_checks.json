@@ -1,0 +1,246 @@
+{
+  "checked_at_utc": "2026-11-15T12:07:21.140Z",
+  "origin": "http://localhost:8770",
+  "method": "CUA actual app buttons and YouTube player playing state",
+  "checks": [
+    {
+      "case": 0,
+      "slot": 0,
+      "video": "7Ggms0Tkdds",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 0,
+      "slot": 1,
+      "video": "6orw-UcM_pg",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 0,
+      "slot": 2,
+      "video": "uAgOBCM2410",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 1,
+      "label": "바로크 02",
+      "slot": 0,
+      "video": "MjbXlGOOTyk",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 1,
+      "label": "바로크 02",
+      "slot": 1,
+      "video": "p1CGz7iSK5g",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 1,
+      "label": "바로크 02",
+      "slot": 2,
+      "video": "2MhEtQLDM90",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 2,
+      "label": "바로크 03",
+      "slot": 0,
+      "video": "osHAS6BceEU",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 2,
+      "label": "바로크 03",
+      "slot": 1,
+      "video": "Bx_DJyW5jKs",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 2,
+      "label": "바로크 03",
+      "slot": 2,
+      "video": "s73mTYoshWM",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 3,
+      "label": "고전과 전환 01",
+      "slot": 0,
+      "video": "LbwJI7ffQvU",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 3,
+      "label": "고전과 전환 01",
+      "slot": 1,
+      "video": "NMscuz6TgF8",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 3,
+      "label": "고전과 전환 01",
+      "slot": 2,
+      "video": "GUTuChDgPvU",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 4,
+      "label": "고전과 전환 02",
+      "slot": 0,
+      "video": "tN14ICxqWBk",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 4,
+      "label": "고전과 전환 02",
+      "slot": 1,
+      "video": "e4r90Okt1a4",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 4,
+      "label": "고전과 전환 02",
+      "slot": 2,
+      "video": "w-0TEX2MpMQ",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 5,
+      "label": "고전과 전환 03",
+      "slot": 0,
+      "video": "K3dPIAs7YmM",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 5,
+      "label": "고전과 전환 03",
+      "slot": 1,
+      "video": "KBEKNIJcyeo",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 5,
+      "label": "고전과 전환 03",
+      "slot": 2,
+      "video": "ifndJT_q-WU",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 6,
+      "label": "낭만과 인상주의 01",
+      "slot": 0,
+      "video": "evTEsQTXQy8",
+      "playing": true,
+      "status": "지정 구간 재생 중",
+      "first_attempt_status": "YouTube 삽입 플레이어를 준비합니다.",
+      "retried": true
+    },
+    {
+      "case": 6,
+      "label": "낭만과 인상주의 01",
+      "slot": 1,
+      "video": "ADqnI6xnKxk",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 6,
+      "label": "낭만과 인상주의 01",
+      "slot": 2,
+      "video": "dKfH1HcErtA",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 7,
+      "label": "낭만과 인상주의 02",
+      "slot": 0,
+      "video": "-pGImXjwSYk",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 7,
+      "label": "낭만과 인상주의 02",
+      "slot": 1,
+      "video": "qnTTOJ_fTGk",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 7,
+      "label": "낭만과 인상주의 02",
+      "slot": 2,
+      "video": "CBOKtkO3ENs",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 8,
+      "label": "낭만과 인상주의 03",
+      "slot": 0,
+      "video": "lPVt5plpq3Y",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 8,
+      "label": "낭만과 인상주의 03",
+      "slot": 1,
+      "video": "suZHueSy8jA",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 8,
+      "label": "낭만과 인상주의 03",
+      "slot": 2,
+      "video": "7He4JtL0kmU",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 9,
+      "label": "낭만과 인상주의 04",
+      "slot": 0,
+      "video": "J-BI9E9_Zc8",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 9,
+      "label": "낭만과 인상주의 04",
+      "slot": 1,
+      "video": "qJjnie3UcwI",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    },
+    {
+      "case": 9,
+      "label": "낭만과 인상주의 04",
+      "slot": 2,
+      "video": "wTOq0wm8nVE",
+      "playing": true,
+      "status": "지정 구간 재생 중"
+    }
+  ]
+}

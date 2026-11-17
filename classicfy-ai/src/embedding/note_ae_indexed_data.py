@@ -106,7 +106,9 @@ class IndexedNoteAECorpus:
 
     def __init__(self, path):
         self.path = Path(path)
-        self.manifest = json.loads((self.path / 'manifest.json').read_text())
+        self.manifest = json.loads((self.path / 'manifest.json').read_text(encoding='utf-8'))
+        if self.manifest.get('id') != stable_id({k: v for k, v in self.manifest.items() if k != 'id'}):
+            raise ValueError('Indexed input manifest integrity mismatch')
         if self.manifest['format'] != 'indexed-note-ae-tensors-v1':
             raise ValueError('Unknown indexed AE corpus format')
         self.r_scaler = load_note_performance_scaler(self.path / 'R_scaler.json')
@@ -135,6 +137,13 @@ class IndexedNoteAECorpus:
 
     def dataset(self, split):
         return NoteAEWindows([v for _, v in sorted(self.items.items()) if v['window']['split'] == split])
+
+    def matches_style_window(self, key, window):
+        """Bind compact g identity to the verified packed rows and original R."""
+        identity = self.items[key]['window']
+        fingerprint = self.manifest.get('source_R_fingerprints', {}).get(identity['performance_id'])
+        return (fingerprint is not None and fingerprint == window.get('R_fingerprint')
+                and all(window.get(k) == v for k, v in identity.items()))
 
     @property
     def contract(self):

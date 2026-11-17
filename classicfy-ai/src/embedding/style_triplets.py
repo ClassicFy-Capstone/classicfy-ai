@@ -377,6 +377,9 @@ def build_triplets(profiles, scaler, calibration, config=StyleConfig(), *, profi
                    'calibration_id': calibration['id'], 'seed': config.seed, 'split': 'train',
                    'coverage': [p['per_channel_coverage'] for p in (anchor, positive, negative)],
                    'reference_counts': [p['reference_counts'] for p in (anchor, positive, negative)]}
+        members = (anchor, positive, negative)
+        if all('g_quality' in p and 'quality_schema' in p for p in members):
+            triplet['quality'] = [{'schema': p['quality_schema'], 'g_quality': p['g_quality']} for p in members]
         triplet['triplet_id'] = stable_id(triplet)
         triplets.append(triplet)
         outcome['reason'] = 'selected'

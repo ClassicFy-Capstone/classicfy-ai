@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-romantic_impressionist-10719",
+  "near_clip": "6d848db6e8018414",
+  "far_clip": "88c6ce81f6c6dace",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 24,
+  "recordings": {
+    "57e73ae3795bdc9b": {
+      "performance_id": "ATEPP:10719",
+      "artist": "Samson François",
+      "title": "Ravel: Menuet antique, M. 7",
+      "album": "Ravel: Complete Piano & Orchestral Works",
+      "album_date": "2018-08-24"
+    },
+    "6d848db6e8018414": {
+      "performance_id": "ATEPP:11479",
+      "artist": "Maurizio Pollini",
+      "title": "Ballade No.4 In F Minor, Op.52",
+      "album": "Pollini Plays Chopin",
+      "album_date": "2016-12-30"
+    },
+    "88c6ce81f6c6dace": {
+      "performance_id": "ATEPP:11474",
+      "artist": "Vladimir Horowitz",
+      "title": "Ballade No. 4 in F Minor, Op. 52",
+      "album": "Horowitz Plays Chopin: Vol. 1",
+      "album_date": "1990-04-03"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "6d848db6e8018414",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.04083377037655245,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "88c6ce81f6c6dace",
+      "role": "far",
+      "global_rank": 2045,
+      "cosine_distance_to_anchor": 1.11111489114705,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

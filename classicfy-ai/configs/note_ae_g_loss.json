@@ -1,0 +1,11 @@
+{
+  "training": {
+    "style_objective": "adaptive_confidence",
+    "lambda_style": 0.1,
+    "margin": 0.2,
+    "margin_scale": 0.2,
+    "margin_min": 0.05,
+    "margin_max": 0.4,
+    "seed": 2026
+  }
+}

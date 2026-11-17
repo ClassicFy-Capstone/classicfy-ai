@@ -13,6 +13,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 
 from embedding.note_ae_indexed_data import IndexedNoteAECorpus, file_sha, pack_record
 from embedding.note_ae_training import NoteAETrainingConfig, train_note_ae
+from embedding.note_ae_data import FixedNoteTriplets
+from embedding.style_profile_data import load_style_artifact
 from embedding.note_autoencoder import NoteAEConfig
 from embedding.note_score_encoder import NoteScoreEncoderConfig
 from embedding.note_score_context_data import load_note_score_scale
@@ -100,6 +102,8 @@ def main():
     train.add_argument('--config', type=Path, required=True)
     train.add_argument('--out', type=Path, required=True)
     train.add_argument('--resume', type=Path)
+    for field in ('triplets', 'g-profiles', 'g-scaler', 'g-calibration'):
+        train.add_argument('--' + field, type=Path)
     args = parser.parse_args()
     if args.command == 'prepare':
         prepare(args.source.resolve(), args.out.resolve(), args.workers)
@@ -110,8 +114,12 @@ def main():
         model_config = NoteAEConfig(**raw.get('model', {}))
         score_config = NoteScoreEncoderConfig(**raw.get('score', {'context_dim': model_config.context_dim}))
         corpus = IndexedNoteAECorpus(args.corpus)
+        supplied = [args.triplets, args.g_profiles, args.g_scaler, args.g_calibration]
+        if any(supplied) and not all(supplied):
+            parser.error('Provide all four frozen g/Triplet artifacts together')
+        triples = FixedNoteTriplets(corpus, *(load_style_artifact(p) for p in supplied)) if all(supplied) else None
         train_note_ae(corpus, args.out, config=NoteAETrainingConfig(**raw['training']),
-                      model_config=model_config, score_config=score_config, resume=args.resume)
+                      model_config=model_config, score_config=score_config, triplets=triples, resume=args.resume)
 
 
 if __name__ == '__main__':

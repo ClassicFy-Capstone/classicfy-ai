@@ -1,0 +1,47 @@
+{
+  "scope": "Full-data fit diagnostics, not independent test",
+  "eras": {
+    "baroque": {
+      "clips": 558,
+      "works": 103,
+      "selected_epoch": 2,
+      "max_epochs": 2,
+      "G_score_change_percent": -21.83269008509533,
+      "pair_MSE_change_percent": -36.543905221003904,
+      "reconstruction_change_percent": 0.04275122553276667,
+      "normalized_z_drift": 0.00045880815014243126,
+      "preservation_passed": true,
+      "G_clips": 437,
+      "anchor_only_clips": 121,
+      "reload_max_error": 1.1920928955078125e-07
+    },
+    "classical_transition": {
+      "clips": 2303,
+      "works": 132,
+      "selected_epoch": 3,
+      "max_epochs": 3,
+      "G_score_change_percent": -41.072749959098665,
+      "pair_MSE_change_percent": -54.655707181105505,
+      "reconstruction_change_percent": 0.0915700818533427,
+      "normalized_z_drift": 0.001502151950262487,
+      "preservation_passed": true,
+      "G_clips": 2101,
+      "anchor_only_clips": 202,
+      "reload_max_error": 1.1920928955078125e-07
+    },
+    "romantic_impressionist": {
+      "clips": 2221,
+      "works": 244,
+      "selected_epoch": 4,
+      "max_epochs": 5,
+      "G_score_change_percent": -32.69553253230569,
+      "pair_MSE_change_percent": -50.91039527151408,
+      "reconstruction_change_percent": 0.08685609449641252,
+      "normalized_z_drift": 0.0010637888917699456,
+      "preservation_passed": true,
+      "G_clips": 1362,
+      "anchor_only_clips": 859,
+      "reload_max_error": 1.4901161193847656e-07
+    }
+  }
+}

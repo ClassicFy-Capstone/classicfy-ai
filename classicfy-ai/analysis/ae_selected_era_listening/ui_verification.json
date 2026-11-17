@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-11-15T12:11:37.629Z",
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "test_mode": true,
+  "checks": {
+    "resultHiddenBeforeAnswer": true,
+    "candidateArtistHiddenBeforeAnswer": true,
+    "timeEditApplied": true,
+    "timeResetExact": true,
+    "orderPersisted": true,
+    "radioLocked": true,
+    "memoLocked": true,
+    "resultRestored": true,
+    "resultScopeCorrect": true,
+    "jsonExportVerified": true
+  }
+}

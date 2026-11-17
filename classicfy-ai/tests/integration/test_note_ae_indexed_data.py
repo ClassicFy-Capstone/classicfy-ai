@@ -99,6 +99,18 @@ class IndexedNoteAEDataTest(XMLFixture):
         with self.assertRaisesRegex(ValueError, 'integrity'):
             IndexedNoteAECorpus(indexed.path)
 
+    def test_compact_style_windows_require_matching_raw_R_identity(self):
+        reference, indexed = self.corpus()
+        window = next(iter(reference.items.values()))['window']
+        key = window['window_id']
+        self.assertFalse(indexed.matches_style_window(key, window))
+        indexed.manifest['source_R_fingerprints'] = {
+            pid: pair.performance.fingerprint for pid, pair in reference.pairs.items()}
+        self.assertTrue(indexed.matches_style_window(key, window))
+        for field, changed in (('q_start', -1.), ('R_fingerprint', 'wrong'), ('N', 999)):
+            altered = {**window, field: changed}
+            self.assertFalse(indexed.matches_style_window(key, altered))
+
     def test_length_buckets_cover_every_window_and_resume_generator(self):
         class Windows:
             items = [{'window': {'N': n}} for n in range(109)]

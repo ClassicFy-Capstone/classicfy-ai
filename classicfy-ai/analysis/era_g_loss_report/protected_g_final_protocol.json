@@ -1,0 +1,58 @@
+{
+  "version": "protected-g-all5082-v1",
+  "supervision_version": "selected-clip-relative-g-v2-absolute-beat-cells",
+  "objective_mode": "g_only",
+  "corpus_id": "0f7865cb6bf8b27dc4603c98a2fbeac741ba066f025d540adaac200127a1bd2c",
+  "batch_clips": 16,
+  "epochs_by_era": {
+    "baroque": 2,
+    "classical_transition": 3,
+    "romantic_impressionist": 5
+  },
+  "configs": {
+    "baroque": {
+      "lambda_g": 0.1,
+      "ae_lr": 5e-05,
+      "head_lr": 0.001,
+      "gradient_budget": 0.25,
+      "seed": 2026,
+      "objective_mode": "g_only",
+      "reconstruction_weight": 0.0
+    },
+    "classical_transition": {
+      "lambda_g": 0.1,
+      "ae_lr": 5e-05,
+      "head_lr": 0.001,
+      "gradient_budget": 0.25,
+      "seed": 2026,
+      "objective_mode": "g_only",
+      "reconstruction_weight": 0.0
+    },
+    "romantic_impressionist": {
+      "lambda_g": 0.1,
+      "ae_lr": 5e-05,
+      "head_lr": 0.001,
+      "gradient_budget": 0.25,
+      "seed": 2026,
+      "objective_mode": "g_only",
+      "reconstruction_weight": 0.0
+    }
+  },
+  "loss": "effective_lambda*G + .05*z_anchor + .01*head_shift; no direct reconstruction",
+  "G_cap": "25% of unweighted reconstruction gradient at window z; warmup3epochs, nominal lambda .1",
+  "source_run": "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\outputs\\era_note_ae_20261113\\run03",
+  "validation_decision_sha256": "42587225c1bbe26f789825531756502573bc006e520e3e9d6a0741097d383844",
+  "initialization": "final_all_5082.pt copied independently per era; identity initialized bounded residual head",
+  "pretraining_hashes": {
+    "evaluated_best.pt": "aa64c3ed356cdf0b70f0743abd5fb2522847867067bcb1fd23d0fd03dba36862",
+    "final_all_5082.pt": "9bee1e7c364297cb18c8d6f9165a8144fb167125383f09eec703f74595770708"
+  },
+  "cache_contract": {
+    "corpus": "0f7865cb6bf8b27dc4603c98a2fbeac741ba066f025d540adaac200127a1bd2c",
+    "checkpoint": "9bee1e7c364297cb18c8d6f9165a8144fb167125383f09eec703f74595770708",
+    "scaler": "b2af3f82d2569b89f22cd7edc7d2af11c7d7169c44c74dba236f33bb23f8b374"
+  },
+  "coverage": "All clips enter encoder/anchor and monitoring; only valid comparable clips enter G; no fake G labels",
+  "selection": "Minimum full-fit G score among common-preservation guard-passing epochs; common baseline fallback allowed",
+  "evaluation": "All-data fit diagnostics, no independent test; existing train-only test evidence remains separate"
+}

@@ -78,12 +78,23 @@ def reconstruction_loss(prediction, target, M, P, beat_id, *, delta=1.):
             'skip': not bool(valid_windows.any()), 'skip_reason': None if valid_windows.any() else 'no_observed_reconstruction'}
 
 
-def triplet_style_loss(z_a, z_p, z_n, *, margin=.2):
+def triplet_style_loss(z_a, z_p, z_n, *, margin=.2, margins=None, weights=None):
     if (z_a.ndim != 2 or min(z_a.shape) < 1 or z_a.shape != z_p.shape or z_a.shape != z_n.shape
             or not math.isfinite(margin) or margin < 0 or any(not torch.isfinite(z).all() for z in (z_a, z_p, z_n))):
         raise ValueError('Expected matching finite triplet latents and nonnegative margin')
     a, p, n = (F.normalize(z, dim=-1) for z in (z_a, z_p, z_n))
     dap, dan = 1 - (a * p).sum(-1), 1 - (a * n).sum(-1)
-    hinges = F.relu(dap - dan + margin)
-    return {'loss': hinges.mean(), 'd_ap': dap, 'd_an': dan,
-            'active_ratio': (hinges > 0).float().mean(), 'margin_satisfied': (dan - dap >= margin).float().mean()}
+    for name, value in (('margins', margins), ('weights', weights)):
+        if value is not None and (not isinstance(value, torch.Tensor) or value.shape != dap.shape
+                or not value.is_floating_point() or value.device != dap.device or not torch.isfinite(value).all()
+                or (value < 0).any() or (name == 'weights' and (value > 1).any())
+                or (name == 'margins' and (value >= 2).any())):
+            raise ValueError(f'Expected finite {name} [B] on the latent device; weights in [0,1], margins in [0,2)')
+    margins = margins.detach().to(dap.dtype) if margins is not None else torch.full_like(dap, margin)
+    weights = weights.detach().to(dap.dtype) if weights is not None else torch.ones_like(dap)
+    hinges = F.relu(dap - dan + margins)
+    return {'loss': (weights * hinges).mean(), 'unweighted_hinge': hinges.mean(),
+            'd_ap': dap, 'd_an': dan, 'margins': margins, 'weights': weights,
+            'confidence_mean': weights.mean(), 'margin_mean': margins.mean(),
+            'fixed_margin_0_2_satisfied': (dan - dap >= .2).float().mean(),
+            'active_ratio': (hinges > 0).float().mean(), 'margin_satisfied': (dan - dap >= margins).float().mean()}

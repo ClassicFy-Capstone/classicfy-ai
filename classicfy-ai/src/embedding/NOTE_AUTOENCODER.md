@@ -100,6 +100,9 @@ R_hat = linear heads(d)
 
 ## 목적함수
 
+g 거리 차이와 관측 품질을 반영하는 선택적 목적함수는
+[G loss 설정·계산 계약](G_LOSS.md)에 설명한다. 기존 설정의 기본 모드는 `legacy`다.
+
 표준화된 R의 Huber(delta=1)를 사용한다. 구간마다:
 
 - onset/velocity/articulation은 채널별 관측된 실제 음표의 평균.
@@ -194,4 +197,88 @@ ATEPP은 검증된 XML 대응과 원본 R이 준비되어야 동일 경로를 �
 2의 .76008로 증가했다. z 교환 시 출력 변화 MSE는 약 9.59e-6로 작았다.
 이 결과는 연결·수치 안정성 점검이며 스타일 표현 학습 완료를 뜻하지 않는다.
 실행 산출물은 workspace의 `diagnostics/note_ae_validation/run01/`에 있다.
-ATEPP 실데이터와 대규모 학습은 이번에 실행하지 않았다.
+위 ASAP 소규모 점검 당시에는 ATEPP 대규모 학습을 실행하지 않았다.
+이후 선정 대표구간 전체를 사용한 실행 결과는 아래에 기록한다.
+
+## 선정 대표구간 5,082개 학습 경로
+
+`scripts/prepare_selected_note_ae.py`와 `scripts/train_selected_note_ae.py`는 위
+`NotePerformanceAutoencoder`에 원본 MusicXML의 S와 원본 연주 MIDI의 음표별 R11을
+공급한다. 7채널 `TemporalAutoencoder`와는 다른 실행 경로이다.
+
+입력 준비는 `--stage bridges`, `--stage clips` 순서로 실행한다. 두 단계 모두
+`--workspace <데이터셋을 보관한 workspace> --out <전처리 출력 폴더>`를 받는다.
+원본 score MIDI와 MusicXML 사이의 음고·악보 시간·반복 경로를 검증하고, 선정 CSV의
+시작부터 끝까지 사용한다. 원본 MIDI 해시와 기존 정렬 캐시를 검증하며, 정확히 연결되지
+않는 음표는 관측 마스크를 끈다. MIDI를 XML로 변환해 악상 지시를 만들어내지 않는다.
+페달 carry-in은 원본 이벤트에서 읽고, 구간 밖 key release/gap과 경계 밖 박자 target은
+loss에서 제외한다. 입력별 JSON에 대응률, 관측량, 복구·경계 마스킹 내역을 남긴다.
+
+학습 실행:
+
+```sh
+python scripts/train_selected_note_ae.py --prepared <전처리 출력 폴더> --out <학습 출력 폴더>
+```
+
+모든 5,082개 입력이 준비되지 않으면 학습을 거부한다. 메모리 맵 배열을 사용하고,
+기본 128음표 길이로 나누되 화음·박자를 쪼개거나 마지막 조각을 버리지 않는다.
+작품 ID, 원본 MIDI 해시, XML 해시, score MIDI 해시로 연결된 자료는 같은 split에
+배치한다. 평가 실험의 정규화 통계는 train만 사용한다.
+
+4개 설정(은닉 크기 32/64, 1/2층, 페달 가중치 1/1.5)을 먼저 8 epoch 비교하고,
+상위 2개를 최대 30 epoch까지 이어 학습한다(patience 7). 선택 기준은 구간별 동일
+비중 및 5개 복원 그룹 동일 비중의 validation Huber loss이다. 한 epoch에서는 모든
+학습 구간의 모든 조각을 사용한다. G loss는 이 공통 AE 학습에서 사용하지 않는다.
+test는 설정 선택 후 한 번 평가하고 평균값·zero-z·shuffled-z와 함께 보고한다.
+
+`evaluated_best.pt`는 분리 평가용 모델이다. 별도로 선택된 설정과 epoch 수를 사용해
+5,082개 전체로 처음부터 재학습한 모델을 `final_all_5082.pt`에 저장한다. 후자의
+정규화 통계는 전체 자료에서 다시 추정하므로 독립 test 성능을 주장하지 않는다.
+두 체크포인트에는 모델 설정, 입력 스키마, 정규화 통계, corpus 식별자와 학습 이력이
+들어 있다. 이 경로의 신뢰할 수 있는 로컬 체크포인트는 실행 스크립트의 `load_model`로
+복원한다. `all_5082_embeddings.npz`는 관측 음표 수로 가중한 조각별 z의 평균과
+그 평균을 L2 정규화한 e를 저장한다. 복원 성능만으로 청취상 스타일 유사성을 검증한
+것으로 해석하지 않는다. 실제 실행 완료 여부와 수치는 출력 `final_report.json`을 따른다.
+
+### 2026-11-13 전체 대표구간 실행 결과
+
+5,082개 구간, 479개 작품·악장 전체가 입력 준비를 통과했다. 기존 정렬 음표의
+97.94%를 원본 MusicXML에 연결했으며, 미대응·미관측 정답은 마스킹했다.
+총 1,355,869개 악보 음표 행과 13,340개 조각을 사용했고 마지막 조각도 보존했다.
+평가 분할은 train 3,432 / validation 853 / test 797구간이다.
+
+| 설정 | 은닉 크기 | AE 층 수 | 페달 복원 가중치 | 최선 epoch | Validation loss |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| compact | 32 | 1 | 1.0 | 8 | 0.154886 |
+| standard | 64 | 1 | 1.0 | 6 | 0.154659 |
+| deep (선택) | 64 | 2 | 1.0 | 16 | 0.153213 |
+| pedal15 | 64 | 1 | 1.5 | 12 | 0.153848 |
+
+모든 설정의 z는 64차원이다. 초기 8 epoch 비교 후 deep/pedal15를 연장했고,
+각각 23/19 epoch에서 early stopping했다. 선택된 deep의 16 epoch 가중치로
+고정 test 평가를 한 번 수행했다. Test Huber loss는 0.167938이며 train 평균값
+기준선 0.407931보다 58.83% 낮다. z를 0으로 바꾸면 0.333592, 다른 구간의 z로
+바꾸면 0.449176이다. 이는 z의 복원 기여를 보여주며 청취 스타일 거리 검증은 아니다.
+
+Test의 음표 수 가중 R²는 템포 0.936, velocity 0.658, articulation 0.423,
+음표 시작/끝의 sustain 값 0.409/0.454, soft 값 0.534였다. 음표 시작 시점 편차는
+0.008, sustain 최소값까지의 hold/gap 지연은 0.122/0.060으로 여전히 약하다.
+시험한 네 설정 중 validation 기준 최선이며 전역 최적해를 주장하지 않는다.
+
+선택 설정으로 5,082개 전체를 16 epoch 재학습했다. 학습 loss는 0.231291에서
+0.132173으로 낮아졌다. `final_all_5082.pt`와 `all_5082_embeddings.npz`를 생성했고,
+후자에는 모든 구간의 z와 정규화 e가 들어 있다. 전체 재학습 모델에는 독립 test가
+없으며 위 test 수치는 `evaluated_best.pt`에 해당한다. G loss는 사용하지 않았다.
+
+산출물은 workspace의 `outputs/note_ae_selected_20261113/training_run01/`에 있다.
+`final_report.json`, `test_evaluation.json`, `input_audit.json`, `loss_curves.png`와
+`final_artifact_verification.json`에서 결과와 근거를 확인할 수 있다.
+
+```sh
+python scripts/verify_selected_note_ae.py --run <학습 출력 폴더> --selected-csv <원본 selected_segments.csv>
+```
+
+검증은 원본 ID 5,082개, 매 epoch 전체 구간 사용, 평가 split 간 identity 비중복,
+파일 해시, 파라미터·임베딩의 유한성, e의 단위 norm을 확인했다. 재로딩한 모델로
+6개 구간의 임베딩을 재계산한 최대 절대 차이는 1.79e-7이었다. 검증 과정에서
+test 추론을 반복하거나 test 결과로 설정을 변경하지 않았다.

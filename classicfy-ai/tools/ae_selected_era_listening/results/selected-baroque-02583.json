@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-baroque-02583",
+  "near_clip": "57ccba2f3af54645",
+  "far_clip": "031a4729972a1281",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 10,
+  "recordings": {
+    "ff807befa88838dc": {
+      "performance_id": "ATEPP:02583",
+      "artist": "Daniel Barenboim",
+      "title": "Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 22 in B-Flat Minor, BWV 867: Fugue",
+      "album": "Bach, JS : Well-Tempered Clavier Book 1",
+      "album_date": "2005-05-24"
+    },
+    "57ccba2f3af54645": {
+      "performance_id": "ATEPP:02402",
+      "artist": "Sviatoslav Richter",
+      "title": "English Suite No. 3 in G Minor, BWV 808: I. Prélude",
+      "album": "Richter Plays Bach",
+      "album_date": "2008-08-25"
+    },
+    "031a4729972a1281": {
+      "performance_id": "ATEPP:02405",
+      "artist": "András Schiff",
+      "title": "English Suite No.3 in G minor, BWV 808: 1. Prélude",
+      "album": "The English Suites; Suites Nos.1 - 6",
+      "album_date": "1988-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "57ccba2f3af54645",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.10209467782264992,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "031a4729972a1281",
+      "role": "far",
+      "global_rank": 532,
+      "cosine_distance_to_anchor": 1.1122474688738562,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

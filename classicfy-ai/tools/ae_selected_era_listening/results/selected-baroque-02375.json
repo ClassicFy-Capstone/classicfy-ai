@@ -1,0 +1,48 @@
+{
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "case_id": "selected-baroque-02375",
+  "near_clip": "40a897b5ea89bb9e",
+  "far_clip": "cf8913dbf50dc866",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 4,
+  "recordings": {
+    "a59a005e831c6a61": {
+      "performance_id": "ATEPP:02375",
+      "artist": "Wilhelm Kempff",
+      "title": "English Suite No. 3 in G Minor, BWV 808: IX. Gigue",
+      "album": "Wilhelm Kempff Plays Bach. Transcriptions For Piano",
+      "album_date": "1994-01-01"
+    },
+    "40a897b5ea89bb9e": {
+      "performance_id": "ATEPP:02463",
+      "artist": "Claudio Arrau",
+      "title": "Partita No.5 in G, BWV 829: 5. Tempo di minuetto",
+      "album": "Bach js-Arrau heritage",
+      "album_date": "2003-01-01"
+    },
+    "cf8913dbf50dc866": {
+      "performance_id": "ATEPP:02460",
+      "artist": "András Schiff",
+      "title": "Partita No. 5 in G, BWV 829: 5. Tempo di minuetto",
+      "album": "Bach, J.S.: The Solo Keyboard Works",
+      "album_date": "1996-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "40a897b5ea89bb9e",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.07520751082204091,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "cf8913dbf50dc866",
+      "role": "far",
+      "global_rank": 494,
+      "cosine_distance_to_anchor": 1.1689409646872893,
+      "same_artist_as_anchor": false
+    }
+  ]
+}
