@@ -88,11 +88,11 @@ def score_worker(task):
     return result
 
 
-def map_work_splits(rows, raw, out):
+def map_work_splits(rows, raw, out, frozen=None):
     # Separate diagnostic protocol: never rewrite an existing experiment split.
     # Preserve known ASAP work assignments where an explicit overlap match exists.
     ai = Path(__file__).resolve().parents[1]
-    frozen = ai.parents[1] / 'datasets/temporal_embedding_cluster_run01/dataset.json'
+    frozen = Path(frozen) if frozen is not None else ai.parents[1] / 'datasets/temporal_embedding_cluster_run01/dataset.json'
     overlap = ai / 'analysis/dataset_compatibility/asap_atepp_overlap/work_crosswalk.csv'
     inherited = defaultdict(set)
     if frozen.is_file() and overlap.is_file():
@@ -141,7 +141,9 @@ def map_work_splits(rows, raw, out):
             split='train' if rank<70 else 'validation' if rank<85 else 'test'
         for work in works: assignments[work]={'split':split,'work_key':'ATEPP/'+group}
     result={'policy':'isolated validation protocol; known frozen ASAP assignments inherited; other work groups stable SHA256 70/15/15; conflicts unassigned',
-            'seed':2026,'assignments':assignments,'conflicts':conflicts,'existing_experiment_splits_modified':False}
+            'seed':2026,'assignments':assignments,'conflicts':conflicts,'existing_experiment_splits_modified':False,
+            'frozen_asap_split':str(frozen.resolve()) if frozen.is_file() else None,
+            'frozen_asap_split_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest() if frozen.is_file() else None}
     dump(out/'splits.json',result)
     return result
 
@@ -159,7 +161,7 @@ def scan(args, rows):
                 row=future.result();append(path,row)
                 if i%100==0 or i==len(tasks): print(name,len(done)+i,'/',len(done)+len(tasks),flush=True)
     raw, scores=read_log(args.out/'raw.jsonl'),read_log(args.out/'scores.jsonl')
-    map_work_splits(rows,raw,args.out)
+    map_work_splits(rows,raw,args.out,getattr(args,'frozen_asap_split',None))
     dump(args.out/'scan_summary.json',{'raw':dict(Counter(r['status'] for r in raw)),
         'scores':dict(Counter(r['status'] for r in scores)), 'raw_errors':dict(Counter(r.get('error') for r in raw if r['status']!='parsed')),
         'score_errors':dict(Counter(r.get('error') for r in scores if r['status']!='prepared'))})
@@ -203,7 +205,8 @@ def align_worker(task):
         bridge['alignment_metrics']=metrics;dump(dest/'bridge.json',bridge)
         features,_=load_note_score_context(source['score_cache'])
         s,r=prepare_atepp_note_performance(Path(root)/row['score_path'],source['score_midi'],Path(root)/row['midi_path'],cache,
-            bridge,record_key=row['perf_id'],work_key=split['work_key'],split=split['split'],score_features=features)
+            bridge,record_key=row['perf_id'],work_key=split['work_key'],split=split['split'],score_features=features,
+            traversal=tuple(source['traversal']) if source.get('traversal') is not None else None)
         restored,mask=inverse_r_physical(r.values,r.mask,r.local_tau)
         np.testing.assert_allclose(restored[mask],r.physical[mask],rtol=1e-10,atol=1e-10)
         path=dest/'R'
@@ -256,8 +259,11 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('stage',choices=['scan','align','finish','finalize'])
     p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
+    p.add_argument('--frozen-asap-split',type=Path,help='Existing ASAP dataset.json split to inherit where explicitly matched')
     p.add_argument('--retry-resources',action='store_true');p.add_argument('--max-note-cells',type=int,default=120_000_000);p.add_argument('--retry-rejected',action='store_true');p.add_argument('--workers',type=int,default=2);p.add_argument('--limit',type=int)
     args=p.parse_args();args.root=args.root.resolve();args.out=args.out.resolve()
+    if args.frozen_asap_split is not None and not args.frozen_asap_split.is_file():
+        p.error('Frozen ASAP split file does not exist')
     rows=list(csv.DictReader((args.root/'ATEPP-metadata-1.2.csv').open(encoding='utf-8-sig')))
     if args.stage=='scan': scan(args,rows)
     elif args.stage=='align': align(args,rows)

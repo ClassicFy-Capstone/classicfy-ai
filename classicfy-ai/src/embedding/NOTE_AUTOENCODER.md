@@ -1,5 +1,43 @@
 # 8마디 조건부 연주 시퀀스 AE
 
+## 원본 캐시 인덱스 기반 실행
+
+
+원본 캐시 입력은 `note_ae_source_index.py`를 사용하며, 기존 packed tensor 입력의
+`note_ae_indexed_data.py` 및 `train_indexed_note_autoencoder.py`와 별도로 유지한다.
+`--index`는 `ae-training-index` JSON을 받으며 packed corpus 디렉터리를 받지 않는다.
+이 경로의 record-block 순서와 `bucket_by_length`를 동시에 지정하면 오류로 처리한다.
+
+`prepare_note_ae_index.py`는 완료된 ATEPP 정렬 로그에서 모든 통과 연주의 full 8마디를
+인덱스로 만들고, train 원본 R과 train 악보에서만 R/S scaler를 계산한다. tail·빈 구간·
+복원 관측 없는 구간은 사유와 함께 제외한다. g·Triplet 선정으로 복원 구간을 줄이지 않는다.
+
+```sh
+python scripts/prepare_note_ae_index.py --preprocessing /run/preprocessing --out /run/ae_inputs
+python scripts/validate_note_ae_index.py --index /run/ae_inputs/index.json --out /run/ae_inputs/validation.json
+python scripts/train_note_autoencoder.py train --index /run/ae_inputs/index.json --config configs/note_ae_full_reconstruction.json --out /run/training
+```
+
+기존 collator·모델·loss를 그대로 사용하고, 전체 R을 동시에 보관하는 대신 기본 8개 연주의
+검증된 S/R 캐시만 유지한다. 연주 순서를 seed로 섞고, 캐시 크기만큼의 연주 블록 안에서
+구간 순서를 섞는다. 모든 적격 train 구간은 epoch마다 정확히 한 번 사용한다. 기존 전 구간
+무작위 순서와 배치 순서는 다르며 인덱스 계약과 checkpoint에 이 설정을 기록한다.
+이 실행 경로는 현재 복원 전용이며 `--index`와 Triplet 입력의 결합은 거부한다.
+
+`progress.json`에는 현재 단계와 update를, `epochs.jsonl`에는 완료 epoch별 기록을 즉시 남긴다.
+validation 최저 checkpoint는 `best.pt`, 완료 epoch 재개용은 `last.pt`다. 재개는 같은 인덱스·
+scaler·캐시 크기·설정과 `--resume .../last.pt --out 새폴더`를 사용한다.
+학습 후 선택된 모델의 test 평가는 한 번만 따로 실행할 수 있다.
+
+```sh
+python scripts/train_note_autoencoder.py evaluate --index /run/ae_inputs/index.json --checkpoint /run/training/best.pt --split test --out /run/training/test.json
+```
+
+`run_atepp_note_training.py --run /run`은 준비된 원본 경로 view·scan 결과·runtime·training_config.json에서
+자동 정렬→큰 정렬 재시도→전체 입력 생성·검증→학습→선택 checkpoint의 test 평가를 이어 실행한다.
+단계별 로그와 `status.json`을 남기며 실패를 숨기거나 이전 모델로 대체하지 않는다.
+
+
 검증을 통과한 ATEPP 전체 입력의 학습·평가 상태는
 [전체 데이터 실행 보고서](../../analysis/note_ae_full_corpus_reconstruction/README.md)에 기록한다.
 기존 7작품 실험의 전체 epoch 순회와 전체 코퍼스 학습은 구분한다.

@@ -1,0 +1,131 @@
+﻿channel,kind,era,composer,works,median
+rubato,absolute,classical_baroque,Domenico Scarlatti,1,3.1644558890889734
+rubato,absolute,classical_baroque,Franz Joseph Haydn,1,4.112385913619732
+rubato,absolute,classical_baroque,Johann Sebastian Bach,6,3.0670108367832123
+rubato,absolute,classical_baroque,Ludwig van Beethoven,10,6.660568833493391
+rubato,absolute,classical_baroque,Wolfgang Amadeus Mozart,4,6.236311094645847
+rubato,absolute,romantic,Alexander Scriabin,1,14.958312898479154
+rubato,absolute,romantic,Franz Liszt,6,16.943311921217525
+rubato,absolute,romantic,Franz Schubert,6,10.236935050729146
+rubato,absolute,romantic,Johannes Brahms,1,13.630490956069833
+rubato,absolute,romantic,Robert Schumann,4,16.521700860298118
+rubato,absolute,romantic,Sergei Rachmaninoff,4,19.99637501836159
+rubato,absolute,impressionist_modern,Claude Debussy,15,16.09879015703857
+rubato,absolute,impressionist_modern,Maurice Ravel,7,9.78976235041535
+rubato,relative,classical_baroque,Domenico Scarlatti,1,1.871905106742504
+rubato,relative,classical_baroque,Franz Joseph Haydn,1,2.3640232787489746
+rubato,relative,classical_baroque,Johann Sebastian Bach,6,1.728133225765615
+rubato,relative,classical_baroque,Ludwig van Beethoven,10,4.100435741831385
+rubato,relative,classical_baroque,Wolfgang Amadeus Mozart,4,2.725829399523599
+rubato,relative,romantic,Alexander Scriabin,1,4.768386827242676
+rubato,relative,romantic,Franz Liszt,6,4.4310066923782045
+rubato,relative,romantic,Franz Schubert,6,4.612127529105648
+rubato,relative,romantic,Johannes Brahms,1,2.5774970526308145
+rubato,relative,romantic,Robert Schumann,4,7.006322163317373
+rubato,relative,romantic,Sergei Rachmaninoff,4,3.908621804450982
+rubato,relative,impressionist_modern,Claude Debussy,15,6.409449801016838
+rubato,relative,impressionist_modern,Maurice Ravel,7,4.9975444996103215
+dynamics,absolute,classical_baroque,Domenico Scarlatti,1,61.52535539268212
+dynamics,absolute,classical_baroque,Franz Joseph Haydn,1,70.77210089186175
+dynamics,absolute,classical_baroque,Johann Sebastian Bach,6,70.69763795378893
+dynamics,absolute,classical_baroque,Ludwig van Beethoven,10,59.292185793547716
+dynamics,absolute,classical_baroque,Wolfgang Amadeus Mozart,4,60.77787523627036
+dynamics,absolute,romantic,Alexander Scriabin,1,53.40589854952601
+dynamics,absolute,romantic,Franz Liszt,6,74.22515464960549
+dynamics,absolute,romantic,Franz Schubert,6,53.64033146983495
+dynamics,absolute,romantic,Johannes Brahms,1,51.51719751906589
+dynamics,absolute,romantic,Robert Schumann,4,60.374436281140916
+dynamics,absolute,romantic,Sergei Rachmaninoff,4,55.640379128730885
+dynamics,absolute,impressionist_modern,Claude Debussy,15,56.518045666482735
+dynamics,absolute,impressionist_modern,Maurice Ravel,7,59.80957340250227
+dynamics,relative,classical_baroque,Domenico Scarlatti,1,3.3691155722715127
+dynamics,relative,classical_baroque,Franz Joseph Haydn,1,6.3831489356054565
+dynamics,relative,classical_baroque,Johann Sebastian Bach,6,3.507443196429148
+dynamics,relative,classical_baroque,Ludwig van Beethoven,10,5.439769088490003
+dynamics,relative,classical_baroque,Wolfgang Amadeus Mozart,4,5.433306854995514
+dynamics,relative,romantic,Alexander Scriabin,1,4.02270004823122
+dynamics,relative,romantic,Franz Liszt,6,2.9387759083794096
+dynamics,relative,romantic,Franz Schubert,6,5.705854015579618
+dynamics,relative,romantic,Johannes Brahms,1,4.040434629921312
+dynamics,relative,romantic,Robert Schumann,4,5.976309742999564
+dynamics,relative,romantic,Sergei Rachmaninoff,4,2.658654793599556
+dynamics,relative,impressionist_modern,Claude Debussy,15,5.375866901269649
+dynamics,relative,impressionist_modern,Maurice Ravel,7,4.615100345892785
+pedal_depth,absolute,classical_baroque,Domenico Scarlatti,1,50.93682384300159
+pedal_depth,absolute,classical_baroque,Franz Joseph Haydn,1,46.23879156356399
+pedal_depth,absolute,classical_baroque,Johann Sebastian Bach,6,45.62623678786004
+pedal_depth,absolute,classical_baroque,Ludwig van Beethoven,10,64.77466905108355
+pedal_depth,absolute,classical_baroque,Wolfgang Amadeus Mozart,4,50.16298058062889
+pedal_depth,absolute,romantic,Alexander Scriabin,1,78.9526981384109
+pedal_depth,absolute,romantic,Franz Liszt,6,72.85147836164735
+pedal_depth,absolute,romantic,Franz Schubert,6,69.36415229337459
+pedal_depth,absolute,romantic,Johannes Brahms,1,71.5278005464294
+pedal_depth,absolute,romantic,Robert Schumann,4,66.73985214068732
+pedal_depth,absolute,romantic,Sergei Rachmaninoff,4,75.72511292152424
+pedal_depth,absolute,impressionist_modern,Claude Debussy,15,71.85581285275055
+pedal_depth,absolute,impressionist_modern,Maurice Ravel,7,72.22786541419993
+pedal_depth,relative,classical_baroque,Domenico Scarlatti,1,7.243658615146958
+pedal_depth,relative,classical_baroque,Franz Joseph Haydn,1,10.138475991940826
+pedal_depth,relative,classical_baroque,Johann Sebastian Bach,6,11.864346638240612
+pedal_depth,relative,classical_baroque,Ludwig van Beethoven,10,8.877784737969641
+pedal_depth,relative,classical_baroque,Wolfgang Amadeus Mozart,4,10.916183828201655
+pedal_depth,relative,romantic,Alexander Scriabin,1,5.694059784663139
+pedal_depth,relative,romantic,Franz Liszt,6,8.046928258303105
+pedal_depth,relative,romantic,Franz Schubert,6,6.752205307230161
+pedal_depth,relative,romantic,Johannes Brahms,1,3.9013719480251976
+pedal_depth,relative,romantic,Robert Schumann,4,6.447329957973816
+pedal_depth,relative,romantic,Sergei Rachmaninoff,4,5.8684134854919305
+pedal_depth,relative,impressionist_modern,Claude Debussy,15,9.198478129178914
+pedal_depth,relative,impressionist_modern,Maurice Ravel,7,11.091834948738091
+pedal_down_ratio,absolute,classical_baroque,Domenico Scarlatti,1,21.896319747204885
+pedal_down_ratio,absolute,classical_baroque,Franz Joseph Haydn,1,16.294060912295
+pedal_down_ratio,absolute,classical_baroque,Johann Sebastian Bach,6,22.120562750922552
+pedal_down_ratio,absolute,classical_baroque,Ludwig van Beethoven,10,62.79816771050274
+pedal_down_ratio,absolute,classical_baroque,Wolfgang Amadeus Mozart,4,28.28716942934497
+pedal_down_ratio,absolute,romantic,Alexander Scriabin,1,93.95198757094356
+pedal_down_ratio,absolute,romantic,Franz Liszt,6,76.24963021004623
+pedal_down_ratio,absolute,romantic,Franz Schubert,6,75.47096204947087
+pedal_down_ratio,absolute,romantic,Johannes Brahms,1,74.74012128613856
+pedal_down_ratio,absolute,romantic,Robert Schumann,4,65.64509834804424
+pedal_down_ratio,absolute,romantic,Sergei Rachmaninoff,4,91.61645773693351
+pedal_down_ratio,absolute,impressionist_modern,Claude Debussy,15,80.64372564669777
+pedal_down_ratio,absolute,impressionist_modern,Maurice Ravel,7,85.86930307592229
+pedal_down_ratio,relative,classical_baroque,Domenico Scarlatti,1,14.798621348370967
+pedal_down_ratio,relative,classical_baroque,Franz Joseph Haydn,1,14.845857438586146
+pedal_down_ratio,relative,classical_baroque,Johann Sebastian Bach,6,15.372099703070871
+pedal_down_ratio,relative,classical_baroque,Ludwig van Beethoven,10,20.008119868611693
+pedal_down_ratio,relative,classical_baroque,Wolfgang Amadeus Mozart,4,16.76922365559593
+pedal_down_ratio,relative,romantic,Alexander Scriabin,1,4.372731201102315
+pedal_down_ratio,relative,romantic,Franz Liszt,6,9.716800812095997
+pedal_down_ratio,relative,romantic,Franz Schubert,6,15.577768867399666
+pedal_down_ratio,relative,romantic,Johannes Brahms,1,11.895855662795594
+pedal_down_ratio,relative,romantic,Robert Schumann,4,12.74080127304908
+pedal_down_ratio,relative,romantic,Sergei Rachmaninoff,4,5.571101934180223
+pedal_down_ratio,relative,impressionist_modern,Claude Debussy,15,12.630415505153666
+pedal_down_ratio,relative,impressionist_modern,Maurice Ravel,7,11.686829694081927
+pedal_changes,absolute,classical_baroque,Domenico Scarlatti,1,0.8853658536585367
+pedal_changes,absolute,classical_baroque,Franz Joseph Haydn,1,0.4363001745200698
+pedal_changes,absolute,classical_baroque,Johann Sebastian Bach,6,0.6446360426040896
+pedal_changes,absolute,classical_baroque,Ludwig van Beethoven,10,1.721614100185529
+pedal_changes,absolute,classical_baroque,Wolfgang Amadeus Mozart,4,1.3927145117961541
+pedal_changes,absolute,romantic,Alexander Scriabin,1,3.0440251572327046
+pedal_changes,absolute,romantic,Franz Liszt,6,2.0436450492182976
+pedal_changes,absolute,romantic,Franz Schubert,6,2.1782910284883354
+pedal_changes,absolute,romantic,Johannes Brahms,1,5.75
+pedal_changes,absolute,romantic,Robert Schumann,4,2.1994020052941385
+pedal_changes,absolute,romantic,Sergei Rachmaninoff,4,2.383265013322402
+pedal_changes,absolute,impressionist_modern,Claude Debussy,15,1.9259259259259258
+pedal_changes,absolute,impressionist_modern,Maurice Ravel,7,1.9210526315789473
+pedal_changes,relative,classical_baroque,Domenico Scarlatti,1,0.5487804878048781
+pedal_changes,relative,classical_baroque,Franz Joseph Haydn,1,0.3298429319371728
+pedal_changes,relative,classical_baroque,Johann Sebastian Bach,6,0.5680426610468758
+pedal_changes,relative,classical_baroque,Ludwig van Beethoven,10,0.9140538033395176
+pedal_changes,relative,classical_baroque,Wolfgang Amadeus Mozart,4,0.8263398675426232
+pedal_changes,relative,romantic,Alexander Scriabin,1,1.0
+pedal_changes,relative,romantic,Franz Liszt,6,0.909389547585836
+pedal_changes,relative,romantic,Franz Schubert,6,1.041236635164793
+pedal_changes,relative,romantic,Johannes Brahms,1,1.9919354838709677
+pedal_changes,relative,romantic,Robert Schumann,4,0.845934678621314
+pedal_changes,relative,romantic,Sergei Rachmaninoff,4,0.8721544715447154
+pedal_changes,relative,impressionist_modern,Claude Debussy,15,1.0168539325842696
+pedal_changes,relative,impressionist_modern,Maurice Ravel,7,1.174342105263158

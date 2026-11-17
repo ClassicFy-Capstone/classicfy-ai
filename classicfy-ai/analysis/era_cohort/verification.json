@@ -1,0 +1,51 @@
+{
+  "method": "Independent SQLite joins and group aggregation; exact membership/metadata audit; separate-directory regeneration byte comparison.",
+  "status": "passed",
+  "era_counts": [
+    {
+      "era": "early",
+      "groups": 8,
+      "recordings": 58
+    },
+    {
+      "era": "classical_romantic",
+      "groups": 128,
+      "recordings": 2156
+    },
+    {
+      "era": "modern_contemporary",
+      "groups": 25,
+      "recordings": 274
+    }
+  ],
+  "unique_recordings": 2488,
+  "unique_midi_sha256": 2488,
+  "work_score_groups": 161,
+  "excluded_recording": {
+    "key": "07328",
+    "retained_key": "07314",
+    "reason": "identical MIDI SHA256"
+  },
+  "metadata_and_membership_mismatches": 0,
+  "reproducible_files": [
+    "composer_summary.csv",
+    "era_summary.csv",
+    "excluded_performances.csv",
+    "performances.csv",
+    "protocol.json",
+    "sensitivity_cohorts.csv",
+    "works.csv"
+  ],
+  "original_quality_thresholds_rechecked_from_metadata": true,
+  "raw_features_recomputed": false,
+  "artifact_sha256": {
+    "composer_summary.csv": "f0fe44ebb4d5c374f45ba825b8d6d17682549f1a4146d78816a0db4b8218ca28",
+    "era_summary.csv": "e66b386fb7df540e437db900ea687e35106d53a02f177ac128b33a2ad70168f0",
+    "excluded_performances.csv": "3c000669487bee1294b1ef176c28ad9b904971fede94229ba12b14aef3bc0c12",
+    "performances.csv": "9f34f98ddb5335465646cedd468cd17c6a7097a6e482823d235162f0d8610b52",
+    "protocol.json": "5da960acbce27268a3cd09c194dd330dfebff4ec5024c77ef0141baa3bd574f4",
+    "sensitivity_cohorts.csv": "5d9b78b41df892b2afd2e8a95b18f81028f302ec5354ad1cc13b34640bed8800",
+    "works.csv": "a8e5552e4880c4349e2d18136b0821911cc7e4f7b16523621ad70b1206c8e09c"
+  },
+  "script_sha256": "885e4e51f05b8ecc96b1918912cb46f14a0c3a1cfb9a202b6c8f934458e6ad49"
+}

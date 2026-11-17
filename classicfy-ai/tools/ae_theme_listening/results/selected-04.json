@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-04",
+  "near_clip": "2d769706cb3d25b4",
+  "far_clip": "467a148f66edb14b",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 3,
+  "recordings": {
+    "31b925d5b70ef126": {
+      "performance_id": "ATEPP:08214",
+      "artist": "Emil Gilels",
+      "title": "Piano Sonata No.15 In D, Op.28 -\"Pastorale\": 4. Rondo. Allegro ma non troppo",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2006-01-01"
+    },
+    "2d769706cb3d25b4": {
+      "performance_id": "ATEPP:02686",
+      "artist": "Daniel Barenboim",
+      "title": "Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 19 in A Major, BWV 864: Fugue",
+      "album": "Bach, JS : Well-Tempered Clavier Book 1",
+      "album_date": "2005-05-24"
+    },
+    "467a148f66edb14b": {
+      "performance_id": "ATEPP:02687",
+      "artist": "Glenn Gould",
+      "title": "The Well-Tempered Clavier, Book 1: Fugue No. 19 in A Major, BWV 864",
+      "album": "Glenn Gould plays Bach: The Well-Tempered Clavier Books I & II, BWV 846-893",
+      "album_date": "1993"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "2d769706cb3d25b4",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.012153404436224813,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "467a148f66edb14b",
+      "role": "far",
+      "global_rank": 3259,
+      "cosine_distance_to_anchor": 1.1461510676762907,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

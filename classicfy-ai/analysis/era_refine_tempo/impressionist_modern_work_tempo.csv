@@ -1,0 +1,101 @@
+﻿display_id,composition_id,era_ko,composer,track,recordings_total,recordings_used,absolute_tempo_qpm,relative_tempo_iqr_pp,relative_pct_median,status
+M001,969,인상주의·현대,Anton Webern,"Variations for Piano, Op. 27: 3. Ruhig, fliessend",3,0,,,,no_score
+M002,1319,인상주의·현대,Béla Bartók,"3 Burlesques, Sz47, Op.8c (BB55): 1. Presto",2,0,,,,no_score
+M003,1320,인상주의·현대,Béla Bartók,"3 Burlesques, Sz47, Op.8c (BB55): 2. Allegretto",3,0,,,,no_score
+M004,1334,인상주의·현대,Béla Bartók,"15 Hungarian Peasant Songs, Sz. 71: No. 2, Andante",1,0,,,,no_score
+M005,1603,인상주의·현대,Béla Bartók,"Dance Suite, Sz. 77",1,0,,,,no_score
+M006,1604,인상주의·현대,Béla Bartók,"Three Rondos On Folk Tunes, Sz. 84",1,0,,,,no_score
+M007,646,인상주의·현대,Claude Debussy,"Images - Book 1, L. 110: 1. Reflets dans l'eau",20,19,44.576631809253165,4.760866986299481,0.0,ok
+M008,647,인상주의·현대,Claude Debussy,"Images - Book 1, L. 110: 2. Hommage à Rameau",13,10,63.38403874543562,7.6942825435309805,-2.1989559859467276,ok
+M009,648,인상주의·현대,Claude Debussy,"Préludes / Book 1, L.117: 5. Les collines d'Anacapri",18,0,,,,unsupported_score
+M010,654,인상주의·현대,Claude Debussy,"Debussy: Suite bergamasque, CD 82, L. 75: IV. Passepied",12,12,187.551300949007,5.422602109671383,0.2777002881309374,ok
+M011,655,인상주의·현대,Claude Debussy,"Suite bergamasque, L. 75: III. Clair de lune",16,15,68.12386575988184,19.382571516765122,0.0,ok
+M012,657,인상주의·현대,Claude Debussy,"Debussy: 12 Études, CD 143, L. 136: No. 2, Pour les tierces",3,2,82.25626158539445,14.049427612487369,0.9821093869529225,ok
+M013,658,인상주의·현대,Claude Debussy,"12 Etudes, Book 1, L. 136: No. 4, Pour les sixtes (Live)",2,1,41.967213114754934,,,absolute_only_single_recording
+M014,659,인상주의·현대,Claude Debussy,"Debussy: 12 Études, CD 143, L. 136: No. 8, Pour les agréments",4,0,,,,no_score
+M015,661,인상주의·현대,Claude Debussy,"Debussy: 12 Études, CD 143, L. 136: No. 10, Pour les sonorités opposées",4,0,,,,no_score
+M016,662,인상주의·현대,Claude Debussy,"Debussy: 12 Études, CD 143, L. 136: No. 12, Pour les accords",4,0,,,,no_score
+M017,663,인상주의·현대,Claude Debussy,"Debussy: 12 Études, CD 143, L. 136: No. 1, Pour les cinq doigts",3,3,118.10339617683512,10.362565331723093,0.0,ok
+M018,664,인상주의·현대,Claude Debussy,"Préludes, Book 2, L. 123: No. 6, Général Lavine - Eccentric (Live)",8,8,103.55069252706753,6.664067822805136,-0.026322718330123552,ok
+M019,665,인상주의·현대,Claude Debussy,"Préludes - Book 2, L.123: 12. Feux d'artifice",14,0,,,,unsupported_score
+M020,666,인상주의·현대,Claude Debussy,"Préludes - Book 2, L.123: 11. Les tierces alternées",11,0,,,,no_score
+M021,667,인상주의·현대,Claude Debussy,"Préludes, Book 2, L. 123: No. 5, Bruyères",5,5,59.72780298120543,0.6384212086950164,0.0,ok
+M022,674,인상주의·현대,Claude Debussy,"Estampes, L. 100: 3. Jardins sous la pluie",13,0,,,,unsupported_score
+M023,756,인상주의·현대,Dmitri Shostakovich,Dances of the Dolls: Lyric Waltz,1,0,,,,no_score
+M024,759,인상주의·현대,Dmitri Shostakovich,"Three Fantastic Dances, Op. 5: 1. Allegretto",2,0,,,,no_score
+M025,761,인상주의·현대,Dmitri Shostakovich,"The Gadfly, Op. 97 - Arr. for piano: Short piece",1,0,,,,no_score
+M026,767,인상주의·현대,Dmitri Shostakovich,Five Preludes: 5. Andantino,1,0,,,,no_score
+M027,772,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.5 in D major: Fugue",1,0,,,,no_score
+M028,773,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.11 in B major: Fugue",1,0,,,,no_score
+M029,774,인상주의·현대,Dmitri Shostakovich,"12 Preludes and Fugues from Op. 87: Prelude in B Minor, Op. 87/7",2,0,,,,no_score
+M030,777,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.21 in B flat major: Prelude",1,0,,,,no_score
+M031,778,인상주의·현대,Dmitri Shostakovich,"12 Preludes and Fugues from Op. 87: Prelude in A Major, Op. 87/7",2,0,,,,no_score
+M032,779,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.11 in B major: Prelude",1,0,,,,no_score
+M033,780,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.1 in C major: Prelude",1,0,,,,no_score
+M034,781,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.8 in F sharp minor: Fugue",2,0,,,,no_score
+M035,782,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.13 in F sharp major: Prelude",1,0,,,,no_score
+M036,789,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.14 in E flat minor: Prelude",2,0,,,,no_score
+M037,790,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.21 in B flat major: Fugue",1,0,,,,no_score
+M038,794,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.19 in E flat major: Prelude",1,0,,,,no_score
+M039,798,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.10 in C sharp minor: Fugue",1,0,,,,no_score
+M040,801,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.23 in F major: Fugue",2,0,,,,no_score
+M041,802,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.23 in F major: Prelude",2,0,,,,no_score
+M042,805,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: No.23 in F major",2,0,,,,no_score
+M043,808,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.20 in C minor: Fugue",1,0,,,,no_score
+M044,811,인상주의·현대,Dmitri Shostakovich,12 Preludes and Fugues from Op. 87: 1. Prelude in G Major Op. 87/3,2,0,,,,no_score
+M045,813,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.10 in C sharp minor: Prelude",1,0,,,,no_score
+M046,814,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.24 in D minor: Prelude",1,0,,,,no_score
+M047,816,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.5 in D major: Prelude",1,0,,,,no_score
+M048,818,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.20 in C minor: Prelude",1,0,,,,no_score
+M049,819,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.9 in E major: Fugue",1,0,,,,no_score
+M050,822,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.15 in D flat major: Fugue",2,0,,,,no_score
+M051,824,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.1 in C major: Fugue",1,0,,,,no_score
+M052,826,인상주의·현대,Dmitri Shostakovich,"Preludes and Fugues for Piano, Op.87: Prelude & Fugue No.4 in E minor: Fugue",2,0,,,,no_score
+M053,829,인상주의·현대,Dmitri Shostakovich,"Aphorisms, Op. 13: 2. Serenade",1,0,,,,no_score
+M054,831,인상주의·현대,Dmitri Shostakovich,"Aphorisms, Op. 13: 3. Nocturne",1,0,,,,no_score
+M055,832,인상주의·현대,Dmitri Shostakovich,"Aphorisms, Op. 13: 4. Elegy",1,0,,,,no_score
+M056,834,인상주의·현대,Dmitri Shostakovich,"Aphorisms, Op. 13: 9. Legend",1,0,,,,no_score
+M057,837,인상주의·현대,Dmitri Shostakovich,"The Golden Age, Op. 22b: Polka (Arr. for Piano)",1,0,,,,no_score
+M058,713,인상주의·현대,Maurice Ravel,"Ravel: Miroirs, M. 43: III. Une barque sur l'océan",10,9,59.8956041802711,7.5367030839224665,0.6032703603692438,ok
+M059,717,인상주의·현대,Maurice Ravel,"Miroirs, M. 43: No. 2, Oiseaux tristes",5,0,,,,no_score
+M060,718,인상주의·현대,Maurice Ravel,"Sonatine, M. 40: I. Modéré",8,0,,,,no_score
+M061,721,인상주의·현대,Maurice Ravel,"Gaspard de la nuit, M. 55: I. Ondine",25,25,56.12667478684525,9.18177807582693,-0.40768782760480515,ok
+M062,723,인상주의·현대,Maurice Ravel,"Ravel: Gaspard de la nuit, M. 55: III. Scarbo",26,0,,,,unsupported_score
+M063,724,인상주의·현대,Maurice Ravel,"Ravel: Le Tombeau de Couperin, M. 68: III. Forlane",7,0,,,,no_score
+M064,726,인상주의·현대,Maurice Ravel,"Ravel: Le Tombeau de Couperin, M. 68: V. Menuet",8,0,,,,no_score
+M065,727,인상주의·현대,Maurice Ravel,"Ravel: Le Tombeau de Couperin, M. 68: II. Fugue",7,0,,,,no_score
+M066,729,인상주의·현대,Maurice Ravel,"Ravel: Le Tombeau de Couperin, M. 68: IV. Rigaudon",7,0,,,,no_score
+M067,1541,인상주의·현대,Maurice Ravel,"Valses nobles et sentimentales, M. 61",9,0,,,,unsupported_score
+M068,1542,인상주의·현대,Maurice Ravel,"La valse, M. 72",1,1,212.27279152009027,,,absolute_only_single_recording
+M069,972,인상주의·현대,Paul Hindemith,Piano Sonata No. 2 in G Major: I. Mässig schnell (Live),1,0,,,,no_score
+M070,974,인상주의·현대,Paul Hindemith,Piano Sonata No. 2 in G Major: III. Sehr langsam - Rondo. Bewegt (Live),1,0,,,,no_score
+M071,976,인상주의·현대,Paul Hindemith,"1922 Suite for Piano, Op.26: 3. Nachtstück",1,0,,,,no_score
+M072,978,인상주의·현대,Paul Hindemith,"1922 Suite for Piano, Op.26: 1. March",1,0,,,,no_score
+M073,985,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 2 in D Minor, Op. 14: IV. Vivace - Moderato - Vivace",6,0,,,,no_score
+M074,986,인상주의·현대,Sergei Prokofiev,"Piano Sonata No.2 in D minor, Op.14: 1. Allegro ma non troppo",5,0,,,,no_score
+M075,987,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 2 in D Minor, Op. 14: III. Andante",4,0,,,,no_score
+M076,992,인상주의·현대,Sergei Prokofiev,"Pieces from ""Romeo and Juliet"" Op. 75: 9. Dance of the Girls with the Lillies",4,0,,,,no_score
+M077,995,인상주의·현대,Sergei Prokofiev,"Pieces From ""Romeo And Juliet"" Op. 75 - Arr. Prokofiev: 10. Romeo & Juliet before parting",4,0,,,,no_score
+M078,997,인상주의·현대,Sergei Prokofiev,"Pieces From ""Romeo And Juliet"" Op. 75 - Arr. Prokofiev: 5. Masks",3,0,,,,no_score
+M079,998,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 8 in B-Flat Major, Op. 84: II. Andante sognando",13,0,,,,no_score
+M080,1001,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 9 in C Major, Op. 103: II. Allegro strepitoso",3,0,,,,no_score
+M081,1002,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 9 in C Major, Op. 103: III. Andante tranquillo",3,0,,,,no_score
+M082,1004,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 9 in C Major, Op. 103: IV. Allegro con brio, ma non troppo presto",4,0,,,,no_score
+M083,1005,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 4 in C Minor, Op. 29: I. Allegro molto sostenuto (Live)",2,0,,,,no_score
+M084,1007,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 4 in C Minor, Op. 29: II. Andante assai (Live)",2,0,,,,no_score
+M085,1008,인상주의·현대,Sergei Prokofiev,"6 Pieces from Cinderella, Op. 102: No. 1, Waltz. Cinderella and the Prince (Live)",2,0,,,,no_score
+M086,1009,인상주의·현대,Sergei Prokofiev,"Six Pieces from ""Cinderella"", Op. 102: 5. Shawl Dance",1,0,,,,no_score
+M087,1010,인상주의·현대,Sergei Prokofiev,"Six Pieces from ""Cinderella"", Op. 102: 4. Waltz (Departure of Cinderella for the Ball)",1,0,,,,no_score
+M088,1011,인상주의·현대,Sergei Prokofiev,"Six Pieces from ""Cinderella"", Op. 102: 2. Cinderella's Variation",1,0,,,,no_score
+M089,1012,인상주의·현대,Sergei Prokofiev,"Six Pieces from ""Cinderella"", Op. 102: 3. Quarrel",1,0,,,,no_score
+M090,1014,인상주의·현대,Sergei Prokofiev,"3 Pieces for Piano, Op. 96: No. 1, Waltz (Live)",2,0,,,,no_score
+M091,1015,인상주의·현대,Sergei Prokofiev,"6 Pieces for Piano, Op. 52: No. 2, Rondo (Live)",1,0,,,,no_score
+M092,1016,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 7 in B-Flat Major, Op. 83: I. Allegro inquieto - Poco meno - Andantino",15,0,,,,no_score
+M093,1019,인상주의·현대,Sergei Prokofiev,"4 Pieces, Op.32: 1. Danza",1,0,,,,no_score
+M094,1027,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 6 in A Major, Op. 82: II. Allegretto",10,0,,,,no_score
+M095,1028,인상주의·현대,Sergei Prokofiev,"3 Pieces from Cinderella, Op. 95: No. 2, Gavotte (Live)",2,0,,,,no_score
+M096,1032,인상주의·현대,Sergei Prokofiev,"Visions fugitives, Op. 22: No. 3, Allegretto (Live)",1,0,,,,no_score
+M097,1035,인상주의·현대,Sergei Prokofiev,"Visions fugitives, Op.22: 9. Allegretto tranquillo",4,0,,,,no_score
+M098,1037,인상주의·현대,Sergei Prokofiev,"Visions Fugitives, Op. 22: No. 11 Con vivacita",2,0,,,,no_score
+M099,1038,인상주의·현대,Sergei Prokofiev,"Prokofiev: Visions fugitives, Op. 22: No. 4, Animato",1,0,,,,no_score
+M100,1554,인상주의·현대,Sergei Prokofiev,"Piano Sonata No. 3 in A Minor, Op. 28",5,0,,,,no_score

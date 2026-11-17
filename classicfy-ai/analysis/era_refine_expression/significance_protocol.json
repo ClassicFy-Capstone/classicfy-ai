@@ -1,0 +1,35 @@
+{
+  "scope": "Exploratory, fixed figure cohort: 22 works per era / 66 total; not all ATEPP.",
+  "input_sha256": "5dc5fd2d8893ad789f1390adf790e62a3625d03c39b246d8d0b5031b4d8861c6",
+  "script_sha256": "a38f979677c56cee0dd289a9431612af20813c884c682be98f60b815f20c4951",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "work_test": "Kruskal-Wallis, chi-square approximation, 22 works per era; dependent works remain a limitation.",
+  "effect": "max(0, (H-k+1)/(N-k)); rank effect estimate, not classification accuracy or raw variance explained.",
+  "composer_test": "Median displayed value per composer, ranks, exact H upper-tail permutation; all 36036 allocations at fixed group sizes 5/6/2.",
+  "composer_limitation": "Sensitivity analysis assuming composer exchangeability, not adjustment identifying era independent of composer; only Debussy/Ravel in modern group.",
+  "multiple_testing": "Holm across 10 metrics separately for work and composer omnibus families. Pairwise Mann-Whitney asymptotic two-sided, continuity/tie correction, Holm across all 30 pairs.",
+  "relative_definition": "Local absolute deviation after common-position median subtraction, not signed mean or prior tempo IQR.",
+  "limitations": [
+    "Composer, work/movement, performer/recording dependence; selected score/alignment availability.",
+    "Different recording counts and self-included reference; no fixed-recording-count sensitivity in this run.",
+    "Distribution significance does not imply nonoverlapping eras or held-out classification ability.",
+    "Failure to reject is not evidence of equality."
+  ],
+  "references": [
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kruskal.html",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html"
+  ],
+  "validation": [
+    "Exact 66 IDs and 22 per era for all 10 metrics.",
+    "Rank-sum H independently checked against SciPy; pairwise Cliff delta checked by pair counting."
+  ],
+  "output_sha256": {
+    "significance_omnibus.csv": "d1aeb37fac799ce358f5c68e05c89bc65451df41daf5212f6b50e0214cce23a3",
+    "significance_era_descriptives.csv": "fc76e544984de65c6cbecbfe790757298e0da866f4dc9b3e54ca80a34810f80a",
+    "significance_pairwise.csv": "eaa5e2f3c33714dec51242bf30691bb30354a0c695578333c8fa381d19fed86f",
+    "significance_composer_values.csv": "2dae3f38f10b050478e6737b6be5acc53e170d362b5dd55bcd33703bb7026415"
+  }
+}
