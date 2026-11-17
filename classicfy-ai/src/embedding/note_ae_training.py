@@ -48,9 +48,10 @@ class NoteAETrainingConfig:
     lr_scheduler_threshold: float = 1e-4
     lr_scheduler_min_lr: float = 1e-5
     bucket_by_length: bool = False
+    progress_interval_steps: int = 100
 
     def __post_init__(self):
-        for key in ('epochs', 'batch_size', 'triplet_batch_size', 'torch_threads'):
+        for key in ('epochs', 'batch_size', 'triplet_batch_size', 'torch_threads', 'progress_interval_steps'):
             value = getattr(self, key)
             if isinstance(value, bool) or not isinstance(value, int) or value < 1:
                 raise ValueError('Positive integer training sizes required')
@@ -116,8 +117,13 @@ class LengthBucketBatches:
             yield batches[i]
 
 
-def _loader(dataset, size, collate, *, shuffle=False, generator=None, bucket_by_length=False):
+def _loader(dataset, size, collate, *, shuffle=False, generator=None, bucket_by_length=False, sampler=None):
     generator = generator if generator is not None else torch.Generator().manual_seed(0)
+    if sampler is not None:
+        if bucket_by_length:
+            raise ValueError('Record-block sampling and length bucketing cannot be combined')
+        return DataLoader(dataset, batch_size=size, sampler=sampler, collate_fn=collate,
+                          generator=generator, num_workers=0)
     if bucket_by_length:
         return DataLoader(dataset, batch_sampler=LengthBucketBatches(dataset, size, shuffle=shuffle, generator=generator),
                           collate_fn=collate, generator=generator, num_workers=0)
@@ -307,11 +313,24 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
             raise ValueError('Checkpoint already reached its validation early stopping limit')
     if config.epochs <= start_epoch:
         raise ValueError('Resume epoch limit must exceed the completed checkpoint epoch')
+    sampler = corpus.training_sampler(train, generators['reconstruction']) if hasattr(corpus, 'training_sampler') else None
     rec_loader = _loader(train, config.batch_size, corpus.collate, shuffle=True, generator=generators['reconstruction'],
-                         bucket_by_length=config.bucket_by_length)
+                         bucket_by_length=config.bucket_by_length, sampler=sampler)
     style_loader = (_loader(triplets, config.triplet_batch_size, triplets.collate, shuffle=True, generator=generators['style'])
                     if triplets is not None and len(triplets) and config.lambda_style > 0 else None)
-    print(json.dumps({'stage': 'initial_train_evaluation', 'windows': len(train)}), flush=True)
+    exact_style_epoch = bool(style_loader is not None and getattr(triplets, 'exact_once_per_epoch', False))
+    if exact_style_epoch:
+        style_loader = DataLoader(triplets,
+            batch_sampler=triplets.epoch_batch_sampler(len(rec_loader), generators['style']),
+            collate_fn=triplets.collate, num_workers=0)
+    started = time.monotonic()
+    def write_progress(stage, **fields):
+        payload = {'stage': stage, 'elapsed_seconds': time.monotonic() - started, **fields}
+        temporary = out / 'progress.json.tmp'
+        temporary.write_text(json.dumps(payload, allow_nan=False) + '\n')
+        temporary.replace(out / 'progress.json')
+        print(json.dumps(payload), flush=True)
+    write_progress('initial_evaluation', train_windows=len(train), validation_windows=len(validation))
     initial = evaluate_note_ae(model, train, corpus.collate, config)
     history = []
     expected_windows = Counter(item['window']['window_id'] for item in train.items)
@@ -328,6 +347,7 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
         style_iter = iter(style_loader) if style_loader is not None else None
         norms, latents, exposure_ids = [], [], Counter()
         rec_ids, triplet_ids = Counter(), Counter()
+        role_exposures = {role: Counter() for role in ('anchor', 'positive', 'negative')}
         for batch_index, raw in enumerate(rec_loader):
             if config.max_steps_per_epoch and batch_index >= config.max_steps_per_epoch:
                 break
@@ -360,6 +380,8 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                 dan_sum += float(style['d_an'].detach().sum())
                 margin_sum += float(style['margin_satisfied']) * count
                 exposure_ids.update(w['window_id'] for w in style_batch['anchor']['window_metadata'])
+                for role in role_exposures:
+                    role_exposures[role].update(w['window_id'] for w in style_batch[role]['window_metadata'])
             if rec['skip'] and style is None and (mean is None or mean['skip'] or config.beta_mean_tempo == 0):
                 skipped += 1
                 continue
@@ -376,13 +398,12 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
             total_sum += float(loss.detach())
             updates += 1
             step += 1
-            if len(rec_loader) > 100 and (batch_index + 1) % 50 == 0:
-                progress = {'stage': 'training', 'epoch': epoch + 1, 'batch': batch_index + 1,
-                            'batches': len(rec_loader), 'windows_used': sum(rec_ids.values()),
-                            'windows_expected': len(train), 'seconds': time.perf_counter() - epoch_started}
-                (out / 'progress.json').write_text(json.dumps(progress))
-                print(json.dumps(progress), flush=True)
-        print(json.dumps({'stage': 'validation', 'epoch': epoch + 1, 'windows': len(validation)}), flush=True)
+            progress_interval = min(10, config.progress_interval_steps) if exact_style_epoch else config.progress_interval_steps
+            if updates == 1 or step % progress_interval == 0:
+                write_progress('training', epoch=epoch + 1, step=step, batch=batch_index + 1,
+                               batches_in_epoch=len(rec_loader), windows_used=sum(rec_ids.values()),
+                               windows_expected=len(train), loss=float(loss.detach()))
+        write_progress('validation', epoch=epoch + 1, step=step)
         validation_metrics = evaluate_note_ae(model, validation, corpus.collate, config)
         score = validation_metrics['loss']
         improved = score is not None and (best is None or score < best)
@@ -405,6 +426,10 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
         complete_epoch = rec_ids == expected_windows
         if config.max_steps_per_epoch == 0 and not complete_epoch:
             raise ValueError('Unlimited reconstruction epoch did not use every train window exactly once')
+        complete_style_epoch = (exact_style_epoch and
+            triplet_ids == Counter(row['triplet_id'] for row in triplets.rows) and cycles == 0)
+        if exact_style_epoch and config.max_steps_per_epoch == 0 and not complete_style_epoch:
+            raise ValueError('Style epoch did not use every fixed triplet exactly once')
         full_train = (evaluate_note_ae(model, train, corpus.collate, replace(config, max_validation_batches=0))
                       if config.evaluate_train_each_epoch else None)
         train_metrics = metrics.result()
@@ -421,6 +446,8 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
                'd_ap': dap_sum / exposed if exposed else None, 'd_an': dan_sum / exposed if exposed else None,
                'train_triplet_margin_satisfied': margin_sum / exposed if exposed else None,
                'style_loader_restarts': cycles, 'triplet_exposures': exposed, 'anchor_exposures': dict(exposure_ids),
+               'complete_style_epoch': complete_style_epoch,
+               'style_role_exposures': {role: dict(counts) for role, counts in role_exposures.items()},
                'reconstruction_window_exposures': dict(rec_ids), 'triplet_id_exposures': dict(triplet_ids),
                'updates': updates, 'skipped_batches': skipped, 'skip_reason': 'no_observed_reconstruction' if skipped else None,
                'gradient_norm_max': max(norms) if norms else None,
@@ -458,6 +485,7 @@ def train_note_ae(corpus, out, *, config=None, model_config=None, score_config=N
               'stop_reason': stop_reason, 'completed_epoch': history[-1]['epoch'], 'early_stopping_state': stopping,
               'limits': 'initial hyperparameters; train g agreement is not listener-style generalization'}
     (out / 'training.json').write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False))
+    write_progress('complete', epochs_completed=len(history), step=step, stop_reason=stop_reason)
     return model, report
 
 

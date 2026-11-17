@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-07",
+  "near_clip": "bd7a91a704efa069",
+  "far_clip": "b7598eec187f747d",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 30,
+  "recordings": {
+    "fde5097e4e9a33af": {
+      "performance_id": "ATEPP:00409",
+      "artist": "Lazar Berman",
+      "title": "12 Études d'exécution transcendante, S. 139: No. 11, Harmonies du soir. Andantino (Remastered 2021)",
+      "album": "Liszt: 12 Études d'exécution transcendante, S. 139 (Remastered 2021)",
+      "album_date": "2021-08-06"
+    },
+    "bd7a91a704efa069": {
+      "performance_id": "ATEPP:09053",
+      "artist": "Friedrich Gulda",
+      "title": "Piano Sonata No. 32 in C Minor, Op. 111: II. Arietta. Adagio molto semplice e cantabile",
+      "album": "Beethoven: Complete Piano Sonatas",
+      "album_date": "2021-07-23"
+    },
+    "b7598eec187f747d": {
+      "performance_id": "ATEPP:09078",
+      "artist": "Ivo Pogorelich",
+      "title": "Piano Sonata No. 32 in C Minor, Op. 111: II. Arietta (Adagio molto semplice e cantabile)",
+      "album": "Beethoven: Piano Sonata Op.111 / Schumann: Symphonic Etudes; Toccata",
+      "album_date": "1982-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "bd7a91a704efa069",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.023413588027531906,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "b7598eec187f747d",
+      "role": "far",
+      "global_rank": 3088,
+      "cosine_distance_to_anchor": 0.7163989891014748,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

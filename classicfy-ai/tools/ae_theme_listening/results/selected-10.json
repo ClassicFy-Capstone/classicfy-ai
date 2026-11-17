@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-10",
+  "near_clip": "358fb9b547d1bb16",
+  "far_clip": "3e15da2c25d71138",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 10,
+  "recordings": {
+    "0ceebe89d202c23d": {
+      "performance_id": "ATEPP:03567",
+      "artist": "Alexandre Tharaud",
+      "title": "Ravel: Gaspard de la nuit, M. 55: III. Scarbo",
+      "album": "Le Poète du piano",
+      "album_date": "2020-10-23"
+    },
+    "358fb9b547d1bb16": {
+      "performance_id": "ATEPP:01239",
+      "artist": "Mitsuko Uchida",
+      "title": "Fantasie in C, Op. 17: 3. Langsam getragen. Durchweg leise zu halten - Etwas bewegter",
+      "album": "Schumann: Davidsbündlertanzer; Fantasie, Op.7",
+      "album_date": "2010-01-01"
+    },
+    "3e15da2c25d71138": {
+      "performance_id": "ATEPP:01230",
+      "artist": "Sviatoslav Richter",
+      "title": "Fantasie in C, Op.17: 3. Langsam getragen. Durchweg leise zu halten - Etwas bewegter",
+      "album": "Richter the Master - Brahms & Schumann",
+      "album_date": "1993-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "358fb9b547d1bb16",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.02744198196645109,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "3e15da2c25d71138",
+      "role": "far",
+      "global_rank": 1388,
+      "cosine_distance_to_anchor": 0.39041619219623414,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

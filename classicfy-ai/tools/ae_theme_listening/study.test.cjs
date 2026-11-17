@@ -60,10 +60,10 @@ test('source listening uses the original upload or its verified album-track repl
   }
 });
 test('official replacement preserves recording identity, source data, X/Y order and model result', () => {
-  const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'data.js'),'utf8'),context);
-  const data=JSON.parse(JSON.stringify(context.window.LISTENING_DATA));
-  const definition=data.cases.find(c=>c.id==='rachmaninoff-scriabin');
-  const result=JSON.parse(fs.readFileSync(path.join(__dirname,definition.result_url),'utf8'));
+  const {definition,result}=fixture();
+  const data={id:'pack',cases:[definition],clips:{
+    b:{video_id:'0QIgscF9ezY',youtube_url:'https://www.youtube.com/watch?v=0QIgscF9ezY',start_seconds:12.75},
+    c:{video_id:'BD2nJNAKB4c',youtube_url:'https://www.youtube.com/watch?v=BD2nJNAKB4c',start_seconds:15}}};
   const before=JSON.stringify(data);
   for(const coin of [0,1]){
     const order=Choice.makeOrder(definition.candidates,coin);
@@ -84,8 +84,7 @@ test('source listening rejects another recording, another host, or invalid excer
   assert.throws(()=>Choice.watchUrl({...clip,video_id:'invalid'},0));
 });
 test('additive pack migration preserves answers, order, notes and timing without changing the previous save', () => {
-  const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'data.js'),'utf8'),context);
-  const data=JSON.parse(JSON.stringify(context.window.LISTENING_DATA));
+  const data={id:'new',compatible_pack_ids:['old'],cases:[{id:'case',anchor:'a',candidates:['b','c']}],clips:{a:{},b:{},c:{}}};
   const c=data.cases[0],order=Choice.makeOrder(c.candidates,1),oldId=data.compatible_pack_ids[0];
   const previous={pack_id:oldId,is_test:true,orders:{[c.id]:order},responses:{[c.id]:{case_id:c.id,choice:'Y',memo:'listener note',xy_order:[...order]}},drafts:{},times:{[c.anchor]:[3,55]}};
   const before=JSON.stringify(previous),result=Choice.migrateSaved(previous,data,'2026-11-04T00:00:00Z');
@@ -114,16 +113,19 @@ test('replaced questions are archived without becoming answers to the new questi
   assert.equal(Choice.summarize(Object.values(result.responses)).decisive,0);
   assert.equal(JSON.stringify(previous),before);
 });
-test('all ten questions use background-checked playback sources with audio metadata', () => {
+test('all ten selected-theme questions use verified excerpt playback and the requested era quotas', () => {
   const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'data.js'),'utf8'),context);
   const data=context.window.LISTENING_DATA;
-  const audit=JSON.parse(fs.readFileSync(path.join(__dirname,'../../analysis/ae_theme_listening/background_checks.json'),'utf8'));
+  const audit=JSON.parse(fs.readFileSync(path.join(__dirname,'../../analysis/ae_theme_listening/selected_playback_checks.json'),'utf8'));
   assert.equal(data.cases.length,10);assert.equal(new Set(data.cases.map(c=>c.id)).size,10);
+  assert.equal(data.epoch,14);
+  assert.deepEqual(JSON.parse(JSON.stringify(data.era_quotas)),{'고전·바로크':4,'낭만':4,'인상주의':2});
+  assert.equal(data.compatible_pack_ids.length,0);
   for(const clip of Object.values(data.clips)){
     const check=audit.checks[Choice.sourceVideoId(clip)];
-    assert.equal(check.state,'playable');assert.equal(check.playability_status,'OK');
-    assert.ok(check.audio_format_count>0);assert.equal(check.video_id_matches,true);
-    assert.equal(check.browser_playback_verified,false);
-    assert.ok(Math.abs(Number(check.youtube_duration_seconds)-clip.track_duration_seconds)<audit.duration_tolerance_seconds);
+    assert.equal(check.status,'playing');assert.equal(check.video_id_matches,true);
+    assert.ok(check.observed_end-check.observed_start>=.5);
+    assert.ok(check.duration>=clip.end_seconds);
+    assert.equal(check.start,clip.start_seconds);assert.equal(check.end,clip.end_seconds);
   }
 });

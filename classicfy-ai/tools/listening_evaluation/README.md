@@ -26,6 +26,69 @@
 참가자에게 **`analysis/_listening_evaluation/`은 보내지 않는다.** 해당 폴더는 실제 연주 ID,
 선정 기준과 임베딩 거리를 담은 진행자 자료다. 공개 pack에는 이 정보가 포함되지 않는다.
 
+## 한 작품의 첫 주제만 비교하기
+
+슈베르트 즉흥곡 Op.90 No.3의 첫 주제에서 **1–8마디**를 두 연주로 듣는 별도 자료도 만들 수 있다.
+같은 작품에서 음원 매핑과 정렬이 있는 연주 쌍을 모두 비교해, **해당 1–8마디의 피처 거리가
+가장 큰 두 연주**를 선택한다. 화면에는 X/Y로 표시한다. 주제의 발췌 구간이며 형식상 주제부 전체를 뜻하지 않는다.
+
+저장소 루트에서 실행한다. 공식 음원이 없으면 `--download`가 필요한 prefix만 받는다.
+직접 받은 WAV가 있으면 `--download` 대신 `--audio-root /path/to/audio`를 사용한다.
+
+```bash
+PYTHONPATH=classicfy-ai/src .venv/bin/python classicfy-ai/scripts/prepare_theme_comparison.py --download
+.venv/bin/python classicfy-ai/tools/listening_evaluation/serve.py --root ../datasets/listening_theme_contrast/pack --port 8766
+```
+
+주소는 `http://127.0.0.1:8766/`이다. 한 문항에서 각 연주의 한 구간을 듣고, 기존과 같은
+차이 척도·확신·메모 및 JSON/CSV 저장을 사용한다. P2는 P1/P3과 X/Y 순서가 반대다.
+새 study ID를 사용하므로 기존 11문항 자료와 브라우저 응답은 유지된다.
+
+구간은 MusicXML의 1마디·9마디 첫 음표 ID를 nASAP 연주 시각에 연결하고 ASAP downbeat와
+150ms 이내로 일치하는지 확인한다. XML의 4분음표 단위와 match의 박 단위를 같다고 가정하지 않는다.
+첫 음의 어택을 보존하도록 80ms 앞에서 시작하고, 9마디의 가장 이른 음이 시작하기 전에 끝낸다.
+속도·음량·샘플레이트는 바꾸지 않는다. 출처와 라이선스는 pack의 `LICENSE.txt`에 있다.
+
+정규화는 이 작품 전체의 연주들을 기준으로 하고, 비교 벡터는 주제 구간의 공통 유효 interval만
+사용한다. 기존 14차원 요약(각 채널의 대표값·변화 폭)과 다섯 feature의 동일 가중 거리를 쓴다.
+거리 최대가 귀로도 최대 차이를 보장하지는 않으므로 실제 차이는 청취로 확인한다.
+
+`Classicfy/datasets/listening_theme_contrast/`의 `theme_pair_ranking.csv`에는 모든 쌍의 거리·순위,
+`theme_selection.json`에는 후보 수·공통 구간·정규화 근거가 있다. `theme_manifest.json`과 `receipts/`에는
+실제 연주 ID·음표 경계·원본 시각·frame·SHA256을 기록한다. 원본 캐시는 수정하지 않고 이 작품의
+피처를 별도로 재추출한다. `--plan-only`로 음원 다운로드 없이 선정 결과만 만들 수 있다.
+기존 11문항용 `analyze_listening_study.py`의
+임베딩 거리 분석은 이 별도 자료에 적용하지 않는다. 새 AE 성능이나 청취 결과를 나타내는 자료는 아니다.
+
+## A를 기준으로 다른 작품의 두 연주를 고르기
+
+기준 A를 **슈베르트 즉흥곡 Op.90 No.3, LeeSH08M의 첫 주제 1–8마디**로 고정한다.
+후보 X/Y는 둘 다 **바흐 전주곡 BWV 857의 동일한 1–8마디**다. 이 작품의 음원 있는
+6개 연주 중 해당 구간의 임베딩이 A에 가장 가까운 연주와 가장 먼 연주를 고른다.
+A는 12개, 후보 작품은 6개 연주를 각 작품의 전곡 정규화 reference로 사용하며,
+세 발췌 모두 32개 공통 유효 interval에서 14차원 요약·다섯 feature 동일 가중 거리를 쓴다.
+가까움·멀어짐은 이 후보 집합 안의 피처 기준이며 실제 청감의 유사도 정답으로 확정하지 않는다.
+
+```bash
+MPLCONFIGDIR=/tmp/classicfy-matplotlib PYTHONPATH=classicfy-ai/src .venv/bin/python classicfy-ai/scripts/prepare_cross_work_theme_study.py --download
+.venv/bin/python classicfy-ai/tools/listening_evaluation/serve.py --root ../datasets/listening_cross_work_theme/pack --port 8767
+```
+
+`http://127.0.0.1:8767/`에서 P1/P2/P3 중 하나를 선택한다. A를 먼저 듣고 X/Y를 번갈아 들으며
+전체 성향과 다섯 feature에서 A에 더 비슷한 후보를 고른다. 둘이 비슷함·판단 어려움도 기록한다.
+X/Y 순서는 참가자별로 바뀌고, 연주 ID·거리·가까운 후보는 평가 화면에 표시하지 않는다.
+이전 두 연주 비교 및 11문항 자료와 응답은 별도 study ID로 보존한다.
+
+평가를 마친 뒤 **내 응답과 임베딩 기준 비교**를 누르면 가까운 후보, A–X/A–Y 거리,
+항목별 선택의 일치 여부를 확인한다. 이 버튼을 누르기 전에는 비교 자료를 읽지 않는다.
+공개 시각을 JSON/CSV와 브라우저에 기록하고, 공개 전 응답은 이후 읽기 전용으로 보존한다.
+음원은 계속 다시 들을 수 있다. 자동 QA 응답을 사람의 결과로 사용하지 않는다.
+비교 자료를 불러오려면 위 HTTP 서버로 실행한다.
+
+`datasets/listening_cross_work_theme/`의 `organizer.json`·`selection.json`·`candidate_ranking.csv`에
+기준 A, 실제 후보, 거리·순위와 정규화 근거를 기록한다. 참가자에게는 `pack/`만 제공한다.
+공개 후 보이는 피처 기준과의 일치를 선호 추천 정확도나 새 AE의 성능으로 해석하지 않는다.
+
 ## 무엇을 평가하는가
 
 | 구성 | 확인하는 질문 |

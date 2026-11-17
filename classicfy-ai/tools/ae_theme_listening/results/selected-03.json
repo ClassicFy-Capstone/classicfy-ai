@@ -1,0 +1,48 @@
+{
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "case_id": "selected-03",
+  "near_clip": "7f3c5e9c0622cf22",
+  "far_clip": "61a7e66a5292f9d9",
+  "distance_reference": "A",
+  "distance_scope": "selected-segment AE cosine distance; epoch14; not whole-recording mean",
+  "far_work_pool": 20,
+  "recordings": {
+    "e041eeb3aded8aa6": {
+      "performance_id": "ATEPP:05316",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No.5 in G, K.283: 1. Allegro",
+      "album": "Mozart",
+      "album_date": "2003-01-01"
+    },
+    "7f3c5e9c0622cf22": {
+      "performance_id": "ATEPP:06105",
+      "artist": "Daniel Barenboim",
+      "title": "Piano Sonata No. 3 In C Major, Op. 2, No. 3: 1. Allegro con brio",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "1984-01-01"
+    },
+    "61a7e66a5292f9d9": {
+      "performance_id": "ATEPP:06117",
+      "artist": "Murray Perahia",
+      "title": "Piano Sonata No. 3 in C Major, Op. 2 No. 3: I. Allegro con brio",
+      "album": "Beethoven: Piano Sonatas, Op. 2",
+      "album_date": "1995-02-21"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "7f3c5e9c0622cf22",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.006687932418517395,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "61a7e66a5292f9d9",
+      "role": "far",
+      "global_rank": 4202,
+      "cosine_distance_to_anchor": 0.8553807130131998,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

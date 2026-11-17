@@ -1,54 +1,94 @@
 {
-  "status": "passed",
-  "pack_id": "c498941eb7da389523b39f975bdf3e078b36ea6448ffa5f9e68650b6f24a2093",
-  "checkpoint_epoch": 100,
-  "catalogue_recordings": 2801,
-  "encoded_windows": 67542,
-  "cases": 10,
-  "unique_recordings": 30,
-  "unique_question_works": 20,
-  "maximum_questions_per_work": 1,
-  "work_question_counts": {
-    "ATEPP/1067": 1,
-    "ATEPP/1082": 1,
-    "ATEPP/1117": 1,
-    "ATEPP/1127": 1,
-    "ATEPP/1161": 1,
-    "ATEPP/1179": 1,
-    "ATEPP/1217": 1,
-    "ATEPP/124": 1,
-    "ATEPP/1242": 1,
-    "ATEPP/1249": 1,
-    "ATEPP/127": 1,
-    "ATEPP/1305": 1,
-    "ATEPP/1543": 1,
-    "ATEPP/1560": 1,
-    "ATEPP/214": 1,
-    "ATEPP/540": 1,
-    "ATEPP/655": 1,
-    "ATEPP/667": 1,
-    "ATEPP/80": 1,
-    "ATEPP/872": 1
-  },
-  "nearest_global_ranks": [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
+  "passed": true,
+  "pack_id": "784ecce2eafb89cfe88426cb4bb32204ed3844898ced7533654044112345adb2",
+  "cases": [
+    {
+      "case": "selected-01",
+      "near_global_rank": 1,
+      "far_pool": 26,
+      "near_distance": 0.03920506694231729,
+      "far_distance": 0.5838434007866344
+    },
+    {
+      "case": "selected-02",
+      "near_global_rank": 1,
+      "far_pool": 15,
+      "near_distance": 0.01000330502207214,
+      "far_distance": 0.300574592285204
+    },
+    {
+      "case": "selected-03",
+      "near_global_rank": 1,
+      "far_pool": 20,
+      "near_distance": 0.006687932418517395,
+      "far_distance": 0.8553807130131998
+    },
+    {
+      "case": "selected-04",
+      "near_global_rank": 1,
+      "far_pool": 3,
+      "near_distance": 0.012153404436224813,
+      "far_distance": 1.1461510676762905
+    },
+    {
+      "case": "selected-05",
+      "near_global_rank": 1,
+      "far_pool": 22,
+      "near_distance": 0.024734859245909235,
+      "far_distance": 0.6464851501834717
+    },
+    {
+      "case": "selected-06",
+      "near_global_rank": 1,
+      "far_pool": 28,
+      "near_distance": 0.01607096051298429,
+      "far_distance": 0.9503280559571365
+    },
+    {
+      "case": "selected-07",
+      "near_global_rank": 1,
+      "far_pool": 30,
+      "near_distance": 0.023413588027532017,
+      "far_distance": 0.7163989891014748
+    },
+    {
+      "case": "selected-08",
+      "near_global_rank": 1,
+      "far_pool": 16,
+      "near_distance": 0.011781430186832198,
+      "far_distance": 0.41576083728981383
+    },
+    {
+      "case": "selected-09",
+      "near_global_rank": 1,
+      "far_pool": 40,
+      "near_distance": 0.017606584923057444,
+      "far_distance": 0.6742149332389364
+    },
+    {
+      "case": "selected-10",
+      "near_global_rank": 1,
+      "far_pool": 10,
+      "near_distance": 0.02744198196645098,
+      "far_distance": 0.3904161921962339
+    }
   ],
-  "near_far_same_work": true,
-  "far_is_farthest_from_A_in_B_work": true,
-  "near_far_identical_score_theme": true,
-  "initial_page_has_no_model_answer_or_distances": true,
-  "anchor_candidate_same_work_or_recording_pairs": 0,
-  "source_hashes_checked": true,
-  "theme_boundaries_within_observed_alignment": true,
+  "era_counts": {
+    "바로크": 2,
+    "고전": 2,
+    "낭만": 4,
+    "인상주의": 2
+  },
+  "unique_works": 20,
+  "unique_recordings": 30,
+  "max_artist_appearances": 2,
+  "exact_AE_source_times": true,
+  "all_actual_excerpt_playbacks_verified": true,
+  "answers_hidden_until_choice": true,
+  "old_site_archived": true,
+  "catalogue_sha256": "a6195859deb8b7b9d55670f3f8162d5f45d32e422d3db2e3bc57ec7fb4bce57d",
+  "selection_sha256": "d26761224b895be5cacec21f930f8dd77142bb8ca3a53c69b0522270519f5bb4",
+  "installed_data_sha256": "9bca17e4a91bb350632803463d90721758d1955fb2ac7b693cc362de43623c61",
   "human_listening_completed": false,
   "youtube_offsets_verified": false
 }

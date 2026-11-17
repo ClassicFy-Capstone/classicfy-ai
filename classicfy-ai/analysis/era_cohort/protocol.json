@@ -1,0 +1,124 @@
+{
+  "schema": "classicfy-era-cohort-v1",
+  "dataset": "ATEPP-1.2",
+  "source_population": {
+    "works": 161,
+    "performances": 2489,
+    "composers": 10
+  },
+  "selection": "All existing five-feature shared-grid eligible groups; no feature-outcome selection.",
+  "duplicate_policy": "Global identical MIDI SHA256: retain lexicographically smallest recording key.",
+  "classification": "Composer-style proxy; composition dates and individual work styles not verified.",
+  "composer_mapping": {
+    "Johann Sebastian Bach": [
+      "early",
+      "baroque",
+      ""
+    ],
+    "Franz Joseph Haydn": [
+      "classical_romantic",
+      "classical",
+      ""
+    ],
+    "Wolfgang Amadeus Mozart": [
+      "classical_romantic",
+      "classical",
+      ""
+    ],
+    "Ludwig van Beethoven": [
+      "classical_romantic",
+      "classical_romantic_transition",
+      "beethoven"
+    ],
+    "Franz Schubert": [
+      "classical_romantic",
+      "romantic",
+      ""
+    ],
+    "Robert Schumann": [
+      "classical_romantic",
+      "romantic",
+      ""
+    ],
+    "Franz Liszt": [
+      "classical_romantic",
+      "romantic",
+      ""
+    ],
+    "Sergei Rachmaninoff": [
+      "classical_romantic",
+      "late_romantic",
+      "rachmaninoff"
+    ],
+    "Claude Debussy": [
+      "modern_contemporary",
+      "french_turn_of_century",
+      ""
+    ],
+    "Maurice Ravel": [
+      "modern_contemporary",
+      "french_turn_of_century",
+      ""
+    ]
+  },
+  "classification_reference": "https://www.boosey.com/composer/sergei+rachmaninoff",
+  "weighting": "Within era, each work/score group has equal total weight; recordings share its weight.",
+  "group_unit": "Existing piece+grid; may be a movement; parent works are not resolved.",
+  "coverage": "Original common seven-channel mask is the reference; original membership retained in works.csv.",
+  "execution": "Metadata selection only; no raw feature extraction, cache inspection, normalization refit, or statistical comparison.",
+  "retained": {
+    "groups": 161,
+    "recordings": 2488,
+    "composers": 10,
+    "excluded_recordings": 1
+  },
+  "input_sha256": {
+    "atepp_style_diversity/within_work_diversity.csv": "15f5cddda96f0c4b18f9d7d084f05031a04eb8694a1293e1e8bd32247586b3f6",
+    "atepp_style_diversity/cross_composer_queries.csv": "148b5842ae7b3a8115db1b8ed600ba943e25a06230c45c8965f308c20553d230",
+    "atepp_normalization/performance_catalog.csv": "5b6eed43a8072bbc48978468019a2241713f947e16ae5a374337d5e3020d38f9",
+    "atepp_normalization/_embedding_validation/embeddings.csv": "6359ecf8a0f69ae97dd63221ce76c9d25cc42f88fba4f18144a34046f1cc5331",
+    "atepp_normalization/cohort_audit.csv": "dc07a1c46471b894dbd456b1e1abc41a9aa98e9cc3ee280ce39fdaaf81cb5cc7",
+    "atepp_style_diversity/stats.json": "f03357f7024815859df84b036fabe94858ebb85d46928e8904a1d3277e246102",
+    "atepp_style_diversity/artifact_manifest.csv": "34e0d662d6c2e95397595dd5dd428fff2c6c5d09f7657ee3900a2325b5206c85",
+    "atepp_normalization/stats.json": "39137c1eb7b3d75fbaba066ded81034dcc949c5276906779ec5de5d3fd61a244"
+  },
+  "recorded_hash_verification": [
+    {
+      "path": "atepp_style_diversity/cross_composer_queries.csv",
+      "match": "crlf",
+      "recorded_sha256": "3f198278f2b97bc00cac40610405fa1c33cfac7eba9d7aa3736b0b26160a986c",
+      "actual_sha256": "148b5842ae7b3a8115db1b8ed600ba943e25a06230c45c8965f308c20553d230"
+    },
+    {
+      "path": "atepp_style_diversity/stats.json",
+      "match": "crlf",
+      "recorded_sha256": "3e0f142d667f8d0cec098fd085067924d1c5f128426922f688bc9df084cce0ec",
+      "actual_sha256": "f03357f7024815859df84b036fabe94858ebb85d46928e8904a1d3277e246102"
+    },
+    {
+      "path": "atepp_style_diversity/within_work_diversity.csv",
+      "match": "crlf",
+      "recorded_sha256": "840a022533a744edfc4b75ed05fead88e641673bae59e04482624b9f18dcfbbd",
+      "actual_sha256": "15f5cddda96f0c4b18f9d7d084f05031a04eb8694a1293e1e8bd32247586b3f6"
+    },
+    {
+      "path": "atepp_normalization/performance_catalog.csv",
+      "match": "crlf",
+      "recorded_sha256": "331f312524553ecec5594ffdd7c886b789a1c5771f86717359ab4a45390e35aa",
+      "actual_sha256": "5b6eed43a8072bbc48978468019a2241713f947e16ae5a374337d5e3020d38f9"
+    },
+    {
+      "path": "atepp_normalization/_embedding_validation/embeddings.csv",
+      "match": "crlf",
+      "recorded_sha256": "5e2dbfe8c838727dc4b5ca0ce21feda23fa5acc516db8ee2354e183c73654954",
+      "actual_sha256": "6359ecf8a0f69ae97dd63221ce76c9d25cc42f88fba4f18144a34046f1cc5331"
+    },
+    {
+      "path": "atepp_normalization/stats.json",
+      "match": "crlf",
+      "recorded_sha256": "14bded9689fec09f9dfc41b3678d22bea36f51d85247e15563847647e72faec8",
+      "actual_sha256": "39137c1eb7b3d75fbaba066ded81034dcc949c5276906779ec5de5d3fd61a244"
+    }
+  ],
+  "script_sha256": "885e4e51f05b8ecc96b1918912cb46f14a0c3a1cfb9a202b6c8f934458e6ad49"
+}

@@ -1,0 +1,13 @@
+﻿cohort,era,era_ko,work_score_groups,recordings_retained
+primary,early,고음악,8,58
+primary,classical_romantic,고전·낭만,128,2156
+primary,modern_contemporary,근현대,25,274
+without_beethoven,early,고음악,8,58
+without_beethoven,classical_romantic,고전·낭만,57,577
+without_beethoven,modern_contemporary,근현대,25,274
+without_rachmaninoff,early,고음악,8,58
+without_rachmaninoff,classical_romantic,고전·낭만,124,2120
+without_rachmaninoff,modern_contemporary,근현대,25,274
+without_both_boundaries,early,고음악,8,58
+without_both_boundaries,classical_romantic,고전·낭만,53,541
+without_both_boundaries,modern_contemporary,근현대,25,274

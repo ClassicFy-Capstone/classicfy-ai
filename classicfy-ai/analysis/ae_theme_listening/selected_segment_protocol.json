@@ -1,0 +1,72 @@
+{
+  "model": {
+    "epoch": 14,
+    "checkpoint_sha256": "f60ecd95173a9a093aec544e783fa7094e955259d1f38bca7cf3235eb9eee8bc",
+    "corpus_manifest_sha256": "2c98e4212f207a847dbef228000fabfe00ddfe562a6b312d201803d389626e04",
+    "pooling": "one complete selected segment per performance; unit normalized latent",
+    "distance": "1 - cosine similarity",
+    "device": "cpu",
+    "batch_size": 32,
+    "id": "e0f636deff343a362dc9536ba79421fe068c0594392c41fd33d99fe12dca65a6"
+  },
+  "selection": {
+    "anchor_slots": [
+      [
+        "바로크",
+        "Johann Sebastian Bach"
+      ],
+      [
+        "바로크",
+        "Johann Sebastian Bach"
+      ],
+      [
+        "고전",
+        "Wolfgang Amadeus Mozart"
+      ],
+      [
+        "고전",
+        "Ludwig van Beethoven"
+      ],
+      [
+        "낭만",
+        "Frédéric Chopin"
+      ],
+      [
+        "낭만",
+        "Robert Schumann"
+      ],
+      [
+        "낭만",
+        "Franz Liszt"
+      ],
+      [
+        "낭만",
+        "Sergei Rachmaninoff"
+      ],
+      [
+        "인상주의",
+        "Claude Debussy"
+      ],
+      [
+        "인상주의",
+        "Maurice Ravel"
+      ]
+    ],
+    "minimum_gap": 0.05,
+    "duration_range_seconds": [
+      15,
+      90
+    ],
+    "max_questions_per_work": 1,
+    "max_clips_per_artist": 2,
+    "bach_anchor_catalogue_numbers_distinct": true,
+    "candidate_rule": "global nearest other work and score; farthest from anchor in near recording cohort; no availability reranking",
+    "ordering": "fixed SHA256 seed 20261109; heldout anchors preferred; no g agreement selection"
+  },
+  "era_quotas": {
+    "고전·바로크": 4,
+    "낭만": 4,
+    "인상주의": 2
+  },
+  "source_selection": "/Users/ihun-ui/Desktop/Classicfy/diagnostics/atepp_selected_theme_listening/run01/selection.json"
+}
