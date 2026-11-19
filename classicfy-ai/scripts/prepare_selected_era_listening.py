@@ -1,8 +1,8 @@
-"""Replace #17 listening questions with final protected-G selected-clip vectors.
+"""Build selected-clip packs with legacy or G-verified demonstration curation.
 
-The original ranking and public/blind payload helpers are extracted verbatim
-from the pinned #17 commit. Playback failures reject whole A/B/C cases, never
-rerank the globally nearest B or the farthest-from-A same-work C.
+V2 constrains G/E clarity, distinct candidate artists, title type and score
+texture. Legacy ranking is retained for historical replay. Public payloads
+and interaction engines retain the pinned #17 contract.
 """
 import argparse
 import ast
@@ -14,6 +14,7 @@ import math
 import re
 from pathlib import Path
 import subprocess
+import shutil
 from urllib.parse import urlparse,parse_qs
 
 import numpy as np
@@ -59,6 +60,56 @@ def eligible_mapping(row,clip):
     return math.isfinite(start) and math.isfinite(end) and 0<=start<end
 
 
+def select_legacy_cases(candidates, clips, canonical, previous=None, replace=()):
+    """Pick by gap, reserving the works and videos of any retained questions."""
+    ranked = {
+        era: sorted((c for c in candidates if c['era'] == era),
+                    key=lambda c: (-c['gap'], c['anchor'], c['near'], c['far']))
+        for era in QUOTAS
+    }
+    roles = ('anchor', 'near', 'far')
+    def triplet(case):
+        return tuple(case[role] for role in roles)
+
+    used_works, used_videos = set(), set()
+    def reserve(case):
+        ids = triplet(case)
+        used_works.update(clips[pid]['composition_id'] for pid in ids)
+        used_videos.update(canonical[pid] for pid in ids)
+
+    def pick(era, excluded):
+        for case in ranked[era]:
+            if triplet(case) in excluded:
+                continue
+            if any(clips[pid]['composition_id'] in used_works or canonical[pid] in used_videos
+                   for pid in triplet(case)):
+                continue
+            reserve(case)
+            return case
+        raise ValueError(f'Insufficient disjoint valid cases for {era}')
+
+    if previous is None:
+        return [pick(era, set()) for era, count in QUOTAS.items() for _ in range(count)]
+
+    previous_cases = previous['cases']
+    replace = set(replace)
+    if not replace <= {case['id'] for case in previous_cases}:
+        raise ValueError('Replacement IDs must be in the previous pack')
+    candidates_by_triplet = {triplet(c): c for c in candidates}
+    old_triplets = [
+        tuple(case[role].removeprefix('ATEPP:') for role in roles)
+        for case in previous_cases
+    ]
+    selected = [None if case['id'] in replace else candidates_by_triplet[ids]
+                for case, ids in zip(previous_cases, old_triplets)]
+    for case in selected:
+        if case is not None:
+            reserve(case)
+    excluded = set(old_triplets)
+    return [kept if kept is not None else pick(old['era'], excluded)
+            for kept, old in zip(selected, previous_cases)]
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--run',type=Path,required=True);p.add_argument('--common-run',type=Path,required=True)
@@ -66,7 +117,13 @@ def main():
     p.add_argument('--ui',type=Path,default=AI/'tools/ae_selected_era_listening')
     p.add_argument('--out',type=Path,default=AI/'analysis/ae_selected_era_listening')
     p.add_argument('--unavailable-videos',type=Path,help='JSON list of confirmed unavailable video IDs; reject whole cases only')
+    p.add_argument('--selection-policy',choices=['legacy','g-verified-v2'],default='legacy')
+    p.add_argument('--replace-from',type=Path,help='Prior legacy pack from these embeddings and mappings')
+    p.add_argument('--replace-case',action='append',default=[],help='Prior case ID to replace, in its current slot')
     args=p.parse_args();read=lambda path:json.loads(path.read_text(encoding='utf-8'))
+    if bool(args.replace_from) != bool(args.replace_case) or (args.replace_from and args.selection_policy != 'legacy'):
+        p.error('--replace-from and --replace-case must be used together with legacy selection')
+    previous_pack = read(args.replace_from) if args.replace_from else None
     final=read(args.run/'final_report.json');verification=read(args.run/'verification.json')
     if final['status']!='complete' or verification['status']!='passed' or final.get('objective_mode')!='g_only':
         raise ValueError('Complete and verified all5082 protected-G artifacts required')
@@ -92,7 +149,20 @@ def main():
     # #17 has a single legacy source substitution. New dataset timing must
     # never be silently applied to that replacement recording.
     blocked.add('0QIgscF9ezY')
+    if args.selection_policy=='g-verified-v2':
+        from selected_era_curation import curate,select_disjoint,texture_profiles,THRESHOLDS
+        metadata=read(args.run/'metadata.json')
+        order={m['perf_id']:i for i,m in enumerate(metadata)}
+        with np.load(args.run/'profiles.npz') as f:
+            profiles=[f[k][[order[pid] for pid in perf_ids]] for k in ('raw','known','quality')]
+        scalers={era:read(args.run/era/'g_production_scaler.json') for era in QUOTAS}
+        textures=texture_profiles(clips,np.load(args.common_run/'corpus/note_q.npy',mmap_mode='r'))
+        with threadpool_limits(limits=1):
+            candidates,curation_counts,structure_tags=curate(e,perf_ids,periods,metadata,yt,mapping_ok,blocked,
+                profiles,scalers,helper['youtube_id'],textures)
+        selected=select_disjoint(candidates,QUOTAS,{m['perf_id']:m for m in metadata},yt,helper['youtube_id'])
     with threadpool_limits(limits=1):
+      if args.selection_policy=='legacy':
         for era in QUOTAS:
             global_ids=[i for i,x in enumerate(periods) if x==era];vectors=e[global_ids]
             rows=[dict(performance_id=perf_ids[i],work_id=by_id[perf_ids[i]]['composition_id'],
@@ -109,16 +179,6 @@ def main():
                 candidates.append(dict(era=era,anchor=a_id,near=b_id,far=c_id,gap=float(dist[c]-dist[b]),
                     near_distance=float(dist[b]),far_distance=float(dist[c]),far_rank=order.index(c)+1,
                     candidate_count=len(order),candidate_works=len({rows[j]['work_id'] for j in order}),far_work_pool=len(pool)))
-    selected=[];used_works=set();used_videos=set()
-    for era,count in QUOTAS.items():
-        chosen=0
-        for case in sorted((c for c in candidates if c['era']==era),key=lambda c:(-c['gap'],c['anchor'],c['near'],c['far'])):
-            ids=[case[k] for k in ('anchor','near','far')]
-            works={by_id[j]['composition_id'] for j in ids};videos={canonical[j] for j in ids}
-            if works&used_works or videos&used_videos:continue
-            selected.append(case);used_works.update(works);used_videos.update(videos);chosen+=1
-            if chosen==count:break
-        if chosen!=count:raise ValueError(f'Insufficient disjoint valid cases for {era}: {chosen}/{count}')
     policy=dict(source_commit=SOURCE_COMMIT,final_embeddings_sha256=digest(final['embeddings']),
         youtube_matches_sha256=digest(args.youtube_data/'youtube_matches.csv'),era_quotas=QUOTAS,
         ranking='Pinned #17 nearest different-work B then farthest-from-A C within B work; full catalogue within each era; byte-identical MIDI excluded',
@@ -126,6 +186,23 @@ def main():
         playback='Exact supplied fractional youtube_start_seconds/youtube_end_seconds; no manual re-excerpting',
         unavailable_video_ids=sorted(blocked),
         evidence='Embedding-extreme demonstration cases, not an unbiased listening accuracy sample')
+    policy['version']=args.selection_policy
+    if previous_pack:
+        previous_policy = previous_pack['selection']
+        match_keys = ('version', 'final_embeddings_sha256', 'youtube_matches_sha256', 'unavailable_video_ids')
+        if any(previous_policy.get(key) != policy[key] for key in match_keys):
+            raise ValueError('Replacement requires the same selection policy, embeddings and YouTube mappings')
+        policy['replacement'] = dict(from_pack_id=previous_pack['id'], replaced_case_ids=args.replace_case)
+    if args.selection_policy=='legacy':
+        selected = select_legacy_cases(candidates, by_id, canonical, previous_pack, args.replace_case)
+    if args.selection_policy=='g-verified-v2':
+        policy.update(ranking='Within same-era same-title-type eligible works: nearest jointly G/E-near B with a distinct-artist jointly G/E-far C in the same work; not global nearest/farthest',
+            curation='Hard G/E clarity thresholds; identical anchor G signature; distinct X/Y artists; disjoint works/videos; maximize weaker of embedding and calibrated G gaps',
+            thresholds=THRESHOLDS,structure_scope='Title genre/movement-number tags plus median score onset density and notes-per-onset ratios <=1.6; not human-verified audio texture or formal score analysis',
+            structure_tags=structure_tags,curation_counts=curation_counts,
+            score_texture_profiles=textures,score_note_q_sha256=digest(args.common_run/'corpus/note_q.npy'),
+            G_profiles_sha256=digest(args.run/'profiles.npz'),
+            G_scaler_sha256={era:digest(args.run/era/'g_production_scaler.json') for era in QUOTAS})
     pack=dict(schema='ae-selected-era-choice-v1',model=dict(epoch='시대별 '+ '/'.join(str(v['production_epoch']) for v in final['eras'].values()),
         objective='protected G only',checkpoint_sha256={era:info['sha256'] for era,info in final['eras'].items()}),
         catalogue=dict(recordings=5082,works=479),selection=policy,
@@ -151,17 +228,47 @@ def main():
                 source_sha256=row['source_sha256'],midi_start_seconds=float(row['start_seconds']),midi_end_seconds=float(row['end_seconds']),
                 youtube_mapping_status=row['youtube_match_status'],youtube_human_verified=row['youtube_human_verified'])
         public_ids=['ATEPP:'+j for j in ids]
-        definition=dict(id='selected-'+era+'-'+case['anchor'],label=ERA_LABELS[era]+f' {counters[era]:02d}',
+        definition=dict(id=('verified-v2-' if args.selection_policy=='g-verified-v2' else 'selected-')+era+'-'+case['anchor'],label=ERA_LABELS[era]+f' {counters[era]:02d}',
             anchor=public_ids[0],near=public_ids[1],far=public_ids[2],far_work_pool=case['far_work_pool'],
             candidate_count=case['candidate_count'],candidate_works=case['candidate_works'],era=era,gap=case['gap'],
-            candidates=[dict(clip=public_ids[j],role='near' if j==1 else 'far',global_rank=1 if j==1 else case['far_rank'],
+            candidates=[dict(clip=public_ids[j],role='near' if j==1 else 'far',global_rank=case.get('near_rank',1) if j==1 else case['far_rank'],
                 cosine_distance_to_anchor=case['near_distance'] if j==1 else case['far_distance'],
                 same_artist_as_anchor=yt[ids[j]]['artist']==yt[ids[0]]['artist']) for j in (1,2)])
+        if args.selection_policy=='g-verified-v2':
+            definition['selection_evidence']={key:case[key] for key in ('structure_tag','texture_ratios','G_near','G_far','G_target_near','G_target_far','G_target_gap','G_confidence_near','G_confidence_far','selection_score','distinct_candidate_artists')}
+            for candidate,key in zip(definition['candidates'],('near','far')):
+                candidate['G_distance_to_anchor']=case['G_'+key]
         pack['cases'].append(definition)
     pack['id']=hashlib.sha256(json.dumps(pack,sort_keys=True,ensure_ascii=False,allow_nan=False).encode()).hexdigest()
-    pack['storage_id']=pack['id'];public,results=helper['public_pack'](pack)
+    pack['storage_id']=previous_pack['storage_id'] if previous_pack else pack['id']
+    public,results=helper['public_pack'](pack)
     public['distance_scope']=pack['distance_scope'];public['compatible_pack_ids']=[];public['migration_sources']=[]
+    if previous_pack:
+        retained = []
+        for old, new in zip(previous_pack['cases'], pack['cases'], strict=True):
+            if old['id'] in args.replace_case:
+                continue
+            if old != new or any(previous_pack['clips'][old[role]] != pack['clips'][new[role]]
+                                 for role in ('anchor', 'near', 'far')):
+                raise ValueError('Retained case or clip changed: '+old['id'])
+            retained.append(old['id'])
+        public['compatible_pack_ids'] = [previous_pack['id']]
+        public['migration_sources'] = [dict(pack_id=previous_pack['id'], case_ids=retained)]
     args.ui.mkdir(parents=True,exist_ok=True);args.out.mkdir(parents=True,exist_ok=True)
+    previous=args.out/'listening.json'
+    if previous.exists() and (old:=read(previous))['id']!=pack['id']:
+        archive=args.out/'archive'/old['id'];archive.mkdir(parents=True,exist_ok=True)
+        for name in ['listening.json','selection_audit.json','source_ui_manifest.json','verification.json',
+                     'browser_playback_checks.json','ui_verification.json','completion.json','preview.jpg']:
+            path=args.out/name
+            if path.exists():shutil.copy2(path,archive/name)
+        if (args.ui/'data.js').exists():shutil.copy2(args.ui/'data.js',archive/'data.js')
+        for c in old['cases']:
+            path=args.ui/'results'/(c['id']+'.json')
+            if path.exists():
+                (archive/'results').mkdir(exist_ok=True);shutil.copy2(path,archive/'results'/path.name);path.unlink()
+        for name in ['verification.json','browser_playback_checks.json','ui_verification.json','completion.json','preview.jpg']:
+            (args.out/name).unlink(missing_ok=True)
     source_files={};changes={}
     for name in ['index.html','style.css','app.js','study.js','player.js','serve.py','study.test.cjs','player.test.cjs']:
         raw=source('tools/ae_theme_listening/'+name);s=raw.decode('utf-8');original=s
@@ -196,13 +303,20 @@ def main():
                 'official replacement preserves recording identity, source data, X/Y order and model result':
                 "test('new selected clips never use a legacy recording substitution',()=>{\n  const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'data.js'),'utf8'),context);\n  for(const clip of Object.values(context.window.LISTENING_DATA.clips))assert.equal(Choice.sourceVideoId(clip),clip.video_id);\n});",
                 'additive pack migration preserves answers, order, notes and timing without changing the previous save':
-                "test('new model and excerpts cannot inherit old pack answers',()=>{\n  const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'data.js'),'utf8'),context);\n  const data=context.window.LISTENING_DATA;assert.equal(data.compatible_pack_ids.length,0);\n  assert.equal(Choice.migrateSaved({pack_id:'old-model',orders:{},responses:{},drafts:{},times:{}},data,'now'),null);\n});",
+                "test('an unrelated model cannot inherit old pack answers',()=>{\n  const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'data.js'),'utf8'),context);\n  const data=context.window.LISTENING_DATA;\n  assert.equal(Choice.migrateSaved({pack_id:'old-model',orders:{},responses:{},drafts:{},times:{}},data,'now'),null);\n});",
                 'all ten questions use background-checked playback sources with audio metadata':
                 "test('all ten questions have bounded selected excerpts and separate model result files',()=>{\n  const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'data.js'),'utf8'),context);\n  const data=context.window.LISTENING_DATA;assert.equal(data.cases.length,10);assert.equal(Object.keys(data.clips).length,30);\n  for(const clip of Object.values(data.clips))assert.ok(clip.start_seconds>=0&&clip.end_seconds>clip.start_seconds&&clip.end_seconds<=clip.track_duration_seconds);\n  for(const c of data.cases){assert.equal(c.near,undefined);assert.equal(c.far,undefined);assert.equal(c.candidates.length,2);}\n});"}
             for label,replacement in replacements.items():
                 pattern=r"test\('"+re.escape(label)+r"', \(\) => \{[\s\S]*?\n\}\);"
                 s,n=re.subn(pattern,lambda _:replacement,s)
                 if n!=1:raise ValueError('Pinned data-specific test fixture changed: '+label)
+        if args.selection_policy=='g-verified-v2' and name=='app.js':
+            s=s.replace('가까운 연주는 같은 시대의 다른 작품 전체에서 A와의 거리 1위입니다. 먼 연주는 그 작품의 나머지 ${answer.far_work_pool}개 연주 중 A와의 거리가 가장 큽니다.',
+                '같은 시대와 제목상 악장 유형 안에서 G와 임베딩의 순서가 일치하고 거리 차이가 큰 사례를 선정했습니다. X/Y는 서로 다른 연주자입니다. 전체 후보의 거리 1위를 보장하는 선정은 아닙니다.')
+        if args.selection_policy=='g-verified-v2' and name=='index.html':
+            s=s.replace('동일 시대 안에서 기준 A에 가장 가까운 다른 작품의 연주 B를 고른 뒤, B와 같은 작품에서 A와의 거리가 가장 먼 연주 C를 고릅니다.',
+                '같은 시대와 제목상 악장 유형의 다른 작품에서, G와 임베딩 모두 A에 가까운 B와 먼 C를 선정합니다. 두 거리의 차이가 충분하고 X/Y의 연주자가 다른 문항만 사용합니다.')
+            s=s.replace('같은 시대의 다른 작품 전체에서', '같은 시대의 조건을 만족하는 다른 작품에서')
         (args.ui/name).write_bytes(s.encode('utf-8'))
         source_files[name]=dict(original_sha256=hashlib.sha256(raw).hexdigest(),generated_sha256=digest(args.ui/name))
         changes[name]=s!=original

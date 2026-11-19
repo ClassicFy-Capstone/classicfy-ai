@@ -1,0 +1,170 @@
+{
+  "policy": {
+    "source_commit": "d5311e6247b3d8fff43f5c314b6c817c6ad42a64",
+    "final_embeddings_sha256": "4d1f24b9a7c4d0d55556319f0586e25112038a3950879cc956544b731d698966",
+    "youtube_matches_sha256": "e872ab4cbb2c6d602d3cb0a3bcb3a24759eaccde1af7ac83afdf61b2e9d62ec8",
+    "era_quotas": {
+      "baroque": 3,
+      "classical_transition": 3,
+      "romantic_impressionist": 4
+    },
+    "ranking": "Pinned #17 nearest different-work B then farthest-from-A C within B work; full catalogue within each era; byte-identical MIDI excluded",
+    "curation": "Descending cosine-distance gap within each era; greedy20 disjoint works and30 disjoint video sources; never availability rerank B/C",
+    "playback": "Exact supplied fractional youtube_start_seconds/youtube_end_seconds; no manual re-excerpting",
+    "unavailable_video_ids": [
+      "0QIgscF9ezY"
+    ],
+    "evidence": "Embedding-extreme demonstration cases, not an unbiased listening accuracy sample",
+    "version": "legacy",
+    "replacement": {
+      "from_pack_id": "711bddf406ae8edb4e5186ccd01fc819f3d17dd592810594fad04d28408b53d5",
+      "replaced_case_ids": [
+        "selected-classical_transition-05531"
+      ]
+    }
+  },
+  "eligible_case_count": 2944,
+  "exclusions": {
+    "one_or_more_mapping_not_matched_auto": 2138
+  },
+  "youtube_statuses": {
+    "matched_auto": 4120,
+    "failed": 54,
+    "video_unavailable": 465,
+    "review_required": 443
+  },
+  "selected": [
+    {
+      "era": "baroque",
+      "anchor": "02375",
+      "near": "02463",
+      "far": "02460",
+      "gap": 1.1738416300357528,
+      "near_distance": 0.07036608785217036,
+      "far_distance": 1.2442077178879232,
+      "far_rank": 541,
+      "candidate_count": 549,
+      "candidate_works": 102,
+      "far_work_pool": 4
+    },
+    {
+      "era": "baroque",
+      "anchor": "02686",
+      "near": "02650",
+      "far": "02649",
+      "gap": 1.0587635643501512,
+      "near_distance": 0.13709176298207315,
+      "far_distance": 1.1958553273322243,
+      "far_rank": 514,
+      "candidate_count": 554,
+      "candidate_works": 102,
+      "far_work_pool": 2
+    },
+    {
+      "era": "baroque",
+      "anchor": "10579",
+      "near": "02532",
+      "far": "02531",
+      "gap": 0.9653563881779816,
+      "near_distance": 0.09020736126475892,
+      "far_distance": 1.0555637494427406,
+      "far_rank": 404,
+      "candidate_count": 551,
+      "candidate_works": 102,
+      "far_work_pool": 2
+    },
+    {
+      "era": "classical_transition",
+      "anchor": "06484",
+      "near": "05857",
+      "far": "05871",
+      "gap": 1.1624729307709003,
+      "near_distance": 0.10230850347614728,
+      "far_distance": 1.2647814342470476,
+      "far_rank": 2235,
+      "candidate_count": 2281,
+      "candidate_works": 131,
+      "far_work_pool": 28
+    },
+    {
+      "era": "classical_transition",
+      "anchor": "08971",
+      "near": "08079",
+      "far": "08067",
+      "gap": 1.1185900277931942,
+      "near_distance": 0.08372792862020051,
+      "far_distance": 1.2023179564133948,
+      "far_rank": 1783,
+      "candidate_count": 2263,
+      "candidate_works": 131,
+      "far_work_pool": 41
+    },
+    {
+      "era": "classical_transition",
+      "anchor": "06949",
+      "near": "08499",
+      "far": "08512",
+      "gap": 1.1059680078221041,
+      "near_distance": 0.038957333020749774,
+      "far_distance": 1.144925340842854,
+      "far_rank": 2086,
+      "candidate_count": 2281,
+      "candidate_works": 131,
+      "far_work_pool": 25
+    },
+    {
+      "era": "romantic_impressionist",
+      "anchor": "01317",
+      "near": "03600",
+      "far": "03598",
+      "gap": 1.0361279459934707,
+      "near_distance": 0.034122987489663026,
+      "far_distance": 1.0702509334831338,
+      "far_rank": 2166,
+      "candidate_count": 2213,
+      "candidate_works": 243,
+      "far_work_pool": 5
+    },
+    {
+      "era": "romantic_impressionist",
+      "anchor": "11053",
+      "near": "00134",
+      "far": "00133",
+      "gap": 0.9832780063942888,
+      "near_distance": 0.027060358842530885,
+      "far_distance": 1.0103383652368196,
+      "far_rank": 2171,
+      "candidate_count": 2208,
+      "candidate_works": 243,
+      "far_work_pool": 7
+    },
+    {
+      "era": "romantic_impressionist",
+      "anchor": "04556",
+      "near": "02985",
+      "far": "02988",
+      "gap": 0.9824079410159792,
+      "near_distance": 0.07524530758645431,
+      "far_distance": 1.0576532486024335,
+      "far_rank": 2106,
+      "candidate_count": 2215,
+      "candidate_works": 243,
+      "far_work_pool": 12
+    },
+    {
+      "era": "romantic_impressionist",
+      "anchor": "10095",
+      "near": "00879",
+      "far": "00845",
+      "gap": 0.9620655601865231,
+      "near_distance": 0.04079897864112869,
+      "far_distance": 1.0028645388276518,
+      "far_rank": 2099,
+      "candidate_count": 2210,
+      "candidate_works": 243,
+      "far_work_pool": 40
+    }
+  ],
+  "all_5082_embeddings_used_for_ranking": true,
+  "live_playback_verified": false
+}

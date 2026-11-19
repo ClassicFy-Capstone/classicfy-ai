@@ -1,0 +1,48 @@
+{
+  "pack_id": "bb79168f3ead1ef344686f2f7695e8175d9fcae4661063c9ee5f93da653a34c9",
+  "case_id": "selected-baroque-10579",
+  "near_clip": "ba82aa02e407b413",
+  "far_clip": "82ae96e481dbf4d4",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 2,
+  "recordings": {
+    "ffcdc4cf90b00539": {
+      "performance_id": "ATEPP:10579",
+      "artist": "Wilhelm Kempff",
+      "title": "Chromatic Fantasia and Fugue in D Minor, BWV 903",
+      "album": "Kempff plays Bach",
+      "album_date": "2018-08-17"
+    },
+    "ba82aa02e407b413": {
+      "performance_id": "ATEPP:02532",
+      "artist": "Edwin Fischer",
+      "title": "Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 17 in A-Flat Major, BWV 862: Prelude",
+      "album": "Bach: The Well-Tempered Clavier",
+      "album_date": "2012-09-03"
+    },
+    "82ae96e481dbf4d4": {
+      "performance_id": "ATEPP:02531",
+      "artist": "Glenn Gould",
+      "title": "The Well-Tempered Clavier, Book 1: Prelude No. 17 in A-Flat Major, BWV 862",
+      "album": "Glenn Gould plays Bach: The Well-Tempered Clavier Books I & II, BWV 846-893",
+      "album_date": "1993"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "ba82aa02e407b413",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.09020736126475892,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "82ae96e481dbf4d4",
+      "role": "far",
+      "global_rank": 404,
+      "cosine_distance_to_anchor": 1.0555637494427406,
+      "same_artist_as_anchor": false
+    }
+  ]
+}
