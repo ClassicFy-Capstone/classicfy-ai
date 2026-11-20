@@ -1,0 +1,48 @@
+{
+  "pack_id": "740e641164864581623614217189e7bcdee528e7988ced64b357d86db52633d6",
+  "case_id": "selected-romantic_impressionist-01660",
+  "near_clip": "de5d29895b167b04",
+  "far_clip": "10fa2789dabd2249",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 15,
+  "recordings": {
+    "c3d4d08ab2610cf4": {
+      "performance_id": "ATEPP:01660",
+      "artist": "Walter Gieseking",
+      "title": "Davidsbundlertanze, Op. 6: No. 5. Einfach",
+      "album": "Schumann: Piano Works",
+      "album_date": "2014-06-03"
+    },
+    "de5d29895b167b04": {
+      "performance_id": "ATEPP:09771",
+      "artist": "Claudio Arrau",
+      "title": "Chopin: 12 Études, Op. 25: No. 7 in C-Sharp Minor",
+      "album": "Etudes Op 10 & Op 25 - Chopin",
+      "album_date": "1987-12-07"
+    },
+    "10fa2789dabd2249": {
+      "performance_id": "ATEPP:09776",
+      "artist": "Valentina Lisitsa",
+      "title": "12 Etudes, Op.25: No.7 In C Sharp Minor",
+      "album": "Études",
+      "album_date": "2014-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "de5d29895b167b04",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.09327895705849887,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "10fa2789dabd2249",
+      "role": "far",
+      "global_rank": 2058,
+      "cosine_distance_to_anchor": 1.030016018086589,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

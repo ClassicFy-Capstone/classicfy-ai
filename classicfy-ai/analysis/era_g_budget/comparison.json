@@ -1094,8 +1094,8 @@
     }
   },
   "baseline_pack": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
-  "relaxed_pack": "bb79168f3ead1ef344686f2f7695e8175d9fcae4661063c9ee5f93da653a34c9",
-  "shared_triplets": 6,
+  "relaxed_pack": "740e641164864581623614217189e7bcdee528e7988ced64b357d86db52633d6",
+  "shared_triplets": 4,
   "fixed_triplet_distances": [
     {
       "selected_by": "기존 25%",
@@ -1281,16 +1281,16 @@
     },
     {
       "selected_by": "완화",
-      "case": "selected-classical_transition-06484",
+      "case": "selected-classical_transition-07382",
       "old": {
-        "old_role_B_distance": 0.1013308400504036,
-        "old_role_C_distance": 1.3510367454892593,
-        "C_minus_B": 1.2497059054388557
+        "old_role_B_distance": 0.18165789033097246,
+        "old_role_C_distance": 1.309433244544463,
+        "C_minus_B": 1.1277753542134905
       },
       "new": {
-        "old_role_B_distance": 0.10230847053160708,
-        "old_role_C_distance": 1.2647814463045788,
-        "C_minus_B": 1.1624729757729717
+        "old_role_B_distance": 0.16825085328307332,
+        "old_role_C_distance": 1.2475330187120721,
+        "C_minus_B": 1.0792821654289988
       }
     },
     {
@@ -1337,16 +1337,16 @@
     },
     {
       "selected_by": "완화",
-      "case": "selected-romantic_impressionist-11053",
+      "case": "selected-romantic_impressionist-01660",
       "old": {
-        "old_role_B_distance": 0.02321266124477772,
-        "old_role_C_distance": 1.1317244303280631,
-        "C_minus_B": 1.1085117690832855
+        "old_role_B_distance": 0.10911414861448221,
+        "old_role_C_distance": 1.1194630302802993,
+        "C_minus_B": 1.010348881665817
       },
       "new": {
-        "old_role_B_distance": 0.02706039511935976,
-        "old_role_C_distance": 1.0103383644888198,
-        "C_minus_B": 0.98327796936946
+        "old_role_B_distance": 0.0932789807923241,
+        "old_role_C_distance": 1.0300160195095627,
+        "C_minus_B": 0.9367370387172386
       }
     },
     {

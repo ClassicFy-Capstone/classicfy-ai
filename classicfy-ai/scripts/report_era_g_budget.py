@@ -84,13 +84,25 @@ def main():
               '두 버전 모두 같은 시대에서 임베딩상 가장 가까운 다른 작품의 B를 고르고, '
               'B와 같은 작품에서 A와 가장 먼 C를 고른다. 거리 차이가 큰 3/3/4문항을 선택하고 '
               '동일한 YouTube 대표구간 매핑을 사용한다. 후보 선택에 G 유효성·문항 유형·'
-              '연주자 조건을 추가하지 않았다. X/Y 순서는 각 버전에서 무작위다.', '']
+              '연주자 조건을 추가하지 않았다.', '']
+    xy = new_pack['selection'].get('xy_assignment', {})
+    if xy:
+        lines += ['상한 완화판의 X/Y 순서는 모든 브라우저에서 같고 모델 기준 가까운 쪽이 각각 5개다.', '']
+    else:
+        lines += ['X/Y 순서는 각 버전에서 무작위다.', '']
+    archive = root/'axy_relaxed/audit/archive'
     replacement = new_pack['selection'].get('replacement')
+    if not replacement and (random_id := xy.get('archive_random_pack_id')):
+        original = read(archive/random_id/'listening.json')
+        replacement = original['selection'].get('replacement')
     if replacement:
-        previous = read(root/'axy_relaxed/audit/archive'/replacement['from_pack_id']/'listening.json')
+        previous = read(archive/replacement['from_pack_id']/'listening.json')
         labels = ', '.join(c['label'] for c in previous['cases'] if c['id'] in replacement['replaced_case_ids'])
-        lines += [f'상한 완화판의 {labels} 문항은 기존 문항을 제외하고 나머지 문항과 '
-                  '작품·영상이 겹치지 않는 후보 중 거리 차이가 가장 큰 조합으로 교체했다.', '']
+        if replacement.get('requested_anchor'):
+            lines += [f'상한 완화판의 {labels} 문항은 청취 후보 중 지정한 조합으로 교체했다.', '']
+        else:
+            lines += [f'상한 완화판의 {labels} 문항은 기존 문항을 제외하고 나머지 문항과 '
+                      '작품·영상이 겹치지 않는 후보 중 거리 차이가 가장 큰 조합으로 교체했다.', '']
     lines += ['아래 표는 같은 A/B/C에 두 모델을 적용해 거리 차이(C−B)를 비교한 값이다. '
               '음원까지 새로 고르는 두 청취 버전의 비교에는 문항 구성의 변화도 포함된다.', '',
               '| 고정 문항 | 선정에 사용한 모델 | 기존 25% 거리 차이 | 상한 완화 거리 차이 |',

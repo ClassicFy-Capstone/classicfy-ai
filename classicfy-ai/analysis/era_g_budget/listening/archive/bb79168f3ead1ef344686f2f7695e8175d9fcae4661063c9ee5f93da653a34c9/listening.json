@@ -1,0 +1,1107 @@
+{
+  "schema": "ae-selected-era-choice-v1",
+  "model": {
+    "epoch": "시대별 2/1/4",
+    "objective": "protected G only",
+    "checkpoint_sha256": {
+      "baroque": "6b536c0327809cfa77e6c833d0c49bc41330012f409c20f1f476be8738fd4dae",
+      "classical_transition": "f4720df40b0463c058fe55599458f9f597b6280e77add3c0902c5ca1a4bfc139",
+      "romantic_impressionist": "92af40587c4268e598a621a42b57ecd5f77d4c3248396169d6d0daefe7e8de4e"
+    }
+  },
+  "catalogue": {
+    "recordings": 5082,
+    "works": 479
+  },
+  "selection": {
+    "source_commit": "d5311e6247b3d8fff43f5c314b6c817c6ad42a64",
+    "final_embeddings_sha256": "4d1f24b9a7c4d0d55556319f0586e25112038a3950879cc956544b731d698966",
+    "youtube_matches_sha256": "e872ab4cbb2c6d602d3cb0a3bcb3a24759eaccde1af7ac83afdf61b2e9d62ec8",
+    "era_quotas": {
+      "baroque": 3,
+      "classical_transition": 3,
+      "romantic_impressionist": 4
+    },
+    "ranking": "Pinned #17 nearest different-work B then farthest-from-A C within B work; full catalogue within each era; byte-identical MIDI excluded",
+    "curation": "Descending cosine-distance gap within each era; greedy20 disjoint works and30 disjoint video sources; never availability rerank B/C",
+    "playback": "Exact supplied fractional youtube_start_seconds/youtube_end_seconds; no manual re-excerpting",
+    "unavailable_video_ids": [
+      "0QIgscF9ezY"
+    ],
+    "evidence": "Embedding-extreme demonstration cases, not an unbiased listening accuracy sample",
+    "version": "legacy",
+    "replacement": {
+      "from_pack_id": "711bddf406ae8edb4e5186ccd01fc819f3d17dd592810594fad04d28408b53d5",
+      "replaced_case_ids": [
+        "selected-classical_transition-05531"
+      ]
+    }
+  },
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "cases": [
+    {
+      "id": "selected-baroque-02375",
+      "label": "바로크 01",
+      "anchor": "ATEPP:02375",
+      "near": "ATEPP:02463",
+      "far": "ATEPP:02460",
+      "far_work_pool": 4,
+      "candidate_count": 549,
+      "candidate_works": 102,
+      "era": "baroque",
+      "gap": 1.1738416300357528,
+      "candidates": [
+        {
+          "clip": "ATEPP:02463",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.07036608785217036,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:02460",
+          "role": "far",
+          "global_rank": 541,
+          "cosine_distance_to_anchor": 1.2442077178879232,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-baroque-02686",
+      "label": "바로크 02",
+      "anchor": "ATEPP:02686",
+      "near": "ATEPP:02650",
+      "far": "ATEPP:02649",
+      "far_work_pool": 2,
+      "candidate_count": 554,
+      "candidate_works": 102,
+      "era": "baroque",
+      "gap": 1.0587635643501512,
+      "candidates": [
+        {
+          "clip": "ATEPP:02650",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.13709176298207315,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:02649",
+          "role": "far",
+          "global_rank": 514,
+          "cosine_distance_to_anchor": 1.1958553273322243,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-baroque-10579",
+      "label": "바로크 03",
+      "anchor": "ATEPP:10579",
+      "near": "ATEPP:02532",
+      "far": "ATEPP:02531",
+      "far_work_pool": 2,
+      "candidate_count": 551,
+      "candidate_works": 102,
+      "era": "baroque",
+      "gap": 0.9653563881779816,
+      "candidates": [
+        {
+          "clip": "ATEPP:02532",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.09020736126475892,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:02531",
+          "role": "far",
+          "global_rank": 404,
+          "cosine_distance_to_anchor": 1.0555637494427406,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-classical_transition-06484",
+      "label": "고전과 전환 01",
+      "anchor": "ATEPP:06484",
+      "near": "ATEPP:05857",
+      "far": "ATEPP:05871",
+      "far_work_pool": 28,
+      "candidate_count": 2281,
+      "candidate_works": 131,
+      "era": "classical_transition",
+      "gap": 1.1624729307709003,
+      "candidates": [
+        {
+          "clip": "ATEPP:05857",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.10230850347614728,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:05871",
+          "role": "far",
+          "global_rank": 2235,
+          "cosine_distance_to_anchor": 1.2647814342470476,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-classical_transition-08971",
+      "label": "고전과 전환 02",
+      "anchor": "ATEPP:08971",
+      "near": "ATEPP:08079",
+      "far": "ATEPP:08067",
+      "far_work_pool": 41,
+      "candidate_count": 2263,
+      "candidate_works": 131,
+      "era": "classical_transition",
+      "gap": 1.1185900277931942,
+      "candidates": [
+        {
+          "clip": "ATEPP:08079",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.08372792862020051,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:08067",
+          "role": "far",
+          "global_rank": 1783,
+          "cosine_distance_to_anchor": 1.2023179564133948,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-classical_transition-06949",
+      "label": "고전과 전환 03",
+      "anchor": "ATEPP:06949",
+      "near": "ATEPP:08499",
+      "far": "ATEPP:08512",
+      "far_work_pool": 25,
+      "candidate_count": 2281,
+      "candidate_works": 131,
+      "era": "classical_transition",
+      "gap": 1.1059680078221041,
+      "candidates": [
+        {
+          "clip": "ATEPP:08499",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.038957333020749774,
+          "same_artist_as_anchor": true
+        },
+        {
+          "clip": "ATEPP:08512",
+          "role": "far",
+          "global_rank": 2086,
+          "cosine_distance_to_anchor": 1.144925340842854,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-romantic_impressionist-01317",
+      "label": "낭만과 인상주의 01",
+      "anchor": "ATEPP:01317",
+      "near": "ATEPP:03600",
+      "far": "ATEPP:03598",
+      "far_work_pool": 5,
+      "candidate_count": 2213,
+      "candidate_works": 243,
+      "era": "romantic_impressionist",
+      "gap": 1.0361279459934707,
+      "candidates": [
+        {
+          "clip": "ATEPP:03600",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.034122987489663026,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:03598",
+          "role": "far",
+          "global_rank": 2166,
+          "cosine_distance_to_anchor": 1.0702509334831338,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-romantic_impressionist-11053",
+      "label": "낭만과 인상주의 02",
+      "anchor": "ATEPP:11053",
+      "near": "ATEPP:00134",
+      "far": "ATEPP:00133",
+      "far_work_pool": 7,
+      "candidate_count": 2208,
+      "candidate_works": 243,
+      "era": "romantic_impressionist",
+      "gap": 0.9832780063942888,
+      "candidates": [
+        {
+          "clip": "ATEPP:00134",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.027060358842530885,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:00133",
+          "role": "far",
+          "global_rank": 2171,
+          "cosine_distance_to_anchor": 1.0103383652368196,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-romantic_impressionist-04556",
+      "label": "낭만과 인상주의 03",
+      "anchor": "ATEPP:04556",
+      "near": "ATEPP:02985",
+      "far": "ATEPP:02988",
+      "far_work_pool": 12,
+      "candidate_count": 2215,
+      "candidate_works": 243,
+      "era": "romantic_impressionist",
+      "gap": 0.9824079410159792,
+      "candidates": [
+        {
+          "clip": "ATEPP:02985",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.07524530758645431,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:02988",
+          "role": "far",
+          "global_rank": 2106,
+          "cosine_distance_to_anchor": 1.0576532486024335,
+          "same_artist_as_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "selected-romantic_impressionist-10095",
+      "label": "낭만과 인상주의 04",
+      "anchor": "ATEPP:10095",
+      "near": "ATEPP:00879",
+      "far": "ATEPP:00845",
+      "far_work_pool": 40,
+      "candidate_count": 2210,
+      "candidate_works": 243,
+      "era": "romantic_impressionist",
+      "gap": 0.9620655601865231,
+      "candidates": [
+        {
+          "clip": "ATEPP:00879",
+          "role": "near",
+          "global_rank": 1,
+          "cosine_distance_to_anchor": 0.04079897864112869,
+          "same_artist_as_anchor": false
+        },
+        {
+          "clip": "ATEPP:00845",
+          "role": "far",
+          "global_rank": 2099,
+          "cosine_distance_to_anchor": 1.0028645388276518,
+          "same_artist_as_anchor": false
+        }
+      ]
+    }
+  ],
+  "clips": {
+    "ATEPP:02375": {
+      "performance_id": "ATEPP:02375",
+      "artist": "Wilhelm Kempff",
+      "title": "English Suite No. 3 in G Minor, BWV 808: IX. Gigue",
+      "album": "Wilhelm Kempff Plays Bach. Transcriptions For Piano",
+      "album_date": "1994-01-01",
+      "video_id": "7Ggms0Tkdds",
+      "youtube_url": "https://www.youtube.com/watch?v=7Ggms0Tkdds",
+      "start_seconds": 59.9497,
+      "end_seconds": 84.6701,
+      "track_duration_seconds": 162.24,
+      "theme": {
+        "title": "Johann Sebastian Bach · English Suite No. 3 in G Minor, BWV 808: VII. Gigue",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=7Ggms0Tkdds&t=59s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "7605c20e9aeb6e696071f608915edc45235b3ef84777fa3d63169aac2789f89f",
+      "midi_start_seconds": 59.9296875,
+      "midi_end_seconds": 84.69010416666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02463": {
+      "performance_id": "ATEPP:02463",
+      "artist": "Claudio Arrau",
+      "title": "Partita No.5 in G, BWV 829: 5. Tempo di minuetto",
+      "album": "Bach js-Arrau heritage",
+      "album_date": "2003-01-01",
+      "video_id": "uAgOBCM2410",
+      "youtube_url": "https://www.youtube.com/watch?v=uAgOBCM2410",
+      "start_seconds": 37.2617,
+      "end_seconds": 72.5039,
+      "track_duration_seconds": 107.78666666666666,
+      "theme": {
+        "title": "Johann Sebastian Bach · Partita No. 5 in G, BWV 829: 5. Tempo di minuetto",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=uAgOBCM2410&t=37s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "8df53a4267f1509971454307156e0355281a4d86c7fbddc713e4b51c02066d5a",
+      "midi_start_seconds": 37.26171875,
+      "midi_end_seconds": 72.50390625,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02460": {
+      "performance_id": "ATEPP:02460",
+      "artist": "András Schiff",
+      "title": "Partita No. 5 in G, BWV 829: 5. Tempo di minuetto",
+      "album": "Bach, J.S.: The Solo Keyboard Works",
+      "album_date": "1996-01-01",
+      "video_id": "6orw-UcM_pg",
+      "youtube_url": "https://www.youtube.com/watch?v=6orw-UcM_pg",
+      "start_seconds": 54.3159,
+      "end_seconds": 106.424,
+      "track_duration_seconds": 155.33333333333334,
+      "theme": {
+        "title": "Johann Sebastian Bach · Partita No. 5 in G, BWV 829: 5. Tempo di minuetto",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=6orw-UcM_pg&t=54s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "5943cbf43faca8328c5cfa6d83b2b832630ac14678d734295593f896dcc82697",
+      "midi_start_seconds": 54.3359375,
+      "midi_end_seconds": 106.44401041666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02686": {
+      "performance_id": "ATEPP:02686",
+      "artist": "Daniel Barenboim",
+      "title": "Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 19 in A Major, BWV 864: Fugue",
+      "album": "Bach, JS : Well-Tempered Clavier Book 1",
+      "album_date": "2005-05-24",
+      "video_id": "p1CGz7iSK5g",
+      "youtube_url": "https://www.youtube.com/watch?v=p1CGz7iSK5g",
+      "start_seconds": 52.9479,
+      "end_seconds": 82.1667,
+      "track_duration_seconds": 181.88,
+      "theme": {
+        "title": "Johann Sebastian Bach · Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 19 in A Major, BWV 864: Fugue",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=p1CGz7iSK5g&t=52s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "9aa10461c972bd33f3481540c5f16d9e3e513ea4ac952e5fe5ffdd04aca98fdc",
+      "midi_start_seconds": 52.947916666666664,
+      "midi_end_seconds": 82.16666666666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02650": {
+      "performance_id": "ATEPP:02650",
+      "artist": "Vladimir Ashkenazy",
+      "title": "Das Wohltemperierte Klavier: Book 1, BWV 846-869: Prelude in C major BWV 846",
+      "album": "Ashkenazy 50: Piano Encores",
+      "album_date": "2013-01-01",
+      "video_id": "MjbXlGOOTyk",
+      "youtube_url": "https://www.youtube.com/watch?v=MjbXlGOOTyk",
+      "start_seconds": 35.1766,
+      "end_seconds": 61.293,
+      "track_duration_seconds": 161.32,
+      "theme": {
+        "title": "Johann Sebastian Bach · The Well-Tempered Clavier, Book I: No. 1 in C Major, BWV 846: Prelude",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=MjbXlGOOTyk&t=35s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "78fd758d333c3cd501deae454bdb1fce0241e5bdc3c844b2d966ac22feb2b6d4",
+      "midi_start_seconds": 35.19661458333333,
+      "midi_end_seconds": 61.29296875,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02649": {
+      "performance_id": "ATEPP:02649",
+      "artist": "Glenn Gould",
+      "title": "The Well-Tempered Clavier, Book 1: Prelude No. 1 in C Major, BWV 846",
+      "album": "Glenn Gould plays Bach: The Well-Tempered Clavier Books I & II, BWV 846-893",
+      "album_date": "1993",
+      "video_id": "1CVlBSgj0bk",
+      "youtube_url": "https://www.youtube.com/watch?v=1CVlBSgj0bk",
+      "start_seconds": 32.9136,
+      "end_seconds": 57.4847,
+      "track_duration_seconds": 144.24,
+      "theme": {
+        "title": "Johann Sebastian Bach · The Well-Tempered Clavier, Book I: No. 1 in C Major, BWV 846: Prelude",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=1CVlBSgj0bk&t=32s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "844d0d93d62b08fb662a657d04e16471d683cf31020885b2f986276ed0267f7b",
+      "midi_start_seconds": 32.93359375,
+      "midi_end_seconds": 57.52473958333333,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:10579": {
+      "performance_id": "ATEPP:10579",
+      "artist": "Wilhelm Kempff",
+      "title": "Chromatic Fantasia and Fugue in D Minor, BWV 903",
+      "album": "Kempff plays Bach",
+      "album_date": "2018-08-17",
+      "video_id": "PueMWE_zMYU",
+      "youtube_url": "https://www.youtube.com/watch?v=PueMWE_zMYU",
+      "start_seconds": 498.0742,
+      "end_seconds": 539.2674,
+      "track_duration_seconds": 764.3466666666667,
+      "theme": {
+        "title": "Johann Sebastian Bach · Chromatic Fantasia and Fugue in D Minor, BWV 903",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=PueMWE_zMYU&t=498s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "2f4002451246fab5f16d207ddc2f257b0fc628636554afc9383c3073bf275677",
+      "midi_start_seconds": 498.07421875,
+      "midi_end_seconds": 539.2473958333333,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02532": {
+      "performance_id": "ATEPP:02532",
+      "artist": "Edwin Fischer",
+      "title": "Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 17 in A-Flat Major, BWV 862: Prelude",
+      "album": "Bach: The Well-Tempered Clavier",
+      "album_date": "2012-09-03",
+      "video_id": "hczaPel6pc4",
+      "youtube_url": "https://www.youtube.com/watch?v=hczaPel6pc4",
+      "start_seconds": 63.5421,
+      "end_seconds": 80.9422,
+      "track_duration_seconds": 92.4265306122449,
+      "theme": {
+        "title": "Johann Sebastian Bach · Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 17 in A-Flat Major, BWV 862: Prelude",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=hczaPel6pc4&t=63s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "e403e7b9d72e8cf67d65584642248f7899a3f1799891965a4703dec6b1e6e331",
+      "midi_start_seconds": 63.522135416666664,
+      "midi_end_seconds": 80.96223958333333,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02531": {
+      "performance_id": "ATEPP:02531",
+      "artist": "Glenn Gould",
+      "title": "The Well-Tempered Clavier, Book 1: Prelude No. 17 in A-Flat Major, BWV 862",
+      "album": "Glenn Gould plays Bach: The Well-Tempered Clavier Books I & II, BWV 846-893",
+      "album_date": "1993",
+      "video_id": "WS8FbPKwo2E",
+      "youtube_url": "https://www.youtube.com/watch?v=WS8FbPKwo2E",
+      "start_seconds": 59.5968,
+      "end_seconds": 75.2604,
+      "track_duration_seconds": 83.17333333333333,
+      "theme": {
+        "title": "Johann Sebastian Bach · Bach, JS: The Well-Tempered Clavier, Book I, Prelude and Fugue No. 17 in A-Flat Major, BWV 862: Prelude",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=WS8FbPKwo2E&t=59s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "521b5bccb5a36f5c6a9c1a6ac6371ab1921969c169bafde05bb20d4da199c55d",
+      "midi_start_seconds": 59.576822916666664,
+      "midi_end_seconds": 75.26041666666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:06484": {
+      "performance_id": "ATEPP:06484",
+      "artist": "Wilhelm Kempff",
+      "title": "Piano Sonata No. 19 in G Minor, Op. 49, No. 1: II. Rondo (Allegro)",
+      "album": "Beethoven: Sonatas Nos. 13 - 19",
+      "album_date": "2019-09-13",
+      "video_id": "LbwJI7ffQvU",
+      "youtube_url": "https://www.youtube.com/watch?v=LbwJI7ffQvU",
+      "start_seconds": 104.6984,
+      "end_seconds": 131.2547,
+      "track_duration_seconds": 232.13333333333333,
+      "theme": {
+        "title": "Ludwig van Beethoven · Sonata No. 19 in G Minor, Op. 49, No. 1: II. Rondo: Allegro",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=LbwJI7ffQvU&t=104s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "f53b27cd71e8ece31241da315afdad9829004c551af08e494bd4955e2617a522",
+      "midi_start_seconds": 104.67838541666666,
+      "midi_end_seconds": 131.27473958333331,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:05857": {
+      "performance_id": "ATEPP:05857",
+      "artist": "Martha Argerich",
+      "title": "Piano Sonata No. 7 in D Major, Op. 10 No. 3: IV. Rondo. Allegro",
+      "album": "Mozart, Beethoven & Others: Piano Works",
+      "album_date": "2022-01-21",
+      "video_id": "NMscuz6TgF8",
+      "youtube_url": "https://www.youtube.com/watch?v=NMscuz6TgF8",
+      "start_seconds": 146.1494,
+      "end_seconds": 166.8712,
+      "track_duration_seconds": 212.06666666666666,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No. 7 in D Major, Op. 10 No. 3: IV. Rondo: Allegro",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=NMscuz6TgF8&t=146s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "9b64a10a82e62be41dc43f54a6008d9d2dc6e0086ff51884c8ac920ea778c2d6",
+      "midi_start_seconds": 146.109375,
+      "midi_end_seconds": 166.81119791666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:05871": {
+      "performance_id": "ATEPP:05871",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No. 7 in D Major, Op. 10 No. 3: IV. Rondo: Allegro",
+      "album": "Piano Recital: Arrau, Claudio - Beethoven, L. Van / Brahms, J. (Schwetzinger Festspiele Edition, 1963, 1973)",
+      "album_date": "2009-04-01",
+      "video_id": "GUTuChDgPvU",
+      "youtube_url": "https://www.youtube.com/watch?v=GUTuChDgPvU",
+      "start_seconds": 154.2331,
+      "end_seconds": 178.194,
+      "track_duration_seconds": 232.8,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No. 7 in D Major, Op. 10 No. 3: IV. Rondo: Allegro",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=GUTuChDgPvU&t=154s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "eba96a19a960493eed69d9b99bd726025a6f61f2ba8d806e554bd4b0ba3fd1fd",
+      "midi_start_seconds": 154.23307291666666,
+      "midi_end_seconds": 178.19401041666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:08971": {
+      "performance_id": "ATEPP:08971",
+      "artist": "Wilhelm Kempff",
+      "title": "Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 'Mondschein': I. Adagio sostenuto",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27",
+      "video_id": "gc_xOdoQCN0",
+      "youtube_url": "https://www.youtube.com/watch?v=gc_xOdoQCN0",
+      "start_seconds": 315.026,
+      "end_seconds": 356.733,
+      "track_duration_seconds": 381.02666666666664,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 \"Moonlight\": I. Adagio sostenuto",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=gc_xOdoQCN0&t=315s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "931d118661455aa3e5e8251270e935d77b3cc699eee45fc791dce038e3796a02",
+      "midi_start_seconds": 315.02604166666663,
+      "midi_end_seconds": 356.79296875,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:08079": {
+      "performance_id": "ATEPP:08079",
+      "artist": "Friedrich Gulda",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "album": "Gulda plays Beethoven",
+      "album_date": "2005-01-01",
+      "video_id": "MmYf0PTNzA4",
+      "youtube_url": "https://www.youtube.com/watch?v=MmYf0PTNzA4",
+      "start_seconds": 221.9167,
+      "end_seconds": 255.6367,
+      "track_duration_seconds": 303.2266666666667,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile (Recorded 1959)",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=MmYf0PTNzA4&t=221s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "e4284f6cc9ee5a3c949d8e078ae7bceb6cc85feabb3c707643fcf67fb3125acb",
+      "midi_start_seconds": 221.91666666666666,
+      "midi_end_seconds": 255.63671875,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:08067": {
+      "performance_id": "ATEPP:08067",
+      "artist": "Glenn Gould",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "album": "Glenn Gould plays Beethoven: Piano Sonatas Nos. 1-3; 5-10; 12-14; 15-18; 23; 30-32",
+      "album_date": "1965",
+      "video_id": "JuFd49TCYdE",
+      "youtube_url": "https://www.youtube.com/watch?v=JuFd49TCYdE",
+      "start_seconds": 210.4553,
+      "end_seconds": 239.9583,
+      "track_duration_seconds": 283.4266666666667,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile (Recorded 1959)",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=JuFd49TCYdE&t=210s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "e9abba100c687c61e7867f0b8fac078e8b0074d5cb423b880e3b74c53770a758",
+      "midi_start_seconds": 210.47526041666666,
+      "midi_end_seconds": 239.95833333333331,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:06949": {
+      "performance_id": "ATEPP:06949",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No.2 in A, Op.2 No.2: 4. Rondo (Grazioso)",
+      "album": "The Final Sessions",
+      "album_date": "2006-01-01",
+      "video_id": "tN14ICxqWBk",
+      "youtube_url": "https://www.youtube.com/watch?v=tN14ICxqWBk",
+      "start_seconds": 418.8316,
+      "end_seconds": 460.6345,
+      "track_duration_seconds": 470.3333333333333,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No.2 In A, Op.2 No.2: 4. Rondo (Grazioso)",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=tN14ICxqWBk&t=418s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "bfdcd2aa88b977708eaf8f445cb228304917ce4db63221c9119b0353ec6cf802",
+      "midi_start_seconds": 418.8515625,
+      "midi_end_seconds": 460.67447916666663,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:08499": {
+      "performance_id": "ATEPP:08499",
+      "artist": "Claudio Arrau",
+      "title": "Piano Sonata No.27 in E minor, Op.90: 2. Nicht zu geschwind und sehr singbar vorgetragen",
+      "album": "Beethoven: Piano Sonatas Nos. 9, 10, 27 & 28",
+      "album_date": "1992-10-01",
+      "video_id": "e4r90Okt1a4",
+      "youtube_url": "https://www.youtube.com/watch?v=e4r90Okt1a4",
+      "start_seconds": 451.0139,
+      "end_seconds": 489.6284,
+      "track_duration_seconds": 514.0,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No.27 in E minor, Op.90: 2. Nicht zu geschwind und sehr singbar vorgetragen",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=e4r90Okt1a4&t=451s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "75c74af1edd936bc470178a4dc1c4641c2f60f89d7a4d9eeeab7ee18ccc80f22",
+      "midi_start_seconds": 451.03385416666663,
+      "midi_end_seconds": 489.6484375,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:08512": {
+      "performance_id": "ATEPP:08512",
+      "artist": "Friedrich Gulda",
+      "title": "Piano Sonata No. 27 in E Minor, Op. 90: II. Nicht zu geschwind und sehr singbar vorgetragen",
+      "album": "Gulda plays Beethoven",
+      "album_date": "2005-01-01",
+      "video_id": "w-0TEX2MpMQ",
+      "youtube_url": "https://www.youtube.com/watch?v=w-0TEX2MpMQ",
+      "start_seconds": 339.0,
+      "end_seconds": 364.1441,
+      "track_duration_seconds": 378.50666666666666,
+      "theme": {
+        "title": "Ludwig van Beethoven · Piano Sonata No.27 in E minor, Op.90: 2. Nicht zu geschwind und sehr singbar vorgetragen",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=w-0TEX2MpMQ&t=339s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "01a74d862dfed8948f50d0fe80b43c5fa23775240e91cf67bfb55c3b1d0615ab",
+      "midi_start_seconds": 338.984375,
+      "midi_end_seconds": 364.1640625,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:01317": {
+      "performance_id": "ATEPP:01317",
+      "artist": "Alicia de Larrocha",
+      "title": "Faschingsschwank aus Wien, Op.26: 4. Intermezzo (Colla più grande energia)",
+      "album": "Schumann: Carnaval; Faschingsschwank aus Wien; Allegro in B Minor",
+      "album_date": "1989-01-01",
+      "video_id": "lPVt5plpq3Y",
+      "youtube_url": "https://www.youtube.com/watch?v=lPVt5plpq3Y",
+      "start_seconds": 84.4232,
+      "end_seconds": 110.362,
+      "track_duration_seconds": 139.44,
+      "theme": {
+        "title": "Robert Schumann · Faschingsschwank aus Wien, Op. 26: IV. Intermezzo",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=lPVt5plpq3Y&t=84s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "5923a3418e08858d4bf68284c3a7ba726ff1ad966359908c4c4ca9e8cbd252a2",
+      "midi_start_seconds": 84.42317708333333,
+      "midi_end_seconds": 110.36197916666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:03600": {
+      "performance_id": "ATEPP:03600",
+      "artist": "Bertrand Chamayou",
+      "title": "Ravel: Le Tombeau de Couperin, M. 68: II. Fugue",
+      "album": "Ravel: Complete Works for Solo Piano",
+      "album_date": "2016-01-15",
+      "video_id": "suZHueSy8jA",
+      "youtube_url": "https://www.youtube.com/watch?v=suZHueSy8jA",
+      "start_seconds": 102.7552,
+      "end_seconds": 117.7599,
+      "track_duration_seconds": 211.0,
+      "theme": {
+        "title": "Maurice Ravel · Ravel: Le Tombeau de Couperin, M. 68: II. Fugue",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=suZHueSy8jA&t=102s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "99c49ed2e5423a93a4336792956dfd5eb6373b1093d65032700098eae6f27680",
+      "midi_start_seconds": 102.75520833333333,
+      "midi_end_seconds": 117.77994791666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:03598": {
+      "performance_id": "ATEPP:03598",
+      "artist": "Walter Gieseking",
+      "title": "Ravel: Le Tombeau de Couperin, M. 68: II. Fugue",
+      "album": "Walter Gieseking - Icon",
+      "album_date": "2009-03-23",
+      "video_id": "7He4JtL0kmU",
+      "youtube_url": "https://www.youtube.com/watch?v=7He4JtL0kmU",
+      "start_seconds": 119.1146,
+      "end_seconds": 135.6228,
+      "track_duration_seconds": 248.29614512471656,
+      "theme": {
+        "title": "Maurice Ravel · Ravel: Le Tombeau de Couperin, M. 68: II. Fugue",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=7He4JtL0kmU&t=119s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "5695fac415e9797afd00479e8b82706c3946791e91cb7f2c7c63b9866bcc47a7",
+      "midi_start_seconds": 119.11458333333333,
+      "midi_end_seconds": 135.66276041666666,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:11053": {
+      "performance_id": "ATEPP:11053",
+      "artist": "Wilhelm Kempff",
+      "title": "Polonaise-fantaisie, Op. 61",
+      "album": "Wilhelm Kempff, Piano (Vol.2)",
+      "album_date": "2011-01-01",
+      "video_id": "evTEsQTXQy8",
+      "youtube_url": "https://www.youtube.com/watch?v=evTEsQTXQy8",
+      "start_seconds": 300.763,
+      "end_seconds": 331.702,
+      "track_duration_seconds": 692.5066666666667,
+      "theme": {
+        "title": "Frédéric Chopin · Polonaise-Fantaisie in A-Flat Major, Op. 61",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=evTEsQTXQy8&t=300s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "d42a8dc213d9cc52dcbe68b3c62493074dbf85f162cf63cdfbdbc23c96335e56",
+      "midi_start_seconds": 300.7630208333333,
+      "midi_end_seconds": 331.6328125,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:00134": {
+      "performance_id": "ATEPP:00134",
+      "artist": "Vladimir Horowitz",
+      "title": "Etudes-tableaux, Op. 39: No. 9 in D Major",
+      "album": "Vladimir Horowitz in Recital at Yale University, New Haven November 13, 1966",
+      "album_date": "2015-12-11",
+      "video_id": "dKfH1HcErtA",
+      "youtube_url": "https://www.youtube.com/watch?v=dKfH1HcErtA",
+      "start_seconds": 126.8026,
+      "end_seconds": 141.5952,
+      "track_duration_seconds": 241.24,
+      "theme": {
+        "title": "Sergei Rachmaninoff · Etudes-Tableaux, Op. 39: No. 9 in D Major, Allegro moderato. Tempo di marcia",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=dKfH1HcErtA&t=126s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "f823ade2f4a14177e4b27e2c1b3dc28885f3ee503e20c2550eafab98e05703c7",
+      "midi_start_seconds": 127.00260416666666,
+      "midi_end_seconds": 141.75520833333331,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:00133": {
+      "performance_id": "ATEPP:00133",
+      "artist": "Vladimir Horowitz",
+      "title": "Etudes-tableaux, Op. 39: No. 9 in D Major",
+      "album": "Vladimir Horowitz in Recital at Orchestra Hall, Chicago, November 2, 1975",
+      "album_date": "2015-12-11",
+      "video_id": "ADqnI6xnKxk",
+      "youtube_url": "https://www.youtube.com/watch?v=ADqnI6xnKxk",
+      "start_seconds": 126.2897,
+      "end_seconds": 140.8361,
+      "track_duration_seconds": 239.84,
+      "theme": {
+        "title": "Sergei Rachmaninoff · Etudes-Tableaux, Op. 39: No. 9 in D Major, Allegro moderato. Tempo di marcia",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=ADqnI6xnKxk&t=126s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "ec628e71d0331e468e0dbaa1c4919d877b0d400f7aac00632238775eed7f1b6e",
+      "midi_start_seconds": 126.46484375,
+      "midi_end_seconds": 140.99609375,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:04556": {
+      "performance_id": "ATEPP:04556",
+      "artist": "Valentina Lisitsa",
+      "title": "The Seasons, Op. 37a, TH 135: 6. June: Barcarolle",
+      "album": "Tchaikovsky: The Complete Solo Piano Works",
+      "album_date": "2019-03-15",
+      "video_id": "Wd-ioiMioe0",
+      "youtube_url": "https://www.youtube.com/watch?v=Wd-ioiMioe0",
+      "start_seconds": 259.2878,
+      "end_seconds": 300.1458,
+      "track_duration_seconds": 370.0455782312925,
+      "theme": {
+        "title": "Pyotr Ilyich Tchaikovsky · The Seasons, Op. 37 bis: No. 6 June Barcarole",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=Wd-ioiMioe0&t=259s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "0f9153176385ef96b0d206ca98bf80d9eb4a55e53d2b339235f8b8a588128123",
+      "midi_start_seconds": 259.28776041666663,
+      "midi_end_seconds": 300.1458333333333,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02985": {
+      "performance_id": "ATEPP:02985",
+      "artist": "Arturo Benedetti Michelangeli",
+      "title": "Images - Book 1, L. 110: I. Reflets dans l'eau",
+      "album": "Debussy: Piano Works",
+      "album_date": "1995-01-01",
+      "video_id": "p1PyNHb4BCg",
+      "youtube_url": "https://www.youtube.com/watch?v=p1PyNHb4BCg",
+      "start_seconds": 201.832,
+      "end_seconds": 227.1543,
+      "track_duration_seconds": 294.0,
+      "theme": {
+        "title": "Claude Debussy · Images, Book 1: No. 1. Reflets dans l'eau",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=p1PyNHb4BCg&t=201s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "9b4195081e0dcb0364eb66fcb39442327e9465d84d64e77c79569d52762433d2",
+      "midi_start_seconds": 201.83203125,
+      "midi_end_seconds": 227.17428385416662,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:02988": {
+      "performance_id": "ATEPP:02988",
+      "artist": "Claudio Arrau",
+      "title": "Images Book I, L. 110: I. Reflets dans l'eau",
+      "album": "Claudio Arrau Plays Debussy",
+      "album_date": "1950",
+      "video_id": "Y-RiLLm3kcI",
+      "youtube_url": "https://www.youtube.com/watch?v=Y-RiLLm3kcI",
+      "start_seconds": 203.9149,
+      "end_seconds": 225.9419,
+      "track_duration_seconds": 269.61333333333334,
+      "theme": {
+        "title": "Claude Debussy · Images, Book 1: No. 1. Reflets dans l'eau",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=Y-RiLLm3kcI&t=203s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "9fc5deb193b0ff3d96549f16f7292b261754390abb0e766a8a917ec26b6afb91",
+      "midi_start_seconds": 203.93489583333331,
+      "midi_end_seconds": 225.921875,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:10095": {
+      "performance_id": "ATEPP:10095",
+      "artist": "Maurizio Pollini",
+      "title": "Piano Sonata No.2 In B Flat Minor, Op.35: 3. Marche funèbre (Lento) - 1984 Recording",
+      "album": "Chopin",
+      "album_date": "2011-01-01",
+      "video_id": "-pGImXjwSYk",
+      "youtube_url": "https://www.youtube.com/watch?v=-pGImXjwSYk",
+      "start_seconds": 429.4731,
+      "end_seconds": 458.5209,
+      "track_duration_seconds": 504.5466666666667,
+      "theme": {
+        "title": "Frédéric Chopin · Piano Sonata No. 2 in B flat minor, Op. 35 (1996 Digital Remaster): III. Marche funèbre (Lento)",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=-pGImXjwSYk&t=429s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "6735c19103f55d2da3e307c2280b8c895b87d1095d0abcca91e4e259b8904e4e",
+      "midi_start_seconds": 429.453125,
+      "midi_end_seconds": 458.4739583333333,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:00879": {
+      "performance_id": "ATEPP:00879",
+      "artist": "Valentina Lisitsa",
+      "title": "Kinderszenen, Op. 15: No. 7. Traumerei",
+      "album": "Valentina Lisitsa Piano Recital",
+      "album_date": "2011-03-28",
+      "video_id": "qnTTOJ_fTGk",
+      "youtube_url": "https://www.youtube.com/watch?v=qnTTOJ_fTGk",
+      "start_seconds": 8.3732,
+      "end_seconds": 26.1081,
+      "track_duration_seconds": 178.96,
+      "theme": {
+        "title": "Robert Schumann · Kinderszenen, Op. 15: 7. Träumerei",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=qnTTOJ_fTGk&t=8s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "4b82b8e39ad24667bf421da3c4e4d26041d390f57a0597204f9966265fc6ac0f",
+      "midi_start_seconds": 8.393229166666666,
+      "midi_end_seconds": 26.108072916666664,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    },
+    "ATEPP:00845": {
+      "performance_id": "ATEPP:00845",
+      "artist": "Vladimir Horowitz",
+      "title": "Kinderszenen, Op. 15: No. 7, Träumerei - Instrumental",
+      "album": "Horowitz: Favorite Encores",
+      "album_date": "1987-03-24",
+      "video_id": "CBOKtkO3ENs",
+      "youtube_url": "https://www.youtube.com/watch?v=CBOKtkO3ENs",
+      "start_seconds": 5.2933,
+      "end_seconds": 20.7344,
+      "track_duration_seconds": 164.4267120181406,
+      "theme": {
+        "title": "Robert Schumann · Kinderszenen, Op. 15: 7. Träumerei",
+        "label": "데이터셋 선정 대표구간",
+        "formal_measures": "동일 선정 구간 전체",
+        "source_title": "제공된 데이터셋 YouTube 대응 구간",
+        "source_url": "https://www.youtube.com/watch?v=CBOKtkO3ENs&t=5s",
+        "evidence": "대표구간과 YouTube 재생시간은 제공된 youtube_matches.csv의 자동 매칭 통과 행을 그대로 사용합니다.",
+        "mapping_note": "X/Y는 같은 작품과 같은 대표구간 기준의 서로 다른 연주입니다. 임베딩도 실제 청취 대표구간 전체에서 계산했습니다. 영상 정렬은 자동 추정이며 청음 검수 전입니다."
+      },
+      "source_sha256": "25455530a72581d5eac7bda68a925f59ad10a9f17b28cfe77d70df31a2bea155",
+      "midi_start_seconds": 5.333333333333333,
+      "midi_end_seconds": 20.734375,
+      "youtube_mapping_status": "matched_auto",
+      "youtube_human_verified": "False"
+    }
+  },
+  "id": "bb79168f3ead1ef344686f2f7695e8175d9fcae4661063c9ee5f93da653a34c9",
+  "storage_id": "f6fc2a64633f39ec42f73550b8a14b5727ecf0964f03b172fc878338d45ba6a2"
+}

@@ -17,10 +17,14 @@
     "evidence": "Embedding-extreme demonstration cases, not an unbiased listening accuracy sample",
     "version": "legacy",
     "replacement": {
-      "from_pack_id": "711bddf406ae8edb4e5186ccd01fc819f3d17dd592810594fad04d28408b53d5",
+      "from_pack_id": "0c0f4a888d3018860a7997ceee370d16807afd20bee0b6ae272748c254928919",
       "replaced_case_ids": [
-        "selected-classical_transition-05531"
-      ]
+        "selected-classical_transition-06484"
+      ],
+      "requested_anchor": "ATEPP:07382"
+    },
+    "xy_assignment": {
+      "mode": "fixed-balanced-v1"
     }
   },
   "eligible_case_count": 2944,
@@ -75,16 +79,16 @@
     },
     {
       "era": "classical_transition",
-      "anchor": "06484",
-      "near": "05857",
-      "far": "05871",
-      "gap": 1.1624729307709003,
-      "near_distance": 0.10230850347614728,
-      "far_distance": 1.2647814342470476,
-      "far_rank": 2235,
-      "candidate_count": 2281,
+      "anchor": "07382",
+      "near": "10783",
+      "far": "10798",
+      "gap": 1.079282272936751,
+      "near_distance": 0.1682507706150349,
+      "far_distance": 1.247533043551786,
+      "far_rank": 2133,
+      "candidate_count": 2239,
       "candidate_works": 131,
-      "far_work_pool": 28
+      "far_work_pool": 13
     },
     {
       "era": "classical_transition",
@@ -127,16 +131,16 @@
     },
     {
       "era": "romantic_impressionist",
-      "anchor": "11053",
-      "near": "00134",
-      "far": "00133",
-      "gap": 0.9832780063942888,
-      "near_distance": 0.027060358842530885,
-      "far_distance": 1.0103383652368196,
-      "far_rank": 2171,
-      "candidate_count": 2208,
+      "anchor": "01660",
+      "near": "09771",
+      "far": "09776",
+      "gap": 0.9367370610280901,
+      "near_distance": 0.09327895705849887,
+      "far_distance": 1.030016018086589,
+      "far_rank": 2058,
+      "candidate_count": 2218,
       "candidate_works": 243,
-      "far_work_pool": 7
+      "far_work_pool": 15
     },
     {
       "era": "romantic_impressionist",

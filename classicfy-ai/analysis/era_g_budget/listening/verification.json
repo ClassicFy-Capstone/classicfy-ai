@@ -15,6 +15,10 @@
   "model_results_not_in_public_prechoice_payload": true,
   "new_pack_does_not_migrate_old_answers": false,
   "retained_cases_migrate_prior_answers": true,
+  "fixed_xy_answer_counts": {
+    "Y": 5,
+    "X": 5
+  },
   "embeddings_sha256": "4d1f24b9a7c4d0d55556319f0586e25112038a3950879cc956544b731d698966",
   "cases": [
     {
@@ -54,16 +58,16 @@
       "gap": 0.9653563881779816
     },
     {
-      "case_id": "selected-classical_transition-06484",
+      "case_id": "selected-classical_transition-07382",
       "era": "classical_transition",
       "nearest_B_confirmed": true,
       "farthest_from_A_C_confirmed": true,
       "G_both_valid": false,
       "G_order_and_clarity_passed": false,
       "distinct_XY_artists": false,
-      "near_distance": 0.10230850347614728,
-      "far_distance": 1.2647814342470476,
-      "gap": 1.1624729307709003
+      "near_distance": 0.1682507706150349,
+      "far_distance": 1.247533043551786,
+      "gap": 1.079282272936751
     },
     {
       "case_id": "selected-classical_transition-08971",
@@ -102,16 +106,16 @@
       "gap": 1.0361279459934707
     },
     {
-      "case_id": "selected-romantic_impressionist-11053",
+      "case_id": "selected-romantic_impressionist-01660",
       "era": "romantic_impressionist",
       "nearest_B_confirmed": true,
       "farthest_from_A_C_confirmed": true,
       "G_both_valid": false,
       "G_order_and_clarity_passed": false,
       "distinct_XY_artists": false,
-      "near_distance": 0.027060358842530885,
-      "far_distance": 1.0103383652368196,
-      "gap": 0.9832780063942888
+      "near_distance": 0.09327895705849887,
+      "far_distance": 1.030016018086589,
+      "gap": 0.9367370610280901
     },
     {
       "case_id": "selected-romantic_impressionist-04556",

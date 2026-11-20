@@ -1,0 +1,48 @@
+{
+  "pack_id": "740e641164864581623614217189e7bcdee528e7988ced64b357d86db52633d6",
+  "case_id": "selected-classical_transition-07382",
+  "near_clip": "703bd9a5aebc51ec",
+  "far_clip": "0e65bcc418161312",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 13,
+  "recordings": {
+    "16f5b0ecacc2bf6b": {
+      "performance_id": "ATEPP:07382",
+      "artist": "Mikhail Pletnev",
+      "title": "Beethoven: Piano Sonata No. 23 in F Minor, Op. 57 \"Appassionata\": II. Andante con moto",
+      "album": "Beethoven Best loved piano Sonatas Moonlight Waldstein Appassionata",
+      "album_date": "2011-07-04"
+    },
+    "703bd9a5aebc51ec": {
+      "performance_id": "ATEPP:10783",
+      "artist": "András Schiff",
+      "title": "Rondo in A minor, K.511",
+      "album": "Mozart: Ah! Vous dirai-je maman Variations; Unser dummer Pöbel meint Variations; Adagio in B minor; Rondo in A minor; Eine kleine Gigue",
+      "album_date": "1988-01-01"
+    },
+    "0e65bcc418161312": {
+      "performance_id": "ATEPP:10798",
+      "artist": "Lazar Berman",
+      "title": "Rondo in A Minor, K. 511",
+      "album": "Lazar Berman at Carnegie Hall, New York City, March 11, 1979",
+      "album_date": "1980"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "703bd9a5aebc51ec",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.1682507706150349,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "0e65bcc418161312",
+      "role": "far",
+      "global_rank": 2133,
+      "cosine_distance_to_anchor": 1.247533043551786,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

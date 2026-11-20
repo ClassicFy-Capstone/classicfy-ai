@@ -8,7 +8,7 @@ import sys
 
 import numpy as np
 
-from prepare_selected_era_listening import original_helpers,digest,dump,QUOTAS,AI
+from prepare_selected_era_listening import build_public_pack,original_helpers,digest,dump,QUOTAS,AI
 
 
 def main():
@@ -94,20 +94,25 @@ def main():
                            near_distance=float(dist[b]),far_distance=float(dist[c]),gap=float(dist[c]-dist[b])))
     assert len(all_works)==20
     public=json.loads((args.ui/'data.js').read_text(encoding='utf-8').split('=',1)[1].strip().rstrip(';'))
-    expected,results=helper['public_pack'](pack)
-    for key in ['id','clips','cases']:assert public[key]==expected[key]
+    expected,results=build_public_pack(pack,helper)
+    for key in ['id','clips','cases','fixed_xy']:assert public.get(key)==expected.get(key)
     replacement=pack['selection'].get('replacement')
-    if replacement:
-        archived=args.out/'archive'/replacement['from_pack_id']/'listening.json'
+    xy=pack['selection'].get('xy_assignment',{})
+    archive_random_id=xy.get('archive_random_pack_id')
+    prior_id=archive_random_id or (replacement and replacement['from_pack_id'])
+    if prior_id:
+        archived=args.out/'archive'/prior_id/'listening.json'
         previous=read(args.previous_pack or archived)
-        assert previous['id']==replacement['from_pack_id'] and previous['id']!=pack['id']
+        assert previous['id']==prior_id and previous['id']!=pack['id']
         assert previous['storage_id']==pack['storage_id']==public['storage_id']
-        replaced=set(replacement['replaced_case_ids'])
-        assert replaced and replaced.isdisjoint(c['id'] for c in pack['cases'])
+        replaced=set(replacement['replaced_case_ids']) if replacement else set()
+        assert replaced.isdisjoint(c['id'] for c in pack['cases'])
         kept=[]
         for old,new in zip(previous['cases'],pack['cases'],strict=True):
             assert (old['era'],old['label'])==(new['era'],new['label'])
             if old['id'] in replaced:
+                if replacement.get('requested_anchor'):
+                    assert new['anchor']==replacement['requested_anchor']
                 continue
             assert old==new
             for role in ('anchor','near','far'):
@@ -115,12 +120,18 @@ def main():
             kept.append(old['id'])
         assert len(kept)==len(pack['cases'])-len(replaced)
         assert public['compatible_pack_ids']==[previous['id']]
-        assert public['migration_sources']==[dict(pack_id=previous['id'],case_ids=kept)]
+        assert public['migration_sources']==[dict(pack_id=previous['id'],case_ids=[] if archive_random_id else kept)]
     else:
         assert not public.get('compatible_pack_ids')
     for case in public['cases']:
         assert read(args.ui/case['result_url'])==results[case['id']]
         assert 'near' not in case and 'far' not in case
+    if xy:
+        sides=['X' if case['candidates'][0]==results[case['id']]['near_clip'] else 'Y' for case in public['cases']]
+        assert Counter(sides)=={'X':5,'Y':5}
+        assert all(len(set(sides[i:i+3]))>1 for i in range(len(sides)-2))
+        for era in QUOTAS:
+            assert {side for case,side in zip(pack['cases'],sides,strict=True) if case['era']==era}=={'X','Y'}
     if verified_G:
         encoded=json.dumps(public)
         for name in ['selection_evidence','G_distance_to_anchor','G_near','G_far','selection_score','cosine_distance_to_anchor']:
@@ -143,8 +154,9 @@ def main():
         selection_policy=pack['selection'].get('version','legacy'),
         G_verified_order_and_clarity=verified_G,score_texture_and_title_match=verified_G,distinct_XY_artists=verified_G,
         exact_dataset_youtube_bounds=True,core_UI_engines_identical_to_pinned17=True,
-        model_results_not_in_public_prechoice_payload=True,new_pack_does_not_migrate_old_answers=not replacement,
-        retained_cases_migrate_prior_answers=bool(replacement),
+        model_results_not_in_public_prechoice_payload=True,new_pack_does_not_migrate_old_answers=not replacement or bool(archive_random_id),
+        retained_cases_migrate_prior_answers=bool(replacement and not archive_random_id),
+        fixed_xy_answer_counts=dict(Counter(sides)) if xy else None,
         embeddings_sha256=digest(source_final['embeddings']),cases=checks))
     print('Selected-era AXY catalogue verification passed:10questions/20works/30recordings')
 

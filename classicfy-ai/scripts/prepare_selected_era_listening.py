@@ -24,6 +24,8 @@ AI=Path(__file__).resolve().parents[1]
 SOURCE_COMMIT='d5311e6247b3d8fff43f5c314b6c817c6ad42a64'
 QUOTAS={'baroque':3,'classical_transition':3,'romantic_impressionist':4}
 ERA_LABELS={'baroque':'바로크','classical_transition':'고전과 전환','romantic_impressionist':'낭만과 인상주의'}
+# Slots follow the 3/3/4 era order. Five near clips per side, no run longer than two.
+FIXED_XY_NEAR_SIDES='YXXYYXYXXY'
 
 
 def digest(path):
@@ -49,6 +51,17 @@ def original_helpers():
     return ns,text
 
 
+def build_public_pack(pack, helper):
+    public,results=helper['public_pack'](pack)
+    if pack['selection'].get('xy_assignment'):
+        public['fixed_xy']=True
+        for case,side in zip(public['cases'],FIXED_XY_NEAR_SIDES,strict=True):
+            result=results[case['id']]
+            near,far=result['near_clip'],result['far_clip']
+            case['candidates']=[near,far] if side=='X' else [far,near]
+    return public,results
+
+
 def eligible_mapping(row,clip):
     if row['source_sha256']!=clip['source_sha256'] or row['composition_id']!=clip['composition_id']:
         raise ValueError('YouTube mapping identity differs from AE clip: '+row['perf_id'])
@@ -60,7 +73,7 @@ def eligible_mapping(row,clip):
     return math.isfinite(start) and math.isfinite(end) and 0<=start<end
 
 
-def select_legacy_cases(candidates, clips, canonical, previous=None, replace=()):
+def select_legacy_cases(candidates, clips, canonical, previous=None, replace=(), replacement_anchor=None):
     """Pick by gap, reserving the works and videos of any retained questions."""
     ranked = {
         era: sorted((c for c in candidates if c['era'] == era),
@@ -77,16 +90,16 @@ def select_legacy_cases(candidates, clips, canonical, previous=None, replace=())
         used_works.update(clips[pid]['composition_id'] for pid in ids)
         used_videos.update(canonical[pid] for pid in ids)
 
-    def pick(era, excluded):
+    def pick(era, excluded, anchor=None):
         for case in ranked[era]:
-            if triplet(case) in excluded:
+            if (anchor is not None and case['anchor'] != anchor) or triplet(case) in excluded:
                 continue
             if any(clips[pid]['composition_id'] in used_works or canonical[pid] in used_videos
                    for pid in triplet(case)):
                 continue
             reserve(case)
             return case
-        raise ValueError(f'Insufficient disjoint valid cases for {era}')
+        raise ValueError(f'Insufficient disjoint valid cases for {era} (anchor: {anchor})')
 
     if previous is None:
         return [pick(era, set()) for era, count in QUOTAS.items() for _ in range(count)]
@@ -106,7 +119,7 @@ def select_legacy_cases(candidates, clips, canonical, previous=None, replace=())
         if case is not None:
             reserve(case)
     excluded = set(old_triplets)
-    return [kept if kept is not None else pick(old['era'], excluded)
+    return [kept if kept is not None else pick(old['era'], excluded, replacement_anchor)
             for kept, old in zip(selected, previous_cases)]
 
 
@@ -120,10 +133,21 @@ def main():
     p.add_argument('--selection-policy',choices=['legacy','g-verified-v2'],default='legacy')
     p.add_argument('--replace-from',type=Path,help='Prior legacy pack from these embeddings and mappings')
     p.add_argument('--replace-case',action='append',default=[],help='Prior case ID to replace, in its current slot')
+    p.add_argument('--replacement-anchor',help='ATEPP performance ID of the chosen replacement anchor')
+    p.add_argument('--fixed-xy',action='store_true',help='Give all browsers the same balanced X/Y order')
     args=p.parse_args();read=lambda path:json.loads(path.read_text(encoding='utf-8'))
-    if bool(args.replace_from) != bool(args.replace_case) or (args.replace_from and args.selection_policy != 'legacy'):
-        p.error('--replace-from and --replace-case must be used together with legacy selection')
+    if args.replace_case and not args.replace_from:
+        p.error('--replace-case requires --replace-from')
+    if args.replacement_anchor and len(args.replace_case) != 1:
+        p.error('--replacement-anchor requires exactly one --replace-case')
+    if args.replace_from and (args.selection_policy != 'legacy' or not (args.replace_case or args.fixed_xy)):
+        p.error('--replace-from requires legacy selection and --replace-case or --fixed-xy')
     previous_pack = read(args.replace_from) if args.replace_from else None
+    previous_fixed = bool(previous_pack and previous_pack['selection'].get('xy_assignment'))
+    if previous_fixed and not args.replace_case:
+        p.error('X/Y is already fixed; supply --replace-case to change a question')
+    fixed_xy = args.fixed_xy or previous_fixed
+    archive_random = bool(previous_pack and fixed_xy and not previous_fixed)
     final=read(args.run/'final_report.json');verification=read(args.run/'verification.json')
     if final['status']!='complete' or verification['status']!='passed' or final.get('objective_mode')!='g_only':
         raise ValueError('Complete and verified all5082 protected-G artifacts required')
@@ -192,9 +216,17 @@ def main():
         match_keys = ('version', 'final_embeddings_sha256', 'youtube_matches_sha256', 'unavailable_video_ids')
         if any(previous_policy.get(key) != policy[key] for key in match_keys):
             raise ValueError('Replacement requires the same selection policy, embeddings and YouTube mappings')
-        policy['replacement'] = dict(from_pack_id=previous_pack['id'], replaced_case_ids=args.replace_case)
+        if args.replace_case:
+            policy['replacement'] = dict(from_pack_id=previous_pack['id'], replaced_case_ids=args.replace_case)
+            if args.replacement_anchor:
+                policy['replacement']['requested_anchor'] = 'ATEPP:'+args.replacement_anchor
+    if fixed_xy:
+        policy['xy_assignment'] = {'mode':'fixed-balanced-v1'}
+        if archive_random:
+            policy['xy_assignment']['archive_random_pack_id'] = previous_pack['id']
     if args.selection_policy=='legacy':
-        selected = select_legacy_cases(candidates, by_id, canonical, previous_pack, args.replace_case)
+        selected = select_legacy_cases(candidates, by_id, canonical, previous_pack, args.replace_case,
+                                       args.replacement_anchor)
     if args.selection_policy=='g-verified-v2':
         policy.update(ranking='Within same-era same-title-type eligible works: nearest jointly G/E-near B with a distinct-artist jointly G/E-far C in the same work; not global nearest/farthest',
             curation='Hard G/E clarity thresholds; identical anchor G signature; distinct X/Y artists; disjoint works/videos; maximize weaker of embedding and calibrated G gaps',
@@ -241,7 +273,7 @@ def main():
         pack['cases'].append(definition)
     pack['id']=hashlib.sha256(json.dumps(pack,sort_keys=True,ensure_ascii=False,allow_nan=False).encode()).hexdigest()
     pack['storage_id']=previous_pack['storage_id'] if previous_pack else pack['id']
-    public,results=helper['public_pack'](pack)
+    public,results=build_public_pack(pack,helper)
     public['distance_scope']=pack['distance_scope'];public['compatible_pack_ids']=[];public['migration_sources']=[]
     if previous_pack:
         retained = []
@@ -253,7 +285,7 @@ def main():
                 raise ValueError('Retained case or clip changed: '+old['id'])
             retained.append(old['id'])
         public['compatible_pack_ids'] = [previous_pack['id']]
-        public['migration_sources'] = [dict(pack_id=previous_pack['id'], case_ids=retained)]
+        public['migration_sources'] = [dict(pack_id=previous_pack['id'], case_ids=[] if archive_random else retained)]
     args.ui.mkdir(parents=True,exist_ok=True);args.out.mkdir(parents=True,exist_ok=True)
     previous=args.out/'listening.json'
     if previous.exists() and (old:=read(previous))['id']!=pack['id']:
@@ -278,6 +310,10 @@ def main():
             s=s.replace('주제 근거와 마디 번호','대표구간 근거와 매핑 정보')
             s=s.replace('가까운 연주는 다른 작품 전체에서','가까운 연주는 같은 시대의 다른 작품 전체에서')
             s=s.replace('주제만의 거리가 아닌 전곡 평균 임베딩 기준입니다.','실제로 청취하는 대표구간 전체의 시대별 임베딩 기준입니다.')
+            if fixed_xy:
+                s=s.replace('  if(!Choice.validOrder(c.candidates,saved.orders[c.id])) {',
+                            '  if(!Choice.validOrder(c.candidates,saved.orders[c.id]) || c.candidates[0]!==saved.orders[c.id][0]) {')
+                s=s.replace('saved.orders[c.id]=Choice.makeOrder(c.candidates);','saved.orders[c.id]=[...c.candidates];')
         if name=='index.html':
             s=s.replace('기준 A의 주제를 먼저 들어보세요.','기준 A의 대표구간을 먼저 들어보세요.')
             s=s.replace('페이지 안에서 주제 구간을 재생합니다.','페이지 안에서 대표구간을 재생합니다.')
@@ -298,6 +334,9 @@ def main():
             s=s.replace('거리는 전곡의 8마디 임베딩을 평균한 cosine 거리이며 주제만의 거리가 아닙니다.',
                         '거리는 실제 청취하는 대표구간 전체의 임베딩에 시대별 head를 적용한 cosine 거리입니다. 다른 시대의 거리는 비교하지 않습니다.')
             if '전곡의 8마디' in s or '같은 주제 마디' in s:raise ValueError('Stale prototype excerpt description')
+            if fixed_xy:
+                s=s.replace('두 후보의 순서는 이 브라우저에서 무작위로 정하고 유지합니다.',
+                            '각 문항의 X/Y 순서는 모든 브라우저에서 동일합니다.')
         if name=='study.test.cjs':
             replacements={
                 'official replacement preserves recording identity, source data, X/Y order and model result':
@@ -326,8 +365,13 @@ def main():
     dump(args.out/'listening.json',pack);dump(args.out/'selection_audit.json',dict(policy=policy,eligible_case_count=len(candidates),
         exclusions=dict(excluded),youtube_statuses=dict(Counter(r['youtube_match_status'] for r in yt.values())),selected=selected,
         all_5082_embeddings_used_for_ranking=True,live_playback_verified=False))
+    changes_reason='Dataset-specific wording, distance scope and test fixtures'
+    if fixed_xy:
+        changes_reason+='; published candidate order replaces random X/Y assignment'
+    else:
+        changes_reason+='; all interaction engines unchanged'
     dump(args.out/'source_ui_manifest.json',dict(commit=SOURCE_COMMIT,files=source_files,changed=changes,
-        changes_reason='Dataset-specific factual wording, distance scope label and test fixtures; all interaction engines unchanged'))
+        changes_reason=changes_reason))
     (args.out/'source17_prepare.py').write_bytes(helper_text.encode('utf-8'))
     print('Created selected-era AXY pack',pack['id'],'10cases/20works/30recordings',flush=True)
 

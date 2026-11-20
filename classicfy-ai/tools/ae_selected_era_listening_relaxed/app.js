@@ -21,9 +21,9 @@ if(!saved)for(const previous of data.compatible_pack_ids||[]) {
 }
 if(!saved || saved.pack_id!==data.id || !saved.orders || !saved.responses || !saved.drafts || !saved.times) saved={schema:"ae-theme-choice-responses-v2",pack_id:data.id,is_test:isTest,created_at:new Date().toISOString(),orders:{},responses:{},drafts:{},times:{}};
 for(const c of data.cases) {
-  if(!Choice.validOrder(c.candidates,saved.orders[c.id])) {
+  if(!Choice.validOrder(c.candidates,saved.orders[c.id]) || c.candidates[0]!==saved.orders[c.id][0]) {
     if(saved.responses[c.id]) throw new Error("Saved response has an invalid X/Y order");
-    saved.orders[c.id]=Choice.makeOrder(c.candidates);
+    saved.orders[c.id]=[...c.candidates];
   }
 }
 saved.source_opens ||= {};
