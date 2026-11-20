@@ -1,0 +1,50 @@
+{
+  "pack_id": "621710dd77203aebee59bd1b9451c8412980f3bb0fa44309ad0f0703e9adf70c",
+  "case_id": "verified-v2-romantic_impressionist-11149",
+  "near_clip": "7f844df64120fa72",
+  "far_clip": "7eb7929f6e8439d9",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 3,
+  "recordings": {
+    "0cac3d8562aa2f4a": {
+      "performance_id": "ATEPP:11149",
+      "artist": "Claudio Arrau",
+      "title": "Waltz No.3 in A Minor, Op.34 No.2",
+      "album": "Chopin: Piano Music/Piano Concertos",
+      "album_date": "2001-01-01"
+    },
+    "7f844df64120fa72": {
+      "performance_id": "ATEPP:11019",
+      "artist": "Claudio Arrau",
+      "title": "Waltz No.10 in B Minor, Op.69 No.2",
+      "album": "Twilight - Chopin For Dreaming",
+      "album_date": "2010-01-01"
+    },
+    "7eb7929f6e8439d9": {
+      "performance_id": "ATEPP:11025",
+      "artist": "Dinu Lipatti",
+      "title": "Waltz No. 10 in B Minor, Op. 69, No. 2",
+      "album": "Chopin, F.: Piano Music (Dinu Lipatti - The Chopin Recordings) (1941-1950)",
+      "album_date": "2003-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "7f844df64120fa72",
+      "role": "near",
+      "global_rank": 212,
+      "cosine_distance_to_anchor": 0.29188804046247574,
+      "same_artist_as_anchor": true,
+      "G_distance_to_anchor": 0.6447173357009888
+    },
+    {
+      "clip": "7eb7929f6e8439d9",
+      "role": "far",
+      "global_rank": 1851,
+      "cosine_distance_to_anchor": 0.9702754144451429,
+      "same_artist_as_anchor": false,
+      "G_distance_to_anchor": 6.036937713623047
+    }
+  ]
+}

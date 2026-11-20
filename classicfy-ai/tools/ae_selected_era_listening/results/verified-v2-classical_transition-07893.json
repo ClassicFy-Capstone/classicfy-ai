@@ -1,0 +1,50 @@
+{
+  "pack_id": "621710dd77203aebee59bd1b9451c8412980f3bb0fa44309ad0f0703e9adf70c",
+  "case_id": "verified-v2-classical_transition-07893",
+  "near_clip": "e3972b3aa8df5de8",
+  "far_clip": "33da3cece217d1f0",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 24,
+  "recordings": {
+    "65f15eb623fcfd0d": {
+      "performance_id": "ATEPP:07893",
+      "artist": "Maurizio Pollini",
+      "title": "Piano Sonata No. 28 in A Major, Op. 101: IV. Geschwind, doch nicht zu sehr und mit Entschlossenheit (Allegro)",
+      "album": "Beethoven: The Late Piano Sonatas",
+      "album_date": "1997-01-01"
+    },
+    "e3972b3aa8df5de8": {
+      "performance_id": "ATEPP:06240",
+      "artist": "Glenn Gould",
+      "title": "Sonata No. 3 in C Major, Op. 2, No. 3: IV. Allegro assai - Remastered",
+      "album": "Beethoven: Piano Sonatas Nos. 1-3, Op. 2 & No. 15, Op. 28 \"Pastorale\" (Gould Remastered)",
+      "album_date": "1980"
+    },
+    "33da3cece217d1f0": {
+      "performance_id": "ATEPP:06254",
+      "artist": "Wilhelm Kempff",
+      "title": "Piano Sonata No. 3 in C Major, Op. 2 No. 3: IV. Allegro assai",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "1995-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "e3972b3aa8df5de8",
+      "role": "near",
+      "global_rank": 8,
+      "cosine_distance_to_anchor": 0.09888253000627956,
+      "same_artist_as_anchor": false,
+      "G_distance_to_anchor": 0.2593443989753723
+    },
+    {
+      "clip": "33da3cece217d1f0",
+      "role": "far",
+      "global_rank": 1966,
+      "cosine_distance_to_anchor": 1.02396106844864,
+      "same_artist_as_anchor": false,
+      "G_distance_to_anchor": 4.340131759643555
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "pack_id": "621710dd77203aebee59bd1b9451c8412980f3bb0fa44309ad0f0703e9adf70c",
+  "case_id": "verified-v2-romantic_impressionist-09750",
+  "near_clip": "7ac675ed3af1e2f7",
+  "far_clip": "90606c3e55ccbce5",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 9,
+  "recordings": {
+    "214372d24e309d4b": {
+      "performance_id": "ATEPP:09750",
+      "artist": "Vladimir Ashkenazy",
+      "title": "12 Études, Op. 25: No. 11 in A Minor \"Winter Wind\"",
+      "album": "Essential Chopin",
+      "album_date": "2003-01-01"
+    },
+    "7ac675ed3af1e2f7": {
+      "performance_id": "ATEPP:09577",
+      "artist": "Nikolai Lugansky",
+      "title": "Chopin: 12 Études, Op. 10: No. 4 in C-Sharp Minor",
+      "album": "Chopin: Études, Op. 10 & 25",
+      "album_date": "2000-01-01"
+    },
+    "90606c3e55ccbce5": {
+      "performance_id": "ATEPP:09569",
+      "artist": "Vladimir Ashkenazy",
+      "title": "12 Etudes, Op. 10: No. 4 in C-Sharp Minor \"Torrent\"",
+      "album": "Chopin: Etudes, Opp. 10 & 25",
+      "album_date": "1994"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "7ac675ed3af1e2f7",
+      "role": "near",
+      "global_rank": 250,
+      "cosine_distance_to_anchor": 0.26754827656670266,
+      "same_artist_as_anchor": false,
+      "G_distance_to_anchor": 0.30379772186279297
+    },
+    {
+      "clip": "90606c3e55ccbce5",
+      "role": "far",
+      "global_rank": 1958,
+      "cosine_distance_to_anchor": 1.1475499782527754,
+      "same_artist_as_anchor": true,
+      "G_distance_to_anchor": 5.348011016845703
+    }
+  ]
+}

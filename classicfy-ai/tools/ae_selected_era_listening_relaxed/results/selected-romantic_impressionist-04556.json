@@ -1,0 +1,48 @@
+{
+  "pack_id": "bb79168f3ead1ef344686f2f7695e8175d9fcae4661063c9ee5f93da653a34c9",
+  "case_id": "selected-romantic_impressionist-04556",
+  "near_clip": "9a30f1e0522ef8bd",
+  "far_clip": "06cdf2a4567b12a5",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 12,
+  "recordings": {
+    "92bec46f431604c2": {
+      "performance_id": "ATEPP:04556",
+      "artist": "Valentina Lisitsa",
+      "title": "The Seasons, Op. 37a, TH 135: 6. June: Barcarolle",
+      "album": "Tchaikovsky: The Complete Solo Piano Works",
+      "album_date": "2019-03-15"
+    },
+    "9a30f1e0522ef8bd": {
+      "performance_id": "ATEPP:02985",
+      "artist": "Arturo Benedetti Michelangeli",
+      "title": "Images - Book 1, L. 110: I. Reflets dans l'eau",
+      "album": "Debussy: Piano Works",
+      "album_date": "1995-01-01"
+    },
+    "06cdf2a4567b12a5": {
+      "performance_id": "ATEPP:02988",
+      "artist": "Claudio Arrau",
+      "title": "Images Book I, L. 110: I. Reflets dans l'eau",
+      "album": "Claudio Arrau Plays Debussy",
+      "album_date": "1950"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "9a30f1e0522ef8bd",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.07524530758645431,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "06cdf2a4567b12a5",
+      "role": "far",
+      "global_rank": 2106,
+      "cosine_distance_to_anchor": 1.0576532486024335,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

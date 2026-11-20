@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "all_5082_finite_unit_embeddings": true,
+  "split_identity_checks": true,
+  "G_supervision_version": "selected-clip-relative-g-v2-absolute-beat-cells",
+  "absolute_tempo_coordinates_verified": true,
+  "all_G_profiles_regenerated_identically": true,
+  "R_tempo_interval_roundtrip": {
+    "observed_notes": 1118669,
+    "max_log2_qpm_error": 4.801604376325486e-07
+  },
+  "common_checkpoints_unchanged": true,
+  "packed_input_hashes_verified": true,
+  "eras": {
+    "baroque": {
+      "clips": 558,
+      "works": 103,
+      "epoch": 2,
+      "reload_max_error": 1.1920928955078125e-07,
+      "encoder_changed": true,
+      "decoder_changed": false,
+      "baseline_fallback": false,
+      "score_encoder_unchanged": true,
+      "raw_z_cosine_to_common": {
+        "min": 0.9967430830001831,
+        "p01": 0.997381615638733,
+        "median": 0.9994291961193085,
+        "p99": 0.9998964267969132,
+        "max": 0.9999330639839172
+      },
+      "style_e_cosine_to_common": {
+        "min": 0.83677077293396,
+        "p01": 0.8685323399305344,
+        "median": 0.9863179624080658,
+        "p99": 0.9991931581497192,
+        "max": 0.9995805025100708
+      },
+      "head_relative_shift": {
+        "min": 0.023185014724731445,
+        "p01": 0.03753119580447674,
+        "median": 0.15087737143039703,
+        "p99": 0.445965801477432,
+        "max": 0.5251334309577942
+      }
+    },
+    "classical_transition": {
+      "clips": 2303,
+      "works": 132,
+      "epoch": 1,
+      "reload_max_error": 1.4901161193847656e-07,
+      "encoder_changed": true,
+      "decoder_changed": false,
+      "baseline_fallback": false,
+      "score_encoder_unchanged": true,
+      "raw_z_cosine_to_common": {
+        "min": 0.9911869168281555,
+        "p01": 0.9942414391040802,
+        "median": 0.9985302090644836,
+        "p99": 0.9997097086906434,
+        "max": 0.9999033212661743
+      },
+      "style_e_cosine_to_common": {
+        "min": 0.6971091032028198,
+        "p01": 0.7953368020057678,
+        "median": 0.947161853313446,
+        "p99": 0.992726559638977,
+        "max": 0.9982951879501343
+      },
+      "head_relative_shift": {
+        "min": 0.04615765064954758,
+        "p01": 0.10191117510199547,
+        "median": 0.27732694149017334,
+        "p99": 0.5588039135932923,
+        "max": 0.6736976504325867
+      }
+    },
+    "romantic_impressionist": {
+      "clips": 2221,
+      "works": 244,
+      "epoch": 4,
+      "reload_max_error": 1.341104507446289e-07,
+      "encoder_changed": true,
+      "decoder_changed": false,
+      "baseline_fallback": false,
+      "score_encoder_unchanged": true,
+      "raw_z_cosine_to_common": {
+        "min": 0.9862615466117859,
+        "p01": 0.9919244408607483,
+        "median": 0.9969631433486938,
+        "p99": 0.999479103088379,
+        "max": 0.9997953772544861
+      },
+      "style_e_cosine_to_common": {
+        "min": 0.6697472333908081,
+        "p01": 0.7681668996810913,
+        "median": 0.931148886680603,
+        "p99": 0.9926364660263062,
+        "max": 0.997739315032959
+      },
+      "head_relative_shift": {
+        "min": 0.053461115807294846,
+        "p01": 0.10631505995988846,
+        "median": 0.30420202016830444,
+        "p99": 0.614707362651826,
+        "max": 0.7702212929725647
+      }
+    }
+  },
+  "embeddings_sha256": "4d1f24b9a7c4d0d55556319f0586e25112038a3950879cc956544b731d698966"
+}
