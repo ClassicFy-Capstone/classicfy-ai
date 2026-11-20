@@ -1,0 +1,50 @@
+{
+  "pack_id": "621710dd77203aebee59bd1b9451c8412980f3bb0fa44309ad0f0703e9adf70c",
+  "case_id": "verified-v2-baroque-01918",
+  "near_clip": "6b38707dbe19fca6",
+  "far_clip": "3a16691a10b693b1",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 3,
+  "recordings": {
+    "10af9f93e7a26a4a": {
+      "performance_id": "ATEPP:01918",
+      "artist": "Murray Perahia",
+      "title": "French Suite No. 5 in G Major, BWV 816: II. Courante",
+      "album": "Johann Sebastian Bach: The French Suites",
+      "album_date": "2016-10-07"
+    },
+    "6b38707dbe19fca6": {
+      "performance_id": "ATEPP:02470",
+      "artist": "Murray Perahia",
+      "title": "Partita No. 5 in G Major, BWV 829: III. Corrente",
+      "album": "Bach: Partitas Nos. 1, 5 & 6",
+      "album_date": "2009-08-31"
+    },
+    "3a16691a10b693b1": {
+      "performance_id": "ATEPP:02468",
+      "artist": "Walter Gieseking",
+      "title": "Partita No. 5 in G Major, BWV 829: III. Corrente",
+      "album": "Walter Gieseking Plays J.S. Bach (1940-1950 recordings)",
+      "album_date": "2012-08-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "6b38707dbe19fca6",
+      "role": "near",
+      "global_rank": 25,
+      "cosine_distance_to_anchor": 0.07482593759037726,
+      "same_artist_as_anchor": true,
+      "G_distance_to_anchor": 0.35458138585090637
+    },
+    {
+      "clip": "3a16691a10b693b1",
+      "role": "far",
+      "global_rank": 481,
+      "cosine_distance_to_anchor": 0.6605360015909116,
+      "same_artist_as_anchor": false,
+      "G_distance_to_anchor": 7.644456386566162
+    }
+  ]
+}

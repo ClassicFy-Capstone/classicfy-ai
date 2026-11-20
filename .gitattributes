@@ -23,3 +23,7 @@ classicfy-ai/analysis/era_refine_tempo/** -text
 classicfy-ai/analysis/era_refine_tempo/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 classicfy-ai/analysis/performance_style_full/** -text
 classicfy-ai/analysis/performance_style_full/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# The AXY verifier compares generated source bytes with the pinned UI manifest.
+classicfy-ai/tools/ae_selected_era_listening/** text=auto eol=lf
+classicfy-ai/tools/ae_selected_era_listening_relaxed/** text=auto eol=lf

@@ -1,0 +1,50 @@
+{
+  "pack_id": "621710dd77203aebee59bd1b9451c8412980f3bb0fa44309ad0f0703e9adf70c",
+  "case_id": "verified-v2-romantic_impressionist-09392",
+  "near_clip": "87c19e5c3f6b2a9c",
+  "far_clip": "b41afb0cf55ee36d",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 9,
+  "recordings": {
+    "d57708da5c9b0c6b": {
+      "performance_id": "ATEPP:09392",
+      "artist": "Vladimir Ashkenazy",
+      "title": "12 Études, Op. 10: No. 6 in E-Flat Minor",
+      "album": "Chopin: Piano Sonatas Nos. 1 - 3; 24 Etudes; Fantaisie in F minor",
+      "album_date": "1999-01-01"
+    },
+    "87c19e5c3f6b2a9c": {
+      "performance_id": "ATEPP:09723",
+      "artist": "Vladimir Ashkenazy",
+      "title": "12 Études, Op. 25: No. 5 in E Minor",
+      "album": "Chopin: Piano Sonatas Nos. 1 - 3; 24 Etudes; Fantaisie in F minor",
+      "album_date": "1999-01-01"
+    },
+    "b41afb0cf55ee36d": {
+      "performance_id": "ATEPP:09736",
+      "artist": "Valentina Lisitsa",
+      "title": "12 Etudes, Op.25: No.5 In E Minor",
+      "album": "Études",
+      "album_date": "2014-01-01"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "87c19e5c3f6b2a9c",
+      "role": "near",
+      "global_rank": 291,
+      "cosine_distance_to_anchor": 0.31117876538348876,
+      "same_artist_as_anchor": true,
+      "G_distance_to_anchor": 0.62189120054245
+    },
+    {
+      "clip": "b41afb0cf55ee36d",
+      "role": "far",
+      "global_rank": 1296,
+      "cosine_distance_to_anchor": 0.9992109492566817,
+      "same_artist_as_anchor": false,
+      "G_distance_to_anchor": 5.782957553863525
+    }
+  ]
+}

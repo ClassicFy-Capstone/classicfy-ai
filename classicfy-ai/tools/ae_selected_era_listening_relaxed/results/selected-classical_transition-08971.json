@@ -1,0 +1,48 @@
+{
+  "pack_id": "bb79168f3ead1ef344686f2f7695e8175d9fcae4661063c9ee5f93da653a34c9",
+  "case_id": "selected-classical_transition-08971",
+  "near_clip": "832cde78846ba34d",
+  "far_clip": "cb103bc7007e36c1",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 41,
+  "recordings": {
+    "20bce4ce5b4bc2ee": {
+      "performance_id": "ATEPP:08971",
+      "artist": "Wilhelm Kempff",
+      "title": "Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 'Mondschein': I. Adagio sostenuto",
+      "album": "Beethoven: The Piano Sonatas",
+      "album_date": "2013-05-27"
+    },
+    "832cde78846ba34d": {
+      "performance_id": "ATEPP:08079",
+      "artist": "Friedrich Gulda",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "album": "Gulda plays Beethoven",
+      "album_date": "2005-01-01"
+    },
+    "cb103bc7007e36c1": {
+      "performance_id": "ATEPP:08067",
+      "artist": "Glenn Gould",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "album": "Glenn Gould plays Beethoven: Piano Sonatas Nos. 1-3; 5-10; 12-14; 15-18; 23; 30-32",
+      "album_date": "1965"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "832cde78846ba34d",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.08372792862020051,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "cb103bc7007e36c1",
+      "role": "far",
+      "global_rank": 1783,
+      "cosine_distance_to_anchor": 1.2023179564133948,
+      "same_artist_as_anchor": false
+    }
+  ]
+}
