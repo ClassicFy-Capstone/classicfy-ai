@@ -1,31 +1,4 @@
-G 유효성·거리 순서·악장 유형을 확인한 AXY v2 (2026-11-16)
-
-접속: http://localhost:8770/ (이전 화면이 남아 있으면 새로고침)
-실행: python tools/ae_selected_era_listening/serve.py --port 8770
-
-현재는 --selection-policy g-verified-v2로 만든 3/3/4문항을 사용한다.
-같은 시대의 다른 작품에서 A의 고정 유효 G 차원을 두 후보가 모두 관측하고,
-G와 임베딩 모두 B가 가깝고 C가 멀며 충분한 차이가 있는 사례만 선정했다.
-X/Y는 반드시 서로 다른 연주자다. A와 후보의 연주자가 같을 수는 있다.
-제목상 장르/악장 유형을 맞추고 일반 소나타는 빠르기 표기와 악장 번호도 맞춘다.
-악보 quarter당 onset 밀도와 onset당 음표 수의 작품 중앙값 비율을 각각 1.6배 이하로 제한했다.
-이는 거친 짜임새 지표이며 실제 악구·세부 주법이 동일하다는 뜻은 아니다.
-
-고정 조건: 코사인 B<=.40, C>=.65, 차이>=.30;
-calibrated G 목표 거리 B<=.55, C>=.65, 차이>=.15;
-원래 G 거리비>=1.5, 양쪽 품질>=.25. 품질은 청취 정답 확률이 아니다.
-조건을 만족하는 후보 안에서 선정하므로 전체 catalogue 최근접 1위/전체 작품 최원거리라는 보장은 없다.
-이 시연 문항의 청취 일치율을 전체 모델 성능으로 일반화하지 않는다.
-
-선정 근거와 수치: analysis/ae_selected_era_listening/selection_report.md, selection_audit.json
-재생 확인 범위: analysis/ae_selected_era_listening/browser_playback_checks.json
-실제 브라우저 재생 확인과 구간 경계·녹음 동일성의 청음 검수는 구분한다.
-블라인드·응답 잠금·반복·자동 종료·JSON 내보내기 엔진은 유지한다.
-새 pack은 이전 응답을 승계하지 않는다. 이전 pack 자료는 analysis/ae_selected_era_listening/archive에 보존한다.
-기존 브라우저 응답도 이전 pack의 저장 키에 남는다. ?qa=1은 별도 검증 공간이다.
-
-이하 v1의 과거 기록 (현재 선정 규칙은 위의 v2 설명을 따른다)
-============================================================
+새 대표구간 임베딩 AXY 청취 프로토타입
 
 접속 http://localhost:8770/
 AI 저장소 폴더에서 실행 python tools/ae_selected_era_listening/serve.py --port 8770

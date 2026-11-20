@@ -290,32 +290,7 @@ python scripts/package_protected_g_era_final.py --run /path/to/protected_g_final
 시대별 `final.pt`와 `embeddings.npz`, 통합 `all_5082_era_embeddings.npz`,
 검증과 사용 설명을 포함한 `protected_g_era_models_5082.zip`을 제공한다.
 
-## 시대별 G 기울기 상한 비교
-
-검증 분할에서 기존 25%를 대조군으로 50%·100%를 비교했다. 같은 시대의 마지막
-validation epoch에서 전체·그룹·채널 복원과 임베딩 보존 조건을 모두 통과한
-완화 후보 중 G score가 가장 낮은 것을 선택했다. 바로크 100%, 고전+전환 50%,
-낭만+인상주의 100%를 선택하고 전체 5,082개로 다시 적합했다. 수치와 조건은
-[비교 보고서](../../analysis/era_g_budget/comparison.md)에 있다.
-
-```powershell
-python scripts/validate_era_g_budget.py --source-run /path/to/run03 --common-run /path/to/common/training_run01 --out /path/to/budget_validation/baroque --era baroque
-python scripts/train_protected_g_era_final.py --source-run /path/to/run03 --common-run /path/to/common/training_run01 --out /path/to/g_budget_production --budget-selection /path/to/budget_validation
-```
-
-validation 명령의 시대와 출력 폴더를 각각 `classical_transition`,
-`romantic_impressionist`로 바꾸어 나머지 두 결과를 만든다. 상한 완화 모델에서
-임베딩 거리로 고른 문항은 [별도 AXY 도구](../../tools/ae_selected_era_listening_relaxed/README.md)에 있다.
-
 ## 새 대표구간 기반 AXY 청취
-
-2026-11-16 현재 문항은 `g-verified-v2` 정책으로 갱신했다. A의 고정 유효 G
-차원을 양쪽 후보가 모두 관측하고, G와 임베딩 순서 및 차이 기준을 모두 통과한다.
-X/Y는 서로 다른 연주자이며, 제목상 장르·악장 유형과 악보 onset 밀도·화음 밀도를
-맞춘다. 아래의 기존 전역 최근접 B / 작품 전체 최원거리 C 규칙은 **이전 pack의
-기록**이다. 현재 정책은 조건을 만족하는 후보 안에서 선정하며 전역 최근접을
-보장하지 않는다. 현재 선정 수치·한계는 `analysis/ae_selected_era_listening/selection_report.md`,
-실행·재현 방법은 청취 도구의 `README.txt`에 정리한다. UI 엔진은 유지한다.
 
 `tools/ae_selected_era_listening`은 #17의 UI와 재생 및 응답 엔진을 복사하고
 문항 데이터와 입력 범위 설명만 변경한 프로토타입이다. source commit은
@@ -325,9 +300,8 @@ X/Y는 서로 다른 연주자이며, 제목상 장르·악장 유형과 악보 
 새 임베딩 전체를 시대별로 검색하고, 거리 gap 내림차순과 작품 중복 배제 조건으로
 3 / 3 / 4문항을 선정했다. 유튜브 시간은 제공된 youtube_matches.csv를 그대로 쓴다.
 
-`analysis/ae_selected_era_listening`에 선정 근거, 원본 UI 비교 해시와 데이터 검증을
-보관한다. v2 영상은 30개 중 8개에서 브라우저 재생을 확인했다. 초기판 검증 기록은
-`archive`에 있다.
+`analysis/ae_selected_era_listening`에 선정 근거와 원본 UI 비교 hash, 데이터 검증,
+30개 영상 실제 브라우저 재생 검사, QA 응답과 UI 검증을 보관한다.
 UI의 원래 블라인드·무작위 X/Y·선택 후 공개·수정 잠금·JSON 내보내기를 유지했다.
 실행 명령은 `python tools/ae_selected_era_listening/serve.py --port 8770`이며
 접속 주소는 `http://localhost:8770/`이다. QA 응답은 `?qa=1`로 구분한다.

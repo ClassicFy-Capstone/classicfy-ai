@@ -1,20 +1,20 @@
 {
-  "status": "updated",
-  "pack_id": "621710dd77203aebee59bd1b9451c8412980f3bb0fa44309ad0f0703e9adf70c",
+  "status": "complete",
+  "pack_id": "d0bf2cb3f405706fdea4cfae88f543825e2914213d185a8a9883f227c13af8a5",
+  "source_commit": "d5311e6247b3d8fff43f5c314b6c817c6ad42a64",
   "url": "http://localhost:8770/",
   "questions": 10,
   "works": 20,
   "recordings": 30,
-  "G_and_order_verified_cases": 10,
-  "distinct_XY_artist_cases": 10,
-  "source_bounds_preserved": true,
+  "playing_verified": 30,
+  "all_UI_checks_passed": true,
   "tests": {
-    "python": 11,
-    "node": 17
+    "AE_unit": 26,
+    "selection_unit": 3,
+    "Node_UI": 17
   },
-  "playback_verified": 8,
-  "playback_total": 30,
-  "playback_validation_complete": false,
-  "human_listening_validation_complete": false,
-  "HTTP_page_and_all_result_routes_verified": true
+  "archive": "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\outputs\\era_note_ae_g_only_20261115\\selected_era_axy_prototype.zip",
+  "archive_sha256": "81b75fee0e5e8b4551bec6219476f41e8f7a79f795fb4c9bc70be2fb66a16a73",
+  "preview": "C:\\Users\\정세린\\Desktop\\capstone_classicfy\\wt-19-performance-style-pipeline\\classicfy-ai\\analysis\\ae_selected_era_listening\\preview.jpg",
+  "completed_utc": "2026-11-15T12:17:21.986753+00:00"
 }
