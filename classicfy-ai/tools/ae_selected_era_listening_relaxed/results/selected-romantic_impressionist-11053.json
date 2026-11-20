@@ -1,0 +1,48 @@
+{
+  "pack_id": "bb79168f3ead1ef344686f2f7695e8175d9fcae4661063c9ee5f93da653a34c9",
+  "case_id": "selected-romantic_impressionist-11053",
+  "near_clip": "14713d033c871902",
+  "far_clip": "65f66a90b69a1b07",
+  "distance_reference": "A",
+  "distance_scope": "selected representative clip pooled z plus era head; cosine distance within same era only",
+  "far_work_pool": 7,
+  "recordings": {
+    "3f99a40276b1cc7d": {
+      "performance_id": "ATEPP:11053",
+      "artist": "Wilhelm Kempff",
+      "title": "Polonaise-fantaisie, Op. 61",
+      "album": "Wilhelm Kempff, Piano (Vol.2)",
+      "album_date": "2011-01-01"
+    },
+    "14713d033c871902": {
+      "performance_id": "ATEPP:00134",
+      "artist": "Vladimir Horowitz",
+      "title": "Etudes-tableaux, Op. 39: No. 9 in D Major",
+      "album": "Vladimir Horowitz in Recital at Yale University, New Haven November 13, 1966",
+      "album_date": "2015-12-11"
+    },
+    "65f66a90b69a1b07": {
+      "performance_id": "ATEPP:00133",
+      "artist": "Vladimir Horowitz",
+      "title": "Etudes-tableaux, Op. 39: No. 9 in D Major",
+      "album": "Vladimir Horowitz in Recital at Orchestra Hall, Chicago, November 2, 1975",
+      "album_date": "2015-12-11"
+    }
+  },
+  "candidates": [
+    {
+      "clip": "14713d033c871902",
+      "role": "near",
+      "global_rank": 1,
+      "cosine_distance_to_anchor": 0.027060358842530885,
+      "same_artist_as_anchor": false
+    },
+    {
+      "clip": "65f66a90b69a1b07",
+      "role": "far",
+      "global_rank": 2171,
+      "cosine_distance_to_anchor": 1.0103383652368196,
+      "same_artist_as_anchor": false
+    }
+  ]
+}

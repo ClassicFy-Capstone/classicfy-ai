@@ -180,7 +180,7 @@ async function reveal(c){
   $("#result").innerHTML=`<p class="eyebrow">YOUR CHOICE × EMBEDDING</p><h2>${title}</h2><p>${explanation}</p><p>내 선택: <strong>${labels[response.choice]}</strong> · 임베딩에서 더 가까운 쪽: <strong>${evaluated.model_closer_label}</strong></p><table><thead><tr><th>후보</th><th>실제 연주</th><th>A와의 대표구간 거리</th><th>모델의 구분</th></tr></thead><tbody>${saved.orders[c.id].map((id,i)=>{
     const row=answer.candidates.find(r=>r.clip===id),identity=answer.recordings[id];
     return `<tr><th>${i?"Y":"X"}${response.choice===(i?"Y":"X")?" · 내 선택":""}</th><td>${esc(identity.artist)}<small>${esc(identity.performance_id)}</small></td><td>${row.cosine_distance_to_anchor.toFixed(6)}</td><td>${id===answer.near_clip?"가까운 연주":"같은 작품의 먼 연주"}</td></tr>`;
-  }).join("")}</tbody></table><p class="result-note">가까운 연주는 같은 시대의 다른 작품 전체에서 A와의 거리 1위입니다. 먼 연주는 그 작품의 나머지 ${answer.far_work_pool}개 연주 중 A와의 거리가 가장 큽니다. 작은 거리일수록 가깝습니다. 실제로 청취하는 대표구간 전체의 시대별 임베딩 기준입니다.</p>`;
+  }).join("")}</tbody></table><p class="result-note">같은 시대와 제목상 악장 유형 안에서 G와 임베딩의 순서가 일치하고 거리 차이가 큰 사례를 선정했습니다. X/Y는 서로 다른 연주자입니다. 전체 후보의 거리 1위를 보장하는 선정은 아닙니다. 작은 거리일수록 가깝습니다. 실제로 청취하는 대표구간 전체의 시대별 임베딩 기준입니다.</p>`;
   $("#result").hidden=false;$("#retry-result").hidden=true;updateTimingVisibility();clipIds().forEach((id,slot)=>$(`#clip-${slot} .artist`).textContent=answer.recordings[id].artist);
 }
 function resultError(c,error){if(currentCase().id!==c.id)return;$("#answer-status").textContent=`선택은 저장되어 있습니다. ${error.message}`;$("#retry-result").hidden=false;}
