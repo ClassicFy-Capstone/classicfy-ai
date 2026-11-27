@@ -1,0 +1,5 @@
+# Lightweight serving dependencies; independent of training requirements.txt.
+fastapi==0.165.0
+pydantic==2.14.4
+numpy==2.5.5
+uvicorn==0.54.0

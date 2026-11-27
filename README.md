@@ -11,6 +11,10 @@
 
 ## AI 분석 자료
 
+[유저 임베딩 API](classicfy-ai/src/user_embedding_api/README.md)는 백엔드에서 전달한
+좋아요 연주의 시대·64차원 벡터·시각으로 시대별 유저 임베딩을 계산하는 FastAPI 서비스다.
+API 실행에는 학습용 requirements.txt 대신 requirements-api.txt를 사용한다.
+
 [ATEPP–ASAP 호환성 및 작업 인계](classicfy-ai/analysis/dataset_compatibility/README.md)는
 공통 작품·동일 MIDI 중복·특징 분포 차이와 4분음표 입력 변환 결과를 정리한다.
 다른 컴퓨터에서 이어서 작업할 때의 Git LFS 입력 캐시와 재현 절차도 포함한다.

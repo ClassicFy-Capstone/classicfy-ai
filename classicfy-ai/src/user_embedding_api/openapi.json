@@ -1,0 +1,370 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ClassicFy User Embedding API",
+    "description": "Backend-supplied likes → rank-decayed, era-specific 64D user embeddings.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/user-embeddings/calculate": {
+      "post": {
+        "tags": [
+          "user-embeddings"
+        ],
+        "summary": "Calculate",
+        "operationId": "calculate_v1_user_embeddings_calculate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculateResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CalculateRequest": {
+        "properties": {
+          "userID": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Userid"
+          },
+          "requestVersion": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Requestversion"
+          },
+          "embeddingVersion": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Embeddingversion"
+          },
+          "likes": {
+            "items": {
+              "$ref": "#/components/schemas/LikedPerformance"
+            },
+            "type": "array",
+            "maxItems": 10000,
+            "title": "Likes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "userID",
+          "requestVersion",
+          "embeddingVersion",
+          "likes"
+        ],
+        "title": "CalculateRequest"
+      },
+      "CalculateResponse": {
+        "properties": {
+          "userID": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Userid"
+          },
+          "requestVersion": {
+            "type": "integer",
+            "title": "Requestversion"
+          },
+          "embeddingVersion": {
+            "type": "string",
+            "title": "Embeddingversion"
+          },
+          "logicVersion": {
+            "type": "string",
+            "title": "Logicversion"
+          },
+          "decayAlpha": {
+            "type": "number",
+            "title": "Decayalpha"
+          },
+          "computedAt": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Computedat"
+          },
+          "eras": {
+            "items": {
+              "$ref": "#/components/schemas/EraEmbedding"
+            },
+            "type": "array",
+            "title": "Eras"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "userID",
+          "requestVersion",
+          "embeddingVersion",
+          "logicVersion",
+          "decayAlpha",
+          "computedAt",
+          "eras"
+        ],
+        "title": "CalculateResponse"
+      },
+      "EraEmbedding": {
+        "properties": {
+          "eraGroup": {
+            "$ref": "#/components/schemas/EraGroup"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "no_likes"
+            ],
+            "title": "Status"
+          },
+          "embedding": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array",
+                "maxItems": 64,
+                "minItems": 64
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Embedding"
+          },
+          "likeCount": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Likecount"
+          },
+          "latestLikeAt": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latestlikeat"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "eraGroup",
+          "status",
+          "embedding",
+          "likeCount",
+          "latestLikeAt"
+        ],
+        "title": "EraEmbedding"
+      },
+      "EraGroup": {
+        "type": "string",
+        "enum": [
+          "baroque",
+          "classical_transition",
+          "romantic_impressionist"
+        ],
+        "title": "EraGroup"
+      },
+      "ErrorBody": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "details": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            },
+            "type": "array",
+            "title": "Details"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorBody"
+      },
+      "ErrorDetail": {
+        "properties": {
+          "location": {
+            "type": "string",
+            "title": "Location"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "location",
+          "message"
+        ],
+        "title": "ErrorDetail"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorBody"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "title": "ErrorResponse"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "ok",
+            "title": "Status",
+            "default": "ok"
+          },
+          "service": {
+            "type": "string",
+            "title": "Service",
+            "default": "classicfy-user-embedding"
+          },
+          "logicVersion": {
+            "type": "string",
+            "title": "Logicversion"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "logicVersion"
+        ],
+        "title": "HealthResponse"
+      },
+      "LikedPerformance": {
+        "properties": {
+          "performanceID": {
+            "type": "string",
+            "pattern": "^performance_[0-9]+$",
+            "title": "Performanceid"
+          },
+          "eraGroup": {
+            "$ref": "#/components/schemas/EraGroup"
+          },
+          "performanceEmbedding": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "maxItems": 64,
+            "minItems": 64,
+            "title": "Performanceembedding"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Createdat"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "performanceID",
+          "eraGroup",
+          "performanceEmbedding",
+          "createdAt"
+        ],
+        "title": "LikedPerformance"
+      }
+    },
+    "securitySchemes": {
+      "APIKeyHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    }
+  }
+}
